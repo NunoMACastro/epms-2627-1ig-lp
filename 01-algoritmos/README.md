@@ -1,6 +1,6 @@
 # Algoritmos
 
-Primeira área da disciplina de Linguagens de Programação. Aprender a analisar um problema, a escrever os passos que o resolvem e a testar se esses passos funcionam — tudo antes de escrever a primeira linha de código.
+Primeira área da disciplina de Linguagens de Programação. Aprender a analisar um problema, a escrever os passos que o resolvem e a testar se esses passos funcionam, tudo antes de escrever a primeira linha de código.
 
 São **25 horas**, repartidas por cinco partes de 5 horas cada.
 

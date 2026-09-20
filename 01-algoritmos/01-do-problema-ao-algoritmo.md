@@ -41,7 +41,7 @@ Este bloco tem **5 horas**, que valem 300 minutos de trabalho. Não corresponde 
 | Desafio opcional | Na ficha | 30 min |
 | Resumo e checkpoint | Neste guia | 60 min |
 
-## Teoria — 30 min
+## Teoria (30 min)
 
 ### O que é um algoritmo
 
@@ -58,10 +58,10 @@ Usas algoritmos todos os dias sem lhes chamar isso. As instruções para chegar 
 
 Um algoritmo útil tem sempre quatro coisas:
 
-1. **entradas bem definidas** — o que recebes, e de que tipo;
-2. **regras de processamento** — o que fazes com o que recebeste;
-3. **uma saída observável** — o resultado, que tem de ser visível;
-4. **uma condição de paragem** — o momento em que se sabe que terminou.
+1. **entradas bem definidas**: o que recebes, e de que tipo;
+2. **regras de processamento**: o que fazes com o que recebeste;
+3. **uma saída observável**: o resultado, que tem de ser visível;
+4. **uma condição de paragem**: o momento em que se sabe que terminou.
 
 Sem paragem garantida não há algoritmo útil. Se as instruções para chegares à escola fossem "anda sempre em frente", nunca chegavas: falta a condição que diz quando parar.
 
@@ -85,9 +85,9 @@ Para uma pessoa que já cozinhou, isto chega. Para um computador, isto não é i
 
 Outros exemplos do mesmo problema:
 
-- "aquece um bocado" — quanto tempo, a que temperatura?
-- "se houver muitas pessoas na fila, abre outra caixa" — quantas são "muitas"?
-- "arredonda o valor" — para cima, para baixo, para quantas casas?
+- "aquece um bocado": quanto tempo, a que temperatura?
+- "se houver muitas pessoas na fila, abre outra caixa": quantas são "muitas"?
+- "arredonda o valor": para cima, para baixo, para quantas casas?
 
 Corrigir uma ambiguidade é quase sempre substituir uma palavra vaga por um número, um limite ou uma regra: *"junta 3 gramas de sal"*, *"se estiverem 8 ou mais pessoas na fila, abre outra caixa"*.
 
@@ -124,14 +124,14 @@ Há dois erros simétricos. Decompor **de menos** deixa blocos gigantes que cont
 
 Tudo o que viste até aqui tem um nome coletivo: **pensamento computacional**. São quatro princípios, e já usaste três deles nesta página:
 
-1. **Decomposição** — partir o problema em partes.
-2. **Reconhecimento de padrões** — reparar que este problema se parece com outro que já resolveste, e reaproveitar a abordagem.
-3. **Abstração** — deixar de fora o que não interessa para o problema. Para organizar a fila, a cor da mochila do cliente é irrelevante; o número da senha não é.
-4. **Algoritmos** — escrever os passos precisos que resolvem o problema.
+1. **Decomposição**: partir o problema em partes.
+2. **Reconhecimento de padrões**: reparar que este problema se parece com outro que já resolveste, e reaproveitar a abordagem.
+3. **Abstração**: deixar de fora o que não interessa para o problema. Para organizar a fila, a cor da mochila do cliente é irrelevante; o número da senha não é.
+4. **Algoritmos**: escrever os passos precisos que resolvem o problema.
 
 Isto não depende de linguagem nenhuma, e é por isso que este bloco vem antes de escreveres a primeira linha de código. A ordem correta é sempre a mesma: **compreender o problema, estruturar a solução e só depois programar**. Quem salta os dois primeiros passos escreve código que não sabe explicar e bloqueia em decisões simples.
 
-## Exemplo explicado — 30 min
+## Exemplo explicado (30 min)
 
 ### O problema
 
@@ -139,7 +139,7 @@ Uma papelaria atende os clientes por senha. Quando um cliente chega, tira uma se
 
 Queremos descrever o funcionamento do atendimento de forma suficientemente precisa para que um funcionário novo, no primeiro dia, consiga executá-lo sem perguntar nada.
 
-### Passo 1 — Responder às quatro perguntas
+### Passo 1: Responder às quatro perguntas
 
 | Pergunta | Resposta |
 | --- | --- |
@@ -150,7 +150,7 @@ Queremos descrever o funcionamento do atendimento de forma suficientemente preci
 
 Repara que as restrições são limites que valem o dia inteiro, e que as condições são bifurcações: vai acontecer uma coisa ou outra, e cada uma leva a passos diferentes.
 
-### Passo 2 — Decompor
+### Passo 2: Decompor
 
 O problema parte-se em quatro subproblemas:
 
@@ -161,7 +161,7 @@ O problema parte-se em quatro subproblemas:
 
 Cada um destes pode ser explicado e testado sozinho, e juntos resolvem o problema inteiro. É uma boa decomposição.
 
-### Passo 3 — Escrever os passos
+### Passo 3: Escrever os passos
 
 Agora escrevemos o algoritmo em passos numerados, em português, com uma ação por passo. Ainda **não** é pseudocódigo nem fluxograma: essas duas formas de escrever algoritmos são o assunto do bloco seguinte. Aqui o objetivo é a precisão, não a notação.
 
@@ -182,9 +182,9 @@ Agora escrevemos o algoritmo em passos numerados, em português, com uma ação 
 5. Se o cliente aparecer, atendê-lo e registar esse número como a última senha atendida.
 6. Se o cliente não aparecer, registar esse número como descartado e voltar ao passo 1.
 
-Repara na ordem dos passos 1 e 3: primeiro compara-se, só depois se muda o estado. Se o passo 1 somasse logo 1 e só a seguir se verificasse se havia alguém à espera, o número ficava gasto à mesma quando não havia ninguém — e a senha seguinte a ser entregue nunca chegaria a ser chamada. É um erro fácil de cometer e difícil de ver, e vais procurá-lo na consolidação.
+Repara na ordem dos passos 1 e 3: primeiro compara-se, só depois se muda o estado. Se o passo 1 somasse logo 1 e só a seguir se verificasse se havia alguém à espera, o número ficava gasto à mesma quando não havia ninguém, e a senha seguinte a ser entregue nunca chegaria a ser chamada. É um erro fácil de cometer e difícil de ver, e vais procurá-lo na consolidação.
 
-### Passo 4 — Simular com um caso concreto
+### Passo 4: Simular com um caso concreto
 
 Um algoritmo só merece confiança depois de o experimentares com um caso. Vamos seguir o estado ao longo de uma manhã, com quatro clientes.
 
@@ -196,17 +196,17 @@ Um algoritmo só merece confiança depois de o experimentares com um caso. Vamos
 | Balcão livre | 4 | 2 | Chamada a senha 2; o cliente **não** aparece; a senha é descartada |
 | Ainda livre | 4 | 3 | Chamada a senha 3; o cliente aparece e é atendido |
 
-Repara em duas coisas. Primeiro, em cada linha muda o estado, não o algoritmo: os passos são sempre os mesmos. Segundo, foi a simulação que nos mostrou que o passo 6 de "chamar o próximo" tinha mesmo de voltar ao passo 1 — sem isso, um cliente que falta deixaria a loja parada para sempre.
+Repara em duas coisas. Primeiro, em cada linha muda o estado, não o algoritmo: os passos são sempre os mesmos. Segundo, foi a simulação que nos mostrou que o passo 6 de "chamar o próximo" tinha mesmo de voltar ao passo 1. Sem isso, um cliente que falta deixaria a loja parada para sempre.
 
-### Passo 5 — Procurar ambiguidades
+### Passo 5: Procurar ambiguidades
 
 Antes de dar o algoritmo por bom, relê-o à procura de instruções que admitam duas leituras. Esta versão já foi corrigida uma vez: o passo 4 dizia originalmente *"esperar um pouco pela resposta do cliente"*. Quanto é "um pouco"? Dois funcionários diferentes fariam coisas diferentes. Passou a **30 segundos**, e deixou de haver dúvida.
 
-## Prática guiada — 60 min
+## Prática guiada (60 min)
 
 Vais trabalhar com um conjunto de cartões. Copia cada instrução para um cartão de papel, ou escreve-as numeradas numa folha e recorta.
 
-**Cartões — preparar uma encomenda de material escolar:**
+**Cartões para preparar uma encomenda de material escolar:**
 
 - Verificar se há stock suficiente de todos os artigos pedidos
 - Embalar os artigos numa caixa
@@ -218,13 +218,13 @@ Vais trabalhar com um conjunto de cartões. Copia cada instrução para um cart�
 - Avisar o cliente de que a encomenda seguiu
 - Se faltar algum artigo, informar o cliente e esperar resposta
 
-**1. Ordenar — 15 min.** Põe os cartões pela ordem em que as ações têm de acontecer. Antes de olhares para a ordem de outro colega, responde por escrito: há algum par de cartões que possa ficar em qualquer ordem, sem estragar o resultado? E há algum cartão que **tenha** de vir antes de outro por uma razão concreta? Escreve essa razão.
+**1. Ordenar (15 min).** Põe os cartões pela ordem em que as ações têm de acontecer. Antes de olhares para a ordem de outro colega, responde por escrito: há algum par de cartões que possa ficar em qualquer ordem, sem estragar o resultado? E há algum cartão que **tenha** de vir antes de outro por uma razão concreta? Escreve essa razão.
 
-**2. Analisar o problema — 15 min.** Preenche para esta encomenda a tabela das quatro perguntas — entradas, saídas, restrições e condições — e escreve a decomposição em subproblemas. Esta é a folha que vais guardar como evidência do bloco.
+**2. Analisar o problema (15 min).** Preenche para esta encomenda a tabela das quatro perguntas (entradas, saídas, restrições e condições) e escreve a decomposição em subproblemas. Esta é a folha que vais guardar como evidência do bloco.
 
-**3. Encontrar as ambiguidades — 15 min.** Pelo menos três destes cartões não dizem o suficiente para serem executados sem dúvidas. Encontra três e escreve, para cada um, a pergunta que ficaste sem resposta. Uma pista: pensa sempre em quantidades, limites e no que acontece quando a situação não é a normal.
+**3. Encontrar as ambiguidades (15 min).** Pelo menos três destes cartões não dizem o suficiente para serem executados sem dúvidas. Encontra três e escreve, para cada um, a pergunta que ficaste sem resposta. Uma pista: pensa sempre em quantidades, limites e no que acontece quando a situação não é a normal.
 
-**4. Corrigir e verificar — 15 min.** Escolhe um dos cartões ambíguos e reescreve-o de maneira a não deixar dúvidas. Depois passa-o a um colega e pede-lhe que o execute exatamente como está escrito, sem te perguntar nada. Se ele fizer o que esperavas, a instrução ficou precisa. Se ele fizer outra coisa, ainda está ambígua — e a culpa é do cartão, não dele.
+**4. Corrigir e verificar (15 min).** Escolhe um dos cartões ambíguos e reescreve-o de maneira a não deixar dúvidas. Depois passa-o a um colega e pede-lhe que o execute exatamente como está escrito, sem te perguntar nada. Se ele fizer o que esperavas, a instrução ficou precisa. Se ele fizer outra coisa, ainda está ambígua, e a culpa é do cartão, não dele.
 
 **Se estiveres com dificuldade.** Começa por usar só cinco cartões, os que descrevem o essencial: receber o pedido, retirar os artigos, embalar, colar a etiqueta e entregar ao transporte. Ordena esses cinco primeiro e só depois acrescenta os restantes quatro, um de cada vez, perguntando a cada um onde é que ele tem de entrar e porquê.
 
@@ -239,9 +239,9 @@ Vais trabalhar com um conjunto de cartões. Copia cada instrução para um cart�
 | Decompor de menos | Se um subproblema ainda te parece difícil, não está decomposto | Cada subproblema tem de poder ser verificado sozinho |
 | O algoritmo nunca acaba | Procura onde está escrito que termina | Confirma a condição de paragem antes de dar por concluído |
 
-## Resumo e checkpoint — 60 min
+## Resumo e checkpoint (60 min)
 
-Um algoritmo é uma sequência finita e não ambígua de passos que transforma entradas num resultado. Antes de escrever passos, responde a quatro perguntas — entradas, saídas, restrições e condições — e parte o problema em subproblemas que possas verificar um a um. Cada ação muda o estado, e é a olhar para o estado que se encontram os erros. Uma instrução vaga não é uma instrução: se admite duas leituras, não determina uma solução.
+Um algoritmo é uma sequência finita e não ambígua de passos que transforma entradas num resultado. Antes de escrever passos, responde a quatro perguntas (entradas, saídas, restrições e condições) e parte o problema em subproblemas que possas verificar um a um. Cada ação muda o estado, e é a olhar para o estado que se encontram os erros. Uma instrução vaga não é uma instrução: se admite duas leituras, não determina uma solução.
 
 Confirma o que já consegues fazer:
 
@@ -250,15 +250,15 @@ Confirma o que já consegues fazer:
 - [ ] Consigo apontar uma instrução ambígua e reescrevê-la sem dúvidas.
 - [ ] Consigo seguir um algoritmo passo a passo e dizer qual é o estado em cada momento.
 
-### 1. Explica — 15 min
+### 1. Explica (15 min)
 
 Em voz alta, ao professor ou a um colega, explica por que razão uma receita que diz "junta sal q.b." não determina uma solução, usando as palavras ambiguidade e estado. Se conseguires explicar isso com um exemplo teu, o objetivo deste bloco está cumprido.
 
-### 2. Testa o algoritmo de um colega — 20 min
+### 2. Testa o algoritmo de um colega (20 min)
 
 Troca com um colega o algoritmo que escreveste na prática guiada. Executa o dele literalmente, sem interpretar e sem lhe perguntar nada, e anota todos os pontos em que tiveste de adivinhar alguma coisa. Depois devolve-lhe a lista. Não é uma crítica: é a única forma de descobrir uma ambiguidade, porque quem escreveu tem a resposta na cabeça e não dá pela falta.
 
-### 3. Encontra o erro — 15 min
+### 3. Encontra o erro (15 min)
 
 Uma loja com um só balcão usa este algoritmo para chamar clientes:
 
@@ -272,7 +272,7 @@ Descobre qual, seguindo o estado passo a passo nesta situação: foram entregues
 
 Escreve em que passo está o erro e como o corrigias. Compara depois com o algoritmo da secção do exemplo, que já está corrigido.
 
-### 4. Regista as tuas dificuldades — 10 min
+### 4. Regista as tuas dificuldades (10 min)
 
 Escreve duas ou três linhas sobre o que te custou mais neste bloco e sobre o que farias de outra maneira se voltasses a começar. Guarda-as: é o que te vai dizer onde insistir.
 

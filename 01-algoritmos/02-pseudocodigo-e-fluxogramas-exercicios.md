@@ -1,4 +1,4 @@
-# Ficha de exercícios — Pseudocódigo e fluxogramas
+# Ficha de exercícios: Pseudocódigo e fluxogramas
 
 UC: UC00245
 
@@ -22,7 +22,7 @@ Material: papel quadriculado e a aplicação de desenho de diagramas.
 
 Todos os algoritmos desta ficha são **sequenciais**: as instruções executam-se sempre todas, pela mesma ordem, sem o algoritmo ter de escolher entre caminhos. Não precisas do losango.
 
-## Exercício 1 — Reconhecer e aplicar — 25 min
+## Exercício 1: Reconhecer e aplicar (25 min)
 
 Lê este algoritmo com atenção:
 
@@ -60,13 +60,13 @@ FIM
 
 Concluíste quando o teu trace mostrar o valor de todas as variáveis em cada linha e conseguires justificar a resposta à alínea d).
 
-## Exercício 2 — Combinar conceitos — 30 min
+## Exercício 2: Combinar conceitos (30 min)
 
 A cantina compra leite em grades de 24 pacotes. O fornecedor também vende pacotes soltos. Uma grade custa 1440 cêntimos e um pacote solto custa 70 cêntimos.
 
 Dado o número de pacotes de que a cantina precisa, queremos saber quantas grades completas compra, quantos pacotes soltos compra além dessas grades, e quanto vai pagar ao todo.
 
-**a)** Responde às quatro perguntas — entradas, saídas, restrições e condições — como aprendeste no bloco anterior.
+**a)** Responde às quatro perguntas (entradas, saídas, restrições e condições) como aprendeste no bloco anterior.
 
 **b)** Escreve o algoritmo em pseudocódigo, com as constantes e as variáveis declaradas e os tipos certos. Usa constantes para os três valores fixos do enunciado.
 
@@ -78,7 +78,7 @@ Testa também 24 pacotes e 10 pacotes.
 
 Concluíste quando as duas representações disserem a mesma coisa e o trace o confirmar.
 
-## Exercício 3 — Resolver com autonomia — 35 min
+## Exercício 3: Resolver com autonomia (35 min)
 
 Uma visita de estudo é feita em autocarros, todos com a mesma capacidade. Dado o número de alunos que vão à visita e a capacidade de cada autocarro, queremos saber quantos autocarros ficam completamente cheios, quantos alunos vão no autocarro que sobra e quantos lugares livres ficam nesse autocarro.
 
@@ -88,7 +88,7 @@ Uma visita de estudo é feita em autocarros, todos com a mesma capacidade. Dado 
 
 **c)** O fluxograma, desenhado na aplicação.
 
-**d)** O trace de três entradas à tua escolha. Escolhe-as de propósito, e explica numa frase por que escolheste cada uma — não sirvam as três para testar a mesma coisa.
+**d)** O trace de três entradas à tua escolha. Escolhe-as de propósito, e explica numa frase por que escolheste cada uma. Não sirvam as três para testar a mesma coisa.
 
 **e)** Há pelo menos uma situação em que a tua fórmula dos lugares livres dá um resultado estranho. Descobre qual é, escreve por que acontece e explica o que seria preciso para a resolver. Não precisas de a resolver: as ferramentas para isso são do bloco seguinte. Descobri-la é que conta.
 
@@ -104,13 +104,13 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 **Exercício 3.** Se `alunos DIV capacidade` te dá os autocarros cheios, o que é que `alunos RESTO capacidade` te dá? E se souberes quantos alunos vão no último autocarro, quantos lugares sobram nele? Para a alínea e), experimenta um número de alunos que seja exatamente igual a dois autocarros cheios.
 
-## Desafio opcional — 30 min
+## Desafio opcional (30 min)
 
 Volta ao exercício 2 e muda uma só coisa: o fornecedor passa a vender grades de 12 pacotes em vez de 24, e a grade passa a custar 780 cêntimos.
 
 **a)** Quantas linhas do teu pseudocódigo precisam de ser alteradas?
 
-**b)** E se, em vez de teres usado constantes, tivesses escrito os números 24 e 1440 diretamente nas contas — quantos sítios terias de procurar e mudar? Conta-os no teu próprio algoritmo, imaginando-o escrito dessa maneira.
+**b)** E se, em vez de teres usado constantes, tivesses escrito os números 24 e 1440 diretamente nas contas? Conta quantos sítios terias de procurar e mudar no teu próprio algoritmo, imaginando-o escrito dessa maneira.
 
 **c)** O fluxograma precisa de ser redesenhado, ou basta mudar o texto de algumas figuras? Justifica.
 
