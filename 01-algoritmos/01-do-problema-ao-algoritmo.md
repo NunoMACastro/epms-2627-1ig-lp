@@ -9,6 +9,7 @@ Requisitos: UC00245-R01, UC00245-R02, UC00245-K01, UC00245-K02, UC00245-A01, UC0
 | Identificação | Valor |
 | --- | --- |
 | Material | M-ALG01, primeiro bloco de Desenvolver algoritmos |
+| Fundamento curricular | Unidade de competência UC00245, bloco ALG01 |
 | Duração | 180 minutos dos 300 do bloco; os outros 120 estão na [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md) |
 | Evidência a guardar | Ficha de análise com entradas, saídas, restrições e subproblemas |
 
@@ -174,12 +175,14 @@ Agora escrevemos o algoritmo em passos numerados, em português, com uma ação 
 
 **Chamar o próximo:**
 
-1. Somar 1 ao número da última senha chamada.
-2. Se esse número for maior do que o número da última senha entregue, não há ninguém à espera e o atendimento fica parado até chegar alguém.
-3. Caso contrário, anunciar esse número em voz alta.
+1. Comparar o número da última senha chamada com o número da última senha entregue.
+2. Se forem iguais, não há ninguém à espera: o atendimento fica parado até chegar alguém.
+3. Caso contrário, somar 1 ao número da última senha chamada e anunciar esse número em voz alta.
 4. Esperar 30 segundos pela resposta do cliente.
 5. Se o cliente aparecer, atendê-lo e registar esse número como a última senha atendida.
 6. Se o cliente não aparecer, registar esse número como descartado e voltar ao passo 1.
+
+Repara na ordem dos passos 1 e 3: primeiro compara-se, só depois se muda o estado. Se o passo 1 somasse logo 1 e só a seguir se verificasse se havia alguém à espera, o número ficava gasto à mesma quando não havia ninguém — e a senha seguinte a ser entregue nunca chegaria a ser chamada. É um erro fácil de cometer e difícil de ver, e vais procurá-lo na consolidação.
 
 ### Passo 4 — Simular com um caso concreto
 
@@ -215,11 +218,15 @@ Vais trabalhar com um conjunto de cartões. Copia cada instrução para um cart�
 - Avisar o cliente de que a encomenda seguiu
 - Se faltar algum artigo, informar o cliente e esperar resposta
 
-**1. Ordenar — 20 min.** Põe os cartões pela ordem em que as ações têm de acontecer. Antes de olhares para a ordem de outro colega, responde por escrito: há algum par de cartões que possa ficar em qualquer ordem, sem estragar o resultado? E há algum cartão que **tenha** de vir antes de outro por uma razão concreta? Escreve essa razão.
+**1. Ordenar — 15 min.** Põe os cartões pela ordem em que as ações têm de acontecer. Antes de olhares para a ordem de outro colega, responde por escrito: há algum par de cartões que possa ficar em qualquer ordem, sem estragar o resultado? E há algum cartão que **tenha** de vir antes de outro por uma razão concreta? Escreve essa razão.
 
-**2. Encontrar as ambiguidades — 20 min.** Pelo menos três destes cartões não dizem o suficiente para serem executados sem dúvidas. Encontra três e escreve, para cada um, a pergunta que ficaste sem resposta. Uma pista: pensa sempre em quantidades, limites e no que acontece quando a situação não é a normal.
+**2. Analisar o problema — 15 min.** Preenche para esta encomenda a tabela das quatro perguntas — entradas, saídas, restrições e condições — e escreve a decomposição em subproblemas. Esta é a folha que vais guardar como evidência do bloco.
 
-**3. Corrigir e verificar — 20 min.** Escolhe um dos cartões ambíguos e reescreve-o de maneira a não deixar dúvidas. Depois passa-o a um colega e pede-lhe que o execute exatamente como está escrito, sem te perguntar nada. Se ele fizer o que esperavas, a instrução ficou precisa. Se ele fizer outra coisa, ainda está ambígua — e a culpa é do cartão, não dele.
+**3. Encontrar as ambiguidades — 15 min.** Pelo menos três destes cartões não dizem o suficiente para serem executados sem dúvidas. Encontra três e escreve, para cada um, a pergunta que ficaste sem resposta. Uma pista: pensa sempre em quantidades, limites e no que acontece quando a situação não é a normal.
+
+**4. Corrigir e verificar — 15 min.** Escolhe um dos cartões ambíguos e reescreve-o de maneira a não deixar dúvidas. Depois passa-o a um colega e pede-lhe que o execute exatamente como está escrito, sem te perguntar nada. Se ele fizer o que esperavas, a instrução ficou precisa. Se ele fizer outra coisa, ainda está ambígua — e a culpa é do cartão, não dele.
+
+**Se estiveres com dificuldade.** Começa por usar só cinco cartões, os que descrevem o essencial: receber o pedido, retirar os artigos, embalar, colar a etiqueta e entregar ao transporte. Ordena esses cinco primeiro e só depois acrescenta os restantes quatro, um de cada vez, perguntando a cada um onde é que ele tem de entrar e porquê.
 
 ## Erros comuns
 
@@ -243,9 +250,33 @@ Confirma o que já consegues fazer:
 - [ ] Consigo apontar uma instrução ambígua e reescrevê-la sem dúvidas.
 - [ ] Consigo seguir um algoritmo passo a passo e dizer qual é o estado em cada momento.
 
-**Checkpoint.** Em voz alta, ao professor ou a um colega, explica por que razão uma receita que diz "junta sal q.b." não determina uma solução, usando as palavras ambiguidade e estado. Se conseguires explicar isso com um exemplo teu, o objetivo deste bloco está cumprido.
+### 1. Explica — 15 min
 
-**Evidência a guardar:** a tua ficha de análise com as quatro perguntas respondidas, a decomposição em subproblemas e as ambiguidades que encontraste na prática guiada. Guarda-a: vais precisar dela no bloco seguinte, quando aprenderes a escrever a mesma coisa em pseudocódigo e em fluxograma.
+Em voz alta, ao professor ou a um colega, explica por que razão uma receita que diz "junta sal q.b." não determina uma solução, usando as palavras ambiguidade e estado. Se conseguires explicar isso com um exemplo teu, o objetivo deste bloco está cumprido.
+
+### 2. Testa o algoritmo de um colega — 20 min
+
+Troca com um colega o algoritmo que escreveste na prática guiada. Executa o dele literalmente, sem interpretar e sem lhe perguntar nada, e anota todos os pontos em que tiveste de adivinhar alguma coisa. Depois devolve-lhe a lista. Não é uma crítica: é a única forma de descobrir uma ambiguidade, porque quem escreveu tem a resposta na cabeça e não dá pela falta.
+
+### 3. Encontra o erro — 15 min
+
+Uma loja com um só balcão usa este algoritmo para chamar clientes:
+
+1. Somar 1 ao número da última senha chamada.
+2. Se esse número for maior do que o número da última senha entregue, não há ninguém à espera e o atendimento fica parado.
+3. Caso contrário, anunciar esse número em voz alta e atender o cliente.
+
+Parece bem e funciona quase sempre. Mas há uma situação em que um cliente com senha nunca chega a ser chamado.
+
+Descobre qual, seguindo o estado passo a passo nesta situação: foram entregues 4 senhas, todas as 4 já foram chamadas e atendidas, o balcão fica livre, e só depois disso chega um cliente novo que tira a senha 5.
+
+Escreve em que passo está o erro e como o corrigias. Compara depois com o algoritmo da secção do exemplo, que já está corrigido.
+
+### 4. Regista as tuas dificuldades — 10 min
+
+Escreve duas ou três linhas sobre o que te custou mais neste bloco e sobre o que farias de outra maneira se voltasses a começar. Guarda-as: é o que te vai dizer onde insistir.
+
+**Evidência a guardar:** a tua ficha de análise com as quatro perguntas e a decomposição do problema da encomenda, as ambiguidades que encontraste, o erro que identificaste no algoritmo acima e as tuas notas de dificuldade. Guarda tudo: vais precisar da análise no bloco seguinte, quando aprenderes a escrever a mesma coisa em pseudocódigo e em fluxograma.
 
 ## A seguir
 

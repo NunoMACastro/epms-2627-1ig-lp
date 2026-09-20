@@ -4,7 +4,7 @@ UC: UC00245
 
 Blocos: ALG01
 
-Requisitos: UC00245-R01, UC00245-A03, UC00245-A04, UC00245-P01
+Requisitos: UC00245-R01, UC00245-R02, UC00245-K02, UC00245-A03, UC00245-A04, UC00245-P01
 
 | Identificação | Valor |
 | --- | --- |
@@ -71,6 +71,8 @@ Produz uma análise completa deste problema:
 **b)** A decomposição em subproblemas.
 
 **c)** O algoritmo, em passos numerados, de dois desses subproblemas: **emprestar um tablet** e **verificar no fim da aula se falta algum**.
+
+Para o segundo vais precisar de dizer que a mesma verificação se repete para cada tablet. Escreve-o em português simples — "verificar cada um dos 15 tablets, um a um" — e segue em frente. A forma organizada de escrever repetições aprende-se daqui a dois blocos; aqui basta dizê-lo com clareza.
 
 **d)** Uma simulação numa tabela, à maneira do exemplo do guia, com uma aula em que três alunos levantam tablets e um deles não devolve. Mostra como o estado muda a cada momento.
 
