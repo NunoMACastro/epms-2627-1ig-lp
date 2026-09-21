@@ -1,3 +1,5 @@
+![Cabeçalho](../imagens/cabecalho.png)
+
 # Pseudocódigo e fluxogramas
 
 UC: UC00245
@@ -339,3 +341,5 @@ A [ficha de exercícios](02-pseudocodigo-e-fluxogramas-exercicios.md) ocupa os r
 ## Referências
 
 Unidade de competência UC00245, *Desenvolver algoritmos*, do referencial de Técnico/a de Informática de Gestão (481RA117), nível 4. A ficha oficial da unidade pode ser consultada no [Catálogo Nacional de Qualificações](https://catalogo.snq.gov.pt/ucDetalhe/355272).
+
+![Rodapé](../imagens/rodape.png)

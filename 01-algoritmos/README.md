@@ -1,3 +1,5 @@
+![Cabeçalho](../imagens/cabecalho.png)
+
 # Algoritmos
 
 Primeira área da disciplina de Linguagens de Programação. Aprender a analisar um problema, a escrever os passos que o resolvem e a testar se esses passos funcionam, tudo antes de escrever a primeira linha de código.
@@ -17,3 +19,5 @@ Cada parte tem um guia, para ler e trabalhar em aula, e uma ficha de exercícios
 Para a primeira parte bastam papel e caneta. A partir da segunda vais precisar também de uma aplicação de desenho de diagramas, para os fluxogramas.
 
 [Voltar ao índice](../README.md)
+
+![Rodapé](../imagens/rodape.png)

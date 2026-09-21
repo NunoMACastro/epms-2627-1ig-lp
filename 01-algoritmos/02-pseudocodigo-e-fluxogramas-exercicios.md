@@ -1,3 +1,5 @@
+![Cabeçalho](../imagens/cabecalho.png)
+
 # Ficha de exercícios: Pseudocódigo e fluxogramas
 
 UC: UC00245
@@ -131,3 +133,5 @@ Volta ao exercício 2 e muda uma só coisa: o fornecedor passa a vender grades d
 O que já consigo fazer sozinho:
 
 Uma dificuldade que tive e o que fiz para a resolver:
+
+![Rodapé](../imagens/rodape.png)

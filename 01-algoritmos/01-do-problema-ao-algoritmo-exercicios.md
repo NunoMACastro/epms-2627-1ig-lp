@@ -1,3 +1,5 @@
+![Cabeçalho](../imagens/cabecalho.png)
+
 # Ficha de exercícios: Do problema ao algoritmo
 
 UC: UC00245
@@ -112,3 +114,5 @@ Esta é a pergunta que interessa: uma solução bem decomposta tem de aguentar u
 O que já consigo fazer sozinho:
 
 Uma dificuldade que tive e o que fiz para a resolver:
+
+![Rodapé](../imagens/rodape.png)

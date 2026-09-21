@@ -1,3 +1,5 @@
+![Cabeçalho](../imagens/cabecalho.png)
+
 # Do problema ao algoritmo
 
 UC: UC00245
@@ -285,3 +287,5 @@ A [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md) deste bloco 
 ## Referências
 
 Unidade de competência UC00245, *Desenvolver algoritmos*, do referencial de Técnico/a de Informática de Gestão (481RA117), nível 4. A ficha oficial da unidade pode ser consultada no [Catálogo Nacional de Qualificações](https://catalogo.snq.gov.pt/ucDetalhe/355272).
+
+![Rodapé](../imagens/rodape.png)

@@ -1,3 +1,5 @@
+![Cabeçalho](imagens/cabecalho.png)
+
 # Materiais de Linguagens de Programação: 10.º IG
 
 Materiais de apoio da disciplina de Linguagens de Programação do Curso Profissional de Técnico/a de Informática de Gestão, 10.º ano, 2026/2027.
@@ -22,3 +24,5 @@ Dentro de cada pasta, os ficheiros estão numerados pela ordem em que a matéria
 Podes ler tudo aqui no GitHub, sem instalar nada. Quando começarmos a trabalhar com Git, vais passar a ter uma cópia deste repositório no teu computador e a atualizá-la quando houver material novo.
 
 Se encontrares um erro num material, avisa. A partir do momento em que soubermos usar Git e GitHub, a correção pode ser feita por ti.
+
+![Rodapé](imagens/rodape.png)
