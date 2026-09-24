@@ -4,7 +4,7 @@
 
 Materiais de apoio da disciplina de Linguagens de Programação do Curso Profissional de Técnico/a de Informática de Gestão, 10.º ano, 2026/2027.
 
-Ainda não há guias, fichas ou enunciados publicados. Cada pasta aparece aqui quando tiver o primeiro material pronto.
+Os materiais são publicados quando ficam prontos, e não só depois de a matéria ser dada. Podes ler à frente: um guia lido antes da aula ajuda-te a acompanhá-la. Os enunciados de avaliação só aparecem na altura própria. Cada pasta aparece aqui quando tiver o primeiro material pronto.
 
 ## Organização
 
