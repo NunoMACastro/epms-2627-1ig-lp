@@ -52,7 +52,7 @@ Se já trabalhaste em aula as instruções se, senão se e senão, vais reconhec
 
 ## Material e preparação
 
-Para a teoria e o exemplo explicado precisas de papel e lápis, porque as retas, as árvores de casos e as tabelas de casos fazem-se primeiro à mão. Para o laboratório e para o exercício 3 da ficha precisas do computador, com o diagrams.net aberto em `https://app.diagrams.net/?lang=pt`, e da pasta `algoritmos` onde guardaste os fluxogramas do bloco anterior.
+Para a teoria e o exemplo explicado precisas de papel e lápis, porque as retas, as árvores de casos e as tabelas de casos fazem-se primeiro à mão. Para o laboratório e para o exercício 5 da ficha precisas do computador, com o diagrams.net aberto em `https://app.diagrams.net/?lang=pt`, e da pasta `algoritmos` onde guardaste os fluxogramas do bloco anterior.
 
 ## Como está organizado o tempo
 
@@ -737,7 +737,7 @@ Compara a coluna "Ecrã" da tabela anterior com a coluna "Resultado esperado" da
 
 ## Prática guiada (60 min)
 
-A prática guiada deste bloco faz-se no computador, no [laboratório](03-decisoes-e-validacao-laboratorio.md). Vais desenhar no diagrams.net o fluxograma deste exemplo, com os losangos, as setas `Sim` e `Não` e o ponto onde os ramos se juntam, seguir com o dedo o caminho de cada caso da tabela do passo 4, e terminar com um problema de gestão parecido, feito por ti.
+A prática guiada deste bloco faz-se no computador, no [laboratório](03-decisoes-e-validacao-laboratorio.md). Vais desenhar no diagrams.net o fluxograma deste exemplo, com os losangos, as setas `Sim` e `Não` e o ponto onde os ramos se juntam, seguir com o dedo o caminho de cada caso da tabela do passo 4, e terminar com o fluxograma de um problema de gestão parecido, desenhado por ti sem passos dados.
 
 ## Erros comuns
 
@@ -838,13 +838,13 @@ Depois explica porque é que, depois de o algoritmo avaliar `SE stock = 0 ENTÃO
 
 Se conseguires as duas explicações sem hesitar, o objetivo do bloco está cumprido.
 
-### 2. Testa o de um colega (20 min)
+### 2. Testa o de um colega (15 min)
 
-Pede a um colega o pseudocódigo que ele escreveu para o exercício 3 da ficha. Antes de o leres, constrói a tua própria tabela de casos esperados para esse problema, a partir do enunciado, com os casos abaixo, no e acima de cada limite. Só depois faz o trace do algoritmo dele com cada um dos teus casos.
+Pede a um colega o pseudocódigo que ele escreveu no exercício 5 da ficha. Usa a tabela de casos esperados que tu construíste no exercício 4, com os sete casos: foi feita a partir do enunciado, antes de veres o algoritmo dele, e é isso que a torna um bom teste. Faz o trace do algoritmo dele com cada um dos teus casos, numa tabela de resumo como a do passo 9 do exemplo explicado, com o valor de cada condição avaliada, o ramo executado e o que aparece no ecrã.
 
 Devolve-lhe a tabela preenchida, com o resultado esperado e o resultado obtido lado a lado, e não apenas a conclusão. Se algum caso não coincidir, aponta a condição responsável.
 
-### 3. Encontra o erro (15 min)
+### 3. Encontra o erro (20 min)
 
 Num armazém de iogurtes, a temperatura da câmara frigorífica tem de estar entre 2 e 8 graus, incluindo os extremos. Cada vez que alguém lê o termómetro, escreve a temperatura (um número inteiro de graus) e este algoritmo devia escrever uma de três mensagens:
 
@@ -868,13 +868,21 @@ INÍCIO
 FIM
 ```
 
-Desenha a reta do problema com as três regiões, constrói a tabela de casos esperados com os valores abaixo, no e acima de cada limite, e faz o trace do algoritmo com cada caso. Escreve que entradas revelam o erro, o que o algoritmo faz com elas, qual é a condição responsável e como a corrigias. Diz também qual das duas propriedades da teoria este algoritmo não cumpre.
+Os limites da regra são o 2 e o 8. Se ajudar, desenha primeiro a reta do problema, com as três regiões.
+
+**a)** Escreve os seis casos de teste, o valor abaixo, o próprio limite e o valor acima de cada limite, cada um com a mensagem que o enunciado pede.
+
+**b)** Faz o trace do algoritmo com cada caso, numa tabela de resumo como a do passo 9 do exemplo explicado: o valor de cada condição avaliada e o que aparece no ecrã.
+
+**c)** Escreve que entradas revelam o erro, o que o algoritmo faz com elas, qual é a condição responsável e como a corrigias.
+
+**d)** Diz qual das duas propriedades da secção "Condições que não se sobrepõem e que cobrem todos os casos" este algoritmo não cumpre.
 
 ### 4. Regista as tuas dificuldades (10 min)
 
 Escreve duas ou três linhas sobre o que te custou mais neste bloco: as tabelas de verdade, pôr o limite do lado certo, a ordem da cadeia, a árvore de casos ou o desenho na aplicação. Guarda-as.
 
-**Evidência a guardar:** a árvore de casos, a tabela de casos esperados e o fluxograma do exercício 3 da ficha, com os caminhos seguidos com o dedo; os ficheiros do laboratório; o erro que encontraste no algoritmo da câmara frigorífica; e as tuas notas de dificuldade.
+**Evidência a guardar:** a árvore de casos e a tabela de casos esperados do exercício 4 da ficha, e o fluxograma do exercício 5, com os caminhos seguidos com o dedo; os ficheiros do laboratório; o erro que encontraste no algoritmo da câmara frigorífica; e as tuas notas de dificuldade.
 
 ## A seguir
 

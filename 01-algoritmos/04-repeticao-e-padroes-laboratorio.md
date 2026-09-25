@@ -162,14 +162,47 @@ Confirma depois esta lista:
 4. Carrega em Exportar. Se a aplicação pedir um nome e um sítio, o nome é `fluxograma-pedidos-validos.png` e o sítio é "Aparelho" ou "Descarregar", nunca o Google Drive.
 5. Abre a imagem exportada e confirma que se lê todo o texto e que se veem todas as setas, incluindo a de volta.
 
-## Parte autónoma: dois ciclos no mesmo fluxograma (10 min)
+## Parte autónoma: um PARA no fluxograma (10 min)
 
 Esta parte fazes sozinho. Cria um ficheiro novo, em Ficheiro, Novo..., e guarda-o logo na pasta `algoritmos`, com o nome `fluxograma-inventario-de-corredores.drawio`.
 
-Desenha o fluxograma deste algoritmo, que conta as caixas guardadas nos corredores de um armazém. Primeiro pede o número de corredores até ser pelo menos 1. Depois lê o número de caixas de cada corredor e soma-as.
+Vais desenhar o fluxograma deste algoritmo, que soma as caixas guardadas nos 3 corredores de um armazém:
 
 ```text
 ALGORITMO InventarioDeCorredores
+CONSTANTES
+    NUMERO_DE_CORREDORES ← 3
+VARIÁVEIS
+    corredor: inteiro
+    caixas: inteiro
+    totalCaixas: inteiro
+INÍCIO
+    totalCaixas ← 0
+    PARA corredor ← 1 ATÉ NUMERO_DE_CORREDORES FAZER
+        ESCREVER "Caixas no corredor ", corredor, "?"
+        LER caixas
+        totalCaixas ← totalCaixas + caixas
+    FIM PARA
+    ESCREVER "Total de caixas no armazém: ", totalCaixas
+FIM
+```
+
+A única coisa nova é o `PARA`. No guia viste que, nesta disciplina, o `PARA` se desenha como o `ENQUANTO` equivalente (guia, [PARA: a forma curta do ciclo contado](04-repeticao-e-padroes.md#para-a-forma-curta-do-ciclo-contado)). Por isso o desenho tem figuras que não aparecem escritas no pseudocódigo acima.
+
+**a)** No papel, escreve as duas instruções que o `PARA` esconde no cabeçalho e diz onde fica cada uma no fluxograma: antes do losango, ou no fim do corpo, mesmo antes da seta de volta.
+
+**b)** Desenha o fluxograma no diagrams.net, com essas duas figuras, o losango `corredor <= NUMERO_DE_CORREDORES?` e a seta de volta a chegar à ponta esquerda do losango, como na parte 4. O `Sim` sai por baixo e o `Não` pela direita.
+
+**c)** Percorre o desenho com o ponteiro do rato, com 5, 3 e 4 caixas nos três corredores. Escreve no papel quantas vezes passaste pelo losango e que total apareceu no fim.
+
+Guarda e exporta a imagem como `fluxograma-inventario-de-corredores.png`, como na parte 6. Se o tempo da aula não chegar para esta parte, termina-a no início da aula seguinte.
+
+## Para ires mais longe: dois ciclos no mesmo fluxograma
+
+Esta parte é opcional, para quem acabou a parte autónoma ou quer praticar em casa. Muda o algoritmo dos corredores para que o número de corredores deixe de ser uma constante: o funcionário escreve-o no início, e o algoritmo pede-o outra vez até ser pelo menos 1. Guarda o desenho noutro ficheiro, `fluxograma-dois-ciclos.drawio`.
+
+```text
+ALGORITMO InventarioComValidacao
 VARIÁVEIS
     numeroDeCorredores: inteiro
     corredor: inteiro
@@ -192,15 +225,7 @@ INÍCIO
 FIM
 ```
 
-Este algoritmo obriga-te a duas decisões que o fluxograma dos pedidos não teve.
-
-A primeira é que tem dois ciclos, um a seguir ao outro. Cada ciclo tem o seu losango e a sua seta de volta, e cada seta de volta tem de chegar ao losango do seu ciclo. Planeia a disposição num papel antes de desenhar, para as duas setas de volta subirem pela faixa livre sem se cruzarem e sem se confundirem uma com a outra.
-
-A segunda é o `PARA`. No guia viste que, nesta disciplina, o `PARA` se desenha como o `ENQUANTO` equivalente. Antes de desenhares, escreve no papel esse `ENQUANTO` equivalente e descobre que figuras ele tem que não aparecem escritas no pseudocódigo acima. Essas figuras também têm de estar no desenho.
-
-Quando acabares, verifica o desenho percorrendo-o com o ponteiro do rato, com este caso de teste: o funcionário escreve 0 corredores, depois 2 corredores, e depois 5 caixas e 3 caixas. Conta quantas vezes passas por cada losango e escreve no papel o que aparece no ecrã, do princípio ao fim. Guarda e exporta a imagem como `fluxograma-inventario-de-corredores.png`.
-
-Se o tempo da aula não chegar para esta parte, termina-a no início da aula seguinte.
+Agora há dois ciclos, um a seguir ao outro. Cada um tem o seu losango e a sua seta de volta, e cada seta de volta tem de chegar ao losango do seu ciclo. Planeia a disposição num papel antes de desenhar, para as duas setas subirem pela faixa livre sem se cruzarem. Verifica o desenho com este caso: o funcionário escreve 0 corredores, depois 2 corredores, e depois 5 caixas e 3 caixas. Conta quantas vezes passas por cada losango e escreve o que aparece no ecrã, do princípio ao fim.
 
 ## Quando alguma coisa corre mal na aplicação
 
@@ -222,7 +247,7 @@ Na tua pasta `algoritmos` tens de ter quatro ficheiros novos:
 - `fluxograma-pedidos-validos.drawio` e `fluxograma-pedidos-validos.png`;
 - `fluxograma-inventario-de-corredores.drawio` e `fluxograma-inventario-de-corredores.png`.
 
-E em papel, a folha da parte autónoma, com o `ENQUANTO` equivalente ao `PARA`, o número de passagens por cada losango e o que apareceu no ecrã.
+E em papel, a folha da parte autónoma, com as duas instruções que o `PARA` esconde, o número de passagens pelo losango e o total que apareceu no ecrã.
 
 Antes de entregares, confirma:
 

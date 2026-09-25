@@ -203,16 +203,15 @@ FIM
 
 A função `ABS` está explicada no guia, na secção "Funções predefinidas".
 
-1. Cria um diagrama novo: na barra de menus, escolhe "Ficheiro" e depois "Novo...". A aplicação pode abrir o diagrama novo noutro separador do browser. Se te perguntar que tipo de diagrama queres, escolhe o diagrama em branco.
-2. Guarda-o logo, como na parte 2, com o nome `fluxograma-diferenca-de-inventario.drawio`.
-3. Antes de desenhar, conta em papel quantas figuras e quantas setas o fluxograma vai ter, e decide a forma de cada figura. Escreve essa lista: é o que vais comparar com o desenho no fim.
-4. Desenha o fluxograma, com as figuras certas, o texto de cada instrução igual ao do pseudocódigo e as setas presas nas duas pontas.
-5. Verifica-o com a lista da parte 6, adaptada a este algoritmo.
-6. Percorre o fluxograma com o dedo para duas contagens diferentes e escreve, para cada uma, tudo o que aparece no ecrã. Primeira: o registo diz 120 e foram contadas 115. Segunda: o registo diz 80 e foram contadas 86. Explica numa frase porque é que a segunda não mostra um número negativo.
-7. Guarda o `.drawio` e exporta a imagem, com o nome `fluxograma-diferenca-de-inventario.png`.
-8. Troca de computador com um colega. Cada um verifica o fluxograma do outro com a lista da parte 6 e diz-lhe se encontrou uma figura a mais, uma a menos, uma forma errada, um texto diferente do pseudocódigo ou uma seta solta.
+1. Cria um diagrama novo: na barra de menus, escolhe "Ficheiro" e depois "Novo...". A aplicação pode abrir o diagrama novo noutro separador do browser. Se te perguntar que tipo de diagrama queres, escolhe o diagrama em branco. Guarda-o logo, como na parte 2, com o nome `fluxograma-diferenca-de-inventario.drawio`.
+2. Antes de desenhar, conta em papel quantas figuras e quantas setas o fluxograma vai ter, e decide a forma de cada figura. Escreve essa lista: é o que vais comparar com o desenho no fim.
+3. Desenha o fluxograma, com as figuras certas, o texto de cada instrução igual ao do pseudocódigo e as setas presas nas duas pontas. Depois verifica-o com a lista da parte 6, adaptada a este algoritmo.
+4. Percorre o fluxograma com o dedo para duas contagens diferentes e escreve, para cada uma, a linha do resultado que aparece no ecrã. Primeira: o registo diz 120 e foram contadas 115. Segunda: o registo diz 80 e foram contadas 86. Explica numa frase porque é que a segunda não mostra um número negativo.
+5. Guarda o `.drawio` e exporta a imagem, com o nome `fluxograma-diferenca-de-inventario.png`.
 
-Concluíste quando o teu fluxograma tiver uma figura por instrução, mais o início e o fim, com as formas certas, quando as duas contagens do ponto 6 estiverem escritas e quando os dois ficheiros deste fluxograma estiverem guardados na tua pasta.
+Concluíste quando o teu fluxograma tiver uma figura por instrução, mais o início e o fim, com as formas certas, quando as duas contagens do ponto 4 estiverem escritas e quando os dois ficheiros deste fluxograma estiverem guardados na tua pasta.
+
+Se acabares antes do tempo, troca de computador com um colega. Cada um verifica o fluxograma do outro com a lista da parte 6 e diz-lhe se encontrou uma figura a mais, uma a menos, uma forma errada, um texto diferente do pseudocódigo ou uma seta solta.
 
 ## Se alguma coisa correr mal
 
@@ -237,6 +236,6 @@ Na tua pasta `algoritmos` tens de ter quatro ficheiros:
 - `fluxograma-caixas-de-cadernos.drawio` e `fluxograma-caixas-de-cadernos.png`;
 - `fluxograma-diferenca-de-inventario.drawio` e `fluxograma-diferenca-de-inventario.png`.
 
-As imagens são a evidência que entregas, pela forma de entrega que o professor indicar. Os ficheiros `.drawio` guardas tu, porque vais voltar a abri-los: na ficha deste bloco vais desenhar mais fluxogramas na aplicação, e no laboratório do guia 03 vais acrescentar a figura que ainda falta, o losango das decisões.
+As imagens são a evidência que entregas, pela forma de entrega que o professor indicar. Os ficheiros `.drawio` guardas tu, porque vais voltar a abri-los: no desafio da ficha deste bloco podes desenhar mais um fluxograma na aplicação, e no laboratório do guia 03 vais acrescentar a figura que ainda falta, o losango das decisões.
 
 ![Rodapé](../imagens/rodape.png)

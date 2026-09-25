@@ -45,20 +45,18 @@ Concluíste a alínea a) quando tiveres pelo menos duas entradas, uma saída, du
 
 b) A cantina decidiu a regra para a água: encomenda-se o menor número de caixas que faz a água chegar pelo menos ao mínimo, que é de 20 garrafas. Na arca há espaço para 30 garrafas de água, e não cabe nem mais uma. O fornecedor só entrega caixas de 12 garrafas.
 
-Escreve os exemplos concretos do contrato para a água. Para cada um dos seis casos seguintes, calcula à mão quantas caixas se encomendam e com quantas garrafas a arca fica depois da entrega:
+Escreve os exemplos concretos do contrato para a água. Para cada um dos quatro casos seguintes, calcula à mão quantas caixas se encomendam e com quantas garrafas a arca fica depois da entrega:
 
 - restam 12 garrafas;
-- restam 5 garrafas;
 - restam 0 garrafas;
-- restam 25 garrafas;
 - restam 20 garrafas;
 - restam 19 garrafas.
 
 Organiza os resultados numa tabela com quatro colunas: garrafas que restam, caixas a encomendar, garrafas depois da entrega e porque é que o caso interessa (caso normal, caso de fronteira ou caso extremo). Escreve as contas que fizeste, e não só o resultado.
 
-Um destes seis casos obriga-te a tomar uma decisão que a regra da cantina não toma. Descobre qual, explica numa ou duas frases onde está o problema e escreve a decisão que tomarias. Não há uma só decisão certa, mas a tua tem de ficar escrita e justificada.
+Um destes quatro casos obriga-te a tomar uma decisão que a regra da cantina não toma. Descobre qual, explica numa ou duas frases onde está o problema e escreve a decisão que tomarias. Não há uma só decisão certa, mas a tua tem de ficar escrita e justificada.
 
-Concluíste a alínea b) quando tiveres os seis casos calculados, cada um classificado, e a decisão escrita para o caso que a regra não resolve.
+Concluíste a alínea b) quando tiveres os quatro casos calculados, cada um classificado, e a decisão escrita para o caso que a regra não resolve.
 
 ## Exercício 2: Decompor e encontrar ambiguidades (25 min)
 
@@ -91,9 +89,7 @@ a) A tabela com as quatro perguntas.
 
 b) A decomposição em subproblemas.
 
-c) O algoritmo, em passos numerados, de dois desses subproblemas: emprestar um tablet e verificar no fim da aula se falta algum.
-
-Para o segundo vais precisar de dizer que a mesma verificação se repete para cada tablet. Escreve-o em português simples ("verificar cada um dos 15 tablets, um a um") e segue em frente. A forma organizada de escrever repetições aprende-se no quarto bloco deste percurso, Repetição e padrões; aqui basta dizê-lo com clareza.
+c) O algoritmo, em passos numerados, de um desses subproblemas: emprestar um tablet.
 
 d) Uma simulação numa tabela, à maneira do passo 4 da papelaria, com uma aula em que três alunos levantam tablets e um deles não devolve. Usa uma coluna para o momento, uma ou mais colunas para o estado dos tablets (quantos estão livres e quem tem cada um dos que não estão) e uma coluna para o que acontece. Identifica os alunos por letras (A, B, C) e nunca pelo nome de um colega. Mostra como o estado muda a cada momento.
 
@@ -120,6 +116,18 @@ Volta ao exercício 3 e muda uma só restrição: passa a haver 8 tablets para u
 Escreve o que muda na tua análise: que condição nova aparece, que passos do algoritmo têm de ser alterados e que passos se mantêm exatamente iguais. Não reescrevas tudo. Identifica a diferença.
 
 Esta é a pergunta que interessa: uma solução bem decomposta tem de aguentar uma mudança destas sem ser toda deitada fora. A tua aguentou?
+
+## Para ires mais longe
+
+Esta secção é opcional e fica fora dos 120 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os tempos são indicativos.
+
+### Mais longe 1: Mais dois casos para a água (10 min)
+
+Volta à água do exercício 1 b) e calcula mais dois casos: restam 5 garrafas e restam 25 garrafas. No caso de 5, confirma que as caixas que encomendas fazem mesmo a água chegar ao mínimo. No caso de 25, decide se é um caso normal ou extremo, e justifica.
+
+### Mais longe 2: Verificar no fim da aula (15 min)
+
+Volta aos tablets do exercício 3 e escreve o algoritmo, em passos numerados, do segundo subproblema: verificar no fim da aula se falta algum tablet e qual. Vais precisar de dizer que a mesma verificação se repete para cada tablet. Escreve-o em português simples ("verificar cada um dos 15 tablets, um a um"). A forma organizada de escrever repetições aprende-se no quarto bloco deste percurso, Repetição e padrões; aqui basta dizê-lo com clareza.
 
 ## Critérios de conclusão
 

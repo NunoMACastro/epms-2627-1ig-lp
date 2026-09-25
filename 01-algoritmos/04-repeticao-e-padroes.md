@@ -1024,7 +1024,17 @@ Um ciclo repete o seu corpo enquanto a condição for verdadeira, e tem três pe
 
 ### 1. Justifica as três peças (15 min)
 
-Sem olhares para o passo 4 do exemplo, responde por escrito às três perguntas das peças para o algoritmo `ContarPedidosValidos`: com que valores começa e porquê; em que situação continua e quando deixa de continuar; o que muda em cada iteração e porque é que isso aproxima o fim. Depois explica a um colega, por palavras tuas, porque é que a quantidade é lida em dois sítios diferentes do algoritmo. Se conseguires justificar as três peças sem hesitar, o checkpoint do bloco está cumprido.
+Sem olhares para o passo 4 do exemplo, responde por escrito às três perguntas das peças para o algoritmo `ContarPedidosValidos`.
+
+**a)** Com que valores começa o ciclo, e porquê?
+
+**b)** Em que situação continua, e quando é que deixa de continuar?
+
+**c)** O que muda em cada iteração, e porque é que isso aproxima o fim?
+
+**d)** Explica a um colega, por palavras tuas, porque é que a quantidade é lida em dois sítios diferentes do algoritmo.
+
+Se conseguires justificar as três peças sem hesitar, o checkpoint do bloco está cumprido.
 
 ### 2. Ordena as fotografias do estado (15 min)
 
@@ -1075,7 +1085,13 @@ INÍCIO
 FIM
 ```
 
-Faz a tabela de iterações com as durações 5 e 8, seguidas do 0, e depois com o 0 sozinho. Diz o que aparece no ecrã em cada caso e o que devia aparecer. Diz qual das três peças está errada, corrige a linha e explica qual dos dois casos de teste mostra o erro de forma mais clara, e porquê.
+**a)** Faz a tabela de iterações com as durações 5 e 8, seguidas do 0. O que aparece no ecrã no fim, e o que devia aparecer?
+
+**b)** Faz a tabela de iterações com o 0 sozinho. O que aparece no ecrã no fim, e o que devia aparecer?
+
+**c)** Diz qual das três peças está errada e corrige a linha. Confirma que, com a correção, os dois casos dão o que devia aparecer.
+
+**d)** Qual dos dois casos de teste mostra o erro de forma mais clara? Responde numa frase, e diz porquê.
 
 ### 4. Regista as tuas dificuldades (15 min)
 

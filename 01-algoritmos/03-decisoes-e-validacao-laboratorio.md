@@ -13,7 +13,7 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-K05, UC00245-K06, UC00245-A06, UC0
 | Material | Laboratório do bloco ALG03, acompanha o [guia](03-decisoes-e-validacao.md) |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG03 |
 | Duração | 60 minutos dos 300 do bloco: é a prática guiada no computador |
-| Evidência a guardar | Os ficheiros `.drawio` e as imagens `.png` dos dois fluxogramas deste laboratório, e a folha com os caminhos seguidos e o trabalho em papel da parte 5 |
+| Evidência a guardar | Os ficheiros `.drawio` e as imagens `.png` dos dois fluxogramas deste laboratório, e as folhas das partes 4 e 5, com os caminhos seguidos |
 
 ## O que vais fazer
 
@@ -179,18 +179,48 @@ Para terminar a parte 4, guarda o ficheiro `.drawio` e exporta a imagem. Na barr
 
 ## Parte 5: Trabalho autónomo, a caixa de envio (15 min)
 
-Agora sem passos dados. O problema é novo, mas a técnica é a mesma das partes 3 e 4.
+Agora sem passos dados. O problema é novo, mas a técnica é a mesma das partes 3 e 4. O pseudocódigo já está escrito, porque nesta parte o que treinas é o desenho na aplicação e a verificação dos caminhos. Escrever o pseudocódigo de raiz é o que vais fazer na ficha.
 
 > Uma loja online escolhe a caixa de envio pelo peso da encomenda, em gramas (um número inteiro). Encomendas até 2000 gramas, inclusive, vão numa caixa pequena; acima de 2000 gramas, vão numa caixa grande. Um peso de zero gramas, ou negativo, é um erro de pesagem, e o algoritmo escreve "Peso inválido" em vez de escolher a caixa. Em todos os casos, no fim, o algoritmo escreve "Pesagem concluída".
 
-1. **No papel, antes de abrires a aplicação.** Desenha a reta do peso com as regiões e as fronteiras, a árvore de casos, e a tabela de casos esperados, com os valores abaixo, no e acima de cada limite. Usa como modelo os passos 2, 3 e 4 do exemplo explicado.
-2. **No papel.** Escreve o pseudocódigo, com uma constante para o limite da caixa pequena.
-3. **Na aplicação.** Guarda uma cópia com outro nome: na barra de menus, **Ficheiro** e **Guardar como...**, escreve o nome `fluxograma-caixa-de-envio.drawio` e escolhe **Aparelho** e a pasta `algoritmos`. O ficheiro da nota fica guardado como estava, e passas a trabalhar no ficheiro novo, que por enquanto tem o mesmo desenho. Se preferires começar num diagrama em branco, usa antes **Ficheiro** e **Novo...**, como na parte 8 do laboratório 02, e guarda-o logo com esse nome.
-4. Desenha o fluxograma. Podes apagar tudo e começar do zero, ou aproveitar o desenho da nota e mudar os textos. Se aproveitares, confirma figura a figura que o desenho corresponde ao teu pseudocódigo, e não ao da nota. Há uma diferença de estrutura: este algoritmo tem uma instrução que se executa depois de os ramos se juntarem, antes do Fim.
-5. Segue com o dedo cada caso da tua tabela, como na parte 4, e escreve a mensagem a que chegaste em cada um.
-6. Guarda o ficheiro e exporta a imagem, com o nome `fluxograma-caixa-de-envio.png`.
+```text
+ALGORITMO EscolherCaixa
+CONSTANTES
+    PESO_MAXIMO_CAIXA_PEQUENA ← 2000
+VARIÁVEIS
+    peso: inteiro
+INÍCIO
+    ESCREVER "Peso da encomenda em gramas?"
+    LER peso
+    SE peso <= 0 ENTÃO
+        ESCREVER "Peso inválido"
+    SENÃO SE peso <= PESO_MAXIMO_CAIXA_PEQUENA ENTÃO
+        ESCREVER "Caixa pequena"
+    SENÃO
+        ESCREVER "Caixa grande"
+    FIM SE
+    ESCREVER "Pesagem concluída"
+FIM
+```
 
-Terminaste quando todos os casos da tua tabela tiverem um caminho, cada caminho acabar na mensagem que o enunciado pede, e todos passarem por "Pesagem concluída" antes do Fim.
+Repara na linha `ESCREVER "Pesagem concluída"`: está alinhada com o `SE`, e não dentro de nenhum ramo. Executa-se depois de os ramos se juntarem, seja qual for o peso. É esta a diferença de estrutura em relação ao algoritmo da nota.
+
+1. Guarda uma cópia com outro nome: na barra de menus, **Ficheiro** e **Guardar como...**, escreve o nome `fluxograma-caixa-de-envio.drawio` e escolhe **Aparelho** e a pasta `algoritmos`. O ficheiro da nota fica guardado como estava, e passas a trabalhar no ficheiro novo, que por enquanto tem o mesmo desenho. Se preferires começar num diagrama em branco, usa antes **Ficheiro** e **Novo...**, como na parte 8 do laboratório 02, e guarda-o logo com esse nome.
+2. Desenha o fluxograma deste pseudocódigo. Se aproveitares o desenho da nota e mudares os textos, confirma figura a figura que o desenho corresponde a este pseudocódigo, e não ao da nota. Os três ramos juntam-se no paralelogramo de "Pesagem concluída", e só depois se desce para o Fim.
+3. Copia esta tabela para a folha e segue com o dedo o caminho de cada peso, como na parte 4. Os pesos são o valor abaixo, o próprio limite e o valor acima de cada um dos dois limites do enunciado, o 0 e o 2000.
+
+| Peso | Saída do primeiro losango | Saída do segundo losango | Mensagens a que chegaste | Coincide com o enunciado? |
+| ---: | --- | --- | --- | --- |
+| -1 | | | | |
+| 0 | | | | |
+| 1 | | | | |
+| 1999 | | | | |
+| 2000 | | | | |
+| 2001 | | | | |
+
+4. Guarda o ficheiro e exporta a imagem, com o nome `fluxograma-caixa-de-envio.png`.
+
+Terminaste quando os seis pesos tiverem um caminho, cada caminho acabar na mensagem que o enunciado pede, e todos passarem por "Pesagem concluída" antes do Fim.
 
 ## Quando alguma coisa corre mal na aplicação
 
@@ -215,8 +245,8 @@ Na tua pasta `algoritmos` tens de ter quatro ficheiros novos:
 E em papel:
 
 - A folha da parte 4, com as nove linhas preenchidas e as respostas às quatro perguntas.
-- A folha da parte 5, com a reta, a árvore de casos, a tabela de casos esperados, o pseudocódigo e a mensagem a que chegaste em cada caso.
+- A folha da parte 5, com as seis linhas preenchidas.
 
-Depois deste laboratório segue-se a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md), onde vais voltar a usar a aplicação no exercício 3.
+Depois deste laboratório segue-se a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md), onde vais voltar a usar a aplicação no exercício 5.
 
 ![Rodapé](../imagens/rodape.png)

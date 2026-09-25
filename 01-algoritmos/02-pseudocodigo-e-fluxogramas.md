@@ -746,7 +746,7 @@ A linha de `caixasAEncomendar` é a que interessa. Pensa: se sobrar algum aluno 
 
 **2. Prever e fazer o trace (10 min).** Antes de calcular, escreve quanto achas que vai dar para uma turma de 25 alunos. Só depois faz o trace completo, com uma coluna por variável. Se o resultado não for o que previste, o interessante não é o número certo: é perceberes onde é que o teu raciocínio se desviou.
 
-Repete para 24 alunos e para 12 alunos. Escolhe tu uma quarta entrada que teste uma situação que estas três ainda não testaram, e explica numa frase porque a escolheste.
+Para 24 alunos e para 12 alunos não precisas de repetir o trace completo. Escreve só, numa tabela, os valores com que ficam `caixasCompletas`, `sobra` e `caixasAEncomendar`, como na tabela dos casos de teste do passo 1 do exemplo explicado.
 
 **Se estiveres com dificuldade.** Volta ao exemplo dos cadernos e muda-lhe só o nome das variáveis, mantendo a estrutura. Quando tiveres isso a funcionar, acrescenta a linha das caixas a encomendar. Uma dificuldade de cada vez.
 
