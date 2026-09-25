@@ -41,7 +41,7 @@ total ← total + 5
 
 Lê-se "total recebe o valor que total tem agora, mais 5". Primeiro calcula-se o lado direito, com o valor atual, e depois guarda-se o resultado na mesma variável. Se esta linha ainda te fizer confusão, volta ao guia 02 antes de continuares.
 
-Do [guia 03, Decisões e validação](03-decisoes-e-validacao.md), vais usar as condições, que só podem dar `VERDADEIRO` ou `FALSO`, as comparações (`=`, `<>`, `<`, `<=`, `>`, `>=`), os operadores `E`, `OU` e `NÃO`, a regra de pôr parênteses sempre que se mistura `E` com `OU`, a seleção com `SE`, `SENÃO SE` e `SENÃO`, o losango do fluxograma com as saídas `Sim` e `Não`, os intervalos (por exemplo, `quantidade >= 1 E quantidade <= 50`), o contrário de um intervalo, escrito com `OU`, e a validação de uma entrada antes de a usar. Vais usar também as fronteiras e a tabela de casos esperados, com casos abaixo, no e acima de cada limite, escrita antes do algoritmo.
+Do [guia 03, Decisões e validação](03-decisoes-e-validacao.md), vais usar as condições, que só podem dar `VERDADEIRO` ou `FALSO`, as comparações (`=`, `!=`, `<`, `<=`, `>`, `>=`), os operadores `E`, `OU` e `NÃO`, a regra de pôr parênteses sempre que se mistura `E` com `OU`, a seleção com `SE`, `SENÃO SE` e `SENÃO`, o losango do fluxograma com as saídas `Sim` e `Não`, os intervalos (por exemplo, `quantidade >= 1 E quantidade <= 50`), o contrário de um intervalo, escrito com `OU`, e a validação de uma entrada antes de a usar. Vais usar também as fronteiras e a tabela de casos esperados, com casos abaixo, no e acima de cada limite, escrita antes do algoritmo.
 
 Dos laboratórios dos blocos [02](02-pseudocodigo-e-fluxogramas-laboratorio.md) e [03](03-decisoes-e-validacao-laboratorio.md), vais precisar de saber usar o diagrams.net: guardar no computador, desenhar as figuras, ligá-las com setas, escrever `Sim` e `Não` nas saídas de um losango e exportar uma imagem.
 
@@ -355,7 +355,7 @@ A atualização pode andar no sentido errado. Com `senha ← senha - 1` em vez d
 
 Aqui a fotografia não se repete: a senha muda em todas as iterações. Mas muda no sentido errado. Afasta-se de 4, que é o valor que tornaria a condição falsa, e cada número negativo continua a ser menor ou igual a 3. Não basta que a variável mude. Tem de mudar na direção da saída.
 
-E a atualização pode saltar por cima do valor de saída. Uma condição escrita com `<>`, do tipo "enquanto a variável for diferente de 10", só fica falsa se a variável valer exatamente 10 num dos testes. Se a variável começar em 1 e aumentar 2 em cada iteração, passa por 9 e por 11, mas nunca por 10, e o ciclo nunca acaba.
+E a atualização pode saltar por cima do valor de saída. Uma condição escrita com `!=`, do tipo "enquanto a variável for diferente de 10", só fica falsa se a variável valer exatamente 10 num dos testes. Se a variável começar em 1 e aumentar 2 em cada iteração, passa por 9 e por 11, mas nunca por 10, e o ciclo nunca acaba.
 
 A pergunta que apanha os quatro casos é sempre a mesma, e é a terceira das três perguntas das peças: **em cada iteração, a variável da condição muda, e aproxima-se de um valor que torna a condição falsa?** Se a resposta for não, o ciclo é infinito.
 
@@ -580,7 +580,7 @@ INÍCIO
     pesoTotal ← 0
     ESCREVER "Peso da caixa em kg (0 para terminar)?"
     LER peso
-    ENQUANTO peso <> SENTINELA FAZER
+    ENQUANTO peso != SENTINELA FAZER
         caixas ← caixas + 1
         pesoTotal ← pesoTotal + peso
         ESCREVER "Peso da caixa em kg (0 para terminar)?"
@@ -599,7 +599,7 @@ flowchart TD
     B --> C["pesoTotal ← 0"]
     C --> D[/ESCREVER pergunta/]
     D --> E[/LER peso/]
-    E --> F{"peso <> SENTINELA?"}
+    E --> F{"peso != SENTINELA?"}
     F -->|Sim| G["caixas ← caixas + 1"]
     G --> H["pesoTotal ← pesoTotal + peso"]
     H --> I[/ESCREVER pergunta/]
@@ -616,10 +616,10 @@ Tabela de iterações com os pesos 18, 25, 7 e, no fim, a sentinela 0 (sem as pe
 
 | Teste | peso | caixas | pesoTotal | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | --- | --- |
-| 1.º | 18 | 0 | 0 | `18 <> 0` é VERDADEIRO | lê 25 |
-| 2.º | 25 | 1 | 18 | `25 <> 0` é VERDADEIRO | lê 7 |
-| 3.º | 7 | 2 | 43 | `7 <> 0` é VERDADEIRO | lê 0 |
-| 4.º | 0 | 3 | 50 | `0 <> 0` é FALSO | o ciclo termina |
+| 1.º | 18 | 0 | 0 | `18 != 0` é VERDADEIRO | lê 25 |
+| 2.º | 25 | 1 | 18 | `25 != 0` é VERDADEIRO | lê 7 |
+| 3.º | 7 | 2 | 43 | `7 != 0` é VERDADEIRO | lê 0 |
+| 4.º | 0 | 3 | 50 | `0 != 0` é FALSO | o ciclo termina |
 
 Três iterações e quatro testes. A sentinela aparece no último teste, faz a condição dar falso, e nada é feito com ela: não é contada nem somada. Se o primeiro valor escrito for logo 0, porque o camião vinha vazio, o ciclo tem zero iterações e o algoritmo escreve 0 caixas e 0 kg. É o caso de zero voltas, e a resposta está certa.
 
@@ -637,7 +637,7 @@ INÍCIO
     caixas ← 0
     pesoTotal ← 0
     peso ← 1
-    ENQUANTO peso <> SENTINELA FAZER
+    ENQUANTO peso != SENTINELA FAZER
         ESCREVER "Peso da caixa em kg (0 para terminar)?"
         LER peso
         caixas ← caixas + 1
@@ -652,11 +652,11 @@ Com os mesmos dados:
 
 | Teste | peso | caixas | pesoTotal | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | --- | --- |
-| 1.º | 1 | 0 | 0 | `1 <> 0` é VERDADEIRO | lê 18 |
-| 2.º | 18 | 1 | 18 | `18 <> 0` é VERDADEIRO | lê 25 |
-| 3.º | 25 | 2 | 43 | `25 <> 0` é VERDADEIRO | lê 7 |
-| 4.º | 7 | 3 | 50 | `7 <> 0` é VERDADEIRO | lê 0 |
-| 5.º | 0 | 4 | 50 | `0 <> 0` é FALSO | o ciclo termina |
+| 1.º | 1 | 0 | 0 | `1 != 0` é VERDADEIRO | lê 18 |
+| 2.º | 18 | 1 | 18 | `18 != 0` é VERDADEIRO | lê 25 |
+| 3.º | 25 | 2 | 43 | `25 != 0` é VERDADEIRO | lê 7 |
+| 4.º | 7 | 3 | 50 | `7 != 0` é VERDADEIRO | lê 0 |
+| 5.º | 0 | 4 | 50 | `0 != 0` é FALSO | o ciclo termina |
 
 O algoritmo escreve "Caixas descarregadas: 4", quando foram três. Na quarta iteração, o 0 foi lido e, antes de a condição o poder testar, foi contado como caixa e somado ao peso. O peso total dá 50, que está certo, mas só por coincidência: somar 0 não muda nada. Se a sentinela fosse -1, a mesma versão errada somava também o -1, e o peso total dava 49. Um algoritmo que acerta por coincidência está errado na mesma. O próprio `peso ← 1` já era um sinal de alarme: um valor inventado, que não vem de lado nenhum, só para convencer a condição a deixar entrar.
 
@@ -785,7 +785,7 @@ Primeira decisão: `ENQUANTO` ou `PARA`? Antes de o ciclo começar, não se sabe
 
 A inicialização tem duas partes. Os três resultados, `pedidosValidos`, `pedidosRecusados` e `totalUnidades`, começam em 0, porque antes do primeiro pedido não se contou nem somou nada. E a primeira quantidade é lida antes do ciclo, a leitura antecipada, porque a condição precisa dela logo no primeiro teste.
 
-A condição é `quantidade <> SENTINELA`: continua-se enquanto a quantidade lida não for o 0.
+A condição é `quantidade != SENTINELA`: continua-se enquanto a quantidade lida não for o 0.
 
 A atualização é a leitura da quantidade seguinte, no fim do corpo. É ela que muda a variável da condição, e é ela que um dia traz o 0.
 
@@ -812,7 +812,7 @@ INÍCIO
     totalUnidades ← 0
     ESCREVER "Quantidade do pedido (0 para terminar)?"
     LER quantidade
-    ENQUANTO quantidade <> SENTINELA FAZER
+    ENQUANTO quantidade != SENTINELA FAZER
         SE quantidade >= QUANTIDADE_MINIMA E quantidade <= CAPACIDADE_MAXIMA ENTÃO
             pedidosValidos ← pedidosValidos + 1
             totalUnidades ← totalUnidades + quantidade
@@ -848,7 +848,7 @@ flowchart TD
     C --> D["totalUnidades ← 0"]
     D --> E[/ESCREVER pergunta/]
     E --> F[/LER quantidade/]
-    F --> G{"quantidade <> SENTINELA?"}
+    F --> G{"quantidade != SENTINELA?"}
     G -->|Sim| H{"quantidade >= QUANTIDADE_MINIMA E quantidade <= CAPACIDADE_MAXIMA?"}
     H -->|Sim| I["pedidosValidos ← pedidosValidos + 1"]
     I --> J["totalUnidades ← totalUnidades + quantidade"]
@@ -880,19 +880,19 @@ Primeiro, o trace completo de um caso curto, para veres o `SE` a funcionar dentr
 | 3 | `totalUnidades ← 0` | sem valor | 0 | 0 | 0 | nenhuma | nada |
 | 4 | `ESCREVER "Quantidade do pedido (0 para terminar)?"` | sem valor | 0 | 0 | 0 | nenhuma | Quantidade do pedido (0 para terminar)? |
 | 5 | `LER quantidade` | 12 | 0 | 0 | 0 | nenhuma | a pessoa escreve 12 |
-| 6 | `ENQUANTO quantidade <> SENTINELA FAZER` | 12 | 0 | 0 | 0 | `12 <> 0` é VERDADEIRO | nada |
+| 6 | `ENQUANTO quantidade != SENTINELA FAZER` | 12 | 0 | 0 | 0 | `12 != 0` é VERDADEIRO | nada |
 | 7 | `SE quantidade >= QUANTIDADE_MINIMA E quantidade <= CAPACIDADE_MAXIMA ENTÃO` | 12 | 0 | 0 | 0 | `12 >= 1` é VERDADEIRO, `12 <= 50` é VERDADEIRO; VERDADEIRO E VERDADEIRO dá VERDADEIRO | nada |
 | 8 | `pedidosValidos ← pedidosValidos + 1` | 12 | 1 | 0 | 0 | nenhuma | nada |
 | 9 | `totalUnidades ← totalUnidades + quantidade` | 12 | 1 | 0 | 12 | nenhuma | nada |
 | 10 | `ESCREVER "Quantidade do pedido (0 para terminar)?"` | 12 | 1 | 0 | 12 | nenhuma | Quantidade do pedido (0 para terminar)? |
 | 11 | `LER quantidade` | 60 | 1 | 0 | 12 | nenhuma | a pessoa escreve 60 |
-| 12 | `ENQUANTO quantidade <> SENTINELA FAZER` | 60 | 1 | 0 | 12 | `60 <> 0` é VERDADEIRO | nada |
+| 12 | `ENQUANTO quantidade != SENTINELA FAZER` | 60 | 1 | 0 | 12 | `60 != 0` é VERDADEIRO | nada |
 | 13 | `SE quantidade >= QUANTIDADE_MINIMA E quantidade <= CAPACIDADE_MAXIMA ENTÃO` | 60 | 1 | 0 | 12 | `60 >= 1` é VERDADEIRO, `60 <= 50` é FALSO; VERDADEIRO E FALSO dá FALSO | nada |
 | 14 | `pedidosRecusados ← pedidosRecusados + 1` | 60 | 1 | 1 | 12 | nenhuma | nada |
 | 15 | `ESCREVER "Pedido recusado: ", quantidade, " unidades"` | 60 | 1 | 1 | 12 | nenhuma | Pedido recusado: 60 unidades |
 | 16 | `ESCREVER "Quantidade do pedido (0 para terminar)?"` | 60 | 1 | 1 | 12 | nenhuma | Quantidade do pedido (0 para terminar)? |
 | 17 | `LER quantidade` | 0 | 1 | 1 | 12 | nenhuma | a pessoa escreve 0 |
-| 18 | `ENQUANTO quantidade <> SENTINELA FAZER` | 0 | 1 | 1 | 12 | `0 <> 0` é FALSO | nada |
+| 18 | `ENQUANTO quantidade != SENTINELA FAZER` | 0 | 1 | 1 | 12 | `0 != 0` é FALSO | nada |
 | 19 | `ESCREVER "Pedidos válidos: ", pedidosValidos` | 0 | 1 | 1 | 12 | nenhuma | Pedidos válidos: 1 |
 | 20 | `ESCREVER "Total de unidades: ", totalUnidades` | 0 | 1 | 1 | 12 | nenhuma | Total de unidades: 12 |
 | 21 | `ESCREVER "Pedidos recusados: ", pedidosRecusados` | 0 | 1 | 1 | 12 | nenhuma | Pedidos recusados: 1 |
@@ -901,9 +901,9 @@ Os passos 1 a 5 são a inicialização: três variáveis a zero, a pergunta e a 
 
 A primeira iteração vai do passo 7 ao passo 11. No passo 7, o `SE` avalia o intervalo com 12, e as duas comparações são verdadeiras. Executa-se o ramo do `ENTÃO`: o contador de válidos passa a 1 e o total passa a 12. O ramo do `SENÃO` não aparece na tabela porque não foi executado. Nos passos 10 e 11, a pergunta e a leitura do valor seguinte, 60.
 
-No passo 12, o algoritmo voltou ao `ENQUANTO`. `60 <> 0` é verdadeiro, e começa a segunda iteração. Agora o `SE` dá falso, porque 60 é maior do que 50, e executa-se o ramo do `SENÃO`: o contador de recusados passa a 1 e aparece a mensagem. O total não muda, porque o ramo que soma não foi executado.
+No passo 12, o algoritmo voltou ao `ENQUANTO`. `60 != 0` é verdadeiro, e começa a segunda iteração. Agora o `SE` dá falso, porque 60 é maior do que 50, e executa-se o ramo do `SENÃO`: o contador de recusados passa a 1 e aparece a mensagem. O total não muda, porque o ramo que soma não foi executado.
 
-No passo 18, a quantidade lida é o 0, e `0 <> 0` é falso. O ciclo termina. O 0 não passou pelo `SE`, não foi contado nem somado. Os passos 19 a 21 escrevem os resultados.
+No passo 18, a quantidade lida é o 0, e `0 != 0` é falso. O ciclo termina. O 0 não passou pelo `SE`, não foi contado nem somado. Os passos 19 a 21 escrevem os resultados.
 
 ### Passo 8: A tabela de iterações do caso normal
 
@@ -911,12 +911,12 @@ Agora o caso A, com a tabela de iterações. As perguntas não estão na última
 
 | Teste | quantidade | pedidosValidos | pedidosRecusados | totalUnidades | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | ---: | --- | --- |
-| 1.º | 12 | 0 | 0 | 0 | `12 <> 0` é VERDADEIRO | lê 60 |
-| 2.º | 60 | 1 | 0 | 12 | `60 <> 0` é VERDADEIRO | escreve "Pedido recusado: 60 unidades"; lê 30 |
-| 3.º | 30 | 1 | 1 | 12 | `30 <> 0` é VERDADEIRO | lê -4 |
-| 4.º | -4 | 2 | 1 | 42 | `-4 <> 0` é VERDADEIRO | escreve "Pedido recusado: -4 unidades"; lê 50 |
-| 5.º | 50 | 2 | 2 | 42 | `50 <> 0` é VERDADEIRO | lê 0 |
-| 6.º | 0 | 3 | 2 | 92 | `0 <> 0` é FALSO | o ciclo termina |
+| 1.º | 12 | 0 | 0 | 0 | `12 != 0` é VERDADEIRO | lê 60 |
+| 2.º | 60 | 1 | 0 | 12 | `60 != 0` é VERDADEIRO | escreve "Pedido recusado: 60 unidades"; lê 30 |
+| 3.º | 30 | 1 | 1 | 12 | `30 != 0` é VERDADEIRO | lê -4 |
+| 4.º | -4 | 2 | 1 | 42 | `-4 != 0` é VERDADEIRO | escreve "Pedido recusado: -4 unidades"; lê 50 |
+| 5.º | 50 | 2 | 2 | 42 | `50 != 0` é VERDADEIRO | lê 0 |
+| 6.º | 0 | 3 | 2 | 92 | `0 != 0` é FALSO | o ciclo termina |
 
 Lê a tabela linha a linha e explica cada mudança pela instrução que a provocou. É isto que vais ter de fazer no checkpoint do bloco.
 
@@ -951,7 +951,7 @@ Se, no exemplo dos pedidos, a leitura passar para o princípio do corpo, sem lei
 
 ```text
     quantidade ← 1
-    ENQUANTO quantidade <> SENTINELA FAZER
+    ENQUANTO quantidade != SENTINELA FAZER
         ESCREVER "Quantidade do pedido (0 para terminar)?"
         LER quantidade
         SE quantidade >= QUANTIDADE_MINIMA E quantidade <= CAPACIDADE_MAXIMA ENTÃO
@@ -964,7 +964,7 @@ com o resto do corpo igual, então o 0 é lido e passa pelo `SE` antes de a cond
 Se o aumento de `pedidosValidos` ficar no corpo do ciclo, mas antes do `SE`:
 
 ```text
-    ENQUANTO quantidade <> SENTINELA FAZER
+    ENQUANTO quantidade != SENTINELA FAZER
         pedidosValidos ← pedidosValidos + 1
         SE quantidade >= QUANTIDADE_MINIMA E quantidade <= CAPACIDADE_MAXIMA ENTÃO
             totalUnidades ← totalUnidades + quantidade
@@ -979,10 +979,10 @@ Se faltar a leitura da quantidade seguinte no fim do corpo, a quantidade nunca m
 
 | Teste | quantidade | pedidosValidos | pedidosRecusados | totalUnidades | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | ---: | --- | --- |
-| 1.º | 12 | 0 | 0 | 0 | `12 <> 0` é VERDADEIRO | nada |
-| 2.º | 12 | 1 | 0 | 12 | `12 <> 0` é VERDADEIRO | nada |
-| 3.º | 12 | 2 | 0 | 24 | `12 <> 0` é VERDADEIRO | nada |
-| 4.º | 12 | 3 | 0 | 36 | `12 <> 0` é VERDADEIRO | nada |
+| 1.º | 12 | 0 | 0 | 0 | `12 != 0` é VERDADEIRO | nada |
+| 2.º | 12 | 1 | 0 | 12 | `12 != 0` é VERDADEIRO | nada |
+| 3.º | 12 | 2 | 0 | 24 | `12 != 0` é VERDADEIRO | nada |
+| 4.º | 12 | 3 | 0 | 36 | `12 != 0` é VERDADEIRO | nada |
 
 E assim para sempre. Este ciclo infinito é mais traiçoeiro do que o das senhas, porque o estado não se repete: os válidos e o total aumentam em cada iteração. Quem olhar só para essas colunas vê o algoritmo "a trabalhar". Mas a coluna que decide o ciclo é a da quantidade, que é a variável da condição, e essa está sempre em 12. A pergunta das três peças apanha o erro: em cada iteração, a variável da condição muda? Não. Então o ciclo é infinito.
 
@@ -1064,7 +1064,7 @@ INÍCIO
     totalMinutos ← 0
     ESCREVER "Minutos do atendimento (0 para fechar o balcão)?"
     LER minutos
-    ENQUANTO minutos <> SENTINELA FAZER
+    ENQUANTO minutos != SENTINELA FAZER
         clientes ← clientes + 1
         totalMinutos ← totalMinutos + minutos
         ESCREVER "Minutos do atendimento (0 para fechar o balcão)?"

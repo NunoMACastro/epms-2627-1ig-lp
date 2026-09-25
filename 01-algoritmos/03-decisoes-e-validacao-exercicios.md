@@ -51,9 +51,9 @@ Para cada condição, escreve as comparações com os valores substituídos, o r
 
 **f)** `resposta = "S"`
 
-**g)** `(stock < 5 E quantidade > 10) OU resposta <> "N"`
+**g)** `(stock < 5 E quantidade > 10) OU resposta != "N"`
 
-**h)** `stock < 5 E (quantidade > 10 OU resposta <> "N")`
+**h)** `stock < 5 E (quantidade > 10 OU resposta != "N")`
 
 **i)** As condições g) e h) têm as mesmas três comparações, pela mesma ordem. Explica numa ou duas frases porque é que o resultado não é o mesmo.
 

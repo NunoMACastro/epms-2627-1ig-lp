@@ -418,7 +418,7 @@ A tabela seguinte reúne a convenção toda, incluindo o que vais aprender nos g
 | Aritmética | `+`, `-`, `*`, `/`, `DIV`, `RESTO` e parênteses | `caixas ← unidades DIV UNIDADES_POR_CAIXA` | já neste guia |
 | Funções predefinidas | nome em maiúsculas e argumento entre parênteses; só `ABS`, `ARREDONDAR`, `TRUNCAR` e `RAIZ` | `ABS(precoA - precoB)` | já neste guia |
 | Lógico literal | `VERDADEIRO`, `FALSO` | `pago ← FALSO` | já neste guia |
-| Comparações | `=`, `<>`, `<`, `<=`, `>`, `>=` | `quantidade <= stock` | vais usar no guia 03 |
+| Comparações | `=`, `!=`, `<`, `<=`, `>`, `>=` | `quantidade <= stock` | vais usar no guia 03 |
 | Operadores lógicos | `E`, `OU`, `NÃO` | `nota >= 0 E nota <= 20` | vais usar no guia 03 |
 | Seleção | `SE condição ENTÃO`, `SENÃO SE condição ENTÃO`, `SENÃO`, `FIM SE` | no guia 03 | vais usar no guia 03 |
 | Repetição condicional | `ENQUANTO condição FAZER`, `FIM ENQUANTO` | no guia 04 | vais usar no guia 04 |

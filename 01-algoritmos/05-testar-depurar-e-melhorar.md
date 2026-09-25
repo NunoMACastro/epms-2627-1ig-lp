@@ -34,7 +34,7 @@ Do [guia 01, Do problema ao algoritmo](01-do-problema-ao-algoritmo.md), vais usa
 
 Do [guia 02, Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md), vais usar as variáveis, as constantes e os tipos, a atribuição com a seta, `LER` e `ESCREVER`, `DIV` e `RESTO`, os símbolos do fluxograma e, acima de tudo, a tabela de trace, onde se executa um algoritmo à mão, instrução a instrução, com uma coluna por variável. O trace é a ferramenta principal deste guia.
 
-Do [guia 03, Decisões e validação](03-decisoes-e-validacao.md), vais usar as comparações (`=`, `<>`, `<`, `<=`, `>`, `>=`), os operadores `E`, `OU` e `NÃO`, a seleção com `SE`, `SENÃO SE` e `SENÃO`, a regra de que numa cadeia de `SENÃO SE` a primeira condição verdadeira ganha, as ideias de intervalo, limite e validação de uma entrada, a regra de testar cada limite abaixo, em cima e acima, e as duas ferramentas desse guia: a árvore de casos e a tabela de casos esperados.
+Do [guia 03, Decisões e validação](03-decisoes-e-validacao.md), vais usar as comparações (`=`, `!=`, `<`, `<=`, `>`, `>=`), os operadores `E`, `OU` e `NÃO`, a seleção com `SE`, `SENÃO SE` e `SENÃO`, a regra de que numa cadeia de `SENÃO SE` a primeira condição verdadeira ganha, as ideias de intervalo, limite e validação de uma entrada, a regra de testar cada limite abaixo, em cima e acima, e as duas ferramentas desse guia: a árvore de casos e a tabela de casos esperados.
 
 Do [guia 04, Repetição e padrões](04-repeticao-e-padroes.md), vais usar o `ENQUANTO` e o `PARA`, as três peças de um ciclo (a inicialização, a condição e a atualização), a tabela de iterações, o caso zero, em que o ciclo não chega a ter nenhuma iteração, e os quatro padrões: o contador, o totalizador, a sentinela, com a leitura antecipada e a constante `SENTINELA`, e a validação repetida, que volta a pedir um valor enquanto ele for inválido.
 
@@ -202,14 +202,14 @@ INÍCIO
     pedidos ← 0
     ESCREVER "Unidades do pedido (0 para terminar)?"
     LER unidades
-    ENQUANTO unidades <> SENTINELA FAZER
+    ENQUANTO unidades != SENTINELA FAZER
         pedidos ← pedidos + 1
     FIM ENQUANTO
     ESCREVER "Pedidos: ", pedidos
 FIM
 ```
 
-Com um primeiro pedido de 5 unidades, a condição `5 <> 0` é verdadeira, o ciclo soma 1 a `pedidos` e volta à condição. Como dentro do ciclo não há nenhum `LER unidades`, `unidades` continua a valer 5 para sempre, e a condição nunca chega a ser falsa. No trace vê-se logo: a coluna de `unidades` nunca muda, e é ela que a condição consulta. Falta o `LER unidades` no fim do corpo do ciclo, que é a atualização do padrão sentinela: é a leitura esquecida no fim do corpo, um dos erros frequentes do guia 04. Repara que, com o 0 logo na leitura antecipada, este algoritmo funciona: o caso zero não mostra este erro, e o caso de uma iteração mostra-o.
+Com um primeiro pedido de 5 unidades, a condição `5 != 0` é verdadeira, o ciclo soma 1 a `pedidos` e volta à condição. Como dentro do ciclo não há nenhum `LER unidades`, `unidades` continua a valer 5 para sempre, e a condição nunca chega a ser falsa. No trace vê-se logo: a coluna de `unidades` nunca muda, e é ela que a condição consulta. Falta o `LER unidades` no fim do corpo do ciclo, que é a atualização do padrão sentinela: é a leitura esquecida no fim do corpo, um dos erros frequentes do guia 04. Repara que, com o 0 logo na leitura antecipada, este algoritmo funciona: o caso zero não mostra este erro, e o caso de uma iteração mostra-o.
 
 Na segunda forma, a variável esquecida não controla o ciclo, e por isso o ciclo acaba normalmente, mas uma parte do estado fica parada num valor antigo. É mais traiçoeira, porque o algoritmo termina e escreve resultados com ar de certos. É esse o erro do exemplo explicado deste guia.
 
@@ -228,7 +228,7 @@ VARIÁVEIS
 INÍCIO
     ESCREVER "Unidades do pedido (0 para terminar)?"
     LER unidades
-    ENQUANTO unidades <> SENTINELA FAZER
+    ENQUANTO unidades != SENTINELA FAZER
         grandes ← 0
         SE unidades >= PEDIDO_GRANDE ENTÃO
             grandes ← grandes + 1
@@ -447,7 +447,7 @@ INÍCIO
     valorVendido ← 0
     ESCREVER "Quantidade vendida (0 para terminar)?"
     LER quantidade
-    ENQUANTO quantidade <> SENTINELA FAZER
+    ENQUANTO quantidade != SENTINELA FAZER
         SE quantidade < 0 ENTÃO
             ESCREVER "Quantidade inválida"
         SENÃO SE quantidade <= stock ENTÃO
@@ -506,14 +506,14 @@ Seis testes falham e um passa. Antes de procurar o erro, olha para o padrão das
 | 5 | `valorVendido ← 0` | 20 | sem valor | 0 | 0 | 0 | nenhuma | nada |
 | 6 | `ESCREVER "Quantidade vendida (0 para terminar)?"` | 20 | sem valor | 0 | 0 | 0 | nenhuma | Quantidade vendida (0 para terminar)? |
 | 7 | `LER quantidade` | 20 | 5 | 0 | 0 | 0 | nenhuma | a funcionária escreve 5 |
-| 8 | `ENQUANTO quantidade <> SENTINELA FAZER` | 20 | 5 | 0 | 0 | 0 | `5 <> 0` é verdadeiro | nada |
+| 8 | `ENQUANTO quantidade != SENTINELA FAZER` | 20 | 5 | 0 | 0 | 0 | `5 != 0` é verdadeiro | nada |
 | 9 | `SE quantidade < 0 ENTÃO` | 20 | 5 | 0 | 0 | 0 | `5 < 0` é falso | nada |
 | 10 | `SENÃO SE quantidade <= stock ENTÃO` | 20 | 5 | 0 | 0 | 0 | `5 <= 20` é verdadeiro | nada |
 | 11 | `vendidas ← vendidas + quantidade` | 20 | 5 | 5 | 0 | 0 | nenhuma | nada |
 | 12 | `valorVendido ← valorVendido + quantidade * PRECO_CADERNO` | 20 | 5 | 5 | 0 | 750 | nenhuma | nada |
 | 13 | `ESCREVER "Quantidade vendida (0 para terminar)?"` | 20 | 5 | 5 | 0 | 750 | nenhuma | Quantidade vendida (0 para terminar)? |
 | 14 | `LER quantidade` | 20 | 0 | 5 | 0 | 750 | nenhuma | a funcionária escreve 0 |
-| 15 | `ENQUANTO quantidade <> SENTINELA FAZER` | 20 | 0 | 5 | 0 | 750 | `0 <> 0` é falso | nada |
+| 15 | `ENQUANTO quantidade != SENTINELA FAZER` | 20 | 0 | 5 | 0 | 750 | `0 != 0` é falso | nada |
 | 16 | `ESCREVER "Stock final: ", stock` | 20 | 0 | 5 | 0 | 750 | nenhuma | Stock final: 20 |
 | 17 | `ESCREVER "Unidades vendidas: ", vendidas` | 20 | 0 | 5 | 0 | 750 | nenhuma | Unidades vendidas: 5 |
 | 18 | `ESCREVER "Valor vendido em cêntimos: ", valorVendido` | 20 | 0 | 5 | 0 | 750 | nenhuma | Valor vendido em cêntimos: 750 |
@@ -569,7 +569,7 @@ INÍCIO
     valorVendido ← 0
     ESCREVER "Quantidade vendida (0 para terminar)?"
     LER quantidade
-    ENQUANTO quantidade <> SENTINELA FAZER
+    ENQUANTO quantidade != SENTINELA FAZER
         SE quantidade < 0 ENTÃO
             ESCREVER "Quantidade inválida"
         SENÃO SE quantidade <= stock ENTÃO
@@ -597,9 +597,9 @@ Agora o teste de regressão: a tabela inteira outra vez, e não só o caso que f
 
 | Teste | quantidade | stock | vendidas | recusadas | valorVendido | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
-| 1.º | 15 | 20 | 0 | 0 | 0 | `15 <> 0` é verdadeiro | `15 <= 20` é verdadeiro: venda aceite, o stock passa a 5; lê 6 |
-| 2.º | 6 | 5 | 15 | 0 | 2250 | `6 <> 0` é verdadeiro | `6 <= 5` é falso: escreve "Venda recusada: só há 5 cadernos" e soma 1 às recusadas; lê 0 |
-| 3.º | 0 | 5 | 15 | 1 | 2250 | `0 <> 0` é falso | o ciclo termina |
+| 1.º | 15 | 20 | 0 | 0 | 0 | `15 != 0` é verdadeiro | `15 <= 20` é verdadeiro: venda aceite, o stock passa a 5; lê 6 |
+| 2.º | 6 | 5 | 15 | 0 | 2250 | `6 != 0` é verdadeiro | `6 <= 5` é falso: escreve "Venda recusada: só há 5 cadernos" e soma 1 às recusadas; lê 0 |
+| 3.º | 0 | 5 | 15 | 1 | 2250 | `0 != 0` é falso | o ciclo termina |
 
 Depois do ciclo, o algoritmo escreve os quatro valores da última linha e, como `5 < 10` é verdadeiro, escreve também "Encomendar cadernos". Repara na coluna do `stock`: na primeira iteração desce para 5, e é esse 5 que a condição da venda usa na segunda iteração. É isso que faltava na primeira versão.
 
@@ -614,7 +614,7 @@ flowchart TD
     E --> F["valorVendido ← 0"]
     F --> G[/ESCREVER pergunta da quantidade/]
     G --> H[/LER quantidade/]
-    H --> I{"quantidade <> SENTINELA?"}
+    H --> I{"quantidade != SENTINELA?"}
     I -->|Sim| J{"quantidade < 0?"}
     J -->|Sim| K[/ESCREVER Quantidade inválida/]
     J -->|Não| L{"quantidade <= stock?"}
@@ -638,7 +638,7 @@ flowchart TD
     Y --> Z
 ```
 
-Se não conseguires ver o desenho, o percurso é este. Do início, desce-se em linha reta pela pergunta do stock, pela leitura do stock, pelas três atribuições que põem os totais a zero, pela pergunta da quantidade e pela leitura da primeira quantidade. Chega-se ao losango do ciclo, `quantidade <> SENTINELA?`. Pelo `Sim` entra-se no corpo do ciclo, que começa noutro losango, `quantidade < 0?`. Pelo `Sim` deste escreve-se "Quantidade inválida". Pelo `Não` chega-se a um terceiro losango, `quantidade <= stock?`: pelo `Sim` executam-se as três atualizações da venda aceite, começando pela do stock; pelo `Não` escreve-se a mensagem de recusa e soma-se 1 às recusadas. Os três caminhos juntam-se na pergunta da quantidade seguinte, lê-se a quantidade, e a seta volta atrás, para o losango do ciclo. Pelo `Não` do losango do ciclo sai-se para os quatro `ESCREVER` finais e para o último losango, `stock < STOCK_MINIMO?`, que escreve o aviso pelo `Sim` e segue diretamente para o fim pelo `Não`.
+Se não conseguires ver o desenho, o percurso é este. Do início, desce-se em linha reta pela pergunta do stock, pela leitura do stock, pelas três atribuições que põem os totais a zero, pela pergunta da quantidade e pela leitura da primeira quantidade. Chega-se ao losango do ciclo, `quantidade != SENTINELA?`. Pelo `Sim` entra-se no corpo do ciclo, que começa noutro losango, `quantidade < 0?`. Pelo `Sim` deste escreve-se "Quantidade inválida". Pelo `Não` chega-se a um terceiro losango, `quantidade <= stock?`: pelo `Sim` executam-se as três atualizações da venda aceite, começando pela do stock; pelo `Não` escreve-se a mensagem de recusa e soma-se 1 às recusadas. Os três caminhos juntam-se na pergunta da quantidade seguinte, lê-se a quantidade, e a seta volta atrás, para o losango do ciclo. Pelo `Não` do losango do ciclo sai-se para os quatro `ESCREVER` finais e para o último losango, `stock < STOCK_MINIMO?`, que escreve o aviso pelo `Sim` e segue diretamente para o fim pelo `Não`.
 
 Compara com o pseudocódigo, figura a figura. O primeiro losango é o `ENQUANTO`, e reconhece-se por ser o único para onde volta uma seta. O segundo e o terceiro losangos são o `SE` e o `SENÃO SE` da cadeia, e ficam os dois no caminho do `Sim` do ciclo, porque estão dentro dele. O retângulo `stock ← stock - quantidade` é a correção do passo 6: no fluxograma da primeira versão, esta figura não existia, e o caminho do `Sim` do terceiro losango passava diretamente para as vendidas.
 
@@ -669,7 +669,7 @@ INÍCIO
     recusadas ← 0
     ESCREVER "Quantidade vendida (0 para terminar)?"
     LER quantidade
-    ENQUANTO quantidade <> SENTINELA FAZER
+    ENQUANTO quantidade != SENTINELA FAZER
         SE quantidade < 0 ENTÃO
             ESCREVER "Quantidade inválida"
         SENÃO SE quantidade <= stock ENTÃO

@@ -96,17 +96,17 @@ As condições mais simples comparam dois valores. Escrevem-se com seis operador
 | Operador | Pergunta | Exemplo | Resultado com quantidade a valer 10 |
 | --- | --- | --- | --- |
 | `=` | é igual a? | `quantidade = 10` | `VERDADEIRO` |
-| `<>` | é diferente de? | `quantidade <> 10` | `FALSO` |
+| `!=` | é diferente de? | `quantidade != 10` | `FALSO` |
 | `<` | é menor do que? | `quantidade < 10` | `FALSO` |
 | `<=` | é menor ou igual a? | `quantidade <= 10` | `VERDADEIRO` |
 | `>` | é maior do que? | `quantidade > 10` | `FALSO` |
 | `>=` | é maior ou igual a? | `quantidade >= 10` | `VERDADEIRO` |
 
-Na aula de Matemática escreves "menor ou igual" com o sinal ≤, "maior ou igual" com ≥ e "diferente" com ≠. Significam o mesmo. Aqui usam-se `<=`, `>=` e `<>` porque se escrevem com as teclas que existem no teclado, e porque vais encontrar os dois primeiros tal e qual nas linguagens de programação.
+Na aula de Matemática escreves "menor ou igual" com o sinal ≤, "maior ou igual" com ≥ e "diferente" com ≠. Significam o mesmo. Aqui usam-se `<=`, `>=` e `!=` porque se escrevem com as teclas que existem no teclado, e porque vais encontrar os três tal e qual nas linguagens de programação, incluindo o Python. O `!=` lê-se "diferente de": o ponto de exclamação antes do igual quer dizer "não igual".
 
 Olha com atenção para as linhas de `<` e de `<=`. Com a quantidade a valer 10, `quantidade < 10` é falso e `quantidade <= 10` é verdadeiro. A única diferença entre os dois operadores é o que acontece exatamente no valor 10. Para 9 dão os dois verdadeiro, para 11 dão os dois falso. Guarda esta observação, porque é a razão de ser da secção sobre fronteiras, mais à frente.
 
-Os operadores `=` e `<>` também servem para comparar textos. A condição `resposta = "S"` pergunta se a variável `resposta` guarda exatamente o texto `"S"`. Dois textos só são iguais se tiverem os mesmos caracteres, pela mesma ordem, e isso inclui as maiúsculas: `"S"` e `"s"` são textos diferentes, e `"Sim"` e `"S"` também. Nos exercícios deste bloco, os textos só se comparam com `=` e `<>`.
+Os operadores `=` e `!=` também servem para comparar textos. A condição `resposta = "S"` pergunta se a variável `resposta` guarda exatamente o texto `"S"`. Dois textos só são iguais se tiverem os mesmos caracteres, pela mesma ordem, e isso inclui as maiúsculas: `"S"` e `"s"` são textos diferentes, e `"Sim"` e `"S"` também. Nos exercícios deste bloco, os textos só se comparam com `=` e `!=`.
 
 ### O sinal de igual passou a perguntar
 
@@ -345,8 +345,8 @@ O `NÃO` é útil, mas quase sempre se pode escrever a mesma coisa sem ele, troc
 
 | Condição | O seu contrário |
 | --- | --- |
-| `a = b` | `a <> b` |
-| `a <> b` | `a = b` |
+| `a = b` | `a != b` |
+| `a != b` | `a = b` |
 | `a < b` | `a >= b` |
 | `a <= b` | `a > b` |
 | `a > b` | `a <= b` |

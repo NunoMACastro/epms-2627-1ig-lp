@@ -133,7 +133,7 @@ INÍCIO
     pesadas ← 0
     ESCREVER "Peso da encomenda em gramas (0 para terminar)?"
     LER peso
-    ENQUANTO peso <> SENTINELA FAZER
+    ENQUANTO peso != SENTINELA FAZER
         SE peso < LIMITE_LEVE ENTÃO
             leves ← leves + 1
         FIM SE

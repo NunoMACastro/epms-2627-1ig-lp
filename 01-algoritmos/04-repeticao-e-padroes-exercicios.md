@@ -74,7 +74,7 @@ VARIÁVEIS
     prateleira: inteiro
 INÍCIO
     prateleira ← 1
-    ENQUANTO prateleira <> ULTIMA_PRATELEIRA FAZER
+    ENQUANTO prateleira != ULTIMA_PRATELEIRA FAZER
         ESCREVER "Prateleira ", prateleira
         prateleira ← prateleira + 2
     FIM ENQUANTO
@@ -85,9 +85,9 @@ Um colega começou a tabela de iterações:
 
 | Teste | prateleira | Condição | Durante a iteração |
 | --- | ---: | --- | --- |
-| 1.º | 1 | `1 <> 20` é VERDADEIRO | escreve "Prateleira 1" |
-| 2.º | 3 | `3 <> 20` é VERDADEIRO | escreve "Prateleira 3" |
-| 3.º | 5 | `5 <> 20` é VERDADEIRO | escreve "Prateleira 5" |
+| 1.º | 1 | `1 != 20` é VERDADEIRO | escreve "Prateleira 1" |
+| 2.º | 3 | `3 != 20` é VERDADEIRO | escreve "Prateleira 3" |
+| 3.º | 5 | `5 != 20` é VERDADEIRO | escreve "Prateleira 5" |
 
 **a)** Copia a tabela e continua-a até ao 12.º teste.
 
