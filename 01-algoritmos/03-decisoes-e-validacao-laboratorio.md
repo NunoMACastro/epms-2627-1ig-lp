@@ -41,8 +41,8 @@ No painel da esquerda do diagrams.net há vários grupos de figuras. O grupo **F
 | Figura | Nome que vais ver | O que quer dizer | Para que serve |
 | --- | --- | --- | --- |
 | Retângulo com as pontas redondas | Terminator | "Terminal": onde o algoritmo começa ou acaba | Início e Fim |
-| Paralelogramo | Data | "Dados": é por ali que os dados entram e saem | `LER` e `ESCREVER` |
-| Retângulo | Process | "Processamento" | Contas e atribuições |
+| Paralelogramo | Data | "Dados": é por ali que os dados entram e saem | Ler um valor (`ler valor`) e escrever no ecrã (`Escreve:`) |
+| Retângulo | Process | "Processamento" | Contas e instruções que dão um valor a uma variável |
 | Losango | Decision | "Decisão" | Uma condição, com duas saídas |
 
 A figura nova deste laboratório é a Decision, o losango. As outras três já as usaste no laboratório 02. Neste laboratório não vais precisar do retângulo, porque os algoritmos que vais desenhar não fazem contas.
@@ -78,17 +78,17 @@ Os sinais `<` e `>` estão numa tecla própria do teclado, e o `>` obtém-se com
 
 ### A saída Sim
 
-1. Arrasta um paralelogramo (a figura **Data**) para a direita do losango, à mesma altura. Escreve dentro `ESCREVER "Atenção: stock baixo"`.
+1. Arrasta um paralelogramo (a figura **Data**) para a direita do losango, à mesma altura. Escreve dentro `Escreve: "Atenção: stock baixo"`.
 2. Passa o rato por cima do losango. Aparecem pequenas setas azuis nos quatro lados. Carrega na seta azul do lado direito e arrasta até ao paralelogramo. Larga quando o paralelogramo ficar com o contorno azul: é esse contorno que mostra que a seta ficou presa à figura.
 3. Agora escreve o nome da saída. Faz duplo clique a meio da seta que acabaste de desenhar. Aparece um espaço para escrever em cima da linha. Escreve `Sim` e clica fora.
 
 ### A saída Não e o ponto de encontro
 
-1. Arrasta outro paralelogramo para baixo do losango, com espaço entre os dois. Escreve dentro `ESCREVER "Verificação concluída"`.
+1. Arrasta outro paralelogramo para baixo do losango, com espaço entre os dois. Escreve dentro `Escreve: "Verificação concluída"`.
 2. Liga a seta azul de baixo do losango a este paralelogramo. Faz duplo clique a meio da seta e escreve `Não`.
 3. Falta o ponto de encontro. Liga o paralelogramo do aviso ao paralelogramo de "Verificação concluída": passa o rato pelo aviso, arrasta a seta azul de baixo até ao outro paralelogramo e larga quando ele ficar com o contorno azul. Esta seta não leva texto, porque não sai de um losango.
 
-Olha para o que desenhaste e compara com o fluxograma da secção "Seleção simples" do guia. O ramo do `Sim` passa pelo aviso; o ramo do `Não` vai direto a "Verificação concluída", sem nenhuma figura pelo caminho. Os dois ramos juntam-se no paralelogramo de "Verificação concluída", e esse ponto de encontro corresponde ao `FIM SE`. É isto que quer dizer "os ramos voltam a juntar-se": seja qual for a resposta ao losango, o algoritmo acaba por passar pela mesma figura e continua a partir daí.
+Olha para o que desenhaste e compara com o fluxograma da secção "Seleção simples" do guia. O ramo do `Sim` passa pelo aviso; o ramo do `Não` vai direto a "Verificação concluída", sem nenhuma figura pelo caminho. Os dois ramos juntam-se no paralelogramo de "Verificação concluída". No pseudocódigo do guia, esse ponto de encontro é a linha `Escreve: "Verificação concluída"`, a primeira que volta a estar alinhada com o `Se` e que, por isso, já está fora da seleção. É isto que quer dizer "os ramos voltam a juntar-se": seja qual for a resposta ao losango, o algoritmo acaba por passar pela mesma figura e continua a partir daí.
 
 ### Verificar e apagar
 
@@ -105,50 +105,50 @@ Tem aberto ao lado o guia, no passo 6 (o pseudocódigo) e no passo 8 (o fluxogra
 ### O início e a entrada
 
 1. Arrasta um **Terminator** para o topo da página e escreve `Início`.
-2. Por baixo, um paralelogramo (**Data**) com `ESCREVER pergunta`. Liga o Início a ele.
-3. Por baixo, outro paralelogramo com `LER nota`. Liga o anterior a este.
+2. Por baixo, um paralelogramo (**Data**) com `Escreve: pergunta`. Liga o Início a ele.
+3. Por baixo, outro paralelogramo com `int nota = ler valor`. Liga o anterior a este.
 
 Estes três passos já os conheces do laboratório 02. Faz as ligações pela seta azul de baixo de cada figura, e larga sempre com a figura de destino de contorno azul.
 
 ### O primeiro losango: a validação
 
-1. Por baixo de `LER nota`, arrasta um losango (**Decision**) e escreve `nota < NOTA_MINIMA OU nota > NOTA_MAXIMA?`.
+1. Por baixo do paralelogramo que lê a nota, arrasta um losango (**Decision**) e escreve `nota < NOTA_MINIMA ou nota > NOTA_MAXIMA?`.
 2. O texto é comprido e não cabe bem num losango pequeno. Clica uma vez no losango para o selecionar: aparecem pequenos pontos nos cantos e a meio dos lados. Puxa um dos cantos para fora até o texto caber, de preferência numa ou duas linhas.
-3. Liga `LER nota` ao losango.
-4. À direita do losango, à mesma altura, arrasta um paralelogramo com `ESCREVER "Nota inválida"`.
+3. Liga o paralelogramo que lê a nota ao losango.
+4. À direita do losango, à mesma altura, arrasta um paralelogramo com `Escreve: "Nota inválida"`.
 5. Liga a seta azul do lado direito do losango a este paralelogramo e escreve `Sim` na seta.
 
 Pensa no que acabaste de desenhar antes de continuares: quem sai pelo `Sim` do primeiro losango é uma nota fora da escala, e vai direto para a mensagem de erro. Não passa por mais nenhum losango.
 
-### O segundo losango: o SENÃO SE
+### O segundo losango: o `Senão se`
 
 1. Por baixo do primeiro losango, com espaço entre os dois, arrasta outro losango e escreve `nota >= LIMIAR_POSITIVA?`.
 2. Liga a seta azul de baixo do primeiro losango a este segundo losango e escreve `Não` na seta.
 
-Este é o desenho do `SENÃO SE`: o segundo losango está pendurado na saída `Não` do primeiro. Só se chega a ele quando a validação é falsa, isto é, quando a nota é válida.
+Este é o desenho do `Senão se`: o segundo losango está pendurado na saída `Não` do primeiro. Só se chega a ele quando a validação é falsa, isto é, quando a nota é válida.
 
-3. À direita do segundo losango, um paralelogramo com `ESCREVER "Positiva"`. Liga-o pela seta azul do lado direito do losango e escreve `Sim`.
-4. Por baixo do segundo losango, um paralelogramo com `ESCREVER "Negativa"`. Liga-o pela seta azul de baixo e escreve `Não`.
+3. À direita do segundo losango, um paralelogramo com `Escreve: "Positiva"`. Liga-o pela seta azul do lado direito do losango e escreve `Sim`.
+4. Por baixo do segundo losango, um paralelogramo com `Escreve: "Negativa"`. Liga-o pela seta azul de baixo e escreve `Não`.
 
-O paralelogramo "Negativa" é o `SENÃO`: é para lá que vai a nota quando as duas condições são falsas.
+O paralelogramo "Negativa" é o ramo do `Senão`: é para lá que vai a nota quando as duas condições são falsas.
 
 ### O fim e o ponto de encontro
 
 1. Por baixo de "Negativa", arrasta um **Terminator** e escreve `Fim`. Liga "Negativa" ao Fim.
 2. Liga agora "Positiva" ao Fim, e depois "Nota inválida" ao Fim. As duas setas descem pela coluna da direita e entram no Fim.
 
-Os três caminhos juntam-se no Fim, e esse ponto de encontro corresponde ao `FIM SE` do pseudocódigo. Se uma seta atravessar outra figura ou fizer um percurso estranho, clica nela e arrasta o pequeno ponto que aparece a meio da linha até ela passar por onde queres.
+Os três caminhos juntam-se no Fim. No pseudocódigo, esse ponto de encontro é o sítio onde a cadeia acaba, e como o algoritmo da nota não tem mais nenhuma linha depois da cadeia, é também o fim. Se uma seta atravessar outra figura ou fizer um percurso estranho, clica nela e arrasta o pequeno ponto que aparece a meio da linha até ela passar por onde queres.
 
 ### Conferir com o guia
 
 Conta as figuras e as setas do teu desenho e compara com o fluxograma do passo 8 do guia:
 
-- nove figuras: dois terminais (Início e Fim), cinco paralelogramos (a pergunta, o `LER`, e as três mensagens) e dois losangos;
+- nove figuras: dois terminais (Início e Fim), cinco paralelogramos (a pergunta, a leitura da nota e as três mensagens) e dois losangos;
 - dez setas, das quais quatro têm texto: as duas que saem de cada losango;
 - cada losango com uma seta `Sim` e uma seta `Não`, e nenhum com uma só saída;
 - nenhuma seta solta, sem figura numa das pontas.
 
-Se o teu desenho tiver uma figura a mais ou a menos, compara-o figura a figura com o pseudocódigo do passo 6, pela mesma ordem, e descobre qual é. Guarda o ficheiro (Ctrl+S, ou Cmd+S no Mac).
+Se o teu desenho tiver uma figura a mais ou a menos, compara-o figura a figura com o pseudocódigo do passo 6, pela mesma ordem, e descobre qual é. Lembra-te de que as três linhas `const` do início não dão figura, e que o `Senão` também não: a sua figura é a do ramo, o paralelogramo "Negativa". Guarda o ficheiro (Ctrl+S, ou Cmd+S no Mac).
 
 ## Parte 4: Seguir cada caminho com o dedo (10 min)
 
@@ -158,8 +158,8 @@ Copia esta tabela para uma folha. Para cada nota, põe o dedo no Início do teu 
 
 | Nota | Saída do primeiro losango | Saída do segundo losango | Mensagem a que chegaste | Coincide com o esperado? |
 | ---: | --- | --- | --- | --- |
-| -1 | Sim, porque `-1 < 0` é verdadeiro | não se chega a ele | Nota inválida | sim |
-| 0 | Não, porque `0 < 0` e `0 > 20` são falsos | Não, porque `0 >= 10` é falso | Negativa | sim |
+| -1 | Sim, porque `-1 < 0` dá `true` | não se chega a ele | Nota inválida | sim |
+| 0 | Não, porque `0 < 0` e `0 > 20` são falsos | Não, porque `0 >= 10` dá `false` | Negativa | sim |
 | 1 | | | | |
 | 9 | | | | |
 | 10 | | | | |
@@ -184,26 +184,19 @@ Agora sem passos dados. O problema é novo, mas a técnica é a mesma das partes
 > Uma loja online escolhe a caixa de envio pelo peso da encomenda, em gramas (um número inteiro). Encomendas até 2000 gramas, inclusive, vão numa caixa pequena; acima de 2000 gramas, vão numa caixa grande. Um peso de zero gramas, ou negativo, é um erro de pesagem, e o algoritmo escreve "Peso inválido" em vez de escolher a caixa. Em todos os casos, no fim, o algoritmo escreve "Pesagem concluída".
 
 ```text
-ALGORITMO EscolherCaixa
-CONSTANTES
-    PESO_MAXIMO_CAIXA_PEQUENA ← 2000
-VARIÁVEIS
-    peso: inteiro
-INÍCIO
-    ESCREVER "Peso da encomenda em gramas?"
-    LER peso
-    SE peso <= 0 ENTÃO
-        ESCREVER "Peso inválido"
-    SENÃO SE peso <= PESO_MAXIMO_CAIXA_PEQUENA ENTÃO
-        ESCREVER "Caixa pequena"
-    SENÃO
-        ESCREVER "Caixa grande"
-    FIM SE
-    ESCREVER "Pesagem concluída"
-FIM
+const PESO_MAXIMO_CAIXA_PEQUENA = 2000
+Escreve: "Peso da encomenda em gramas?"
+int peso = ler valor
+Se peso <= 0
+    Escreve: "Peso inválido"
+Senão se peso <= PESO_MAXIMO_CAIXA_PEQUENA
+    Escreve: "Caixa pequena"
+Senão
+    Escreve: "Caixa grande"
+Escreve: "Pesagem concluída"
 ```
 
-Repara na linha `ESCREVER "Pesagem concluída"`: está alinhada com o `SE`, e não dentro de nenhum ramo. Executa-se depois de os ramos se juntarem, seja qual for o peso. É esta a diferença de estrutura em relação ao algoritmo da nota.
+Repara na última linha, `Escreve: "Pesagem concluída"`: está encostada à margem, alinhada com o `Se`, e não indentada dentro de nenhum ramo. Como volta à coluna do `Se` sem ser um `Senão se` nem um `Senão`, já está fora da cadeia, e executa-se depois de os ramos se juntarem, seja qual for o peso. É esta a diferença de estrutura em relação ao algoritmo da nota. Se a linha estivesse indentada, com quatro espaços, pertencia ao ramo do `Senão` e só aparecia com a caixa grande.
 
 1. Guarda uma cópia com outro nome: na barra de menus, **Ficheiro** e **Guardar como...**, escreve o nome `fluxograma-caixa-de-envio.drawio` e escolhe **Aparelho** e a pasta `algoritmos`. O ficheiro da nota fica guardado como estava, e passas a trabalhar no ficheiro novo, que por enquanto tem o mesmo desenho. Se preferires começar num diagrama em branco, usa antes **Ficheiro** e **Novo...**, como na parte 8 do laboratório 02, e guarda-o logo com esse nome.
 2. Desenha o fluxograma deste pseudocódigo. Se aproveitares o desenho da nota e mudares os textos, confirma figura a figura que o desenho corresponde a este pseudocódigo, e não ao da nota. Os três ramos juntam-se no paralelogramo de "Pesagem concluída", e só depois se desce para o Fim.

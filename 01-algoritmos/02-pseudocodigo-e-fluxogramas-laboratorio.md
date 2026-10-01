@@ -80,7 +80,7 @@ Passa o rato por cima das figuras do grupo, devagar. Ao lado de cada uma aparece
 | Figura | Nome que aparece | O que quer dizer | Para que a usas |
 | --- | --- | --- | --- |
 | Retângulo de pontas redondas | Terminator | terminal, o sítio onde o algoritmo começa ou acaba | `Início` e `Fim`; é o oval do guia |
-| Paralelogramo | Data | dados, que entram ou saem do algoritmo | `LER` e `ESCREVER` |
+| Paralelogramo | Data | dados, que entram ou saem do algoritmo | as leituras, com `ler valor`, e as saídas, com `Escreve:` |
 | Retângulo | Process | processo, ou seja, processamento | atribuições e contas |
 | Losango | Decision | decisão | só a partir do guia 03 |
 
@@ -88,17 +88,17 @@ O grupo "Fluxograma" tem muitas outras figuras, com nomes como Display, Document
 
 ## Parte 4: pôr as figuras na página, com o texto
 
-O fluxograma dos cadernos tem 8 figuras: uma por cada uma das seis instruções do pseudocódigo, mais o início e o fim. A razão está no passo 4 do exemplo explicado do guia. Esta é a lista completa, pela ordem de cima para baixo:
+O fluxograma dos cadernos tem 8 figuras: uma por cada uma das seis instruções do pseudocódigo, mais o início e o fim. A linha da constante, `const UNIDADES_POR_CAIXA = 12`, não tem figura. A razão das duas coisas está no guia, na secção "Os símbolos do fluxograma" e no passo 4 do exemplo explicado. Esta é a lista completa, pela ordem de cima para baixo:
 
 | Ordem | Figura | Nome que aparece | Texto a escrever |
 | --- | --- | --- | --- |
 | 1 | Retângulo de pontas redondas | Terminator | `Início` |
-| 2 | Paralelogramo | Data | `ESCREVER "Quantos cadernos foram encomendados?"` |
-| 3 | Paralelogramo | Data | `LER cadernos` |
-| 4 | Retângulo | Process | `caixasCompletas ← cadernos DIV UNIDADES_POR_CAIXA` |
-| 5 | Retângulo | Process | `unidadesSoltas ← cadernos RESTO UNIDADES_POR_CAIXA` |
-| 6 | Paralelogramo | Data | `ESCREVER "Caixas completas: ", caixasCompletas` |
-| 7 | Paralelogramo | Data | `ESCREVER "Unidades soltas: ", unidadesSoltas` |
+| 2 | Paralelogramo | Data | `Escreve: "Quantos cadernos foram encomendados?"` |
+| 3 | Paralelogramo | Data | `int cadernos = ler valor` |
+| 4 | Retângulo | Process | `int caixasCompletas = cadernos div UNIDADES_POR_CAIXA` |
+| 5 | Retângulo | Process | `int unidadesSoltas = cadernos resto UNIDADES_POR_CAIXA` |
+| 6 | Paralelogramo | Data | `Escreve: "Caixas completas: ", caixasCompletas` |
+| 7 | Paralelogramo | Data | `Escreve: "Unidades soltas: ", unidadesSoltas` |
 | 8 | Retângulo de pontas redondas | Terminator | `Fim` |
 
 ### Pôr a primeira figura
@@ -124,17 +124,7 @@ Repete o arrastar e o duplo clique para as figuras 2 a 8, sempre com a figura e 
 
 Se o texto não couber na figura, seleciona-a e arrasta um dos quadradinhos azuis dos cantos para a alargar. As instruções das figuras 4 e 5 são compridas: vale a pena alargar esses dois retângulos para cada instrução caber numa só linha.
 
-### Escrever a seta da atribuição
-
-As figuras 4 e 5 têm a seta `←`, que não está no teclado. A forma mais simples de a escrever é copiá-la e colá-la:
-
-1. Neste documento, seleciona com o rato só a seta desta linha: ←
-2. Copia-a com Ctrl+C, ou Cmd+C num Mac.
-3. Na aplicação, enquanto escreves o texto da figura 4, cola-a com Ctrl+V, ou Cmd+V, no sítio certo, e continua a escrever.
-
-A seta fica guardada para colar até copiares outra coisa, por isso serve também para a figura 5. Se a seta colada aparecer com outro tamanho, outra letra ou um fundo de outra cor, desfaz com Ctrl+Z e cola sem formatação: Ctrl+Shift+V no Windows, ou Cmd+Option+Shift+V num Mac.
-
-Não substituas a seta por `<-` nem por `=`. O texto de cada figura tem de ser igual ao do pseudocódigo, e a secção "Atribuição: dar um valor não é perguntar se é igual", no guia, explica porque é que o `=` não serve.
+Todo o texto das figuras se escreve com as teclas normais do teclado. Repara no sinal das figuras 3, 4 e 5: é um só sinal de igual, `=`, porque são atribuições, em que a variável recebe um valor. Não escrevas `==`, que é uma pergunta. A secção "Atribuição: dar um valor não é perguntar se é igual", no guia, explica a diferença.
 
 Quando tiveres as 8 figuras com o texto, guarda (Ctrl+S ou Cmd+S).
 
@@ -161,12 +151,12 @@ Antes de dares o desenho por acabado, verifica-o como o guia ensina no passo 4 d
 
 - [ ] Tem 8 figuras e 7 setas.
 - [ ] Tem um único Início, no topo, e um Fim, em baixo, os dois em retângulos de pontas redondas.
-- [ ] O `ESCREVER` e o `LER` do princípio e os dois `ESCREVER` do fim estão em paralelogramos, e as duas atribuições estão em retângulos.
-- [ ] O texto de cada figura é igual ao da instrução correspondente, letra a letra: as aspas, as vírgulas, os espaços dentro das aspas, a seta, `DIV` e `RESTO` em maiúsculas.
+- [ ] O `Escreve:` e a leitura do princípio e os dois `Escreve:` do fim estão em paralelogramos, e as duas contas estão em retângulos.
+- [ ] O texto de cada figura diz o mesmo que a instrução correspondente do pseudocódigo: o tipo à frente das variáveis que nascem, o `=`, o `div` e o `resto`, e, dentro das aspas, os mesmos espaços, porque são eles que decidem o que aparece no ecrã.
 - [ ] As figuras estão pela mesma ordem que as instruções do pseudocódigo.
 - [ ] Todas as setas estão presas nas duas pontas e apontam para baixo.
 
-Depois percorre o fluxograma com o dedo no ecrã, como se a pessoa tivesse escrito 30 cadernos. Em cada paralelogramo de `ESCREVER`, diz em voz baixa o que aparece no ecrã. Tens de chegar ao mesmo que a primeira tabela de trace do passo 5 do guia: a pergunta, depois "Caixas completas: 2" e por fim "Unidades soltas: 6". Se não chegares, há uma figura fora do sítio ou com o texto errado.
+Depois percorre o fluxograma com o dedo no ecrã, como se a pessoa tivesse escrito 30 cadernos. Em cada paralelogramo com `Escreve:`, diz em voz baixa o que aparece no ecrã. Tens de chegar ao mesmo que a primeira tabela de trace do passo 5 do guia: a pergunta, depois "Caixas completas: 2" e por fim "Unidades soltas: 6". Se não chegares, há uma figura fora do sítio ou com o texto errado.
 
 ## Parte 7: exportar uma imagem do fluxograma
 
@@ -186,32 +176,25 @@ Por fim, confirma que o `.drawio` ficou mesmo guardado. Fecha o separador da apl
 Agora sem a lista de figuras. Uma loja faz, de vez em quando, a contagem do stock: conta à mão quantas unidades de um artigo estão na prateleira e compara com o número que o registo do computador diz que devia haver. Se os dois números não coincidirem, alguém tem de investigar porquê. Este algoritmo mostra de quantas unidades é a diferença, sem sinal, porque tanto faz faltarem unidades como sobrarem: nos dois casos há uma diferença a investigar.
 
 ```text
-ALGORITMO DiferencaDeInventario
-VARIÁVEIS
-    stockRegistado: inteiro
-    stockContado: inteiro
-    diferenca: inteiro
-INÍCIO
-    ESCREVER "Quantas unidades diz o registo?"
-    LER stockRegistado
-    ESCREVER "Quantas unidades foram contadas na prateleira?"
-    LER stockContado
-    diferenca ← ABS(stockRegistado - stockContado)
-    ESCREVER "Diferença a investigar: ", diferenca, " unidades"
-FIM
+Escreve: "Quantas unidades diz o registo?"
+int stockRegistado = ler valor
+Escreve: "Quantas unidades foram contadas na prateleira?"
+int stockContado = ler valor
+int diferenca = abs(stockRegistado - stockContado)
+Escreve: "Diferença a investigar: ", diferenca, " unidades"
 ```
 
-A função `ABS` está explicada no guia, na secção "Funções predefinidas".
+A função `abs` está explicada no guia, na secção "Funções predefinidas".
 
 1. Cria um diagrama novo: na barra de menus, escolhe "Ficheiro" e depois "Novo...". A aplicação pode abrir o diagrama novo noutro separador do browser. Se te perguntar que tipo de diagrama queres, escolhe o diagrama em branco. Guarda-o logo, como na parte 2, com o nome `fluxograma-diferenca-de-inventario.drawio`.
 2. Antes de desenhar, conta em papel quantas figuras e quantas setas o fluxograma vai ter, e decide a forma de cada figura. Escreve essa lista: é o que vais comparar com o desenho no fim.
-3. Desenha o fluxograma, com as figuras certas, o texto de cada instrução igual ao do pseudocódigo e as setas presas nas duas pontas. Depois verifica-o com a lista da parte 6, adaptada a este algoritmo.
+3. Desenha o fluxograma, com as figuras certas, o texto de cada instrução como no pseudocódigo e as setas presas nas duas pontas. Depois verifica-o com a lista da parte 6, adaptada a este algoritmo.
 4. Percorre o fluxograma com o dedo para duas contagens diferentes e escreve, para cada uma, a linha do resultado que aparece no ecrã. Primeira: o registo diz 120 e foram contadas 115. Segunda: o registo diz 80 e foram contadas 86. Explica numa frase porque é que a segunda não mostra um número negativo.
 5. Guarda o `.drawio` e exporta a imagem, com o nome `fluxograma-diferenca-de-inventario.png`.
 
 Concluíste quando o teu fluxograma tiver uma figura por instrução, mais o início e o fim, com as formas certas, quando as duas contagens do ponto 4 estiverem escritas e quando os dois ficheiros deste fluxograma estiverem guardados na tua pasta.
 
-Se acabares antes do tempo, troca de computador com um colega. Cada um verifica o fluxograma do outro com a lista da parte 6 e diz-lhe se encontrou uma figura a mais, uma a menos, uma forma errada, um texto diferente do pseudocódigo ou uma seta solta.
+Se acabares antes do tempo, troca de computador com um colega. Cada um verifica o fluxograma do outro com a lista da parte 6 e diz-lhe se encontrou uma figura a mais, uma a menos, uma forma errada, um texto que diz outra coisa que não o pseudocódigo ou uma seta solta.
 
 ## Se alguma coisa correr mal
 

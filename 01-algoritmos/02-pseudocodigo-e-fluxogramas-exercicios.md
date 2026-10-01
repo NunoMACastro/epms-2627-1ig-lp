@@ -12,7 +12,7 @@ Requisitos: UC00245-R02, UC00245-R03, UC00245-R04, UC00245-K03, UC00245-K04, UC0
 | --- | --- |
 | Material | Ficha do bloco ALG02, acompanha o [guia](02-pseudocodigo-e-fluxogramas.md) e o [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md) |
 | Tempo total | 120 minutos dos 300 do bloco: 90 de prática autónoma e 30 de desafio opcional. A secção "Para ires mais longe" é opcional e fica fora destes 120 minutos |
-| Entrega | Respostas escritas, tabelas de trace e o pseudocódigo do exercício 7; se fizeres a parte B do desafio, os ficheiros `.drawio` e `.png` do fluxograma |
+| Entrega | Respostas escritas, tabelas de trace e o algoritmo do exercício 7; se fizeres a parte B do desafio, os ficheiros `.drawio` e `.png` do fluxograma |
 
 ## Objetivos e conceitos necessários
 
@@ -23,6 +23,8 @@ Antes de começares, deves ter estudado o [guia](02-pseudocodigo-e-fluxogramas.m
 Material: papel quadriculado e lápis. O diagrams.net, em `https://app.diagrams.net/?lang=pt`, só é preciso para a parte B do desafio. Guarda esse ficheiro na pasta `algoritmos` que usaste no laboratório, com um nome em minúsculas, com hífenes e sem acentos.
 
 Todos os algoritmos desta ficha são sequenciais: as instruções executam-se sempre todas, pela mesma ordem, sem o algoritmo ter de escolher entre caminhos.
+
+Sempre que um exercício te pedir para escrever instruções ou um algoritmo, podes escrevê-los em pseudocódigo, na forma das aulas, ou em frases claras. O que conta é a lógica, e que as frases não deixem dúvidas: quanto, quando e o que acontece se não der. A secção "A forma do pseudocódigo nas aulas" do guia mostra a diferença entre frases que deixam dúvidas e frases que não deixam.
 
 ## Como está organizada a ficha
 
@@ -38,7 +40,7 @@ Nenhum exercício é o exemplo explicado do guia com outros números. O exemplo 
 | 4 | Calcular expressões pela ordem das operações | 10 min |
 | 5 | Escolher e usar a função predefinida certa | 12 min |
 | 6 | Seguir um algoritmo completo com uma tabela de trace | 12 min |
-| 7 | Escrever um algoritmo em pseudocódigo e testá-lo | 21 min |
+| 7 | Escrever um algoritmo, em pseudocódigo ou em frases claras, e testá-lo | 21 min |
 | Total da parte obrigatória | Exercícios 1 a 7 | 90 min |
 | Desafio opcional | Trocar os valores de duas variáveis, desenhar na aplicação o fluxograma do exercício 7 e mudar uma regra | 30 min |
 | Para ires mais longe | Opcional: casos que enganam nos tipos, nas atribuições e nas expressões, e um problema novo | fora dos 120 min |
@@ -47,7 +49,7 @@ Nenhum exercício é o exemplo explicado do guia com outros números. O exemplo 
 
 A matéria está na secção "Tipos de dados" do guia.
 
-Diz que tipo de dados usarias para guardar cada um destes valores, `inteiro`, `real`, `texto` ou `lógico`, e justifica cada escolha numa frase que fale do que vais fazer com o valor. Por exemplo, para a temperatura de uma sala, como 21,5 graus: `real`, porque vou fazer contas com ela, como a média do dia, e a parte decimal conta.
+Diz que tipo de dados usarias para guardar cada um destes valores, `int`, `float`, `string` ou `bool`, e justifica cada escolha numa frase que fale do que vais fazer com o valor. Por exemplo, para a temperatura de uma sala, como 21,5 graus: `float`, porque vou fazer contas com ela, como a média do dia, e a parte decimal conta.
 
 **a)** O número de alunos inscritos numa visita de estudo.
 
@@ -66,10 +68,10 @@ A matéria está nas secções "Atribuição: dar um valor não é perguntar se 
 Uma papelaria regista o stock de um artigo e as vendas do dia com esta sequência de quatro atribuições:
 
 ```text
-stock ← 50
-vendas ← 12
-stock ← stock - vendas
-vendas ← vendas + 8
+int stock = 50
+int vendas = 12
+stock = stock - vendas
+vendas = vendas + 8
 ```
 
 **a)** Antes de fazeres o trace, escreve com que valor achas que `stock` fica no fim.
@@ -81,10 +83,10 @@ vendas ← vendas + 8
 **d)** Nesta segunda versão, as duas últimas instruções estão pela ordem contrária:
 
 ```text
-stock ← 50
-vendas ← 12
-vendas ← vendas + 8
-stock ← stock - vendas
+int stock = 50
+int vendas = 12
+vendas = vendas + 8
+stock = stock - vendas
 ```
 
 Os passos 0, 1 e 2 do trace são iguais aos da alínea b), e podes copiá-los. Faz só os passos 3 e 4 e diz com que valor fica `stock`. Explica numa frase porque é que não é o mesmo valor da alínea b).
@@ -93,29 +95,27 @@ Concluíste quando os dois traces mostrarem o valor de todas as variáveis em ca
 
 ## Exercício 3: Atribuições certas e erradas (10 min)
 
-A matéria está no fim da secção "Atribuição: dar um valor não é perguntar se é igual" e na secção "Constantes" do guia.
+A matéria está no fim da secção "Atribuição: dar um valor não é perguntar se é igual" e nas secções "Constantes" e "Onde nasce uma variável, e com que tipo" do guia.
 
-Um algoritmo tem estas declarações:
+Um algoritmo começa com estas cinco linhas, que criam uma constante e quatro variáveis:
 
 ```text
-CONSTANTES
-    LIMITE_DE_SENHAS ← 40
-VARIÁVEIS
-    caixas: inteiro
-    total: inteiro
-    preco: inteiro
-    pago: lógico
+const LIMITE_DE_SENHAS = 40
+int caixas = 0
+int total = 1000
+int preco = 150
+bool pago = true
 ```
 
-Imagina que, antes de cada uma das linhas seguintes, `total` vale 1000 e `preco` vale 150. Cada linha vê-se sozinha, sem as outras. Para cada uma, escreve "certa" ou "errada". Se estiver certa, escreve o valor com que a variável da esquerda fica. Se estiver errada, explica numa frase porquê. Por exemplo, para a linha `preco ← 350`: certa, `preco` fica com 350.
+Imagina que cada uma das linhas seguintes vem logo a seguir a estas cinco. Cada linha vê-se sozinha, sem as outras: antes de cada uma, `total` vale 1000 e `preco` vale 150. Para cada linha, escreve "certa" ou "errada". Se estiver certa, escreve o valor com que a variável da esquerda fica. Se estiver errada, explica numa frase porquê. Por exemplo, para a linha `preco = 350`: certa, `preco` fica com 350.
 
 | Linha | Instrução |
 | ---: | --- |
-| 1 | `caixas ← 5` |
-| 2 | `5 ← caixas` |
-| 3 | `total ← total + preco` |
-| 4 | `LIMITE_DE_SENHAS ← 50` |
-| 5 | `pago ← FALSO` |
+| 1 | `caixas = 5` |
+| 2 | `5 = caixas` |
+| 3 | `total = total + preco` |
+| 4 | `LIMITE_DE_SENHAS = 50` |
+| 5 | `pago = false` |
 
 Concluíste quando cada linha certa tiver o seu valor e cada linha errada tiver uma frase que diga o que está mal.
 
@@ -123,58 +123,50 @@ Concluíste quando cada linha certa tiver o seu valor e cada linha errada tiver 
 
 A matéria está na secção "Expressões aritméticas" do guia.
 
-Calcula o valor de cada expressão e escreve o tipo do resultado, `inteiro` ou `real`. Faz as contas à mão, pela ordem das operações. Num resultado real, escreve a parte decimal.
+Calcula o valor de cada expressão e escreve o tipo do resultado, `int` ou `float`. Faz as contas à mão, pela ordem das operações. Num resultado `float`, escreve a parte decimal.
 
 | N.º | Expressão | Valor | Tipo |
 | ---: | --- | --- | --- |
 | 1 | `3 + 4 * 5` | | |
 | 2 | `(3 + 4) * 5` | | |
-| 3 | `23 DIV 4` | | |
-| 4 | `23 RESTO 4` | | |
+| 3 | `23 div 4` | | |
+| 4 | `23 resto 4` | | |
 | 5 | `23 / 4` | | |
 
-Concluíste quando as cinco expressões tiverem valor e tipo, e tiveres confirmado as linhas 3 e 4 com a verificação do guia: o divisor vezes o resultado do `DIV`, mais o `RESTO`, tem de dar 23.
+Concluíste quando as cinco expressões tiverem valor e tipo, e tiveres confirmado as linhas 3 e 4 com a verificação do guia: o divisor vezes o resultado do `div`, mais o `resto`, tem de dar 23.
 
 ## Exercício 5: Usar as funções predefinidas (12 min)
 
 A matéria está na secção "Funções predefinidas" do guia.
 
-Em cada alínea escreves três coisas: a declaração da variável que recebe o resultado, com o tipo; a atribuição, com a função predefinida certa; e o valor com que a variável fica. Cada uma das quatro funções, `ABS`, `ARREDONDAR`, `TRUNCAR` e `RAIZ`, serve numa só alínea.
+Em cada alínea escreves duas coisas: a linha onde nasce a variável que recebe o resultado, com o tipo à frente e a função predefinida certa; e o valor com que a variável fica. Cada uma das quatro funções, `abs`, `arredondar`, `truncar` e `raiz`, serve numa só alínea.
 
-Exemplo do formato, com uma conta sem função: `totalAPagar: inteiro`; `totalAPagar ← quantidade * preco`; com `quantidade` a valer 3 e `preco` a valer 150, `totalAPagar` fica com 450.
+Exemplo do formato, com uma conta sem função: `int totalAPagar = quantidade * preco`; com `quantidade` a valer 3 e `preco` a valer 150, `totalAPagar` fica com 450.
 
-**a)** A variável real `tempoEmHoras` vale `3.75`: é o tempo, em horas, que demorou a contagem do stock de um armazém. Guarda em `horasCompletas` o número de horas completas.
+**a)** A variável `tempoEmHoras`, do tipo `float`, vale `3.75`: é o tempo, em horas, que demorou a contagem do stock de um armazém. Guarda em `horasCompletas` o número de horas completas.
 
-**b)** A variável real `mediaDeVendas` vale `14.6`: é a média de cadernos vendidos por dia numa semana. Guarda em `mediaArredondada` o número inteiro de cadernos mais próximo dessa média.
+**b)** A variável `mediaDeVendas`, do tipo `float`, vale `14.6`: é a média de cadernos vendidos por dia numa semana. Guarda em `mediaArredondada` o número inteiro de cadernos mais próximo dessa média.
 
 **c)** Numa loja com senhas, está a ser atendida a senha guardada em `senhaAtual`, e um cliente tem a senha guardada em `senhaCliente`. Guarda em `distancia` quantas senhas os separam, sem sinal, seja qual for a maior. Usa `senhaAtual` a valer 42 e `senhaCliente` a valer 57.
 
 **d)** A variável `area` vale `225`: é a área, em metros quadrados, de um armazém com a forma de um quadrado. Guarda em `lado` o comprimento do lado do armazém, em metros.
 
-Concluíste quando cada alínea tiver a declaração, a atribuição e o valor, e cada função tiver sido usada uma vez.
+Concluíste quando cada alínea tiver a linha, com o tipo e a função, e o valor, e cada função tiver sido usada uma vez.
 
 ## Exercício 6: Seguir um algoritmo completo (12 min)
 
 A matéria está nas secções "Ler e escrever" e "A tabela de trace" do guia. O passo 5 do exemplo explicado é o modelo do trace.
 
-Lê este algoritmo com atenção:
+Lê com atenção este algoritmo, que calcula o peso de uma encomenda para envio:
 
 ```text
-ALGORITMO EnvioDeEncomenda
-CONSTANTES
-    PESO_DA_CAIXA_VAZIA ← 200
-VARIÁVEIS
-    artigos: inteiro
-    pesoPorArtigo: inteiro
-    pesoTotal: inteiro
-INÍCIO
-    ESCREVER "Quantos artigos leva a encomenda?"
-    LER artigos
-    ESCREVER "Quanto pesa cada artigo, em gramas?"
-    LER pesoPorArtigo
-    pesoTotal ← artigos * pesoPorArtigo + PESO_DA_CAIXA_VAZIA
-    ESCREVER "Peso total em gramas: ", pesoTotal
-FIM
+const PESO_DA_CAIXA_VAZIA = 200
+Escreve: "Quantos artigos leva a encomenda?"
+int artigos = ler valor
+Escreve: "Quanto pesa cada artigo, em gramas?"
+int pesoPorArtigo = ler valor
+int pesoTotal = artigos * pesoPorArtigo + PESO_DA_CAIXA_VAZIA
+Escreve: "Peso total em gramas: ", pesoTotal
 ```
 
 **a)** Faz o trace completo para uma encomenda de 3 artigos de 150 gramas cada, com uma coluna por variável e uma para o ecrã. Mostra todas as linhas, e não só o resultado.
@@ -182,7 +174,7 @@ FIM
 **b)** Um colega escreveu a conta do peso assim:
 
 ```text
-    pesoTotal ← artigos * (pesoPorArtigo + PESO_DA_CAIXA_VAZIA)
+int pesoTotal = artigos * (pesoPorArtigo + PESO_DA_CAIXA_VAZIA)
 ```
 
 Calcula o resultado da versão dele para os mesmos 3 artigos de 150 gramas.
@@ -193,7 +185,7 @@ Concluíste quando o teu trace mostrar o valor de todas as variáveis em cada li
 
 ## Exercício 7: Escrever um algoritmo teu (21 min)
 
-A matéria está na secção "A convenção de pseudocódigo desta disciplina" do guia, e o exemplo explicado dos cadernos tem a mesma forma que este problema.
+A matéria está na secção "A forma do pseudocódigo nas aulas" do guia, e o exemplo explicado dos cadernos tem a mesma forma que este problema.
 
 A cantina da escola compra leite em grades de 24 pacotes. O fornecedor também vende pacotes soltos. Uma grade custa 1440 cêntimos e um pacote solto custa 70 cêntimos. Dado o número de pacotes de que a cantina precisa, queremos saber quantas grades completas compra, quantos pacotes soltos compra além dessas grades, e quanto vai pagar ao todo.
 
@@ -206,7 +198,7 @@ O contrato já está feito, para te concentrares no pseudocódigo:
 | Restrições | Uma grade tem sempre 24 pacotes e custa 1440 cêntimos; um pacote solto custa 70 cêntimos |
 | Condições | Não há caminhos alternativos: os passos são sempre os mesmos |
 
-**a)** Escreve o algoritmo em pseudocódigo, segundo a convenção do guia: o nome, as constantes, as variáveis com o tipo, e as instruções entre `INÍCIO` e `FIM`. Usa constantes para os três valores fixos. Antes do `LER`, escreve a pergunta.
+**a)** Escreve o algoritmo em pseudocódigo ou em frases claras, sem deixar dúvidas. Usa constantes para os três valores fixos; se escreveres em frases, dá um nome a cada valor fixo e diz quanto vale. Antes de leres o número de pacotes, escreve a pergunta.
 
 **b)** Segue o teu algoritmo, instrução a instrução, e preenche esta tabela para 100 e para 24 pacotes:
 
@@ -217,7 +209,7 @@ O contrato já está feito, para te concentrares no pseudocódigo:
 
 **c)** Escolhe uma terceira entrada que teste uma situação diferente das duas anteriores. Acrescenta-a à tabela e explica numa frase o que ela testa.
 
-Concluíste quando o teu pseudocódigo seguir a convenção, usar as três constantes, ler antes de calcular e escrever os três resultados no fim, e a tabela tiver as três entradas.
+Concluíste quando o teu algoritmo não deixar dúvidas, usar as três constantes, ler antes de calcular e escrever os três resultados no fim, e a tabela tiver as três entradas.
 
 ## Apoio
 
@@ -227,15 +219,15 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 **Exercício 2.** Faz o trace por linhas, e não por variáveis. Numa atribuição, calcula primeiro o lado direito com os valores da linha de cima, e só depois guarda o resultado na variável da esquerda. Para a alínea c), relê no guia a primeira consequência da atribuição: copia um valor, não cria uma ligação.
 
-**Exercício 3.** Lê cada linha em voz alta, com a palavra "recebe" no lugar da seta. O que está à esquerda da seta pode receber um valor? Olha também para as declarações: nem todos os nomes estão na lista das variáveis.
+**Exercício 3.** Lê cada linha em voz alta, com a palavra "recebe" no lugar do `=`. O que está à esquerda do `=` pode receber um valor? Olha também para as cinco primeiras linhas: um dos nomes nasceu com `const`.
 
-**Exercício 4.** Faz primeiro os parênteses, depois as multiplicações e as divisões, incluindo `DIV` e `RESTO`, e só no fim as somas. Para o `DIV` e o `RESTO`, pensa em 23 lápis arrumados em caixas de 4: quantas caixas se enchem, e quantos lápis sobram? E lembra-te de que `/` dá sempre um real.
+**Exercício 4.** Faz primeiro os parênteses, depois as multiplicações e as divisões, incluindo `div` e `resto`, e só no fim as somas. Para o `div` e o `resto`, pensa em 23 lápis arrumados em caixas de 4: quantas caixas se enchem, e quantos lápis sobram? E lembra-te de que `/` dá sempre um `float`.
 
 **Exercício 5.** Para cada alínea, pergunta-te o que queres fazer ao número: cortar as casas decimais, ir ao inteiro mais próximo, tirar o sinal, ou encontrar o lado de um quadrado a partir da área. Cada uma destas quatro coisas é uma das funções. Para o tipo, relê a coluna "Tipo do resultado" da tabela das funções, no guia.
 
 **Exercício 6.** Tem o passo 5 do exemplo explicado aberto ao lado: o trace faz-se da mesma maneira. Na alínea b), faz primeiro a conta que está dentro dos parênteses. Na alínea c), compara as duas contas e pergunta-te quantas vezes cada versão soma o peso da caixa.
 
-**Exercício 7.** Começa pelo pseudocódigo dos cadernos do guia: aqui também há uma quantidade, uma divisão inteira e um resto. A diferença é que no fim há um preço a calcular. Escreve primeiro só as grades e os soltos, e acrescenta o total depois de isso funcionar. Na alínea c), relê os três casos de teste do passo 1 do exemplo: o que é que 100 e 24 já testam, e o que falta testar?
+**Exercício 7.** Começa pelo pseudocódigo dos cadernos do guia: aqui também há uma quantidade, uma divisão inteira e um resto. Se uma linha não te sair em pseudocódigo, escreve-a em frases claras e continua. A diferença é que no fim há um preço a calcular. Escreve primeiro só as grades e os soltos, e acrescenta o total depois de isso funcionar. Na alínea c), relê os três casos de teste do passo 1 do exemplo: o que é que 100 e 24 já testam, e o que falta testar?
 
 **Desafio, parte A.** Relê a troca que falha, na secção da atribuição do guia, e pensa em dois copos cheios, um de sumo e outro de água: para trocar os líquidos de copo precisas de um terceiro copo.
 
@@ -250,11 +242,11 @@ A matéria está na secção "Atribuição: dar um valor não é perguntar se é
 Duas variáveis inteiras começam assim:
 
 ```text
-caixaA ← 12
-caixaB ← 30
+int caixaA = 12
+int caixaB = 30
 ```
 
-Escreve as instruções que trocam os valores das duas, de forma que no fim `caixaA` valha 30 e `caixaB` valha 12. Podes usar uma variável a mais, se precisares, e tens de a declarar com o tipo certo. Faz o trace da tua solução, desde as duas linhas acima, para mostrar que funciona.
+Escreve as instruções que trocam os valores das duas, de forma que no fim `caixaA` valha 30 e `caixaB` valha 12. Podes usar uma variável a mais, se precisares: escreve o tipo dela na linha onde aparece pela primeira vez. Faz o trace da tua solução, desde as duas linhas acima, para mostrar que funciona.
 
 ### Parte B: o fluxograma do exercício 7 na aplicação (15 min)
 
@@ -294,11 +286,11 @@ Diz o tipo de cada valor e justifica a escolha numa frase:
 
 Continua o exercício 3. A matéria está no parágrafo do guia sobre o número `12` e o texto `"12"`.
 
-A variável `quantidade` está declarada como `inteiro`. Das duas linhas seguintes, uma está certa e a outra está errada. Diz qual é qual e explica a diferença numa frase.
+A variável `quantidade` nasceu mais acima, assim: `int quantidade = 0`. Das duas linhas seguintes, uma está certa e a outra está errada. Diz qual é qual e explica a diferença numa frase.
 
 ```text
-quantidade ← 12
-quantidade ← "12"
+quantidade = 12
+quantidade = "12"
 ```
 
 ### Mais longe 3: Expressões que enganam (15 min)
@@ -311,22 +303,22 @@ As expressões vêm aos pares, e cada par esconde um engano diferente. Calcula o
 | ---: | --- | --- | --- |
 | 1 | `30 - 10 - 5` | | |
 | 1 | `40 / 8 / 2` | | |
-| 2 | `4 DIV 23` | | |
-| 2 | `4 RESTO 23` | | |
-| 3 | `ARREDONDAR(4.5)` | | |
-| 3 | `ARREDONDAR(4.49)` | | |
-| 4 | `TRUNCAR(-8.99)` | | |
-| 4 | `ARREDONDAR(-8.99)` | | |
-| 5 | `RAIZ(36 + 64)` | | |
-| 5 | `RAIZ(36) + RAIZ(64)` | | |
+| 2 | `4 div 23` | | |
+| 2 | `4 resto 23` | | |
+| 3 | `arredondar(4.5)` | | |
+| 3 | `arredondar(4.49)` | | |
+| 4 | `truncar(-8.99)` | | |
+| 4 | `arredondar(-8.99)` | | |
+| 5 | `raiz(36 + 64)` | | |
+| 5 | `raiz(36) + raiz(64)` | | |
 
 ### Mais longe 4: A encomenda sem artigos (10 min)
 
 Continua o exercício 6.
 
-**a)** Qual é o resultado do algoritmo `EnvioDeEncomenda` para 0 artigos de 150 gramas? O algoritmo está errado, ou está certo e apenas a responder a uma pergunta que ninguém queria fazer?
+**a)** Qual é o resultado do algoritmo do exercício 6 para 0 artigos de 150 gramas? O algoritmo está errado, ou está certo e apenas a responder a uma pergunta que ninguém queria fazer?
 
-**b)** `pesoTotal` é um peso, e mesmo assim está declarado como inteiro. Porque é que, neste algoritmo, isso não é um problema?
+**b)** `pesoTotal` é um peso, e mesmo assim nasce como `int`. Porque é que, neste algoritmo, isso não é um problema?
 
 ### Mais longe 5: Quando os soltos saem mais caros (10 min)
 
@@ -340,7 +332,7 @@ Um problema novo, para escreveres de raiz. A matéria é a mesma do exercício 7
 
 Uma visita de estudo é feita em autocarros, todos com a mesma capacidade. Dado o número de alunos que vão à visita e a capacidade de cada autocarro, queremos saber quantos autocarros ficam completamente cheios, quantos alunos vão no autocarro que sobra e quantos lugares livres ficam nesse autocarro.
 
-**a)** Escreve o pseudocódigo completo. Decide se a capacidade é uma constante ou um dado que se lê, e justifica a decisão numa frase.
+**a)** Escreve o algoritmo completo, em pseudocódigo ou em frases claras. Decide se a capacidade é uma constante ou um dado que se lê, e justifica a decisão numa frase.
 
 **b)** Escolhe três entradas que testem situações diferentes, explica numa frase porque escolheste cada uma, e faz a tabela de resultados.
 
@@ -352,8 +344,8 @@ Uma visita de estudo é feita em autocarros, todos com a mesma capacidade. Dado 
 - [ ] Nos traces, copiei em cada linha os valores da linha de cima e mudei só o que a instrução muda.
 - [ ] Reconheci as atribuições erradas e expliquei o que está mal em cada uma.
 - [ ] Calculei as expressões pela ordem das operações e escrevi o tipo de cada resultado.
-- [ ] Usei cada função predefinida com o argumento entre parênteses e declarei a variável com o tipo que a função devolve.
-- [ ] No meu algoritmo, declarei todas as variáveis com um tipo coerente e usei constantes para os valores fixos.
+- [ ] Usei cada função predefinida com o argumento entre parênteses e dei à variável o tipo que a função devolve.
+- [ ] No meu algoritmo, cada variável tem um tipo coerente, escrito na linha onde nasce, e os valores fixos têm nome de constante.
 - [ ] O meu algoritmo lê os dados, faz as contas e escreve os resultados, por esta ordem.
 - [ ] Testei o meu algoritmo com três entradas que testam coisas diferentes.
 - [ ] Se fiz a parte B do desafio, o fluxograma e o pseudocódigo dizem a mesma coisa, e guardei o `.drawio` e o `.png`.

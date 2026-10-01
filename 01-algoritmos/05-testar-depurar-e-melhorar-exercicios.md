@@ -18,7 +18,9 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-A06, UC00245-A07, UC0
 
 Vais praticar sozinho o que o guia deste bloco explica: escolher casos de teste antes de executar um algoritmo, encontrar um erro com o método de depuração, contar os passos de um algoritmo e melhorá-lo sem mudar o que ele faz, e, no fim, construir e testar um algoritmo pequeno.
 
-Antes de começares, deves ter lido a teoria e o exemplo explicado do [guia](05-testar-depurar-e-melhorar.md), incluindo os passos 9 e 10 do exemplo, que mostram como se melhora um algoritmo e como se contam os passos. Também deves conseguir fazer uma tabela de iterações, escrever uma cadeia de `SE` e `SENÃO SE`, ler um `PARA` e um ciclo com sentinela, e usar contadores e totalizadores: está tudo nos guias 02, 03 e 04. Cada exercício diz em que secção do guia 05 está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
+Antes de começares, deves ter lido a teoria e o exemplo explicado do [guia](05-testar-depurar-e-melhorar.md), incluindo os passos 9 e 10 do exemplo, que mostram como se melhora um algoritmo e como se contam os passos. Também deves conseguir fazer uma tabela de iterações, escrever uma cadeia de `Se` e `Senão se`, ler um `Para` e um ciclo com sentinela, e usar contadores e totalizadores: está tudo nos guias 02, 03 e 04. Cada exercício diz em que secção do guia 05 está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
+
+Os algoritmos que a ficha te dá estão na forma de pseudocódigo das aulas, em que a indentação mostra o que está dentro de cada `Se`, de cada `Enquanto` e de cada `Para`. Quando fores tu a escrever um algoritmo, ou uma parte dele, podes usar essa forma ou frases claras, desde que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que conta é a lógica.
 
 Material: papel e lápis. O diagrams.net, em `https://app.diagrams.net`, só é preciso no fecho do portefólio.
 
@@ -47,25 +49,18 @@ A loja de informática marca cada artigo do armazém conforme a quantidade que t
 
 **a)** Sem olhares para o algoritmo que está mais abaixo, escreve a tabela de casos esperados deste problema, com as cinco colunas da tabela do guia: número, tipo, quantidade, resultado esperado e razão da escolha. Tem de ter pelo menos quatro casos: um caso normal, os dois lados da fronteira das 5 unidades e um caso inválido. Tapa o algoritmo com uma folha até acabares esta alínea: o exercício só funciona se a tabela for escrita a partir do enunciado.
 
-**b)** Agora lê o algoritmo e executa-o com cada um dos teus casos. Não precisas do trace linha a linha: basta seguir a cadeia de condições e anotar a primeira que dá verdadeiro, ou o `SENÃO`, se nenhuma der. Acrescenta à tabela as colunas do resultado obtido e de se o teste passou.
+**b)** Agora lê o algoritmo e executa-o com cada um dos teus casos. Não precisas do trace linha a linha: basta seguir a cadeia de condições e anotar a primeira que dá verdadeiro, ou o `Senão`, se nenhuma der. Acrescenta à tabela as colunas do resultado obtido e de se o teste passou.
 
 ```text
-ALGORITMO MarcarStock
-CONSTANTES
-    LIMITE_ENCOMENDA ← 5
-VARIÁVEIS
-    quantidade: inteiro
-INÍCIO
-    ESCREVER "Quantidade em stock?"
-    LER quantidade
-    SE quantidade < 0 ENTÃO
-        ESCREVER "Quantidade inválida"
-    SENÃO SE quantidade <= LIMITE_ENCOMENDA ENTÃO
-        ESCREVER "Encomendar"
-    SENÃO
-        ESCREVER "Stock suficiente"
-    FIM SE
-FIM
+const LIMITE_ENCOMENDA = 5
+Escreve: "Quantidade em stock?"
+int quantidade = ler valor
+Se quantidade < 0
+    Escreve: "Quantidade inválida"
+Senão se quantidade <= LIMITE_ENCOMENDA
+    Escreve: "Encomendar"
+Senão
+    Escreve: "Stock suficiente"
 ```
 
 **c)** Que caso da tua tabela revelou o erro? Se a tabela só tivesse casos normais, como 2 e 12, o erro teria aparecido? Explica porquê numa ou duas frases.
@@ -79,31 +74,19 @@ A matéria está nas secções "Depurar com método" e "Quatro erros que vais en
 No armazém da loja, o funcionário regista as entregas do dia. Escreve primeiro quantas entregas houve e depois, para cada entrega, o número de caixas que ela trouxe. O algoritmo deve mostrar o total de caixas recebidas no dia e quantas entregas foram grandes, isto é, de 10 ou mais caixas.
 
 ```text
-ALGORITMO EntregasDoDia
-CONSTANTES
-    ENTREGA_GRANDE ← 10
-VARIÁVEIS
-    numeroEntregas: inteiro
-    entrega: inteiro
-    caixas: inteiro
-    totalCaixas: inteiro
-    grandes: inteiro
-INÍCIO
-    ESCREVER "Quantas entregas houve hoje?"
-    LER numeroEntregas
-    grandes ← 0
-    PARA entrega ← 1 ATÉ numeroEntregas FAZER
-        totalCaixas ← 0
-        ESCREVER "Caixas da entrega ", entrega, "?"
-        LER caixas
-        totalCaixas ← totalCaixas + caixas
-        SE caixas >= ENTREGA_GRANDE ENTÃO
-            grandes ← grandes + 1
-        FIM SE
-    FIM PARA
-    ESCREVER "Total de caixas: ", totalCaixas
-    ESCREVER "Entregas grandes: ", grandes
-FIM
+const ENTREGA_GRANDE = 10
+Escreve: "Quantas entregas houve hoje?"
+int numeroEntregas = ler valor
+int grandes = 0
+Para entrega de 1 até numeroEntregas
+    int totalCaixas = 0
+    Escreve: "Caixas da entrega ", entrega, "?"
+    int caixas = ler valor
+    totalCaixas = totalCaixas + caixas
+    Se caixas >= ENTREGA_GRANDE
+        grandes = grandes + 1
+Escreve: "Total de caixas: ", totalCaixas
+Escreve: "Entregas grandes: ", grandes
 ```
 
 O erro foi observado assim: na segunda-feira houve 2 entregas, a primeira de 12 caixas e a segunda de 4. O algoritmo escreveu "Total de caixas: 4" e "Entregas grandes: 1". O responsável do armazém contou 16 caixas.
@@ -114,9 +97,9 @@ Cada alínea é um passo do método, pela ordem do guia, e a resposta a cada uma
 
 **b)** Formular uma hipótese. Escreve, numa frase que possa ser verdadeira ou falsa, o que achas que causa o erro.
 
-**c)** Verificar com o trace. Faz a tabela de iterações do caso de segunda-feira, com colunas para `entrega`, `caixas`, `totalCaixas` e `grandes` e para a condição escondida do `PARA`, `entrega <= numeroEntregas`. Na coluna do que acontece durante a iteração, escreve cada atribuição a `totalCaixas` com o valor que ela dá. Diz se a tabela confirma a tua hipótese e qual é a instrução que causa o erro.
+**c)** Verificar com o trace. Faz a tabela de iterações do caso de segunda-feira, com colunas para `entrega`, `caixas`, `totalCaixas` e `grandes` e para a condição escondida do `Para`, `entrega <= numeroEntregas`. Na coluna do que acontece durante a iteração, escreve cada atribuição a `totalCaixas` com o valor que ela dá. Diz se a tabela confirma a tua hipótese e qual é a instrução que causa o erro.
 
-**d)** Corrigir a causa. Corrige o algoritmo com uma única alteração, e diz qual foi.
+**d)** Corrigir a causa. Corrige o algoritmo com uma única alteração, e diz qual foi. Podes escrever o algoritmo corrigido ou descrever a alteração numa frase, desde que se perceba exatamente que linha muda e para onde.
 
 **e)** Voltar a testar tudo. O responsável do armazém já tinha escrito estes casos de teste, com o resultado esperado de cada um:
 
@@ -126,7 +109,7 @@ Cada alínea é um passo do método, pela ordem do guia, e a resposta a cada uma
 | 2 | 0 entregas | Total 0, grandes 0 |
 | 3 | 1 entrega, de 10 caixas | Total 10, grandes 1 |
 
-Executa a tua versão corrigida com os três casos e diz se cada um passa. Lembra-te de que um `PARA` de 1 até 0 não tem nenhuma iteração: é o caso zero do `PARA`.
+Executa a tua versão corrigida com os três casos e diz se cada um passa. Lembra-te de que um `Para` de 1 até 0 não tem nenhuma iteração: é o caso zero do `Para`.
 
 Concluíste quando o teu registo de depuração permitir a outra pessoa perceber o erro e a correção sem ler o resto das tuas respostas.
 
@@ -137,48 +120,37 @@ A matéria está nas secções "Contar passos" e "Estratégias simples para faze
 A loja separa as encomendas por peso, para escolher a caixa de envio. Até 999 gramas, a encomenda é leve. De 1000 a 4999 gramas, é média. De 5000 gramas para cima, é pesada. O funcionário escreve o peso de cada encomenda, em gramas, e escreve 0 quando acabar. Os pesos escritos são sempre positivos, e por isso não há validação.
 
 ```text
-ALGORITMO EscaloesDePeso
-CONSTANTES
-    LIMITE_LEVE ← 1000
-    LIMITE_PESADO ← 5000
-    SENTINELA ← 0
-VARIÁVEIS
-    peso: inteiro
-    leves: inteiro
-    medias: inteiro
-    pesadas: inteiro
-INÍCIO
-    leves ← 0
-    medias ← 0
-    pesadas ← 0
-    ESCREVER "Peso da encomenda em gramas (0 para terminar)?"
-    LER peso
-    ENQUANTO peso != SENTINELA FAZER
-        SE peso < LIMITE_LEVE ENTÃO
-            leves ← leves + 1
-        FIM SE
-        SE peso >= LIMITE_LEVE E peso < LIMITE_PESADO ENTÃO
-            medias ← medias + 1
-        FIM SE
-        SE peso >= LIMITE_PESADO ENTÃO
-            pesadas ← pesadas + 1
-        FIM SE
-        ESCREVER "Peso da encomenda em gramas (0 para terminar)?"
-        LER peso
-    FIM ENQUANTO
-    ESCREVER "Leves: ", leves
-    ESCREVER "Médias: ", medias
-    ESCREVER "Pesadas: ", pesadas
-FIM
+const LIMITE_LEVE = 1000
+const LIMITE_PESADO = 5000
+const SENTINELA = 0
+int leves = 0
+int medias = 0
+int pesadas = 0
+Escreve: "Peso da encomenda em gramas (0 para terminar)?"
+int peso = ler valor
+Enquanto peso != SENTINELA
+    Se peso < LIMITE_LEVE
+        leves = leves + 1
+    Se peso >= LIMITE_LEVE e peso < LIMITE_PESADO
+        medias = medias + 1
+    Se peso >= LIMITE_PESADO
+        pesadas = pesadas + 1
+    Escreve: "Peso da encomenda em gramas (0 para terminar)?"
+    peso = ler valor
+Escreve: "Leves: ", leves
+Escreve: "Médias: ", medias
+Escreve: "Pesadas: ", pesadas
 ```
+
+Repara que os três `Se` estão à mesma distância da margem e nenhum tem `Senão`: são três perguntas separadas, uma a seguir à outra, e não uma cadeia.
 
 Este algoritmo já passou em todos os testes da loja: está certo. Agora, e só agora, pergunta-se se faz trabalho desnecessário.
 
-A regra de contagem do guia, para a teres à mão: conta um passo cada `LER`, cada `ESCREVER` e cada atribuição executados, e cada avaliação da condição de um `SE`, de um `SENÃO SE` ou de um `ENQUANTO`, incluindo a última avaliação do `ENQUANTO`, a que dá falso. `SENÃO`, `FIM SE` e `FIM ENQUANTO` não contam.
+A regra de contagem do guia, para a teres à mão: conta um passo cada `Escreve:` e cada atribuição executados, incluindo as leituras com `ler valor`, e cada avaliação da condição de um `Se`, de um `Senão se` ou de um `Enquanto`, incluindo a última avaliação do `Enquanto`, a que dá falso. As linhas `const` e o `Senão` não contam.
 
 **a)** Conta os passos do algoritmo para os pesos 500 e 7000, seguidos de 0. Conta por partes, numa tabela como a do passo 10 do exemplo, com uma linha para cada parte: antes do ciclo, cada iteração, a última avaliação da condição do ciclo e depois do ciclo. No fim, soma.
 
-**b)** Em cada iteração, o algoritmo avalia sempre as três condições, mas para um mesmo peso só uma delas pode ser verdadeira. Escreve uma versão melhorada em que as três perguntas formam uma só cadeia, com `SENÃO SE` e `SENÃO`, para o algoritmo não voltar a perguntar o que já sabe. Basta escreveres a cadeia que substitui os três `SE`, que é a única parte que muda.
+**b)** Em cada iteração, o algoritmo avalia sempre as três condições, mas para um mesmo peso só uma delas pode ser verdadeira. Escreve uma versão melhorada em que as três perguntas formam uma só cadeia, com `Senão se` e `Senão`, para o algoritmo não voltar a perguntar o que já sabe. Basta escreveres a cadeia que substitui os três `Se`, que é a única parte que muda, em pseudocódigo ou em frases claras.
 
 **c)** Conta os passos da tua versão para o mesmo caso da alínea a), com a mesma regra e a mesma tabela de partes, e calcula a diferença.
 
@@ -194,11 +166,11 @@ O cartão de cliente da papelaria dá pontos. Por cada compra, o cliente ganha 1
 
 **a)** Antes de escreveres o algoritmo, escreve a tabela de casos esperados, com as cinco colunas do guia. Tem de ter pelo menos três casos: um caso normal, os dois lados da fronteira do bónus e um dia sem compras. Cada caso é uma sequência de valores, terminada no 0 que marca o fim do dia.
 
-**b)** Escreve o algoritmo em pseudocódigo, com uma constante para cada valor fixo do enunciado (os 100 cêntimos, os 2000 cêntimos e os 10 pontos de bónus) e com a constante `SENTINELA`.
+**b)** Escreve o algoritmo, em pseudocódigo ou em frases claras que não deixem dúvidas. Se usares pseudocódigo, usa uma constante para cada valor fixo do enunciado (os 100 cêntimos, os 2000 cêntimos e os 10 pontos de bónus) e a constante `SENTINELA`.
 
 **c)** Testa o algoritmo: faz a tabela de iterações do teu caso normal e executa os outros casos da tabela. Acrescenta à tabela as colunas do resultado obtido e de se o teste passou. Se algum caso falhar, corrige o algoritmo com o método do guia, guarda a versão com erro e a versão corrigida, e volta a executar a tabela inteira.
 
-Concluíste quando tiveres a tabela escrita antes do algoritmo, o pseudocódigo e a tabela executada, com todos os casos a passar.
+Concluíste quando tiveres a tabela escrita antes do algoritmo, o algoritmo e a tabela executada, com todos os casos a passar.
 
 ## Fecho do portefólio (última aula, 20 min)
 
@@ -206,9 +178,9 @@ Esta parte não é opcional, mas não conta para os 60 minutos da ficha: faz-se 
 
 **a)** Escreve o contrato do problema do exercício 4, com as respostas às quatro perguntas do guia 01: entradas, saídas, restrições e condições. Se encontrares alguma ambiguidade no enunciado, escreve a decisão que tomaste.
 
-**b)** Desenha no diagrams.net o fluxograma do teu algoritmo do exercício 4, como aprendeste no laboratório do bloco 04. Guarda o ficheiro `.drawio` e exporta uma imagem PNG. Confirma, figura a figura, que o fluxograma diz exatamente o mesmo que o pseudocódigo.
+**b)** Desenha no diagrams.net o fluxograma do teu algoritmo do exercício 4, como aprendeste no laboratório do bloco 04. Guarda o ficheiro `.drawio` e exporta uma imagem PNG. Confirma, figura a figura, que o fluxograma diz exatamente o mesmo que o algoritmo que escreveste.
 
-Concluíste quando o portefólio tiver, para o problema do exercício 4, o enunciado com o contrato, o pseudocódigo, o fluxograma e a tabela de casos executada, e, ao lado, o registo de depuração do exercício 2.
+Concluíste quando o portefólio tiver, para o problema do exercício 4, o enunciado com o contrato, o algoritmo, o fluxograma e a tabela de casos executada, e, ao lado, o registo de depuração do exercício 2.
 
 ## Apoio
 
@@ -218,7 +190,7 @@ Usa estas pistas pela ordem em que aparecem, e só passa à seguinte se a anteri
 
 **Exercício 2.** Compara o total obtido, 4, com as caixas de cada entrega. A que entrega corresponde o 4? Isso diz-te o que o totalizador está a fazer. Para a hipótese, relê no guia a secção "Inicialização no sítio errado". Na tabela de iterações, olha para o que acontece a `totalCaixas` logo no início de cada iteração, e não só no momento do teste.
 
-**Exercício 3.** Na alínea a), repara que cada iteração da versão dada avalia sempre os três `SE`, qualquer que seja o peso, e executa exatamente uma atualização: por isso todas as iterações têm o mesmo número de passos. Na alínea b), lembra-te da regra da cadeia de `SENÃO SE`: quando o algoritmo chega à segunda condição, o que é que já sabe sobre o peso? Na alínea c), o `SENÃO` não avalia nenhuma condição, e por isso uma encomenda leve e uma pesada já não fazem o mesmo número de passos.
+**Exercício 3.** Na alínea a), repara que cada iteração da versão dada avalia sempre os três `Se`, qualquer que seja o peso, e executa exatamente uma atualização: por isso todas as iterações têm o mesmo número de passos. Na alínea b), lembra-te da regra da cadeia de `Senão se`: quando o algoritmo chega à segunda condição, o que é que já sabe sobre o peso? Numa cadeia, o `Senão se` e o `Senão` ficam à mesma distância da margem que o primeiro `Se`, e cada atualização fica indentada por baixo da sua pergunta. Na alínea c), o `Senão` não avalia nenhuma condição, e por isso uma encomenda leve e uma pesada já não fazem o mesmo número de passos.
 
 **Exercício 4.** Decompõe antes de escrever: ler valores até ao 0 e, para cada compra, somar os pontos da compra e decidir o bónus. A estrutura é a do exemplo do inventário: inicialização do total, leitura antecipada, ciclo com sentinela e leitura no fim do corpo. Os pontos de uma compra calculam-se com uma operação do guia 02 que dá o número de vezes que 100 cabe no valor. Na tabela, calcula os pontos de uma compra de 1999 cêntimos e de uma de 2000: a diferença não é só de 1 ponto.
 
@@ -238,7 +210,7 @@ Para cada mudança, e antes de mexer no algoritmo:
 
 Só depois:
 
-**c)** Altera o pseudocódigo e diz quantas linhas mudaram.
+**c)** Altera o algoritmo e diz quantas linhas mudaram.
 
 **d)** Diz que figuras do fluxograma mudam, e se é preciso acrescentar alguma.
 
@@ -266,7 +238,7 @@ Continua o exercício 2. A matéria está nas secções "Depurar com método" e 
 
 **a)** Executa a versão original de `EntregasDoDia` com uma só entrega, de 12 caixas. O erro aparece? Explica porquê, e diz qual é o caso mais pequeno que ainda mostra o erro no total.
 
-**b)** Um colega propôs outra correção: deixar o ciclo como está e trocar o penúltimo `ESCREVER` por `ESCREVER "Total de caixas: ", totalCaixas * numeroEntregas`. Encontra um caso em que a proposta dele dá o total certo e outro em que dá o total errado. Explica, com as palavras causa e sintoma, por que razão esta proposta não corrige o erro.
+**b)** Um colega propôs outra correção: deixar o ciclo como está e trocar o penúltimo `Escreve:` por `Escreve: "Total de caixas: ", totalCaixas * numeroEntregas`. Encontra um caso em que a proposta dele dá o total certo e outro em que dá o total errado. Explica, com as palavras causa e sintoma, por que razão esta proposta não corrige o erro.
 
 Pista: na alínea b), experimenta um dia em que todas as entregas têm o mesmo número de caixas, e depois um em que não têm.
 
@@ -288,11 +260,11 @@ Continua o exercício 4. A funcionária pode enganar-se a escrever: um valor neg
 
 **a)** Antes de mexeres no algoritmo, acrescenta à tua tabela um caso com um valor negativo no meio de valores válidos, com o resultado esperado.
 
-**b)** Altera o pseudocódigo do exercício 4 para fazer esta validação.
+**b)** Altera o algoritmo do exercício 4 para fazer esta validação, em pseudocódigo ou em frases claras.
 
 **c)** Executa a tabela inteira na versão nova.
 
-Pista: a validação vem antes de tudo o resto dentro do ciclo. Os pontos e o bónus só se calculam para compras válidas, e por isso podem ficar dentro do `SENÃO` da validação, com o `SE` do bónus lá dentro.
+Pista: a validação vem antes de tudo o resto dentro do ciclo. Os pontos e o bónus só se calculam para compras válidas, e por isso podem ficar indentados por baixo do `Senão` da validação, com o `Se` do bónus lá dentro e a sua atualização um nível mais à direita.
 
 ## Critérios de conclusão
 
@@ -301,7 +273,7 @@ Pista: a validação vem antes de tudo o resto dentro do ciclo. Os pontos e o b�
 - [ ] O meu registo de depuração do exercício 2 tem as cinco linhas, uma por passo do método.
 - [ ] Contei os passos das duas versões do exercício 3 com a mesma regra e expliquei por que razão escrevem o mesmo.
 - [ ] No exercício 4, escrevi a tabela de casos antes do algoritmo e executei-a toda.
-- [ ] No fecho do portefólio, o fluxograma do exercício 4 diz exatamente o mesmo que o pseudocódigo, figura a figura.
+- [ ] No fecho do portefólio, o fluxograma do exercício 4 diz exatamente o mesmo que o algoritmo que escrevi, figura a figura.
 - [ ] Guardei no portefólio as versões com erro e as versões corrigidas, cada uma no seu ficheiro.
 
 ## Autoavaliação breve

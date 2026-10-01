@@ -20,9 +20,11 @@ Vais praticar sem ajuda o que o guia explicou sobre ciclos: seguir um ciclo numa
 
 A ficha vai por passos, e cada exercício usa o que os anteriores treinaram. Primeiro aplicas o que o guia mostrou: nos exercícios 1 e 2 segues e completas ciclos que já estão quase escritos, e nos exercícios 3 e 4 escreves ciclos pequenos, um com um contador e outro com um totalizador, a partir de um algoritmo do guia. Depois decides: no exercício 5 descobres porque é que um ciclo conta mal e corriges a linha errada. No fim constróis os ciclos que dependem do que a pessoa escreve: no exercício 6, um ciclo com sentinela, e no exercício 7, uma validação repetida.
 
-Antes de começares, deves ter lido o [guia](04-repeticao-e-padroes.md) até ao fim. Cada exercício diz a secção do guia onde está a matéria de que precisas. Tem o guia aberto ao lado e segue os algoritmos de lá sempre que o enunciado o sugerir. Para quem está a escrever os primeiros ciclos, partir de um algoritmo que já funciona é a forma certa de começar. No exercício 7 vais usar também o contrário de um intervalo, escrito com `OU`, que aprendeste no guia 03.
+Antes de começares, deves ter lido o [guia](04-repeticao-e-padroes.md) até ao fim. Cada exercício diz a secção do guia onde está a matéria de que precisas. Tem o guia aberto ao lado e segue os algoritmos de lá sempre que o enunciado o sugerir. Para quem está a escrever os primeiros ciclos, partir de um algoritmo que já funciona é a forma certa de começar. No exercício 7 vais usar também o contrário de um intervalo, escrito com `ou`, que aprendeste no guia 03.
 
 Material: papel quadriculado e lápis.
+
+Quando um exercício te pedir para escrever instruções, podes escrevê-las em pseudocódigo, na forma que usamos nas aulas, ou em frases claras. O que conta é a lógica. As frases têm de dizer, sem deixar dúvidas, com que valores se começa, em que situação se repete, que passos se repetem, o que muda em cada volta e o que acontece quando um valor não serve; o exemplo explicado do guia, no passo 5, mostra um ciclo escrito das duas maneiras. Se escreveres em pseudocódigo, cuida da indentação, porque é ela que mostra o que está dentro do ciclo. Nos exercícios com `Para`, usa a forma do guia, `Para ... de 1 até ...`.
 
 Uma regra para todos os exercícios: quando te pedirem uma tabela de iterações, escreve primeiro o resultado que esperas, e só depois faz a tabela. Se só o escreveres depois, a tabela concorda sempre contigo e não te ensina nada.
 
@@ -33,33 +35,25 @@ Os exercícios 1 a 7 são obrigatórios e cabem nos 90 minutos da prática autó
 Um armazém tem 20 caixas de papel. Em cada um dos próximos 3 dias chega uma entrega de 15 caixas, e não sai nenhuma. Este algoritmo mostra o stock no fim de cada dia:
 
 ```text
-ALGORITMO StockDePapel
-CONSTANTES
-    STOCK_INICIAL ← 20
-    CAIXAS_POR_ENTREGA ← 15
-    NUMERO_DE_DIAS ← 3
-VARIÁVEIS
-    dia: inteiro
-    stock: inteiro
-INÍCIO
-    stock ← STOCK_INICIAL
-    dia ← 1
-    ENQUANTO dia <= NUMERO_DE_DIAS FAZER
-        stock ← stock + CAIXAS_POR_ENTREGA
-        ESCREVER "Fim do dia ", dia, ": ", stock, " caixas"
-        dia ← dia + 1
-    FIM ENQUANTO
-    ESCREVER "Stock final: ", stock, " caixas"
-FIM
+const STOCK_INICIAL = 20
+const CAIXAS_POR_ENTREGA = 15
+const NUMERO_DE_DIAS = 3
+int stock = STOCK_INICIAL
+int dia = 1
+Enquanto dia <= NUMERO_DE_DIAS
+    stock = stock + CAIXAS_POR_ENTREGA
+    Escreve: "Fim do dia ", dia, ": ", stock, " caixas"
+    dia = dia + 1
+Escreve: "Stock final: ", stock, " caixas"
 ```
 
 A tabela de iterações já tem a primeira linha, para veres o formato:
 
 | Teste | dia | stock | Condição | Durante a iteração |
 | --- | ---: | ---: | --- | --- |
-| 1.º | 1 | 20 | `1 <= 3` é VERDADEIRO | escreve "Fim do dia 1: 35 caixas" |
+| 1.º | 1 | 20 | `1 <= 3` dá `true` | escreve "Fim do dia 1: 35 caixas" |
 
-**a)** Copia a tabela e completa-a, com uma linha por cada teste da condição, até ao teste que dá falso. Cada linha mostra os valores no momento em que o algoritmo chega ao `ENQUANTO` (guia, [A tabela de iterações](04-repeticao-e-padroes.md#a-tabela-de-iterações)).
+**a)** Copia a tabela e completa-a, com uma linha por cada teste da condição, até ao teste que dá falso. Cada linha mostra os valores no momento em que o algoritmo chega ao `Enquanto` (guia, [A tabela de iterações](04-repeticao-e-padroes.md#a-tabela-de-iterações)).
 
 **b)** Quantas iterações teve o ciclo? Quantas vezes foi testada a condição?
 
@@ -73,34 +67,31 @@ Concluíste quando a última linha da tua tabela tiver a condição falsa e soub
 
 Cada um destes três ciclos tem uma linha em branco, marcada com pontos. Para cada um, escreve a linha que falta e diz qual das três peças ela é: a inicialização, a condição ou a atualização (guia, [As três peças de um ciclo](04-repeticao-e-padroes.md#as-três-peças-de-um-ciclo)).
 
-**a)** Escrever as etiquetas das caixas de uma encomenda, da caixa 1 à caixa 4, com a constante `NUMERO_DE_CAIXAS ← 4`:
+**a)** Escrever as etiquetas das caixas de uma encomenda, da caixa 1 à caixa 4, com a constante `const NUMERO_DE_CAIXAS = 4`:
 
 ```text
+..........
+Enquanto caixa <= NUMERO_DE_CAIXAS
+    Escreve: "Etiqueta da caixa ", caixa
+    caixa = caixa + 1
+```
+
+**b)** Escrever a lista das prateleiras a contar no inventário, da prateleira 1 à 5, com a constante `const ULTIMA_PRATELEIRA = 5`:
+
+```text
+int prateleira = 1
+Enquanto ..........
+    Escreve: "Contar a prateleira ", prateleira
+    prateleira = prateleira + 1
+```
+
+**c)** Imprimir os talões numerados de 101 a 103, com as constantes `const PRIMEIRO_TALAO = 101` e `const ULTIMO_TALAO = 103`:
+
+```text
+int talao = PRIMEIRO_TALAO
+Enquanto talao <= ULTIMO_TALAO
+    Escreve: "Talão ", talao
     ..........
-    ENQUANTO caixa <= NUMERO_DE_CAIXAS FAZER
-        ESCREVER "Etiqueta da caixa ", caixa
-        caixa ← caixa + 1
-    FIM ENQUANTO
-```
-
-**b)** Escrever a lista das prateleiras a contar no inventário, da prateleira 1 à 5, com a constante `ULTIMA_PRATELEIRA ← 5`:
-
-```text
-    prateleira ← 1
-    ENQUANTO .......... FAZER
-        ESCREVER "Contar a prateleira ", prateleira
-        prateleira ← prateleira + 1
-    FIM ENQUANTO
-```
-
-**c)** Imprimir os talões numerados de 101 a 103, com as constantes `PRIMEIRO_TALAO ← 101` e `ULTIMO_TALAO ← 103`:
-
-```text
-    talao ← PRIMEIRO_TALAO
-    ENQUANTO talao <= ULTIMO_TALAO FAZER
-        ESCREVER "Talão ", talao
-        ..........
-    FIM ENQUANTO
 ```
 
 **d)** Imagina que a linha da alínea c) ficava mesmo em branco. Faz as três primeiras linhas da tabela de iterações dessa versão e explica numa frase porque é que o ciclo nunca acabaria (guia, [O ciclo que nunca acaba](04-repeticao-e-padroes.md#o-ciclo-que-nunca-acaba)).
@@ -112,49 +103,33 @@ Concluíste quando cada ciclo, com a tua linha, escrever exatamente os números 
 Uma papelaria recebeu hoje 3 encomendas pela internet. Para cada encomenda, o funcionário escreve o número de artigos. Uma encomenda com mais de 5 artigos vai numa caixa grande. O algoritmo conta quantas caixas grandes são precisas. Já tens o princípio do algoritmo:
 
 ```text
-ALGORITMO ContarCaixasGrandes
-CONSTANTES
-    NUMERO_DE_ENCOMENDAS ← 3
-    LIMITE_CAIXA_PEQUENA ← 5
-VARIÁVEIS
-    encomenda: inteiro
-    artigos: inteiro
-    caixasGrandes: inteiro
-INÍCIO
-    (as tuas instruções)
-FIM
+const NUMERO_DE_ENCOMENDAS = 3
+const LIMITE_CAIXA_PEQUENA = 5
+(as tuas instruções)
 ```
 
-**a)** Escreve as instruções que faltam entre `INÍCIO` e `FIM`. Usa um `PARA`, porque se sabe que são 3 encomendas, e segue o algoritmo `ContarStockBaixo` do guia ([Padrão contador](04-repeticao-e-padroes.md#padrão-contador)).
+**a)** Escreve as instruções que faltam, a seguir às constantes, em pseudocódigo ou em frases claras. Usa as variáveis `encomenda`, para o número da encomenda, `artigos` e `caixasGrandes`, todas `int`. Usa um `Para`, porque se sabe que são 3 encomendas, e segue o algoritmo `ContarStockBaixo` do guia ([Padrão contador](04-repeticao-e-padroes.md#padrão-contador)).
 
 **b)** Escreve quantas caixas grandes esperas para encomendas de 4, 9 e 7 artigos. Depois faz a tabela de iterações, com colunas para `encomenda`, `artigos` e `caixasGrandes`, e confirma o resultado.
 
-**c)** Explica numa frase porque é que a linha que aumenta `caixasGrandes` fica dentro do `SE`.
+**c)** Explica numa frase porque é que a linha que aumenta `caixasGrandes` fica dentro do `Se`, com mais indentação do que as outras linhas do corpo.
 
-Concluíste quando a tua tabela confirmar o resultado que esperavas e o contador começar em 0, antes do `PARA`.
+Concluíste quando a tua tabela confirmar o resultado que esperavas e o contador começar em 0, antes do `Para`.
 
 ## Exercício 4: Escrever um ciclo com um totalizador (15 min)
 
 Numa gráfica houve, durante a manhã, 3 trabalhos de impressão. Para cada trabalho, o funcionário escreve o número de páginas impressas. O algoritmo mostra o total de páginas da manhã. Já tens o princípio do algoritmo:
 
 ```text
-ALGORITMO PaginasDaManha
-CONSTANTES
-    NUMERO_DE_TRABALHOS ← 3
-VARIÁVEIS
-    trabalho: inteiro
-    paginas: inteiro
-    totalPaginas: inteiro
-INÍCIO
-    (as tuas instruções)
-FIM
+const NUMERO_DE_TRABALHOS = 3
+(as tuas instruções)
 ```
 
-**a)** Escreve as instruções que faltam, com um `PARA` e um totalizador. Segue o algoritmo `TotalDeVendas` do guia ([Padrão totalizador](04-repeticao-e-padroes.md#padrão-totalizador)), mas repara que aqui o número de trabalhos já está numa constante.
+**a)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras, com um `Para` e um totalizador. Usa as variáveis `trabalho`, `paginas` e `totalPaginas`, todas `int`. Segue o algoritmo `TotalDeVendas` do guia ([Padrão totalizador](04-repeticao-e-padroes.md#padrão-totalizador)), mas repara que aqui o número de trabalhos já está numa constante.
 
 **b)** Escreve o total que esperas para trabalhos de 12, 40 e 8 páginas. Depois faz a tabela de iterações, com colunas para `trabalho`, `paginas` e `totalPaginas`, e confirma o resultado.
 
-**c)** Explica numa frase o que acontecia ao resultado se a linha que põe `totalPaginas` a 0 passasse para dentro do `PARA`, logo a seguir ao cabeçalho.
+**c)** Explica numa frase o que acontecia ao resultado se a linha que põe `totalPaginas` a 0 passasse para dentro do `Para`, logo a seguir à primeira linha, com quatro espaços.
 
 Concluíste quando a tua tabela confirmar o total que esperavas e souberes dizer a diferença entre o contador do exercício 3 e o totalizador deste.
 
@@ -163,25 +138,15 @@ Concluíste quando a tua tabela confirmar o total que esperavas e souberes dizer
 Uma loja tem 4 encomendas por expedir. Uma encomenda é urgente se o prazo de entrega for de 2 dias ou menos. Um colega escreveu este algoritmo para contar as encomendas urgentes, mas o resultado não bate certo:
 
 ```text
-ALGORITMO EncomendasUrgentes
-CONSTANTES
-    NUMERO_DE_ENCOMENDAS ← 4
-    PRAZO_URGENTE ← 2
-VARIÁVEIS
-    encomenda: inteiro
-    prazo: inteiro
-    urgentes: inteiro
-INÍCIO
-    urgentes ← 0
-    PARA encomenda ← 1 ATÉ NUMERO_DE_ENCOMENDAS FAZER
-        ESCREVER "Prazo de entrega da encomenda ", encomenda, ", em dias?"
-        LER prazo
-        SE prazo <= PRAZO_URGENTE ENTÃO
-            urgentes ← urgentes + prazo
-        FIM SE
-    FIM PARA
-    ESCREVER "Encomendas urgentes: ", urgentes
-FIM
+const NUMERO_DE_ENCOMENDAS = 4
+const PRAZO_URGENTE = 2
+int urgentes = 0
+Para encomenda de 1 até NUMERO_DE_ENCOMENDAS
+    Escreve: "Prazo de entrega da encomenda ", encomenda, ", em dias?"
+    int prazo = ler valor
+    Se prazo <= PRAZO_URGENTE
+        urgentes = urgentes + prazo
+Escreve: "Encomendas urgentes: ", urgentes
 ```
 
 **a)** Faz a tabela de iterações com os prazos 3, 1, 2 e 5, com colunas para `encomenda`, `prazo` e `urgentes`. O que aparece no ecrã no fim?
@@ -199,20 +164,13 @@ Concluíste quando a tua versão corrigida der, com os mesmos prazos, o número 
 À tarde, na mesma gráfica do exercício 4, ninguém sabe quantos trabalhos vão chegar. O funcionário escreve o número de páginas de cada trabalho à medida que o trabalho fica pronto, e escreve 0 quando a gráfica fecha. Nenhum trabalho tem 0 páginas, e por isso o 0 serve de sentinela. O algoritmo mostra o total de páginas da tarde. Já tens o princípio do algoritmo:
 
 ```text
-ALGORITMO PaginasDaTarde
-CONSTANTES
-    SENTINELA ← 0
-VARIÁVEIS
-    paginas: inteiro
-    totalPaginas: inteiro
-INÍCIO
-    (as tuas instruções)
-FIM
+const SENTINELA = 0
+(as tuas instruções)
 ```
 
-**a)** No exercício 4 usaste um `PARA`. Explica numa frase porque é que aqui não serve, com a pergunta que o guia ensina para escolher entre os dois ciclos (guia, [Escolher entre ENQUANTO e PARA](04-repeticao-e-padroes.md#escolher-entre-enquanto-e-para)).
+**a)** No exercício 4 usaste um `Para`. Explica numa frase porque é que aqui não serve, com a pergunta que o guia ensina para escolher entre os dois ciclos (guia, [Escolher entre Enquanto e Para](04-repeticao-e-padroes.md#escolher-entre-enquanto-e-para)).
 
-**b)** Escreve as instruções que faltam, com a leitura antecipada antes do ciclo e a leitura do valor seguinte no fim do corpo. Segue o algoritmo `SomarCaixas` do guia ([Padrão sentinela](04-repeticao-e-padroes.md#padrão-sentinela)), sem o contador de caixas, porque aqui só se pede o total.
+**b)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras, com a leitura antecipada antes do ciclo e a leitura do valor seguinte no fim do corpo. Usa as variáveis `paginas` e `totalPaginas`, as duas `int`. Segue o algoritmo `SomarCaixas` do guia ([Padrão sentinela](04-repeticao-e-padroes.md#padrão-sentinela)), sem o contador de caixas, porque aqui só se pede o total.
 
 **c)** Escreve o total que esperas e faz a tabela de iterações em dois casos: quando o funcionário escreve 40, 8 e 0; e quando escreve logo 0, porque à tarde não houve trabalhos.
 
@@ -223,24 +181,18 @@ Concluíste quando os dois casos derem o total que esperavas e o 0 nunca tiver s
 Uma loja de informática organiza workshops gratuitos. Cada inscrição pode reservar de 1 a 6 lugares. O algoritmo pede o número de lugares e, enquanto o valor não for válido, escreve uma mensagem com o intervalo aceite e pede outra vez. No fim, escreve quantos lugares ficaram reservados. Já tens o princípio do algoritmo:
 
 ```text
-ALGORITMO ReservarLugares
-CONSTANTES
-    MINIMO_DE_LUGARES ← 1
-    MAXIMO_DE_LUGARES ← 6
-VARIÁVEIS
-    lugares: inteiro
-INÍCIO
-    (as tuas instruções)
-FIM
+const MINIMO_DE_LUGARES = 1
+const MAXIMO_DE_LUGARES = 6
+(as tuas instruções)
 ```
 
-**a)** Escreve as instruções que faltam. Segue o algoritmo `PedirQuantidadeValida` do guia ([Padrão validação repetida](04-repeticao-e-padroes.md#padrão-validação-repetida)): a condição do ciclo descreve o valor inválido.
+**a)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras, com a variável `lugares`, que é `int`. Segue o algoritmo `PedirQuantidadeValida` do guia ([Padrão validação repetida](04-repeticao-e-padroes.md#padrão-validação-repetida)): a condição do ciclo descreve o valor inválido.
 
 **b)** Faz a tabela de iterações quando a pessoa escreve 0, depois 7 e depois 3.
 
 **c)** A pessoa escreve logo 6. Responde numa frase: quantas iterações tem o ciclo, e o que aparece no ecrã?
 
-Concluíste quando o 0 e o 7 forem recusados, o 3 e o 6 forem aceites, e souberes dizer o que se sabe sobre `lugares` depois do `FIM ENQUANTO`.
+Concluíste quando o 0 e o 7 forem recusados, o 3 e o 6 forem aceites, e souberes dizer o que se sabe sobre `lugares` depois do ciclo.
 
 ## Apoio
 
@@ -248,15 +200,15 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 **Exercício 1.** Na linha do 2.º teste, `dia` já vale 2 e `stock` já tem somada a primeira entrega: o que muda durante uma iteração só aparece na linha seguinte. Se te baralhares, faz primeiro o trace linha a linha da primeira iteração, como no guia, e compara-o com a linha da tabela que já está feita.
 
-**Exercício 2.** Para cada ciclo, faz as três perguntas das peças: com que valor começa? Em que situação continua? O que muda em cada iteração? A pergunta a que o fragmento não responde é a da peça que falta. Na alínea d), olha para a coluna `talao` nas três linhas: o valor muda?
+**Exercício 2.** Para cada ciclo, faz as três perguntas das peças: com que valor começa? Em que situação continua? O que muda em cada iteração? A pergunta a que o fragmento não responde é a da peça que falta. Olha também para a margem dos pontos: sem indentação, a linha executa-se uma vez, antes do ciclo; com quatro espaços, executa-se em todas as iterações. Na alínea d), olha para a coluna `talao` nas três linhas: o valor muda?
 
-**Exercício 3.** Copia o `ContarStockBaixo` e muda uma coisa de cada vez: primeiro os nomes das constantes e das variáveis, depois a pergunta do `ESCREVER`, e por fim a condição do `SE`. "Mais de 5 artigos" quer dizer que uma encomenda com 5 artigos exatos ainda vai numa caixa pequena.
+**Exercício 3.** Copia o `ContarStockBaixo` e muda uma coisa de cada vez: primeiro os nomes das constantes e das variáveis, depois a pergunta do `Escreve:`, e por fim a condição do `Se`. "Mais de 5 artigos" quer dizer que uma encomenda com 5 artigos exatos ainda vai numa caixa pequena.
 
-**Exercício 4.** O `TotalDeVendas` começa por ler o número de dias. Aqui não precisas dessa leitura, porque o número de trabalhos está na constante: o `PARA` vai de 1 até `NUMERO_DE_TRABALHOS`. O resto tem a mesma forma. Para a alínea c), relê no guia o segundo erro clássico dos totalizadores.
+**Exercício 4.** O `TotalDeVendas` começa por ler o número de dias. Aqui não precisas dessa leitura, porque o número de trabalhos está na constante: o `Para` vai de 1 até `NUMERO_DE_TRABALHOS`. O resto tem a mesma forma. Para a alínea c), relê no guia o segundo erro clássico dos totalizadores.
 
-**Exercício 5.** Na tabela, olha para `urgentes` antes e depois de cada iteração em que o `SE` é verdadeiro. Quanto aumentou de cada vez? E quanto devia aumentar, se o que se quer é contar?
+**Exercício 5.** Na tabela, olha para `urgentes` antes e depois de cada iteração em que o `Se` é verdadeiro. Quanto aumentou de cada vez? E quanto devia aumentar, se o que se quer é contar?
 
-**Exercício 6.** Na alínea a), pergunta-te: quando o algoritmo chega ao ciclo, já se sabe quantos trabalhos vão chegar? Na alínea b), copia o `SomarCaixas` e apaga tudo o que tem a ver com `caixas`, que é o contador; depois muda os nomes. Confirma que tens dois `LER paginas`, um antes do `ENQUANTO` e outro mesmo antes do `FIM ENQUANTO`.
+**Exercício 6.** Na alínea a), pergunta-te: quando o algoritmo chega ao ciclo, já se sabe quantos trabalhos vão chegar? Na alínea b), copia o `SomarCaixas` e apaga tudo o que tem a ver com `caixas`, que é o contador; depois muda os nomes. Confirma que tens duas leituras de `paginas`: `int paginas = ler valor`, antes do `Enquanto` e sem indentação, e `paginas = ler valor`, como última linha do corpo, com quatro espaços.
 
 **Exercício 7.** A condição do ciclo é a do valor inválido: abaixo do mínimo ou acima do máximo. Escreve-a primeiro à parte e experimenta-a com 0, 1, 6 e 7 antes de a pores no ciclo. Na alínea c), avalia a condição com 6 antes de fazeres mais nada.
 
@@ -264,13 +216,13 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 ## Desafio opcional (30 min)
 
-Volta ao exercício 7 e muda uma só restrição: a pessoa passa a ter no máximo 3 tentativas, contando com a primeira. Se o valor continuar inválido ao fim da terceira tentativa, o algoritmo não pede mais nenhum valor e escreve "Reserva cancelada: foram usadas as 3 tentativas." Se o valor for válido numa das três tentativas, o algoritmo escreve a reserva feita, com o número de lugares. Se fizeste o D de "Para ires mais longe", já tens metade do caminho.
+Volta ao exercício 7 e muda uma só restrição: a pessoa passa a ter no máximo 3 tentativas, contando com a primeira. Se o valor continuar inválido ao fim da terceira tentativa, o algoritmo não pede mais nenhum valor e escreve "Reserva cancelada: foram usadas as 3 tentativas." Se o valor for válido numa das três tentativas, o algoritmo escreve a reserva feita, com o número de lugares. Se fizeste o Mais longe 4, já tens metade do caminho.
 
-**a)** O ciclo pode agora terminar por duas razões diferentes. Diz quais são e escreve a condição do ciclo. Como a condição mistura `E` com `OU`, usa parênteses para mostrar o que se avalia primeiro, como no guia 03.
+**a)** O ciclo pode agora terminar por duas razões diferentes. Diz quais são e escreve a condição do ciclo. Como a condição mistura `e` com `ou`, usa parênteses para mostrar o que se avalia primeiro, como no guia 03.
 
-**b)** Depois do `FIM ENQUANTO`, o algoritmo tem de saber por qual das duas razões o ciclo terminou, para escrever a mensagem certa. Como é que sabe? Escreve essa parte do algoritmo. Atenção: há uma forma de decidir que parece certa e falha num dos casos de teste da alínea c).
+**b)** Depois do ciclo, o algoritmo tem de saber por qual das duas razões o ciclo terminou, para escrever a mensagem certa. Como é que sabe? Escreve essa parte do algoritmo. Atenção: há uma forma de decidir que parece certa e falha num dos casos de teste da alínea c).
 
-**c)** Monta a tabela de casos esperados, com pelo menos quatro casos: um valor válido à primeira; um valor válido à terceira tentativa; três valores inválidos; e um extremo do intervalo. No caso dos três valores inválidos, confirma com a tabela de iterações que o `LER` é executado exatamente 3 vezes, nem mais uma.
+**c)** Monta a tabela de casos esperados, com pelo menos quatro casos: um valor válido à primeira; um valor válido à terceira tentativa; três valores inválidos; e um extremo do intervalo. No caso dos três valores inválidos, confirma com a tabela de iterações que a leitura é executada exatamente 3 vezes, nem mais uma.
 
 **d)** Desenha o fluxograma, no papel ou no diagrams.net.
 
@@ -285,18 +237,11 @@ Estes exercícios são opcionais e não contam para os 90 minutos. Cada um junta
 Num armazém, as prateleiras estão numeradas de 1 a 8, e as de número ímpar ficam no corredor da esquerda. Este algoritmo devia escrever, por ordem, os números das prateleiras do corredor da esquerda:
 
 ```text
-ALGORITMO PrateleirasDaEsquerda
-CONSTANTES
-    ULTIMA_PRATELEIRA ← 8
-VARIÁVEIS
-    prateleira: inteiro
-INÍCIO
-    prateleira ← 1
-    ENQUANTO prateleira != ULTIMA_PRATELEIRA FAZER
-        ESCREVER "Prateleira ", prateleira
-        prateleira ← prateleira + 2
-    FIM ENQUANTO
-FIM
+const ULTIMA_PRATELEIRA = 8
+int prateleira = 1
+Enquanto prateleira != ULTIMA_PRATELEIRA
+    Escreve: "Prateleira ", prateleira
+    prateleira = prateleira + 2
 ```
 
 **a)** Faz a tabela de iterações até ao 6.º teste.
@@ -322,22 +267,15 @@ Volta ao algoritmo do colega, no exercício 5, sem a correção.
 Uma loja regista quantos artigos lhe foram devolvidos em cada dia. O funcionário escreve o número de devoluções de cada dia, um dia de cada vez, e não se sabe à partida quantos dias vai registar. Um dia sem devoluções é um dia verdadeiro e tem de entrar nas contas. No fim, o algoritmo mostra quantos dias foram registados, o total de devoluções e a média de devoluções por dia. O princípio do algoritmo, com o valor da sentinela por escolher:
 
 ```text
-ALGORITMO DevolucoesPorDia
-CONSTANTES
-    SENTINELA ← ..........
-VARIÁVEIS
-    devolucoes: inteiro
-    diasRegistados: inteiro
-    totalDevolucoes: inteiro
-    media: real
-INÍCIO
-    (as tuas instruções)
-FIM
+const SENTINELA = ..........
+(as tuas instruções)
 ```
+
+As variáveis chamam-se `devolucoes`, `diasRegistados` e `totalDevolucoes`, que são `int`, e `media`, que é `float`.
 
 **a)** Explica porque é que, neste problema, o 0 não pode ser a sentinela. Escolhe outro valor para a sentinela e justifica a escolha numa frase.
 
-**b)** Escreve as instruções que faltam. A média pode ter parte decimal, e por isso calcula-se com `/`.
+**b)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras. A média pode ter parte decimal, e por isso calcula-se com `/`.
 
 **c)** O que deve o algoritmo mostrar se o funcionário escrever logo a sentinela? Explica numa frase porque é que, nesse caso, não se pode calcular a média, e corrige o teu algoritmo se for preciso.
 
@@ -351,7 +289,7 @@ Volta ao teu algoritmo do exercício 7.
 
 **b)** Refaz a tabela de iterações com 0, 7 e 3, agora com uma coluna para o contador.
 
-**c)** Qual é o menor número de vezes que o `LER` pode ser executado neste algoritmo? E o maior? Responde numa frase.
+**c)** Qual é o menor número de vezes que a leitura de `lugares` pode ser executada neste algoritmo? E o maior? Responde numa frase.
 
 ## Critérios de conclusão
 

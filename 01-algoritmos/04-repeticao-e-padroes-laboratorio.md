@@ -31,7 +31,7 @@ Do [laboratório do bloco 02](02-pseudocodigo-e-fluxogramas-laboratorio.md) e do
 - encontrar o grupo Fluxograma no fim da lista do painel da esquerda e reconhecer as figuras pelo nome que aparece ao passar o rato: Terminator para o início e o fim, Process para o retângulo, Data para o paralelogramo e Decision para o losango;
 - escrever o texto dentro de uma figura, com um duplo clique;
 - ligar duas figuras com uma seta presa nas duas pontas;
-- escrever `Sim` e `Não` nas setas que saem de um losango, seguindo a convenção do laboratório 03: num `SE`, o `Não` sai por baixo e o `Sim` sai pela direita;
+- escrever `Sim` e `Não` nas setas que saem de um losango, seguindo a convenção do laboratório 03: num `Se`, o `Não` sai por baixo e o `Sim` sai pela direita;
 - juntar os dois ramos de uma decisão numa mesma figura;
 - exportar o desenho como imagem PNG.
 
@@ -62,7 +62,7 @@ A disposição que vais usar tem três faixas, lado a lado:
 
 ```text
   faixa livre        faixa do meio                        faixa da direita
-  (a seta de volta   (o caminho principal,                (o ramo Sim do SE; mais à
+  (a seta de volta   (o caminho principal,                (o ramo Sim do Se; mais à
    sobe por aqui)     de cima para baixo)                  direita ainda, a saída do ciclo)
 
                      Início
@@ -70,7 +70,7 @@ A disposição que vais usar tem três faixas, lado a lado:
                      a pergunta e a leitura antecipada
   +--------------->  losango do ciclo  ---- Não -----------------------------------+
   |                   | Sim                                                        |
-  |                  losango do SE  ---- Sim ---->  válidos + 1                    |
+  |                  losango do Se  ---- Sim ---->  válidos + 1                    |
   |                   | Não                          total + quantidade            |
   |                  recusados + 1                        |                        |
   |                  escrever pedido recusado             |                        |
@@ -86,28 +86,28 @@ A disposição que vais usar tem três faixas, lado a lado:
 
 Repara em quatro pormenores deste esquema, porque são eles que tornam o desenho inequívoco.
 
-O losango do `SE` segue a convenção do laboratório 03: o `Não` sai por baixo e o `Sim` sai pela direita. Os dois ramos juntam-se na pergunta que está no fim do corpo, que corresponde ao `FIM SE`.
+O losango do `Se` segue a convenção do laboratório 03: o `Não` sai por baixo e o `Sim` sai pela direita. Os dois ramos juntam-se na pergunta que está no fim do corpo, que é a primeira instrução depois do `Se` e do `Senão`: no pseudocódigo do guia, é a linha que volta aos quatro espaços.
 
-O losango do ciclo tem a disposição contrária: o `Sim` sai por baixo, para o corpo do ciclo, e o `Não` sai pela direita, para fora do ciclo. Há uma razão para esta diferença. O losango de um ciclo tem quatro setas, e não três: a que chega de cima, as duas saídas e a seta de volta. Com o `Sim` por baixo, o corpo do ciclo fica na faixa do meio e a ponta esquerda do losango fica livre para a seta de volta. Se o `Sim` saísse pela direita, o corpo ficava na faixa da direita, e a seta de volta, para chegar à ponta esquerda, teria de cruzar a saída `Não` ou a seta que chega de cima. Para distinguires os dois losangos à primeira vista: ao losango do ciclo chega uma seta pela esquerda; ao losango do `SE`, não.
+O losango do ciclo tem a disposição contrária: o `Sim` sai por baixo, para o corpo do ciclo, e o `Não` sai pela direita, para fora do ciclo. Há uma razão para esta diferença. O losango de um ciclo tem quatro setas, e não três: a que chega de cima, as duas saídas e a seta de volta. Com o `Sim` por baixo, o corpo do ciclo fica na faixa do meio e a ponta esquerda do losango fica livre para a seta de volta. Se o `Sim` saísse pela direita, o corpo ficava na faixa da direita, e a seta de volta, para chegar à ponta esquerda, teria de cruzar a saída `Não` ou a seta que chega de cima. Para distinguires os dois losangos à primeira vista: ao losango do ciclo chega uma seta pela esquerda; ao losango do `Se`, não.
 
 A faixa da esquerda fica vazia de figuras. É por ali que a seta de volta sobe, da leitura da quantidade seguinte até à ponta esquerda do losango do ciclo, sem passar por cima de nada. A seta que vem da leitura antecipada chega ao mesmo losango pela ponta de cima. São duas setas a chegar ao mesmo losango, e cada uma chega por um lado diferente.
 
-A saída `Não` do ciclo desce por fora de tudo, mais à direita do que o ramo `Sim` do `SE`, até às escritas dos resultados. Entre a leitura da quantidade seguinte e as escritas dos resultados fica um espaço vazio, sem seta: quem sai do corpo volta sempre ao losango, e só a saída `Não` chega aos resultados.
+A saída `Não` do ciclo desce por fora de tudo, mais à direita do que o ramo `Sim` do `Se`, até às escritas dos resultados. Entre a leitura da quantidade seguinte e as escritas dos resultados fica um espaço vazio, sem seta: quem sai do corpo volta sempre ao losango, e só a saída `Não` chega aos resultados.
 
 ## Parte 3: Desenhar as figuras e as setas que já sabes fazer (15 min)
 
 1. No painel da esquerda, desce até ao fim da lista e abre o grupo Fluxograma.
-2. Desenha a faixa do meio, de cima para baixo: o Terminator do início, os três Process das inicializações, os dois Data da pergunta e da leitura antecipada, o Decision do ciclo, o Decision do `SE`, o Process de `pedidosRecusados ← pedidosRecusados + 1`, o Data de `ESCREVER pedido recusado`, os dois Data da pergunta e da leitura no fim do corpo, depois um espaço vazio, os três Data das escritas dos resultados e o Terminator do fim.
-3. Desenha a faixa da direita: os dois Process do ramo `Sim` do `SE`, `pedidosValidos ← pedidosValidos + 1` e `totalUnidades ← totalUnidades + quantidade`, à direita do losango do `SE`, o primeiro à mesma altura dele.
-4. Escreve em cada figura o texto do fluxograma do guia. O texto é o mesmo do pseudocódigo, com o mesmo nome de cada variável e as mesmas setas de atribuição.
-5. O losango do `SE` tem uma condição longa. Seleciona-o e puxa um dos cantos para fora, até o texto caber sem ficar cortado.
+2. Desenha a faixa do meio, de cima para baixo: o Terminator do início, os três Process das inicializações, os dois Data da pergunta e da leitura antecipada, o Decision do ciclo, o Decision do `Se`, o Process de `pedidosRecusados = pedidosRecusados + 1`, o Data de `Escreve: pedido recusado`, os dois Data da pergunta e da leitura no fim do corpo, depois um espaço vazio, os três Data das escritas dos resultados e o Terminator do fim.
+3. Desenha a faixa da direita: os dois Process do ramo `Sim` do `Se`, `pedidosValidos = pedidosValidos + 1` e `totalUnidades = totalUnidades + quantidade`, à direita do losango do `Se`, o primeiro à mesma altura dele.
+4. Escreve em cada figura o texto do fluxograma do guia. O texto é o mesmo do pseudocódigo, com o mesmo nome de cada variável e o mesmo `=` para dar um valor. Onde uma variável aparece pela primeira vez, o texto leva o tipo à frente, como no pseudocódigo: `int pedidosValidos = 0`, `int quantidade = ler valor`. Tudo se escreve diretamente no teclado, sem símbolos especiais.
+5. O losango do `Se` tem uma condição longa. Seleciona-o e puxa um dos cantos para fora, até o texto caber sem ficar cortado.
 
 Para poupar tempo, desenha uma figura, escreve-lhe o texto, e depois duplica-a e muda só o texto: seleciona a figura e usa Ctrl+D, ou Cmd+D num Mac. As três inicializações, por exemplo, são três Process iguais com textos diferentes.
 
-6. Liga as figuras da faixa do meio com setas, de cima para baixo, como no laboratório 02, desde o início até ao losango do ciclo, e do losango do `SE` até à leitura da quantidade seguinte. Não ligues a leitura da quantidade seguinte a nada, e não ligues nada às escritas dos resultados: essas setas são as da parte 4.
-7. Liga o losango do ciclo ao losango do `SE`, pela ponta de baixo, e escreve `Sim` nessa seta.
-8. No losango do `SE`, a seta que desce para `pedidosRecusados ← pedidosRecusados + 1` leva `Não`. Liga a ponta direita do losango do `SE` a `pedidosValidos ← pedidosValidos + 1` e escreve `Sim`. Liga as duas figuras da faixa da direita uma à outra.
-9. Junta os dois ramos do `SE`: liga `totalUnidades ← totalUnidades + quantidade` à pergunta do fim do corpo, fazendo a seta chegar à pergunta pelo lado direito. Assim não se sobrepõe à seta que chega de cima, vinda do ramo `Não`.
+6. Liga as figuras da faixa do meio com setas, de cima para baixo, como no laboratório 02, desde o início até ao losango do ciclo, e do losango do `Se` até à leitura da quantidade seguinte. Não ligues a leitura da quantidade seguinte a nada, e não ligues nada às escritas dos resultados: essas setas são as da parte 4.
+7. Liga o losango do ciclo ao losango do `Se`, pela ponta de baixo, e escreve `Sim` nessa seta.
+8. No losango do `Se`, a seta que desce para `pedidosRecusados = pedidosRecusados + 1` leva `Não`. Liga a ponta direita do losango do `Se` a `pedidosValidos = pedidosValidos + 1` e escreve `Sim`. Liga as duas figuras da faixa da direita uma à outra.
+9. Junta os dois ramos do `Se`: liga `totalUnidades = totalUnidades + quantidade` à pergunta do fim do corpo, fazendo a seta chegar à pergunta pelo lado direito. Assim não se sobrepõe à seta que chega de cima, vinda do ramo `Não`.
 
 Guarda o ficheiro.
 
@@ -115,7 +115,7 @@ Guarda o ficheiro.
 
 Esta é a parte nova. Faz os passos devagar e confirma cada um antes de passares ao seguinte.
 
-**1. Começar na figura certa.** A seta de volta sai da última figura do corpo do ciclo, a leitura da quantidade seguinte, `LER quantidade`, no fundo do corpo. Não sai do losango, nem da pergunta que está acima da leitura. Para confirmares, procura no pseudocódigo do guia a última instrução antes do `FIM ENQUANTO`: é dessa figura que a seta sai.
+**1. Começar na figura certa.** A seta de volta sai da última figura do corpo do ciclo, a leitura da quantidade seguinte, `quantidade = ler valor`, no fundo do corpo. Não sai do losango, nem da pergunta que está acima da leitura. Para confirmares, procura no pseudocódigo do guia a última linha indentada debaixo do `Enquanto`, a última com quatro espaços antes das linhas sem indentação do fim: é dessa figura que a seta sai.
 
 **2. Sair pelo lado esquerdo.** Passa o rato por cima dessa figura. Aparecem as pequenas setas azuis nos quatro lados. Carrega na seta azul do lado esquerdo e, sem largar o botão do rato, arrasta para cima, até ao losango do ciclo.
 
@@ -131,7 +131,7 @@ Para a seta de volta, és tu que escolhes o lado. Quando o rato passa por cima d
 
 **7. Deixar a seta sem texto.** Não escrevas nada na seta de volta. O `Sim` e o `Não` pertencem às saídas do losango, e uma palavra na seta de volta faria parecer que ela é uma saída.
 
-**8. Desenhar a saída do ciclo.** Liga a ponta direita do losango do ciclo à primeira escrita dos resultados, `ESCREVER pedidosValidos`. A seta deve sair para a direita, passar além da faixa da direita, descer por fora de tudo e entrar na escrita pelo lado direito. Se passar por cima das figuras da faixa da direita, afasta-a como no passo 5. Escreve `Não` nesta seta.
+**8. Desenhar a saída do ciclo.** Liga a ponta direita do losango do ciclo à primeira escrita dos resultados, `Escreve: pedidosValidos`. A seta deve sair para a direita, passar além da faixa da direita, descer por fora de tudo e entrar na escrita pelo lado direito. Se passar por cima das figuras da faixa da direita, afasta-a como no passo 5. Escreve `Não` nesta seta.
 
 **9. Ligar os resultados ao fim.** Liga as três escritas dos resultados e o fim, de cima para baixo.
 
@@ -141,9 +141,9 @@ Agora olha para o losango do ciclo. Devem chegar-lhe duas setas, uma por cima e 
 
 Um fluxograma verifica-se percorrendo-o, como fizeste com o dedo no guia e no laboratório 03. Usa o caso curto do [passo 7 do exemplo](04-repeticao-e-padroes.md#passo-7-o-trace-linha-a-linha-de-um-caso-curto): o funcionário escreve 12, depois 60, e depois 0.
 
-Com o ponteiro do rato, segue o caminho desde o início, e diz em voz baixa o valor de cada variável sempre que ele muda. Em cada losango, escolhe a saída pela condição, com os valores do momento. Enquanto percorres, conta quantas vezes passas pelo losango do ciclo e quantas passas pelo losango do `SE`.
+Com o ponteiro do rato, segue o caminho desde o início, e diz em voz baixa o valor de cada variável sempre que ele muda. Em cada losango, escolhe a saída pela condição, com os valores do momento. Enquanto percorres, conta quantas vezes passas pelo losango do ciclo e quantas passas pelo losango do `Se`.
 
-Se o desenho estiver certo, passas três vezes pelo losango do ciclo e duas pelo do `SE`, e chegas ao fim com 1 pedido válido, 12 unidades e 1 pedido recusado, os mesmos valores da tabela do guia. Se deres por ti numa figura de onde não sai nenhuma seta, ou a voltar a uma inicialização, há uma seta errada. Corrige-a antes de continuares.
+Se o desenho estiver certo, passas três vezes pelo losango do ciclo e duas pelo do `Se`, e chegas ao fim com 1 pedido válido, 12 unidades e 1 pedido recusado, os mesmos valores da tabela do guia. Se deres por ti numa figura de onde não sai nenhuma seta, ou a voltar a uma inicialização, há uma seta errada. Corrige-a antes de continuares.
 
 Confirma depois esta lista:
 
@@ -162,34 +162,25 @@ Confirma depois esta lista:
 4. Carrega em Exportar. Se a aplicação pedir um nome e um sítio, o nome é `fluxograma-pedidos-validos.png` e o sítio é "Aparelho" ou "Descarregar", nunca o Google Drive.
 5. Abre a imagem exportada e confirma que se lê todo o texto e que se veem todas as setas, incluindo a de volta.
 
-## Parte autónoma: um PARA no fluxograma (10 min)
+## Parte autónoma: um Para no fluxograma (10 min)
 
 Esta parte fazes sozinho. Cria um ficheiro novo, em Ficheiro, Novo..., e guarda-o logo na pasta `algoritmos`, com o nome `fluxograma-inventario-de-corredores.drawio`.
 
 Vais desenhar o fluxograma deste algoritmo, que soma as caixas guardadas nos 3 corredores de um armazém:
 
 ```text
-ALGORITMO InventarioDeCorredores
-CONSTANTES
-    NUMERO_DE_CORREDORES ← 3
-VARIÁVEIS
-    corredor: inteiro
-    caixas: inteiro
-    totalCaixas: inteiro
-INÍCIO
-    totalCaixas ← 0
-    PARA corredor ← 1 ATÉ NUMERO_DE_CORREDORES FAZER
-        ESCREVER "Caixas no corredor ", corredor, "?"
-        LER caixas
-        totalCaixas ← totalCaixas + caixas
-    FIM PARA
-    ESCREVER "Total de caixas no armazém: ", totalCaixas
-FIM
+const NUMERO_DE_CORREDORES = 3
+int totalCaixas = 0
+Para corredor de 1 até NUMERO_DE_CORREDORES
+    Escreve: "Caixas no corredor ", corredor, "?"
+    int caixas = ler valor
+    totalCaixas = totalCaixas + caixas
+Escreve: "Total de caixas no armazém: ", totalCaixas
 ```
 
-A única coisa nova é o `PARA`. No guia viste que, nesta disciplina, o `PARA` se desenha como o `ENQUANTO` equivalente (guia, [PARA: a forma curta do ciclo contado](04-repeticao-e-padroes.md#para-a-forma-curta-do-ciclo-contado)). Por isso o desenho tem figuras que não aparecem escritas no pseudocódigo acima.
+A única coisa nova é o `Para`. No guia viste que, nos nossos fluxogramas, o `Para` se desenha como o `Enquanto` equivalente (guia, [Para: a forma curta do ciclo contado](04-repeticao-e-padroes.md#para-a-forma-curta-do-ciclo-contado)). Por isso o desenho tem figuras que não aparecem escritas como linhas no pseudocódigo acima.
 
-**a)** No papel, escreve as duas instruções que o `PARA` esconde no cabeçalho e diz onde fica cada uma no fluxograma: antes do losango, ou no fim do corpo, mesmo antes da seta de volta.
+**a)** No papel, escreve as duas instruções que o `Para` faz sem aparecerem escritas como linhas, a inicialização e a atualização, e diz onde fica cada uma no fluxograma: antes do losango, ou no fim do corpo, mesmo antes da seta de volta.
 
 **b)** Desenha o fluxograma no diagrams.net, com essas duas figuras, o losango `corredor <= NUMERO_DE_CORREDORES?` e a seta de volta a chegar à ponta esquerda do losango, como na parte 4. O `Sim` sai por baixo e o `Não` pela direita.
 
@@ -202,30 +193,20 @@ Guarda e exporta a imagem como `fluxograma-inventario-de-corredores.png`, como n
 Esta parte é opcional, para quem acabou a parte autónoma ou quer praticar em casa. Muda o algoritmo dos corredores para que o número de corredores deixe de ser uma constante: o funcionário escreve-o no início, e o algoritmo pede-o outra vez até ser pelo menos 1. Guarda o desenho noutro ficheiro, `fluxograma-dois-ciclos.drawio`.
 
 ```text
-ALGORITMO InventarioComValidacao
-VARIÁVEIS
-    numeroDeCorredores: inteiro
-    corredor: inteiro
-    caixas: inteiro
-    totalCaixas: inteiro
-INÍCIO
-    ESCREVER "Quantos corredores tem o armazém?"
-    LER numeroDeCorredores
-    ENQUANTO numeroDeCorredores < 1 FAZER
-        ESCREVER "Tem de haver pelo menos 1 corredor. Quantos corredores?"
-        LER numeroDeCorredores
-    FIM ENQUANTO
-    totalCaixas ← 0
-    PARA corredor ← 1 ATÉ numeroDeCorredores FAZER
-        ESCREVER "Caixas no corredor ", corredor, "?"
-        LER caixas
-        totalCaixas ← totalCaixas + caixas
-    FIM PARA
-    ESCREVER "Total de caixas no armazém: ", totalCaixas
-FIM
+Escreve: "Quantos corredores tem o armazém?"
+int numeroDeCorredores = ler valor
+Enquanto numeroDeCorredores < 1
+    Escreve: "Tem de haver pelo menos 1 corredor. Quantos corredores?"
+    numeroDeCorredores = ler valor
+int totalCaixas = 0
+Para corredor de 1 até numeroDeCorredores
+    Escreve: "Caixas no corredor ", corredor, "?"
+    int caixas = ler valor
+    totalCaixas = totalCaixas + caixas
+Escreve: "Total de caixas no armazém: ", totalCaixas
 ```
 
-Agora há dois ciclos, um a seguir ao outro. Cada um tem o seu losango e a sua seta de volta, e cada seta de volta tem de chegar ao losango do seu ciclo. Planeia a disposição num papel antes de desenhar, para as duas setas subirem pela faixa livre sem se cruzarem. Verifica o desenho com este caso: o funcionário escreve 0 corredores, depois 2 corredores, e depois 5 caixas e 3 caixas. Conta quantas vezes passas por cada losango e escreve o que aparece no ecrã, do princípio ao fim.
+Agora há dois ciclos, um a seguir ao outro. É a indentação que os separa: a linha `int totalCaixas = 0` volta a não ter indentação, e por isso já está fora do primeiro ciclo e antes do segundo. Cada um tem o seu losango e a sua seta de volta, e cada seta de volta tem de chegar ao losango do seu ciclo. Planeia a disposição num papel antes de desenhar, para as duas setas subirem pela faixa livre sem se cruzarem. Verifica o desenho com este caso: o funcionário escreve 0 corredores, depois 2 corredores, e depois 5 caixas e 3 caixas. Conta quantas vezes passas por cada losango e escreve o que aparece no ecrã, do princípio ao fim.
 
 ## Quando alguma coisa corre mal na aplicação
 
@@ -247,7 +228,7 @@ Na tua pasta `algoritmos` tens de ter quatro ficheiros novos:
 - `fluxograma-pedidos-validos.drawio` e `fluxograma-pedidos-validos.png`;
 - `fluxograma-inventario-de-corredores.drawio` e `fluxograma-inventario-de-corredores.png`.
 
-E em papel, a folha da parte autónoma, com as duas instruções que o `PARA` esconde, o número de passagens pelo losango e o total que apareceu no ecrã.
+E em papel, a folha da parte autónoma, com as duas instruções que o `Para` faz sem aparecerem escritas, o número de passagens pelo losango e o total que apareceu no ecrã.
 
 Antes de entregares, confirma:
 
@@ -255,6 +236,6 @@ Antes de entregares, confirma:
 - [ ] Em cada losango de ciclo chegam duas setas e saem duas, cada uma no seu ponto do contorno.
 - [ ] Cada losango tem uma saída `Sim` e uma saída `Não`, e as setas de volta não têm texto.
 - [ ] Percorri o fluxograma dos pedidos com o caso 12, 60, 0 e obtive os mesmos valores da tabela do guia.
-- [ ] No fluxograma dos corredores, o `PARA` está desenhado com as suas três peças.
+- [ ] No fluxograma dos corredores, o `Para` está desenhado com as suas três peças.
 
 ![Rodapé](../imagens/rodape.png)
