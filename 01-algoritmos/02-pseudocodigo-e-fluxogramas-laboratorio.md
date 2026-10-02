@@ -12,8 +12,10 @@ Requisitos: UC00245-R04, UC00245-K05, UC00245-A06, UC00245-C02, UC00245-P02
 | --- | --- |
 | Material | Laboratório do bloco ALG02, acompanha o [guia](02-pseudocodigo-e-fluxogramas.md) |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG02 |
-| Duração | 40 minutos dos 300 do bloco: é a prática guiada no computador |
-| Evidência a guardar | Os ficheiros `.drawio` e as imagens `.png` dos dois fluxogramas deste laboratório |
+| Duração | 40 minutos dos 300 do bloco: é a prática guiada no computador, e é opcional |
+| Evidência a guardar | Os ficheiros `.drawio` e as imagens `.png` dos dois fluxogramas deste laboratório, se o professor o indicar |
+
+**Laboratório opcional.** Este laboratório é todo de fluxogramas, e só o fazes quando o professor o indicar. Nenhum exercício obrigatório da ficha depende dele. O que é um fluxograma, o que quer dizer cada figura e como se lê está explicado no [guia](02-pseudocodigo-e-fluxogramas.md), e é essa explicação que é matéria do bloco.
 
 Este laboratório diz o que fazer, passo a passo, com a aplicação de fluxogramas aberta ao lado. As explicações do porquê estão no [guia](02-pseudocodigo-e-fluxogramas.md): quando um passo usa uma ideia do guia, o texto diz em que secção ela está explicada.
 
@@ -219,6 +221,6 @@ Na tua pasta `algoritmos` tens de ter quatro ficheiros:
 - `fluxograma-caixas-de-cadernos.drawio` e `fluxograma-caixas-de-cadernos.png`;
 - `fluxograma-diferenca-de-inventario.drawio` e `fluxograma-diferenca-de-inventario.png`.
 
-As imagens são a evidência que entregas, pela forma de entrega que o professor indicar. Os ficheiros `.drawio` guardas tu, porque vais voltar a abri-los: no desafio da ficha deste bloco podes desenhar mais um fluxograma na aplicação, e no laboratório do guia 03 vais acrescentar a figura que ainda falta, o losango das decisões.
+As imagens são a evidência que entregas, pela forma de entrega que o professor indicar. Os ficheiros `.drawio` guardas tu, porque podes voltar a precisar deles: se o professor indicar a parte B do desafio da ficha deste bloco, desenhas mais um fluxograma na aplicação, e o laboratório do guia 03, também opcional, acrescenta a figura que ainda falta, o losango das decisões.
 
 ![Rodapé](../imagens/rodape.png)

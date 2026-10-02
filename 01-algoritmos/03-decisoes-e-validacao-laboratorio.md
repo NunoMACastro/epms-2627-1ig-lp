@@ -12,8 +12,10 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-K05, UC00245-K06, UC00245-A06, UC0
 | --- | --- |
 | Material | Laboratório do bloco ALG03, acompanha o [guia](03-decisoes-e-validacao.md) |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG03 |
-| Duração | 60 minutos dos 300 do bloco: é a prática guiada no computador |
-| Evidência a guardar | Os ficheiros `.drawio` e as imagens `.png` dos dois fluxogramas deste laboratório, e as folhas das partes 4 e 5, com os caminhos seguidos |
+| Duração | 60 minutos dos 300 do bloco, no computador; é opcional |
+| Evidência a guardar | Os ficheiros `.drawio` e as imagens `.png` dos dois fluxogramas deste laboratório, e as folhas das partes 4 e 5, com os caminhos seguidos, se o professor o indicar |
+
+**Laboratório opcional.** Este laboratório é todo de fluxogramas, e só o fazes quando o professor o indicar. Nenhum exercício obrigatório da ficha depende dele. O que é um fluxograma de decisões e como se lê, com o losango e as saídas `Sim` e `Não`, está explicado no [guia](03-decisoes-e-validacao.md), e é essa explicação que é matéria do bloco.
 
 ## O que vais fazer
 
@@ -240,6 +242,6 @@ E em papel:
 - A folha da parte 4, com as nove linhas preenchidas e as respostas às quatro perguntas.
 - A folha da parte 5, com as seis linhas preenchidas.
 
-Depois deste laboratório segue-se a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md), onde vais voltar a usar a aplicação no exercício 5.
+Depois deste laboratório segue-se a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md). Se o professor indicar a parte de fluxogramas do fim da ficha, também opcional, vais voltar a usar a aplicação para desenhar o fluxograma do exercício 5.
 
 ![Rodapé](../imagens/rodape.png)

@@ -12,8 +12,8 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-K05, UC00245-K06, UC0
 | --- | --- |
 | Material | M-ALG04, quarto bloco de Desenvolver algoritmos |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG04 |
-| Duração | 120 minutos dos 300 do bloco neste guia (teoria, exemplo explicado e consolidação); a prática guiada, 60 minutos, está no [laboratório](04-repeticao-e-padroes-laboratorio.md); a prática autónoma e o desafio, 120 minutos, estão na [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) |
-| Evidência a guardar | Tabela de iterações, algoritmo e conjunto de testes do exemplo e da ficha; fluxograma do exemplo desenhado no laboratório |
+| Duração | 120 minutos dos 300 do bloco neste guia (teoria, exemplo explicado e consolidação); a prática guiada, 60 minutos, faz-se em aula, com o professor; a prática autónoma e o desafio, 120 minutos, estão na [ficha de exercícios](04-repeticao-e-padroes-exercicios.md); o [laboratório](04-repeticao-e-padroes-laboratorio.md), de fluxogramas, é opcional e só se faz quando o professor o indicar |
+| Evidência a guardar | Tabela de iterações, algoritmo e conjunto de testes do exemplo e da ficha; o fluxograma do exemplo desenhado na aplicação, só se o professor indicar o laboratório |
 
 ## Objetivos
 
@@ -26,7 +26,7 @@ No final deste bloco, serás capaz de:
 - escrever um ciclo contado com `Para` e reescrevê-lo com `Enquanto`;
 - usar quatro padrões que vão aparecer em quase todos os algoritmos que escreveres daqui para a frente: o contador, o totalizador, a sentinela e a validação repetida;
 - escolher entre `Enquanto` e `Para` e justificar a escolha;
-- desenhar um ciclo em fluxograma, com a seta que volta atrás até ao losango da condição.
+- reconhecer um ciclo num fluxograma, pela seta que volta atrás até ao losango da condição.
 
 ## O que precisas de saber antes
 
@@ -46,21 +46,23 @@ Do [guia 03, Decisões e validação](03-decisoes-e-validacao.md), vais usar as 
 
 Há uma ideia do guia 03 que neste guia passa a ser ainda mais importante: a indentação. Num `Se`, as instruções que só se executam quando a condição é verdadeira escrevem-se debaixo dele, quatro espaços mais à direita, e é essa margem, e nenhuma palavra de fecho, que mostra onde acaba o bloco. Com os ciclos vai ser igual, e vais ver que pôr uma linha quatro espaços mais à esquerda ou mais à direita pode transformar um algoritmo certo num que nunca acaba.
 
-Dos laboratórios dos blocos [02](02-pseudocodigo-e-fluxogramas-laboratorio.md) e [03](03-decisoes-e-validacao-laboratorio.md), vais precisar de saber usar o diagrams.net: guardar no computador, desenhar as figuras, ligá-las com setas, escrever `Sim` e `Não` nas saídas de um losango e exportar uma imagem.
+Os laboratórios de fluxogramas são opcionais, e só os fazes quando o professor o indicar. Se o professor indicar o laboratório deste bloco, vais precisar do que se aprende nos laboratórios dos blocos [02](02-pseudocodigo-e-fluxogramas-laboratorio.md) e [03](03-decisoes-e-validacao-laboratorio.md) sobre o diagrams.net: guardar no computador, desenhar as figuras, ligá-las com setas, escrever `Sim` e `Não` nas saídas de um losango e exportar uma imagem.
 
 ## Material e preparação
 
-Papel quadriculado e lápis, porque as tabelas deste guia se fazem primeiro à mão. Para o laboratório, o computador com o diagrams.net aberto em `https://app.diagrams.net/?lang=pt`, e a pasta `algoritmos` onde guardaste os fluxogramas dos blocos anteriores.
+Papel quadriculado e lápis, porque as tabelas deste guia se fazem à mão.
+
+Neste percurso, os fluxogramas são para saberes o que são e como se leem. Neste guia vais ver como se reconhece um ciclo num fluxograma, pela seta que volta ao losango da condição, e como se segue o caminho com o dedo. Desenhar fluxogramas, no papel ou numa aplicação, é uma parte opcional, que só fazes quando o professor o indicar, e nenhum exercício obrigatório precisa dela. Para o laboratório, se o professor o indicar, precisas do computador com o diagrams.net aberto em `https://app.diagrams.net/?lang=pt`, e da pasta `algoritmos` dos laboratórios anteriores.
 
 ## Como está organizado o tempo
 
-Este bloco tem **5 horas**, ou seja 300 minutos, distribuídos por três documentos com o mesmo número: este guia, que se lê e estuda; o laboratório, que se segue passo a passo no computador; e a ficha, que se resolve sem ajuda.
+Este bloco tem **5 horas**, ou seja 300 minutos, distribuídos por três documentos com o mesmo número: este guia, que se lê e estuda; o laboratório, que se segue passo a passo no computador e é opcional; e a ficha, que se resolve sem ajuda.
 
 | Parte | Onde está | Tempo |
 | --- | --- | ---: |
 | Teoria | Neste guia | 30 min |
 | Exemplo explicado | Neste guia | 30 min |
-| Prática guiada | No [laboratório](04-repeticao-e-padroes-laboratorio.md) | 60 min |
+| Prática guiada | Em aula, com o professor. O [laboratório](04-repeticao-e-padroes-laboratorio.md), de fluxogramas, é opcional: só o fazes quando o professor o indicar | 60 min |
 | Prática autónoma | Na [ficha](04-repeticao-e-padroes-exercicios.md) | 90 min |
 | Desafio | Na [ficha](04-repeticao-e-padroes-exercicios.md) | 30 min |
 | Consolidação | Neste guia | 60 min |
@@ -301,7 +303,7 @@ A primeira: a seta de volta vai sempre ao losango da condição. Se voltasse ao 
 
 A segunda: é a seta que sobe que te diz que há um ciclo. Num fluxograma só com sequência e seleção, as setas andam sempre para baixo, e os dois ramos de um `Se` juntam-se mais abaixo. Quando vês uma seta a subir até um losango, estás a ver uma repetição.
 
-A terceira: o desenho tem de ser inequívoco. A seta de volta chega ao losango por um lado diferente daquele por onde chega a seta de cima, não cruza as outras setas, e o `Sim` e o `Não` ficam escritos nas saídas do losango e não na seta de volta. É esta a técnica nova que vais praticar no diagrams.net, no laboratório deste bloco.
+A terceira: o desenho tem de ser inequívoco. A seta de volta chega ao losango por um lado diferente daquele por onde chega a seta de cima, não cruza as outras setas, e o `Sim` e o `Não` ficam escritos nas saídas do losango e não na seta de volta. É esta a técnica nova que o laboratório deste bloco treina no diagrams.net, se o professor o indicar.
 
 ### O ciclo que nunca começa
 
@@ -491,7 +493,7 @@ Tabela de iterações com os stocks 12, 4, 10, 0 e 9. Para a tabela caber no ecr
 | 5.º | 5 | 0 | 2 | `5 <= 5` dá `true` | lê 9 |
 | 6.º | 6 | 9 | 3 | `6 <= 5` dá `false` | o ciclo termina |
 
-O contador aumentou três vezes: com 4, com 0 e com 9. Não aumentou com 12, que está acima do mínimo, nem com 10, que é o próprio mínimo. `10 < 10` é falso: dez não é menor do que dez. O enunciado diz "abaixo do mínimo", e um produto com exatamente o mínimo não está abaixo dele. É a regra das fronteiras do guia 03, agora dentro de um ciclo: o 9, o 10 e o 12 foram escolhidos de propósito.
+O contador aumentou três vezes: com 4, com 0 e com 9. Não aumentou com 12, que está acima do mínimo, nem com 10, que é o próprio mínimo. `10 < 10` é falso: dez não é menor do que dez. O enunciado diz "abaixo do mínimo", e um produto com exatamente o mínimo não está abaixo dele. É a regra das fronteiras do guia 03, agora dentro de um ciclo: o 9, o 10 e o 12 foram escolhidos de propósito, um abaixo do mínimo, o próprio mínimo e um acima dele.
 
 ### Padrão totalizador
 
@@ -714,20 +716,20 @@ O mais útil deste padrão está no que acontece depois do ciclo, a partir da pr
 
 A escolha faz-se com uma pergunta: **antes de o ciclo começar, já se sabe quantas vezes ele se vai repetir?** Se sim, o ciclo é contado, e usa-se `Para`. Se não, porque o fim depende de alguma coisa que só acontece durante o ciclo, como um valor lido, usa-se `Enquanto`.
 
-"Antes de o ciclo começar" é o momento em que o algoritmo chega ao ciclo, e não o momento em que escreves o algoritmo. É por isso que o total de vendas usa `Para`: quando escreves o algoritmo não sabes quantos dias vão ser, mas quando o algoritmo chega ao ciclo esse número já foi lido.
+"Antes de o ciclo começar" é o momento em que o algoritmo chega ao ciclo, e não o momento em que escreves o algoritmo. É por isso que somar as vendas de um número de dias que o funcionário escreve no início, a terceira linha da tabela seguinte, usa `Para`: quando escreves o algoritmo não sabes quantos dias vão ser, mas quando o algoritmo chega ao ciclo esse número já foi lido.
 
 | Situação | Ciclo | Porquê |
 | --- | --- | --- |
 | Imprimir as senhas de 1 a 100 | `Para` | Sabe-se que são 100 antes de começar |
 | Ler o stock dos 5 produtos da loja | `Para` | São sempre 5 |
 | Somar as vendas de um número de dias que o funcionário escreve no início | `Para` | O número é lido antes de o ciclo começar |
-| Ler pedidos até aparecer o 0 | `Enquanto` | Só se sabe que acabou quando aparece a sentinela |
+| Ler pedidos até aparecer o 0 | `Enquanto` | Só se sabe que acabou quando aparece o 0, o valor combinado para dizer que não há mais pedidos |
 | Pedir a quantidade até ser válida | `Enquanto` | Depende do que a pessoa escrever |
 | Juntar dinheiro até chegar ao preço de um objeto | `Enquanto` | Depende dos valores que forem entrando |
 
-Todo o `Para` se pode escrever como um `Enquanto`, e viste como. O contrário não é verdade: um ciclo com sentinela ou com validação repetida não se escreve com `Para`, porque não há um número de iterações para pôr no `até`. Se estiveres em dúvida, o `Enquanto` funciona sempre, mas obriga-te a escrever as três peças à mão, com mais oportunidades de errar. Quando o ciclo é contado, o `Para` é a escolha mais segura.
+Todo o `Para` se pode escrever como um `Enquanto`, e viste como. O contrário não é verdade: um ciclo que lê valores até aparecer um valor combinado para dizer que acabou, ou que volta a pedir um valor até ele ser válido, não se escreve com `Para`, porque não há um número de iterações para pôr no `até`. São os ciclos dos padrões sentinela e validação repetida. Se estiveres em dúvida, o `Enquanto` funciona sempre, mas obriga-te a escrever as três peças à mão, com mais oportunidades de errar. Quando o ciclo é contado, o `Para` é a escolha mais segura.
 
-> Para saberes mais (leitura opcional, não sai nos exercícios). Há linguagens com um ciclo que testa a condição no fim do corpo, e não no princípio, e que por isso se executa sempre pelo menos uma vez. Em alguns livros aparece escrito como `REPETIR ... ATÉ`. Nesta unidade não se usa: tudo o que ele faz consegue-se com `Enquanto`, como viste na validação repetida, e o Python, que vais aprender a seguir, também não o tem.
+> Para saberes mais (leitura opcional, não sai nos exercícios). Há linguagens com um ciclo que testa a condição no fim do corpo, e não no princípio, e que por isso se executa sempre pelo menos uma vez. Em alguns livros aparece escrito como `REPETIR ... ATÉ`. Nesta unidade não se usa: tudo o que ele faz consegue-se com `Enquanto`, como mostra o padrão validação repetida, e o Python, que vais aprender a seguir, também não o tem.
 
 ## Exemplo explicado (30 min): contar pedidos válidos e totalizar unidades
 
@@ -853,7 +855,7 @@ flowchart TD
 
 Descrição do percurso, para quem não vê o desenho. Do início, o caminho passa pelas três inicializações, pela pergunta e pela primeira leitura, e chega ao primeiro losango, o do ciclo. Se a quantidade não for a sentinela, sai pelo `Sim` e chega ao segundo losango, o do `Se`. Pelo `Sim` do segundo losango, conta o pedido válido e soma as unidades. Pelo `Não`, conta o pedido recusado e escreve a mensagem. Os dois ramos juntam-se na pergunta seguinte, que é a primeira instrução depois do `Se` e do `Senão` e que, no pseudocódigo, volta aos quatro espaços. Segue-se a leitura da quantidade seguinte, e a seta volta ao primeiro losango. Quando a quantidade lida for a sentinela, o primeiro losango sai pelo `Não` e o caminho passa pelas três escritas finais até ao fim.
 
-Repara na diferença entre os dois losangos. O do `Se` tem dois ramos que descem e se juntam mais abaixo. O do ciclo tem um ramo, o `Sim`, que acaba por subir de volta a ele, e um ramo, o `Não`, que é a saída do ciclo. Tudo o que está entre o `Sim` do primeiro losango e a seta que sobe é o corpo do ciclo, exatamente as linhas que no pseudocódigo estão indentadas debaixo do `Enquanto`. É este fluxograma que vais desenhar no laboratório.
+Repara na diferença entre os dois losangos. O do `Se` tem dois ramos que descem e se juntam mais abaixo. O do ciclo tem um ramo, o `Sim`, que acaba por subir de volta a ele, e um ramo, o `Não`, que é a saída do ciclo. Tudo o que está entre o `Sim` do primeiro losango e a seta que sobe é o corpo do ciclo, exatamente as linhas que no pseudocódigo estão indentadas debaixo do `Enquanto`. É este o fluxograma que o laboratório deste bloco, que é opcional, manda desenhar.
 
 ### Passo 7: O trace linha a linha de um caso curto
 
@@ -1005,7 +1007,9 @@ Todos os erros desta secção têm uma coisa em comum: vários deles não aparec
 
 ## Prática guiada (60 min)
 
-A prática guiada deste bloco é feita no computador, no [laboratório](04-repeticao-e-padroes-laboratorio.md). Vais desenhar no diagrams.net o fluxograma do exemplo dos pedidos, aprender a desenhar a seta que volta ao losango sem cruzar as outras setas, e verificar o desenho percorrendo-o com um caso de teste. O laboratório pressupõe que já fizeste os laboratórios dos blocos 02 e 03, e remete para este guia sempre que precisares de rever uma ideia.
+A prática guiada deste bloco faz-se em aula, com o professor.
+
+O [laboratório](04-repeticao-e-padroes-laboratorio.md) deste bloco é opcional, e só o fazes quando o professor o indicar. Nele desenha-se no diagrams.net o fluxograma do exemplo dos pedidos, aprende-se a desenhar a seta que volta ao losango sem cruzar as outras setas, e verifica-se o desenho percorrendo-o com um caso de teste. O laboratório pressupõe os laboratórios dos blocos 02 e 03, e remete para este guia sempre que for preciso rever uma ideia.
 
 ## Consolidação (60 min)
 
@@ -1077,7 +1081,7 @@ Escreve: "Tempo total: ", totalMinutos, " minutos"
 
 Escreve duas ou três linhas sobre o que te custou mais neste bloco: perceber quando o ciclo volta atrás, ver pela indentação o que está dentro do ciclo, fazer a tabela de iterações, escolher entre `Enquanto` e `Para`, ou a leitura antecipada da sentinela. Guarda-as com a evidência.
 
-**Evidência a guardar:** a tabela de iterações e o conjunto de testes do exemplo explicado, refeitos por ti sem olhar; o fluxograma desenhado no laboratório; as respostas às tarefas 1 a 3 desta consolidação; e as tuas notas de dificuldade.
+**Evidência a guardar:** a tabela de iterações e o conjunto de testes do exemplo explicado, refeitos por ti sem olhar; as respostas às tarefas 1 a 3 desta consolidação; e as tuas notas de dificuldade. Se o professor tiver indicado o laboratório, guarda também o fluxograma desenhado na aplicação.
 
 ## Verificar o que aprendeste
 
@@ -1095,7 +1099,7 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 - Consegues escrever um ciclo com sentinela, com a leitura antecipada, e explicar porque é que a sentinela nunca é tratada como dado.
 - Consegues escrever uma validação repetida e dizer o que se sabe sobre o valor depois do ciclo.
 - Consegues escolher entre `Enquanto` e `Para` para um problema novo e justificar a escolha com a pergunta certa.
-- Consegues desenhar um ciclo em fluxograma, com a seta de volta a chegar ao losango da condição.
+- Consegues reconhecer um ciclo num fluxograma e explicar porque é que a seta de volta tem de chegar ao losango da condição.
 - Consegues escolher os casos de teste de um ciclo: o caso de zero voltas, um caso com uma só volta, um caso com várias voltas e as fronteiras.
 
 ## Quando já estiveres à vontade: o Para com as três peças à vista
@@ -1178,7 +1182,7 @@ Mais tarde, quando trabalhares com textos e listas, vais conhecer uma terceira f
 
 ## A seguir
 
-O [laboratório](04-repeticao-e-padroes-laboratorio.md) ocupa 60 minutos e a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) os restantes 120. No bloco seguinte, o último desta área, vais juntar a sequência, a seleção e a repetição num problema maior, testá-lo de forma organizada, corrigir erros encontrados no trace e comparar duas soluções pelo número de passos. Mais tarde, em Python, os ciclos `Enquanto` passam a chamar-se `while`, e as tabelas de iterações que aprendeste a fazer aqui vão servir para prever o que o programa vai fazer antes de o executares.
+A [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) ocupa 120 minutos. O [laboratório](04-repeticao-e-padroes-laboratorio.md), de fluxogramas, é opcional e só se faz quando o professor o indicar. No bloco seguinte, o último desta área, vais juntar a sequência, a seleção e a repetição num problema maior, testá-lo de forma organizada, corrigir erros encontrados no trace e comparar duas soluções pelo número de passos. Mais tarde, em Python, os ciclos `Enquanto` passam a chamar-se `while`, e as tabelas de iterações que aprendeste a fazer aqui vão servir para prever o que o programa vai fazer antes de o executares.
 
 ## Referências
 

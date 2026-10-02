@@ -13,7 +13,7 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-A06, UC00245-A07, UC0
 | Material | M-ALG05, quinto e último bloco de Desenvolver algoritmos |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG05 |
 | Duração | 120 minutos dos 300 do bloco: 60 para a teoria e o exemplo deste guia e 60 para o checkpoint da última aula. Os outros 180 estão na [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) (60) e na avaliação prática individual (120) |
-| Evidência a guardar | Portefólio com problema, pseudocódigo, fluxograma, testes e correções |
+| Evidência a guardar | Portefólio com problema, pseudocódigo, testes e correções; o fluxograma, só se o professor o indicar |
 
 ## Objetivos
 
@@ -24,7 +24,7 @@ No final deste bloco, serás capaz de:
 - depurar um algoritmo com método: observar o erro, formular uma hipótese, verificá-la com o trace, corrigir a causa e voltar a testar tudo;
 - reconhecer os quatro erros mais frequentes dos blocos anteriores: a fronteira mal posta, a atualização esquecida, a inicialização no sítio errado e o ramo em falta;
 - melhorar um algoritmo sem mudar o que ele faz, contando os passos antes e depois da melhoria;
-- justificar uma solução completa que junta sequência, seleção e repetição, em pseudocódigo e em fluxograma.
+- justificar uma solução completa que junta sequência, seleção e repetição, em pseudocódigo, e reconhecê-la num fluxograma.
 
 ## O que precisas de saber antes
 
@@ -44,7 +44,9 @@ Uma palavra sobre a forma como os algoritmos estão escritos. Neste guia estão 
 
 ## Material e preparação
 
-Papel e lápis, porque neste bloco vais fazer muitos traces à mão. A aplicação diagrams.net, no browser, em `https://app.diagrams.net`, que já usaste para desenhar fluxogramas. E a pasta onde guardaste o trabalho dos blocos anteriores, porque no fim deste bloco vais organizar um portefólio com ele.
+Papel e lápis, porque neste bloco vais fazer muitos traces à mão. E a pasta onde guardaste o trabalho dos blocos anteriores, porque no fim deste bloco vais organizar um portefólio com ele.
+
+Como nos guias anteriores, os fluxogramas deste guia são para leres e compreenderes: o do passo 8 do exemplo explicado mostra a versão corrigida do algoritmo desenhada. Desenhar fluxogramas é uma parte opcional, que só fazes quando o professor o indicar. Nesse caso precisas também do diagrams.net, no browser, em `https://app.diagrams.net`.
 
 ## Como está organizado o tempo
 
@@ -712,7 +714,7 @@ Nos casos da tabela, a diferença parece pequena. Num dia normal da papelaria, c
 
 ### Passo 11: o que fica no portefólio
 
-Para este problema, o portefólio guarda o enunciado, o contrato, a tabela de casos esperados, a versão 1, o registo de depuração do passo 5, a versão 2 com o seu fluxograma e o teste de regressão, e a versão 3 com a explicação da equivalência e a contagem de passos. A versão com o erro não se deita fora: é a prova de que o encontraste e corrigiste. O registo de depuração deste exemplo, escrito como vais escrever os teus, é este:
+Para este problema, o portefólio guarda o enunciado, o contrato, a tabela de casos esperados, a versão 1, o registo de depuração do passo 5, a versão 2 com o teste de regressão, e o seu fluxograma se o professor tiver indicado a parte de fluxogramas, e a versão 3 com a explicação da equivalência e a contagem de passos. A versão com o erro não se deita fora: é a prova de que o encontraste e corrigiste. O registo de depuração deste exemplo, escrito como vais escrever os teus, é este:
 
 | Passo do método | O que foi feito |
 | --- | --- |
@@ -739,19 +741,20 @@ Estes são os erros de quem está a aprender a testar e a depurar, e não os err
 
 ## O teu portefólio
 
-O **portefólio** é a pasta onde juntas o trabalho que mostra o que aprendeste em algoritmos. É a entrega mínima deste bloco, e deve ter, para pelo menos um problema completo, cinco coisas: o problema (o enunciado e o contrato), o pseudocódigo (ou o algoritmo em frases claras, se foi assim que o escreveste), o fluxograma desenhado no diagrams.net, os testes (a tabela de casos esperados com os resultados obtidos) e as correções (as versões com erro, os registos de depuração e as versões corrigidas). O problema completo deste bloco é o exercício 4 da ficha, e o registo de depuração é o do exercício 2.
+O **portefólio** é a pasta onde juntas o trabalho que mostra o que aprendeste em algoritmos. É a entrega mínima deste bloco, e deve ter, para pelo menos um problema completo, quatro coisas: o problema (o enunciado e o contrato), o pseudocódigo (ou o algoritmo em frases claras, se foi assim que o escreveste), os testes (a tabela de casos esperados com os resultados obtidos) e as correções (as versões com erro, os registos de depuração e as versões corrigidas). Se o professor indicar a parte de fluxogramas, junta-se uma quinta: o fluxograma desenhado no diagrams.net. O problema completo deste bloco é o exercício 4 da ficha, e o registo de depuração é o do exercício 2.
 
 Algumas regras simples para o organizar:
 
-- Uma pasta chamada `portefolio-algoritmos`, com um nome de ficheiro por peça, em minúsculas, com hífenes e sem acentos nem espaços, por exemplo `pontos-do-cartao-pseudocodigo`, `pontos-do-cartao-testes` e `pontos-do-cartao-fluxograma.drawio`.
-- Cada versão de um algoritmo num ficheiro próprio. Não escrevas a versão corrigida por cima da versão com erro: o portefólio mostra as duas. No diagrams.net, o menu abre-se no botão redondo com reticências, no canto superior direito. Em Ficheiro, a opção Guardar como grava o diagrama com outro nome; no campo Onde, escolhe Aparelho ou Descarregar, para o ficheiro ficar no teu computador e não numa conta na internet. Em Exportar como, a opção PNG cria a imagem que podes juntar a um documento.
+- Uma pasta chamada `portefolio-algoritmos`, com um nome de ficheiro por peça, em minúsculas, com hífenes e sem acentos nem espaços, por exemplo `pontos-do-cartao-pseudocodigo` e `pontos-do-cartao-testes`, e, se houver fluxograma, `pontos-do-cartao-fluxograma.drawio`.
+- Cada versão de um algoritmo num ficheiro próprio. Não escrevas a versão corrigida por cima da versão com erro: o portefólio mostra as duas.
+- Se fizeres o fluxograma no diagrams.net: o menu abre-se no botão redondo com reticências, no canto superior direito. Em Ficheiro, a opção Guardar como grava o diagrama com outro nome; no campo Onde, escolhe Aparelho ou Descarregar, para o ficheiro ficar no teu computador e não numa conta na internet. Em Exportar como, a opção PNG cria a imagem que podes juntar a um documento.
 - Os traces feitos em papel também contam. Fotografa-os ou passa-os a limpo, e junta-os aos testes do problema a que pertencem.
 
 ## Resumo e checkpoint
 
 Esta parte faz-se na última aula do bloco, depois da avaliação, mas lê-a já.
 
-Testar é executar um algoritmo com casos escolhidos de propósito, normais, de fronteira e inválidos, e comparar o resultado obtido com o resultado esperado, que se escreve antes, a partir do contrato. Quando um teste falha, depura-se com método: observa-se o erro e reduz-se ao caso mínimo, formula-se uma hipótese, verifica-se com o trace, corrige-se a causa e não o sintoma, e volta-se a testar tudo. Um algoritmo certo pode ainda ser melhorado, desde que continue equivalente, e a melhoria mede-se contando passos antes e depois, com a mesma regra. Tudo isto se faz sobre algoritmos feitos de três estruturas, sequência, seleção e repetição, que se escrevem em pseudocódigo, ou em frases claras, e se desenham em fluxograma. No pseudocódigo, é a indentação que mostra o que está dentro de cada decisão e de cada ciclo, e uma linha que muda de indentação muda o que o algoritmo faz.
+Testar é executar um algoritmo com casos escolhidos de propósito, normais, de fronteira e inválidos, e comparar o resultado obtido com o resultado esperado, que se escreve antes, a partir do contrato. Quando um teste falha, depura-se com método: observa-se o erro e reduz-se ao caso mínimo, formula-se uma hipótese, verifica-se com o trace, corrige-se a causa e não o sintoma, e volta-se a testar tudo. Um algoritmo certo pode ainda ser melhorado, desde que continue equivalente, e a melhoria mede-se contando passos antes e depois, com a mesma regra. Tudo isto se faz sobre algoritmos feitos de três estruturas, sequência, seleção e repetição, que se escrevem em pseudocódigo, ou em frases claras, e se podem representar em fluxograma. No pseudocódigo, é a indentação que mostra o que está dentro de cada decisão e de cada ciclo, e uma linha que muda de indentação muda o que o algoritmo faz.
 
 Confirma o que já consegues fazer:
 
@@ -770,15 +773,15 @@ Treina já com o inventário. Pega no caso em que o stock inicial é 12 e as qua
 
 ## A avaliação prática da unidade
 
-A avaliação prática é individual, dura 120 minutos e tem duas partes. Na primeira recebes um problema novo e fazes o que fizeste neste guia: o contrato, a tabela de casos esperados antes do algoritmo, o algoritmo, o fluxograma no diagrams.net e os testes. Na segunda recebes um algoritmo que outra pessoa escreveu, com um erro que já foi observado: tens de o reproduzir, encontrar a causa, corrigi-la, voltar a testar e explicar a correção, e depois melhorar o algoritmo e comparar os passos antes e depois.
+A avaliação prática é individual, dura 120 minutos e tem duas partes. Na primeira recebes um problema novo e fazes o que fizeste neste guia: o contrato, a tabela de casos esperados antes do algoritmo, o algoritmo e os testes, e ainda o fluxograma no diagrams.net, se o professor indicar que essa parte entra. Na segunda recebes um algoritmo que outra pessoa escreveu, com um erro que já foi observado: tens de o reproduzir, encontrar a causa, corrigi-la, voltar a testar e explicar a correção, e depois melhorar o algoritmo e comparar os passos antes e depois.
 
-Podes escrever os teus algoritmos em pseudocódigo, na forma que usamos nas aulas, ou em frases claras, desde que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que se observa é a lógica: se o algoritmo resolve o problema, se o algoritmo e o fluxograma dizem a mesma coisa, se os testes foram bem escolhidos e se consegues explicar uma correção. Não se classifica a forma da escrita, a beleza do fluxograma nem a rapidez. As regras sobre o que podes consultar e sobre o uso de ferramentas de inteligência artificial vêm escritas no enunciado, e o professor mostra-te antes a grelha com os critérios. A melhor preparação é a ficha deste bloco, sobretudo os exercícios 2 e 4.
+Podes escrever os teus algoritmos em pseudocódigo, na forma que usamos nas aulas, ou em frases claras, desde que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que se observa é a lógica: se o algoritmo resolve o problema, se o algoritmo e o fluxograma dizem a mesma coisa, quando houver fluxograma, se os testes foram bem escolhidos e se consegues explicar uma correção. Não se classifica a forma da escrita, a beleza do fluxograma nem a rapidez. As regras sobre o que podes consultar e sobre o uso de ferramentas de inteligência artificial vêm escritas no enunciado, e o professor mostra-te antes a grelha com os critérios. A melhor preparação é a ficha deste bloco, sobretudo os exercícios 2 e 4.
 
 ## A seguir
 
 A [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) ocupa 60 minutos do bloco e é onde praticas sozinho tudo o que está neste guia.
 
-Com este bloco termina o percurso de algoritmos. No próximo, começas a programar em Python, e os algoritmos, os fluxogramas e as tabelas de casos que escreveste aqui vão voltar: primeiro para os traduzir para uma linguagem que o computador executa, depois para os testar da mesma maneira. O método de depuração que aprendeste neste guia não muda quando o computador passa a executar por ti. Muda só quem faz o trace.
+Com este bloco termina o percurso de algoritmos. No próximo, começas a programar em Python, e os algoritmos e as tabelas de casos que escreveste aqui vão voltar: primeiro para os traduzir para uma linguagem que o computador executa, depois para os testar da mesma maneira. O método de depuração que aprendeste neste guia não muda quando o computador passa a executar por ti. Muda só quem faz o trace.
 
 ## Referências
 

@@ -10,17 +10,17 @@ Requisitos: UC00245-R02, UC00245-R03, UC00245-R04, UC00245-K03, UC00245-K04, UC0
 
 | Identificação | Valor |
 | --- | --- |
-| Material | Ficha do bloco ALG02, acompanha o [guia](02-pseudocodigo-e-fluxogramas.md) e o [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md) |
+| Material | Ficha do bloco ALG02, acompanha o [guia](02-pseudocodigo-e-fluxogramas.md) e o [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md), que é opcional |
 | Tempo total | 120 minutos dos 300 do bloco: 90 de prática autónoma e 30 de desafio opcional. A secção "Para ires mais longe" é opcional e fica fora destes 120 minutos |
-| Entrega | Respostas escritas, tabelas de trace e o algoritmo do exercício 7; se fizeres a parte B do desafio, os ficheiros `.drawio` e `.png` do fluxograma |
+| Entrega | Respostas escritas, tabelas de trace e o algoritmo do exercício 7; se o professor indicar a parte B do desafio e a fizeres, os ficheiros `.drawio` e `.png` do fluxograma |
 
 ## Objetivos e conceitos necessários
 
 Vais praticar, sem ajuda, as peças que o bloco ensinou, uma de cada vez: escolher o tipo de dados de um valor, fazer o trace de uma sequência de atribuições, reconhecer uma atribuição mal escrita, calcular expressões e usar as funções predefinidas. Depois segues um algoritmo completo, que já está escrito, e no fim escreves um algoritmo teu.
 
-Antes de começares, deves ter estudado o [guia](02-pseudocodigo-e-fluxogramas.md) deste bloco e feito o [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md). Tudo o que precisas para esta ficha está no guia, e cada exercício diz em que secção está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
+Antes de começares, deves ter estudado o [guia](02-pseudocodigo-e-fluxogramas.md) deste bloco. Tudo o que precisas para esta ficha está no guia, e cada exercício diz em que secção está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio. O [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md), de fluxogramas, é opcional, e nenhum exercício obrigatório desta ficha precisa dele.
 
-Material: papel quadriculado e lápis. O diagrams.net, em `https://app.diagrams.net/?lang=pt`, só é preciso para a parte B do desafio. Guarda esse ficheiro na pasta `algoritmos` que usaste no laboratório, com um nome em minúsculas, com hífenes e sem acentos.
+Material: papel quadriculado e lápis. O diagrams.net, em `https://app.diagrams.net/?lang=pt`, só é preciso para a parte B do desafio, que é de fluxogramas e só se faz quando o professor o indicar. Nesse caso, guarda o ficheiro na pasta `algoritmos` do laboratório, com um nome em minúsculas, com hífenes e sem acentos.
 
 Todos os algoritmos desta ficha são sequenciais: as instruções executam-se sempre todas, pela mesma ordem, sem o algoritmo ter de escolher entre caminhos.
 
@@ -42,7 +42,7 @@ Nenhum exercício é o exemplo explicado do guia com outros números. O exemplo 
 | 6 | Seguir um algoritmo completo com uma tabela de trace | 12 min |
 | 7 | Escrever um algoritmo, em pseudocódigo ou em frases claras, e testá-lo | 21 min |
 | Total da parte obrigatória | Exercícios 1 a 7 | 90 min |
-| Desafio opcional | Trocar os valores de duas variáveis, desenhar na aplicação o fluxograma do exercício 7 e mudar uma regra | 30 min |
+| Desafio opcional | Trocar os valores de duas variáveis e mudar uma regra; a parte B, desenhar na aplicação o fluxograma do exercício 7, só quando o professor o indicar | 30 min, ou 15 sem a parte B |
 | Para ires mais longe | Opcional: casos que enganam nos tipos, nas atribuições e nas expressões, e um problema novo | fora dos 120 min |
 
 ## Exercício 1: Escolher o tipo de dados (10 min)
@@ -233,7 +233,7 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 ## Desafio opcional (30 min)
 
-O desafio tem três partes independentes, e podes fazê-las pela ordem que quiseres. As partes B e C partem do teu algoritmo do exercício 7.
+O desafio tem três partes independentes, e podes fazê-las pela ordem que quiseres. As partes B e C partem do teu algoritmo do exercício 7. A parte B é de fluxogramas: só a fazes quando o professor o indicar, e sem ela o desafio leva cerca de 15 minutos.
 
 ### Parte A: trocar os valores de duas variáveis (10 min)
 
@@ -248,9 +248,9 @@ int caixaB = 30
 
 Escreve as instruções que trocam os valores das duas, de forma que no fim `caixaA` valha 30 e `caixaB` valha 12. Podes usar uma variável a mais, se precisares: escreve o tipo dela na linha onde aparece pela primeira vez. Faz o trace da tua solução, desde as duas linhas acima, para mostrar que funciona.
 
-### Parte B: o fluxograma do exercício 7 na aplicação (15 min)
+### Parte B: o fluxograma do exercício 7 na aplicação (15 min, só quando o professor o indicar)
 
-A matéria está na secção "Os símbolos do fluxograma" do guia e no laboratório.
+Esta parte é opcional mesmo dentro do desafio: só a fazes quando o professor o indicar. A matéria está na secção "Os símbolos do fluxograma" do guia e no laboratório.
 
 Desenha no diagrams.net o fluxograma do teu algoritmo do exercício 7. Guarda-o como `fluxograma-compra-de-leite.drawio`, verifica-o com a lista da parte 6 do laboratório, adaptada a este algoritmo, e exporta a imagem com o nome `fluxograma-compra-de-leite.png`.
 

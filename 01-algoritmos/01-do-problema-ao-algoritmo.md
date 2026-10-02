@@ -693,13 +693,13 @@ Escreve em que passo está o erro e como o corrigias. Compara depois com o algor
 
 Escreve duas ou três linhas sobre o que te custou mais neste bloco e sobre o que farias de outra maneira se voltasses a começar. Guarda-as: é o que te vai dizer onde insistir.
 
-Evidência a guardar: a tua ficha de análise com as quatro perguntas, os exemplos concretos e a decomposição do problema da encomenda, as ambiguidades que encontraste, o erro que identificaste no algoritmo acima e as tuas notas de dificuldade. Guarda tudo: vais precisar da análise no bloco seguinte, quando aprenderes a escrever a mesma coisa em pseudocódigo e em fluxograma.
+Evidência a guardar: a tua ficha de análise com as quatro perguntas, os exemplos concretos e a decomposição do problema da encomenda, as ambiguidades que encontraste, o erro que identificaste no algoritmo acima e as tuas notas de dificuldade. Guarda tudo: vais precisar da análise no bloco seguinte, quando aprenderes a escrever a mesma coisa em pseudocódigo e a reconhecê-la num fluxograma.
 
 ## A seguir
 
 A [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md) deste bloco ocupa os restantes 120 minutos e é onde vais trabalhar sozinho.
 
-No bloco seguinte, [Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md), vais aprender a escrever algoritmos numa notação própria, o pseudocódigo, e a desenhá-los em fluxograma. O estado, que aqui foram números numa tabela, passa a ter nomes próprios, chamados variáveis: a última senha chamada da papelaria vai chamar-se `ultimaChamada`. E o contrato continua a ser o primeiro passo de todos os problemas: antes de escrever uma única instrução, vais sempre responder às quatro perguntas e escrever os exemplos.
+No bloco seguinte, [Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md), vais aprender a escrever algoritmos numa notação própria, o pseudocódigo, e a lê-los num desenho com figuras e setas, o fluxograma. O estado, que aqui foram números numa tabela, passa a ter nomes próprios, chamados variáveis: a última senha chamada da papelaria vai chamar-se `ultimaChamada`. E o contrato continua a ser o primeiro passo de todos os problemas: antes de escrever uma única instrução, vais sempre responder às quatro perguntas e escrever os exemplos.
 
 ## Referências
 

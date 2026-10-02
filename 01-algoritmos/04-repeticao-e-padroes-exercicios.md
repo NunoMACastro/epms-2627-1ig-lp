@@ -10,7 +10,7 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-K05, UC00245-K06, UC0
 
 | Identificação | Valor |
 | --- | --- |
-| Material | Ficha do bloco ALG04, acompanha o [guia](04-repeticao-e-padroes.md) e o [laboratório](04-repeticao-e-padroes-laboratorio.md) |
+| Material | Ficha do bloco ALG04, acompanha o [guia](04-repeticao-e-padroes.md) e o [laboratório](04-repeticao-e-padroes-laboratorio.md), que é opcional |
 | Tempo total | 120 minutos dos 300 do bloco: 90 de prática autónoma, nos exercícios 1 a 7, e 30 de desafio |
 | Entrega | Pseudocódigo e tabelas de iterações dos exercícios 1 a 7; o que fizeres da secção "Para ires mais longe" e do desafio |
 
@@ -20,7 +20,7 @@ Vais praticar sem ajuda o que o guia explicou sobre ciclos: seguir um ciclo numa
 
 A ficha vai por passos, e cada exercício usa o que os anteriores treinaram. Primeiro aplicas o que o guia mostrou: nos exercícios 1 e 2 segues e completas ciclos que já estão quase escritos, e nos exercícios 3 e 4 escreves ciclos pequenos, um com um contador e outro com um totalizador, a partir de um algoritmo do guia. Depois decides: no exercício 5 descobres porque é que um ciclo conta mal e corriges a linha errada. No fim constróis os ciclos que dependem do que a pessoa escreve: no exercício 6, um ciclo com sentinela, e no exercício 7, uma validação repetida.
 
-Antes de começares, deves ter lido o [guia](04-repeticao-e-padroes.md) até ao fim. Cada exercício diz a secção do guia onde está a matéria de que precisas. Tem o guia aberto ao lado e segue os algoritmos de lá sempre que o enunciado o sugerir. Para quem está a escrever os primeiros ciclos, partir de um algoritmo que já funciona é a forma certa de começar. No exercício 7 vais usar também o contrário de um intervalo, escrito com `ou`, que aprendeste no guia 03.
+Antes de começares a ficha toda, deves ter lido o [guia](04-repeticao-e-padroes.md) até ao fim. Cada exercício diz a secção do guia onde está a matéria de que precisas, e por isso, se fizeres a ficha à medida que a matéria vai sendo dada, basta teres lido as secções que o exercício indica. Tem o guia aberto ao lado e segue os algoritmos de lá sempre que o enunciado o sugerir. Para quem está a escrever os primeiros ciclos, partir de um algoritmo que já funciona é a forma certa de começar. No exercício 7 vais usar também o contrário de um intervalo, escrito com `ou`, que aprendeste no guia 03.
 
 Material: papel quadriculado e lápis.
 
@@ -224,7 +224,7 @@ Volta ao exercício 7 e muda uma só restrição: a pessoa passa a ter no máxim
 
 **c)** Monta a tabela de casos esperados, com pelo menos quatro casos: um valor válido à primeira; um valor válido à terceira tentativa; três valores inválidos; e um extremo do intervalo. No caso dos três valores inválidos, confirma com a tabela de iterações que a leitura é executada exatamente 3 vezes, nem mais uma.
 
-**d)** Desenha o fluxograma, no papel ou no diagrams.net.
+**d)** Só quando o professor o indicar, porque é de fluxogramas: desenha o fluxograma, no papel ou no diagrams.net. Sem esta alínea, o desafio leva cerca de 20 minutos.
 
 Concluíste quando o teu algoritmo passar os quatro casos, incluindo o do valor válido à terceira tentativa.
 

@@ -12,7 +12,7 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-A06, UC00245-A07, UC0
 | --- | --- |
 | Material | Ficha do bloco ALG05, acompanha o [guia](05-testar-depurar-e-melhorar.md) |
 | Tempo total | 60 minutos dos 300 do bloco, nos exercícios 1 a 4. O fecho do portefólio faz-se na última aula do bloco. O desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 60 minutos |
-| Entrega | A tabela de casos do exercício 1, o registo de depuração do exercício 2, a contagem de passos do exercício 3 e o exercício 4, que ficam no teu portefólio, juntamente com o contrato e o fluxograma do fecho do portefólio |
+| Entrega | A tabela de casos do exercício 1, o registo de depuração do exercício 2, a contagem de passos do exercício 3 e o exercício 4, que ficam no teu portefólio, juntamente com o contrato do fecho do portefólio e, se o professor o indicar, o fluxograma |
 
 ## Objetivos e conceitos necessários
 
@@ -22,7 +22,7 @@ Antes de começares, deves ter lido a teoria e o exemplo explicado do [guia](05-
 
 Os algoritmos que a ficha te dá estão na forma de pseudocódigo das aulas, em que a indentação mostra o que está dentro de cada `Se`, de cada `Enquanto` e de cada `Para`. Quando fores tu a escrever um algoritmo, ou uma parte dele, podes usar essa forma ou frases claras, desde que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que conta é a lógica.
 
-Material: papel e lápis. O diagrams.net, em `https://app.diagrams.net`, só é preciso no fecho do portefólio.
+Material: papel e lápis. O diagrams.net, em `https://app.diagrams.net`, só é preciso na alínea b) do fecho do portefólio, que é de fluxogramas e só se faz quando o professor o indicar.
 
 ## Como está organizada a ficha
 
@@ -37,7 +37,7 @@ Nenhum exercício é o exemplo do inventário com outros números. O exemplo mos
 | 3 | Contar passos e melhorar um algoritmo sem mudar o que ele faz | 12 min |
 | 4 | Construir e testar um algoritmo pequeno | 25 min |
 | Total da parte obrigatória | Exercícios 1 a 4 | 60 min |
-| Fecho do portefólio | Contrato e fluxograma do exercício 4, na última aula do bloco | 20 min |
+| Fecho do portefólio | Contrato do exercício 4, na última aula do bloco; o fluxograma, só quando o professor o indicar | 8 min, ou 20 com o fluxograma |
 | Desafio opcional | Mudar uma restrição de cada vez no algoritmo do exercício 4 | na última aula, para quem não precisar de recuperação |
 | Para ires mais longe | Opcional: mais uma fronteira no exercício 1, o caso mínimo e a correção do sintoma no exercício 2, a poupança de cada escalão no exercício 3 e a validação no exercício 4 | fora dos 60 min |
 
@@ -172,15 +172,15 @@ O cartão de cliente da papelaria dá pontos. Por cada compra, o cliente ganha 1
 
 Concluíste quando tiveres a tabela escrita antes do algoritmo, o algoritmo e a tabela executada, com todos os casos a passar.
 
-## Fecho do portefólio (última aula, 20 min)
+## Fecho do portefólio (última aula, 8 min, ou 20 com o fluxograma)
 
-Esta parte não é opcional, mas não conta para os 60 minutos da ficha: faz-se na última aula do bloco, a mesma do checkpoint, porque junta ao exercício 4 as duas peças que lhe faltam para ser o problema completo do teu portefólio. A secção "O teu portefólio" do guia diz como organizar a pasta.
+A alínea a) não é opcional, mas não conta para os 60 minutos da ficha: faz-se na última aula do bloco, a mesma do checkpoint, porque junta ao exercício 4 a peça que lhe falta para ser o problema completo do teu portefólio. A alínea b) é de fluxogramas, e só a fazes quando o professor o indicar. A secção "O teu portefólio" do guia diz como organizar a pasta.
 
 **a)** Escreve o contrato do problema do exercício 4, com as respostas às quatro perguntas do guia 01: entradas, saídas, restrições e condições. Se encontrares alguma ambiguidade no enunciado, escreve a decisão que tomaste.
 
-**b)** Desenha no diagrams.net o fluxograma do teu algoritmo do exercício 4, como aprendeste no laboratório do bloco 04. Guarda o ficheiro `.drawio` e exporta uma imagem PNG. Confirma, figura a figura, que o fluxograma diz exatamente o mesmo que o algoritmo que escreveste.
+**b)** Só quando o professor o indicar: desenha no diagrams.net o fluxograma do teu algoritmo do exercício 4, como no laboratório do bloco 04. Guarda o ficheiro `.drawio` e exporta uma imagem PNG. Confirma, figura a figura, que o fluxograma diz exatamente o mesmo que o algoritmo que escreveste.
 
-Concluíste quando o portefólio tiver, para o problema do exercício 4, o enunciado com o contrato, o algoritmo, o fluxograma e a tabela de casos executada, e, ao lado, o registo de depuração do exercício 2.
+Concluíste quando o portefólio tiver, para o problema do exercício 4, o enunciado com o contrato, o algoritmo e a tabela de casos executada, e, ao lado, o registo de depuração do exercício 2. Se o professor tiver indicado a alínea b), o fluxograma também.
 
 ## Apoio
 
@@ -196,7 +196,7 @@ Usa estas pistas pela ordem em que aparecem, e só passa à seguinte se a anteri
 
 ## Desafio opcional: mudar uma restrição de cada vez
 
-Faz-se na última aula, por quem não precisar de recuperação. Volta ao exercício 4, já com todos os testes a passar e com o fluxograma do fecho do portefólio. Vais fazer três mudanças ao enunciado, uma de cada vez, e cada uma a partir da versão original, não da anterior.
+Faz-se na última aula, por quem não precisar de recuperação. Volta ao exercício 4, já com todos os testes a passar e com o contrato do fecho do portefólio. Vais fazer três mudanças ao enunciado, uma de cada vez, e cada uma a partir da versão original, não da anterior.
 
 1. O bónus passa a exigir compras de 2500 cêntimos ou mais.
 2. Os pontos passam a ser 1 por cada 50 cêntimos completos, em vez de 100.
@@ -212,7 +212,7 @@ Só depois:
 
 **c)** Altera o algoritmo e diz quantas linhas mudaram.
 
-**d)** Diz que figuras do fluxograma mudam, e se é preciso acrescentar alguma.
+**d)** Só se fizeste o fluxograma do fecho do portefólio: diz que figuras do fluxograma mudam, e se é preciso acrescentar alguma.
 
 **e)** Executa a tabela inteira na versão alterada.
 
@@ -273,7 +273,7 @@ Pista: a validação vem antes de tudo o resto dentro do ciclo. Os pontos e o b�
 - [ ] O meu registo de depuração do exercício 2 tem as cinco linhas, uma por passo do método.
 - [ ] Contei os passos das duas versões do exercício 3 com a mesma regra e expliquei por que razão escrevem o mesmo.
 - [ ] No exercício 4, escrevi a tabela de casos antes do algoritmo e executei-a toda.
-- [ ] No fecho do portefólio, o fluxograma do exercício 4 diz exatamente o mesmo que o algoritmo que escrevi, figura a figura.
+- [ ] No fecho do portefólio, escrevi o contrato do exercício 4 e, se o professor indicou o fluxograma, ele diz exatamente o mesmo que o algoritmo que escrevi, figura a figura.
 - [ ] Guardei no portefólio as versões com erro e as versões corrigidas, cada uma no seu ficheiro.
 
 ## Autoavaliação breve

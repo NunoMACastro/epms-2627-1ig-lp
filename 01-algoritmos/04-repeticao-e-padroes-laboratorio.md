@@ -12,8 +12,10 @@ Requisitos: UC00245-R04, UC00245-K05, UC00245-A05, UC00245-A06, UC00245-C02, UC0
 | --- | --- |
 | Material | Laboratório do bloco ALG04, acompanha o [guia](04-repeticao-e-padroes.md) |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG04 |
-| Duração | 60 minutos dos 300 do bloco: é a prática guiada no computador |
-| Evidência a guardar | Os ficheiros `.drawio` e as imagens `.png` dos dois fluxogramas deste laboratório: `fluxograma-pedidos-validos` e `fluxograma-inventario-de-corredores` |
+| Duração | 60 minutos dos 300 do bloco, no computador; é opcional |
+| Evidência a guardar | Os ficheiros `.drawio` e as imagens `.png` dos dois fluxogramas deste laboratório, `fluxograma-pedidos-validos` e `fluxograma-inventario-de-corredores`, se o professor o indicar |
+
+**Laboratório opcional.** Este laboratório é todo de fluxogramas, e só o fazes quando o professor o indicar. Nenhum exercício obrigatório da ficha depende dele. Como se reconhece um ciclo num fluxograma, pela seta que volta ao losango da condição, está explicado no [guia](04-repeticao-e-padroes.md), e é essa explicação que é matéria do bloco.
 
 ## O que vais fazer
 

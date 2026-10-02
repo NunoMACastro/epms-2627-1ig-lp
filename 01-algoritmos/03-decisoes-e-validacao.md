@@ -12,8 +12,8 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-K05, UC00245-K06, UC00245-A05, UC0
 | --- | --- |
 | Material | M-ALG03, terceiro bloco de Desenvolver algoritmos |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG03 |
-| Duração | 120 minutos dos 300 do bloco; a prática guiada (60 minutos) está no [laboratório](03-decisoes-e-validacao-laboratorio.md) e a prática autónoma e o desafio (120 minutos) estão na [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) |
-| Evidência a guardar | Árvore de casos, tabela de casos esperados e fluxograma com os caminhos possíveis, desenhado na aplicação |
+| Duração | 120 minutos dos 300 do bloco; a prática guiada (60 minutos) faz-se em aula, com o professor, a prática autónoma e o desafio (120 minutos) estão na [ficha de exercícios](03-decisoes-e-validacao-exercicios.md), e o [laboratório](03-decisoes-e-validacao-laboratorio.md), de fluxogramas, é opcional e só se faz quando o professor o indicar |
+| Evidência a guardar | Árvore de casos, tabela de casos esperados e o algoritmo do pedido seguido com cada caso; o fluxograma desenhado na aplicação, só se o professor o indicar |
 
 ## Objetivos
 
@@ -22,7 +22,7 @@ No final deste bloco, serás capaz de:
 - escrever condições com operadores de comparação e dizer se são verdadeiras ou falsas para valores concretos, incluindo o valor que fica exatamente no limite;
 - explicar a diferença entre `=`, que dá um valor a uma variável, e `==`, que pergunta se dois valores são iguais;
 - juntar condições com `e`, `ou` e `não`, usando as tabelas de verdade para prever o resultado;
-- escrever seleções simples, compostas e encadeadas, em pseudocódigo e em fluxograma, mostrando com a indentação onde começa e acaba cada ramo;
+- escrever seleções simples, compostas e encadeadas em pseudocódigo, mostrando com a indentação onde começa e acaba cada ramo, e reconhecê-las num fluxograma, pelo losango e pelas saídas `Sim` e `Não`;
 - escrever um intervalo de valores como condição, com os extremos incluídos ou excluídos conforme o enunciado, e escrever também o seu contrário;
 - validar uma entrada, recusando o que está fora do domínio antes de o usar;
 - construir a árvore de casos de um problema e a tabela de casos esperados, com casos abaixo, no e acima de cada limite, e confirmar que as condições não se sobrepõem.
@@ -46,13 +46,15 @@ Do guia [Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md), o segun
 - os símbolos do fluxograma: o oval para o início e o fim, o paralelogramo para a entrada e a saída, o retângulo para o processamento e a seta para a ordem. O losango foi apresentado nesse guia mas não foi usado. É neste bloco que entra em uso;
 - a tabela de trace, com uma coluna por variável, onde se segue a execução instrução a instrução.
 
-Do [laboratório do bloco 02](02-pseudocodigo-e-fluxogramas-laboratorio.md): abrir o diagrams.net, guardar o ficheiro no computador, encontrar o grupo Fluxograma, pôr figuras na página, escrever o texto dentro delas, ligá-las com setas e exportar uma imagem. O laboratório deste bloco parte daí e só ensina o que é novo.
+Os laboratórios de fluxogramas são opcionais, e só os fazes quando o professor o indicar. Se o professor indicar o laboratório deste bloco, precisas do [laboratório do bloco 02](02-pseudocodigo-e-fluxogramas-laboratorio.md): abrir o diagrams.net, guardar o ficheiro no computador, encontrar o grupo Fluxograma, pôr figuras na página, escrever o texto dentro delas, ligá-las com setas e exportar uma imagem. O laboratório deste bloco parte daí e só ensina o que é novo.
 
 Se já trabalhaste em aula as instruções se, senão se e senão, vais reconhecê-las. Este guia retoma-as desde o princípio, na forma que usamos nas aulas, porque são a base de tudo o resto, e acrescenta o que ainda falta: os operadores `e`, `ou` e `não`, os intervalos, as fronteiras e a validação. Explica também, com calma, uma coisa que no guia 02 quase não apareceu, porque os algoritmos eram só uma fila de instruções: a indentação, que a partir de agora é a única marca de onde começa e acaba cada parte de uma decisão.
 
 ## Material e preparação
 
-Para a teoria e o exemplo explicado precisas de papel e lápis, porque as retas, as árvores de casos e as tabelas de casos fazem-se primeiro à mão. Para o laboratório e para o exercício 5 da ficha precisas do computador, com o diagrams.net aberto em `https://app.diagrams.net/?lang=pt`, e da pasta `algoritmos` onde guardaste os fluxogramas do bloco anterior.
+Para a teoria, o exemplo explicado e a ficha precisas de papel e lápis, porque as retas, as árvores de casos e as tabelas de casos fazem-se à mão.
+
+Neste percurso, os fluxogramas são para saberes o que são e como se leem. Neste guia vais ver como se representa uma decisão num fluxograma, com o losango e as saídas `Sim` e `Não`, e como se segue com o dedo o caminho de cada caso. Desenhar fluxogramas, no papel ou numa aplicação, é uma parte opcional, que só fazes quando o professor o indicar, e nenhum exercício obrigatório precisa dela. Para o laboratório deste bloco e para a parte de fluxogramas da ficha, se o professor os indicar, precisas do computador, com o diagrams.net aberto em `https://app.diagrams.net/?lang=pt`, e da pasta `algoritmos` do laboratório do bloco anterior.
 
 ## Como está organizado o tempo
 
@@ -62,14 +64,14 @@ Este bloco tem **5 horas**, ou seja 300 minutos. Como nos anteriores, não corre
 | --- | --- | ---: |
 | Teoria | Neste guia | 30 min |
 | Exemplo explicado | Neste guia | 30 min |
-| Prática guiada | No [laboratório](03-decisoes-e-validacao-laboratorio.md) | 60 min |
+| Prática guiada | Em aula, com o professor. O [laboratório](03-decisoes-e-validacao-laboratorio.md), de fluxogramas, é opcional: só o fazes quando o professor o indicar | 60 min |
 | Prática autónoma | Na [ficha](03-decisoes-e-validacao-exercicios.md) | 90 min |
 | Desafio opcional | Na [ficha](03-decisoes-e-validacao-exercicios.md) | 30 min |
 | Consolidação | Neste guia | 60 min |
 
-A ordem recomendada é esta: ler a teoria e o exemplo explicado, fazer o laboratório no computador, resolver a ficha e fechar com a consolidação, no fim deste guia.
+A ordem recomendada é esta: ler a teoria e o exemplo explicado, fazer a prática guiada com o professor, resolver a ficha e fechar com a consolidação, no fim deste guia. Se o professor indicar o laboratório, faz-se antes da ficha.
 
-Como no guia anterior, a teoria é longa, e 30 minutos de aula não chegam para a ler toda com calma. Na aula, o professor apresenta as ideias principais. Depois, cada secção fica aqui para a releres ao teu ritmo, sempre que te surgir uma dúvida no laboratório ou na ficha.
+Como no guia anterior, a teoria é longa, e 30 minutos de aula não chegam para a ler toda com calma. Na aula, o professor apresenta as ideias principais. Depois, cada secção fica aqui para a releres ao teu ritmo, sempre que te surgir uma dúvida na ficha.
 
 ## Teoria (30 min)
 
@@ -583,7 +585,7 @@ A cadeia com `Senão se` diz o mesmo com menos níveis de indentação, e por is
 
 ## Exemplo explicado (30 min)
 
-Este exemplo usa uma situação que conheces de dentro, as notas dos testes, para te poderes concentrar só nas decisões. Os problemas de gestão ficam para o laboratório e para a ficha.
+Este exemplo usa uma situação que conheces de dentro, as notas dos testes, para te poderes concentrar só nas decisões. Os problemas de gestão ficam para a ficha.
 
 ### O problema
 
@@ -744,7 +746,7 @@ Agora segue o caminho de 10. No primeiro losango a condição é falsa e sais pe
 
 Compara o desenho com o pseudocódigo e com a árvore. O primeiro losango é o `Se` e a pergunta 1 da árvore. O segundo losango, pendurado no `Não` do primeiro, é o `Senão se` e a pergunta 2. A figura do `Não` do segundo losango é o ramo do `Senão`. O ponto onde os três caminhos se juntam é o sítio onde, no pseudocódigo, a cadeia acaba; como aqui não há mais nenhuma linha depois dela, esse ponto é o Fim. Há três caminhos possíveis do início ao fim, um por cada ponta da árvore, e cada entrada percorre exatamente um deles.
 
-No laboratório vais desenhar este fluxograma no diagrams.net e seguir com o dedo os nove casos da tabela.
+Se o professor indicar o laboratório deste bloco, que é opcional, é este o fluxograma que vais desenhar no diagrams.net, para depois seguires com o dedo os nove casos da tabela.
 
 ### Passo 9: O trace dos casos de fronteira
 
@@ -805,7 +807,9 @@ Compara a coluna "Ecrã" da tabela anterior com a coluna "Resultado esperado" da
 
 ## Prática guiada (60 min)
 
-A prática guiada deste bloco faz-se no computador, no [laboratório](03-decisoes-e-validacao-laboratorio.md). Vais desenhar no diagrams.net o fluxograma deste exemplo, com os losangos, as setas `Sim` e `Não` e o ponto onde os ramos se juntam, seguir com o dedo o caminho de cada caso da tabela do passo 4, e terminar com o fluxograma de um problema de gestão parecido, desenhado por ti sem passos dados.
+A prática guiada deste bloco faz-se em aula, com o professor.
+
+O [laboratório](03-decisoes-e-validacao-laboratorio.md) deste bloco é opcional, e só o fazes quando o professor o indicar. Nele desenha-se no diagrams.net o fluxograma deste exemplo, com os losangos, as setas `Sim` e `Não` e o ponto onde os ramos se juntam, segue-se com o dedo o caminho de cada caso da tabela do passo 4, e termina-se com o fluxograma de um problema de gestão parecido, desenhado sem passos dados.
 
 ## Erros comuns
 
@@ -895,7 +899,7 @@ Confirma o que já consegues fazer:
 - [ ] Consigo explicar a diferença entre `stock = 0` e `stock == 0`.
 - [ ] Consigo preencher de memória as tabelas de verdade do `e`, do `ou` e do `não`, e explicar a diferença entre o `ou` dos algoritmos e o "ou" de "sopa ou sobremesa".
 - [ ] Consigo escrever o contrário de uma comparação, pondo o limite do lado certo, e o contrário de uma condição com `e` ou com `ou`.
-- [ ] Consigo escrever em pseudocódigo uma seleção simples, uma composta e uma encadeada, com a indentação a mostrar onde começa e acaba cada ramo, e desenhar o fluxograma de cada uma.
+- [ ] Consigo escrever em pseudocódigo uma seleção simples, uma composta e uma encadeada, com a indentação a mostrar onde começa e acaba cada ramo, e reconhecer cada uma num fluxograma.
 - [ ] Consigo transformar um intervalo dado por palavras numa condição com `e`, e o seu contrário numa condição com `ou`.
 - [ ] Consigo desenhar a reta de um problema, marcar as regiões e as fronteiras, e confirmar que as condições não se sobrepõem e cobrem todos os casos.
 - [ ] Consigo construir a árvore de casos de um problema e a tabela de casos esperados, com casos abaixo, no e acima de cada limite, antes de escrever o algoritmo.
@@ -944,13 +948,13 @@ Os limites da regra são o 2 e o 8. Se ajudar, desenha primeiro a reta do proble
 
 ### 4. Regista as tuas dificuldades (10 min)
 
-Escreve duas ou três linhas sobre o que te custou mais neste bloco: as tabelas de verdade, pôr o limite do lado certo, a ordem da cadeia, a árvore de casos ou o desenho na aplicação. Guarda-as.
+Escreve duas ou três linhas sobre o que te custou mais neste bloco: as tabelas de verdade, pôr o limite do lado certo, a ordem da cadeia, a árvore de casos ou ler os fluxogramas. Guarda-as.
 
-**Evidência a guardar:** a árvore de casos e a tabela de casos esperados do exercício 4 da ficha, e o fluxograma do exercício 5, com os caminhos seguidos com o dedo; os ficheiros do laboratório; o erro que encontraste no algoritmo da câmara frigorífica; e as tuas notas de dificuldade.
+**Evidência a guardar:** a árvore de casos e a tabela de casos esperados do exercício 4 da ficha, e o algoritmo do exercício 5, com a mensagem a que chega cada caso; o erro que encontraste no algoritmo da câmara frigorífica; e as tuas notas de dificuldade. Se o professor tiver indicado o laboratório ou a parte de fluxogramas da ficha, guarda também esses ficheiros.
 
 ## A seguir
 
-O [laboratório](03-decisoes-e-validacao-laboratorio.md) ocupa os 60 minutos da prática guiada e a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) os 120 minutos da prática autónoma e do desafio.
+A [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) ocupa os 120 minutos da prática autónoma e do desafio. O [laboratório](03-decisoes-e-validacao-laboratorio.md), de fluxogramas, é opcional e só se faz quando o professor o indicar.
 
 No algoritmo deste guia, uma nota inválida termina o algoritmo com uma mensagem. Se a pessoa se enganou, tem de começar tudo outra vez. Seria mais útil o algoritmo voltar a pedir a nota até receber uma válida, mas para isso tem de repetir instruções, e até agora cada instrução executava-se no máximo uma vez. No bloco seguinte vais aprender a escrever repetições, a contar e a somar valores ao longo delas, e a garantir que uma repetição acaba.
 

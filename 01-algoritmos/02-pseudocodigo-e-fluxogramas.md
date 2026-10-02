@@ -12,8 +12,8 @@ Requisitos: UC00245-R02, UC00245-R03, UC00245-R04, UC00245-K03, UC00245-K04, UC0
 | --- | --- |
 | Material | M-ALG02, segundo bloco de Desenvolver algoritmos |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG02 |
-| Duração | 140 minutos dos 300 do bloco; 40 estão no [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md) e 120 na [ficha de exercícios](02-pseudocodigo-e-fluxogramas-exercicios.md) |
-| Evidência a guardar | Pseudocódigo, fluxograma desenhado na aplicação e trace de três entradas |
+| Duração | 140 minutos dos 300 do bloco; 120 estão na [ficha de exercícios](02-pseudocodigo-e-fluxogramas-exercicios.md) e 40 no [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md), que é opcional e só se faz quando o professor o indicar |
+| Evidência a guardar | Pseudocódigo e trace de três entradas; o fluxograma desenhado na aplicação, só se o professor indicar o laboratório |
 
 ## Objetivos
 
@@ -25,7 +25,7 @@ No final deste bloco, serás capaz de:
 - usar `ler valor` e `Escreve:` para receber dados e mostrar resultados;
 - calcular expressões aritméticas respeitando a ordem das operações, e escolher entre a divisão com parte decimal, `/`, e a divisão inteira, com `div` e `resto`;
 - usar as quatro funções predefinidas desta disciplina, `abs`, `arredondar`, `truncar` e `raiz`, sem cair nos casos que enganam;
-- escrever um algoritmo sequencial completo, em pseudocódigo, na forma que usamos nas aulas, ou em frases claras que não deixem dúvidas, e desenhar o mesmo algoritmo em fluxograma;
+- escrever um algoritmo sequencial completo, em pseudocódigo, na forma que usamos nas aulas, ou em frases claras que não deixem dúvidas, e reconhecer o mesmo algoritmo num fluxograma, figura a figura;
 - seguir a execução passo a passo numa tabela de trace e prever o resultado antes de o calcular.
 
 ## O que precisas de saber antes
@@ -42,22 +42,24 @@ Se já escreveste na aula as primeiras instruções em pseudocódigo, este guia 
 
 ## Material e preparação
 
-Para a teoria, os exemplos e a prática guiada precisas de papel quadriculado e de lápis, porque os fluxogramas desenham-se primeiro à mão. No papel pensas no algoritmo; na aplicação tratas da apresentação. Traz também a ficha de análise que guardaste no bloco anterior.
+Para a teoria, os exemplos e a prática guiada precisas de papel quadriculado e de lápis, porque os traces se fazem à mão. Traz também a ficha de análise que guardaste no bloco anterior.
 
-Para o laboratório precisas de um computador com um browser e ligação à internet. A aplicação de fluxogramas desta disciplina é o diagrams.net, que se usa no browser, em `https://app.diagrams.net`, sem criar conta. O [laboratório deste bloco](02-pseudocodigo-e-fluxogramas-laboratorio.md) ensina-te a usá-la passo a passo. Saber usar uma aplicação de desenho de algoritmos faz parte do que se avalia nesta unidade, e por isso não chega desenhar em papel.
+Neste percurso, os fluxogramas são para saberes o que são e como se leem: o que quer dizer cada figura, como se segue o caminho com o dedo e como se compara um fluxograma com o pseudocódigo. Está tudo explicado neste guia, na secção "Os símbolos do fluxograma" e no passo 4 do exemplo explicado. Desenhar fluxogramas, no papel ou numa aplicação, é uma parte opcional, que só fazes quando o professor o indicar, e nenhum exercício obrigatório precisa dela.
+
+O [laboratório deste bloco](02-pseudocodigo-e-fluxogramas-laboratorio.md) é essa parte opcional. Ensina, passo a passo, a desenhar fluxogramas no diagrams.net, uma aplicação que se usa no browser, em `https://app.diagrams.net`, sem criar conta. Se o professor o indicar, precisas de um computador com um browser e ligação à internet.
 
 ## Como está organizado o tempo
 
 Este bloco tem 5 horas, ou seja 300 minutos. Como no anterior, não corresponde a uma aula: o professor reparte-o pelas sessões que existirem.
 
-O bloco tem três documentos, um para cada uso. Este guia lê-se e estuda-se: tem a teoria, os exemplos explicados, a prática em papel e a consolidação. O laboratório segue-se no computador, passo a passo, com a aplicação aberta ao lado. A ficha de exercícios resolve-se sem ajuda.
+O bloco tem três documentos, um para cada uso. Este guia lê-se e estuda-se: tem a teoria, os exemplos explicados, a prática em papel e a consolidação. O laboratório, que é opcional, segue-se no computador, passo a passo, com a aplicação aberta ao lado. A ficha de exercícios resolve-se sem ajuda.
 
 | Parte | Onde está | Tempo |
 | --- | --- | ---: |
 | Teoria | Neste guia | 30 min |
 | Exemplo explicado | Neste guia | 30 min |
 | Prática guiada em papel | Neste guia | 20 min |
-| Prática guiada no computador | No [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md) | 40 min |
+| Prática guiada no computador, opcional | No [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md), só quando o professor o indicar | 40 min |
 | Prática autónoma | Na [ficha](02-pseudocodigo-e-fluxogramas-exercicios.md) | 90 min |
 | Desafio opcional | Na [ficha](02-pseudocodigo-e-fluxogramas-exercicios.md) | 30 min |
 | Consolidação | Neste guia | 60 min |
@@ -541,9 +543,9 @@ Um fluxograma bem feito cumpre sempre estas regras:
 - todas as figuras estão ligadas por setas, e nenhuma seta fica pendurada sem destino;
 - cada figura tem uma só instrução, escrita como no pseudocódigo, para os dois se poderem comparar linha a linha.
 
-Neste bloco só vais usar o oval, o paralelogramo e o retângulo, ligados em linha reta, porque os algoritmos sequenciais nunca escolhem entre dois caminhos. O losango fica apresentado porque faz parte da simbologia, e entra em uso no guia 03.
+Neste bloco só aparecem o oval, o paralelogramo e o retângulo, ligados em linha reta, porque os algoritmos sequenciais nunca escolhem entre dois caminhos. O losango fica apresentado porque faz parte da simbologia, e aparece a partir do guia 03.
 
-Neste guia, os fluxogramas aparecem desenhados pelo próprio GitHub, a partir de um texto que ele transforma em figuras. Se estiveres a ler o ficheiro noutro sítio e em vez do desenho vires texto com setas e parênteses, não faz mal: cada fluxograma tem, logo a seguir, a descrição do percurso em palavras. Quando desenhares, no papel ou na aplicação, usa as figuras verdadeiras.
+Neste guia, os fluxogramas aparecem desenhados pelo próprio GitHub, a partir de um texto que ele transforma em figuras. Se estiveres a ler o ficheiro noutro sítio e em vez do desenho vires texto com setas e parênteses, não faz mal: cada fluxograma tem, logo a seguir, a descrição do percurso em palavras. Se o professor te pedir que desenhes um fluxograma, no papel ou na aplicação, usa as figuras verdadeiras.
 
 ### A tabela de trace
 
@@ -650,7 +652,7 @@ Descrição do percurso, para quem não vê o desenho: o fluxograma é uma únic
 
 Segue o percurso com o dedo, de cima para baixo. É uma linha única, sem bifurcações, e é isso que significa uma estrutura sequencial.
 
-Agora compara figura a figura com o pseudocódigo. A cada instrução corresponde uma figura, pela mesma ordem e com o mesmo texto. As seis instruções dão seis figuras, e o início e o fim dão mais duas, e é por isso que são oito. A linha da constante, `const UNIDADES_POR_CAIXA = 12`, não tem figura, pela razão que viste na secção dos símbolos. As três variáveis também não têm figuras próprias: cada uma aparece, com o seu tipo, dentro da figura da instrução onde nasce. Quando fores desenhar este fluxograma no laboratório, é esta a verificação que vais fazer no fim.
+Agora compara figura a figura com o pseudocódigo. A cada instrução corresponde uma figura, pela mesma ordem e com o mesmo texto. As seis instruções dão seis figuras, e o início e o fim dão mais duas, e é por isso que são oito. A linha da constante, `const UNIDADES_POR_CAIXA = 12`, não tem figura, pela razão que viste na secção dos símbolos. As três variáveis também não têm figuras próprias: cada uma aparece, com o seu tipo, dentro da figura da instrução onde nasce. É esta a verificação que se faz sempre que se lê um fluxograma ao lado do pseudocódigo, e é também a que o laboratório deste bloco, que é opcional, pede no fim do desenho.
 
 ### Passo 5: O trace de três entradas
 
@@ -803,7 +805,7 @@ Há quem escreva a percentagem como `percentagem div 100`, a pensar em "15 a div
 
 ## Prática guiada em papel (20 min)
 
-Vais trabalhar sobre um problema parecido com o dos cadernos, mas com uma pergunta diferente. Faz esta parte em papel, antes do laboratório. A parte da prática guiada que se faz no computador está no [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md), onde vais desenhar na aplicação o fluxograma dos cadernos e, depois, um fluxograma sozinho.
+Vais trabalhar sobre um problema parecido com o dos cadernos, mas com uma pergunta diferente. Faz esta parte em papel. A parte da prática guiada que se faz no computador está no [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md), onde se desenha na aplicação o fluxograma dos cadernos e, depois, um fluxograma sozinho. Essa parte é opcional: só a fazes quando o professor o indicar.
 
 **1. Completar o pseudocódigo (10 min).** Uma escola precisa de distribuir cadernos pelos alunos de uma turma, um por aluno, e quer saber quantas caixas tem de encomendar para chegar para todos. Copia e completa:
 
@@ -850,7 +852,7 @@ Para 24 alunos e para 12 alunos não precisas de repetir o trace completo. Escre
 
 ## Consolidação (60 min)
 
-Em pseudocódigo, um algoritmo começa na primeira instrução: fixa as constantes, lê os dados de que precisa, faz as contas e escreve os resultados, por esta ordem, e cada variável nasce, com o seu tipo, na linha onde aparece pela primeira vez. A mesma sequência desenha-se num fluxograma, figura a figura, pela mesma ordem. O `=` dá um valor a uma variável e apaga o anterior; o `==` pergunta se dois valores são iguais, e isso vem no bloco seguinte. As contas seguem a ordem das operações, `div` e `resto` servem para quantidades inteiras, e as quatro funções predefinidas têm cada uma o seu contrato. Um trace com uma coluna por variável mostra a execução por dentro, e é o instrumento que vais usar sempre que alguma coisa não der o que esperavas. E quando a forma do pseudocódigo não te sair, frases claras e sem ambiguidade também servem: o que conta agora é a lógica.
+Em pseudocódigo, um algoritmo começa na primeira instrução: fixa as constantes, lê os dados de que precisa, faz as contas e escreve os resultados, por esta ordem, e cada variável nasce, com o seu tipo, na linha onde aparece pela primeira vez. A mesma sequência pode ser representada num fluxograma, figura a figura, pela mesma ordem. O `=` dá um valor a uma variável e apaga o anterior; o `==` pergunta se dois valores são iguais, e isso vem no bloco seguinte. As contas seguem a ordem das operações, `div` e `resto` servem para quantidades inteiras, e as quatro funções predefinidas têm cada uma o seu contrato. Um trace com uma coluna por variável mostra a execução por dentro, e é o instrumento que vais usar sempre que alguma coisa não der o que esperavas. E quando a forma do pseudocódigo não te sair, frases claras e sem ambiguidade também servem: o que conta agora é a lógica.
 
 O checkpoint deste bloco é conseguires distinguir `=`, que dá um valor, de `==`, que pergunta se dois valores são iguais, e escolher tipos coerentes. Confirma o que já consegues fazer:
 
@@ -859,7 +861,7 @@ O checkpoint deste bloco é conseguires distinguir `=`, que dá um valor, de `==
 - [ ] Consigo calcular `div` e `resto` à mão e confirmar o resultado.
 - [ ] Consigo prever o resultado das quatro funções predefinidas, incluindo as meias e os números negativos.
 - [ ] Consigo escrever um algoritmo sequencial completo, na forma das aulas ou em frases claras, sem deixar dúvidas.
-- [ ] Consigo desenhar o fluxograma desse algoritmo e mostrar que diz o mesmo que o pseudocódigo.
+- [ ] Consigo ler o fluxograma de um algoritmo sequencial e mostrar, figura a figura, que diz o mesmo que o pseudocódigo.
 - [ ] Consigo fazer o trace completo de um algoritmo para uma entrada que ninguém testou antes de mim.
 
 ### 1. Explica (15 min)
@@ -888,13 +890,13 @@ Faz o trace com 4 cadernos e vê o que acontece. Escreve em que instrução est�
 
 ### 4. Regista as tuas dificuldades (10 min)
 
-Escreve duas ou três linhas sobre o que te custou mais: escolher os tipos, as contas, as funções predefinidas, escrever o pseudocódigo, desenhar o fluxograma ou fazer o trace. Guarda-as: é o que te vai dizer onde insistir.
+Escreve duas ou três linhas sobre o que te custou mais: escolher os tipos, as contas, as funções predefinidas, escrever o pseudocódigo, ler o fluxograma ou fazer o trace. Guarda-as: é o que te vai dizer onde insistir.
 
-**Evidência a guardar:** o pseudocódigo completado da prática guiada e os traces das entradas que testaste, o ficheiro do fluxograma desenhado na aplicação e a imagem exportada, feitos no laboratório, o erro que identificaste na consolidação e as tuas notas de dificuldade.
+**Evidência a guardar:** o pseudocódigo completado da prática guiada e os traces das entradas que testaste, o erro que identificaste na consolidação e as tuas notas de dificuldade. Se o professor tiver indicado o laboratório, guarda também o ficheiro do fluxograma desenhado na aplicação e a imagem exportada.
 
 ## A seguir
 
-O [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md) leva-te pela primeira vez ao diagrams.net, para desenhares o fluxograma dos cadernos. A [ficha de exercícios](02-pseudocodigo-e-fluxogramas-exercicios.md) ocupa os restantes 120 minutos e é onde vais trabalhar sozinho.
+A [ficha de exercícios](02-pseudocodigo-e-fluxogramas-exercicios.md) ocupa 120 minutos e é onde vais trabalhar sozinho. O [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md), que leva ao diagrams.net para desenhar o fluxograma dos cadernos, é opcional e só se faz quando o professor o indicar.
 
 Todos os algoritmos deste guia fazem sempre as mesmas contas, por mais estranha que seja a entrada. Se alguém escrever -30 cadernos, o contrato diz que a entrada não é válida, mas o algoritmo não tem forma de o verificar. Para verificar uma entrada, ou para fazer coisas diferentes consoante os dados, o algoritmo precisa de tomar decisões, e é isso que vais aprender no guia 03.
 
