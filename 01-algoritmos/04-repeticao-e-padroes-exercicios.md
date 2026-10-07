@@ -8,11 +8,11 @@ Blocos: ALG04
 
 Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-K05, UC00245-K06, UC00245-A05, UC00245-A06, UC00245-A07, UC00245-C01, UC00245-C02, UC00245-P02
 
-| Identificação | Valor |
-| --- | --- |
-| Material | Ficha do bloco ALG04, acompanha o [guia](04-repeticao-e-padroes.md) e o [laboratório](04-repeticao-e-padroes-laboratorio.md), que é opcional |
-| Tempo total | 120 minutos dos 300 do bloco: 90 de prática autónoma, nos exercícios 1 a 7, e 30 de desafio |
-| Entrega | Pseudocódigo e tabelas de iterações dos exercícios 1 a 7; o que fizeres da secção "Para ires mais longe" e do desafio |
+| Identificação | Valor                                                                                                                                        |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Material      | Ficha do bloco ALG04, acompanha o [guia](04-repeticao-e-padroes.md) e o [laboratório](04-repeticao-e-padroes-laboratorio.md), que é opcional |
+| Tempo total   | 120 minutos dos 300 do bloco: 90 de prática autónoma, nos exercícios 1 a 7, e 30 de desafio                                                  |
+| Entrega       | Pseudocódigo e tabelas de iterações dos exercícios 1 a 7; o que fizeres da secção "Para ires mais longe" e do desafio                        |
 
 ## Objetivos e conceitos necessários
 
@@ -49,9 +49,9 @@ Escreve: "Stock final: ", stock, " caixas"
 
 A tabela de iterações já tem a primeira linha, para veres o formato:
 
-| Teste | dia | stock | Condição | Durante a iteração |
-| --- | ---: | ---: | --- | --- |
-| 1.º | 1 | 20 | `1 <= 3` dá `true` | escreve "Fim do dia 1: 35 caixas" |
+| Teste | dia | stock | Condição           | Durante a iteração                |
+| ----- | --: | ----: | ------------------ | --------------------------------- |
+| 1.º   |   1 |    20 | `1 <= 3` dá `true` | escreve "Fim do dia 1: 35 caixas" |
 
 **a)** Copia a tabela e completa-a, com uma linha por cada teste da condição, até ao teste que dá falso. Cada linha mostra os valores no momento em que o algoritmo chega ao `Enquanto` (guia, [A tabela de iterações](04-repeticao-e-padroes.md#a-tabela-de-iterações)).
 
