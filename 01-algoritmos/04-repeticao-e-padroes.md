@@ -26,6 +26,7 @@ No final deste bloco, serás capaz de:
 - escrever um ciclo contado com `Para` e reescrevê-lo com `Enquanto`;
 - usar quatro padrões que vão aparecer em quase todos os algoritmos que escreveres daqui para a frente: o contador, o totalizador, a sentinela e a validação repetida;
 - escolher entre `Enquanto` e `Para` e justificar a escolha;
+- criar um array, percorrê-lo com o índice e com o para cada, e explicar porque é que mudar a variável do para cada não muda o array;
 - reconhecer um ciclo num fluxograma, pela seta que volta atrás até ao losango da condição.
 
 ## O que precisas de saber antes
@@ -448,7 +449,7 @@ A grande vantagem do `Para` é que não te podes esquecer da inicialização nem
 
 No fluxograma, o `Para` desenha-se como o `Enquanto` equivalente: um retângulo com a inicialização `int senha = 1`, o losango com a condição `senha <= ULTIMA_SENHA?`, o corpo, um retângulo com a atualização `senha = senha + 1` e a seta de volta ao losango. Alguns livros usam uma figura especial para o `Para`; nos nossos fluxogramas não se usa, para que o desenho mostre as três peças.
 
-No fim deste guia há uma secção com outra forma de escrever o `Para`, em que as três peças ficam todas à vista na primeira linha. É para quando já estiveres à vontade com esta. Por agora, e em todos os exercícios deste bloco, usa `Para ... de 1 até ...`.
+No fim deste guia há uma secção com outra forma de escrever o `Para`, em que as três peças ficam todas à vista na primeira linha. É para quando já estiveres à vontade com esta. Por agora, e em todos os exercícios deste bloco, usa `Para ... de ... até ...`: começa em 1 quando contas coisas, como as senhas, e em 0 quando percorres um array, como vais ver mais à frente.
 
 ### Padrão contador
 
@@ -731,6 +732,133 @@ Todo o `Para` se pode escrever como um `Enquanto`, e viste como. O contrário n�
 
 > Para saberes mais (leitura opcional, não sai nos exercícios). Há linguagens com um ciclo que testa a condição no fim do corpo, e não no princípio, e que por isso se executa sempre pelo menos uma vez. Em alguns livros aparece escrito como `REPETIR ... ATÉ`. Nesta unidade não se usa: tudo o que ele faz consegue-se com `Enquanto`, como mostra o padrão validação repetida, e o Python, que vais aprender a seguir, também não o tem.
 
+### Arrays: muitos valores numa só variável
+
+Até aqui, cada variável guardava um valor. Para guardar as notas de 25 alunos, precisarias de 25 variáveis, `nota1`, `nota2`, até `nota25`, e de 25 linhas para fazer seja o que for com elas. Era o problema das cem linhas iguais do início deste guia, agora com variáveis.
+
+Um **array** é uma variável que guarda vários valores, uns a seguir aos outros, numa ordem fixa. A cada valor guardado chama-se **elemento** do array. Pensa numa fila de cacifos numerados: a fila tem um nome, cada cacifo tem um número e guarda uma coisa, e para ires buscar o que está num cacifo dizes o nome da fila e o número do cacifo.
+
+No pseudocódigo das aulas, um array escreve-se como uma lista de Python, com os valores entre parênteses retos, separados por vírgulas:
+
+```text
+notas = [12, 8, 15]
+```
+
+O array não leva tipo à frente, ao contrário das outras variáveis: é a forma que usamos nas aulas, igual à do Python. O nome vai no plural, porque guarda vários valores.
+
+Cada elemento tem uma posição, a que se chama **índice**, e os índices começam em 0. Neste array, `notas[0]` é 12, `notas[1]` é 8 e `notas[2]` é 15. Começa-se em 0 porque o índice diz quantas posições andas a partir do início, e o primeiro elemento está a zero posições do início; é assim no Python, e por isso usamos já esta regra. A consequência é que, num array com `n` elementos, o último índice é `n - 1`: este array tem 3 elementos, e o último índice é o 2.
+
+Um elemento usa-se como qualquer variável: numa conta, numa condição, num `Escreve:`, ou a receber um valor novo, como em `notas[1] = 10`. E `notas[3]`? Não existe. Usar um índice que não existe chama-se **índice fora do array**, e é um dos erros mais frequentes com arrays.
+
+### Percorrer um array com o índice
+
+**Percorrer** um array é passar por todos os elementos, um a um, e fazer alguma coisa com cada um. A forma mais direta usa o `Para`, com a variável de controlo a servir de índice, de 0 até ao último índice:
+
+```text
+const N_NOTAS = 3
+
+notas = [12, 8, 15]
+Para i de 0 até N_NOTAS - 1
+    Escreve: "Nota ", i + 1, ": ", notas[i]
+```
+
+Em cada iteração, `i` vale um índice diferente, de 0 a 2, e `notas[i]` é o elemento nessa posição. O ecrã mostra "Nota 1: 12", "Nota 2: 8" e "Nota 3: 15". O `i + 1` do `Escreve:` está lá porque o índice começa em 0, mas para as pessoas a primeira nota é a nota 1.
+
+O `Para` vai até `N_NOTAS - 1`, e não até `N_NOTAS`: o último índice válido é o 2. Até ao 3, o ciclo dava mais uma iteração, e `notas[3]` é um índice fora do array. O número de elementos está numa constante porque, no pseudocódigo das aulas, ainda não aprendemos a perguntar a um array quantos elementos tem.
+
+### Percorrer um array com o para cada
+
+Muitas vezes não interessa a posição de cada elemento, só o seu valor. Para esses casos há uma forma mais simples, o **para cada**:
+
+```text
+notas = [12, 8, 15]
+Para cada nota em notas
+    Escreve: "Nota: ", nota
+```
+
+Lê-se "para cada nota no array das notas, escreve-a". Em cada iteração, a variável `nota` recebe o elemento seguinte: na primeira vale 12, na segunda 8, na terceira 15. O ciclo dá tantas iterações quantos os elementos e acaba sozinho quando eles se esgotam: não há índice, não há condição a escrever, e não há como sair do array. A variável não leva tipo, como a do `Para`, e costuma ter o nome do array no singular, para se ler como uma frase.
+
+Os padrões deste guia funcionam igual com o para cada. Para somar as notas, por exemplo, o totalizador começa em 0 antes do ciclo e, dentro dele, faz `soma = soma + nota`.
+
+### O para cada não muda o array
+
+Há uma coisa que o para cada não faz, e que engana quase toda a gente da primeira vez.
+
+Em cada iteração, a variável do para cada recebe uma **cópia** do valor do elemento, e não o próprio elemento. Mudar a variável muda a cópia; o array fica como estava. À variável que o para cada vai enchendo chama-se **variável de iteração**, e a esta forma de percorrer um array, em que cada iteração trabalha com uma cópia do valor, chama-se **percorrer por valor**. Percorrer com o `Para` e o índice, em que cada iteração trabalha diretamente na posição do array, chama-se **percorrer por índice**.
+
+O exemplo seguinte mostra a diferença. O professor decidiu dar mais um valor a todas as notas de um teste, e o algoritmo tem de aumentar 1 a cada nota do array.
+
+#### Primeira tentativa, com o para cada
+
+```text
+notas = [12, 8, 15]
+Para cada nota em notas
+    nota = nota + 1
+Escreve: notas[0], " ", notas[1], " ", notas[2]
+```
+
+Antes de leres o trace, prevê o que aparece no ecrã. O trace tem uma coluna para a `nota` e outra para o array `notas`, lado a lado:
+
+| Passo | Instrução executada | nota | notas | Ecrã |
+| ---: | --- | ---: | --- | --- |
+| 0 | antes de começar | sem valor | sem valor | nada |
+| 1 | `notas = [12, 8, 15]` | sem valor | [12, 8, 15] | nada |
+| 2 | para cada, 1.ª iteração: `nota` recebe uma cópia de `notas[0]` | 12 | [12, 8, 15] | nada |
+| 3 | `nota = nota + 1` | 13 | [12, 8, 15] | nada |
+| 4 | para cada, 2.ª iteração: `nota` recebe uma cópia de `notas[1]` | 8 | [12, 8, 15] | nada |
+| 5 | `nota = nota + 1` | 9 | [12, 8, 15] | nada |
+| 6 | para cada, 3.ª iteração: `nota` recebe uma cópia de `notas[2]` | 15 | [12, 8, 15] | nada |
+| 7 | `nota = nota + 1` | 16 | [12, 8, 15] | nada |
+| 8 | para cada: não há mais elementos, o ciclo termina | 16 | [12, 8, 15] | nada |
+| 9 | `Escreve:` das três notas | 16 | [12, 8, 15] | 12 8 15 |
+
+A coluna `nota` muda três vezes. A coluna `notas` nunca muda. O algoritmo corre até ao fim, sem nada de errado na escrita, e não fez o que se pedia: as notas continuam 12, 8 e 15.
+
+Faz esta pergunta: no passo 3, a `nota` passou a valer 13; qual das três notas do array passou a 13? Nenhuma. A `nota` é uma cópia, e uma cópia não sabe de que posição veio. Por isso, mesmo que quisesse, não conseguia mudar o elemento certo. Para mudar um elemento do array, o algoritmo precisa de saber a sua posição, e isso é o índice.
+
+#### A versão certa, com o índice
+
+```text
+const N_NOTAS = 3
+
+notas = [12, 8, 15]
+Para i de 0 até N_NOTAS - 1
+    notas[i] = notas[i] + 1
+Escreve: notas[0], " ", notas[1], " ", notas[2]
+```
+
+Aqui não há variável `nota`. Em cada iteração, o algoritmo lê o elemento da posição `i`, soma-lhe 1 e escreve o resultado na mesma posição. No trace, a linha do `Para` mostra a condição escondida, `i <= N_NOTAS - 1`, que com a constante a valer 3 é `i <= 2`:
+
+| Passo | Instrução executada | i | Condição e resultado | notas | Ecrã |
+| ---: | --- | ---: | --- | --- | --- |
+| 0 | antes de começar | sem valor | nenhuma | sem valor | nada |
+| 1 | `notas = [12, 8, 15]` | sem valor | nenhuma | [12, 8, 15] | nada |
+| 2 | `Para`: `i` começa em 0 | 0 | `0 <= 2` dá `true` | [12, 8, 15] | nada |
+| 3 | `notas[i] = notas[i] + 1`, ou seja 12 + 1 | 0 | nenhuma | [13, 8, 15] | nada |
+| 4 | volta ao `Para`: `i` passa a 1 | 1 | `1 <= 2` dá `true` | [13, 8, 15] | nada |
+| 5 | `notas[i] = notas[i] + 1`, ou seja 8 + 1 | 1 | nenhuma | [13, 9, 15] | nada |
+| 6 | volta ao `Para`: `i` passa a 2 | 2 | `2 <= 2` dá `true` | [13, 9, 15] | nada |
+| 7 | `notas[i] = notas[i] + 1`, ou seja 15 + 1 | 2 | nenhuma | [13, 9, 16] | nada |
+| 8 | volta ao `Para`: `i` passa a 3 | 3 | `3 <= 2` dá `false`: o ciclo termina | [13, 9, 16] | nada |
+| 9 | `Escreve:` das três notas | 3 | nenhuma | [13, 9, 16] | 13 9 16 |
+
+Agora é a coluna `notas` que muda, um elemento por iteração. Repara no passo 8, o teste que dá falso: é ele que faz o ciclo ter exatamente três iterações, uma por cada índice válido. Quando `i` chega a 3, o ciclo termina sem nunca usar `notas[3]`, que não existe. Há quatro testes e três iterações, como em todos os ciclos deste guia.
+
+#### Usar o valor como se fosse a posição
+
+Quem percebe que é preciso o array, mas continua com o para cada, escreve às vezes isto:
+
+```text
+Para cada nota em notas
+    notas[nota] = nota + 1
+```
+
+Na primeira iteração, a `nota` vale 12, e o algoritmo tenta escrever em `notas[12]`. Num array com três elementos, os índices válidos são 0, 1 e 2: o 12 é um índice fora do array. O erro está em usar o valor de um elemento como se fosse a sua posição. São duas coisas diferentes: em `notas = [12, 8, 15]`, o elemento de índice 0 vale 12.
+
+#### A regra prática
+
+Quando só precisas de ler os elementos, para os somar, contar, comparar ou mostrar, percorre por valor, com o para cada. Quando precisas de mudar os elementos do array, percorre por índice, com o `Para` e o índice.
+
 ## Exemplo explicado (30 min): contar pedidos válidos e totalizar unidades
 
 Este exemplo junta tudo o que viste: um ciclo com sentinela, um `Se` com um intervalo dentro do ciclo, dois contadores e um totalizador.
@@ -983,6 +1111,10 @@ No algoritmo das senhas, com `Enquanto senha < ULTIMA_SENHA` em vez de `<=`, o c
 
 A forma de os apanhar é contar. Antes de fazeres o trace, diz quantas iterações o ciclo devia ter e quais são o primeiro e o último valor da variável. Depois confirma na tabela de iterações. A primeira e a última iteração são as fronteiras de um ciclo, e é lá que estes erros se escondem, tal como os erros de decisão se escondem nas fronteiras de um intervalo.
 
+### Mudar a variável do para cada para mudar o array
+
+`Para cada nota em notas` seguido de `nota = nota + 1`. A variável de iteração recebe uma cópia de cada elemento, e mudá-la não muda o array: o algoritmo corre sem erro e as notas ficam iguais. Para mudar os elementos, percorre por índice, com `notas[i] = notas[i] + 1`. Ver a secção "O para cada não muda o array".
+
 ### A condição de paragem no lugar da condição de continuação
 
 Se, na validação repetida, alguém escrever a condição de valor válido em vez da de valor inválido:
@@ -1099,6 +1231,8 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 - Consegues escrever um ciclo com sentinela, com a leitura antecipada, e explicar porque é que a sentinela nunca é tratada como dado.
 - Consegues escrever uma validação repetida e dizer o que se sabe sobre o valor depois do ciclo.
 - Consegues escolher entre `Enquanto` e `Para` para um problema novo e justificar a escolha com a pergunta certa.
+- Consegues dizer o elemento de um índice num array e qual é o último índice válido, e percorrer um array com o índice e com o para cada.
+- Consegues explicar porque é que mudar a variável de um para cada não muda o array, e mostrá-lo com uma tabela de trace com a variável e o array lado a lado.
 - Consegues reconhecer um ciclo num fluxograma e explicar porque é que a seta de volta tem de chegar ao losango da condição.
 - Consegues escolher os casos de teste de um ciclo: o caso de zero voltas, um caso com uma só volta, um caso com várias voltas e as fronteiras.
 
