@@ -11,24 +11,24 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-K05, UC00245-K06, UC0
 | Identificação | Valor                                                                                                                                        |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | Material      | Ficha do bloco ALG04, acompanha o [guia](04-repeticao-e-padroes.md) e o [laboratório](04-repeticao-e-padroes-laboratorio.md), que é opcional |
-| Tempo total   | 120 minutos dos 300 do bloco: 90 de prática autónoma, nos exercícios 1 a 7, e 30 de desafio                                                  |
-| Entrega       | Pseudocódigo e tabelas de iterações dos exercícios 1 a 7; o que fizeres da secção "Para ires mais longe" e do desafio                        |
+| Tempo total   | 154 minutos: 90 de prática autónoma, nos exercícios 1 a 7; 34 nos exercícios 8 a 10, sobre arrays, para cada e flags; e 30 de desafio        |
+| Entrega       | Pseudocódigo e tabelas de iterações dos exercícios 1 a 10; o que fizeres da secção "Para ires mais longe" e do desafio                       |
 
 ## Objetivos e conceitos necessários
 
-Vais praticar sem ajuda o que o guia explicou sobre ciclos: seguir um ciclo numa tabela de iterações, reconhecer as três peças de um ciclo e escrever ciclos com os quatro padrões, o contador, o totalizador, a sentinela e a validação repetida.
+Vais praticar sem ajuda o que o guia explicou sobre ciclos: seguir um ciclo numa tabela de iterações, reconhecer as três peças de um ciclo e escrever ciclos com os padrões do guia, o contador, o totalizador, a sentinela, a validação repetida e a flag, e percorrer arrays.
 
-A ficha vai por passos, e cada exercício usa o que os anteriores treinaram. Primeiro aplicas o que o guia mostrou: nos exercícios 1 e 2 segues e completas ciclos que já estão quase escritos, e nos exercícios 3 e 4 escreves ciclos pequenos, um com um contador e outro com um totalizador, a partir de um algoritmo do guia. Depois decides: no exercício 5 descobres porque é que um ciclo conta mal e corriges a linha errada. No fim constróis os ciclos que dependem do que a pessoa escreve: no exercício 6, um ciclo com sentinela, e no exercício 7, uma validação repetida.
+A ficha vai por passos, e cada exercício usa o que os anteriores treinaram. Primeiro aplicas o que o guia mostrou: nos exercícios 1 e 2 segues e completas ciclos que já estão quase escritos, e nos exercícios 3 e 4 escreves ciclos pequenos, um com um contador e outro com um totalizador, a partir de um algoritmo do guia. Depois decides: no exercício 5 descobres porque é que um ciclo conta mal e corriges a linha errada. No fim constróis os ciclos que dependem do que a pessoa escreve: no exercício 6, um ciclo com sentinela, e no exercício 7, uma validação repetida. Os exercícios 8 a 10 treinam a última parte da teoria do guia: somar um array com o para cada, mudar elementos de um array com o índice e responder a "há algum?" com uma flag.
 
 Antes de começares a ficha toda, deves ter lido o [guia](04-repeticao-e-padroes.md) até ao fim. Cada exercício diz a secção do guia onde está a matéria de que precisas, e por isso, se fizeres a ficha à medida que a matéria vai sendo dada, basta teres lido as secções que o exercício indica. Tem o guia aberto ao lado e segue os algoritmos de lá sempre que o enunciado o sugerir. Para quem está a escrever os primeiros ciclos, partir de um algoritmo que já funciona é a forma certa de começar. No exercício 7 vais usar também o contrário de um intervalo, escrito com `ou`, que aprendeste no guia 03.
 
 Material: papel quadriculado e lápis.
 
-Quando um exercício te pedir para escrever instruções, podes escrevê-las em pseudocódigo, na forma que usamos nas aulas, ou em frases claras. O que conta é a lógica. As frases têm de dizer, sem deixar dúvidas, com que valores se começa, em que situação se repete, que passos se repetem, o que muda em cada volta e o que acontece quando um valor não serve; o exemplo explicado do guia, no passo 5, mostra um ciclo escrito das duas maneiras. Se escreveres em pseudocódigo, cuida da indentação, porque é ela que mostra o que está dentro do ciclo. Nos exercícios com `Para`, usa a forma do guia, `Para ... de 1 até ...`.
+Quando um exercício te pedir para escrever instruções, podes escrevê-las em pseudocódigo, na forma que usamos nas aulas, ou em frases claras. O que conta é a lógica. As frases têm de dizer, sem deixar dúvidas, com que valores se começa, em que situação se repete, que passos se repetem, o que muda em cada volta e o que acontece quando um valor não serve; o exemplo explicado do guia, no passo 5, mostra um ciclo escrito das duas maneiras. Se escreveres em pseudocódigo, cuida da indentação, porque é ela que mostra o que está dentro do ciclo. Nos exercícios com `Para`, usa as formas do guia: `Para ... de 1 até ...` para contar, e `Para i de 0 até ... - 1` para percorrer um array pelo índice.
 
 Uma regra para todos os exercícios: quando te pedirem uma tabela de iterações, escreve primeiro o resultado que esperas, e só depois faz a tabela. Se só o escreveres depois, a tabela concorda sempre contigo e não te ensina nada.
 
-Os exercícios 1 a 7 são obrigatórios e cabem nos 90 minutos da prática autónoma. No fim da ficha há o desafio e uma secção "Para ires mais longe", ambos opcionais, para quem terminar.
+Os exercícios 1 a 10 são obrigatórios. Os exercícios 1 a 7 cabem nos 90 minutos da prática autónoma, e os exercícios 8 a 10 levam cerca de 35 minutos mais. No fim da ficha há o desafio e uma secção "Para ires mais longe", ambos opcionais, para quem terminar.
 
 ## Exercício 1: Seguir um ciclo já escrito (10 min)
 
@@ -194,6 +194,70 @@ const MAXIMO_DE_LUGARES = 6
 
 Concluíste quando o 0 e o 7 forem recusados, o 3 e o 6 forem aceites, e souberes dizer o que se sabe sobre `lugares` depois do ciclo.
 
+## Arrays, para cada e flags
+
+Os três exercícios seguintes são da última parte da teoria do guia, a partir da secção [Arrays: muitos valores numa só variável](04-repeticao-e-padroes.md#arrays-muitos-valores-numa-só-variável). Em cada um, a tabela de iterações tem uma linha por elemento do array, como na tabela do [Padrão flag](04-repeticao-e-padroes.md#padrão-flag), porque o para cada não tem uma condição escrita.
+
+## Exercício 8: Somar com o para cada (11 min)
+
+A papelaria guardou num array as unidades de cadernos vendidas em cada um dos quatro dias em que esteve aberta esta semana:
+
+```text
+vendas = [4, 0, 7, 2]
+```
+
+**a)** Escreve um algoritmo que some as quatro vendas com o para cada e escreva o total, em pseudocódigo ou em frases claras. Usa a variável `venda` no para cada e a variável `totalVendido`, que é `int`, para o totalizador (guia, [Percorrer um array com o para cada](04-repeticao-e-padroes.md#percorrer-um-array-com-o-para-cada) e [Padrão totalizador](04-repeticao-e-padroes.md#padrão-totalizador)).
+
+**b)** Escreve o total que esperas e faz a tabela de iterações, com uma linha por iteração: o valor de `venda` e o valor de `totalVendido` no fim da iteração.
+
+**c)** O teu algoritmo não precisa de uma constante com o número de dias. Explica numa frase porquê.
+
+Concluíste quando a tabela tiver uma linha por elemento do array e o total da última linha for o que escreveste antes de a fazer.
+
+## Exercício 9: Mudar só alguns elementos (11 min)
+
+Na mesma papelaria, os preços de quatro artigos estão num array, em cêntimos:
+
+```text
+precos = [250, 90, 120, 60]
+```
+
+A partir de amanhã, os artigos que custam mais de 100 cêntimos sobem 10 cêntimos, e os outros ficam com o mesmo preço. Um colega escreveu este algoritmo:
+
+```text
+precos = [250, 90, 120, 60]
+Para cada preco em precos
+    Se preco > 100
+        preco = preco + 10
+Escreve: precos[0], " ", precos[1], " ", precos[2], " ", precos[3]
+```
+
+**a)** Sem fazeres a tabela, diz o que aparece no ecrã e explica porquê, numa ou duas frases (guia, [O para cada não muda o array](04-repeticao-e-padroes.md#o-para-cada-não-muda-o-array)).
+
+**b)** Reescreve o algoritmo com o `Para` e o índice, para os preços mudarem mesmo no array. Usa uma constante `N_PRECOS` para o número de preços, como o guia faz com `N_NOTAS`.
+
+**c)** Que índice usa a última iteração do teu `Para`? Se o `Para` fosse até `N_PRECOS`, e não até `N_PRECOS - 1`, o que acontecia na iteração a mais?
+
+Concluíste quando o teu algoritmo escrever os preços novos de todos os artigos, com os que custavam 100 cêntimos ou menos iguais aos de hoje.
+
+## Exercício 10: Há alguma encomenda pesada? (12 min)
+
+As encomendas com mais de 10 kg só se levam com o carrinho. Os pesos das encomendas de hoje, em quilos, estão num array:
+
+```text
+pesos = [3, 12, 5, 8]
+```
+
+O algoritmo diz se hoje é preciso o carrinho, isto é, se há pelo menos uma encomenda com mais de 10 kg.
+
+**a)** Escreve o algoritmo, em pseudocódigo ou em frases claras, com uma flag `bool` chamada `precisaCarrinho`. Segue o algoritmo `HaProdutoSemStock` do guia ([Padrão flag](04-repeticao-e-padroes.md#padrão-flag)): a flag começa `false`, passa a `true` dentro do `Se` e lê-se depois do ciclo, para escrever "É preciso o carrinho" ou "Não é preciso o carrinho".
+
+**b)** Escreve a resposta que esperas e faz a tabela de iterações, como a do guia: o peso, a condição do `Se` e a flag no fim de cada iteração.
+
+**c)** Um colega acrescentou ao `Se` um `Senão` com `precisaCarrinho = false`. Com o mesmo array, que resposta dá o algoritmo dele? Explica numa frase.
+
+Concluíste quando a flag da tua tabela, depois de passar a `true`, nunca mais voltar a `false`, e souberes dizer porque é que o algoritmo do colega falha com este array.
+
 ## Apoio
 
 Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não tiver chegado.
@@ -211,6 +275,12 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 **Exercício 6.** Na alínea a), pergunta-te: quando o algoritmo chega ao ciclo, já se sabe quantos trabalhos vão chegar? Na alínea b), copia o `SomarCaixas` e apaga tudo o que tem a ver com `caixas`, que é o contador; depois muda os nomes. Confirma que tens duas leituras de `paginas`: `int paginas = ler valor`, antes do `Enquanto` e sem indentação, e `paginas = ler valor`, como última linha do corpo, com quatro espaços.
 
 **Exercício 7.** A condição do ciclo é a do valor inválido: abaixo do mínimo ou acima do máximo. Escreve-a primeiro à parte e experimenta-a com 0, 1, 6 e 7 antes de a pores no ciclo. Na alínea c), avalia a condição com 6 antes de fazeres mais nada.
+
+**Exercício 8.** Segue a frase do guia sobre o totalizador com o para cada: o totalizador começa em 0 antes do ciclo e, dentro dele, soma a variável do para cada. Na tabela, a variável `venda` recebe os elementos pela ordem do array, um por linha. Na alínea c), pergunta-te: quem decide quando o para cada acaba?
+
+**Exercício 9.** Na alínea a), compara com a primeira tentativa da secção "O para cada não muda o array": a linha `preco = preco + 10` muda a cópia ou o elemento? Na alínea b), parte da versão certa desse mesmo exemplo e põe o `Se` dentro do `Para`, com a linha que soma oito espaços para dentro. Lembra-te de que o último índice de um array com 4 elementos é o 3.
+
+**Exercício 10.** Copia o `HaProdutoSemStock` e muda três coisas: o array, o nome da flag e a condição do `Se`. "Mais de 10 kg" quer dizer que uma encomenda com exatamente 10 kg ainda não precisa do carrinho. Na alínea c), segue a flag do colega peso a peso e vê com que valor fica depois do último.
 
 **Para ires mais longe.** No Mais longe 1, escreve só a coluna `prateleira`, lado a lado: que tipo de números são todos, e que tipo de número é o 8? No Mais longe 2, para cada prazo urgente, compara o que soma a linha do colega com o que somaria a linha certa. No Mais longe 3, lembra-te de que a sentinela não pode ser um valor que os dados verdadeiros possam ter: que números nunca podem ser um número de devoluções? No Mais longe 4, repara que cada iteração do ciclo só acontece porque o valor lido foi inválido.
 
@@ -300,6 +370,8 @@ Volta ao teu algoritmo do exercício 7.
 - [ ] No ciclo com sentinela, a sentinela nunca é somada como se fosse um dado.
 - [ ] Escrevi o resultado esperado antes de fazer cada tabela de iterações.
 - [ ] Testei o caso de zero voltas no exercício 6 e o valor válido à primeira no exercício 7.
+- [ ] Nos arrays, sei dizer quando percorro por valor, com o para cada, e quando percorro por índice, e o último índice que usei é o número de elementos menos 1.
+- [ ] A minha flag começa `false` antes do ciclo, só muda para `true` e só a leio depois do ciclo.
 
 ## Autoavaliação breve
 

@@ -24,7 +24,7 @@ No final deste bloco, serás capaz de:
 - seguir a execução de um ciclo numa tabela, primeiro instrução a instrução e depois iteração a iteração, e dizer quantas vezes o ciclo se repete e com que valores termina;
 - reconhecer num trace um ciclo que nunca começa e um ciclo que nunca acaba, e dizer qual das três peças o provoca;
 - escrever um ciclo contado com `Para` e reescrevê-lo com `Enquanto`;
-- usar quatro padrões que vão aparecer em quase todos os algoritmos que escreveres daqui para a frente: o contador, o totalizador, a sentinela e a validação repetida;
+- usar cinco padrões que vão aparecer em quase todos os algoritmos que escreveres daqui para a frente: o contador, o totalizador, a sentinela, a validação repetida e a flag;
 - escolher entre `Enquanto` e `Para` e justificar a escolha;
 - criar um array, percorrê-lo com o índice e com o para cada, e explicar porque é que mudar a variável do para cada não muda o array;
 - reconhecer um ciclo num fluxograma, pela seta que volta atrás até ao losango da condição.
@@ -453,7 +453,7 @@ No fim deste guia há uma secção com outra forma de escrever o `Para`, em que 
 
 ### Padrão contador
 
-Um **padrão** é uma forma de resolver um pequeno problema que aparece vezes sem conta, em algoritmos diferentes. Aprende-se uma vez, e depois reconhece-se e reutiliza-se. Os quatro padrões desta secção e das seguintes vão aparecer em quase todos os algoritmos que escreveres até ao fim do ano, também em Python.
+Um **padrão** é uma forma de resolver um pequeno problema que aparece vezes sem conta, em algoritmos diferentes. Aprende-se uma vez, e depois reconhece-se e reutiliza-se. Os padrões desta secção e das seguintes vão aparecer em quase todos os algoritmos que escreveres até ao fim do ano, também em Python.
 
 O primeiro é o contador. Um **contador** é uma variável que conta quantas vezes uma coisa aconteceu. Segue três regras:
 
@@ -859,6 +859,69 @@ Na primeira iteração, a `nota` vale 12, e o algoritmo tenta escrever em `notas
 
 Quando só precisas de ler os elementos, para os somar, contar, comparar ou mostrar, percorre por valor, com o para cada. Quando precisas de mudar os elementos do array, percorre por índice, com o `Para` e o índice.
 
+### Padrão flag
+
+Os padrões que já viste respondem a perguntas com números: o contador responde a "quantos?" e o totalizador responde a "quanto?". Há uma terceira pergunta, que aparece tantas vezes como estas: "aconteceu alguma vez?". Há algum produto sem stock? Algum aluno faltou ao teste? Alguma encomenda passa do peso máximo? A resposta não é um número, é sim ou não.
+
+Para responder, usa-se uma **flag**, uma palavra inglesa que quer dizer bandeira. Uma flag é uma variável `bool` que guarda se uma coisa já aconteceu. Pensa numa bandeira num mastro: começa em baixo e, no momento em que alguém vê o que se procura, é içada. Daí para a frente fica no alto, aconteça o que acontecer, e quem chega no fim só tem de olhar para o mastro para saber se a coisa aconteceu. A flag segue três regras, parecidas com as do contador:
+
+1. Começa com o valor de "ainda não aconteceu", `false`, antes do ciclo. Antes de se olhar para qualquer valor, ainda não se viu nada.
+2. Quando a coisa acontece, passa a `true`, dentro de um `Se`. Nunca volta a `false` dentro do ciclo.
+3. Só se lê depois do ciclo, quando todos os valores já foram vistos.
+
+O nome de uma flag escreve-se como a pergunta a que ela responde com `true`: `haProdutoSemStock`, `alguemFaltou`, `encontrado`. Assim, quando se lê o algoritmo, `Se haProdutoSemStock` diz-se "se há um produto sem stock".
+
+Exemplo. A loja do padrão contador guardou num array o stock dos seus quatro produtos, e quer saber se há algum esgotado, isto é, com stock 0. O algoritmo, a que vamos chamar `HaProdutoSemStock`, percorre o array com o para cada, porque só precisa de ler os valores:
+
+```text
+stocks = [12, 0, 9, 7]
+bool haProdutoSemStock = false
+Para cada stock em stocks
+    Se stock == 0
+        haProdutoSemStock = true
+Se haProdutoSemStock
+    Escreve: "Há pelo menos um produto sem stock"
+Senão
+    Escreve: "Todos os produtos têm stock"
+```
+
+A flag nasce antes do ciclo, com o tipo `bool` à frente e o valor `false`. Dentro do ciclo, a linha que a muda está dentro do `Se`, com oito espaços: a bandeira só é içada quando o stock é 0. O `Se` do fim, sem indentação, está depois do ciclo, e é só aí que se sabe a resposta. Como a flag já vale `true` ou `false`, ela própria serve de condição: `Se haProdutoSemStock` dá o mesmo que `Se haProdutoSemStock == true`, e as duas formas estão certas.
+
+O para cada não tem uma condição escrita, e por isso a tabela de iterações deste ciclo tem uma linha por iteração, com o elemento que a variável recebe, a condição do `Se` e o valor da flag no fim da iteração:
+
+| Iteração | stock | `stock == 0` | haProdutoSemStock no fim da iteração |
+| --- | ---: | --- | --- |
+| 1.ª | 12 | `false` | `false` |
+| 2.ª | 0 | `true` | `true` |
+| 3.ª | 9 | `false` | `true` |
+| 4.ª | 7 | `false` | `true` |
+
+Depois do ciclo, a flag vale `true`, e o ecrã mostra "Há pelo menos um produto sem stock". Repara nas iterações 3 e 4: o stock já não é 0, e a flag continua `true`. É a regra 2: a bandeira, depois de içada, não desce.
+
+A flag não diz qual foi o produto, nem quantos foram: diz só que aconteceu. Se a pergunta fosse "quantos produtos estão sem stock?", a resposta pedia um contador. Escolhe a flag quando a pergunta se responde com sim ou não, e o contador quando se responde com um número.
+
+A flag também não precisa de um array. Funciona da mesma maneira num `Para` que lê um valor em cada iteração, ou num ciclo com sentinela: começa `false` antes do ciclo, passa a `true` dentro de um `Se` e lê-se depois.
+
+#### Um `Senão` que baixa a bandeira
+
+O erro mais frequente com flags é este:
+
+```text
+Para cada stock em stocks
+    Se stock == 0
+        haProdutoSemStock = true
+    Senão
+        haProdutoSemStock = false
+```
+
+Parece mais completo, com um ramo para cada caso, mas está errado. Agora a bandeira é içada no 0 e desce logo a seguir, no 9, e no fim só diz se o último produto está sem stock. Com o array `[12, 0, 9, 7]`, a flag acaba `false`, e o algoritmo escreve "Todos os produtos têm stock", com toda a confiança, quando há um produto esgotado.
+
+O erro só aparece quando o valor procurado não é o último. Com `[12, 9, 7, 0]`, as duas versões dão a mesma resposta, e quem testar só com esse array não dá por nada. Por isso, para testar um algoritmo com uma flag, escolhe pelo menos três casos: um em que nenhum valor cumpre a condição, e a flag tem de acabar `false`; um em que o valor procurado aparece no início ou no meio, seguido de valores que não cumprem, que é o caso que apanha este erro; e um em que só o último valor cumpre.
+
+#### A resposta escrita dentro do ciclo
+
+Outro engano é escrever a resposta dentro do ciclo. Com um `Escreve:` dentro do `Se`, a frase aparecia uma vez por cada produto sem stock; com um `Escreve:` num `Senão`, aparecia "Todos os produtos têm stock" a meio do array, antes de se verem os outros produtos. A resposta a "há algum?" só se sabe depois de ver todos os valores, como o resultado de um contador, e por isso escreve-se depois do ciclo.
+
 ## Exemplo explicado (30 min): contar pedidos válidos e totalizar unidades
 
 Este exemplo junta tudo o que viste: um ciclo com sentinela, um `Se` com um intervalo dentro do ciclo, dois contadores e um totalizador.
@@ -1115,6 +1178,10 @@ A forma de os apanhar é contar. Antes de fazeres o trace, diz quantas iteraçõ
 
 `Para cada nota em notas` seguido de `nota = nota + 1`. A variável de iteração recebe uma cópia de cada elemento, e mudá-la não muda o array: o algoritmo corre sem erro e as notas ficam iguais. Para mudar os elementos, percorre por índice, com `notas[i] = notas[i] + 1`. Ver a secção "O para cada não muda o array".
 
+### A flag que volta a `false`
+
+Um `Senão` com `haProdutoSemStock = false` dentro do ciclo. A flag passa a dizer só o que aconteceu com o último valor: com `[12, 0, 9, 7]`, acaba `false`, e o algoritmo diz que todos os produtos têm stock. Uma flag só muda num sentido, de `false` para `true`. Ver a secção "Padrão flag".
+
 ### A condição de paragem no lugar da condição de continuação
 
 Se, na validação repetida, alguém escrever a condição de valor válido em vez da de valor inválido:
@@ -1230,6 +1297,7 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 - Consegues explicar a diferença entre um contador e um totalizador, e porque é que ambos começam em 0 e fora do ciclo.
 - Consegues escrever um ciclo com sentinela, com a leitura antecipada, e explicar porque é que a sentinela nunca é tratada como dado.
 - Consegues escrever uma validação repetida e dizer o que se sabe sobre o valor depois do ciclo.
+- Consegues usar uma flag para responder a "há algum?", e explicar porque é que ela nunca volta a `false` dentro do ciclo.
 - Consegues escolher entre `Enquanto` e `Para` para um problema novo e justificar a escolha com a pergunta certa.
 - Consegues dizer o elemento de um índice num array e qual é o último índice válido, e percorrer um array com o índice e com o para cada.
 - Consegues explicar porque é que mudar a variável de um para cada não muda o array, e mostrá-lo com uma tabela de trace com a variável e o array lado a lado.
