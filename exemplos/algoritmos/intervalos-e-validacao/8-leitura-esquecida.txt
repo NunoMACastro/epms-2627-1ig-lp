@@ -1,0 +1,7 @@
+const TEMPERATURA_MINIMA = 16
+const TEMPERATURA_MAXIMA = 30
+Escreve: "Temperatura do ar condicionado (16 a 30)?"
+int temperatura = ler valor
+Enquanto temperatura < TEMPERATURA_MINIMA ou temperatura > TEMPERATURA_MAXIMA
+    Escreve: "Temperatura inválida. Escreve um número de 16 a 30."
+Escreve: "Temperatura definida: ", temperatura

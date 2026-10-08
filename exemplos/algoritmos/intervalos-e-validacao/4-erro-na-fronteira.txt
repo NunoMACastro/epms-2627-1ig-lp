@@ -1,0 +1,7 @@
+const LIMIAR_ECONOMICO = 24
+Escreve: "Temperatura do ar condicionado (16 a 30)?"
+int temperatura = ler valor
+Se temperatura > LIMIAR_ECONOMICO
+    Escreve: "Modo económico"
+Senão
+    Escreve: "Modo normal"
