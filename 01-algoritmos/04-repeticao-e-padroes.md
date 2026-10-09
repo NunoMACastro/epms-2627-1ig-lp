@@ -12,7 +12,7 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-K05, UC00245-K06, UC0
 | --- | --- |
 | Material | M-ALG04, quarto bloco de Desenvolver algoritmos |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG04 |
-| Duração | 120 minutos dos 300 do bloco neste guia (teoria, exemplo explicado e consolidação); a prática guiada, 60 minutos, faz-se em aula, com o professor; a prática autónoma e o desafio, 120 minutos, estão na [ficha de exercícios](04-repeticao-e-padroes-exercicios.md); o [laboratório](04-repeticao-e-padroes-laboratorio.md), de fluxogramas, é opcional e só se faz quando o professor o indicar |
+| Duração | 120 minutos neste guia (teoria, exemplo explicado e consolidação); a prática guiada, 60 minutos, faz-se em aula, com o professor; a prática autónoma, 124 minutos, e o desafio, 30 minutos, estão na [ficha de exercícios](04-repeticao-e-padroes-exercicios.md); o [laboratório](04-repeticao-e-padroes-laboratorio.md), de fluxogramas, é opcional e só se faz quando o professor o indicar. O bloco foi planeado com 300 minutos e passou a 334, porque os arrays e a flag entraram nele depois de planeado |
 | Evidência a guardar | Tabela de iterações, algoritmo e conjunto de testes do exemplo e da ficha; o fluxograma do exemplo desenhado na aplicação, só se o professor indicar o laboratório |
 
 ## Objetivos
@@ -57,16 +57,19 @@ Neste percurso, os fluxogramas são para saberes o que são e como se leem. Nest
 
 ## Como está organizado o tempo
 
-Este bloco tem **5 horas**, ou seja 300 minutos, distribuídos por três documentos com o mesmo número: este guia, que se lê e estuda; o laboratório, que se segue passo a passo no computador e é opcional; e a ficha, que se resolve sem ajuda.
+Este bloco foi planeado com **5 horas**, ou seja 300 minutos, distribuídos por três documentos com o mesmo número: este guia, que se lê e estuda; o laboratório, que se segue passo a passo no computador e é opcional; e a ficha, que se resolve sem ajuda.
+
+Depois de o bloco estar planeado, entraram nele os arrays e a flag, que estão no fim da teoria deste guia, e a ficha ganhou três exercícios sobre eles, do 8 ao 10. Por isso a prática autónoma passou de 90 para 124 minutos, e o bloco passa os 300 minutos: as partes da tabela somam 334.
 
 | Parte | Onde está | Tempo |
 | --- | --- | ---: |
 | Teoria | Neste guia | 30 min |
 | Exemplo explicado | Neste guia | 30 min |
 | Prática guiada | Em aula, com o professor. O [laboratório](04-repeticao-e-padroes-laboratorio.md), de fluxogramas, é opcional: só o fazes quando o professor o indicar | 60 min |
-| Prática autónoma | Na [ficha](04-repeticao-e-padroes-exercicios.md) | 90 min |
+| Prática autónoma | Na [ficha](04-repeticao-e-padroes-exercicios.md), exercícios 1 a 10 | 124 min |
 | Desafio | Na [ficha](04-repeticao-e-padroes-exercicios.md) | 30 min |
 | Consolidação | Neste guia | 60 min |
+| Total | | 334 min |
 
 A teoria é longa para ler em 30 minutos, e é de propósito. Em aula, o professor vai explicá-la por partes, com traces no quadro. Depois, este guia fica contigo para voltares a ler com calma, e cada secção explica o mesmo assunto por mais do que um caminho.
 
@@ -1384,7 +1387,7 @@ Há ainda uma terceira forma do `Para`, o para cada, que já viste nas secções
 
 ## A seguir
 
-A [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) ocupa 120 minutos. O [laboratório](04-repeticao-e-padroes-laboratorio.md), de fluxogramas, é opcional e só se faz quando o professor o indicar. No bloco seguinte, o último desta área, vais juntar a sequência, a seleção e a repetição num problema maior, testá-lo de forma organizada, corrigir erros encontrados no trace e comparar duas soluções pelo número de passos. Mais tarde, em Python, os ciclos `Enquanto` passam a chamar-se `while`, e as tabelas de iterações que aprendeste a fazer aqui vão servir para prever o que o programa vai fazer antes de o executares.
+A [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) ocupa 154 minutos: 124 nos exercícios obrigatórios, do 1 ao 10, e 30 no desafio. O [laboratório](04-repeticao-e-padroes-laboratorio.md), de fluxogramas, é opcional e só se faz quando o professor o indicar. No bloco seguinte, o último desta área, vais juntar a sequência, a seleção e a repetição num problema maior, testá-lo de forma organizada, corrigir erros encontrados no trace e comparar duas soluções pelo número de passos. Mais tarde, em Python, os ciclos `Enquanto` passam a chamar-se `while`, e as tabelas de iterações que aprendeste a fazer aqui vão servir para prever o que o programa vai fazer antes de o executares.
 
 ## Referências
 

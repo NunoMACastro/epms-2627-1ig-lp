@@ -11,12 +11,12 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-A06, UC00245-A07, UC0
 | Identificação | Valor |
 | --- | --- |
 | Material | Ficha do bloco ALG05, acompanha o [guia](05-testar-depurar-e-melhorar.md) |
-| Tempo total | 60 minutos dos 300 do bloco, nos exercícios 1 a 4. O fecho do portefólio faz-se na última aula do bloco. O desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 60 minutos |
-| Entrega | A tabela de casos do exercício 1, o registo de depuração do exercício 2, a contagem de passos do exercício 3 e o exercício 4, que ficam no teu portefólio, juntamente com o contrato do fecho do portefólio e, se o professor o indicar, o fluxograma |
+| Tempo total | 60 minutos dos 300 do bloco, nos exercícios 1 a 4. O fecho do portefólio, com o contrato e o teste do algoritmo do exercício 4, faz-se na última aula do bloco. O desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 60 minutos |
+| Entrega | A tabela de casos do exercício 1, o registo de depuração do exercício 2, a contagem de passos do exercício 3 e o exercício 4, que ficam no teu portefólio, juntamente com o contrato e a tabela de casos executada do fecho do portefólio e, se o professor o indicar, o fluxograma |
 
 ## Objetivos e conceitos necessários
 
-Vais praticar sozinho o que o guia deste bloco explica: escolher casos de teste antes de executar um algoritmo, encontrar um erro com o método de depuração, contar os passos de um algoritmo e melhorá-lo sem mudar o que ele faz, e, no fim, construir e testar um algoritmo pequeno.
+Vais praticar sozinho o que o guia deste bloco explica: escolher casos de teste antes de executar um algoritmo, encontrar um erro com o método de depuração, contar os passos de um algoritmo e melhorá-lo sem mudar o que ele faz, e, no fim, construir um algoritmo pequeno a partir de uma tabela de casos escrita antes dele. Testar esse algoritmo com a tabela fica para o fecho do portefólio, na última aula do bloco.
 
 Antes de começares, deves ter lido a teoria e o exemplo explicado do [guia](05-testar-depurar-e-melhorar.md), incluindo os passos 9 e 10 do exemplo, que mostram como se melhora um algoritmo e como se contam os passos. Também deves conseguir fazer uma tabela de iterações, escrever uma cadeia de `Se` e `Senão se`, ler um `Para` e um ciclo com sentinela, e usar contadores e totalizadores: está tudo nos guias 02, 03 e 04. Cada exercício diz em que secção do guia 05 está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
 
@@ -26,20 +26,20 @@ Material: papel e lápis. O diagrams.net, em `https://app.diagrams.net`, só é 
 
 ## Como está organizada a ficha
 
-Resolve os exercícios pela ordem. Nos dois primeiros aplicas o que o guia mostrou: no exercício 1 escolhes casos de teste e usas-os para testar um algoritmo curto, e no exercício 2 segues os cinco passos do método de depuração, um passo por alínea. No exercício 3 decides: contas os passos de um algoritmo que já está certo e escreves uma versão que faz menos trabalho. No exercício 4 constróis um algoritmo pequeno do princípio ao fim e testa-lo. Cada exercício treina uma coisa, e cada um usa o que os anteriores treinaram.
+Resolve os exercícios pela ordem. Nos dois primeiros aplicas o que o guia mostrou: no exercício 1 escolhes casos de teste e usas-os para testar um algoritmo curto, e no exercício 2 segues os quatro primeiros passos do método de depuração, um passo por alínea; o quinto, voltar a testar tudo, está no Mais longe 5, que é opcional. No exercício 3 decides: contas os passos de um algoritmo que já está certo e escreves uma versão que faz menos trabalho. No exercício 4 constróis um algoritmo pequeno do princípio ao fim, a partir da tabela de casos que escreves antes dele; testá-lo com essa tabela é a alínea c) do fecho do portefólio. Cada exercício treina uma coisa, e cada um usa o que os anteriores treinaram.
 
 Nenhum exercício é o exemplo do inventário com outros números. O exemplo mostra o caminho, e os exercícios pedem-te que o percorras noutros problemas.
 
 | Exercício | O que treina | Tempo |
 | --- | --- | ---: |
 | 1 | Escolher casos de teste antes de ver o algoritmo, e testá-lo com eles | 10 min |
-| 2 | Depurar com o método de cinco passos | 13 min |
+| 2 | Depurar com os quatro primeiros passos do método: observar, formular uma hipótese, verificar com o trace e corrigir a causa | 13 min |
 | 3 | Contar passos e melhorar um algoritmo sem mudar o que ele faz | 12 min |
-| 4 | Construir e testar um algoritmo pequeno | 25 min |
+| 4 | Construir um algoritmo pequeno a partir da tabela de casos escrita antes dele | 25 min |
 | Total da parte obrigatória | Exercícios 1 a 4 | 60 min |
-| Fecho do portefólio | Contrato do exercício 4, na última aula do bloco; o fluxograma, só quando o professor o indicar | 8 min, ou 20 com o fluxograma |
+| Fecho do portefólio | Contrato e teste do algoritmo do exercício 4, na última aula do bloco; o fluxograma, só quando o professor o indicar | 13 min, ou 25 com o fluxograma |
 | Desafio opcional | Mudar uma restrição de cada vez no algoritmo do exercício 4 | na última aula, para quem não precisar de recuperação |
-| Para ires mais longe | Opcional: mais uma fronteira no exercício 1, o caso mínimo e a correção do sintoma no exercício 2, a poupança de cada escalão no exercício 3 e a validação no exercício 4 | fora dos 60 min |
+| Para ires mais longe | Opcional: mais uma fronteira no exercício 1, o caso mínimo e a correção do sintoma no exercício 2, a poupança de cada escalão no exercício 3, a validação no exercício 4 e o teste de regressão do exercício 2 | fora dos 60 min |
 
 ## Exercício 1: Escolher os casos antes de ver o algoritmo (10 min)
 
@@ -91,7 +91,7 @@ Escreve: "Entregas grandes: ", grandes
 
 O erro foi observado assim: na segunda-feira houve 2 entregas, a primeira de 12 caixas e a segunda de 4. O algoritmo escreveu "Total de caixas: 4" e "Entregas grandes: 1". O responsável do armazém contou 16 caixas.
 
-Cada alínea é um passo do método, pela ordem do guia, e a resposta a cada uma dá uma linha do registo de depuração do passo 11 do exemplo. Na linha da alínea c), basta escreveres o que a tabela de iterações mostrou. É esse registo que guardas no portefólio.
+As quatro alíneas são os quatro primeiros passos do método, pela ordem do guia, e a resposta a cada uma dá uma linha do registo de depuração do passo 11 do exemplo. Na linha da alínea c), basta escreveres o que a tabela de iterações mostrou. O quinto passo, voltar a testar tudo, está no Mais longe 5, que é opcional; se o fizeres, junta ao registo a linha do novo teste. É esse registo que guardas no portefólio.
 
 **a)** Observar o erro. Para cada uma das duas saídas, escreve o resultado esperado e o obtido, e diz qual está errada.
 
@@ -100,16 +100,6 @@ Cada alínea é um passo do método, pela ordem do guia, e a resposta a cada uma
 **c)** Verificar com o trace. Faz a tabela de iterações do caso de segunda-feira, com colunas para `entrega`, `caixas`, `totalCaixas` e `grandes` e para a condição escondida do `Para`, `entrega <= numeroEntregas`. Na coluna do que acontece durante a iteração, escreve cada atribuição a `totalCaixas` com o valor que ela dá. Diz se a tabela confirma a tua hipótese e qual é a instrução que causa o erro.
 
 **d)** Corrigir a causa. Corrige o algoritmo com uma única alteração, e diz qual foi. Podes escrever o algoritmo corrigido ou descrever a alteração numa frase, desde que se perceba exatamente que linha muda e para onde.
-
-**e)** Voltar a testar tudo. O responsável do armazém já tinha escrito estes casos de teste, com o resultado esperado de cada um:
-
-| Caso | Entregas do dia | Resultado esperado |
-| ---: | --- | --- |
-| 1 | 2 entregas, de 12 e de 4 caixas | Total 16, grandes 1 |
-| 2 | 0 entregas | Total 0, grandes 0 |
-| 3 | 1 entrega, de 10 caixas | Total 10, grandes 1 |
-
-Executa a tua versão corrigida com os três casos e diz se cada um passa. Lembra-te de que um `Para` de 1 até 0 não tem nenhuma iteração: é o caso zero do `Para`.
 
 Concluíste quando o teu registo de depuração permitir a outra pessoa perceber o erro e a correção sem ler o resto das tuas respostas.
 
@@ -158,9 +148,9 @@ A regra de contagem do guia, para a teres à mão: conta um passo cada `Escreve:
 
 Concluíste quando tiveres as duas contagens, feitas com a mesma regra, e a explicação.
 
-## Exercício 4: Construir e testar um algoritmo pequeno (25 min)
+## Exercício 4: Construir um algoritmo pequeno a partir dos casos de teste (25 min)
 
-A matéria está nas secções "A tabela de casos esperados" e "A síntese: sequência, seleção e repetição" do guia, e nos padrões totalizador e sentinela do guia 04. É o exercício que mais se parece com a primeira parte da avaliação prática.
+A matéria está nas secções "A tabela de casos esperados" e "A síntese: sequência, seleção e repetição" do guia, e nos padrões totalizador e sentinela do guia 04. Junto com o teste que lhe fazes no fecho do portefólio, é o exercício que mais se parece com a primeira parte da avaliação prática.
 
 O cartão de cliente da papelaria dá pontos. Por cada compra, o cliente ganha 1 ponto por cada 100 cêntimos completos que gastou: uma compra de 250 cêntimos dá 2 pontos, e uma de 99 cêntimos não dá nenhum. Uma compra de 2000 cêntimos ou mais ganha ainda 10 pontos de bónus. No fim do dia, a funcionária escreve o valor de cada compra feita com cartão, em cêntimos, uma a uma, e escreve 0 quando acabar. Os valores escritos são sempre positivos, e por isso neste exercício não há validação. No fim, o algoritmo mostra o total de pontos atribuídos no dia.
 
@@ -168,19 +158,19 @@ O cartão de cliente da papelaria dá pontos. Por cada compra, o cliente ganha 1
 
 **b)** Escreve o algoritmo, em pseudocódigo ou em frases claras que não deixem dúvidas. Se usares pseudocódigo, usa uma constante para cada valor fixo do enunciado (os 100 cêntimos, os 2000 cêntimos e os 10 pontos de bónus) e a constante `SENTINELA`.
 
-**c)** Testa o algoritmo: faz a tabela de iterações do teu caso normal e executa os outros casos da tabela. Acrescenta à tabela as colunas do resultado obtido e de se o teste passou. Se algum caso falhar, corrige o algoritmo com o método do guia, guarda a versão com erro e a versão corrigida, e volta a executar a tabela inteira.
+Concluíste quando tiveres a tabela de casos, escrita antes do algoritmo, e o algoritmo. Testar o algoritmo com essa tabela é a alínea c) do fecho do portefólio.
 
-Concluíste quando tiveres a tabela escrita antes do algoritmo, o algoritmo e a tabela executada, com todos os casos a passar.
+## Fecho do portefólio (última aula, 13 min, ou 25 com o fluxograma)
 
-## Fecho do portefólio (última aula, 8 min, ou 20 com o fluxograma)
-
-A alínea a) não é opcional, mas não conta para os 60 minutos da ficha: faz-se na última aula do bloco, a mesma do checkpoint, porque junta ao exercício 4 a peça que lhe falta para ser o problema completo do teu portefólio. A alínea b) é de fluxogramas, e só a fazes quando o professor o indicar. A secção "O teu portefólio" do guia diz como organizar a pasta.
+As alíneas a) e c) não são opcionais, mas não contam para os 60 minutos da ficha: fazem-se na última aula do bloco, a mesma do checkpoint, porque juntam ao exercício 4 as duas peças que lhe faltam para ser o problema completo do teu portefólio, o contrato e os testes. Se acabares a ficha antes do fim da aula, podes fazer logo a alínea c). A alínea b) é de fluxogramas, e só a fazes quando o professor o indicar. A secção "O teu portefólio" do guia diz como organizar a pasta.
 
 **a)** Escreve o contrato do problema do exercício 4, com as respostas às quatro perguntas do guia 01: entradas, saídas, restrições e condições. Se encontrares alguma ambiguidade no enunciado, escreve a decisão que tomaste.
 
 **b)** Só quando o professor o indicar: desenha no diagrams.net o fluxograma do teu algoritmo do exercício 4, como no laboratório do bloco 04. Guarda o ficheiro `.drawio` e exporta uma imagem PNG. Confirma, figura a figura, que o fluxograma diz exatamente o mesmo que o algoritmo que escreveste.
 
-Concluíste quando o portefólio tiver, para o problema do exercício 4, o enunciado com o contrato, o algoritmo e a tabela de casos executada, e, ao lado, o registo de depuração do exercício 2. Se o professor tiver indicado a alínea b), o fluxograma também.
+**c)** Testa o algoritmo do exercício 4: faz a tabela de iterações do teu caso normal e executa os outros casos da tua tabela. Acrescenta à tabela as colunas do resultado obtido e de se o teste passou. Se algum caso falhar, corrige o algoritmo com o método do guia, guarda a versão com erro e a versão corrigida, e volta a executar a tabela inteira.
+
+Concluíste quando o portefólio tiver, para o problema do exercício 4, o enunciado com o contrato, o algoritmo e a tabela de casos executada, com todos os casos a passar, e, ao lado, o registo de depuração do exercício 2. Se o professor tiver indicado a alínea b), o fluxograma também.
 
 ## Apoio
 
@@ -196,7 +186,7 @@ Usa estas pistas pela ordem em que aparecem, e só passa à seguinte se a anteri
 
 ## Desafio opcional: mudar uma restrição de cada vez
 
-Faz-se na última aula, por quem não precisar de recuperação. Volta ao exercício 4, já com todos os testes a passar e com o contrato do fecho do portefólio. Vais fazer três mudanças ao enunciado, uma de cada vez, e cada uma a partir da versão original, não da anterior.
+Faz-se na última aula, por quem não precisar de recuperação. Volta ao exercício 4, já com o contrato e os testes do fecho do portefólio, e com todos os testes a passar. Vais fazer três mudanças ao enunciado, uma de cada vez, e cada uma a partir da versão original, não da anterior.
 
 1. O bónus passa a exigir compras de 2500 cêntimos ou mais.
 2. Os pontos passam a ser 1 por cada 50 cêntimos completos, em vez de 100.
@@ -266,13 +256,31 @@ Continua o exercício 4. A funcionária pode enganar-se a escrever: um valor neg
 
 Pista: a validação vem antes de tudo o resto dentro do ciclo. Os pontos e o bónus só se calculam para compras válidas, e por isso podem ficar indentados por baixo do `Senão` da validação, com o `Se` do bónus lá dentro e a sua atualização um nível mais à direita.
 
+### Mais longe 5: Voltar a testar tudo nas entregas (4 min)
+
+Continua o exercício 2, com a tua versão corrigida. É o quinto passo do método, "Voltar a testar tudo", da secção "Depurar com método" do guia.
+
+O responsável do armazém já tinha escrito estes casos de teste, com o resultado esperado de cada um:
+
+| Caso | Entregas do dia | Resultado esperado |
+| ---: | --- | --- |
+| 1 | 2 entregas, de 12 e de 4 caixas | Total 16, grandes 1 |
+| 2 | 0 entregas | Total 0, grandes 0 |
+| 3 | 1 entrega, de 10 caixas | Total 10, grandes 1 |
+
+**a)** Executa a tua versão corrigida com os três casos e diz se cada um passa. Lembra-te de que um `Para` de 1 até 0 não tem nenhuma iteração: é o caso zero do `Para`.
+
+**b)** Escreve a última linha do teu registo de depuração, a do novo teste.
+
+Pista: no caso 2, o corpo do `Para` não chega a ser executado. Os dois `Escreve:` do fim mostram então os valores que as variáveis tinham antes do ciclo.
+
 ## Critérios de conclusão
 
 - [ ] Escrevi a tabela de casos do exercício 1 antes de ler o algoritmo.
 - [ ] As minhas tabelas têm casos normais e os dois lados de cada fronteira pedida, casos inválidos quando o enunciado os prevê e, quando há um ciclo, o caso zero.
-- [ ] O meu registo de depuração do exercício 2 tem as cinco linhas, uma por passo do método.
+- [ ] O meu registo de depuração do exercício 2 tem uma linha por cada passo do método que fiz: as quatro das alíneas e, se fiz o Mais longe 5, a do novo teste.
 - [ ] Contei os passos das duas versões do exercício 3 com a mesma regra e expliquei por que razão escrevem o mesmo.
-- [ ] No exercício 4, escrevi a tabela de casos antes do algoritmo e executei-a toda.
+- [ ] No exercício 4, escrevi a tabela de casos antes do algoritmo e, no fecho do portefólio, executei-a toda.
 - [ ] No fecho do portefólio, escrevi o contrato do exercício 4 e, se o professor indicou o fluxograma, ele diz exatamente o mesmo que o algoritmo que escrevi, figura a figura.
 - [ ] Guardei no portefólio as versões com erro e as versões corrigidas, cada uma no seu ficheiro.
 

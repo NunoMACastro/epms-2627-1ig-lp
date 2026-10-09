@@ -12,11 +12,11 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-K05, UC00245-K06, UC00245-A05, UC0
 | --- | --- |
 | Material | Ficha do bloco ALG03, acompanha o [guia](03-decisoes-e-validacao.md) e o [laboratório](03-decisoes-e-validacao-laboratorio.md), que é opcional |
 | Tempo total | 120 minutos dos 300 do bloco: 90 de prática autónoma, nos exercícios 1 a 5, e 30 de desafio opcional. A secção "Para ires mais longe" também é opcional e fica fora destes 120 minutos |
-| Entrega | As respostas escritas dos exercícios 1, 2 e 3; do exercício 4, a reta, a árvore de casos e a tabela de casos esperados; do exercício 5, o algoritmo, em pseudocódigo ou em frases claras, e a tabela com a mensagem a que chega cada caso; o desafio, os exercícios de "Para ires mais longe" e a parte de fluxogramas, se os fizeres |
+| Entrega | As respostas escritas dos exercícios 1, 2 e 3; do exercício 4, a reta, a árvore de casos e a tabela de casos esperados; do exercício 5, o algoritmo, em pseudocódigo ou em frases claras, e a tabela com a mensagem a que chega cada um dos quatro casos que segues; o desafio, os exercícios de "Para ires mais longe" e a parte de fluxogramas, se os fizeres |
 
 ## Objetivos e conceitos necessários
 
-Vais praticar a avaliação de condições com valores concretos, com comparações e com `e`, `ou` e `não`, a passagem de regras escritas por palavras para intervalos e casos de teste, e a construção de um algoritmo que aceita ou recusa um pedido, desde a reta até ao algoritmo seguido com cada caso de teste.
+Vais praticar a avaliação de condições com valores concretos, com comparações e com `e`, `ou` e `não`, a passagem de regras escritas por palavras para intervalos e casos de teste, e a construção de um algoritmo que aceita ou recusa um pedido, desde a reta até ao algoritmo seguido com os casos de teste.
 
 Antes de começares, deves ter lido a teoria e o exemplo explicado do [guia](03-decisoes-e-validacao.md). Tudo o que precisas para esta ficha está lá, e cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio. O [laboratório](03-decisoes-e-validacao-laboratorio.md), de fluxogramas, é opcional, e nenhum exercício obrigatório desta ficha precisa dele.
 
@@ -24,7 +24,7 @@ Material: papel e lápis. O diagrams.net, em `https://app.diagrams.net/?lang=pt`
 
 ## Como está organizada a ficha
 
-Resolve os exercícios pela ordem. Nos dois primeiros aplicas o que o guia mostrou: calculas condições com valores concretos, primeiro comparações simples e depois condições com `e`, `ou` e `não`. No terceiro decides: passas regras escritas por palavras para condições e escolhes os casos de teste de cada limite. Nos dois últimos constróis um algoritmo do princípio ao fim: no exercício 4 planeias a decisão de um pedido, e no exercício 5 escreves o algoritmo e segues com ele cada caso da tua tabela. Cada exercício treina uma coisa, e cada um usa o que os anteriores treinaram.
+Resolve os exercícios pela ordem. Nos dois primeiros aplicas o que o guia mostrou: calculas condições com valores concretos, primeiro comparações simples e depois condições com `e`, `ou` e `não`. No terceiro decides: passas regras escritas por palavras para condições e escolhes os casos de teste de cada limite. Nos dois últimos constróis um algoritmo do princípio ao fim: no exercício 4 planeias a decisão de um pedido, e no exercício 5 escreves o algoritmo e segues com ele quatro casos da tua tabela. Cada exercício treina uma coisa, e cada um usa o que os anteriores treinaram.
 
 Nenhum exercício é o exemplo explicado do guia com outros números. O exemplo mostra o caminho, e os exercícios pedem-te que o percorras noutros problemas.
 
@@ -34,10 +34,10 @@ Nenhum exercício é o exemplo explicado do guia com outros números. O exemplo 
 | 2 | Calcular condições com `e`, `ou` e `não` | 15 min |
 | 3 | Passar regras dadas por palavras para condições e escolher os casos de teste | 20 min |
 | 4 | Planear a decisão de um pedido: reta, árvore de casos e tabela de casos esperados | 15 min |
-| 5 | Escrever o algoritmo desse pedido e segui-lo com cada caso de teste | 30 min |
+| 5 | Escrever o algoritmo desse pedido e segui-lo com quatro casos de teste | 30 min |
 | Total da parte obrigatória | Exercícios 1 a 5 | 90 min |
 | Desafio opcional | Mudar uma regra de cada vez ao algoritmo do exercício 5 | 30 min |
-| Para ires mais longe | Opcional: parênteses, contrários de condições com `e` e `ou`, limites que a frase não diz, textos com maiúsculas e várias versões de um algoritmo | fora dos 120 min |
+| Para ires mais longe | Opcional: parênteses, contrários de condições com `e` e `ou`, limites que a frase não diz, textos com maiúsculas, várias versões de um algoritmo e os outros três casos do exercício 5 | fora dos 120 min |
 | Fluxograma do exercício 5 | Opcional, só quando o professor o indicar: desenhar o fluxograma do exercício 5 e seguir nele cada caso | fora dos 120 min |
 
 ## Exercício 1: Calcular comparações (10 min)
@@ -123,15 +123,15 @@ Neste exercício ainda não escreves o algoritmo. Preparas o que te vai permitir
 
 Concluíste quando cada ponta da árvore tiver pelo menos um caso na tabela e cada limite tiver os seus três casos.
 
-## Exercício 5: Escrever o algoritmo do pedido e segui-lo com cada caso (30 min)
+## Exercício 5: Escrever o algoritmo do pedido e segui-lo com quatro casos (30 min)
 
 Continuas o problema do exercício 4, com a tua árvore e a tua tabela ao lado. A matéria está nos passos 6, 9 e 10 do exemplo explicado.
 
 **a)** Escreve o algoritmo, em pseudocódigo ou em frases claras. O algoritmo lê primeiro a capacidade livre e depois a quantidade de caixas do pedido. Em pseudocódigo, usa uma constante para o número mínimo de caixas de um pedido, e faz a cadeia de `Se`, `Senão se` e `Senão` seguir a tua árvore, pergunta a pergunta. Em frases, segue a árvore pela mesma ordem, e confirma que cada frase diz os limites e o que acontece em cada caso, sem deixar dúvidas.
 
-**b)** Segue o teu algoritmo com cada um dos sete casos da tabela do exercício 4, numa tabela de resumo como a do passo 9 do exemplo explicado: para cada caso, o valor de cada condição avaliada, `true` ou `false`, o ramo executado e a mensagem que aparece no ecrã. Quando uma condição não chega a ser avaliada, escreve "não é avaliada". No fim, compara cada mensagem com a que a tua tabela espera, como no passo 10. Se algum caso não coincidir, diz qual é a condição responsável e corrige-a.
+**b)** Segue o teu algoritmo com quatro dos sete casos da tabela do exercício 4: com a capacidade livre de 40, os pedidos de 0, de 40 e de 41 caixas; e o caso da carrinha cheia, com capacidade livre 0 e um pedido de 1 caixa. Cada um destes quatro casos está junto de uma fronteira, e o da carrinha cheia é o único com outra capacidade livre. Usa uma tabela de resumo como a do passo 9 do exemplo explicado: para cada caso, o valor de cada condição avaliada, `true` ou `false`, o ramo executado e a mensagem que aparece no ecrã. Quando uma condição não chega a ser avaliada, escreve "não é avaliada". No fim, compara cada mensagem com a que a tua tabela espera, como no passo 10. Se algum caso não coincidir, diz qual é a condição responsável e corrige-a. Os outros três casos da tabela ficam para o Mais longe 6, que é opcional.
 
-Concluíste quando os sete casos chegarem, cada um por um só ramo, à mensagem que a tua tabela espera.
+Concluíste quando os quatro casos chegarem, cada um por um só ramo, à mensagem que a tua tabela espera.
 
 ## Apoio
 
@@ -159,7 +159,7 @@ O desafio muda uma regra de cada vez ao problema dos exercícios 4 e 5. Cada al�
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 120 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Cada exercício trata um caso que costuma enganar, e é por isso que não entrou na parte obrigatória. Os tempos são indicativos.
+Esta secção é opcional e fica fora dos 120 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os cinco primeiros exercícios tratam casos que costumam enganar, e é por isso que não entraram na parte obrigatória. O sexto acaba o exercício 5 com os casos que não couberam no tempo da ficha. Os tempos são indicativos.
 
 ### Mais longe 1: Parênteses que mudam o resultado (10 min)
 
@@ -281,13 +281,25 @@ Senão
 
 Pista: não tentes adivinhar o erro a olhar para o código. Faz o trace de cada versão com todos os casos da tua tabela e compara o resultado com o esperado, linha a linha. Uma versão sem `Senão` no fim pode não escrever nada para alguns valores. Para a versão D, escreve a condição do `não` sem o `não`, com a tabela dos contrários do guia, e compara-a com a que devia estar lá.
 
+### Mais longe 6: Os outros três casos do exercício 5 (6 min)
+
+A matéria está nos passos 9 e 10 do exemplo explicado do guia.
+
+Na alínea b) do exercício 5 seguiste o teu algoritmo com quatro dos sete casos da tabela do exercício 4. Ficaram de fora três, todos com a capacidade livre de 40: os pedidos de 1, de 2 e de 39 caixas.
+
+**a)** Segue o teu algoritmo com estes três casos, na mesma tabela de resumo do exercício 5: para cada caso, o valor de cada condição avaliada, `true` ou `false`, ou "não é avaliada", o ramo executado e a mensagem que aparece no ecrã.
+
+**b)** Compara cada mensagem com a que a tua tabela de casos esperados tem para esse caso. Se algum caso não coincidir, diz qual é a condição responsável e corrige-a.
+
+Pista: faz como no exercício 5. Calcula primeiro a condição do `Se`; só se ela der `false` é que calculas a do `Senão se`, e só se as duas derem `false` é que chegas ao `Senão`.
+
 ## Fluxograma do exercício 5 (só quando o professor o indicar)
 
 Esta parte é de fluxogramas e é opcional: só a fazes quando o professor o indicar, e fica fora dos 120 minutos da ficha. Não precisas dela para concluíres a ficha. A matéria está no passo 8 do exemplo explicado do guia e no [laboratório](03-decisoes-e-validacao-laboratorio.md). Os tempos são indicativos.
 
 **a) (10 min)** Desenha o fluxograma do teu algoritmo do exercício 5 no diagrams.net e guarda-o na pasta `algoritmos` como `fluxograma-aceitar-pedido.drawio`. Se fizeste o laboratório, não precisas de começar do zero: abre o `fluxograma-classificar-nota.drawio`, guarda uma cópia com o nome novo (Ficheiro, Guardar como...), muda os textos e acrescenta as figuras que faltam para a segunda leitura. Exporta a imagem em PNG, com o nome `fluxograma-aceitar-pedido.png`.
 
-**b) (5 min)** Segue com o dedo, no teu fluxograma, o caminho de cada um dos sete casos da tabela do exercício 4, como na parte 4 do laboratório. Para cada caso, escreve a mensagem a que chegaste e confirma que é a mesma da alínea b) do exercício 5.
+**b) (5 min)** Segue com o dedo, no teu fluxograma, o caminho de cada um dos sete casos da tabela do exercício 4, como na parte 4 do laboratório. Para cada caso, escreve a mensagem a que chegaste e confirma que é a mesma da tua tabela de casos esperados.
 
 Pista: conta as figuras antes de desenhar. Cada linha do pseudocódigo dá uma figura, tirando as linhas `const` e o `Senão`, e o Início e o Fim dão mais duas.
 
@@ -300,7 +312,7 @@ Pista: conta as figuras antes de desenhar. Cada linha do pseudocódigo dá uma f
 - [ ] Construí a reta, a árvore de casos e a tabela de casos esperados antes de escrever o algoritmo.
 - [ ] A minha tabela tem casos abaixo, no e acima de cada limite, e pelo menos um caso por cada ponta da árvore.
 - [ ] Pus a validação antes de usar os valores.
-- [ ] Segui o meu algoritmo com cada caso da minha tabela, e cada caso chegou, por um só ramo, à mensagem esperada.
+- [ ] Segui o meu algoritmo com os quatro casos do exercício 5, e cada um chegou, por um só ramo, à mensagem esperada.
 - [ ] Se o professor indicou a parte de fluxogramas, o meu fluxograma do exercício 5 tem os losangos com `Sim` e `Não`, e os ramos juntam-se antes do fim.
 
 ## Autoavaliação breve
