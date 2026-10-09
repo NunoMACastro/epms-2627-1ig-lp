@@ -12,7 +12,7 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-A06, UC00245-A07, UC0
 | --- | --- |
 | Material | M-ALG05, quinto e último bloco de Desenvolver algoritmos |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG05 |
-| Duração | 120 minutos dos 300 do bloco: 60 para a teoria e o exemplo deste guia e 60 para o checkpoint da última aula. Os outros 180 estão na [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) (60) e na avaliação prática individual (120) |
+| Duração | 150 minutos: 60 para a teoria e o exemplo deste guia, 30 para a parte das funções e 60 para o checkpoint da última aula. O resto está na [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) (99) e na avaliação prática individual (120). O bloco foi planeado com 300 minutos; com as funções, que entraram depois, passa a 369 |
 | Evidência a guardar | Portefólio com problema, pseudocódigo, testes e correções; o fluxograma, só se o professor o indicar |
 
 ## Objetivos
@@ -24,11 +24,13 @@ No final deste bloco, serás capaz de:
 - depurar um algoritmo com método: observar o erro, formular uma hipótese, verificá-la com o trace, corrigir a causa e voltar a testar tudo;
 - reconhecer os quatro erros mais frequentes dos blocos anteriores: a fronteira mal posta, a atualização esquecida, a inicialização no sítio errado e o ramo em falta;
 - melhorar um algoritmo sem mudar o que ele faz, contando os passos antes e depois da melhoria;
-- justificar uma solução completa que junta sequência, seleção e repetição, em pseudocódigo, e reconhecê-la num fluxograma.
+- justificar uma solução completa que junta sequência, seleção e repetição, em pseudocódigo, e reconhecê-la num fluxograma;
+- escrever uma função com parâmetros, chamá-la com argumentos e seguir a chamada no trace;
+- trocar uma parte repetida de um algoritmo por uma função, e mostrar com testes que ele continua a escrever o mesmo.
 
 ## O que precisas de saber antes
 
-Este é o último guia do percurso de algoritmos e usa tudo o que aprendeste nos quatro anteriores. Não traz nenhuma instrução nova: todas as palavras de pseudocódigo e todas as figuras de fluxograma deste guia já as conheces. O que traz de novo é uma forma de trabalhar com elas: como verificar que um algoritmo está certo, como encontrar um erro quando ele não está, e como o tornar mais simples sem o estragar.
+Este é o último guia do percurso de algoritmos e usa tudo o que aprendeste nos quatro anteriores. Só traz uma instrução nova, `Função`, que está numa parte própria, depois do exemplo explicado. Todas as outras palavras de pseudocódigo e todas as figuras de fluxograma deste guia já as conheces. O que traz de novo é sobretudo uma forma de trabalhar com elas: como verificar que um algoritmo está certo, como encontrar um erro quando ele não está, e como o tornar mais simples sem o estragar.
 
 Do [guia 01, Do problema ao algoritmo](01-do-problema-ao-algoritmo.md), vais usar o contrato de um problema: as respostas às quatro perguntas (entradas, saídas, restrições e condições), acompanhadas de exemplos concretos com o resultado esperado de cada um, calculado à mão. Vais usar também a ideia de estado, a fotografia dos valores num dado momento.
 
@@ -37,6 +39,8 @@ Do [guia 02, Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md), vai
 Do [guia 03, Decisões e validação](03-decisoes-e-validacao.md), vais usar as comparações (`==`, `!=`, `<`, `<=`, `>`, `>=`), em que `==` pergunta se dois valores são iguais, os operadores `e`, `ou` e `não`, a seleção com `Se`, `Senão se` e `Senão`, a indentação, que mostra que instruções estão dentro de cada ramo, a regra de que numa cadeia de `Senão se` a primeira condição verdadeira ganha, as ideias de intervalo, limite e validação de uma entrada, a regra de testar cada limite abaixo, em cima e acima, e as duas ferramentas desse guia: a árvore de casos e a tabela de casos esperados.
 
 Do [guia 04, Repetição e padrões](04-repeticao-e-padroes.md), vais usar o `Enquanto` e o `Para`, na forma `Para i de 1 até n`, com o corpo do ciclo indentado por baixo, as três peças de um ciclo (a inicialização, a condição e a atualização), a tabela de iterações, o caso zero, em que o ciclo não chega a ter nenhuma iteração, e os cinco padrões: o contador, o totalizador, a sentinela, com a leitura antecipada e a constante `SENTINELA`, a validação repetida, que volta a pedir um valor enquanto ele for inválido, e a flag, uma variável `bool` que começa `false` antes do ciclo e passa a `true` quando uma coisa acontece, para responder a "aconteceu alguma vez?".
+
+A parte das funções usa ainda as funções predefinidas do guia 02, `abs`, `arredondar`, `truncar` e `raiz`, e a palavra argumento, que esse guia usou para o valor que se lhes dá entre parênteses. E usa o `e` do guia 03, para juntar duas condições num intervalo, num dos exercícios da ficha.
 
 Se algum destes pontos te parecer pouco firme, volta ao guia onde ele está antes de continuares. Este guia não os explica outra vez desde o princípio: usa-os.
 
@@ -50,18 +54,23 @@ Como nos guias anteriores, os fluxogramas deste guia são para leres e compreend
 
 ## Como está organizado o tempo
 
-Este bloco tem 5 horas, ou seja 300 minutos, como os outros quatro. É diferente num ponto: 120 desses minutos são a avaliação prática individual que fecha a unidade de algoritmos. Por isso há menos tempo de aula para estudar do que nos blocos anteriores, e este guia foi escrito para ser lido também fora da aula, com calma.
+Este bloco foi planeado com 5 horas, ou seja 300 minutos, como os outros quatro. É diferente num ponto: 120 desses minutos são a avaliação prática individual que fecha a unidade de algoritmos. Por isso há menos tempo de aula para estudar do que nos blocos anteriores, e este guia foi escrito para ser lido também fora da aula, com calma.
+
+Depois de o bloco estar planeado, entraram nele as funções, que estão numa parte própria deste guia, depois do exemplo explicado, e a ficha ganhou três exercícios sobre elas, do 5 ao 7. Por isso o bloco passa os 300 minutos: as partes da tabela somam 369.
 
 | Parte | Onde está | Tempo |
 | --- | --- | ---: |
 | Teoria | Neste guia | 30 min |
 | Exemplo explicado | Neste guia | 30 min |
-| Prática autónoma | Na [ficha](05-testar-depurar-e-melhorar-exercicios.md) | 60 min |
+| Funções | Neste guia, depois do exemplo explicado | 30 min |
+| Prática autónoma | Na [ficha](05-testar-depurar-e-melhorar-exercicios.md), exercícios 1 a 4 | 60 min |
+| Prática das funções | Na [ficha](05-testar-depurar-e-melhorar-exercicios.md), exercícios 5 a 7 | 39 min |
 | Avaliação prática individual | Enunciado entregue pelo professor | 120 min |
 | Checkpoint, feedback e recuperação | Na última aula, com este guia e a avaliação corrigida | 60 min |
 | Desafio opcional | Na ficha, na última aula, para quem não precisar de recuperação | dentro dos 60 min anteriores |
+| Total | | 369 min |
 
-A ordem é esta: primeiro o guia, depois a ficha, depois a avaliação e, por fim, uma aula para veres o que correu bem e o que tens de rever. A avaliação está descrita no fim deste guia, para saberes desde já o que te vai ser pedido.
+A ordem é esta: primeiro o guia, depois a ficha, depois a avaliação e, por fim, uma aula para veres o que correu bem e o que tens de rever. A parte das funções e os exercícios 5 a 7 da ficha não dependem do resto do bloco, e podem fazer-se antes, se o professor assim o indicar. A avaliação está descrita no fim deste guia, para saberes desde já o que te vai ser pedido.
 
 ## Teoria (30 min)
 
@@ -724,9 +733,305 @@ Para este problema, o portefólio guarda o enunciado, o contrato, a tabela de ca
 | Correção | Acrescentada `stock = stock - quantidade` no ramo da venda aceite, indentada como as outras linhas do ramo. Rejeitada a correção do sintoma `stock = stock - vendidas` no fim, porque falha o caso 3 |
 | Novo teste | Os sete casos da tabela passam |
 
+## Funções: dar nome a uma parte do algoritmo (30 min)
+
+Esta é a única parte do guia com uma instrução nova, `Função`. Entrou neste bloco depois de ele estar planeado, e por isso está aqui, depois do exemplo do inventário, e não misturada com a teoria de testar e depurar. Não precisa do exemplo do inventário para ser lida: usa o que já sabes dos guias 02 a 04, e, mais à frente, a tabela de casos esperados e a ideia de equivalência da teoria deste guia. Se já escreveste funções nas aulas, esta parte arruma essa matéria e explica o que acontece por dentro de uma chamada.
+
+### Uma parte que se repete
+
+Ao fim do dia, a papelaria da escola faz a lista do stock de três artigos: cadernos, canetas e lápis. Para cada artigo, escreve uma linha com a quantidade que ficou e, se ficarem menos de 10 unidades, uma segunda linha a pedir a encomenda. Com o que já sabes, o algoritmo fica assim:
+
+```text
+const STOCK_MINIMO = 10
+Escreve: "Cadernos em stock?"
+int cadernos = ler valor
+Escreve: "Canetas em stock?"
+int canetas = ler valor
+Escreve: "Lápis em stock?"
+int lapis = ler valor
+Escreve: "Stock de cadernos: ", cadernos
+Se cadernos < STOCK_MINIMO
+    Escreve: "Encomendar cadernos"
+Escreve: "Stock de canetas: ", canetas
+Se canetas < STOCK_MINIMO
+    Escreve: "Encomendar canetas"
+Escreve: "Stock de lápis: ", lapis
+Se lapis < STOCK_MINIMO
+    Escreve: "Encomendar lápis"
+```
+
+O algoritmo está certo. Com 12 cadernos, 7 canetas e 25 lápis, escreve o stock dos três artigos e pede só a encomenda das canetas. Mas olha para as últimas nove linhas. São três blocos de três linhas, e os três fazem exatamente o mesmo trabalho: escrevem o stock de um artigo e, se for preciso, pedem a encomenda. De um bloco para o outro só mudam duas coisas: o nome do artigo, que aparece nos textos, e a variável que tem a quantidade.
+
+Repetir um bloco assim traz três problemas, e todos eles têm a ver com o que aprendeste neste guia.
+
+O primeiro é que os erros também se copiam. Se o primeiro bloco tivesse uma fronteira mal posta, um `<=` onde devia estar `<`, e o copiasses para os outros dois, ficavas com o mesmo erro em três sítios.
+
+O segundo é mudar. Se a papelaria decidir que a mensagem passa a ser "Encomendar já", há três linhas a alterar. Esquecer uma delas é um erro novo, que só aparece para um dos artigos e que um teste feito só com esse artigo nunca mostraria.
+
+O terceiro é testar. Para teres a certeza de que os três blocos estão certos, tens de os testar aos três, cada um com as suas fronteiras, porque cada um é uma cópia que pode ter ficado diferente das outras.
+
+A saída é escrever o bloco uma só vez, dar-lhe um nome e usá-lo três vezes, uma para cada artigo. Um bloco de instruções com nome, escrito uma vez e usado sempre que for preciso, chama-se **função**.
+
+Num livro de receitas acontece o mesmo. A receita do molho de tomate está escrita uma vez, numa página. As receitas de massa, de pizza e de almôndegas não a copiam: dizem "junta o molho de tomate da página 12". Quem cozinha vai à página 12, faz o molho e volta à receita onde estava. Se um dia o molho mudar, muda numa página só.
+
+### As funções que já conheces e as que vais escrever
+
+No guia 02 leste sobre as funções predefinidas: `abs`, `arredondar`, `truncar` e `raiz`. Cada uma tem um nome, recebe um valor entre parênteses, o argumento, e devolve um resultado, que se usa numa conta ou se guarda numa variável, como em `int desconto = arredondar(descontoExato)`.
+
+As funções que vais escrever agora têm duas coisas em comum com essas: um nome e valores entre parênteses. E são diferentes numa coisa importante: não dão nenhum resultado de volta. Fazem um trabalho, que nesta parte é sempre escrever no ecrã, e quando acabam o algoritmo continua onde estava. Por isso, uma chamada a uma das tuas funções não se põe numa conta nem do lado direito de um `=`. Escreve-se sozinha, numa linha, como uma instrução.
+
+Mais à frente vais aprender a escrever funções que, como as predefinidas, entregam um resultado a quem as chama. Por agora, as funções que escreves dizem o que têm a dizer no ecrã.
+
+### Escrever uma função
+
+Na forma que usamos nas aulas, uma função escreve-se assim:
+
+```text
+Função nome(parametro1, parametro2)
+    instruções da função
+```
+
+A primeira linha é o **cabeçalho**. Começa com a palavra `Função`, com maiúscula, como as outras palavras que abrem uma instrução, `Se`, `Enquanto` e `Para`. A seguir vem o nome da função e, entre parênteses, os **parâmetros**, separados por vírgulas. Os parâmetros são os nomes que a função dá aos valores que vai receber. Escrevem-se sem tipo: que valores a função espera, e de que tipo, diz-se no contrato da função, que vais ver mais à frente.
+
+Por baixo do cabeçalho, quatro espaços mais para dentro, está o **corpo** da função: as instruções que ela executa, uma por linha. Tal como no `Se` e no `Enquanto`, não há nenhuma palavra a fechar a função. É a indentação que diz onde ela acaba: a primeira linha que volta a ficar encostada à margem já não pertence à função.
+
+A função mais simples de todas não recebe nada:
+
+```text
+Função escreveCabecalho()
+    Escreve: "Papelaria da escola"
+    Escreve: "Stock ao fim do dia"
+```
+
+Os parênteses estão lá, vazios. Escrevem-se na mesma, porque são eles que mostram que `escreveCabecalho` é o nome de uma função e não de uma variável, e porque é entre eles que vão os valores, quando os há.
+
+O nome de uma função segue as regras dos nomes das variáveis do guia 02: começa com minúscula, não tem espaços nem acentos, e cada palavra a partir da segunda começa com maiúscula. Deve dizer o que a função faz, e como as funções desta parte fazem um trabalho, um verbo ajuda: `escreveCabecalho`, `mostraStock`, `escreveCaixas`. Um nome como `funcao1` ou `fazer` não diz nada a quem lê.
+
+Por último, o sítio. Num algoritmo com funções, as constantes vêm primeiro, depois as funções, e no fim o algoritmo principal, que é a parte que as usa. O **algoritmo principal** começa na primeira linha encostada à margem depois da última função. As linhas em branco entre as partes ajudam a ler e não mudam nada.
+
+### Chamar uma função
+
+Escrever uma função não a executa. A função fica à espera, como a receita do molho no livro. Só é executada quando alguém a **chama**, escrevendo o seu nome, com os parênteses, numa linha do algoritmo principal:
+
+```text
+Função escreveCabecalho()
+    Escreve: "Papelaria da escola"
+    Escreve: "Stock ao fim do dia"
+
+escreveCabecalho()
+Escreve: "Fim da lista"
+```
+
+Este algoritmo tem duas instruções no algoritmo principal: a chamada `escreveCabecalho()` e o último `Escreve:`. As três primeiras linhas são só a definição da função, e não fazem nada sozinhas. A primeira instrução executada é a chamada. Com ela, o algoritmo entra na função, escreve "Papelaria da escola" e "Stock ao fim do dia", e, como o corpo acabou, volta ao algoritmo principal e continua na linha a seguir à chamada, que escreve "Fim da lista". O ecrã fica com três linhas.
+
+Se a chamada aparecesse duas vezes, o cabeçalho era escrito duas vezes, e o ecrã ficava com cinco linhas. Se não aparecesse nenhuma vez, a função nunca era executada, e o ecrã ficava só com "Fim da lista".
+
+### Parâmetros e argumentos
+
+A função `escreveCabecalho` faz sempre o mesmo. A do stock tem de fazer o mesmo trabalho com valores diferentes em cada vez: o nome e a quantidade dos cadernos, depois os das canetas, depois os dos lápis. É para isso que servem os parâmetros:
+
+```text
+const STOCK_MINIMO = 10
+
+Função mostraStock(artigo, quantidade)
+    Escreve: "Stock de ", artigo, ": ", quantidade
+    Se quantidade < STOCK_MINIMO
+        Escreve: "Encomendar ", artigo
+```
+
+O corpo é um dos blocos repetidos do início, com duas mudanças: onde estava o nome de um artigo está agora o parâmetro `artigo`, e onde estava a variável com a quantidade está o parâmetro `quantidade`. Repara na indentação: o `Escreve:` e o `Se` estão quatro espaços para dentro, porque pertencem à função, e o `Escreve:` da encomenda está oito espaços para dentro, porque pertence ao `Se`, que está dentro da função.
+
+Para chamar esta função, dão-se valores entre parênteses, um para cada parâmetro: `mostraStock("canetas", 7)`. Os valores escritos numa chamada chamam-se **argumentos**. É a mesma palavra que o guia 02 usou para o valor que se dá a uma função predefinida, como o 2.6 em `arredondar(2.6)`.
+
+A diferença entre parâmetro e argumento é a diferença entre a etiqueta de uma caixa e o que se põe lá dentro. O parâmetro é o nome que está no cabeçalho, `quantidade`, e escreve-se uma vez. O argumento é o valor que se dá numa chamada, o 7, e muda de chamada para chamada. Muita gente usa a palavra argumentos para as duas coisas, e percebe-se pelo contexto. Neste guia ficam separadas, porque ajuda a explicar o que acontece numa chamada. Na receita, é como a linha "molho para N pessoas": o N é o parâmetro, e quando a usas para 4 pessoas, o 4 é o argumento.
+
+Um argumento pode ser um valor escrito diretamente, como `"canetas"` ou `7`, ou uma variável do algoritmo principal, como em `mostraStock("canetas", canetas)`. Quando é uma variável, o que passa para a função é o valor dela, e a variável não precisa de ter o mesmo nome do parâmetro: na chamada `mostraStock("canetas", canetas)`, o parâmetro `quantidade` recebe o valor que `canetas` tiver nesse momento.
+
+### O que acontece numa chamada
+
+Uma chamada executa-se sempre em três fases, por esta ordem:
+
+1. **Os argumentos passam para os parâmetros**, pela ordem em que estão escritos: o primeiro argumento vai para o primeiro parâmetro, o segundo para o segundo. Na chamada `mostraStock("canetas", 7)`, `artigo` fica com "canetas" e `quantidade` fica com 7.
+2. **O algoritmo entra na função** e executa o corpo, de cima para baixo, como qualquer outro algoritmo. Se o corpo tiver um `Se` ou um ciclo, funcionam como sempre.
+3. **Quando o corpo acaba**, isto é, depois da última linha indentada da função que for executada, o algoritmo regressa ao algoritmo principal e continua na linha a seguir à chamada.
+
+Cada chamada repete as três fases, com os seus argumentos. Nada passa de uma chamada para a seguinte: na segunda chamada, os parâmetros recebem valores novos, como se a função nunca tivesse sido usada.
+
+Com a função, o algoritmo do stock fica assim:
+
+```text
+const STOCK_MINIMO = 10
+
+Função mostraStock(artigo, quantidade)
+    Escreve: "Stock de ", artigo, ": ", quantidade
+    Se quantidade < STOCK_MINIMO
+        Escreve: "Encomendar ", artigo
+
+Escreve: "Cadernos em stock?"
+int cadernos = ler valor
+Escreve: "Canetas em stock?"
+int canetas = ler valor
+Escreve: "Lápis em stock?"
+int lapis = ler valor
+mostraStock("cadernos", cadernos)
+mostraStock("canetas", canetas)
+mostraStock("lápis", lapis)
+```
+
+Os três blocos de três linhas deram lugar a três chamadas de uma linha. Repara que os textos `"cadernos"`, `"canetas"` e `"lápis"` vão entre aspas, porque são textos, e que as variáveis `cadernos`, `canetas` e `lapis` vão sem aspas, porque o que interessa é o valor que têm. A variável `lapis` não tem acento, como todos os nomes de variáveis; o texto `"lápis"`, que é o que aparece no ecrã, tem.
+
+### O trace de uma chamada
+
+Uma chamada faz-se no trace com uma regra simples: o algoritmo principal tem a sua tabela, como sempre, e cada chamada tem uma tabela própria, com os parâmetros e as variáveis da função. Na tabela do algoritmo principal, a linha da chamada mostra o que a função escreveu no ecrã.
+
+O trace do algoritmo do stock, com 12 cadernos, 7 canetas e 25 lápis. Como no exemplo do inventário, a linha `const` não aparece. As linhas da função também não aparecem no início, porque escrever uma função não a executa: o trace começa no primeiro `Escreve:` do algoritmo principal.
+
+| Passo | Instrução executada | cadernos | canetas | lapis | Ecrã |
+| ---: | --- | ---: | ---: | ---: | --- |
+| 0 | antes de começar | sem valor | sem valor | sem valor | nada |
+| 1 | `Escreve: "Cadernos em stock?"` | sem valor | sem valor | sem valor | Cadernos em stock? |
+| 2 | `int cadernos = ler valor` | 12 | sem valor | sem valor | a funcionária escreve 12 |
+| 3 | `Escreve: "Canetas em stock?"` | 12 | sem valor | sem valor | Canetas em stock? |
+| 4 | `int canetas = ler valor` | 12 | 7 | sem valor | a funcionária escreve 7 |
+| 5 | `Escreve: "Lápis em stock?"` | 12 | 7 | sem valor | Lápis em stock? |
+| 6 | `int lapis = ler valor` | 12 | 7 | 25 | a funcionária escreve 25 |
+| 7 | `mostraStock("cadernos", cadernos)`: chamada 1 | 12 | 7 | 25 | Stock de cadernos: 12 |
+| 8 | `mostraStock("canetas", canetas)`: chamada 2 | 12 | 7 | 25 | Stock de canetas: 7 e Encomendar canetas |
+| 9 | `mostraStock("lápis", lapis)`: chamada 3 | 12 | 7 | 25 | Stock de lápis: 25 |
+
+A chamada 2, a do passo 8, em tabela própria:
+
+| Passo | Instrução executada | artigo | quantidade | Condição e resultado | Ecrã |
+| ---: | --- | --- | ---: | --- | --- |
+| 0 | os argumentos passam para os parâmetros | canetas | 7 | nenhuma | nada |
+| 1 | `Escreve: "Stock de ", artigo, ": ", quantidade` | canetas | 7 | nenhuma | Stock de canetas: 7 |
+| 2 | `Se quantidade < STOCK_MINIMO` | canetas | 7 | `7 < 10` dá `true` | nada |
+| 3 | `Escreve: "Encomendar ", artigo` | canetas | 7 | nenhuma | Encomendar canetas |
+
+Depois do passo 3, o corpo da função acabou, e o algoritmo regressa ao principal, ao passo 9. Repara em três coisas.
+
+A primeira é a linha 0 da tabela da chamada. As variáveis do algoritmo principal começam "sem valor", porque ainda não nasceram. Os parâmetros não: começam já com os argumentos, porque é isso que a fase 1 faz antes de a primeira linha do corpo ser executada.
+
+A segunda é que a tabela da chamada não tem as colunas `cadernos`, `canetas` e `lapis`, e a tabela principal não tem `artigo` nem `quantidade`. Cada tabela tem as variáveis da sua parte do algoritmo, e já vais ver porquê.
+
+A terceira é que a chamada 1 e a chamada 3 também teriam a sua tabela, com outros argumentos. Na chamada 1, `quantidade` recebe 12, e `12 < 10` dá `false`: o `Escreve:` da encomenda não é executado, e a chamada escreve uma só linha.
+
+### As variáveis da função são da função
+
+Os parâmetros e as variáveis que nascem dentro de uma função só existem enquanto a função está a ser executada. Nascem quando a chamada começa e desaparecem quando ela acaba. A estas variáveis chama-se **variáveis locais** da função.
+
+Isto quer dizer que uma variável com o mesmo nome dentro e fora de uma função são duas caixas diferentes, e mexer numa não mexe na outra. Neste exemplo, a função tem uma variável `caixas`, e o algoritmo principal tem outra, também chamada `caixas`:
+
+```text
+Função escreveCaixas(unidades, unidadesPorCaixa)
+    int caixas = unidades div unidadesPorCaixa
+    int soltas = unidades resto unidadesPorCaixa
+    Escreve: "Caixas completas: ", caixas
+    Escreve: "Unidades soltas: ", soltas
+
+int caixas = 5
+escreveCaixas(30, 12)
+Escreve: "Caixas no armazém: ", caixas
+```
+
+O ecrã fica assim:
+
+```text
+Caixas completas: 2
+Unidades soltas: 6
+Caixas no armazém: 5
+```
+
+Dentro da chamada, `caixas` é a variável local da função, que nasce com `30 div 12`, ou seja 2. Quando a chamada acaba, essa variável desaparece, e a última linha escreve a `caixas` do algoritmo principal, que nunca deixou de valer 5. É por isso que, no trace, cada chamada tem a sua tabela: são variáveis diferentes, mesmo quando têm o mesmo nome.
+
+Daqui sai uma regra das aulas: uma função só usa os seus parâmetros, as suas variáveis locais e as constantes. Tudo aquilo de que precisa recebe-o pelos parâmetros. As constantes são a exceção, porque se escrevem no início, antes das funções, e valem em todo o algoritmo: são regras do problema, como o `STOCK_MINIMO`, e não mudam. Uma função que fosse buscar uma variável do algoritmo principal, sem a receber, deixava de se poder perceber e testar sozinha, porque o que ela faz passava a depender de uma coisa que não está no seu cabeçalho.
+
+### A ordem dos argumentos conta
+
+Os argumentos passam para os parâmetros pela ordem, e não pelo nome. Numa função em que a ordem muda o resultado, trocar os argumentos dá outro resultado, sem nenhum aviso. Com a função `escreveCaixas` da secção anterior:
+
+```text
+escreveCaixas(30, 12)
+escreveCaixas(12, 30)
+```
+
+A primeira chamada põe 30 em `unidades` e 12 em `unidadesPorCaixa`, e escreve 2 caixas completas e 6 unidades soltas. A segunda põe 12 em `unidades` e 30 em `unidadesPorCaixa`: são 12 unidades em caixas de 30, e escreve 0 caixas completas e 12 unidades soltas. As duas contas estão certas, mas respondem a dois problemas diferentes, e só uma delas é o problema que querias. O algoritmo não se queixa: é um erro de lógica, como os da teoria deste guia. Quem chama uma função tem de saber a ordem dos parâmetros, e é por isso que o contrato da função a diz.
+
+### Testar uma função sozinha
+
+Uma função tem o seu próprio contrato, mais pequeno do que o do problema, e escreve-se em três linhas, por cima ou ao lado da função. O de `mostraStock` é este:
+
+- recebe: o nome do artigo, um texto, e a quantidade em stock, um inteiro igual ou maior do que zero, por esta ordem;
+- escreve: uma linha com o stock do artigo e, se a quantidade for menor do que `STOCK_MINIMO`, uma segunda linha a pedir a encomenda;
+- exemplo: `mostraStock("canetas", 7)` escreve "Stock de canetas: 7" e "Encomendar canetas".
+
+Com o contrato, a função testa-se sozinha, antes de ser usada no algoritmo completo, com o método da teoria: uma tabela de casos esperados, escrita antes de executar, em que as entradas são os argumentos e o resultado esperado é o que a função escreve no ecrã.
+
+| N.º | Tipo | Argumentos | Ecrã esperado | Porque foi escolhido |
+| ---: | --- | --- | --- | --- |
+| 1 | normal | `"cadernos"`, 25 | Stock de cadernos: 25 | Um artigo com stock folgado |
+| 2 | fronteira | `"canetas"`, 10 | Stock de canetas: 10 | O próprio mínimo, que não está abaixo de 10 |
+| 3 | fronteira | `"canetas"`, 9 | Stock de canetas: 9 e Encomendar canetas | Uma unidade abaixo do mínimo |
+| 4 | fronteira | `"lápis"`, 0 | Stock de lápis: 0 e Encomendar lápis | Um artigo esgotado, a menor quantidade que o contrato aceita |
+
+Para executar um caso, basta um algoritmo principal de uma linha, só com a chamada, por exemplo `mostraStock("canetas", 10)`, e o trace da chamada. Não é preciso ler nada nem ter as outras partes do algoritmo prontas.
+
+Testar as funções sozinhas é a decomposição do guia 01 levada até ao fim. Um problema grande parte-se em partes, cada parte é uma função com o seu contrato, e cada função testa-se com poucos casos. Quando se junta tudo e um teste falha, já se sabe que as funções estão certas, e o erro está na forma como foram chamadas: os argumentos, a ordem ou o sítio da chamada. Procurar um erro em três linhas de chamadas é muito mais rápido do que procurar em todo o algoritmo.
+
+### Trocar uma repetição por uma função
+
+Passar o algoritmo do stock da versão com três blocos para a versão com a função é uma melhoria, no sentido da teoria deste guia: o algoritmo tem de continuar a fazer exatamente o mesmo. Por isso a equivalência mostra-se das duas maneiras de sempre.
+
+Pelos testes: as duas versões, executadas com a mesma tabela de casos, escrevem exatamente o mesmo ecrã. Com 12 cadernos, 7 canetas e 25 lápis, as duas escrevem "Stock de cadernos: 12", "Stock de canetas: 7", "Encomendar canetas" e "Stock de lápis: 25", depois das três perguntas. Com 10 cadernos, 9 canetas e 0 lápis, que são as fronteiras, as duas escrevem "Stock de cadernos: 10", "Stock de canetas: 9", "Encomendar canetas", "Stock de lápis: 0" e "Encomendar lápis".
+
+Pela explicação: cada chamada executa exatamente as três linhas do bloco que substituiu, com `artigo` e `quantidade` a valerem o que estava escrito nesse bloco, e as chamadas estão pela mesma ordem dos blocos. Não há nenhuma entrada para a qual as duas versões possam escrever coisas diferentes.
+
+Esta melhoria não poupa passos. O algoritmo faz o mesmo trabalho, só que o escreve uma vez em vez de três, e por isso, neste bloco, não se contam passos de algoritmos com funções. O ganho é o outro de que falou a teoria: menos sítios onde errar. A mensagem "Encomendar" passa a estar escrita num sítio só, a fronteira `quantidade < STOCK_MINIMO` também, e a tabela de casos da secção anterior testa-as uma vez para os três artigos.
+
+Para saber o que vira parâmetro, compara os blocos repetidos, linha a linha, e marca o que muda de um para o outro. O que muda passa a ser um parâmetro, e o que é igual em todos os blocos fica escrito dentro da função. Neste exemplo mudavam duas coisas, o nome do artigo e a quantidade, e por isso a função tem dois parâmetros.
+
+### Erros frequentes com funções
+
+#### A função que nunca é chamada
+
+Uma função escrita e nunca chamada não faz nada. No algoritmo do stock, se faltassem as três últimas linhas, o algoritmo fazia as três perguntas e acabava, com o ecrã vazio de respostas. Não há nenhum aviso, porque escrever uma função sem a chamar não é proibido: é só inútil. Quando um algoritmo com funções não escreve o que devia, a primeira coisa a confirmar é se a função é mesmo chamada, e quantas vezes.
+
+#### Um argumento a menos
+
+Cada parâmetro precisa do seu argumento. Uma chamada como `mostraStock(cadernos)` dá um valor ao parâmetro `artigo` e nenhum à `quantidade`. Pior: dá a `artigo` o valor de `cadernos`, que é uma quantidade, porque os argumentos passam pela ordem. A função não pode ser executada assim. Uma chamada tem sempre tantos argumentos quantos os parâmetros do cabeçalho, pela mesma ordem.
+
+#### Uma linha da função encostada à margem
+
+É a indentação que diz que linhas pertencem à função. Aqui, o `Se` ficou encostado à margem:
+
+```text
+const STOCK_MINIMO = 10
+
+Função mostraStock(artigo, quantidade)
+    Escreve: "Stock de ", artigo, ": ", quantidade
+Se quantidade < STOCK_MINIMO
+    Escreve: "Encomendar ", artigo
+
+mostraStock("canetas", 7)
+```
+
+A função ficou só com o primeiro `Escreve:`. O `Se` passou a ser a primeira instrução do algoritmo principal, executada uma vez, logo no início, antes da chamada. E nesse momento não existe nenhuma variável `quantidade`: os parâmetros só existem dentro de uma chamada. O `Se` tem de estar indentado como o `Escreve:` de cima, e o `Escreve:` da encomenda oito espaços para dentro.
+
+#### A função que usa uma variável do algoritmo principal
+
+Na primeira vez que se escreve `mostraStock`, é fácil escrever `cadernos` em vez de `quantidade` no corpo, porque foi a partir do bloco dos cadernos que a função nasceu. Se a função fosse buscar a variável `cadernos`, em vez de usar o seu parâmetro, as três chamadas escreviam o stock dos cadernos, e o valor que cada chamada dá a `quantidade` nunca seria usado. E a função deixava de se poder testar sozinha: num algoritmo principal de uma linha, só com a chamada, não existe nenhuma variável `cadernos`. Dentro de uma função, só se usam os parâmetros, as variáveis locais e as constantes.
+
+#### A ordem dos argumentos trocada
+
+Está explicado na secção "A ordem dos argumentos conta". Quando um resultado não faz sentido, como "0 caixas completas" para uma encomenda grande, compara a chamada com o cabeçalho, argumento a argumento.
+
+#### `Função` escrito na chamada
+
+`Função` escreve-se só no cabeçalho, uma vez, quando a função é definida. A chamada é só o nome e os argumentos: `mostraStock("cadernos", cadernos)`, e não `Função mostraStock("cadernos", cadernos)`. Uma linha que começa por `Função` define uma função nova, e os parênteses de um cabeçalho levam nomes de parâmetros, e não valores.
+
 ## Erros comuns
 
-Estes são os erros de quem está a aprender a testar e a depurar, e não os erros dos algoritmos, que viste na teoria.
+Estes são os erros de quem está a aprender a testar e a depurar, e não os erros dos algoritmos, que viste na teoria. Os erros com funções estão no fim da parte das funções.
 
 | Sintoma | Como investigar | Como prevenir |
 | --- | --- | --- |
@@ -756,6 +1061,8 @@ Esta parte faz-se na última aula do bloco, depois da avaliação, mas lê-a já
 
 Testar é executar um algoritmo com casos escolhidos de propósito, normais, de fronteira e inválidos, e comparar o resultado obtido com o resultado esperado, que se escreve antes, a partir do contrato. Quando um teste falha, depura-se com método: observa-se o erro e reduz-se ao caso mínimo, formula-se uma hipótese, verifica-se com o trace, corrige-se a causa e não o sintoma, e volta-se a testar tudo. Um algoritmo certo pode ainda ser melhorado, desde que continue equivalente, e a melhoria mede-se contando passos antes e depois, com a mesma regra. Tudo isto se faz sobre algoritmos feitos de três estruturas, sequência, seleção e repetição, que se escrevem em pseudocódigo, ou em frases claras, e se podem representar em fluxograma. No pseudocódigo, é a indentação que mostra o que está dentro de cada decisão e de cada ciclo, e uma linha que muda de indentação muda o que o algoritmo faz.
 
+Uma parte de um algoritmo que se repete pode escrever-se uma só vez, como uma função, com `Função` e um nome, e com parâmetros para o que muda de vez para vez. A função só é executada quando é chamada: os argumentos passam para os parâmetros, pela ordem, o corpo é executado, e o algoritmo continua na linha a seguir à chamada. Os parâmetros e as variáveis da função são locais, e cada chamada tem a sua tabela no trace. Uma função testa-se sozinha, com a sua tabela de casos, e trocar uma repetição por uma função é uma melhoria que tem de manter o algoritmo equivalente.
+
 Confirma o que já consegues fazer:
 
 - [ ] Consigo escrever uma tabela de casos esperados, com casos normais, de fronteira e inválidos, antes de executar o algoritmo.
@@ -766,6 +1073,9 @@ Confirma o que já consegues fazer:
 - [ ] Consigo reconhecer os quatro erros frequentes e dizer que caso de teste revela cada um.
 - [ ] Consigo mostrar que duas versões de um algoritmo são equivalentes, com testes e com uma explicação.
 - [ ] Consigo contar os passos de um algoritmo com um ciclo, por partes, e comparar duas versões.
+- [ ] Consigo escrever uma função com parâmetros e chamá-la com os argumentos pela ordem certa.
+- [ ] Consigo fazer o trace de um algoritmo com chamadas, com uma tabela para cada chamada, e dizer o que aparece no ecrã.
+- [ ] Consigo trocar uma parte repetida por uma função, decidir o que vira parâmetro e mostrar com testes que o algoritmo escreve o mesmo.
 
 O checkpoint do bloco é resolver um caso novo e explicar a diferença entre antes e depois. Na última aula, o professor dá-te um caso que ainda não testaste para um dos algoritmos da tua avaliação ou do teu portefólio. Tens de o executar na versão com erro e na versão corrigida, dizer o que cada uma escreve e explicar a diferença pela instrução que mudou.
 
@@ -779,9 +1089,9 @@ Podes escrever os teus algoritmos em pseudocódigo, na forma que usamos nas aula
 
 ## A seguir
 
-A [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) ocupa 60 minutos do bloco e é onde praticas sozinho tudo o que está neste guia.
+A [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) ocupa 99 minutos do bloco, 60 nos exercícios 1 a 4 e 39 nos exercícios 5 a 7, das funções, e é onde praticas sozinho tudo o que está neste guia.
 
-Com este bloco termina o percurso de algoritmos. No próximo, começas a programar em Python, e os algoritmos e as tabelas de casos que escreveste aqui vão voltar: primeiro para os traduzir para uma linguagem que o computador executa, depois para os testar da mesma maneira. O método de depuração que aprendeste neste guia não muda quando o computador passa a executar por ti. Muda só quem faz o trace.
+Com este bloco termina o percurso de algoritmos. No próximo, começas a programar em Python, e os algoritmos e as tabelas de casos que escreveste aqui vão voltar: primeiro para os traduzir para uma linguagem que o computador executa, depois para os testar da mesma maneira. O método de depuração que aprendeste neste guia não muda quando o computador passa a executar por ti. Muda só quem faz o trace. As funções também voltam, no bloco das funções do Python, onde vais aprender as que entregam um resultado a quem as chama.
 
 ## Referências
 

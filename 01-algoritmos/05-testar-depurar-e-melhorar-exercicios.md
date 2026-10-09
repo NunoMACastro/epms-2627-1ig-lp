@@ -11,14 +11,14 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-A06, UC00245-A07, UC0
 | Identificação | Valor |
 | --- | --- |
 | Material | Ficha do bloco ALG05, acompanha o [guia](05-testar-depurar-e-melhorar.md) |
-| Tempo total | 60 minutos dos 300 do bloco, nos exercícios 1 a 4. O fecho do portefólio, com o contrato e o teste do algoritmo do exercício 4, faz-se na última aula do bloco. O desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 60 minutos |
+| Tempo total | 99 minutos: 60 nos exercícios 1 a 4 e 39 nos exercícios 5 a 7, das funções, que entraram no bloco depois de ele estar planeado. O fecho do portefólio, com o contrato e o teste do algoritmo do exercício 4, faz-se na última aula do bloco. O desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 99 minutos |
 | Entrega | A tabela de casos do exercício 1, o registo de depuração do exercício 2, a contagem de passos do exercício 3 e o exercício 4, que ficam no teu portefólio, juntamente com o contrato e a tabela de casos executada do fecho do portefólio e, se o professor o indicar, o fluxograma |
 
 ## Objetivos e conceitos necessários
 
-Vais praticar sozinho o que o guia deste bloco explica: escolher casos de teste antes de executar um algoritmo, encontrar um erro com o método de depuração, contar os passos de um algoritmo e melhorá-lo sem mudar o que ele faz, e, no fim, construir um algoritmo pequeno a partir de uma tabela de casos escrita antes dele. Testar esse algoritmo com a tabela fica para o fecho do portefólio, na última aula do bloco.
+Vais praticar sozinho o que o guia deste bloco explica: escolher casos de teste antes de executar um algoritmo, encontrar um erro com o método de depuração, contar os passos de um algoritmo e melhorá-lo sem mudar o que ele faz, e, no fim, construir um algoritmo pequeno a partir de uma tabela de casos escrita antes dele. Testar esse algoritmo com a tabela fica para o fecho do portefólio, na última aula do bloco. Nos exercícios 5 a 7 praticas a parte das funções do guia: ler uma função e as suas chamadas, escrever uma função a partir do seu contrato e trocar uma parte repetida por uma função.
 
-Antes de começares, deves ter lido a teoria e o exemplo explicado do [guia](05-testar-depurar-e-melhorar.md), incluindo os passos 9 e 10 do exemplo, que mostram como se melhora um algoritmo e como se contam os passos. Também deves conseguir fazer uma tabela de iterações, escrever uma cadeia de `Se` e `Senão se`, ler um `Para` e um ciclo com sentinela, e usar contadores e totalizadores: está tudo nos guias 02, 03 e 04. Cada exercício diz em que secção do guia 05 está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
+Antes de começares, deves ter lido a teoria e o exemplo explicado do [guia](05-testar-depurar-e-melhorar.md), incluindo os passos 9 e 10 do exemplo, que mostram como se melhora um algoritmo e como se contam os passos. Também deves conseguir fazer uma tabela de iterações, escrever uma cadeia de `Se` e `Senão se`, ler um `Para` e um ciclo com sentinela, e usar contadores e totalizadores: está tudo nos guias 02, 03 e 04. Para os exercícios 5 a 7, precisas da parte das funções do guia 05 e do intervalo com `e` do guia 03. Cada exercício diz em que secção do guia 05 está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
 
 Os algoritmos que a ficha te dá estão na forma de pseudocódigo das aulas, em que a indentação mostra o que está dentro de cada `Se`, de cada `Enquanto` e de cada `Para`. Quando fores tu a escrever um algoritmo, ou uma parte dele, podes usar essa forma ou frases claras, desde que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que conta é a lógica.
 
@@ -28,7 +28,9 @@ Material: papel e lápis. O diagrams.net, em `https://app.diagrams.net`, só é 
 
 Resolve os exercícios pela ordem. Nos dois primeiros aplicas o que o guia mostrou: no exercício 1 escolhes casos de teste e usas-os para testar um algoritmo curto, e no exercício 2 segues os quatro primeiros passos do método de depuração, um passo por alínea; o quinto, voltar a testar tudo, está no Mais longe 5, que é opcional. No exercício 3 decides: contas os passos de um algoritmo que já está certo e escreves uma versão que faz menos trabalho. No exercício 4 constróis um algoritmo pequeno do princípio ao fim, a partir da tabela de casos que escreves antes dele; testá-lo com essa tabela é a alínea c) do fecho do portefólio. Cada exercício treina uma coisa, e cada um usa o que os anteriores treinaram.
 
-Nenhum exercício é o exemplo do inventário com outros números. O exemplo mostra o caminho, e os exercícios pedem-te que o percorras noutros problemas.
+Os exercícios 5 a 7 são das funções e não dependem dos quatro primeiros. No exercício 5 lês uma função e as suas chamadas, no 6 escreves uma função a partir do contrato e no 7 trocas uma parte repetida por uma função. Se o professor o indicar, podes fazê-los antes dos outros, logo depois de leres a parte das funções do guia.
+
+Nenhum exercício é o exemplo do inventário, ou o exemplo do stock da parte das funções, com outros números. Os exemplos mostram o caminho, e os exercícios pedem-te que o percorras noutros problemas.
 
 | Exercício | O que treina | Tempo |
 | --- | --- | ---: |
@@ -36,10 +38,13 @@ Nenhum exercício é o exemplo do inventário com outros números. O exemplo mos
 | 2 | Depurar com os quatro primeiros passos do método: observar, formular uma hipótese, verificar com o trace e corrigir a causa | 13 min |
 | 3 | Contar passos e melhorar um algoritmo sem mudar o que ele faz | 12 min |
 | 4 | Construir um algoritmo pequeno a partir da tabela de casos escrita antes dele | 25 min |
-| Total da parte obrigatória | Exercícios 1 a 4 | 60 min |
+| 5 | Ler uma função e prever o que as suas chamadas escrevem | 10 min |
+| 6 | Escrever uma função a partir do seu contrato e chamá-la | 14 min |
+| 7 | Trocar uma parte repetida por uma função, sem mudar o que o algoritmo escreve | 15 min |
+| Total da parte obrigatória | Exercícios 1 a 7 | 99 min |
 | Fecho do portefólio | Contrato e teste do algoritmo do exercício 4, na última aula do bloco; o fluxograma, só quando o professor o indicar | 13 min, ou 25 com o fluxograma |
 | Desafio opcional | Mudar uma restrição de cada vez no algoritmo do exercício 4 | na última aula, para quem não precisar de recuperação |
-| Para ires mais longe | Opcional: mais uma fronteira no exercício 1, o caso mínimo e a correção do sintoma no exercício 2, a poupança de cada escalão no exercício 3, a validação no exercício 4 e o teste de regressão do exercício 2 | fora dos 60 min |
+| Para ires mais longe | Opcional: mais uma fronteira no exercício 1, o caso mínimo e a correção do sintoma no exercício 2, a poupança de cada escalão no exercício 3, a validação no exercício 4, o teste de regressão do exercício 2 e dois erros em funções | fora dos 99 min |
 
 ## Exercício 1: Escolher os casos antes de ver o algoritmo (10 min)
 
@@ -160,9 +165,91 @@ O cartão de cliente da papelaria dá pontos. Por cada compra, o cliente ganha 1
 
 Concluíste quando tiveres a tabela de casos, escrita antes do algoritmo, e o algoritmo. Testar o algoritmo com essa tabela é a alínea c) do fecho do portefólio.
 
+## Exercício 5: Ler uma função e as suas chamadas (10 min)
+
+A matéria está nas secções "Chamar uma função", "Parâmetros e argumentos", "O que acontece numa chamada" e "O trace de uma chamada" da parte das funções do guia.
+
+A loja online da papelaria escreve, para cada encomenda, o valor e os portes. As encomendas de 3000 cêntimos ou mais não pagam portes; as outras pagam 400 cêntimos.
+
+```text
+const LIMITE_GRATIS = 3000
+const PORTES = 400
+
+Função mostraPortes(numero, valorEncomenda)
+    Escreve: "Encomenda ", numero, ": ", valorEncomenda, " cêntimos"
+    Se valorEncomenda >= LIMITE_GRATIS
+        Escreve: "Portes grátis"
+    Senão
+        Escreve: "Portes: ", PORTES, " cêntimos"
+
+int valorPrimeira = 3500
+mostraPortes(1, valorPrimeira)
+mostraPortes(2, 2999)
+mostraPortes(3, 3000)
+```
+
+**a)** Sem fazeres o trace completo, escreve o ecrã que este algoritmo produz, linha a linha, pela ordem em que as linhas aparecem.
+
+**b)** Faz a tabela da chamada `mostraPortes(2, 2999)`, como a tabela da chamada 2 do guia: uma linha para os argumentos que passam para os parâmetros e uma linha por cada instrução executada, com colunas para `numero`, `valorEncomenda`, a condição e o seu resultado, e o ecrã.
+
+Concluíste quando o teu ecrã tiver as linhas das três chamadas pela ordem certa, e a tabela da chamada 2 mostrar que caminho a função seguiu.
+
+## Exercício 6: Escrever uma função a partir do contrato (14 min)
+
+A matéria está nas secções "Escrever uma função", "Parâmetros e argumentos" e "Testar uma função sozinha" da parte das funções do guia. O intervalo com `e` está no guia 03.
+
+A escola organiza uma visita de estudo para várias turmas. O autocarro tem 50 lugares, e a visita de uma turma só se confirma se houver pelo menos 15 alunos inscritos. Para cada turma, escreve-se uma linha com o número de inscritos e outra com a decisão. Este é o contrato da função que faz esse trabalho:
+
+- recebe: o nome da turma, um texto como `"10A"`, e o número de alunos inscritos, um inteiro igual ou maior do que zero, por esta ordem;
+- escreve: uma linha como "Turma 10C: 23 inscritos" e, numa segunda linha, "Visita confirmada" se a turma tiver pelo menos 15 inscritos e não mais do que os 50 lugares do autocarro, ou "Visita por confirmar" nos outros casos;
+- exemplo: `mostraVisita("10C", 23)` escreve "Turma 10C: 23 inscritos" e "Visita confirmada".
+
+**a)** Escreve a função `mostraVisita(turma, inscritos)`. Usa uma constante para o mínimo de inscritos e outra para os lugares do autocarro, escritas antes da função.
+
+**b)** Escreve o algoritmo principal, que chama a função para três turmas: a 10A, com 14 inscritos, a 10B, com 50, e a 10D, com 15.
+
+**c)** Escreve o ecrã que o teu algoritmo produz, com as linhas das três chamadas.
+
+Concluíste quando a tua função cumprir o contrato nas três chamadas, incluindo as duas turmas que estão em cima dos limites.
+
+## Exercício 7: Trocar a repetição por uma função (15 min)
+
+A matéria está nas secções "Uma parte que se repete" e "Trocar uma repetição por uma função" da parte das funções do guia, e na secção "Melhorar um algoritmo sem mudar o que ele faz" da teoria.
+
+No fim do dia, o bar da escola vê o que ficou por vender de três produtos e pede mais quando fica abaixo do mínimo de cada um. O algoritmo de que o bar se serve está certo, mas tem a mesma parte escrita três vezes:
+
+```text
+const MINIMO_SANDES = 5
+const MINIMO_SUMOS = 12
+const MINIMO_FRUTA = 8
+Escreve: "Sandes por vender?"
+int sandes = ler valor
+Escreve: "Sumos por vender?"
+int sumos = ler valor
+Escreve: "Peças de fruta por vender?"
+int fruta = ler valor
+Escreve: "Restam ", sandes, " sandes"
+Se sandes < MINIMO_SANDES
+    Escreve: "Pedir mais sandes"
+Escreve: "Restam ", sumos, " sumos"
+Se sumos < MINIMO_SUMOS
+    Escreve: "Pedir mais sumos"
+Escreve: "Restam ", fruta, " peças de fruta"
+Se fruta < MINIMO_FRUTA
+    Escreve: "Pedir mais peças de fruta"
+```
+
+**a)** Compara os três blocos do fim, linha a linha, e escreve numa frase tudo o que muda de um bloco para o outro.
+
+**b)** Escreve uma função que faz o trabalho de um bloco, e as três chamadas que substituem os três blocos. As constantes e as seis primeiras linhas do algoritmo principal ficam como estão.
+
+**c)** Mostra que a tua versão escreve o mesmo que a original. Num dia em que ficaram 5 sandes, 11 sumos e 7 peças de fruta, escreve as linhas que a versão original escreve depois das três perguntas, e as que a tua versão escreve, e confirma que são iguais.
+
+Concluíste quando a tua versão tiver uma função e três chamadas, e escrever, no dia da alínea c), exatamente as mesmas linhas que a original.
+
 ## Fecho do portefólio (última aula, 13 min, ou 25 com o fluxograma)
 
-As alíneas a) e c) não são opcionais, mas não contam para os 60 minutos da ficha: fazem-se na última aula do bloco, a mesma do checkpoint, porque juntam ao exercício 4 as duas peças que lhe faltam para ser o problema completo do teu portefólio, o contrato e os testes. Se acabares a ficha antes do fim da aula, podes fazer logo a alínea c). A alínea b) é de fluxogramas, e só a fazes quando o professor o indicar. A secção "O teu portefólio" do guia diz como organizar a pasta.
+As alíneas a) e c) não são opcionais, mas não contam para os 99 minutos da ficha: fazem-se na última aula do bloco, a mesma do checkpoint, porque juntam ao exercício 4 as duas peças que lhe faltam para ser o problema completo do teu portefólio, o contrato e os testes. Se acabares a ficha antes do fim da aula, podes fazer logo a alínea c). A alínea b) é de fluxogramas, e só a fazes quando o professor o indicar. A secção "O teu portefólio" do guia diz como organizar a pasta.
 
 **a)** Escreve o contrato do problema do exercício 4, com as respostas às quatro perguntas do guia 01: entradas, saídas, restrições e condições. Se encontrares alguma ambiguidade no enunciado, escreve a decisão que tomaste.
 
@@ -183,6 +270,12 @@ Usa estas pistas pela ordem em que aparecem, e só passa à seguinte se a anteri
 **Exercício 3.** Na alínea a), repara que cada iteração da versão dada avalia sempre os três `Se`, qualquer que seja o peso, e executa exatamente uma atualização: por isso todas as iterações têm o mesmo número de passos. Na alínea b), lembra-te da regra da cadeia de `Senão se`: quando o algoritmo chega à segunda condição, o que é que já sabe sobre o peso? Numa cadeia, o `Senão se` e o `Senão` ficam à mesma distância da margem que o primeiro `Se`, e cada atualização fica indentada por baixo da sua pergunta. Na alínea c), o `Senão` não avalia nenhuma condição, e por isso uma encomenda leve e uma pesada já não fazem o mesmo número de passos.
 
 **Exercício 4.** Decompõe antes de escrever: ler valores até ao 0 e, para cada compra, somar os pontos da compra e decidir o bónus. A estrutura é a do exemplo do inventário: inicialização do total, leitura antecipada, ciclo com sentinela e leitura no fim do corpo. Os pontos de uma compra calculam-se com uma operação do guia 02 que dá o número de vezes que 100 cabe no valor. Na tabela, calcula os pontos de uma compra de 1999 cêntimos e de uma de 2000: a diferença não é só de 1 ponto.
+
+**Exercício 5.** Faz as chamadas uma de cada vez e, antes de cada uma, escreve que valor recebe cada parâmetro. Na chamada 1, o argumento é uma variável: o que passa para a função é o valor dela. Na chamada 3, o valor é exatamente o do limite: lê o sinal da condição com atenção. Na alínea b), o `Senão` não avalia nenhuma condição, e por isso não tem linha própria na tabela: é a mesma razão por que não conta como passo, na secção "Contar passos" do guia.
+
+**Exercício 6.** O cabeçalho já está no enunciado. A primeira linha do corpo é um `Escreve:` com várias partes, como o de `mostraStock` no guia. Para a segunda, relê no guia 03 como se escreve um intervalo com `e`, e decide, a partir das palavras do contrato, se 15 e 50 ficam dentro ou fora do intervalo. Na alínea c), duas das três turmas estão em cima de um limite.
+
+**Exercício 7.** Na alínea a), sublinha em cada bloco tudo o que não é igual nos três. Cada coisa sublinhada vai ser um parâmetro, como na secção "Trocar uma repetição por uma função" do guia. Na alínea b), repara que o texto `" sandes"` tem um espaço antes da palavra: na função, o espaço fica escrito num texto, e a palavra vem de um parâmetro.
 
 ## Desafio opcional: mudar uma restrição de cada vez
 
@@ -210,7 +303,7 @@ No fim, compara as três mudanças: qual delas obrigou a acrescentar um ramo nov
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 60 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudar em casa antes da avaliação. Cada exercício continua um dos exercícios obrigatórios com um passo a mais. Os tempos são indicativos.
+Esta secção é opcional e fica fora dos 99 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudar em casa antes da avaliação. Cada exercício continua um dos exercícios obrigatórios com um passo a mais. Os tempos são indicativos.
 
 ### Mais longe 1: Corrigir e acrescentar uma fronteira (10 min)
 
@@ -274,6 +367,47 @@ O responsável do armazém já tinha escrito estes casos de teste, com o resulta
 
 Pista: no caso 2, o corpo do `Para` não chega a ser executado. Os dois `Escreve:` do fim mostram então os valores que as variáveis tinham antes do ciclo.
 
+### Mais longe 6: Dois erros em funções (10 min)
+
+Continua os exercícios 5 e 6. Cada um destes algoritmos tem um erro, e nenhum dos dois é um dos erros frequentes da parte das funções do guia. Para cada um:
+
+- diz o que acontece quando o algoritmo é executado, com as entradas indicadas;
+- diz qual é a linha com o erro e porquê;
+- corrige-o com uma única alteração.
+
+**a)** A funcionária escreve 6 quando o algoritmo pergunta pelas borrachas.
+
+```text
+const STOCK_MINIMO = 10
+
+Função mostraStock(artigo, quantidade)
+    Escreve: "Stock de ", artigo, ": ", quantidade
+    Se quantidade < STOCK_MINIMO
+        Escreve: "Encomendar ", artigo
+
+Escreve: "Borrachas em stock?"
+mostraStock("borrachas", borrachas)
+int borrachas = ler valor
+```
+
+**b)** Este algoritmo não lê nada.
+
+```text
+const MINIMO_ALUNOS = 15
+const LUGARES_AUTOCARRO = 50
+
+Função mostraVisita(turma, inscritos)
+    Escreve: "Turma ", turma, ": ", inscritos, " inscritos"
+    Se inscrito >= MINIMO_ALUNOS e inscrito <= LUGARES_AUTOCARRO
+        Escreve: "Visita confirmada"
+    Senão
+        Escreve: "Visita por confirmar"
+
+mostraVisita("10C", 23)
+```
+
+Pista: faz o trace, linha a linha, e para na primeira linha que usa uma variável que, nesse momento, ainda não tem valor ou não existe. Na alínea b), compara letra a letra os nomes do cabeçalho com os do corpo.
+
 ## Critérios de conclusão
 
 - [ ] Escrevi a tabela de casos do exercício 1 antes de ler o algoritmo.
@@ -283,6 +417,8 @@ Pista: no caso 2, o corpo do `Para` não chega a ser executado. Os dois `Escreve
 - [ ] No exercício 4, escrevi a tabela de casos antes do algoritmo e, no fecho do portefólio, executei-a toda.
 - [ ] No fecho do portefólio, escrevi o contrato do exercício 4 e, se o professor indicou o fluxograma, ele diz exatamente o mesmo que o algoritmo que escrevi, figura a figura.
 - [ ] Guardei no portefólio as versões com erro e as versões corrigidas, cada uma no seu ficheiro.
+- [ ] Nos exercícios 5 a 7, as minhas chamadas têm os argumentos pela ordem dos parâmetros, e a minha função do exercício 6 cumpre o contrato nas turmas que estão em cima dos limites.
+- [ ] No exercício 7, mostrei com as linhas do ecrã que a minha versão com a função escreve o mesmo que a original.
 
 ## Autoavaliação breve
 
