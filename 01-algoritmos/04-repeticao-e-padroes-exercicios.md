@@ -28,7 +28,7 @@ Quando um exercício te pedir para escrever instruções, podes escrevê-las em 
 
 Uma regra para todos os exercícios: quando te pedirem uma tabela de iterações, escreve primeiro o resultado que esperas, e só depois faz a tabela. Se só o escreveres depois, a tabela concorda sempre contigo e não te ensina nada.
 
-Os exercícios 1 a 10 são obrigatórios. Os exercícios 1 a 7 cabem nos 90 minutos da prática autónoma, e os exercícios 8 a 10 levam cerca de 35 minutos mais. No fim da ficha há o desafio e uma secção "Para ires mais longe", ambos opcionais, para quem terminar.
+Os exercícios 1 a 10 são obrigatórios. Os exercícios 1 a 7 cabem nos 90 minutos da prática autónoma, e os exercícios 8 a 10 levam mais 34 minutos. No fim da ficha há o desafio e uma secção "Para ires mais longe", ambos opcionais, para quem terminar.
 
 ## Exercício 1: Seguir um ciclo já escrito (10 min)
 
@@ -240,7 +240,7 @@ Escreve: precos[0], " ", precos[1], " ", precos[2], " ", precos[3]
 
 Concluíste quando o teu algoritmo escrever os preços novos de todos os artigos, com os que custavam 100 cêntimos ou menos iguais aos de hoje.
 
-## Exercício 10: Há alguma encomenda pesada? (12 min)
+## Exercício 10: Saber se há alguma encomenda pesada (12 min)
 
 As encomendas com mais de 10 kg só se levam com o carrinho. Os pesos das encomendas de hoje, em quilos, estão num array:
 
@@ -300,7 +300,7 @@ Concluíste quando o teu algoritmo passar os quatro casos, incluindo o do valor 
 
 ## Para ires mais longe
 
-Estes exercícios são opcionais e não contam para os 90 minutos. Cada um junta uma dificuldade que os exercícios obrigatórios deixaram de fora de propósito. Faz primeiro os exercícios 1 a 7, e escolhe depois os que quiseres, pela ordem que quiseres.
+Estes exercícios são opcionais e não contam para os 154 minutos da ficha. Cada um junta uma dificuldade que os exercícios obrigatórios deixaram de fora de propósito. Faz primeiro os exercícios 1 a 10, e escolhe depois os que quiseres, pela ordem que quiseres.
 
 ### Mais longe 1: Um ciclo que salta por cima da saída (15 min)
 

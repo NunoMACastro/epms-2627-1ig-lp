@@ -2,7 +2,7 @@
 
 # Algoritmos da aula de intervalos e validação
 
-Estes são os algoritmos mostrados na aula dos intervalos e da validação. A matéria está explicada no [guia das decisões](../../../01-algoritmos/03-decisoes-e-validacao.md), nas secções "Intervalos", "A reta com as regiões", "O contrário de um intervalo", "Fronteiras e casos de teste" e "Validar os dados antes de os usar", e no [guia da repetição](../../../01-algoritmos/04-repeticao-e-padroes.md), na secção "Padrão validação repetida".
+Estes são os algoritmos preparados para a aula dos intervalos e da validação. A matéria está explicada no [guia das decisões](../../../01-algoritmos/03-decisoes-e-validacao.md), nas secções "Intervalos", "A reta com as regiões", "O contrário de um intervalo", "Fronteiras e casos de teste" e "Validar os dados antes de os usar", e no [guia da repetição](../../../01-algoritmos/04-repeticao-e-padroes.md), na secção "Padrão validação repetida".
 
 São mais curtos do que os dos guias, e cada um mostra uma ideia só. Todos usam a mesma situação: um ar condicionado que aceita temperaturas de 16 a 30 graus, incluindo o 16 e o 30. Nos algoritmos 4, 5 e 6 há mais uma regra: a partir de 24 graus, incluindo o 24, o aparelho entra em modo económico.
 

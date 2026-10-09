@@ -226,7 +226,7 @@ Esta secção é opcional e fica fora dos 60 minutos da ficha. Não precisas de 
 
 Continua o exercício 1.
 
-**a)** Corrige o algoritmo `MarcarStock` com uma única alteração e volta a executar a tua tabela inteira.
+**a)** Corrige o algoritmo do exercício 1 com uma única alteração e volta a executar a tua tabela inteira.
 
 **b)** A loja acrescenta uma terceira marca: com 20 unidades ou mais, o artigo fica marcado "Excesso de stock". Sem escreveres o algoritmo, diz que casos novos a tua tabela precisa, com o resultado esperado de cada um.
 
@@ -236,7 +236,7 @@ Pista: na alínea b), apareceu uma fronteira nova. Quais são os dois valores qu
 
 Continua o exercício 2. A matéria está nas secções "Depurar com método" e "Corrigir a causa e não o sintoma" do guia.
 
-**a)** Executa a versão original de `EntregasDoDia` com uma só entrega, de 12 caixas. O erro aparece? Explica porquê, e diz qual é o caso mais pequeno que ainda mostra o erro no total.
+**a)** Executa a versão original do algoritmo das entregas, a do enunciado do exercício 2, com uma só entrega, de 12 caixas. O erro aparece? Explica porquê, e diz qual é o caso mais pequeno que ainda mostra o erro no total.
 
 **b)** Um colega propôs outra correção: deixar o ciclo como está e trocar o penúltimo `Escreve:` por `Escreve: "Total de caixas: ", totalCaixas * numeroEntregas`. Encontra um caso em que a proposta dele dá o total certo e outro em que dá o total errado. Explica, com as palavras causa e sintoma, por que razão esta proposta não corrige o erro.
 

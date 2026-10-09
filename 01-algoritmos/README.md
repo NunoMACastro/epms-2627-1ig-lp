@@ -20,7 +20,7 @@ Os fluxogramas são para saberes o que são e como se leem, e isso está explica
 
 Para os guias e as fichas bastam papel e caneta. Para a parte opcional dos fluxogramas vais precisar do diagrams.net, uma aplicação gratuita de desenho de diagramas que funciona no browser, em app.diagrams.net, sem criar conta. O laboratório da parte 02 ensina a usá-la desde o início.
 
-Os algoritmos mostrados nas aulas ficam nos exemplos. Já lá estão os da aula de [intervalos e validação](../exemplos/algoritmos/intervalos-e-validacao/README.md), das partes 03 e 04.
+Os algoritmos preparados para as aulas ficam nos exemplos. Já lá estão os preparados para a aula dos [intervalos e da validação](../exemplos/algoritmos/intervalos-e-validacao/README.md), das partes 03 e 04.
 
 [Voltar ao índice](../README.md)
 

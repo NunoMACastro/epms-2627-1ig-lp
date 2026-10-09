@@ -128,7 +128,7 @@ Esta é uma ordem: `total` passa a valer mais 5 do que valia. Um só sinal de ig
 Se total == 100
 ```
 
-Esta é uma pergunta: `total` vale 100? A resposta é `true` ou `false`, e **perguntar não muda nada**. Depois de avaliar `total == 100`, a variável `total` continua a valer exatamente o que valia antes. Só dar um valor, com um só `=`, muda o valor de uma variável.
+Esta é uma pergunta: `total` vale 100? A resposta é `true` ou `false`, e perguntar não muda nada. Depois de avaliar `total == 100`, a variável `total` continua a valer exatamente o que valia antes. Só dar um valor, com um só `=`, muda o valor de uma variável.
 
 Uma forma de nunca te enganares é a que o guia 02 já te deu: ler cada sinal em voz alta, sempre da mesma maneira. O `=` lê-se "recebe", e o `==` lê-se "é igual a?", com o ponto de interrogação. Se a frase que disseste for uma pergunta, precisas de dois sinais. Se for uma ordem, precisas de um.
 
@@ -402,13 +402,13 @@ Aqui o `não` é mesmo preciso. `pago` é uma variável `bool` e não uma compar
 
 Lê-se: o pedido não sai hoje se não estiver pago, ou se tiver chegado às 15 horas ou depois. Confirma com as quatro linhas da tabela do `e`. Na primeira linha, que era a única verdadeira, esta condição dá falso, porque `não pago` é falso e `10 >= 15` é falso. Nas outras três dá verdadeiro. Dá sempre o contrário, que era o que se queria.
 
-Do mesmo modo, a fila mantém uma só caixa quando **não** se cumpre `pessoasNaFila > 8 ou espera > 10`, isto é:
+Do mesmo modo, a fila mantém uma só caixa quando não se cumpre `pessoasNaFila > 8 ou espera > 10`, isto é:
 
 ```text
 pessoasNaFila <= 8 e espera <= 10
 ```
 
-Uma só caixa só chega se a fila for curta **e** andar depressa. Faz sentido: para manter uma caixa, as duas coisas têm de estar bem.
+Uma só caixa só chega se a fila for curta e andar depressa. Faz sentido: para manter uma caixa, as duas coisas têm de estar bem.
 
 ### Misturar `e` e `ou`
 
@@ -424,7 +424,7 @@ Experimenta com um pedido urgente, por pagar, que chegou às 10 horas: `pago` é
 - Na primeira forma, avalia-se primeiro o parêntese: falso `e` verdadeiro dá falso. Depois, falso `ou` verdadeiro dá verdadeiro. O pedido sai hoje, mesmo por pagar.
 - Na segunda forma, o parêntese é verdadeiro `ou` verdadeiro, que dá verdadeiro. Depois, falso `e` verdadeiro dá falso. O pedido não sai, porque não está pago.
 
-As mesmas três partes dão resultados diferentes conforme os parênteses. Qual das duas está certa? Depende do que o enunciado diz sobre os pedidos urgentes por pagar, e se o enunciado não disser, é uma ambiguidade que se pergunta a quem pediu o algoritmo. Por isso, nas aulas, fazemos sempre assim: **sempre que misturares `e` com `ou`, usa parênteses** para mostrar o que se avalia primeiro. Não custa nada, e evita que tu, ou quem ler o algoritmo, tenha de adivinhar.
+As mesmas três partes dão resultados diferentes conforme os parênteses. Qual das duas está certa? Depende do que o enunciado diz sobre os pedidos urgentes por pagar, e se o enunciado não disser, é uma ambiguidade que se pergunta a quem pediu o algoritmo. Por isso, nas aulas, fazemos sempre assim: sempre que misturares `e` com `ou`, usa parênteses para mostrar o que se avalia primeiro. Não custa nada, e evita que tu, ou quem ler o algoritmo, tenha de adivinhar.
 
 ### Intervalos
 
@@ -495,7 +495,7 @@ Uma fronteira é o sítio onde a resposta de um algoritmo muda: de um lado dá u
 
 Viste na secção dos operadores que `<` e `<=` dão o mesmo resultado para todos os valores menos um, o próprio limite. Com as senhas: `senha <= 40` e `senha < 40` dão o mesmo para 39, para 41, e para qualquer valor longe de 40. Só discordam no 40. Se testares um algoritmo com as senhas 20 e 50, nunca vais descobrir que escreveste o operador errado, porque para esses valores os dois operadores respondem o mesmo.
 
-Daí a regra para escolher os casos de teste de uma decisão: **para cada limite, testar o valor imediatamente abaixo, o próprio limite e o valor imediatamente acima**. Com números inteiros, os vizinhos são os valores a uma unidade de distância. Para o limite 40 das senhas, são o 39, o 40 e o 41. Para o limite 1, são o 0, o 1 e o 2.
+Daí a regra para escolher os casos de teste de uma decisão: para cada limite, testar o valor imediatamente abaixo, o próprio limite e o valor imediatamente acima. Com números inteiros, os vizinhos são os valores a uma unidade de distância. Para o limite 40 das senhas, são o 39, o 40 e o 41. Para o limite 1, são o 0, o 1 e o 2.
 
 Cada um destes três casos apanha um erro diferente:
 
@@ -817,7 +817,7 @@ Os primeiros erros desta secção são versões erradas do exemplo explicado. Pa
 
 ### Limiar sem o igual
 
-Se a condição de positiva for `nota > LIMIAR_POSITIVA`, a nota 10 aparece como negativa, quando o enunciado diz que é positiva. A entrada que demonstra o erro é o 10, e só o 10: com 9 e com 11 as duas versões dão o mesmo resultado. É o exemplo perfeito de um erro que só se encontra testando o valor do próprio limite.
+Se a condição de positiva for `nota > LIMIAR_POSITIVA`, a nota 10 aparece como negativa, quando o enunciado diz que é positiva. A entrada que demonstra o erro é o 10, e só o 10: com 9 e com 11 as duas versões dão o mesmo resultado. É um exemplo de erro que só se encontra testando o valor do próprio limite.
 
 A correção é voltar ao enunciado. "Igual ou superior" inclui o igual, e por isso o operador é `>=`.
 
@@ -874,7 +874,7 @@ Escrever `0 <= nota <= 20` parece-se com a Matemática, mas nas aulas não o faz
 
 ### Testar só valores do meio
 
-Quase todos os erros desta secção têm uma coisa em comum: não aparecem se testares só com notas como 5 e 15. Com essas duas notas, o limiar sem o igual, o igual no sítio errado, o `e` onde é preciso `ou`, o `ou` onde é preciso `e`, a ordem trocada e os dois `Se` separados dão todos o resultado certo. A exceção é o igual em vez de maior ou igual, que o 15 apanha por acaso, porque essa versão dá negativa a todas as notas acima de 10 menos uma. Um algoritmo testado apenas no meio das regiões parece quase sempre certo. Os casos de teste de uma decisão escolhem-se nos limites, e é aí que se encontram os erros.
+Quase todos os erros desta secção têm uma coisa em comum: não aparecem se testares só com notas como 5 e 15. Com essas duas notas, o limiar sem o igual, o igual no sítio errado, o `e` onde é preciso `ou`, o `ou` onde é preciso `e`, a ordem trocada e os dois `Se` separados dão todos o resultado certo. A exceção é o igual em vez de maior ou igual, que o 15 apanha por acaso, porque essa versão só dá positiva ao 10 e dá negativa a todas as notas válidas acima dele, o 15 incluído. Um algoritmo testado apenas no meio das regiões parece quase sempre certo. Os casos de teste de uma decisão escolhem-se nos limites, e é aí que se encontram os erros.
 
 ### Outros erros de escrita e de desenho
 

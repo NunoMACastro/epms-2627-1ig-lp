@@ -249,7 +249,7 @@ No passo 5 acontece o que é novo. O algoritmo acabou a última linha do corpo e
 
 No passo 11, a senha já vale 4. `4 <= 3` é falso. Pela regra 4, o corpo é saltado e o algoritmo continua na primeira linha a seguir ao corpo, no passo 12, onde escreve que a distribuição acabou.
 
-Conta agora as linhas do `Enquanto`: são quatro, nos passos 2, 5, 8 e 11. Três deram verdadeiro e uma deu falso. O corpo executou-se três vezes, portanto o ciclo teve três iterações. Isto é sempre assim num ciclo que termina: **há sempre mais um teste da condição do que iterações**, porque o último teste é o que dá falso e faz o ciclo parar.
+Conta agora as linhas do `Enquanto`: são quatro, nos passos 2, 5, 8 e 11. Três deram verdadeiro e uma deu falso. O corpo executou-se três vezes, portanto o ciclo teve três iterações. Isto é sempre assim num ciclo que termina: há sempre mais um teste da condição do que iterações, porque o último teste é o que dá falso e faz o ciclo parar.
 
 Repara também no valor final de `senha`: é 4, e não 3. O ciclo não para quando escreve a última senha. Para quando a senha ultrapassa a última, porque é só nessa altura que a condição fica falsa. É uma surpresa para muita gente e é uma pergunta frequente em testes: depois do ciclo, quanto vale a variável?
 
@@ -359,7 +359,7 @@ As primeiras linhas da tabela de iterações:
 | 4.º | 1 | `1 <= 3` dá `true` | escreve "Senha 1" |
 | 5.º | 1 | `1 <= 3` dá `true` | escreve "Senha 1" |
 
-E assim para sempre. Olha para a coluna `senha`: vale 1 em todos os testes. A fotografia do estado, tirada cada vez que o algoritmo chega ao `Enquanto`, é sempre igual. Como o corpo não lê nada e parte sempre do mesmo estado, faz sempre as mesmas coisas e volta sempre ao mesmo estado. A condição dá sempre verdadeiro, e o ecrã enche-se de "Senha 1". Num ciclo que não lê nada no corpo, **se a fotografia se repetir, o ciclo é infinito**.
+E assim para sempre. Olha para a coluna `senha`: vale 1 em todos os testes. A fotografia do estado, tirada cada vez que o algoritmo chega ao `Enquanto`, é sempre igual. Como o corpo não lê nada e parte sempre do mesmo estado, faz sempre as mesmas coisas e volta sempre ao mesmo estado. A condição dá sempre verdadeiro, e o ecrã enche-se de "Senha 1". Num ciclo que não lê nada no corpo, se a fotografia se repetir, o ciclo é infinito.
 
 Há outras três formas de chegar ao mesmo resultado, e todas se reconhecem pela mesma pergunta.
 
@@ -555,7 +555,7 @@ Com os mesmos dados:
 | 3.º | 3 | 800 | 800 | `3 <= 3` dá `true` | lê 2100 |
 | 4.º | 4 | 2100 | 2100 | `4 <= 3` dá `false` | o ciclo termina |
 
-Repara na primeira linha: como a inicialização saiu de antes do ciclo, o total ainda não tem valor no primeiro teste. Depois, em cada iteração, o total volta a zero antes de se somar o valor do dia, e por isso nunca guarda mais do que um dia. O algoritmo escreve "Total vendido: 2100 cêntimos", que são só as vendas do último dia. A regra a fixar: **o que se inicializa dentro do ciclo recomeça em cada iteração**. Os contadores e os totalizadores inicializam-se sempre antes do ciclo, sem indentação.
+Repara na primeira linha: como a inicialização saiu de antes do ciclo, o total ainda não tem valor no primeiro teste. Depois, em cada iteração, o total volta a zero antes de se somar o valor do dia, e por isso nunca guarda mais do que um dia. O algoritmo escreve "Total vendido: 2100 cêntimos", que são só as vendas do último dia. A regra a fixar: o que se inicializa dentro do ciclo recomeça em cada iteração. Os contadores e os totalizadores inicializam-se sempre antes do ciclo, sem indentação.
 
 Com um totalizador e um contador no mesmo ciclo consegues calcular médias: a soma a dividir pelo número de valores. Vais precisar de cuidado com o caso em que o contador fica em zero, porque não se pode dividir por zero.
 
@@ -711,11 +711,11 @@ Neste segundo caso, o ciclo nunca começa, e está certo: não há nada a corrig
 
 Este ciclo é diferente dos anteriores num ponto. O número de iterações não depende do algoritmo, depende da pessoa. Se ela escrever valores inválidos durante uma hora, o ciclo repete-se durante uma hora. Isso não é um ciclo infinito: o ciclo termina assim que aparecer um valor válido, e a atualização, a leitura, existe em todas as iterações.
 
-O mais útil deste padrão está no que acontece depois do ciclo, a partir da primeira linha sem indentação. Quando o algoritmo lá chega, a condição do ciclo acabou de dar falso, e por isso tens a certeza de que a quantidade está entre 1 e 50. O resto do algoritmo pode usá-la sem voltar a verificar. É uma ideia que vale para todos os ciclos: **depois de um ciclo, a sua condição é falsa**, e isso diz-te alguma coisa sobre o estado.
+O mais útil deste padrão está no que acontece depois do ciclo, a partir da primeira linha sem indentação. Quando o algoritmo lá chega, a condição do ciclo acabou de dar falso, e por isso tens a certeza de que a quantidade está entre 1 e 50. O resto do algoritmo pode usá-la sem voltar a verificar. É uma ideia que vale para todos os ciclos: depois de um ciclo, a sua condição é falsa, e isso diz-te alguma coisa sobre o estado.
 
 ### Escolher entre Enquanto e Para
 
-A escolha faz-se com uma pergunta: **antes de o ciclo começar, já se sabe quantas vezes ele se vai repetir?** Se sim, o ciclo é contado, e usa-se `Para`. Se não, porque o fim depende de alguma coisa que só acontece durante o ciclo, como um valor lido, usa-se `Enquanto`.
+A escolha faz-se com uma pergunta: "antes de o ciclo começar, já se sabe quantas vezes ele se vai repetir?" Se sim, o ciclo é contado, e usa-se `Para`. Se não, porque o fim depende de alguma coisa que só acontece durante o ciclo, como um valor lido, usa-se `Enquanto`.
 
 "Antes de o ciclo começar" é o momento em que o algoritmo chega ao ciclo, e não o momento em que escreves o algoritmo. É por isso que somar as vendas de um número de dias que o funcionário escreve no início, a terceira linha da tabela seguinte, usa `Para`: quando escreves o algoritmo não sabes quantos dias vão ser, mas quando o algoritmo chega ao ciclo esse número já foi lido.
 
@@ -1380,7 +1380,7 @@ Há uma diferença importante para o `Para i de 1 até n`: nesta forma és tu qu
 
 Experimenta sem olhar para trás: quantas vezes se repete o corpo de `Para i = 0, i < 5, i++`, que valores toma `i` dentro do corpo, e com que valor de `i` é feito o último teste? Depois escreve o mesmo ciclo com `Enquanto`. Confirma a seguir: o corpo repete-se 5 vezes, com `i` a valer 0, 1, 2, 3 e 4; o último teste é feito com `i` a valer 5, e `5 < 5` é falso. Com `Enquanto`, a inicialização é `int i = 0`, a condição é `Enquanto i < 5`, e a última linha do corpo, indentada, é `i = i + 1`.
 
-Mais tarde, quando trabalhares com textos e listas, vais conhecer uma terceira forma do `Para`, o "para cada", que percorre um a um os elementos de um texto ou de uma lista. Não faz parte desta unidade.
+Há ainda uma terceira forma do `Para`, o para cada, que já viste nas secções "Percorrer um array com o para cada" e "O para cada não muda o array". Percorre um a um os elementos de um array, sem índice e sem condição a escrever, e acaba sozinho quando os elementos se esgotam.
 
 ## A seguir
 

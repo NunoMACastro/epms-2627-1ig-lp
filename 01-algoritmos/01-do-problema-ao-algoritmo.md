@@ -156,7 +156,7 @@ Corrigir uma ambiguidade é quase sempre substituir o que é vago por um número
 
 Há um cuidado que não podes esquecer. Quando o enunciado não te dá a informação de que precisas, não inventes em silêncio. Pergunta a quem escreveu o enunciado. Se não for possível, toma uma decisão e escreve-a, para que quem ler a tua solução saiba em que pressuposto ela assenta. Uma decisão escrita pode ser discutida e mudada. Uma decisão tomada em silêncio só se descobre quando o resultado sai errado.
 
-A forma mais segura de encontrar ambiguidades não é reler o que escreveste, porque tu sabes o que querias dizer e a tua cabeça preenche as falhas sem dares por isso. É dar as instruções a outra pessoa e pedir-lhe que as execute exatamente como estão escritas, sem te perguntar nada. Cada vez que ela hesitar, ou fizer uma coisa diferente da que esperavas, encontraste uma ambiguidade. Vais fazer isto na prática guiada.
+Reler o que escreveste ajuda pouco a encontrar ambiguidades, porque tu sabes o que querias dizer e a tua cabeça preenche as falhas sem dares por isso. A forma mais segura é dar as instruções a outra pessoa e pedir-lhe que as execute exatamente como estão escritas, sem te perguntar nada. Cada vez que ela hesitar, ou fizer uma coisa diferente da que esperavas, encontraste uma ambiguidade. Vais fazer isto na prática guiada.
 
 ### O contrato do problema: entradas, saídas, restrições e condições
 
@@ -315,7 +315,7 @@ Tudo o que viste junta-se numa sequência de etapas, que vais seguir nos dois ex
 5. Simular os passos com os exemplos concretos, seguindo o estado numa tabela, e confirmar que os resultados batem certo com o contrato.
 6. Procurar ambiguidades, de preferência dando os passos a outra pessoa, e corrigi-las.
 
-As etapas não são uma escada que se sobe uma vez. É normal a simulação da etapa 5 mostrar que falta uma condição, e isso obriga a voltar à etapa 2 para a acrescentar ao contrato. Voltar atrás não é sinal de que fizeste mal. É assim que se constrói um algoritmo que funciona.
+As etapas seguem-se por ordem, mas muitas vezes é preciso voltar a uma etapa anterior. É normal a simulação da etapa 5 mostrar que falta uma condição, e isso obriga a voltar à etapa 2 para a acrescentar ao contrato. Voltar atrás é sinal de que estás a verificar o teu trabalho, e é assim que se constrói um algoritmo que funciona.
 
 ## Exemplos explicados (40 min)
 
@@ -390,7 +390,7 @@ Chamar o próximo:
 
 O terceiro subproblema, tratar a falta, acabou por caber dentro deste, nos passos 4 a 6, porque só acontece depois de uma chamada. Isto é normal: a decomposição é um plano, e ao escrever os passos percebe-se às vezes que duas partes vivem melhor juntas. O quarto, fechar o dia, não se escreve aqui, para o exemplo não ficar comprido. Experimenta escrevê-lo tu, em três ou quatro passos, e pergunta-te qual é a condição de paragem.
 
-Repara na ordem dos passos 1 e 3 de chamar o próximo: primeiro compara-se, só depois se muda o estado. Se o passo 1 somasse logo 1 e só a seguir se verificasse se havia alguém à espera, o número ficava gasto à mesma quando não havia ninguém, e a senha seguinte a ser entregue nunca chegaria a ser chamada. É um erro fácil de cometer e difícil de ver, e vais procurá-lo no checkpoint do fim deste guia.
+Lê com atenção os seis passos de chamar o próximo. No checkpoint do fim deste guia vais encontrar um algoritmo parecido que esconde um erro fácil de cometer e difícil de ver, e é com este que o vais comparar.
 
 #### Passo 4: simular com um caso concreto
 
@@ -673,7 +673,7 @@ Em voz alta, ao professor ou a um colega, explica por que razão uma receita que
 
 ### 2. Testa o algoritmo de um colega (10 min)
 
-Troca com um colega a sequência de cartões que ordenaste e corrigiste na prática guiada. Executa a dele literalmente, sem interpretar e sem lhe perguntar nada, e anota todos os pontos em que tiveste de adivinhar alguma coisa. Depois devolve-lhe a lista. Não é uma crítica: é a única forma de descobrir uma ambiguidade, porque quem escreveu tem a resposta na cabeça e não dá pela falta.
+Troca com um colega a sequência de cartões que ordenaste e corrigiste na prática guiada. Executa a dele literalmente, sem interpretar e sem lhe perguntar nada, e anota todos os pontos em que tiveste de adivinhar alguma coisa. Depois devolve-lhe a lista. Esta lista ajuda o teu colega: executar à letra o que outra pessoa escreveu é a única forma de descobrir uma ambiguidade, porque quem escreveu tem a resposta na cabeça e não dá pela falta.
 
 ### 3. Encontra o erro (10 min)
 
@@ -699,7 +699,7 @@ Evidência a guardar: a tua ficha de análise com as quatro perguntas, os exempl
 
 A [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md) deste bloco ocupa os restantes 120 minutos e é onde vais trabalhar sozinho.
 
-No bloco seguinte, [Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md), vais aprender a escrever algoritmos numa notação própria, o pseudocódigo, e a lê-los num desenho com figuras e setas, o fluxograma. O estado, que aqui foram números numa tabela, passa a ter nomes próprios, chamados variáveis: a última senha chamada da papelaria vai chamar-se `ultimaChamada`. E o contrato continua a ser o primeiro passo de todos os problemas: antes de escrever uma única instrução, vais sempre responder às quatro perguntas e escrever os exemplos.
+No bloco seguinte, [Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md), vais aprender a escrever algoritmos numa notação própria, o pseudocódigo, e a lê-los num desenho com figuras e setas, o fluxograma. O estado, que aqui foram números numa tabela, passa a ter nomes próprios, chamados variáveis: a senha que está a ser atendida na papelaria vai chamar-se `senhaAtual`, e o número de pessoas à espera, `pessoasAEspera`. E o contrato continua a ser o primeiro passo de todos os problemas: antes de escrever uma única instrução, vais sempre responder às quatro perguntas e escrever os exemplos.
 
 ## Referências
 

@@ -53,14 +53,14 @@ A figura nova deste laboratório é a Decision, o losango. As outras três já a
 
 1. Abre o browser e vai a `https://app.diagrams.net/?lang=pt`. O `?lang=pt` no fim do endereço pede a aplicação em português.
 2. A aplicação abre logo um diagrama em branco, chamado "Diagrama sem nome".
-3. Guarda-o já, antes de desenhares, para não perderes trabalho. Na barra de menus, no topo da aplicação, carrega em **Ficheiro** e depois em **Guardar como...**.
-4. No diálogo que aparece, no campo **Guardar como:**, escreve o nome `fluxograma-classificar-nota.drawio`.
-5. No campo **Onde:**, a aplicação sugere o Google Drive. Muda para **Aparelho**, para o ficheiro ficar no computador. Se a opção Aparelho não funcionar no teu computador, escolhe **Descarregar**, e o ficheiro vai para a pasta de transferências.
-6. Carrega em **Guardar** e escolhe a pasta `algoritmos`, onde guardaste os fluxogramas do laboratório 02.
+3. Guarda-o já, antes de desenhares, para não perderes trabalho. Na barra de menus, no topo da aplicação, carrega em "Ficheiro" e depois em "Guardar como...".
+4. No diálogo que aparece, no campo "Guardar como:", escreve o nome `fluxograma-classificar-nota.drawio`.
+5. No campo "Onde:", a aplicação sugere o Google Drive. Muda para "Aparelho", para o ficheiro ficar no computador. Se a opção "Aparelho" não funcionar no teu computador, escolhe "Descarregar", e o ficheiro vai para a pasta de transferências.
+6. Carrega em "Guardar" e escolhe a pasta `algoritmos`, onde guardaste os fluxogramas do laboratório 02.
 
-A partir daqui, sempre que quiseres guardar, usa Ctrl+S (Cmd+S no Mac), ou **Ficheiro** e **Guardar**, na barra de menus.
+A partir daqui, sempre que quiseres guardar, usa Ctrl+S (Cmd+S no Mac), ou "Ficheiro" e "Guardar", na barra de menus.
 
-**Se não vires a barra de menus.** Com o browser maximizado, num ecrã de computador, a aplicação mostra no topo a barra de menus, com Ficheiro, Editar, Visualização, Ordenar, Extras e Ajuda. Se a janela do browser for estreita, por exemplo se ocupar só metade do ecrã, a barra desaparece e o menu passa para um **botão redondo com reticências**, no canto superior direito. Maximiza a janela e a barra volta. Se não puderes, usa esse botão: tem as mesmas opções, e lá o **Exportar como** aparece logo ao lado do **Ficheiro**, em vez de estar dentro dele.
+**Se não vires a barra de menus.** Com o browser maximizado, num ecrã de computador, a aplicação mostra no topo a barra de menus, com Ficheiro, Editar, Visualização, Ordenar, Extras e Ajuda. Se a janela do browser for estreita, por exemplo se ocupar só metade do ecrã, a barra desaparece e o menu passa para um botão redondo com reticências, no canto superior direito. Maximiza a janela e a barra volta. Se não puderes, usa esse botão: tem as mesmas opções, e lá o "Exportar como" aparece logo ao lado do "Ficheiro", em vez de estar dentro dele.
 
 ## Parte 2: A primeira decisão (10 min)
 
@@ -177,7 +177,7 @@ Quando tiveres as nove linhas, responde na mesma folha a quatro perguntas:
 3. Todos os caminhos acabaram no Fim?
 4. Houve alguma nota fora da escala que chegasse ao segundo losango? Explica porquê com a regra da seleção encadeada que está no guia.
 
-Para terminar a parte 4, guarda o ficheiro `.drawio` e exporta a imagem. Na barra de menus, carrega em **Ficheiro**, depois em **Exportar como** e depois em **PNG...**. Abre-se a janela **Imagem**. Mantém as opções como estão, com a opção **Fundo Transparente** desligada, e carrega em **Exportar**. Se a aplicação te pedir um nome e um sítio, faz como na parte 7 do laboratório 02: o nome é `fluxograma-classificar-nota.png` e a pasta é a `algoritmos`, nunca o Google Drive nem o Navegador.
+Para terminar a parte 4, guarda o ficheiro `.drawio` e exporta a imagem. Na barra de menus, carrega em "Ficheiro", depois em "Exportar como" e depois em "PNG...". Abre-se a janela "Imagem". Mantém as opções como estão, com a opção "Fundo Transparente" desligada, e carrega em "Exportar". Se a aplicação te pedir um nome e um sítio, faz como na parte 7 do laboratório 02: o nome é `fluxograma-classificar-nota.png` e a pasta é a `algoritmos`, nunca o Google Drive nem o Navegador.
 
 ## Parte 5: Trabalho autónomo, a caixa de envio (15 min)
 
@@ -200,7 +200,7 @@ Escreve: "Pesagem concluída"
 
 Repara na última linha, `Escreve: "Pesagem concluída"`: está encostada à margem, alinhada com o `Se`, e não indentada dentro de nenhum ramo. Como volta à coluna do `Se` sem ser um `Senão se` nem um `Senão`, já está fora da cadeia, e executa-se depois de os ramos se juntarem, seja qual for o peso. É esta a diferença de estrutura em relação ao algoritmo da nota. Se a linha estivesse indentada, com quatro espaços, pertencia ao ramo do `Senão` e só aparecia com a caixa grande.
 
-1. Guarda uma cópia com outro nome: na barra de menus, **Ficheiro** e **Guardar como...**, escreve o nome `fluxograma-caixa-de-envio.drawio` e escolhe **Aparelho** e a pasta `algoritmos`. O ficheiro da nota fica guardado como estava, e passas a trabalhar no ficheiro novo, que por enquanto tem o mesmo desenho. Se preferires começar num diagrama em branco, usa antes **Ficheiro** e **Novo...**, como na parte 8 do laboratório 02, e guarda-o logo com esse nome.
+1. Guarda uma cópia com outro nome: na barra de menus, "Ficheiro" e "Guardar como...", escreve o nome `fluxograma-caixa-de-envio.drawio` e escolhe "Aparelho" e a pasta `algoritmos`. O ficheiro da nota fica guardado como estava, e passas a trabalhar no ficheiro novo, que por enquanto tem o mesmo desenho. Se preferires começar num diagrama em branco, usa antes "Ficheiro" e "Novo...", como na parte 8 do laboratório 02, e guarda-o logo com esse nome.
 2. Desenha o fluxograma deste pseudocódigo. Se aproveitares o desenho da nota e mudares os textos, confirma figura a figura que o desenho corresponde a este pseudocódigo, e não ao da nota. Os três ramos juntam-se no paralelogramo de "Pesagem concluída", e só depois se desce para o Fim.
 3. Copia esta tabela para a folha e segue com o dedo o caminho de cada peso, como na parte 4. Os pesos são o valor abaixo, o próprio limite e o valor acima de cada um dos dois limites do enunciado, o 0 e o 2000.
 

@@ -430,7 +430,7 @@ Numa sequência, a ordem importa. Uma instrução só pode usar valores que já 
 
 Há muitas formas de escrever pseudocódigo, e livros diferentes usam palavras diferentes. Nas aulas, e em todos os guias de algoritmos, usamos sempre a mesma: a que o professor usa no quadro. Se num livro ou num vídeo encontrares outra, não está errada: é outra maneira de escrever as mesmas ideias.
 
-#### Um vocabulário, não uma lei
+#### Um vocabulário comum, sem erros de sintaxe
 
 O pseudocódigo não é uma linguagem de programação. Nenhum computador o lê, e por isso não existe "erro de sintaxe" em pseudocódigo: uma linha escrita de outra maneira não faz o algoritmo parar. A forma das aulas é um **vocabulário**, um conjunto pequeno de palavras e de sinais que usamos sempre com o mesmo significado. Serve para duas coisas. A primeira é escreveres depressa, sem teres de inventar a cada linha uma maneira de dizer "mostra isto no ecrã". A segunda é toda a gente se entender: quando toda a turma escreve `Escreve:` para mostrar uma coisa no ecrã, ninguém tem de perguntar o que aquela linha faz.
 
@@ -489,7 +489,7 @@ Senão
     Escreve: "Recusado"
 ```
 
-A linha `Escreve: "Aceite"` tem quatro espaços à esquerda, e é isso que diz que ela pertence ao `Se`: só se executa quando a quantidade não passa do limite. A linha `Escreve: "Recusado"` tem o mesmo recuo por baixo do `Senão`, e pertence ao `Senão`. Não há nenhuma palavra a fechar os blocos: um bloco acaba quando aparece uma linha com menos recuo, ou quando o algoritmo acaba. É exatamente assim que o Python funciona. Em Python, a indentação não é enfeite: é ela que diz o que está dentro de quê.
+A linha `Escreve: "Aceite"` tem quatro espaços à esquerda, e é isso que diz que ela pertence ao `Se`: só se executa quando a quantidade não passa do limite. A linha `Escreve: "Recusado"` tem o mesmo recuo por baixo do `Senão`, e pertence ao `Senão`. Não há nenhuma palavra a fechar os blocos: um bloco acaba quando aparece uma linha com menos recuo, ou quando o algoritmo acaba. É exatamente assim que o Python funciona. Em Python, a indentação faz parte das regras da linguagem: é ela que diz o que está dentro de quê.
 
 A tabela seguinte reúne a forma toda, incluindo o que vais aprender nos guias 03 e 04. Essas linhas estão marcadas na última coluna, e ainda não as usas. Estão aqui para teres um único sítio de consulta durante todo o percurso de algoritmos.
 

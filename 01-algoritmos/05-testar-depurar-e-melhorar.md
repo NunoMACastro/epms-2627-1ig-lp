@@ -36,7 +36,7 @@ Do [guia 02, Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md), vai
 
 Do [guia 03, Decisões e validação](03-decisoes-e-validacao.md), vais usar as comparações (`==`, `!=`, `<`, `<=`, `>`, `>=`), em que `==` pergunta se dois valores são iguais, os operadores `e`, `ou` e `não`, a seleção com `Se`, `Senão se` e `Senão`, a indentação, que mostra que instruções estão dentro de cada ramo, a regra de que numa cadeia de `Senão se` a primeira condição verdadeira ganha, as ideias de intervalo, limite e validação de uma entrada, a regra de testar cada limite abaixo, em cima e acima, e as duas ferramentas desse guia: a árvore de casos e a tabela de casos esperados.
 
-Do [guia 04, Repetição e padrões](04-repeticao-e-padroes.md), vais usar o `Enquanto` e o `Para`, na forma `Para i de 1 até n`, com o corpo do ciclo indentado por baixo, as três peças de um ciclo (a inicialização, a condição e a atualização), a tabela de iterações, o caso zero, em que o ciclo não chega a ter nenhuma iteração, e os quatro padrões: o contador, o totalizador, a sentinela, com a leitura antecipada e a constante `SENTINELA`, e a validação repetida, que volta a pedir um valor enquanto ele for inválido.
+Do [guia 04, Repetição e padrões](04-repeticao-e-padroes.md), vais usar o `Enquanto` e o `Para`, na forma `Para i de 1 até n`, com o corpo do ciclo indentado por baixo, as três peças de um ciclo (a inicialização, a condição e a atualização), a tabela de iterações, o caso zero, em que o ciclo não chega a ter nenhuma iteração, e os cinco padrões: o contador, o totalizador, a sentinela, com a leitura antecipada e a constante `SENTINELA`, a validação repetida, que volta a pedir um valor enquanto ele for inválido, e a flag, uma variável `bool` que começa `false` antes do ciclo e passa a `true` quando uma coisa acontece, para responder a "aconteceu alguma vez?".
 
 Se algum destes pontos te parecer pouco firme, volta ao guia onde ele está antes de continuares. Este guia não os explica outra vez desde o princípio: usa-os.
 
@@ -85,7 +85,7 @@ Um **caso de teste** é um conjunto de entradas concretas, escolhidas de propós
 
 Um pseudocódigo não corre num computador. Por isso, neste percurso, executar um algoritmo é fazer o seu trace à mão, exatamente como aprendeste no guia 02. A este teste feito com papel e lápis chama-se **teste de mesa**. No próximo período, quando passares para Python, o computador vai executar por ti, mas a comparação entre o obtido e o esperado continua a ser tua.
 
-Repara numa coisa: um teste que falha não é uma má notícia. É uma informação que ainda não tinhas, e que apareceu num sítio onde não faz mal nenhum, no teu caderno, e não na caixa de uma loja a cobrar mal a um cliente. Um teste que falha no teste de mesa é um erro que já não chega a ninguém.
+Repara numa coisa: um teste que falha é útil. Traz-te uma informação que ainda não tinhas, e trá-la num sítio onde não faz mal nenhum, o teu caderno. Se o mesmo erro só aparecesse na caixa de uma loja, cobrava mal a um cliente. Um teste que falha no teste de mesa é um erro que já não chega a ninguém.
 
 ### O resultado esperado decide-se antes de executar
 
@@ -93,7 +93,7 @@ Esta regra parece um pormenor e é a mais importante do guia: o resultado espera
 
 Imagina que fazes o trace primeiro e que, no fim, o algoritmo diz "Stock final: 20". Olhas para o número e pensas: "sim, faz sentido, 20". O teu cérebro acabou de aceitar o resultado porque o viu escrito. Agora imagina que, antes do trace, tinhas escrito à parte, com base no enunciado, que o stock final devia ser 15. Quando aparecer o 20, a diferença salta à vista. O mesmo número, visto com uma previsão escrita ao lado, deixa de parecer normal.
 
-É por isso que, no guia 02, te foi pedido tantas vezes que previsses o resultado antes de fazer o trace. Não era um jogo de adivinhação. Era treino para esta regra.
+É por isso que, no guia 02, te foi pedido tantas vezes que previsses o resultado antes de fazer o trace. Essas previsões tinham um propósito: eram treino para esta regra.
 
 Há uma segunda razão. O resultado esperado vem do enunciado, e o enunciado é a única autoridade sobre o que o algoritmo deve fazer. Se calculares o esperado olhando para o algoritmo, estás a perguntar ao algoritmo se ele concorda consigo próprio, e ele concorda sempre. Se o enunciado não disser qual é o resultado de um caso, por exemplo o que acontece quando o stock fica exatamente no limite, isso é uma ambiguidade, como as que aprendeste a encontrar no guia 01. Decide-se, escreve-se a decisão no contrato, e só depois se escreve o resultado esperado.
 
