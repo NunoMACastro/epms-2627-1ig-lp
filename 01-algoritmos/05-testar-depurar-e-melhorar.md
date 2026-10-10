@@ -12,8 +12,8 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-A06, UC00245-A07, UC0
 | --- | --- |
 | Material | M-ALG05, quinto e último bloco de Desenvolver algoritmos |
 | Fundamento curricular | Unidade de competência UC00245, bloco ALG05 |
-| Duração | 150 minutos: 60 para a teoria e o exemplo deste guia, 30 para a parte das funções e 60 para o checkpoint da última aula. O resto está na [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) (99) e na avaliação prática individual (120). O bloco foi planeado com 300 minutos; com as funções, que entraram depois, passa a 369 |
-| Evidência a guardar | Portefólio com problema, pseudocódigo, testes e correções; o fluxograma, só se o professor o indicar |
+| Duração | Este guia acompanha o bloco inteiro: a teoria e o exemplo explicado são texto de estudo (cerca de 60 minutos de leitura) que vais usar nos projetos, e a parte das funções tem uma aula própria. O bloco tem ainda dois projetos feitos com o professor e a avaliação prática individual (120). A distribuição está em "Como está organizado o tempo" |
+| Evidência a guardar | Portefólio com os projetos 1 e 2: problema, pseudocódigo, testes e correções; o fluxograma, só se o professor o indicar |
 
 ## Objetivos
 
@@ -54,23 +54,21 @@ Como nos guias anteriores, os fluxogramas deste guia são para leres e compreend
 
 ## Como está organizado o tempo
 
-Este bloco foi planeado com 5 horas, ou seja 300 minutos, como os outros quatro. É diferente num ponto: 120 desses minutos são a avaliação prática individual que fecha a unidade de algoritmos. Por isso há menos tempo de aula para estudar do que nos blocos anteriores, e este guia foi escrito para ser lido também fora da aula, com calma.
+Este bloco fecha a unidade de algoritmos com três projetos, todos jogos, de dificuldade crescente. Os dois primeiros fazes com o professor, e servem para treinares o caminho completo de um problema: o contrato, a tabela de casos esperados antes do algoritmo, o algoritmo, os testes, a depuração e a melhoria. O terceiro é a avaliação prática individual, com um problema novo, maior do que os dos projetos. Os dois primeiros ficam no teu portefólio e podes consultá-los durante a avaliação.
 
-Depois de o bloco estar planeado, entraram nele as funções, que estão numa parte própria deste guia, depois do exemplo explicado, e a ficha ganhou três exercícios sobre elas, do 5 ao 7. Por isso o bloco passa os 300 minutos: as partes da tabela somam 369.
+Testar e depurar não têm uma aula só para eles, porque já os treinas em cada exercício. A teoria e o exemplo explicado deste guia são o texto onde está tudo explicado: lê-os com calma e volta a eles sempre que um passo dos projetos te deixar com dúvidas.
 
 | Parte | Onde está | Tempo |
 | --- | --- | ---: |
-| Teoria | Neste guia | 30 min |
-| Exemplo explicado | Neste guia | 30 min |
-| Funções | Neste guia, depois do exemplo explicado | 30 min |
-| Prática autónoma | Na [ficha](05-testar-depurar-e-melhorar-exercicios.md), exercícios 1 a 4 | 60 min |
-| Prática das funções | Na [ficha](05-testar-depurar-e-melhorar-exercicios.md), exercícios 5 a 7 | 39 min |
+| Funções | Neste guia, depois do exemplo explicado, e na [ficha](05-testar-depurar-e-melhorar-exercicios.md), exercícios 5 a 7 | 60 min, numa aula própria |
+| Projeto 1, duelo de dados | [Enunciado](05-projeto-1-duelo-de-dados.md), com o professor ao quadro | 60 min |
+| Projeto 2, adivinha o número | [Enunciado](05-projeto-2-adivinha-o-numero.md), em pares | 120 min |
 | Avaliação prática individual | Enunciado entregue pelo professor | 120 min |
 | Checkpoint, feedback e recuperação | Na última aula, com este guia e a avaliação corrigida | 60 min |
-| Desafio opcional | Na ficha, na última aula, para quem não precisar de recuperação | dentro dos 60 min anteriores |
-| Total | | 369 min |
+| Teoria e exemplo explicado | Neste guia, para estudares e usares nos projetos | cerca de 60 min de leitura |
+| Prática autónoma | Na [ficha](05-testar-depurar-e-melhorar-exercicios.md), exercícios 1 a 4, em casa ou quando acabares um projeto mais cedo | 60 min |
 
-A ordem é esta: primeiro o guia, depois a ficha, depois a avaliação e, por fim, uma aula para veres o que correu bem e o que tens de rever. A parte das funções e os exercícios 5 a 7 da ficha não dependem do resto do bloco, e podem fazer-se antes, se o professor assim o indicar. A avaliação está descrita no fim deste guia, para saberes desde já o que te vai ser pedido.
+A ordem é esta: a aula das funções e o projeto 1, por qualquer ordem; o projeto 2, depois da aula da validação repetida; a avaliação; e, por fim, uma aula para veres o que correu bem e o que tens de rever. A avaliação está descrita no fim deste guia, para saberes desde já o que te vai ser pedido.
 
 ## Teoria (30 min)
 
@@ -1046,7 +1044,7 @@ Estes são os erros de quem está a aprender a testar e a depurar, e não os err
 
 ## O teu portefólio
 
-O **portefólio** é a pasta onde juntas o trabalho que mostra o que aprendeste em algoritmos. É a entrega mínima deste bloco, e deve ter, para pelo menos um problema completo, quatro coisas: o problema (o enunciado e o contrato), o pseudocódigo (ou o algoritmo em frases claras, se foi assim que o escreveste), os testes (a tabela de casos esperados com os resultados obtidos) e as correções (as versões com erro, os registos de depuração e as versões corrigidas). Se o professor indicar a parte de fluxogramas, junta-se uma quinta: o fluxograma desenhado no diagrams.net. O problema completo deste bloco é o exercício 4 da ficha, e o registo de depuração é o do exercício 2.
+O **portefólio** é a pasta onde juntas o trabalho que mostra o que aprendeste em algoritmos. É a entrega mínima deste bloco, e deve ter, para cada um dos dois projetos que fazes com o professor, quatro coisas: o problema (o enunciado e o contrato), o pseudocódigo (ou o algoritmo em frases claras, se foi assim que o escreveste), os testes (a tabela de casos esperados com os resultados obtidos) e as correções (as versões com erro, os registos de depuração e as versões corrigidas). Se o professor indicar a parte de fluxogramas, junta-se uma quinta: o fluxograma desenhado no diagrams.net. Os problemas completos deste bloco são o [projeto 1](05-projeto-1-duelo-de-dados.md) e o [projeto 2](05-projeto-2-adivinha-o-numero.md). O exercício 4 da ficha, com o fecho do portefólio, e o registo de depuração do exercício 2 também podem lá ficar. O portefólio é consulta permitida na avaliação, e por isso vale a pena tê-lo arrumado.
 
 Algumas regras simples para o organizar:
 
@@ -1083,13 +1081,13 @@ Treina já com o inventário. Pega no caso em que o stock inicial é 12 e as qua
 
 ## A avaliação prática da unidade
 
-A avaliação prática é individual, dura 120 minutos e tem duas partes. Na primeira recebes um problema novo e fazes o que fizeste neste guia: o contrato, a tabela de casos esperados antes do algoritmo, o algoritmo e os testes, e ainda o fluxograma no diagrams.net, se o professor indicar que essa parte entra. Na segunda recebes um algoritmo que outra pessoa escreveu, com um erro que já foi observado: tens de o reproduzir, encontrar a causa, corrigi-la, voltar a testar e explicar a correção, e depois melhorar o algoritmo e comparar os passos antes e depois.
+A avaliação prática é individual, dura 120 minutos e tem duas partes. Na primeira recebes um problema novo e fazes o que fizeste nos projetos: o contrato, a tabela de casos esperados antes do algoritmo, o algoritmo e os testes, e ainda a leitura de um fluxograma que te é dado, que segues com valores e comparas com o enunciado. Na segunda recebes um algoritmo que outra pessoa escreveu para o mesmo problema, com um erro que já foi observado: tens de o reproduzir, encontrar a causa, corrigi-la, voltar a testar e explicar a correção, e depois melhorar o algoritmo e comparar os passos antes e depois.
 
-Podes escrever os teus algoritmos em pseudocódigo, na forma que usamos nas aulas, ou em frases claras, desde que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que se observa é a lógica: se o algoritmo resolve o problema, se o algoritmo e o fluxograma dizem a mesma coisa, quando houver fluxograma, se os testes foram bem escolhidos e se consegues explicar uma correção. Não se classifica a forma da escrita, a beleza do fluxograma nem a rapidez. As regras sobre o que podes consultar e sobre o uso de ferramentas de inteligência artificial vêm escritas no enunciado, e o professor mostra-te antes a grelha com os critérios. A melhor preparação é a ficha deste bloco, sobretudo os exercícios 2 e 4.
+Podes escrever os teus algoritmos em pseudocódigo, na forma que usamos nas aulas, ou em frases claras, desde que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que se observa é a lógica: se o algoritmo resolve o problema, se consegues seguir um fluxograma e dizer o que lhe falta, se os testes foram bem escolhidos e se consegues explicar uma correção. Não se classifica a forma da escrita, a beleza do fluxograma nem a rapidez. As regras sobre o que podes consultar e sobre o uso de ferramentas de inteligência artificial vêm escritas no enunciado, e o professor mostra-te antes a grelha com os critérios. A melhor preparação são os dois projetos, que seguem os mesmos passos, e a ficha deste bloco, sobretudo os exercícios 2 e 4. Os projetos ficam no teu portefólio e podes consultá-los durante a avaliação.
 
 ## A seguir
 
-A [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) ocupa 99 minutos do bloco, 60 nos exercícios 1 a 4 e 39 nos exercícios 5 a 7, das funções, e é onde praticas sozinho tudo o que está neste guia.
+O [projeto 1, duelo de dados](05-projeto-1-duelo-de-dados.md), é o primeiro dos três projetos, e fazes com o professor ao quadro. A [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) é onde praticas sozinho: os exercícios 5 a 7, das funções, fazem-se na aula das funções, e os exercícios 1 a 4 em casa ou quando acabares um projeto mais cedo.
 
 Com este bloco termina o percurso de algoritmos. No próximo, começas a programar em Python, e os algoritmos e as tabelas de casos que escreveste aqui vão voltar: primeiro para os traduzir para uma linguagem que o computador executa, depois para os testar da mesma maneira. O método de depuração que aprendeste neste guia não muda quando o computador passa a executar por ti. Muda só quem faz o trace. As funções também voltam, no bloco das funções do Python, onde vais aprender as que entregam um resultado a quem as chama.
 

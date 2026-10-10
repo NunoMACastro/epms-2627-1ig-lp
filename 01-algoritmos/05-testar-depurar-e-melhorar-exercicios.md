@@ -11,12 +11,12 @@ Requisitos: UC00245-R03, UC00245-R04, UC00245-R05, UC00245-A06, UC00245-A07, UC0
 | Identificação | Valor |
 | --- | --- |
 | Material | Ficha do bloco ALG05, acompanha o [guia](05-testar-depurar-e-melhorar.md) |
-| Tempo total | 99 minutos: 60 nos exercícios 1 a 4 e 39 nos exercícios 5 a 7, das funções, que entraram no bloco depois de ele estar planeado. O fecho do portefólio, com o contrato e o teste do algoritmo do exercício 4, faz-se na última aula do bloco. O desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 99 minutos |
-| Entrega | A tabela de casos do exercício 1, o registo de depuração do exercício 2, a contagem de passos do exercício 3 e o exercício 4, que ficam no teu portefólio, juntamente com o contrato e a tabela de casos executada do fecho do portefólio e, se o professor o indicar, o fluxograma |
+| Tempo total | 99 minutos: 60 nos exercícios 1 a 4 e 39 nos exercícios 5 a 7, das funções, que entraram no bloco depois de ele estar planeado. Os exercícios 5 a 7 fazem-se na aula das funções; os exercícios 1 a 4 são prática em casa ou para quando acabares um projeto mais cedo, porque o tempo de aula do bloco vai para os dois projetos feitos com o professor. O fecho do portefólio, o desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 99 minutos |
+| Entrega | O portefólio do bloco são os dois projetos feitos com o professor. Os exercícios desta ficha podem juntar-se-lhes: a tabela de casos do exercício 1, o registo de depuração do exercício 2, a contagem de passos do exercício 3 e o exercício 4, com o contrato e a tabela de casos executada do fecho do portefólio e, se o professor o indicar, o fluxograma |
 
 ## Objetivos e conceitos necessários
 
-Vais praticar sozinho o que o guia deste bloco explica: escolher casos de teste antes de executar um algoritmo, encontrar um erro com o método de depuração, contar os passos de um algoritmo e melhorá-lo sem mudar o que ele faz, e, no fim, construir um algoritmo pequeno a partir de uma tabela de casos escrita antes dele. Testar esse algoritmo com a tabela fica para o fecho do portefólio, na última aula do bloco. Nos exercícios 5 a 7 praticas a parte das funções do guia: ler uma função e as suas chamadas, escrever uma função a partir do seu contrato e trocar uma parte repetida por uma função.
+Vais praticar sozinho o que o guia deste bloco explica: escolher casos de teste antes de executar um algoritmo, encontrar um erro com o método de depuração, contar os passos de um algoritmo e melhorá-lo sem mudar o que ele faz, e, no fim, construir um algoritmo pequeno a partir de uma tabela de casos escrita antes dele. Testar esse algoritmo com a tabela fica para o fecho do portefólio, que é opcional. Nos exercícios 5 a 7 praticas a parte das funções do guia: ler uma função e as suas chamadas, escrever uma função a partir do seu contrato e trocar uma parte repetida por uma função.
 
 Antes de começares, deves ter lido a teoria e o exemplo explicado do [guia](05-testar-depurar-e-melhorar.md), incluindo os passos 9 e 10 do exemplo, que mostram como se melhora um algoritmo e como se contam os passos. Também deves conseguir fazer uma tabela de iterações, escrever uma cadeia de `Se` e `Senão se`, ler um `Para` e um ciclo com sentinela, e usar contadores e totalizadores: está tudo nos guias 02, 03 e 04. Para os exercícios 5 a 7, precisas da parte das funções do guia 05 e do intervalo com `e` do guia 03. Cada exercício diz em que secção do guia 05 está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
 
@@ -42,7 +42,7 @@ Nenhum exercício é o exemplo do inventário, ou o exemplo do stock da parte da
 | 6 | Escrever uma função a partir do seu contrato e chamá-la | 14 min |
 | 7 | Trocar uma parte repetida por uma função, sem mudar o que o algoritmo escreve | 15 min |
 | Total da parte obrigatória | Exercícios 1 a 7 | 99 min |
-| Fecho do portefólio | Contrato e teste do algoritmo do exercício 4, na última aula do bloco; o fluxograma, só quando o professor o indicar | 13 min, ou 25 com o fluxograma |
+| Fecho do portefólio, opcional | Contrato e teste do algoritmo do exercício 4, em casa ou quando acabares um projeto mais cedo; o fluxograma, só quando o professor o indicar | 13 min, ou 25 com o fluxograma |
 | Desafio opcional | Mudar uma restrição de cada vez no algoritmo do exercício 4 | na última aula, para quem não precisar de recuperação |
 | Para ires mais longe | Opcional: mais uma fronteira no exercício 1, o caso mínimo e a correção do sintoma no exercício 2, a poupança de cada escalão no exercício 3, a validação no exercício 4, o teste de regressão do exercício 2 e dois erros em funções | fora dos 99 min |
 
@@ -247,9 +247,9 @@ Se fruta < MINIMO_FRUTA
 
 Concluíste quando a tua versão tiver uma função e três chamadas, e escrever, no dia da alínea c), exatamente as mesmas linhas que a original.
 
-## Fecho do portefólio (última aula, 13 min, ou 25 com o fluxograma)
+## Fecho do portefólio (opcional, 13 min, ou 25 com o fluxograma)
 
-As alíneas a) e c) não são opcionais, mas não contam para os 99 minutos da ficha: fazem-se na última aula do bloco, a mesma do checkpoint, porque juntam ao exercício 4 as duas peças que lhe faltam para ser o problema completo do teu portefólio, o contrato e os testes. Se acabares a ficha antes do fim da aula, podes fazer logo a alínea c). A alínea b) é de fluxogramas, e só a fazes quando o professor o indicar. A secção "O teu portefólio" do guia diz como organizar a pasta.
+Os problemas completos do teu portefólio são os dois projetos do bloco. Este fecho é opcional: junta ao exercício 4 as duas peças que lhe faltam para ser mais um problema completo, o contrato e os testes, e é um bom treino antes da avaliação. Podes fazê-lo em casa ou quando acabares um projeto mais cedo. A alínea b) é de fluxogramas, e só a fazes quando o professor o indicar. A secção "O teu portefólio" do guia diz como organizar a pasta.
 
 **a)** Escreve o contrato do problema do exercício 4, com as respostas às quatro perguntas do guia 01: entradas, saídas, restrições e condições. Se encontrares alguma ambiguidade no enunciado, escreve a decisão que tomaste.
 
@@ -257,7 +257,7 @@ As alíneas a) e c) não são opcionais, mas não contam para os 99 minutos da f
 
 **c)** Testa o algoritmo do exercício 4: faz a tabela de iterações do teu caso normal e executa os outros casos da tua tabela. Acrescenta à tabela as colunas do resultado obtido e de se o teste passou. Se algum caso falhar, corrige o algoritmo com o método do guia, guarda a versão com erro e a versão corrigida, e volta a executar a tabela inteira.
 
-Concluíste quando o portefólio tiver, para o problema do exercício 4, o enunciado com o contrato, o algoritmo e a tabela de casos executada, com todos os casos a passar, e, ao lado, o registo de depuração do exercício 2. Se o professor tiver indicado a alínea b), o fluxograma também.
+Se fizeres este fecho, concluíste quando o portefólio tiver, para o problema do exercício 4, o enunciado com o contrato, o algoritmo e a tabela de casos executada, com todos os casos a passar, e, ao lado, o registo de depuração do exercício 2. Se o professor tiver indicado a alínea b), o fluxograma também.
 
 ## Apoio
 
@@ -414,8 +414,8 @@ Pista: faz o trace, linha a linha, e para na primeira linha que usa uma variáve
 - [ ] As minhas tabelas têm casos normais e os dois lados de cada fronteira pedida, casos inválidos quando o enunciado os prevê e, quando há um ciclo, o caso zero.
 - [ ] O meu registo de depuração do exercício 2 tem uma linha por cada passo do método que fiz: as quatro das alíneas e, se fiz o Mais longe 5, a do novo teste.
 - [ ] Contei os passos das duas versões do exercício 3 com a mesma regra e expliquei por que razão escrevem o mesmo.
-- [ ] No exercício 4, escrevi a tabela de casos antes do algoritmo e, no fecho do portefólio, executei-a toda.
-- [ ] No fecho do portefólio, escrevi o contrato do exercício 4 e, se o professor indicou o fluxograma, ele diz exatamente o mesmo que o algoritmo que escrevi, figura a figura.
+- [ ] No exercício 4, escrevi a tabela de casos antes do algoritmo e, se fiz o fecho do portefólio, executei-a toda.
+- [ ] Se fiz o fecho do portefólio, escrevi o contrato do exercício 4 e, se o professor indicou o fluxograma, ele diz exatamente o mesmo que o algoritmo que escrevi, figura a figura.
 - [ ] Guardei no portefólio as versões com erro e as versões corrigidas, cada uma no seu ficheiro.
 - [ ] Nos exercícios 5 a 7, as minhas chamadas têm os argumentos pela ordem dos parâmetros, e a minha função do exercício 6 cumpre o contrato nas turmas que estão em cima dos limites.
 - [ ] No exercício 7, mostrei com as linhas do ecrã que a minha versão com a função escreve o mesmo que a original.

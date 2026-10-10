@@ -14,6 +14,14 @@ São **25 horas**, repartidas por cinco partes de 5 horas cada.
 | 04 | Repetição e padrões | [guia](04-repeticao-e-padroes.md) | [laboratório](04-repeticao-e-padroes-laboratorio.md), opcional | [ficha](04-repeticao-e-padroes-exercicios.md) |
 | 05 | Testar, depurar e melhorar | [guia](05-testar-depurar-e-melhorar.md) | não tem | [ficha](05-testar-depurar-e-melhorar-exercicios.md) |
 
+A parte 05 fecha a área com três projetos, todos jogos, de dificuldade crescente. Os dois primeiros fazes com o professor, e ficam no teu portefólio; o terceiro é a avaliação prática individual, com um problema novo.
+
+| Projeto | Como se faz | Enunciado |
+| --- | --- | --- |
+| 1, duelo de dados | Com o professor ao quadro | [projeto 1](05-projeto-1-duelo-de-dados.md) |
+| 2, adivinha o número | Em pares, com o professor a confirmar cada passo | [projeto 2](05-projeto-2-adivinha-o-numero.md) |
+| 3, avaliação prática | Individual | entregue pelo professor no dia |
+
 Cada parte tem um guia, para ler e trabalhar em aula, e uma ficha de exercícios, para fazeres sozinho. Os guias trazem exemplos explicados até ao fim; as fichas trazem só os enunciados, porque a ideia é tentares antes de veres como se faz. As resoluções são trabalhadas em aula com o professor.
 
 Os fluxogramas são para saberes o que são e como se leem, e isso está explicado nos guias. Desenhá-los é uma parte opcional, que só fazes quando o professor o indicar: os laboratórios das partes 02, 03 e 04, com os passos a seguir no computador para desenhares fluxogramas na aplicação, e as partes das fichas assinaladas como de fluxogramas. Nenhum exercício obrigatório precisa delas.
