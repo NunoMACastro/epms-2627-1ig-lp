@@ -534,12 +534,12 @@ Uma atribuição que usa uma função predefinida, como `int desconto = arredond
 
 A linha da constante, como `const UNIDADES_POR_CAIXA = 12`, não tem figura. Não é uma ação que o algoritmo faça com os dados: é uma regra do problema, que vale do princípio ao fim, como se já lá estivesse antes de o algoritmo começar. Numa receita, a lista dos ingredientes também não é um dos passos da preparação.
 
-O fluxograma tem sempre um oval de Início e pelo menos um de Fim, embora o pseudocódigo não tenha essas palavras. No texto não fazem falta, porque se começa a ler na primeira linha e se acaba na última. No desenho fazem, porque as figuras podem estar espalhadas pela página e as setas podem ir para qualquer lado, e quem olha tem de saber onde o percurso começa e onde acaba.
+O fluxograma tem sempre um oval de Início e um só oval de Fim, embora o pseudocódigo não tenha essas palavras. No texto não fazem falta, porque se começa a ler na primeira linha e se acaba na última. No desenho fazem, porque as figuras podem estar espalhadas pela página e as setas podem ir para qualquer lado, e quem olha tem de saber onde o percurso começa e onde acaba. Mesmo quando, a partir do guia 03, o percurso se dividir em caminhos diferentes, os caminhos voltam a juntar-se antes do Fim, e o Fim continua a ser um só.
 
 Um fluxograma bem feito cumpre sempre estas regras:
 
 - tem um único início;
-- tem pelo menos um fim;
+- tem um único fim;
 - todas as figuras estão ligadas por setas, e nenhuma seta fica pendurada sem destino;
 - cada figura tem uma só instrução, escrita como no pseudocódigo, para os dois se poderem comparar linha a linha.
 
@@ -847,7 +847,7 @@ Para 24 alunos e para 12 alunos não precisas de repetir o trace completo. Escre
 | Usar 12 escrito à mão em vez da constante | Procura o mesmo número repetido em sítios diferentes | Dá nome aos valores fixos e usa o nome |
 | Ficar parado por não saber como se escreve uma linha em pseudocódigo | Pergunta-te o que essa linha tem de fazer, por palavras tuas | Escreve-a em frases claras, sem ambiguidade, e segue em frente: o que conta é a lógica |
 | Preencher o trace com o que se esperava | Refaz a linha com a conta que está escrita, e não com a que querias | Executa sempre à letra, com os valores da linha de cima |
-| Fluxograma com seta sem destino, ou figura com a forma errada | Segue o percurso com o dedo, do início até ao fim | Um início, pelo menos um fim, todas as figuras ligadas, leituras e `Escreve:` em paralelogramos |
+| Fluxograma com seta sem destino, ou figura com a forma errada | Segue o percurso com o dedo, do início até ao fim | Um início, um só fim, todas as figuras ligadas, leituras e `Escreve:` em paralelogramos |
 | Fluxograma e pseudocódigo diferentes | Compara figura a figura com instrução a instrução | Escreve um, desenha o outro a seguir, e verifica logo |
 
 ## Consolidação (60 min)
