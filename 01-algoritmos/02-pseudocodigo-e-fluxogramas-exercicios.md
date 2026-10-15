@@ -41,7 +41,7 @@ O que entregas:
 
 A matéria está na secção "Tipos de dados" do guia.
 
-Diz que tipo de dados usarias para guardar cada um destes valores, `int`, `float`, `string` ou `bool`. Justifica cada escolha numa frase que fale do que vais fazer com o valor. Um exemplo, para a temperatura de uma sala, como 21,5 graus: "`float`, porque vou fazer contas com ela, como a média do dia, e a parte decimal conta".
+Diz que tipo de dados usarias para guardar cada um destes valores, `int`, `float`, `string` ou `bool`. Justifica cada escolha numa frase que fale do que vais fazer com o valor. Um exemplo é a temperatura de uma sala, como 21,5 graus. A justificação pode ser esta: "`float`, porque vou fazer contas com ela, como a média do dia, e a parte decimal conta".
 
 **a)** O número de alunos inscritos numa visita de estudo.
 

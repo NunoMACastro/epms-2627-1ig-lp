@@ -201,7 +201,7 @@ Um algoritmo pergunta "Tem cartão de cliente? (S/N)" e guarda a resposta na var
 
 **c)** Calcula a tua condição de resposta inválida para `"S"`, `"N"`, `"s"` e `"X"`.
 
-**d)** A papelaria dá desconto a quem tiver cartão de cliente ou a quem comprar pelo menos 20 unidades do mesmo artigo. Escreve a condição de desconto, com as variáveis `cartao` e `quantidade`, e calcula-a para estes quatro casos: 19 unidades com `"N"`, 20 com `"N"`, 19 com `"S"` e 20 com `"S"`.
+**d)** A papelaria dá desconto a quem tiver cartão de cliente ou a quem comprar pelo menos 20 unidades do mesmo artigo. Escreve a condição de desconto, com as variáveis `cartao` e `quantidade`. Depois calcula-a para estes quatro casos: 19 unidades com `"N"`, 20 com `"N"`, 19 com `"S"` e 20 com `"S"`.
 
 Pista: na alínea b), quantas respostas são válidas? Para a inválida, usa a regra do fim da secção "Operador `não`" do guia.
 

@@ -461,7 +461,7 @@ Quando uma condição tem `e` e `ou` ao mesmo tempo, a ordem por que se avaliam 
 pago e (hora < 15 ou urgente)
 ```
 
-Antes de leres a explicação, tenta prever o que dá cada forma com um pedido urgente, por pagar, que chegou às 10 horas: `pago` é falso, `hora < 15` é verdadeiro e `urgente` é verdadeiro.
+Antes de leres a explicação, tenta prever o que dá cada forma com um pedido urgente, por pagar, que chegou às 10 horas. Nesse pedido, `pago` é falso, `hora < 15` é verdadeiro e `urgente` é verdadeiro.
 
 - Na primeira forma, avalia-se primeiro o parêntese: falso `e` verdadeiro dá falso. Depois, falso `ou` verdadeiro dá verdadeiro. O pedido sai hoje, mesmo por pagar.
 - Na segunda forma, o parêntese é verdadeiro `ou` verdadeiro, que dá verdadeiro. Depois, falso `e` verdadeiro dá falso. O pedido não sai, porque não está pago.

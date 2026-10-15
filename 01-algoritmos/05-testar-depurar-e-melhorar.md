@@ -164,7 +164,7 @@ Quando um teste falha, sabes que há um erro, mas não sabes onde ele está. **D
 
 **1. Observar e reproduzir o erro**. Escreve o caso que falhou, o resultado esperado e o resultado obtido, e diz exatamente qual das saídas está errada. Depois procura o **caso mínimo**: o caso mais pequeno que ainda mostra o mesmo erro. Se o erro aparece com três vendas, experimenta com uma só. Um caso mais pequeno dá um trace mais curto, e um trace mais curto é mais fácil de ler.
 
-**2. Formular uma hipótese**. Uma **hipótese** é uma explicação possível para o erro, escrita numa frase que pode ser verdadeira ou falsa: "o contador volta a zero em cada iteração do ciclo", "a condição recusa a venda quando a quantidade é igual ao stock". "Está tudo mal" não é hipótese, porque não diz onde procurar nem o que verificar.
+**2. Formular uma hipótese**. Uma **hipótese** é uma explicação possível para o erro, escrita numa frase que pode ser verdadeira ou falsa. Por exemplo, "o contador volta a zero em cada iteração do ciclo" é uma hipótese. Outra é "a condição recusa a venda quando a quantidade é igual ao stock". "Está tudo mal" não é hipótese, porque não diz onde procurar nem o que verificar.
 
 **3. Verificar a hipótese com o trace**. Faz o trace do caso mínimo, linha a linha. Procura a primeira linha onde uma variável fica com um valor diferente do que devia ter. Essa linha confirma a hipótese ou deita-a abaixo. Se a deitar abaixo, não perdeste tempo. Ficas a saber onde o erro não está, e formulas outra hipótese com o que o trace te mostrou.
 
@@ -180,7 +180,7 @@ Nos temas anteriores há quatro erros que aparecem vezes sem conta, em alunos e 
 
 ### Fronteira mal posta
 
-Uma **fronteira mal posta** é uma comparação que põe o valor da fronteira do lado errado: `>` onde devia estar `>=`, ou `<` onde devia estar `<=`. Volta ao exemplo do desconto, da secção "A tabela de casos esperados". Alguém escreveu para ele o algoritmo seguinte. Antes de leres a explicação, tenta prever: qual dos sete casos da tabela falha?
+Uma **fronteira mal posta** é uma comparação que põe o valor da fronteira do lado errado. É o caso de `>` onde devia estar `>=`, ou de `<` onde devia estar `<=`. Volta ao exemplo do desconto, da secção "A tabela de casos esperados". Alguém escreveu para ele o algoritmo seguinte. Antes de leres a explicação, tenta prever: qual dos sete casos da tabela falha?
 
 ```text
 const QUANTIDADE_MINIMA = 1
@@ -707,7 +707,24 @@ Testar as funções sozinhas é a decomposição do guia 01 levada até ao fim. 
 
 Passar o algoritmo do stock da versão com três blocos para a versão com a função é uma melhoria, no sentido deste guia. O algoritmo tem de continuar a fazer exatamente o mesmo. Por isso a equivalência mostra-se das duas maneiras de sempre.
 
-A primeira maneira é pelos testes. As duas versões, executadas com a mesma tabela de casos, escrevem exatamente o mesmo ecrã. Com 12 cadernos, 7 canetas e 25 lápis, as duas escrevem as mesmas quatro linhas depois das três perguntas: "Stock de cadernos: 12", "Stock de canetas: 7", "Encomendar canetas" e "Stock de lápis: 25". Com 10 cadernos, 9 canetas e 0 lápis, que são as fronteiras, as duas escrevem as mesmas cinco linhas: "Stock de cadernos: 10", "Stock de canetas: 9", "Encomendar canetas", "Stock de lápis: 0" e "Encomendar lápis".
+A primeira maneira é pelos testes. As duas versões, executadas com a mesma tabela de casos, escrevem exatamente o mesmo ecrã. Com 12 cadernos, 7 canetas e 25 lápis, as duas escrevem as mesmas quatro linhas depois das três perguntas:
+
+```text
+Stock de cadernos: 12
+Stock de canetas: 7
+Encomendar canetas
+Stock de lápis: 25
+```
+
+Com 10 cadernos, 9 canetas e 0 lápis, que são as fronteiras, as duas escrevem as mesmas cinco linhas:
+
+```text
+Stock de cadernos: 10
+Stock de canetas: 9
+Encomendar canetas
+Stock de lápis: 0
+Encomendar lápis
+```
 
 A segunda maneira é pela explicação. Cada chamada executa exatamente as três linhas do bloco que substituiu, com `artigo` e `quantidade` a valerem o que estava escrito nesse bloco. E as chamadas estão pela mesma ordem dos blocos. Não há nenhuma entrada para a qual as duas versões possam escrever coisas diferentes.
 
