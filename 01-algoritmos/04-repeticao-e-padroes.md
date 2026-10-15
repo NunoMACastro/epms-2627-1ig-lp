@@ -2,7 +2,7 @@
 
 # Repetição e padrões
 
-Módulo Desenvolver algoritmos. Este guia explica como se escreve um algoritmo que repete instruções, e como se controla quantas vezes as repete. Explica também cinco padrões que vais usar em quase todos os algoritmos daqui para a frente. E explica os arrays, que guardam muitos valores numa só variável. Lê-se em cerca de três horas, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há o [laboratório](04-repeticao-e-padroes-laboratorio.md) e a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Este guia explica como se escreve um algoritmo que repete instruções, e como se controla quantas vezes as repete. Explica também cinco padrões que vais usar em quase todos os algoritmos daqui para a frente. E explica os arrays, que guardam muitos valores numa só variável. Lê-se em cerca de 200 minutos, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há o [laboratório](04-repeticao-e-padroes-laboratorio.md) e a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) deste tema.
 
 Até agora, cada instrução dos teus algoritmos executava-se uma vez, ou nenhuma. Neste tema, a mesma instrução passa a poder executar-se muitas vezes seguidas. Há muitas ideias novas, e por isso a teoria é longa. O professor dá-a por partes, nas aulas, com traces no quadro, e o guia fica contigo para a releres com calma. Cada secção explica a mesma ideia por mais do que um caminho.
 
@@ -117,7 +117,7 @@ Todas estas frases têm a mesma forma, com três partes. Há uma pergunta cuja r
 
 Pensa no que aconteceria se lavar um prato não o tirasse da banca. A pergunta teria sempre a mesma resposta, e ficarias a lavar o mesmo prato para sempre. Parece uma brincadeira, mas é exatamente o erro mais frequente de quem começa a escrever repetições, e vais vê-lo com números mais à frente.
 
-Num algoritmo, a uma parte que se executa várias vezes seguidas chama-se **ciclo**, e a cada uma dessas execuções chama-se **iteração**. Na conversa de todos os dias também se diz uma volta do ciclo, e vais ouvir as duas palavras. Se o algoritmo lava três pratos, o ciclo teve três iterações, ou deu três voltas.
+Num algoritmo, a uma parte que se executa várias vezes seguidas chama-se **ciclo**, e a cada uma dessas execuções chama-se **iteração**. Na conversa de todos os dias também se diz uma volta do ciclo. Se o algoritmo lava três pratos, o ciclo teve três iterações, ou deu três voltas. Neste guia usamos a palavra iteração. A palavra volta, neste sentido, só aparece no nome de um caso de teste, o caso de zero voltas.
 
 Até agora, cada instrução dos teus algoritmos executava-se no máximo uma vez. Numa sequência, cada instrução executa-se exatamente uma vez. Numa seleção, uma instrução dentro de um `Se` executa-se uma vez ou nenhuma. Com os ciclos, pela primeira vez, a mesma instrução pode executar-se muitas vezes. É por isso que o trace vai ser ainda mais importante do que era.
 
@@ -442,7 +442,7 @@ O `Para` segue quatro regras:
 3. Se o limite for menor do que o valor inicial, o corpo executa-se zero vezes. Por exemplo, em `Para dia de 1 até 0`, `1 <= 0` é falso logo no primeiro teste. É o caso de zero voltas do `Para`.
 4. Depois do ciclo, não se usa o valor da variável de controlo. No `Enquanto` equivalente, ela ficaria com o limite mais 1. Mas há linguagens em que fica com outro valor, e o Python, que vais aprender a seguir, é uma delas. Por isso, nos nossos algoritmos, a variável de controlo só se usa dentro do ciclo.
 
-Na forma geral, a variável de controlo chama-se `i`, e vais ver muitas vezes o `Para` escrito assim, `Para i de 1 até n`. É um costume antigo e aceita-se. Mas um nome que diga o que se está a contar, como `senha`, `dia` ou `produto`, torna o algoritmo mais fácil de ler. É o que fazem os exemplos deste guia.
+Na forma geral, a variável de controlo chama-se `i`, e vais ver muitas vezes o `Para` escrito assim, `Para i de 1 até n`. É um costume antigo e aceita-se. Mas um nome que diga o que se está a contar, como `senha`, `dia` ou `produto`, torna o algoritmo mais fácil de ler. É o que fazem os exemplos deste guia. Nos arrays, a variável é o índice e chama-se `i`.
 
 O algoritmo completo, com `Para`:
 
@@ -480,7 +480,7 @@ O primeiro é o contador. Um **contador** é uma variável que conta quantas vez
 2. Sempre que a coisa acontece, aumenta 1: `contador = contador + 1`.
 3. Só se lê o resultado depois do ciclo. Durante o ciclo, o contador tem uma contagem parcial.
 
-Porquê 0 e não 1? Pensa num porteiro que conta as pessoas que entram numa sala. Antes de alguém entrar, a contagem é zero. Se começasse em 1, todas as contagens ficariam com uma pessoa a mais, e numa sala onde não entrou ninguém diria que entrou uma. É o género de erro que só se encontra testando o caso de zero voltas.
+Porquê 0 e não 1? Pensa num porteiro que conta as pessoas que entram numa sala. Antes de alguém entrar, a contagem é zero. Se começasse em 1, todas as contagens ficariam com uma pessoa a mais, e numa sala onde não entrou ninguém diria que entrou uma. O caso de zero voltas mostra este erro logo, porque, sem ninguém a entrar, a contagem tem de ser 0.
 
 Se a linha `contador = contador + 1` estiver diretamente no corpo do ciclo, com quatro espaços, conta todas as iterações. Se estiver dentro de um `Se`, com oito espaços, conta só as iterações em que a condição do `Se` é verdadeira. É esta segunda forma a mais útil: contar quantos valores cumprem uma regra. Mais uma vez, é a indentação que decide.
 
@@ -517,11 +517,11 @@ O contador aumentou três vezes: com 4, com 0 e com 9. O ecrã acaba com "Produt
 
 ## Padrão totalizador
 
-Um **totalizador** é uma variável que vai somando valores ao longo das iterações. Também se chama **acumulador**, e é esse o nome que vais encontrar mais vezes em Python. Segue três regras, parecidas com as do contador:
+Um **totalizador** é uma variável que vai somando valores ao longo das iterações. Segue três regras, parecidas com as do contador:
 
 1. Começa em 0, antes do ciclo: `int total = 0`. A soma de nada é zero.
 2. Em cada iteração, soma-se o valor: `total = total + valor`.
-3. Só se lê o resultado depois do ciclo.
+3. O total final só se lê depois do ciclo. Durante o ciclo, o totalizador guarda o total até esse momento, que se pode mostrar quando o enunciado o pede.
 
 A diferença para o contador está na regra 2. O contador soma 1, seja qual for o valor. O totalizador soma o próprio valor. O contador responde à pergunta "quantos?", e o totalizador responde à pergunta "quanto?". Imagina que se leem as quantidades de três pedidos, 12, 30 e 50. O contador de pedidos fica com 3, e o totalizador de unidades fica com 92.
 
@@ -553,7 +553,7 @@ O total começou em 0, passou a 1250, depois a 2050 e depois a 4150, e o algorit
 
 Há dois erros clássicos com totalizadores, e os dois são erros de inicialização.
 
-O primeiro é esquecer a inicialização, apagando a linha `int totalVendas = 0`. Na primeira iteração, o algoritmo tenta calcular `totalVendas + vendasDoDia` com um `totalVendas` que nunca recebeu valor. É o erro do guia 02, uma variável usada antes de receber valor, agora dentro de um ciclo. O trace para nessa linha. Não se consegue somar 1250 a uma caixa vazia.
+O primeiro é esquecer a inicialização, apagando a linha `int totalVendas = 0`. Na primeira iteração, o algoritmo tenta calcular `totalVendas + vendasDoDia` com um `totalVendas` que nunca recebeu valor. É o erro do guia 02, uma variável usada antes de receber valor, agora dentro de um ciclo. O trace para nessa linha. Não se consegue somar 1250 a uma caixa vazia. Com 0 dias não há iterações, e o erro aparece no `Escreve:` do fim, que mostra um `totalVendas` sem valor.
 
 O segundo é pôr a inicialização dentro do ciclo, com quatro espaços:
 
@@ -576,7 +576,7 @@ Antes de leres a tabela, tenta prever o total que esta versão escreve, com os m
 
 Repara na primeira linha. Como a inicialização saiu de antes do ciclo, o total ainda não tem valor no primeiro teste. Depois, em cada iteração, o total volta a zero antes de se somar o valor do dia. Por isso, nunca guarda mais do que um dia. O algoritmo escreve "Total vendido: 2100 cêntimos", que são só as vendas do último dia. A regra a fixar é que o que se inicializa dentro do ciclo recomeça em cada iteração. Os contadores e os totalizadores inicializam-se sempre antes do ciclo, sem indentação.
 
-Os três erros de inicialização que viste, o do contador e os dois do totalizador, apanham-se com casos de teste diferentes. Um contador que começa em 1 diz que houve um pedido num dia sem pedidos. Um totalizador sem inicialização obriga o algoritmo a somar a uma variável sem valor. O caso de zero voltas apanha estes dois. A inicialização dentro do ciclo só se vê com dois ou mais valores, porque com um só valor o total até sai certo.
+Os três erros de inicialização que viste, o do contador e os dois do totalizador, apanham-se com casos de teste diferentes. Um contador que começa em 1 diz que houve um pedido num dia sem pedidos. Um totalizador sem inicialização usa uma variável sem valor, na primeira soma ou, sem nenhuma iteração, no `Escreve:` do fim. O caso de zero voltas apanha estes dois. Com um só valor, a inicialização dentro do ciclo até dá o total certo. Vê-se com dois ou mais valores, e também com zero, porque aí o total chega ao `Escreve:` do fim sem valor.
 
 Com um totalizador e um contador no mesmo ciclo consegues calcular médias: a soma a dividir pelo número de valores. Vais precisar de cuidado com o caso em que o contador fica em zero, porque não se pode dividir por zero.
 
@@ -744,6 +744,8 @@ Enquanto quantidade >= QUANTIDADE_MINIMA e quantidade <= CAPACIDADE_MAXIMA
 
 O algoritmo faz o contrário do que devia. Quando a pessoa escreve 12, que é válido, aparece "Quantidade inválida" e o algoritmo pede outro valor. Se a pessoa escrever depois 30, pede outra vez. Se escrever 0, o ciclo termina e aparece "Pedido aceite: 0 unidades". O ciclo recusa os valores bons e aceita o primeiro valor mau. É o erro do ciclo que nunca começa, a condição de paragem no lugar da condição de continuação, agora numa validação. Corrige-se com a regra do `Enquanto`: a condição diz quando continuar, e numa validação continua-se enquanto o valor for inválido.
 
+Os exemplos 7 e 8 de [intervalos e validação](../exemplos/algoritmos/intervalos-e-validacao/README.md) mostram este padrão com a temperatura de um ar condicionado. O 8 tem um engano de propósito, para descobrires.
+
 ## Escolher entre Enquanto e Para
 
 A escolha faz-se com uma pergunta: "antes de o ciclo começar, já se sabe quantas vezes ele se vai repetir?" Se sim, o ciclo é contado, e usa-se `Para`. Se não, porque o fim depende de alguma coisa que só acontece durante o ciclo, como um valor lido, usa-se `Enquanto`.
@@ -761,7 +763,7 @@ A escolha faz-se com uma pergunta: "antes de o ciclo começar, já se sabe quant
 
 Todo o `Para` se pode escrever como um `Enquanto`, e viste como. O contrário não é verdade. Um ciclo que lê valores até aparecer um valor combinado para dizer que acabou não se escreve com `Para`. Um ciclo que volta a pedir um valor até ele ser válido também não. Não há um número de iterações para pôr no `até`. São os ciclos dos padrões sentinela e validação repetida. Se estiveres em dúvida, o `Enquanto` funciona sempre, mas obriga-te a escrever as três peças à mão, com mais oportunidades de errar. Quando o ciclo é contado, o `Para` é a escolha mais segura.
 
-> Para saberes mais, numa leitura opcional que não sai nos exercícios. Há linguagens com um ciclo que testa a condição no fim do corpo, e não no princípio. Por isso, esse ciclo executa-se sempre pelo menos uma vez. Em alguns livros aparece escrito como `REPETIR ... ATÉ`. Nesta unidade não se usa. Tudo o que ele faz consegue-se com `Enquanto`, como mostra o padrão validação repetida. E o Python, que vais aprender a seguir, também não o tem.
+> Para saberes mais, numa leitura opcional que não sai nos exercícios. Há linguagens com um ciclo que testa a condição no fim do corpo, e não no princípio. Por isso, esse ciclo executa-se sempre pelo menos uma vez. Em alguns livros aparece escrito como `REPETIR ... ATÉ`. Neste módulo não se usa. Tudo o que ele faz consegue-se com `Enquanto`, como mostra o padrão validação repetida. E o Python, que vais aprender a seguir, também não o tem.
 
 ## Arrays: muitos valores numa só variável
 
@@ -769,13 +771,13 @@ Até aqui, cada variável guardava um valor. Para guardar as notas de 25 alunos,
 
 Um **array** é uma variável que guarda vários valores, uns a seguir aos outros, numa ordem fixa. A cada valor guardado chama-se **elemento** do array. Pensa numa fila de cacifos numerados. A fila tem um nome, e cada cacifo tem um número e guarda uma coisa. Para ires buscar o que está num cacifo, dizes o nome da fila e o número do cacifo.
 
-No pseudocódigo das aulas, um array escreve-se como uma lista de Python, com os valores entre parênteses retos, separados por vírgulas:
+No pseudocódigo das aulas, um array escreve-se com os valores entre parênteses retos, separados por vírgulas, como neste exemplo:
 
 ```text
 notas = [12, 8, 15]
 ```
 
-O array não leva tipo à frente, ao contrário das outras variáveis. É a forma que usamos nas aulas, igual à do Python. O nome vai no plural, porque guarda vários valores.
+O array não leva tipo à frente, ao contrário das outras variáveis. É a forma que vais usar em Python. O nome vai no plural, porque guarda vários valores.
 
 Cada elemento tem uma posição, a que se chama **índice**, e os índices começam em 0. Neste array, `notas[0]` é 12, `notas[1]` é 8 e `notas[2]` é 15. Começa-se em 0 porque o índice diz quantas posições andas a partir do início, e o primeiro elemento está a zero posições do início. É assim no Python, e por isso usamos já esta regra. A consequência é que, num array com `n` elementos, o último índice é `n - 1`. Este array tem 3 elementos, e o último índice é o 2.
 
@@ -819,7 +821,7 @@ Os padrões deste guia funcionam igual com o para cada. Para somar as notas, por
 
 Há uma coisa que o para cada não faz, e que engana quase toda a gente da primeira vez.
 
-Em cada iteração, a variável do para cada recebe uma **cópia** do valor do elemento, e não o próprio elemento. Mudar a variável muda a cópia, e o array fica como estava. A variável que o para cada vai enchendo chama-se **variável de iteração**. A esta forma de percorrer um array, em que cada iteração trabalha com uma cópia do valor, chama-se **percorrer por valor**. Percorrer com o `Para` e o índice, em que cada iteração trabalha diretamente na posição do array, chama-se **percorrer por índice**.
+Em cada iteração, a variável do para cada recebe uma **cópia** do valor do elemento, e não o próprio elemento. Mudar a variável muda a cópia, e o array fica como estava. A esta forma de percorrer um array, em que cada iteração trabalha com uma cópia do valor, chama-se **percorrer por valor**. Percorrer com o `Para` e o índice, em que cada iteração trabalha diretamente na posição do array, chama-se **percorrer por índice**.
 
 O exemplo seguinte mostra a diferença. O professor decidiu dar mais um valor a todas as notas de um teste. O algoritmo tem de aumentar 1 a cada nota do array.
 
@@ -879,7 +881,7 @@ Aqui não há variável `nota`. Em cada iteração, o algoritmo lê o elemento d
 | 8 | volta ao `Para`: `i` passa a 3 | 3 | `3 <= 2` dá `false`: o ciclo termina | [13, 9, 16] | nada |
 | 9 | `Escreve:` das três notas | 3 | nenhuma | [13, 9, 16] | 13 9 16 |
 
-Agora é a coluna `notas` que muda, um elemento por iteração. Repara no passo 8, o teste que dá falso. É ele que faz o ciclo ter exatamente três iterações, uma por cada índice válido. Quando `i` chega a 3, o ciclo termina sem nunca usar `notas[3]`, que não existe. Há quatro testes e três iterações, como em todos os ciclos deste guia.
+Agora é a coluna `notas` que muda, um elemento por iteração. Repara no passo 8, o teste que dá falso. É ele que faz o ciclo ter exatamente três iterações, uma por cada índice válido. Quando `i` chega a 3, o ciclo termina sem nunca usar `notas[3]`, que não existe. Há quatro testes e três iterações, um teste a mais do que as iterações, como em todos os ciclos com condição deste guia.
 
 ### Usar o valor como se fosse a posição
 
@@ -965,7 +967,7 @@ O erro só aparece quando o valor procurado não é o último. Com `[12, 9, 7, 0
 
 ### A resposta escrita dentro do ciclo
 
-Outro engano é escrever a resposta dentro do ciclo. Com um `Escreve:` dentro do `Se`, a frase aparecia uma vez por cada produto sem stock. Com um `Escreve:` num `Senão`, aparecia "Todos os produtos têm stock" a meio do array, antes de se verem os outros produtos. A resposta a "há algum?" só se sabe depois de ver todos os valores, como o resultado de um contador. Por isso, escreve-se depois do ciclo.
+Outro engano é escrever a resposta dentro do ciclo. Com um `Escreve:` dentro do `Se`, a frase aparecia uma vez por cada produto sem stock. Com um `Escreve:` num `Senão`, aparecia "Todos os produtos têm stock" a meio do array, antes de se verem os outros produtos. A resposta a "há algum?" só se sabe depois de ver todos os valores, como o resultado final de um contador. Por isso, escreve-se depois do ciclo.
 
 ## Quando já estiveres à vontade: o Para com as três peças à vista
 
@@ -1081,7 +1083,7 @@ Como no guia 03, a tabela de casos esperados faz-se agora, a partir do enunciado
 | C | 1, 50, 51, 0 | 2 | 51 | 1 | As fronteiras: o 1 e o 50 são válidos, o 51 não |
 | D | 75, 0 | 0 | 0 | 1 | Só pedidos recusados |
 
-No caso A, os válidos são o 12, o 30 e o 50, que somam 92 unidades. O 60 e o -4 são recusados. No caso C, o 1 e o 50 são válidos, e somam 51, e o 51 é recusado. O caso B é o que mais algoritmos apanha. Com zero pedidos, a resposta tem de ser zero em tudo, sem mensagens de pedido recusado.
+No caso A, os válidos são o 12, o 30 e o 50, que somam 92 unidades. O 60 e o -4 são recusados. No caso C, o 1 e o 50 são válidos, e somam 51, e o 51 é recusado. O caso B é o que apanha mais erros. Com zero pedidos, a resposta tem de ser zero em tudo, sem mensagens de pedido recusado.
 
 ### Passo 4: As peças do ciclo, uma a uma
 
@@ -1156,7 +1158,7 @@ Se te for mais fácil pensar primeiro em português, o mesmo algoritmo pode ser 
 6. Pede a quantidade do pedido seguinte.
 7. Quando aparecer o 0, escreve os pedidos válidos, o total de unidades e os pedidos recusados.
 
-Repara no que torna estas frases claras. Dizem com que valores se começa, em que situação se repete e que passos se repetem. Como em frases não há indentação, é o passo 3 que diz quais são. Dizem o que acontece quando o pedido não é válido, e o que muda em cada volta, no passo 6. Uma frase como "vai lendo os pedidos e conta os bons" não chega. Não diz quando se para, o que é um pedido bom, nem o que se faz com os outros. O que conta é a lógica, e as frases têm de a deixar tão clara como o pseudocódigo.
+Repara no que torna estas frases claras. Dizem com que valores se começa, em que situação se repete e que passos se repetem. Como em frases não há indentação, é o passo 3 que diz quais são. Dizem o que acontece quando o pedido não é válido, e o que muda em cada iteração, no passo 6. Uma frase como "vai lendo os pedidos e conta os bons" não chega. Não diz quando se para, o que é um pedido bom, nem o que se faz com os outros. O que conta é a lógica, e as frases têm de a deixar tão clara como o pseudocódigo.
 
 ### Passo 6: O fluxograma
 
@@ -1317,8 +1319,8 @@ A forma de os apanhar é contar. Antes de fazeres o trace, diz quantas iteraçõ
 Vários erros deste guia só se veem bem com casos escolhidos de propósito. O contador inicializado a 1 vê-se logo com o caso B, porque um dia sem pedidos não pode ter um pedido. A iteração a menos só aparece quando se contam as iterações. A sentinela contada como dado aparece em qualquer caso, mas só se olhares para os recusados. Quem testa só com o caso normal deixa estes erros passar. Por isso, os casos de teste de um ciclo escolhem-se assim:
 
 - o caso de zero voltas;
-- um caso com uma só volta;
-- um caso com várias voltas;
+- um caso com uma só iteração;
+- um caso com várias iterações;
 - os valores de fronteira das decisões que estão dentro do ciclo.
 
 ## Palavras novas deste guia
@@ -1339,7 +1341,7 @@ Vários erros deste guia só se veem bem com casos escolhidos de propósito. O c
 - Variável de controlo: a variável que o `Para` cria e faz avançar de 1 em 1.
 - Padrão: uma forma de resolver um pequeno problema que aparece vezes sem conta, em algoritmos diferentes.
 - Contador: uma variável que conta quantas vezes uma coisa aconteceu. Começa em 0 e soma 1.
-- Totalizador, ou acumulador: uma variável que vai somando valores ao longo das iterações. Começa em 0 e soma o valor.
+- Totalizador: uma variável que vai somando valores ao longo das iterações. Começa em 0 e soma o valor.
 - Sentinela: um valor combinado que quer dizer "acabou" e que os dados verdadeiros nunca têm.
 - Leitura antecipada: a leitura do primeiro valor, feita antes do ciclo.
 - Validação repetida: um ciclo que volta a pedir um valor enquanto ele for inválido.
@@ -1349,7 +1351,6 @@ Vários erros deste guia só se veem bem com casos escolhidos de propósito. O c
 - Índice fora do array: um índice que não existe, como `notas[3]` num array com três elementos.
 - Percorrer um array: passar por todos os elementos, um a um, e fazer alguma coisa com cada um.
 - Para cada: o ciclo que percorre um array elemento a elemento, como `Para cada nota em notas`.
-- Variável de iteração: a variável que o para cada vai enchendo com uma cópia de cada elemento.
 - Percorrer por valor: percorrer com o para cada, em que cada iteração trabalha com uma cópia do valor.
 - Percorrer por índice: percorrer com o `Para` e o índice, em que cada iteração trabalha diretamente na posição do array.
 - Flag: uma variável `bool` que guarda se uma coisa já aconteceu. Começa `false` e passa a `true`.
@@ -1454,7 +1455,7 @@ Guarda no teu caderno a tabela de iterações e o conjunto de testes do exemplo 
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md). Tem dez exercícios obrigatórios, que levam cerca de 127 minutos, e um desafio opcional. O [laboratório](04-repeticao-e-padroes-laboratorio.md) é de fluxogramas e é opcional, e só o fazes quando o professor o indicar. Nele desenhas no diagrams.net o fluxograma do exemplo guiado, com a seta que volta ao losango sem cruzar as outras setas. Depois verificas o desenho com um caso de teste. O laboratório explica no sítio tudo o que precisas da aplicação.
+Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md). Tem dez exercícios obrigatórios, que levam cerca de 132 minutos, e um desafio opcional. O [laboratório](04-repeticao-e-padroes-laboratorio.md) é de fluxogramas e é opcional, e só o fazes quando o professor o indicar. Nele desenhas no diagrams.net o fluxograma do exemplo guiado, com a seta que volta ao losango sem cruzar as outras setas. Depois verificas o desenho com um caso de teste. O laboratório explica no sítio tudo o que precisas da aplicação.
 
 O tema seguinte é [Testar, depurar e melhorar](05-testar-depurar-e-melhorar.md), o último desta área. Vais juntar a sequência, a seleção e a repetição num problema maior e testá-lo de forma organizada. Vais corrigir os erros encontrados no trace e comparar duas soluções pelo número de passos. Vais também escrever as tuas primeiras funções, e a área acaba com projetos, todos jogos.
 
@@ -1462,6 +1463,6 @@ Mais tarde, em Python, os ciclos `Enquanto` passam a chamar-se `while`. As tabel
 
 ## Para saber mais
 
-- [Desenvolver algoritmos, no Catálogo Nacional de Qualificações](https://catalogo.snq.gov.pt/ucDetalhe/355272): a ficha oficial desta unidade do teu curso, com as competências que ela pede.
+- [Desenvolver algoritmos, no Catálogo Nacional de Qualificações](https://catalogo.snq.gov.pt/ucDetalhe/355272): a ficha oficial deste módulo do teu curso, com as competências que ela pede.
 
 ![Rodapé](../imagens/rodape.png)

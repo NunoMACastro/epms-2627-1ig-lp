@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Repetição e padrões
 
-Ficha do tema Repetição e padrões, do módulo Desenvolver algoritmos. Praticas sem ajuda o que o guia explicou sobre os ciclos. Segues ciclos numa tabela de iterações e reconheces as suas três peças. Escreves ciclos com o contador, o totalizador, a sentinela, a validação repetida e a flag, e percorres arrays. Cerca de 127 minutos, para fazeres sozinho, e mais 30 se fizeres o desafio opcional.
+Ficha do tema Repetição e padrões, do módulo Desenvolver algoritmos. Praticas sem ajuda o que o guia explicou sobre os ciclos. Segues ciclos numa tabela de iterações e reconheces as suas três peças. Escreves ciclos com o contador, o totalizador, a sentinela, a validação repetida e a flag, e percorres arrays. Cerca de 132 minutos, para fazeres sozinho, e mais 30 se fizeres o desafio opcional.
 
 ## O que precisas de saber
 
@@ -14,13 +14,13 @@ O [laboratório](04-repeticao-e-padroes-laboratorio.md) do tema é de fluxograma
 
 ## Como trabalhar
 
-Os exercícios 1 a 10 são obrigatórios. Os exercícios 1 a 7 levam cerca de 90 minutos, e os exercícios 8 a 10 levam mais 37. No fim da ficha há um desafio e uma secção "Para ires mais longe", os dois opcionais, para quem terminar.
+Os exercícios 1 a 10 são obrigatórios. Os exercícios 1 a 7 levam cerca de 95 minutos, e os exercícios 8 a 10 levam mais 37. No fim da ficha há um desafio e uma secção "Para ires mais longe", os dois opcionais, para quem terminar.
 
 A ficha vai por passos, e cada exercício usa o que os anteriores treinaram. Primeiro aplicas o que o guia mostrou. Nos exercícios 1 e 2 segues e completas ciclos que já estão quase escritos. Nos exercícios 3 e 4 escreves ciclos pequenos a partir de um algoritmo do guia, um com um contador e outro com um totalizador. Depois decides: no exercício 5 descobres porque é que um ciclo conta mal e corriges a linha errada. No fim, constróis os ciclos que dependem do que a pessoa escreve. No exercício 6 é um ciclo com sentinela, e no exercício 7 uma validação repetida. Os exercícios 8 a 10 treinam a última parte da teoria do guia. Somas um array com o para cada, mudas elementos de um array com o índice e respondes a "há algum?" com uma flag.
 
 Segue os algoritmos do guia sempre que o enunciado o sugerir. Para quem está a escrever os primeiros ciclos, partir de um algoritmo que já funciona é a forma certa de começar. Mas nenhum exercício é um algoritmo do guia com outros números. O algoritmo do guia mostra o caminho, e cada exercício pede-te pelo menos uma decisão pequena que o guia não tomou. Por isso, antes de copiares um algoritmo do guia, lê o enunciado do exercício até ao fim e procura o que ele pede de diferente.
 
-Quando um exercício te pedir para escrever instruções, podes escrevê-las em pseudocódigo, na forma que usamos nas aulas, ou em frases claras. O que conta é a lógica. As frases têm de dizer, sem deixar dúvidas, com que valores se começa e em que situação se repete. Têm de dizer também que passos se repetem, o que muda em cada volta e o que acontece quando um valor não serve. O exemplo guiado do guia, no passo 5, mostra um ciclo escrito das duas maneiras. Se escreveres em pseudocódigo, cuida da indentação, porque é ela que mostra o que está dentro do ciclo. Nos exercícios com `Para`, usa as formas do guia: `Para ... de 1 até ...` para contar, e `Para i de 0 até ... - 1` para percorrer um array pelo índice.
+Quando um exercício te pedir para escrever instruções, podes escrevê-las em pseudocódigo, na forma que usamos nas aulas, ou em frases claras. O que conta é a lógica. As frases têm de dizer, sem deixar dúvidas, com que valores se começa e em que situação se repete. Têm de dizer também que passos se repetem, o que muda em cada iteração e o que acontece quando um valor não serve. O exemplo guiado do guia, no passo 5, mostra um ciclo escrito das duas maneiras. Se escreveres em pseudocódigo, cuida da indentação, porque é ela que mostra o que está dentro do ciclo. Nos exercícios com `Para`, usa as formas do guia: `Para ... de 1 até ...` para contar, e `Para i de 0 até ... - 1` para percorrer um array pelo índice.
 
 Uma regra para todos os exercícios: quando te pedirem uma tabela de iterações, escreve primeiro o resultado que esperas, e só depois faz a tabela. Se só o escreveres depois, a tabela concorda sempre contigo e não te ensina nada.
 
@@ -55,7 +55,7 @@ A tabela de iterações já tem a primeira linha, para veres o formato. Nessa li
 
 **c)** Que valores têm `dia` e `stock` depois do ciclo? O que escreve a última instrução do algoritmo?
 
-**d)** Explica numa frase porque é que `dia` acaba com o valor 4, e não com 3.
+**d)** Explica numa frase porque é que `dia` não acaba com o número do último dia.
 
 ## Exercício 2: completar a peça que falta (11 minutos)
 
@@ -100,7 +100,7 @@ const LIMITE_CAIXA_PEQUENA = 5
 (as tuas instruções)
 ```
 
-**a)** Escreve as instruções que faltam, a seguir às constantes, em pseudocódigo ou em frases claras. Usa as variáveis `encomenda`, para o número da encomenda, `artigos` e `caixasGrandes`, todas `int`. Usa um `Para`, porque se sabe que são 3 encomendas. Segue o algoritmo `ContarStockBaixo` do guia ([Padrão contador](04-repeticao-e-padroes.md#padrão-contador)).
+**a)** Escreve as instruções que faltam, a seguir às constantes, em pseudocódigo ou em frases claras. Usa `artigos` e `caixasGrandes`, as duas `int`, e `encomenda` como variável de controlo do `Para`, que não leva tipo. Usa um `Para`, porque se sabe que são 3 encomendas. Segue o algoritmo `ContarStockBaixo` do guia ([Padrão contador](04-repeticao-e-padroes.md#padrão-contador)).
 
 **b)** Escreve quantas caixas grandes esperas para encomendas de 5, 9 e 7 artigos. Depois faz a tabela de iterações, com colunas para `encomenda`, `artigos` e `caixasGrandes`, e confirma o resultado.
 
@@ -115,7 +115,7 @@ const NUMERO_DE_TRABALHOS = 3
 (as tuas instruções)
 ```
 
-**a)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras, com um `Para` e um totalizador. Usa as variáveis `trabalho`, `paginas` e `totalPaginas`, todas `int`. Segue o algoritmo `TotalDeVendas` do guia ([Padrão totalizador](04-repeticao-e-padroes.md#padrão-totalizador)), mas repara que aqui o número de trabalhos já está numa constante.
+**a)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras, com um `Para` e um totalizador. Usa `paginas` e `totalPaginas`, as duas `int`, e `trabalho` como variável de controlo do `Para`, que não leva tipo. Segue o algoritmo `TotalDeVendas` do guia ([Padrão totalizador](04-repeticao-e-padroes.md#padrão-totalizador)), mas repara que aqui o número de trabalhos já está numa constante.
 
 **b)** Escreve o que esperas ver no ecrã para trabalhos de 12, 40 e 8 páginas, depois de cada trabalho e no fim. Depois faz a tabela de iterações, com colunas para `trabalho`, `paginas` e `totalPaginas`, e confirma o resultado.
 
@@ -161,7 +161,7 @@ const PAGINAS_DA_MANHA = 60
 
 **c)** Escreve o total do dia que esperas e faz a tabela de iterações em dois casos. No primeiro, o funcionário escreve 40, 8 e 0. No segundo, escreve logo 0, porque à tarde não houve trabalhos.
 
-## Exercício 7: escrever uma validação repetida (10 minutos)
+## Exercício 7: escrever uma validação repetida (15 minutos)
 
 Uma loja de informática organiza workshops gratuitos, numa sala com 20 lugares, todos livres antes desta inscrição. Cada inscrição pode reservar de 1 a 6 lugares. O algoritmo pede o número de lugares e, enquanto o valor não for válido, escreve uma mensagem com o intervalo aceite e pede outra vez. No fim, escreve quantos lugares ficaram reservados e quantos lugares ficam livres na sala. Já tens o princípio do algoritmo:
 
@@ -180,7 +180,7 @@ const LUGARES_DA_SALA = 20
 
 ## Arrays, para cada e flags
 
-Os três exercícios seguintes são da última parte da teoria do guia, a partir da secção [Arrays: muitos valores numa só variável](04-repeticao-e-padroes.md#arrays-muitos-valores-numa-só-variável). O para cada não tem uma condição escrita. Por isso, em cada um, a tabela de iterações tem uma linha por elemento do array, como a tabela do [Padrão flag](04-repeticao-e-padroes.md#padrão-flag).
+Os três exercícios seguintes são da última parte da teoria do guia, a partir da secção [Arrays: muitos valores numa só variável](04-repeticao-e-padroes.md#arrays-muitos-valores-numa-só-variável). O para cada não tem uma condição escrita. Por isso, nos exercícios 8 e 10, a tabela de iterações tem uma linha por elemento do array. Cada linha mostra os valores no fim da iteração, como a tabela do [Padrão flag](04-repeticao-e-padroes.md#padrão-flag).
 
 ### Exercício 8: somar com o para cada (14 minutos)
 
@@ -201,13 +201,13 @@ vendas = [4, 0, 7, 0]
 Na mesma papelaria, os preços de quatro artigos estão num array, em cêntimos:
 
 ```text
-precos = [250, 90, 120, 60]
+precos = [250, 100, 120, 60]
 ```
 
 A partir de amanhã, os artigos que custam mais de 100 cêntimos sobem 10 cêntimos, e os outros ficam com o mesmo preço. Um colega escreveu este algoritmo:
 
 ```text
-precos = [250, 90, 120, 60]
+precos = [250, 100, 120, 60]
 Para cada preco em precos
     Se preco > 100
         preco = preco + 10
@@ -254,7 +254,7 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 ## Desafio opcional
 
-Cerca de 30 minutos. Volta ao exercício 7 e muda uma só restrição: a pessoa passa a ter no máximo 3 tentativas, contando com a primeira. Se o valor continuar inválido ao fim da terceira tentativa, o algoritmo não pede mais nenhum valor. Escreve "Reserva cancelada: foram usadas as 3 tentativas." e termina. Se o valor for válido numa das três tentativas, o algoritmo escreve a reserva feita, com o número de lugares. E escreve os lugares livres na sala. Se fizeste o Mais longe 4, já tens metade do caminho.
+Cerca de 30 minutos. Volta ao exercício 7 e muda uma só restrição: a pessoa passa a ter no máximo 3 tentativas, contando com a primeira. Se o valor continuar inválido ao fim da terceira tentativa, o algoritmo não pede mais nenhum valor. Escreve "Reserva cancelada: foram usadas as 3 tentativas." e termina. Se o valor for válido numa das três tentativas, o algoritmo escreve a reserva feita, com o número de lugares. Nesse caso, escreve também os lugares livres na sala. Se fizeste o Mais longe 4, já tens metade do caminho.
 
 **a)** O ciclo pode agora terminar por duas razões diferentes. Diz quais são e escreve a condição do ciclo. Como a condição mistura `e` com `ou`, usa parênteses para mostrar o que se avalia primeiro, como no guia 03.
 
@@ -266,7 +266,7 @@ Cerca de 30 minutos. Volta ao exercício 7 e muda uma só restrição: a pessoa 
 
 ## Para ires mais longe
 
-Estes exercícios são opcionais e não contam para os 127 minutos da ficha. Cada um junta uma dificuldade que os exercícios obrigatórios deixaram de fora de propósito. Faz primeiro os exercícios 1 a 10, e escolhe depois os que quiseres, pela ordem que quiseres.
+Estes exercícios são opcionais e não contam para os 132 minutos da ficha. Cada um junta uma dificuldade que os exercícios obrigatórios deixaram de fora de propósito. Faz primeiro os exercícios 1 a 10, e escolhe depois os que quiseres, pela ordem que quiseres.
 
 ### Mais longe 1: um ciclo que salta por cima da saída (15 minutos)
 
@@ -346,8 +346,9 @@ Em cada exercício:
 Em todos os exercícios:
 
 - [ ] Em cada ciclo que escrevi, sei dizer com que valor começa, em que situação continua e o que muda em cada iteração.
-- [ ] As minhas tabelas de iterações têm uma linha por cada teste da condição, com os valores no momento do teste.
-- [ ] A última linha de cada tabela de iterações é a do teste que dá falso.
+- [ ] Nos ciclos com condição, as minhas tabelas de iterações têm uma linha por cada teste da condição, com os valores no momento do teste.
+- [ ] Nos ciclos com condição, a última linha de cada tabela de iterações é a do teste que dá falso.
+- [ ] Nas tabelas do para cada, há uma linha por elemento, com os valores no fim da iteração.
 - [ ] Os contadores e os totalizadores começam em 0 e são inicializados antes do ciclo.
 - [ ] Sei dizer quando um problema pede um contador (quantos?) e quando pede um totalizador (quanto?).
 - [ ] No ciclo com sentinela, a sentinela nunca é somada como se fosse um dado.

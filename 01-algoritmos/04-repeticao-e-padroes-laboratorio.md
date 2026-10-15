@@ -2,7 +2,7 @@
 
 # Laboratório: Repetição e padrões
 
-Laboratório do tema Repetição e padrões, do módulo Desenvolver algoritmos. Cerca de 50 minutos, e mais 10 se fizeres o primeiro desafio. Vais desenhar no diagrams.net o fluxograma de um algoritmo com um ciclo, com a seta que volta atrás até ao losango da condição. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](04-repeticao-e-padroes.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Repetição e padrões, do módulo Desenvolver algoritmos. Cerca de 50 minutos, e mais 20 se fizeres o primeiro desafio. Vais desenhar no diagrams.net o fluxograma de um algoritmo com um ciclo, com a seta que volta atrás até ao losango da condição. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](04-repeticao-e-padroes.md) tem a teoria completa, para quem quiser saber mais.
 
 Este laboratório é todo de fluxogramas, e é opcional. Só o fazes quando o professor o indicar. Nenhum exercício obrigatório da ficha depende dele. A matéria do tema é saber reconhecer um ciclo num fluxograma, pela seta que volta ao losango. Desenhá-lo é a parte opcional que este laboratório treina.
 
@@ -61,7 +61,6 @@ Leitura guiada: as três linhas `const` dão nome a valores fixos, o 0 que marca
 - Sentinela: o valor combinado que quer dizer "acabou". Neste algoritmo é o 0, guardado na constante `SENTINELA`.
 - Leitura antecipada: a leitura do primeiro valor, feita antes do ciclo, para a condição ter um valor para testar.
 - Ramo: cada um dos caminhos que saem de um losango.
-- Ponto de encontro: a figura onde os dois ramos de um `Se` se voltam a juntar.
 - Seta ambígua: uma seta de que não se percebe bem de onde vem ou para onde vai. Por exemplo, duas setas a entrar no mesmo ponto de uma figura.
 - `Para`: um ciclo que repete o corpo um número de vezes que se sabe antes de começar. `Para corredor de 1 até 3` repete-o com `corredor` a valer 1, 2 e 3. Aparece nos desafios.
 - Ficheiro `.drawio`: o desenho que a aplicação volta a abrir para continuares a editar.
@@ -87,7 +86,14 @@ Se fizeste os laboratórios dos temas 02 e 03, já conheces a aplicação, e pod
 
 ## Preparar o projeto
 
-A maior parte dos nomes dos menus e dos botões deste laboratório foi confirmada a 24 de setembro de 2026, com a aplicação em português. A aplicação muda de aspeto de vez em quando. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
+Os nomes dos menus e dos botões deste laboratório foram confirmados a 24 de setembro de 2026, com a aplicação em português. Ficaram por confirmar quatro coisas:
+
+- as marcas de ligação que aparecem no contorno do losango, na fase 3;
+- a opção "Pontos de passagem", com "Ortogonal", na fase 3;
+- a opção "Limpar pontos de passagem", na fase 3;
+- o que a aplicação pergunta depois de "Exportar", na fase 5.
+
+Os passos dessas fases descrevem cada uma pelo que faz. A aplicação muda de aspeto de vez em quando. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
 
 1. Abre a aplicação em português. Maximiza a janela do browser, para ocupar o ecrã todo, e escreve na barra de endereços `https://app.diagrams.net/?lang=pt`. A parte final, `?lang=pt`, pede a aplicação em português.
 
@@ -375,7 +381,7 @@ A janela do browser está estreita. Maximiza-a, ou usa o botão redondo com reti
 
 Para quem acabou e quer consolidar, na aula ou em casa. Se o tempo da aula não chegar para o primeiro desafio, termina-o no início da aula seguinte. Cada desafio é um ficheiro novo na pasta `algoritmos`. Para o criar, na barra de menus, escolhe "Ficheiro" e "Novo...". Se a aplicação perguntar que tipo de diagrama queres, escolhe o diagrama em branco. Guarda-o logo, como na preparação, com o nome que o desafio indica.
 
-1. Um `Para` no fluxograma. Este algoritmo soma as caixas guardadas nos 3 corredores de um armazém:
+1. Um `Para` no fluxograma, em cerca de 20 minutos. Este algoritmo soma as caixas guardadas nos 3 corredores de um armazém:
 
    ```text
    const NUMERO_DE_CORREDORES = 3

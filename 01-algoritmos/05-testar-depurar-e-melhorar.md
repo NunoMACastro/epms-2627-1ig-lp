@@ -2,7 +2,7 @@
 
 # Testar, depurar e melhorar
 
-Último tema da unidade de algoritmos. Este guia explica como confirmas que um algoritmo está certo e como encontras e corriges um erro quando ele não está. Explica também como tornas um algoritmo mais simples sem o estragar, e como escreves uma função, para dar um nome a uma parte do algoritmo. Lê-se em cerca de 90 minutos. Para praticar, há a [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) deste tema e os dois projetos guiados, o [duelo de dados](05-projeto-1-duelo-de-dados.md) e o [adivinha o número](05-projeto-2-adivinha-o-numero.md).
+Módulo Desenvolver algoritmos. É o último tema do módulo. Este guia explica como confirmas que um algoritmo está certo e como encontras e corriges um erro quando ele não está. Explica também como tornas um algoritmo mais simples sem o estragar, e como escreves uma função, para dar um nome a uma parte do algoritmo. Lê-se em cerca de 200 minutos. Para praticar, há a [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) deste tema e os dois projetos guiados, o [duelo de dados](05-projeto-1-duelo-de-dados.md) e o [adivinha o número](05-projeto-2-adivinha-o-numero.md).
 
 Este é o último guia da unidade, e usa tudo o que aprendeste nos quatro anteriores. Traz uma só instrução nova, `Função`, numa parte própria, depois da teoria de testar, depurar e melhorar. O resto não é matéria nova de pseudocódigo. É uma forma de trabalhar com o que já sabes. Lê-o com papel e lápis ao lado, porque vais fazer muitos traces à mão.
 
@@ -124,7 +124,7 @@ Um **caso de fronteira** é uma entrada no sítio onde a resposta do algoritmo m
 
 Os ciclos também têm fronteiras, e são fáceis de esquecer. A mais importante é o caso zero, o caso de zero voltas do guia 04, em que o ciclo não chega a ter nenhuma iteração. Acontece quando a sentinela aparece logo na leitura antecipada, ou quando o `Para` vai de 1 até 0. Com zero iterações, o algoritmo executa só o que está antes e depois do ciclo. Por isso revela erros que nenhum outro caso revela, como uma variável que só recebe valor dentro do ciclo. Sem iterações, essa variável fica sem valor nenhum. As outras fronteiras de um ciclo são o caso de uma só iteração e o caso de várias iterações. Há erros que só aparecem quando uma iteração depende do que a anterior deixou.
 
-Um **caso inválido** é uma entrada que o contrato não aceita. Por exemplo, uma quantidade negativa, ou uma nota de 25 numa escala de 0 a 20. O algoritmo tem de fazer com ela exatamente o que o contrato diz, seja escrever uma mensagem, ignorá-la ou voltar a pedi-la. Testar casos inválidos confirma que a validação existe e que está no sítio certo. Uma validação também tem fronteiras. Se as quantidades válidas começam em 1, o 0 e o 1 são o par de valores a testar.
+Um **caso inválido** é uma entrada que o contrato não aceita. Por exemplo, uma quantidade negativa, ou uma nota de 25 numa escala de 0 a 20. O algoritmo tem de fazer com ela exatamente o que o contrato diz, seja escrever uma mensagem, ignorá-la ou voltar a pedi-la. Testar casos inválidos confirma que a validação existe e que está no sítio certo. Uma validação também tem fronteiras. Se as quantidades válidas começam em 1, a fronteira da validação testa-se como as outras: com o 0, o 1 e o 2.
 
 ## Duas maneiras de escolher casos
 
@@ -154,7 +154,7 @@ Um exemplo pequeno: uma loja dá desconto em encomendas de 10 ou mais unidades. 
 | 6 | inválido | 0 | Quantidade inválida | Imediatamente abaixo da primeira quantidade válida |
 | 7 | inválido | -4 | Quantidade inválida | Um engano de digitação típico |
 
-A quantidade 1, a primeira quantidade válida, também merecia um lugar na tabela. É a fronteira da validação vista do lado de dentro, e forma par com o caso 6. Podia até substituir a quantidade 3 do caso 1. Esse caso passava a testar duas coisas de uma vez: uma encomenda pequena e a fronteira da validação. Numa tabela real, um caso bem escolhido testa muitas vezes duas coisas. Nesta, ficaram separadas para se verem melhor.
+A quantidade 1, a primeira quantidade válida, também merecia um lugar na tabela, e a 2 também. Com o 0 do caso 6, são os três pontos da fronteira da validação: imediatamente abaixo, em cima e imediatamente acima. A quantidade 1 podia até substituir a quantidade 3 do caso 1. Esse caso passava a testar duas coisas de uma vez: uma encomenda pequena e a fronteira da validação. Numa tabela real, um caso bem escolhido testa muitas vezes duas coisas. Nesta, ficaram separadas para se verem melhor.
 
 Um pouco mais abaixo, na secção "Quatro erros que vais encontrar muitas vezes", vais ver um algoritmo para este problema. E vais ver o que esta tabela descobre nele.
 
@@ -168,9 +168,9 @@ Quando um teste falha, sabes que há um erro, mas não sabes onde ele está. **D
 
 **3. Verificar a hipótese com o trace**. Faz o trace do caso mínimo, linha a linha. Procura a primeira linha onde uma variável fica com um valor diferente do que devia ter. Essa linha confirma a hipótese ou deita-a abaixo. Se a deitar abaixo, não perdeste tempo. Ficas a saber onde o erro não está, e formulas outra hipótese com o que o trace te mostrou.
 
-**4. Corrigir a causa**. A **causa** de um erro é a instrução que o produz. O **sintoma** é o sítio onde ele se vê, normalmente uma saída errada. Corrige-se a causa, mudando o menos possível, e uma coisa de cada vez. Imagina que mudas três linhas ao mesmo tempo e o teste passa. Não sabes qual delas era o erro, nem se as outras duas estragaram outra coisa.
+**4. Corrigir a causa**. A **causa** de um erro é a instrução que o produz. O **sintoma** é o sítio onde ele se vê, normalmente uma saída errada. Corrige-se a causa, mudando o menos possível, e uma coisa de cada vez. Imagina que mudas três linhas ao mesmo tempo e o teste passa. Não sabes qual delas era o erro, nem se as outras duas estragaram outra coisa. Por isso, trabalha com uma hipótese, uma alteração e um teste de cada vez.
 
-**5. Voltar a testar tudo**. Depois da correção, executa outra vez a tabela de casos inteira, e não só o caso que falhou. Uma correção pode estragar um caso que antes funcionava. Os profissionais chamam a isto **teste de regressão**. Confirma que o algoritmo não regrediu, isto é, que não voltou atrás em nada do que já fazia bem.
+**5. Voltar a testar tudo**. Depois da correção, executa outra vez a tabela de casos inteira, e não só o caso que falhou. Uma correção pode estragar um caso que antes funcionava, e isso só se vê se voltares a executar a tabela inteira. Os profissionais chamam a isto **teste de regressão**. Confirma que o algoritmo não regrediu, isto é, que não voltou atrás em nada do que já fazia bem.
 
 Cada depuração fica escrita num **registo de depuração**, com cinco linhas, uma por passo. As linhas são o caso e o erro observado, a hipótese, o que o trace mostrou, a correção feita e o resultado do novo teste. É este registo que vai para o teu portefólio. É ele que mostra que sabes explicar uma correção, uma das coisas que a avaliação prática observa.
 
@@ -318,13 +318,13 @@ Um ramo em falta também pode ser uma validação que não existe. Nesse caso, �
 
 Quando um teste falha, o que vês é o sintoma: um número errado numa saída. A tentação é emendar o algoritmo precisamente onde o número aparece, com uma conta no fim que o acerte. Essa emenda faz passar o caso que falhou, e deixa a causa exatamente onde estava. Na maior parte das vezes, o erro volta a aparecer noutro caso, com outro aspeto.
 
-A pergunta a fazer antes de corrigir é: "esta alteração explica por que razão o valor ficou errado, ou só o acerta no fim?". Se só o acerta no fim, é uma correção do sintoma. No exemplo guiado vais ver uma correção destas que passa em seis dos sete testes de uma tabela. Só um teste, o do caso 3, mostra que o erro continua lá dentro.
+A pergunta a fazer antes de corrigir é: "esta alteração explica por que razão o valor ficou errado, ou só o acerta no fim?". Se só o acerta no fim, é uma correção do sintoma. O número do fim fica certo, e as decisões tomadas pelo caminho continuam erradas. Corrige-se mudando a instrução que produz o erro, e não a que o mostra. No exemplo guiado vais ver uma correção destas que passa em seis dos sete testes de uma tabela. Só um teste, o do caso 3, mostra que o erro continua lá dentro.
 
 ## Melhorar um algoritmo sem mudar o que ele faz
 
 Um algoritmo certo ainda pode ser melhorado. Pode fazer contas desnecessárias, ou perguntar coisas cujo resultado já se conhece. Pode também repetir em todas as iterações de um ciclo um trabalho que bastava fazer uma vez. Melhorar um algoritmo para fazer o mesmo com menos trabalho chama-se **otimizar**.
 
-A regra principal de uma melhoria é que o algoritmo novo tem de fazer exatamente o mesmo que o antigo. Dois algoritmos são **equivalentes** quando, para todas as entradas que o contrato aceita, escrevem exatamente o mesmo no ecrã. Uma "melhoria" que muda um resultado, por pequeno que seja, não é uma melhoria. É um erro novo.
+A regra principal de uma melhoria é que o algoritmo novo tem de fazer exatamente o mesmo que o antigo. Dois algoritmos são **equivalentes** quando, para todas as entradas que o contrato aceita, escrevem exatamente o mesmo no ecrã. Uma "melhoria" que muda um resultado, por pequeno que seja, não é uma melhoria. É um erro novo. Se a versão nova escrever outra coisa num caso, faz o trace das duas versões com esse caso. Procura a primeira linha onde elas divergem.
 
 Daqui saem duas consequências. A primeira é que só se melhora um algoritmo que já passa em todos os testes. Melhorar um algoritmo errado junta dois problemas num só, e depois não se sabe qual dos dois causou o que se vê. A segunda é que a equivalência se mostra de duas maneiras, e as duas são precisas. Mostra-se com os testes, executando outra vez a tabela de casos inteira na versão nova e confirmando que dá exatamente os mesmos resultados. E mostra-se com uma explicação por palavras, que diz por que razão a alteração não pode mudar nenhum resultado. Os testes provam que a versão nova funciona nos casos testados. A explicação cobre os casos que não testaste.
 
@@ -451,14 +451,14 @@ Os dois projetos não contam para a avaliação prática, porque são feitos com
 
 Algumas regras simples para o organizar:
 
-- Uma pasta chamada `portefolio-algoritmos`, com um ficheiro por peça. Os nomes dos ficheiros escrevem-se em minúsculas, com hífenes e sem acentos nem espaços, por exemplo `pontos-do-cartao-pseudocodigo` e `pontos-do-cartao-testes`. Se houver fluxograma, `pontos-do-cartao-fluxograma.drawio`.
+- Uma pasta chamada `portefolio-algoritmos`, com um ficheiro por peça. Os nomes dos ficheiros escrevem-se em minúsculas, com hífenes e sem acentos nem espaços, por exemplo `pontos-do-cartao-pseudocodigo.txt` e `pontos-do-cartao-testes.txt`. Se houver fluxograma, `pontos-do-cartao-fluxograma.drawio`.
 - Cada versão de um algoritmo num ficheiro próprio. Não escrevas a versão corrigida por cima da versão com erro, porque o portefólio mostra as duas.
-- Se fizeres o fluxograma no diagrams.net, o menu abre-se no botão redondo com reticências, no canto superior direito. Em Ficheiro, a opção Guardar como grava o diagrama com outro nome. No campo Onde, escolhe Aparelho ou Descarregar, para o ficheiro ficar no teu computador e não numa conta na internet. Em Exportar como, a opção PNG cria a imagem que podes juntar a um documento.
+- Se fizeres o fluxograma no diagrams.net, guarda-o na barra de menus, em Ficheiro > Guardar como. No campo Onde, escolhe Aparelho ou Descarregar, para o ficheiro ficar no teu computador e não numa conta na internet. Para a imagem que podes juntar a um documento, usa Ficheiro > Exportar como > PNG. Com a janela estreita, as mesmas opções estão no botão redondo com reticências.
 - Os traces feitos em papel também contam. Fotografa-os ou passa-os a limpo, e junta-os aos testes do problema a que pertencem.
 
 ## Funções: dar nome a uma parte do algoritmo
 
-Esta é a única parte do guia com uma instrução nova, `Função`. Entrou neste tema depois de ele estar planeado. Por isso está numa parte própria, depois da teoria de testar, depurar e melhorar, e não misturada com ela. Usa o que já sabes dos guias 02 a 04. Nas duas últimas secções, usa também a tabela de casos esperados e a ideia de equivalência, das secções anteriores deste guia. Não precisa do exemplo guiado do inventário, que vem a seguir a esta parte. Se já escreveste funções nas aulas, esta parte arruma essa matéria e explica o que acontece por dentro de uma chamada.
+Esta é a única parte do guia com uma instrução nova, `Função`. Está numa parte própria, depois da teoria de testar, depurar e melhorar, e não misturada com ela. Usa o que já sabes dos guias 02 a 04. Nas duas últimas secções, usa também a tabela de casos esperados e a ideia de equivalência, das secções anteriores deste guia. Não precisa do exemplo guiado do inventário, que vem a seguir a esta parte. Se já escreveste funções nas aulas, esta parte arruma essa matéria e explica o que acontece por dentro de uma chamada.
 
 ### Uma parte que se repete
 
@@ -613,13 +613,13 @@ Este é o trace do algoritmo do stock, com 12 cadernos, 7 canetas e 25 lápis. A
 | ---: | --- | ---: | ---: | ---: | --- |
 | 0 | antes de começar | sem valor | sem valor | sem valor | nada |
 | 1 | `Escreve: "Cadernos em stock?"` | sem valor | sem valor | sem valor | Cadernos em stock? |
-| 2 | `int cadernos = ler valor` | 12 | sem valor | sem valor | a funcionária escreve 12 |
+| 2 | `int cadernos = ler valor` | 12 | sem valor | sem valor | a pessoa escreve 12 |
 | 3 | `Escreve: "Canetas em stock?"` | 12 | sem valor | sem valor | Canetas em stock? |
-| 4 | `int canetas = ler valor` | 12 | 7 | sem valor | a funcionária escreve 7 |
+| 4 | `int canetas = ler valor` | 12 | 7 | sem valor | a pessoa escreve 7 |
 | 5 | `Escreve: "Lápis em stock?"` | 12 | 7 | sem valor | Lápis em stock? |
-| 6 | `int lapis = ler valor` | 12 | 7 | 25 | a funcionária escreve 25 |
+| 6 | `int lapis = ler valor` | 12 | 7 | 25 | a pessoa escreve 25 |
 | 7 | `mostraStock("cadernos", cadernos)`: chamada 1 | 12 | 7 | 25 | Stock de cadernos: 12 |
-| 8 | `mostraStock("canetas", canetas)`: chamada 2 | 12 | 7 | 25 | Stock de canetas: 7 e Encomendar canetas |
+| 8 | `mostraStock("canetas", canetas)`: chamada 2 | 12 | 7 | 25 | Stock de canetas: 7<br>Encomendar canetas |
 | 9 | `mostraStock("lápis", lapis)`: chamada 3 | 12 | 7 | 25 | Stock de lápis: 25 |
 
 A chamada 2, a do passo 8, em tabela própria:
@@ -669,6 +669,8 @@ Dentro da chamada, `caixas` é a variável local da função, que nasce com `30 
 
 Daqui sai uma regra das aulas. Uma função só usa os seus parâmetros, as suas variáveis locais e as constantes. Tudo aquilo de que precisa recebe-o pelos parâmetros. As constantes são a exceção, porque se escrevem no início, antes das funções, e valem em todo o algoritmo. São regras do problema, como o `STOCK_MINIMO`, e não mudam. Imagina uma função que fosse buscar uma variável do algoritmo principal, sem a receber. Deixava de se poder perceber e testar sozinha, porque o que ela faz passava a depender de uma coisa que não está no seu cabeçalho.
 
+É um erro frequente. Na primeira vez que se escreve `mostraStock`, é fácil escrever `cadernos` em vez de `quantidade` no corpo. Foi a partir do bloco dos cadernos que a função nasceu. Com esse erro, as três chamadas escreviam o stock dos cadernos. O valor que cada chamada dá a `quantidade` nunca seria usado. E a função deixava de se poder testar sozinha. Num algoritmo principal de uma linha, só com a chamada, não existe nenhuma variável `cadernos`.
+
 ### A ordem dos argumentos conta
 
 Os argumentos passam para os parâmetros pela ordem, e não pelo nome. Numa função em que a ordem muda o resultado, trocar os argumentos dá outro resultado, sem nenhum aviso. Com a função `escreveCaixas` da secção anterior, tenta prever o que escreve cada uma destas duas chamadas:
@@ -694,8 +696,8 @@ Com o contrato, a função testa-se sozinha, antes de ser usada no algoritmo com
 | ---: | --- | --- | --- | --- |
 | 1 | normal | `"cadernos"`, 25 | Stock de cadernos: 25 | Um artigo com stock folgado |
 | 2 | fronteira | `"canetas"`, 10 | Stock de canetas: 10 | O próprio mínimo, que não está abaixo de 10 |
-| 3 | fronteira | `"canetas"`, 9 | Stock de canetas: 9 e Encomendar canetas | Uma unidade abaixo do mínimo |
-| 4 | fronteira | `"lápis"`, 0 | Stock de lápis: 0 e Encomendar lápis | Um artigo esgotado, a menor quantidade que o contrato aceita |
+| 3 | fronteira | `"canetas"`, 9 | Stock de canetas: 9<br>Encomendar canetas | Uma unidade abaixo do mínimo |
+| 4 | fronteira | `"lápis"`, 0 | Stock de lápis: 0<br>Encomendar lápis | Um artigo esgotado, a menor quantidade que o contrato aceita |
 
 Para executar um caso, basta um algoritmo principal de uma linha, só com a chamada, por exemplo `mostraStock("canetas", 10)`, e o trace da chamada. Não é preciso ler nada nem ter as outras partes do algoritmo prontas.
 
@@ -1065,7 +1067,15 @@ A versão com o erro não se deita fora. É a prova de que o encontraste e corri
 
 ## Erros frequentes
 
-Os oito primeiros são erros de quem está a aprender a testar e a depurar. Os erros que aparecem dentro dos algoritmos estão na secção "Quatro erros que vais encontrar muitas vezes". Os cinco últimos são erros frequentes com funções.
+Os quatro primeiros são erros de quem está a aprender a testar e a depurar. Os quatro últimos são erros com funções. Os erros típicos de cada ideia estão na secção dela, e não se repetem aqui:
+
+- os erros que aparecem dentro dos algoritmos, em "Quatro erros que vais encontrar muitas vezes";
+- mudar várias linhas de uma vez, no passo 4 de "Depurar com método";
+- a correção que estraga outro caso, no passo 5 de "Depurar com método";
+- o número do fim certo com as decisões erradas, em "Corrigir a causa e não o sintoma";
+- a versão melhorada que escreve outra coisa, em "Melhorar um algoritmo sem mudar o que ele faz";
+- a função que usa uma variável do algoritmo principal, em "As variáveis da função são da função";
+- os argumentos pela ordem trocada, em "A ordem dos argumentos conta".
 
 ### Só casos normais na tabela
 
@@ -1078,22 +1088,6 @@ O resultado esperado da tua tabela concorda sempre com o obtido, e nenhum teste 
 ### O trace que concorda sempre contigo
 
 O teu trace dá sempre o que esperavas, mesmo quando o algoritmo tem um erro. Acontece quando fazes a conta que achas que o algoritmo devia fazer, e não a que está escrita. Para o corrigir, executa literalmente cada instrução, com os valores da linha de cima da tabela.
-
-### Várias linhas mudadas de uma vez
-
-Mudaste várias linhas, o teste passou, e não sabes porquê. Não sabes qual das alterações corrigiu o erro, nem se as outras estragaram alguma coisa. Acontece quando se muda o algoritmo sem uma hipótese, só para ver se o teste passa. Para o evitar, trabalha com uma hipótese, uma alteração e um teste de cada vez.
-
-### A correção que estraga outro caso
-
-Corrigiste o caso que falhava, e outro caso, que antes passava, começou a falhar. Acontece porque uma correção pode mudar o que o algoritmo faz noutros casos, e isso só se vê se voltares a executar a tabela inteira. Para o evitar, faz o teste de regressão, com todos os casos, depois de cada correção.
-
-### O número do fim certo e as decisões erradas
-
-Depois da correção, o número do fim está certo, mas as decisões tomadas pelo caminho continuam erradas. Acontece quando se corrige o sintoma, com uma conta no fim que acerta o número, e a causa fica onde estava. Pergunta se a correção explica porque é que o valor ficou errado, ou se só o acerta no fim. Para o corrigir, muda a instrução que produz o erro, e não a que o mostra.
-
-### A versão melhorada que escreve outra coisa
-
-A versão melhorada escreve um resultado diferente da original, num dos casos. Uma melhoria assim é um erro novo. Para encontrares a causa, faz o trace das duas versões com esse caso e procura a primeira linha onde elas divergem. Para o evitar, melhora só depois de a versão original passar em todos os testes, e testa a versão nova com a mesma tabela.
 
 ### Os passos contados de maneiras diferentes
 
@@ -1123,10 +1117,6 @@ mostraStock("canetas", 7)
 ```
 
 A função ficou só com o primeiro `Escreve:`. O `Se` passou a ser a primeira instrução do algoritmo principal, executada uma vez, logo no início, antes da chamada. E nesse momento não existe nenhuma variável `quantidade`, porque os parâmetros só existem dentro de uma chamada. O `Se` tem de estar indentado como o `Escreve:` de cima, e o `Escreve:` da encomenda oito espaços para dentro.
-
-### A função que usa uma variável do algoritmo principal
-
-Na primeira vez que se escreve `mostraStock`, é fácil escrever `cadernos` em vez de `quantidade` no corpo. Foi a partir do bloco dos cadernos que a função nasceu. Se a função fosse buscar a variável `cadernos`, em vez de usar o seu parâmetro, as três chamadas escreviam o stock dos cadernos. O valor que cada chamada dá a `quantidade` nunca seria usado. E a função deixava de se poder testar sozinha. Num algoritmo principal de uma linha, só com a chamada, não existe nenhuma variável `cadernos`. Dentro de uma função, só se usam os parâmetros, as variáveis locais e as constantes.
 
 ### `Função` escrito na chamada
 
@@ -1189,9 +1179,9 @@ Na primeira vez que se escreve `mostraStock`, é fácil escrever `cadernos` em v
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md). Este tema não tem laboratório. Os exercícios 5 e 6, das funções, fazem-se na aula das funções, e o 7 também, se houver tempo. Os exercícios 1 a 4 fazem-se em casa, ou quando acabares um projeto mais cedo.
+Para praticar este tema, faz a [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md). Este tema não tem laboratório.
 
-Depois vêm os dois projetos guiados. O [projeto 1, duelo de dados](05-projeto-1-duelo-de-dados.md), faz-se com o professor ao quadro. O [projeto 2, adivinha o número](05-projeto-2-adivinha-o-numero.md), faz-se em pares, depois das aulas da validação de dados e da validação repetida.
+Depois vêm os dois projetos guiados, o [projeto 1, duelo de dados](05-projeto-1-duelo-de-dados.md), e o [projeto 2, adivinha o número](05-projeto-2-adivinha-o-numero.md).
 
 A unidade acaba com a avaliação prática, que é individual, dura 120 minutos e tem duas partes. Na primeira, recebes um problema novo e fazes o que fizeste nos projetos. Escreves o contrato, a tabela de casos esperados antes do algoritmo, o algoritmo e os testes. Lês também um fluxograma que te é dado, que segues com valores e comparas com o enunciado. Na segunda, recebes um algoritmo que outra pessoa escreveu para o mesmo problema, com um erro que já foi observado. Tens de o reproduzir, encontrar a causa, corrigi-la, voltar a testar e explicar a correção. Depois melhoras o algoritmo e comparas os passos antes e depois.
 

@@ -55,7 +55,7 @@ A matéria está nas secções "Casos normais, de fronteira e inválidos" e "A t
 
 A loja de informática marca cada artigo do armazém conforme a quantidade que tem em stock. Com menos de 5 unidades, o artigo fica marcado "Encomendar". Com 5 unidades ou mais, fica marcado "Stock suficiente". Uma quantidade negativa é um erro de contagem, e o algoritmo escreve "Quantidade inválida".
 
-**a)** Sem olhares para o algoritmo que está mais abaixo, escreve a tabela de casos esperados deste problema. Usa as cinco colunas da tabela do guia: número, tipo, quantidade, resultado esperado e razão da escolha. Tem de ter pelo menos quatro casos: um caso normal, os dois lados da fronteira das 5 unidades e um caso inválido. Tapa o algoritmo com uma folha até acabares esta alínea. O exercício só funciona se a tabela for escrita a partir do enunciado.
+**a)** Sem olhares para o algoritmo que está mais abaixo, escreve a tabela de casos esperados deste problema. Usa as cinco colunas da tabela do guia: número, tipo, quantidade, resultado esperado e razão da escolha. Tem de ter pelo menos quatro casos: um caso normal, os dois lados da fronteira das 5 unidades e um caso inválido. Os dois lados são o último valor que dá "Encomendar" e o primeiro que dá "Stock suficiente". Tapa o algoritmo com uma folha até acabares esta alínea. O exercício só funciona se a tabela for escrita a partir do enunciado.
 
 **b)** Agora lê o algoritmo e executa-o com cada um dos teus casos. Não precisas do trace linha a linha. Basta seguir a cadeia de condições e anotar a primeira que dá verdadeiro, ou o `Senão`, se nenhuma der. Acrescenta à tabela as colunas do resultado obtido e de se o teste passou.
 
@@ -75,7 +75,7 @@ Senão
 
 ## Exercício 2: Depurar com método (13 min)
 
-A matéria está nas secções "Depurar com método" e "Quatro erros que vais encontrar muitas vezes" do guia. O registo de depuração está no passo 11 do exemplo guiado.
+A matéria está na secção "Depurar com método" do guia e no padrão totalizador do guia 04. O registo de depuração está no passo 11 do exemplo guiado.
 
 No armazém da loja, o funcionário regista as entregas do dia. Escreve primeiro quantas entregas houve e depois, para cada entrega, o número de caixas que ela trouxe. O algoritmo deve mostrar o total de caixas recebidas no dia e quantas entregas foram grandes, isto é, de 10 ou mais caixas.
 
@@ -83,12 +83,12 @@ No armazém da loja, o funcionário regista as entregas do dia. Escreve primeiro
 const ENTREGA_GRANDE = 10
 Escreve: "Quantas entregas houve hoje?"
 int numeroEntregas = ler valor
+int totalCaixas = 0
 int grandes = 0
 Para entrega de 1 até numeroEntregas
-    int totalCaixas = 0
     Escreve: "Caixas da entrega ", entrega, "?"
     int caixas = ler valor
-    totalCaixas = totalCaixas + caixas
+    totalCaixas = caixas
     Se caixas >= ENTREGA_GRANDE
         grandes = grandes + 1
 Escreve: "Total de caixas: ", totalCaixas
@@ -103,7 +103,7 @@ As quatro alíneas são os quatro primeiros passos do método, pela ordem do gui
 
 **b)** Formular uma hipótese. Escreve, numa frase que possa ser verdadeira ou falsa, o que achas que causa o erro.
 
-**c)** Verificar com o trace. Faz a tabela de iterações do caso de segunda-feira, com colunas para `entrega`, `caixas`, `totalCaixas` e `grandes` e para a condição escondida do `Para`, `entrega <= numeroEntregas`. Na coluna do que acontece durante a iteração, escreve cada atribuição a `totalCaixas` com o valor que ela dá. Diz se a tabela confirma a tua hipótese e qual é a instrução que causa o erro.
+**c)** Verificar com o trace. Faz a tabela de iterações do caso de segunda-feira, com colunas para `entrega`, `caixas`, `totalCaixas` e `grandes` e para a condição escondida do `Para`, `entrega <= numeroEntregas`. Na coluna do que acontece durante a iteração, escreve cada atribuição a `totalCaixas` com o valor que ela dá. Diz se a tabela confirma a tua hipótese. Se não a confirmar, escreve outra, com o que a tabela mostrou. No fim, diz qual é a instrução que causa o erro.
 
 **d)** Corrigir a causa. Corrige o algoritmo com uma única alteração, e diz qual foi. Podes escrever o algoritmo corrigido ou descrever a alteração numa frase, desde que se perceba exatamente que linha muda e para onde.
 
@@ -160,7 +160,7 @@ A matéria está nas secções "A tabela de casos esperados" e "A síntese: sequ
 
 O cartão de cliente da papelaria dá pontos. Por cada compra, o cliente ganha 1 ponto por cada 100 cêntimos completos que gastou. Uma compra de 250 cêntimos dá 2 pontos, e uma de 99 cêntimos não dá nenhum. Uma compra de 2000 cêntimos ou mais ganha ainda 10 pontos de bónus. No fim do dia, a funcionária escreve o valor de cada compra feita com cartão, em cêntimos, uma a uma, e escreve 0 quando acabar. Os valores escritos são sempre positivos, e por isso neste exercício não há validação. No fim, o algoritmo mostra o total de pontos atribuídos no dia.
 
-**a)** Antes de escreveres o algoritmo, escreve a tabela de casos esperados, com as cinco colunas do guia. Tem de ter pelo menos três casos: um caso normal, os dois lados da fronteira do bónus e um dia sem compras. Cada caso é uma sequência de valores, terminada no 0 que marca o fim do dia.
+**a)** Antes de escreveres o algoritmo, escreve a tabela de casos esperados, com as cinco colunas do guia. Tem de ter pelo menos três casos: um caso normal, um caso com os dois lados da fronteira do bónus e um dia sem compras. Os dois lados do bónus podem estar no mesmo dia ou em dias separados. Cada caso é uma sequência de valores, terminada no 0 que marca o fim do dia.
 
 **b)** Escreve o algoritmo, em pseudocódigo ou em frases claras que não deixem dúvidas. Se usares pseudocódigo, usa a constante `SENTINELA` e uma constante para cada valor fixo do enunciado. Os valores fixos são os 100 cêntimos, os 2000 cêntimos e os 10 pontos de bónus.
 
@@ -246,7 +246,7 @@ Se fruta < MINIMO_FRUTA
 
 Os problemas completos do teu portefólio são os dois projetos deste tema. Este fecho é opcional. Junta ao exercício 4 as duas peças que lhe faltam para ser mais um problema completo: o contrato e os testes. É um bom treino antes da avaliação. Podes fazê-lo em casa ou quando acabares um projeto mais cedo. A alínea b) é de fluxogramas, e só a fazes quando o professor o indicar. A secção "O teu portefólio" do guia diz como organizar a pasta.
 
-**a)** Escreve o contrato do problema do exercício 4, com as respostas às quatro perguntas do guia 01: entradas, saídas, restrições e condições. Se encontrares alguma ambiguidade no enunciado, escreve a decisão que tomaste.
+**a)** No exercício 4, o enunciado fez de contrato. Escreve agora o contrato do problema, com as respostas às quatro perguntas do guia 01: entradas, saídas, restrições e condições. Escrevê-lo mostra se ficou alguma ambiguidade por decidir. Se ficar, escreve a decisão que tomaste e acerta a tabela antes de testar.
 
 **b)** Só quando o professor o indicar: desenha no diagrams.net o fluxograma do teu algoritmo do exercício 4, como no laboratório do tema 04. Guarda o ficheiro `.drawio` e exporta uma imagem PNG. Confirma, figura a figura, que o fluxograma diz exatamente o mesmo que o algoritmo que escreveste.
 
@@ -257,9 +257,9 @@ Os problemas completos do teu portefólio são os dois projetos deste tema. Este
 Usa estas pistas pela ordem em que aparecem, e só passa à seguinte se a anterior não tiver chegado.
 
 - Exercício 1: desenha a reta dos valores inteiros, de -2 a 8, e marca por cima de cada troço a resposta que o enunciado dá. A fronteira das 5 unidades é o sítio onde a resposta muda de "Encomendar" para "Stock suficiente". Testa o último valor de um lado e o primeiro do outro. Para saber de que lado fica o 5, relê o enunciado: "5 unidades ou mais". Na alínea c), pergunta-te se o 2 e o 12 estão perto do sítio onde o algoritmo e o enunciado discordam.
-- Exercício 2: compara o total obtido, 4, com as caixas de cada entrega. A que entrega corresponde o 4? Isso diz-te o que o totalizador está a fazer. Para a hipótese, relê no guia a secção "Quatro erros que vais encontrar muitas vezes". Decide qual deles explica um total que só se lembra da última entrega. Na tabela de iterações, olha para o que acontece a `totalCaixas` logo no início de cada iteração, e não só no momento do teste.
+- Exercício 2: compara o total obtido, 4, com as caixas de cada entrega. A que entrega corresponde o 4? Isso diz-te o que o totalizador está a fazer. Antes de escreveres a hipótese, lê todas as linhas que mexem em `totalCaixas`, e não só a primeira. Na tabela de iterações, escreve em cada atribuição o valor que `totalCaixas` tinha antes e o que fica depois. Não te fiques pelo valor no momento do teste.
 - Exercício 3: na alínea a), repara que cada iteração da versão dada avalia sempre os três `Se`, qualquer que seja o peso. E executa exatamente uma atualização. Por isso, todas as iterações têm o mesmo número de passos. Na alínea b), lembra-te da regra da cadeia de `Senão se`. Quando o algoritmo chega à segunda condição, o que é que já sabe sobre o peso? Numa cadeia, o `Senão se` e o `Senão` ficam à mesma distância da margem que o primeiro `Se`. Cada atualização fica indentada por baixo da sua pergunta. Na alínea c), conta à parte uma iteração com a encomenda leve e uma com a encomenda pesada. Lembra-te de que o `Senão` não conta como passo.
-- Exercício 4: decompõe antes de escrever. É preciso ler valores até ao 0 e, para cada compra, somar os pontos da compra e decidir o bónus. A estrutura é a do exemplo do inventário: inicialização do total, leitura antecipada, ciclo com sentinela e leitura no fim do corpo. Os pontos de uma compra calculam-se com uma operação do guia 02 que dá o número de vezes que 100 cabe no valor. Na tabela, calcula os pontos de uma compra de 1999 cêntimos e de uma de 2000. A diferença não é só de 1 ponto.
+- Exercício 4: decompõe antes de escrever. É preciso ler valores até ao 0 e, para cada compra, somar os pontos da compra e decidir o bónus. A estrutura é a do exemplo do inventário: inicialização do total, leitura antecipada, ciclo com sentinela e leitura no fim do corpo. Os pontos de uma compra calculam-se com uma operação do guia 02 que dá o número de vezes que 100 cabe no valor. Na tabela, calcula os pontos de cada compra em duas partes: os pontos normais e o bónus, se o houver.
 - Exercício 5: faz as chamadas uma de cada vez e, antes de cada uma, escreve que valor recebe cada parâmetro. Na chamada 1, o argumento é uma variável, e o que passa para a função é o valor dela. Na chamada 3, o valor é exatamente o do limite, por isso lê o sinal da condição com atenção. Na alínea b), o `Senão` não avalia nenhuma condição, e por isso não tem linha própria na tabela. É a mesma razão por que não conta como passo, na secção "Contar passos" do guia.
 - Exercício 6: o cabeçalho já está no enunciado. A primeira linha do corpo é um `Escreve:` com várias partes, como o de `mostraStock` no guia. Para a segunda, relê no guia 03 como se escreve um intervalo com `e`. Depois decide, a partir das palavras do contrato, se 15 e 50 ficam dentro ou fora do intervalo. Na alínea c), duas das três turmas estão em cima de um limite.
 - Exercício 7: na alínea a), sublinha em cada bloco tudo o que não é igual nos três. Cada coisa sublinhada vai ser um parâmetro, como na secção "Trocar uma repetição por uma função" do guia. Na alínea b), repara que o texto `" sandes"` tem um espaço antes da palavra. Na função, o espaço fica escrito num texto, e a palavra vem de um parâmetro.
@@ -356,7 +356,7 @@ Pista: no caso 2, o corpo do `Para` não chega a ser executado. Os dois `Escreve
 
 ### Mais longe 6: Dois erros em funções (10 min)
 
-Continua os exercícios 5 e 6. Cada um destes algoritmos tem um erro, e nenhum dos dois está entre os erros com funções da secção "Erros frequentes" do guia. Para cada um:
+Continua o exercício 5. Cada um destes algoritmos tem um erro, e nenhum dos dois é um dos erros com funções que o guia mostra. Para cada um:
 
 - diz o que acontece quando o algoritmo é executado, com as entradas indicadas;
 - diz qual é a linha com o erro e porquê;
@@ -377,20 +377,23 @@ mostraStock("borrachas", borrachas)
 int borrachas = ler valor
 ```
 
-**b)** Este algoritmo não lê nada.
+**b)** É o algoritmo do exercício 5, com um erro de escrita. Não lê nada.
 
 ```text
-const MINIMO_ALUNOS = 15
-const LUGARES_AUTOCARRO = 50
+const LIMITE_GRATIS = 3000
+const PORTES = 400
 
-Função mostraVisita(turma, inscritos)
-    Escreve: "Turma ", turma, ": ", inscritos, " inscritos"
-    Se inscrito >= MINIMO_ALUNOS e inscrito <= LUGARES_AUTOCARRO
-        Escreve: "Visita confirmada"
+Função mostraPortes(numero, valorEncomenda)
+    Escreve: "Encomenda ", numero, ": ", valorEncomenda, " cêntimos"
+    Se valorEncomena >= LIMITE_GRATIS
+        Escreve: "Portes grátis"
     Senão
-        Escreve: "Visita por confirmar"
+        Escreve: "Portes: ", PORTES, " cêntimos"
 
-mostraVisita("10C", 23)
+int valorPrimeira = 3500
+mostraPortes(1, valorPrimeira)
+mostraPortes(2, 2999)
+mostraPortes(3, 3000)
 ```
 
 Pista: faz o trace, linha a linha, até à primeira linha que usa uma variável que, nesse momento, ainda não tem valor ou não existe. Na alínea b), compara letra a letra os nomes do cabeçalho com os do corpo.
@@ -408,7 +411,7 @@ Pista: faz o trace, linha a linha, até à primeira linha que usa uma variável 
 - [ ] Nos exercícios 5 a 7, as minhas chamadas têm os argumentos pela ordem dos parâmetros.
 - [ ] Se fiz o exercício 8, o portefólio tem o enunciado do exercício 4 com o contrato, o algoritmo e a tabela de casos executada. Todos os casos passam. Tem também, ao lado, o registo de depuração do exercício 2.
 - [ ] Se o professor indicou a alínea b) do exercício 8, o fluxograma diz exatamente o mesmo que o algoritmo que escrevi, figura a figura.
-- [ ] Guardei no portefólio as versões com erro e as versões corrigidas, cada uma no seu ficheiro.
+- [ ] Se guardei exercícios no portefólio, guardei as versões com erro e as versões corrigidas, cada uma no seu ficheiro.
 
 ## Autoavaliação
 
