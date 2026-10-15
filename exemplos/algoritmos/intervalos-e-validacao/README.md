@@ -2,7 +2,7 @@
 
 # Algoritmos da aula de intervalos e validação
 
-Oito algoritmos curtos, cada um com uma ideia só, sobre os intervalos, as fronteiras e a validação dos dados. É usado nos temas [03 Decisões e validação](../../../01-algoritmos/03-decisoes-e-validacao.md) e [04 Repetição e padrões](../../../01-algoritmos/04-repeticao-e-padroes.md).
+Oito algoritmos curtos, cada um com uma ideia só, sobre os intervalos, as fronteiras e a validação dos dados. São usados nos temas [03 Decisões e validação](../../../01-algoritmos/03-decisoes-e-validacao.md) e [04 Repetição e padrões](../../../01-algoritmos/04-repeticao-e-padroes.md).
 
 Todos usam a mesma situação: um ar condicionado que aceita temperaturas de 16 a 30 graus, incluindo o 16 e o 30. Nos algoritmos 4, 5 e 6 há mais uma regra. A partir de 24 graus, incluindo o 24, o aparelho entra em modo económico.
 
@@ -21,11 +21,11 @@ Todos usam a mesma situação: um ar condicionado que aceita temperaturas de 16 
 
 Estes algoritmos não correm num computador. São pseudocódigo, como os dos guias, e abrem-se aqui no GitHub ou em qualquer editor de texto. Para perceberes cada um, segue-o à mão, com um valor de cada vez, e escreve em papel o que aparece no ecrã.
 
-Escolhe os valores como o guia ensina, junto de cada limite: o valor imediatamente abaixo, o próprio limite e o valor imediatamente acima. Para os limites 16 e 30, são o 15, o 16 e o 17, e o 29, o 30 e o 31.
+Escolhe os valores como o guia ensina, junto de cada limite: o valor imediatamente abaixo, o próprio limite e o valor imediatamente acima. Para os limites 16 e 30, são o 15, o 16 e o 17, e o 29, o 30 e o 31. Nos algoritmos 4, 5 e 6 há um terceiro limite, o 24, e por isso experimenta também o 23, o 24 e o 25.
 
 O que deves ver: no algoritmo 1, o 16, o 17, o 29 e o 30 dão "Temperatura aceite". O 15 e o 31 dão "Temperatura fora do intervalo".
 
-Os algoritmos 3, 4 e 8 estão errados de propósito, e o erro não se vê com qualquer valor. Experimenta cada um com vários valores, dentro e fora do intervalo, até encontrares aquele que mostra o erro. Depois diz qual é a linha que está mal e como a corrigias.
+Os algoritmos 3, 4 e 8 estão errados de propósito, e o erro só se vê com alguns valores. Experimenta cada um com vários valores, dentro e fora do intervalo, até encontrares aquele que mostra o erro. Depois diz qual é a linha que está mal e como a corrigias.
 
 Para o algoritmo 7, faz a tabela de iterações, como no guia da repetição. A pessoa escreve primeiro um valor acima de 30, depois um abaixo de 16 e por fim um válido.
 
