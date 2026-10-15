@@ -2,7 +2,7 @@
 
 # Do problema ao algoritmo
 
-Módulo Desenvolver algoritmos. Este guia mostra como se pensa um problema antes de o resolver. Explica o que é um algoritmo e como se escreve o contrato de um problema. Explica também como se parte um problema em partes mais pequenas e como se encontram as instruções que deixam dúvidas. Lê-se em cerca de 100 minutos, e não precisa de ser de uma vez. Para praticar, há a [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Este guia mostra como se pensa um problema antes de o resolver. Explica o que é um algoritmo e como se escreve o contrato de um problema. Explica também como se parte um problema em partes mais pequenas e como se encontram as instruções que deixam dúvidas. Lê-se em cerca de 130 minutos, e não precisa de ser de uma vez. Para praticar, há a [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md) deste tema.
 
 Este é o primeiro tema da área de algoritmos, e não precisas de saber nada de programação. Neste tema, nada se escreve numa linguagem de programação, e nada precisa de um computador a executar código. Trabalhas em papel, e os algoritmos escrevem-se em português, em passos numerados. A forma própria de os escrever, o pseudocódigo, é o assunto do tema seguinte. Não tens de decorar tudo de uma vez. Lê com calma, volta à explicação quando um exemplo não fizer sentido, e usa os exemplos para confirmar que percebeste.
 
@@ -69,7 +69,7 @@ Cada parte desta definição está lá por uma razão. Vê-as uma a uma, com um 
 - "Finita" quer dizer que acaba, e que está escrito quando acaba. As indicações "anda sempre em frente" nunca te levam à escola, porque não dizem onde parar. Um algoritmo que nunca termina nunca chega a dar a resposta, e por isso não resolve nada.
 - "Claro" quer dizer que cada passo só se pode ler de uma maneira. Se dois colegas lerem o mesmo passo e fizerem coisas diferentes, o passo não está claro. Este é o defeito mais comum de todos, e tem um nome, ambiguidade, que a secção "Instruções ambíguas" explica.
 - "Possível de executar" quer dizer que quem segue o algoritmo consegue fazer o passo com o que tem à frente. "Conta quantas senhas foram entregues hoje" é executável, porque basta olhar para o número da última senha. "Adivinha quantos clientes vão aparecer amanhã" não é, porque ninguém tem essa informação.
-- "Parte de uns dados e chega a um resultado" quer dizer que se sabe bem de onde o algoritmo parte e onde chega. Na secção do contrato, vais dar-lhes os nomes técnicos: entradas e saídas.
+- "Parte de uns dados e chega a um resultado" quer dizer que se sabe bem de onde o algoritmo parte e onde chega. Aos dados de partida chama-se entradas, e ao resultado chama-se saídas. A secção do contrato explica-as com calma.
 
 No mundo da gestão, que é o do teu curso, os algoritmos estão em todo o lado, muitas vezes com o nome de procedimento. Vê, por exemplo, o que faz o funcionário de um armazém quando chega mercadoria de um fornecedor. A mercadoria vem acompanhada de uma **guia de remessa**, que é o papel que diz o que foi enviado. O funcionário faz assim:
 
@@ -79,7 +79,7 @@ No mundo da gestão, que é o do teu curso, os algoritmos estão em todo o lado,
 4. Se forem diferentes, escrever na guia quantas caixas chegaram de facto, assinar e avisar o fornecedor da diferença.
 5. Dar entrada no stock das caixas que chegaram de facto.
 
-É um algoritmo. Tem uma ordem e acaba no passo 5. Cada passo diz o que fazer. Parte de dados, as caixas e a guia, para chegar a um resultado, a guia assinada e o stock atualizado. Repara no passo 4. Diz o que acontece quando as coisas não correm como é costume. É isso que separa um algoritmo a sério de uma descrição por alto.
+É um algoritmo. Tem uma ordem e acaba no passo 5. Cada passo diz o que fazer. Parte de dados, as caixas e a guia, para chegar a um resultado, a guia assinada e o stock atualizado. Dar entrada no stock, no passo 5, quer dizer acrescentar ao stock registado as caixas que chegaram. O passo 4 diz o que acontece quando as coisas não correm como é costume. É isso que separa um algoritmo a sério de uma descrição por alto.
 
 Quando olhas para um algoritmo, deves conseguir apontar sempre estas quatro coisas:
 
@@ -88,9 +88,9 @@ Quando olhas para um algoritmo, deves conseguir apontar sempre estas quatro cois
 3. uma saída observável, isto é, o resultado, que tem de se conseguir ver ou verificar;
 4. uma **condição de paragem**, isto é, o momento em que se sabe que terminou.
 
-Se faltar alguma, o algoritmo ainda não está completo. No algoritmo do armazém, as entradas são as caixas descarregadas e a guia de remessa. As regras são a contagem e a comparação. A saída é a guia assinada e o stock atualizado. A paragem é o passo 5.
+Se faltar alguma, o algoritmo ainda não está completo. No algoritmo do armazém, as entradas são as caixas descarregadas e a guia de remessa. As regras são a contagem e a comparação. A saída é a guia assinada e o stock atualizado. A paragem é o passo 5, porque depois de dar entrada no stock já não há nada a fazer.
 
-Há uma forma honesta de testar se um conjunto de passos é mesmo um algoritmo. Dá-o a outra pessoa, que não sabe o que estás a pensar, e vê se ela chega ao mesmo resultado que tu. Se tiver de te perguntar alguma coisa, há um passo que não está claro.
+Há uma forma segura de testar se um conjunto de passos é mesmo um algoritmo. Dá-o a outra pessoa, que não sabe o que estás a pensar, e vê se ela chega ao mesmo resultado que tu. Se tiver de te perguntar alguma coisa, há um passo que não está claro.
 
 ## Algoritmia e programação
 
@@ -108,15 +108,15 @@ Esta distinção vai acompanhar-te o ano inteiro, e por isso merece ser bem perc
 
 O **estado** é o conjunto de valores que descrevem uma situação num determinado momento. É uma fotografia: quantas pessoas estão na fila, que senha está a ser atendida, quantos cadernos há na prateleira, agora, antes de mais nada acontecer.
 
-Uma **ação** é um passo que muda o estado: chamar a senha seguinte, vender um caderno, receber uma caixa de um fornecedor.
+Uma **ação** é um passo que muda o estado: chamar a senha seguinte, vender um caderno, receber uma caixa de um fornecedor. Nem todos os passos de um algoritmo são ações. Comparar e verificar olham para o estado, mas não o mudam.
 
 O marcador de um jogo de futebol é um bom exemplo do dia a dia. O estado é o resultado e o minuto de jogo, por exemplo "2 a 1 ao minuto 60". Um golo é uma ação que muda o estado. Depois dele, o marcador passa a "2 a 2" ou a "3 a 1". Se quiseres saber quem está a ganhar, não precisas de rever o jogo todo. Olhas para o estado.
 
-Numa papelaria que atende por senha, o estado podia ser "está a ser atendida a senha 14 e há 6 pessoas à espera". Chamar a senha seguinte é uma ação. Depois dela, o estado passa a ser "está a ser atendida a senha 15 e há 5 pessoas à espera". Repara que a ação é sempre a mesma, "chamar a senha seguinte", mas o estado a que ela leva depende do estado de onde parte.
+Numa papelaria que atende por senha, o estado podia ser "está a ser atendida a senha 14 e há 6 pessoas à espera". Chamar a senha seguinte é uma ação. Depois dela, o estado passa a ser "está a ser atendida a senha 15 e há 5 pessoas à espera". A ação é sempre a mesma, "chamar a senha seguinte", mas o estado a que ela leva depende do estado de onde parte.
 
 Isto tem uma consequência que vais encontrar muitas vezes. A mesma ação, feita em estados diferentes, pode ter resultados muito diferentes, e às vezes nem faz sentido. Chamar a senha seguinte quando há 6 pessoas à espera é o funcionamento normal. Chamar a senha seguinte quando não há ninguém à espera é chamar em voz alta um número que ninguém tem. Por isso muitos passos de um algoritmo começam por olhar para o estado ("há alguém à espera?") antes de fazer a ação.
 
-A condição de paragem de um algoritmo também é uma pergunta sobre o estado. O atendimento acaba quando o estado for "já não há ninguém à espera e já não se entregam senhas". Um jogo acaba quando o estado for o objetivo.
+A condição de paragem de um algoritmo também é uma pergunta sobre o estado. O atendimento acaba quando o estado for "já não há ninguém à espera e já não se entregam senhas". Um jogo acaba quando o estado for o objetivo. No armazém, a paragem era o passo 5, e o estado era o stock já atualizado. Por ser uma pergunta sobre o estado, a condição de paragem entra também nas condições do contrato, que vais ver mais à frente.
 
 Para acompanhar o estado ao longo de um algoritmo, usa-se uma tabela. Tem uma coluna para cada valor que interessa e uma linha para cada momento. Cada linha mostra o estado depois de uma ação. Vais usar tabelas destas nos dois exemplos guiados deste guia. No tema seguinte, vão ter nome próprio: tabelas de trace, da palavra inglesa que quer dizer rasto.
 
@@ -218,7 +218,7 @@ Os exemplos concretos, calculados à mão, são estes:
 
 Cada linha ensina uma coisa diferente.
 
-A primeira linha é o caso que toda a gente imagina. O cliente da senha 18 tem quatro atendimentos à frente. São o da senha 14, que está a decorrer, e os das senhas 15, 16 e 17. São 4 atendimentos de 4 minutos, 16 minutos ao todo. Repara que 18 menos 14 também dá 4. A diferença entre as duas senhas diz quantos atendimentos faltam, precisamente porque decidimos contar inteiro o que está a decorrer.
+A primeira linha é o caso que toda a gente imagina. O cliente da senha 18 tem quatro atendimentos à frente. São o da senha 14, que está a decorrer, e os das senhas 15, 16 e 17. São 4 atendimentos de 4 minutos, 16 minutos ao todo. E 18 menos 14 também dá 4. A diferença entre as duas senhas diz quantos atendimentos faltam, precisamente porque decidimos contar inteiro o que está a decorrer.
 
 A segunda linha está logo acima da fronteira entre esperar e ser atendido. O cliente da senha 15 é o próximo, e só tem de esperar que acabe o atendimento que está a decorrer: 4 minutos.
 
@@ -226,7 +226,7 @@ A terceira linha está exatamente em cima da fronteira, e é o momento em que a 
 
 A quarta linha é a mais interessante, porque o enunciado não pensou nela. O cliente da senha 9 chegou atrasado, ou distraiu-se, e a vez dele já passou. A conta daria 9 menos 14, que é menos 5, e menos 5 vezes 4, que é menos 20. O ecrã mostraria "menos 20 minutos", o que não é uma resposta que se mostre a ninguém. Sem este exemplo no contrato, o algoritmo faria a conta à mesma e o ecrã mostraria esse disparate. É para isto que servem os casos extremos. Obrigam a decidir antes, em vez de descobrir depois.
 
-Repara também no que o contrato não promete. Se um cliente chamado não aparecer, o atendimento dele não demora 4 minutos, e os que estão atrás esperam menos do que o ecrã disse. O ecrã mostra uma previsão, e não uma garantia. Escrever isto também faz parte do contrato.
+Falta dizer o que o contrato não promete. Se um cliente chamado não aparecer, o atendimento dele não demora 4 minutos, e os que estão atrás esperam menos do que o ecrã disse. O ecrã mostra uma previsão, e não uma garantia. Escrever isto também faz parte do contrato.
 
 ### Porque se chama contrato
 
@@ -240,7 +240,7 @@ A máquina de senhas da papelaria tem um contrato destes, mesmo que ninguém o t
 
 No dia a dia fazes isto sem dar por isso. Organizar uma visita de estudo parece uma tarefa enorme. Agora parte-a em quatro: "escolher o local e a data", "pedir as autorizações", "tratar do transporte" e "preparar o que se faz lá". Cada parte já se consegue pensar. E "tratar do transporte" ainda se parte em "saber quantas pessoas vão", "reservar o autocarro" e "combinar a hora e o local de partida".
 
-Repara agora no problema "organizar o atendimento de uma loja". Assim, inteiro, é difícil de atacar. Por onde se começa? Decomposto, fica assim:
+Pensa agora no problema "organizar o atendimento de uma loja". Assim, inteiro, é difícil de atacar. Por onde se começa? Decomposto, fica assim:
 
 - distribuir senhas a quem chega;
 - saber qual é a senha que está a ser atendida;
@@ -250,7 +250,7 @@ Repara agora no problema "organizar o atendimento de uma loja". Assim, inteiro, 
 
 Cada um destes já se consegue pensar sozinho. Para distribuir senhas, basta saber qual foi a última senha entregue e se ainda há senhas. Não é preciso pensar, ao mesmo tempo, no que acontece quando alguém falta.
 
-Um subproblema não é o mesmo que um passo. Um subproblema é um objetivo, como "chamar a senha seguinte". Os passos são a forma de o atingir. Por exemplo, "comparar a última senha chamada com a última entregue; se forem diferentes, somar 1 e anunciar o número". Primeiro decompõe-se em subproblemas, depois escrevem-se os passos de cada um. Um subproblema pode ter dez passos, e pode ele próprio voltar a ser decomposto se ainda for grande.
+Um subproblema não é o mesmo que um passo. Um subproblema é um objetivo, como "chamar a senha seguinte". Os passos são a forma de o atingir. Por exemplo, "comparar a última senha chamada com a última entregue; se forem diferentes, somar 1, registar e anunciar o número". Primeiro decompõe-se em subproblemas, depois escrevem-se os passos de cada um. Um subproblema pode ter dez passos, e pode ele próprio voltar a ser decomposto se ainda for grande.
 
 Os subproblemas nem sempre são independentes. Há casos em que um precisa do que outro produziu. Só se consegue chamar a senha seguinte se alguém já tiver distribuído senhas. Quando decompões, escreve também esta ordem, porque ela diz por onde começar e o que tem de estar pronto antes de quê.
 
@@ -280,7 +280,7 @@ Quando fazes uma soma de números grandes em coluna, repetes o mesmo processo em
 
 Na papelaria, cada cliente que chega passa exatamente pelos mesmos passos para receber a senha. Só muda o número. Reparar nisto significa que só tens de escrever esses passos uma vez. Também há padrões entre problemas diferentes. Pensa na fila de uma papelaria, na fila de chamadas de um serviço de apoio técnico e na fila de trabalhos de uma impressora partilhada. As três funcionam da mesma maneira, por ordem de chegada. Quem resolveu uma já tem meio caminho andado nas outras.
 
-O erro típico é ver um padrão onde ele não se aplica sempre. Na solução dos Missionários e Canibais, quase todas as idas e voltas seguem o ritmo "vão dois, volta um". Mas há uma que não segue. Quem confiar no padrão sem verificar cada passo fica bloqueado precisamente aí. Um padrão ajuda a pensar. Não dispensa a verificação. Quando uma solução que seguia um padrão encrava, procura o passo em que o padrão deixou de funcionar. Para não te acontecer, verifica a regra em todos os passos, e não só nos que parecem perigosos.
+O erro típico é ver um padrão onde ele não se aplica sempre. Na papelaria, quase todos os clientes chamados aparecem, e o padrão parece ser "chamar e atender". Mas há clientes que não aparecem. Quem confiar no padrão sem verificar cada caso deixa a loja parada à espera de alguém que já foi embora. Um padrão ajuda a pensar. Não dispensa a verificação. Quando uma solução que seguia um padrão encrava, procura o passo em que o padrão deixou de funcionar. Para não te acontecer, verifica cada caso, e não só os que parecem perigosos.
 
 ### Abstração
 
@@ -288,7 +288,7 @@ O erro típico é ver um padrão onde ele não se aplica sempre. Na solução do
 
 O mapa do metro é o exemplo clássico. Não mostra as distâncias reais, as ruas por cima nem as curvas dos túneis. Mostra as estações, a ordem em que aparecem e onde se muda de linha, que é tudo o que precisas para decidir onde sair. Um mapa com todos os pormenores reais seria mais verdadeiro e muito menos útil.
 
-Para organizar a fila da papelaria, a cor da mochila do cliente, a idade dele e o que vem comprar são irrelevantes. O número da senha não é. Toda a fila pode ser descrita com dois números: a última senha entregue e a última senha chamada.
+Para organizar a fila da papelaria, a cor da mochila do cliente, a idade dele e o que vem comprar são irrelevantes. O número da senha não é. Toda a fila pode ser descrita com dois números: a última senha entregue e a última senha chamada. A resposta do cliente chamado, se aparece ou não, não faz parte da fila, mas é uma entrada do problema.
 
 Há uma pergunta que ajuda a decidir o que fica e o que sai. Se este pormenor fosse diferente, a resposta mudava? Se muda, é um **dado relevante** e tem de entrar no problema. Se não muda, é **contexto**. Serve para tornar o enunciado agradável de ler, e podes deixá-lo de fora.
 
@@ -305,7 +305,7 @@ Tudo o que viste junta-se numa sequência de etapas, que vais seguir nos dois ex
 1. Ler o enunciado duas vezes: a primeira para perceber a história, a segunda com um lápis na mão, a sublinhar números, limites e regras.
 2. Escrever o contrato: entradas, saídas, restrições, condições e exemplos concretos com o resultado esperado. Se faltar informação, perguntar, ou escrever a decisão tomada.
 3. Decompor o problema em subproblemas.
-4. Escrever os passos de cada subproblema, com uma ação por passo.
+4. Escrever os passos de cada subproblema. Cada passo faz uma só coisa, ou uma verificação com o que se faz em cada caso.
 5. Simular os passos com os exemplos concretos, seguindo o estado numa tabela, e confirmar que os resultados batem certo com o contrato.
 6. Procurar ambiguidades, de preferência dando os passos a outra pessoa, e corrigi-las.
 
@@ -340,7 +340,7 @@ As saídas são coisas que se veem. São o papel com o número que o cliente lev
 
 As restrições valem o dia inteiro, faça sol ou chuva, haja muitos clientes ou poucos. Nunca há dois balcões, nunca se entregam 41 senhas, nunca se atende a senha 7 antes da 6.
 
-As condições são bifurcações, isto é, pontos em que o caminho se divide. Vai acontecer uma coisa ou outra, e cada uma leva a passos diferentes. Repara que a primeira condição nasce da restrição das 40 senhas, como viste na secção do contrato. Repara também que a segunda condição não está escrita no enunciado. Encontra-se a pensar no estado. Se o balcão fica livre e a fila está vazia, o que se faz? O enunciado não diz, mas o algoritmo tem de dizer.
+As condições são bifurcações, isto é, pontos em que o caminho se divide. Vai acontecer uma coisa ou outra, e cada uma leva a passos diferentes. A primeira condição nasce da restrição das 40 senhas, como viste na secção do contrato. A segunda condição não está escrita no enunciado. Encontra-se a pensar no estado. Se o balcão fica livre e a fila está vazia, o que se faz? O enunciado não diz, mas o algoritmo tem de dizer.
 
 Neste problema, os exemplos concretos não são uma tabela de entradas e saídas, porque as entradas são acontecimentos ao longo do dia. O exemplo concreto é uma manhã de atendimento, com clientes que chegam e um que falta, e vais simulá-la no passo 4.
 
@@ -357,11 +357,11 @@ Cada um destes pode ser explicado numa frase e testado sozinho, e juntos resolve
 
 Porque é que se parou aqui, e não se partiu mais? Porque cada um destes já se consegue escrever em meia dúzia de passos, sem pensar nos outros ao mesmo tempo. E porque é que não se ficou por dois subproblemas, "entregar senhas" e "atender"? Porque "atender" ainda esconde duas coisas diferentes: chamar o número e decidir o que fazer se ninguém aparece.
 
-Repara também na ordem entre eles. Chamar o próximo depende de já haver senhas entregues, e tratar a falta só acontece depois de uma chamada. Entregar senha, pelo contrário, pode acontecer a qualquer momento, mesmo enquanto alguém está a ser atendido.
+Há também uma ordem entre eles. Chamar o próximo depende de já haver senhas entregues, e tratar a falta só acontece depois de uma chamada. Entregar senha, pelo contrário, pode acontecer a qualquer momento, mesmo enquanto alguém está a ser atendido.
 
 ### Passo 3: escrever os passos
 
-Agora escrevemos o algoritmo em passos numerados, em português, com uma ação por passo. Ainda não é pseudocódigo nem fluxograma. Essas duas formas de escrever algoritmos são o assunto do tema seguinte. Aqui, o objetivo é a precisão, e não a notação.
+Agora escrevemos o algoritmo em passos numerados, em português. Cada passo faz uma só coisa, ou uma verificação com o que se faz em cada caso. Ainda não é pseudocódigo nem fluxograma. Essas duas formas de escrever algoritmos são o assunto do tema seguinte. Aqui, o objetivo é a precisão, e não a notação.
 
 Entregar senha:
 
@@ -371,15 +371,15 @@ Entregar senha:
 4. Entregar ao cliente uma senha com esse número.
 5. Registar esse número como a última senha entregue.
 
-Repara que o passo 2 é a condição que nasceu da restrição das 40 senhas. E repara na palavra "terminar". Quer dizer que, nesse caso, os passos 3 a 5 não se fazem. Sem ela, o funcionário informava o cliente de que as senhas tinham acabado e, logo a seguir, entregava-lhe a senha 41.
+O passo 2 é a condição que nasceu da restrição das 40 senhas. E a palavra "terminar" quer dizer que, nesse caso, os passos 3 a 5 não se fazem. Sem ela, o funcionário informava o cliente de que as senhas tinham acabado e, logo a seguir, entregava-lhe a senha 41.
 
 Chamar o próximo:
 
 1. Comparar o número da última senha chamada com o número da última senha entregue.
 2. Se forem iguais, não há ninguém à espera: o atendimento fica parado até chegar alguém.
-3. Caso contrário, somar 1 ao número da última senha chamada e anunciar esse número em voz alta.
+3. Caso contrário, somar 1 ao número da última senha chamada, registar o resultado como a última senha chamada e anunciá-lo em voz alta.
 4. Esperar 30 segundos pela resposta do cliente.
-5. Se o cliente aparecer, atendê-lo e registar esse número como a última senha atendida.
+5. Se o cliente aparecer, atendê-lo.
 6. Se o cliente não aparecer, registar esse número como descartado e voltar ao passo 1.
 
 O terceiro subproblema, tratar a falta, acabou por caber dentro deste, nos passos 4 a 6, porque só acontece depois de uma chamada. Isto é normal. A decomposição é um plano, e ao escrever os passos percebe-se, às vezes, que duas partes vivem melhor juntas. O quarto, fechar o dia, não se escreve aqui, para o exemplo não ficar comprido. Experimenta escrevê-lo tu, em três ou quatro passos, e pergunta-te qual é a condição de paragem.
@@ -408,7 +408,7 @@ Lê a tabela linha a linha, como se fosses o funcionário.
 
 Na abertura, as duas senhas estão a zero, porque ainda não se entregou nem se chamou nenhuma. Quando chegam os quatro clientes, o subproblema "entregar senha" corre quatro vezes. De cada vez, a última senha entregue sobe 1: passa a 1, 2, 3 e fica em 4. A tabela mostra só o estado final dessas quatro entregas, para não ficar comprida.
 
-Quando o balcão fica livre pela primeira vez, o passo 1 de "chamar o próximo" compara 0 com 4. São diferentes, logo há alguém à espera, e o passo 3 soma 1 e anuncia a senha 1. O cliente aparece e é atendido.
+Quando o balcão fica livre pela primeira vez, o passo 1 de "chamar o próximo" compara 0 com 4. São diferentes, logo há alguém à espera. O passo 3 soma 1, regista o 1 como a última senha chamada e anuncia a senha 1. O cliente aparece e é atendido.
 
 Na linha seguinte, a senha 2 é chamada e o cliente não aparece. O passo 6 descarta a senha 2 e manda voltar ao passo 1. É por isso que a linha a seguir diz "ainda livre", porque o balcão nunca chegou a ficar ocupado. A comparação dá 2 contra 4, há alguém à espera, e chama-se a senha 3.
 
@@ -420,7 +420,7 @@ Repara em duas coisas. Primeiro, em cada linha muda o estado, e não o algoritmo
 
 Antes de dar o algoritmo por bom, relê-o à procura de instruções que admitam duas leituras. Esta versão já foi corrigida uma vez. O passo 4 de "chamar o próximo" dizia "esperar um pouco pela resposta do cliente". Quanto é "um pouco"? Dois funcionários diferentes fariam coisas diferentes. Um esperava cinco segundos e descartava a senha de quem estava a caminho do balcão. Outro esperava cinco minutos, com a loja parada. Passou a 30 segundos, e deixou de haver dúvida.
 
-Repara que o número 30 não vem do enunciado. É uma decisão, e como é uma decisão ficou escrita no algoritmo, onde qualquer pessoa a pode ver e discutir.
+O número 30 não vem do enunciado. É uma decisão, e como é uma decisão ficou escrita no algoritmo, onde qualquer pessoa a pode ver e discutir.
 
 ## Exemplo guiado: os Missionários e Canibais
 
@@ -455,7 +455,7 @@ Para cada pormenor, faz a pergunta da abstração. Se isto fosse diferente, a re
 
 A frase "não atravessa o rio sozinho" é curta e discreta, e parece um pormenor. É ela que obriga a que haja viagens de regresso com alguém dentro. Sem ela, o barco podia voltar vazio e bastavam três viagens com pessoas, todas da esquerda para a direita. Quem lê só uma vez costuma passar por cima desta frase.
 
-Repara também numa leitura cuidadosa da regra de segurança. Ela fala de os missionários serem atacados. Numa margem onde não há nenhum missionário, não há ninguém para atacar. Por isso, dois canibais sozinhos numa margem não fazem perder o jogo. Só há perigo numa margem onde haja pelo menos um missionário e mais canibais do que missionários.
+Lê também com cuidado a regra de segurança. Ela fala de os missionários serem atacados. Numa margem onde não há nenhum missionário, não há ninguém para atacar. Por isso, dois canibais sozinhos numa margem não fazem perder o jogo. Só há perigo numa margem onde haja pelo menos um missionário e mais canibais do que missionários.
 
 ### Passo 3: procurar o que falta ou se pode ler de duas maneiras
 
@@ -487,7 +487,7 @@ As restrições são as regras do jogo escritas com rigor, e valem em todas as t
 
 Como exemplos concretos, num jogo destes faz sentido verificar à mão uma ou duas jogadas antes de tentar a solução toda. Levar dois canibais na primeira travessia é permitido. A margem esquerda fica com 3 missionários e 1 canibal, e a direita com 2 canibais e nenhum missionário. Ninguém corre perigo. Levar dois missionários na primeira travessia não é permitido. A margem esquerda fica com 1 missionário e 3 canibais, e a regra falha.
 
-Repara numa diferença em relação à papelaria. Num jogo como este, a entrada é sempre a mesma, porque o jogo começa sempre da mesma maneira. Na maior parte dos problemas deste ano, a entrada muda de cada vez que o algoritmo é usado, como a senha de cada cliente. É por isso que os exemplos concretos do contrato vão ganhar tanta importância.
+Há uma diferença em relação à papelaria. Num jogo como este, a entrada é sempre a mesma, porque o jogo começa sempre da mesma maneira. Na maior parte dos problemas deste ano, a entrada muda de cada vez que o algoritmo é usado, como a senha de cada cliente. É por isso que os exemplos concretos do contrato vão ganhar tanta importância.
 
 ### Passo 5: abstrair e escolher o estado
 
@@ -507,20 +507,21 @@ O problema grande é "chegar de (3, 3, esquerda) a (0, 0, direita)". Decompõe-s
 
 1. Ver em que margem está o barco.
 2. Escolher quem vai no barco. Há apenas cinco hipóteses: um missionário, dois missionários, um canibal, dois canibais, ou um missionário e um canibal.
-3. Confirmar que essas pessoas estão mesmo na margem onde está o barco.
+3. Confirmar que essas pessoas estão mesmo na margem onde está o barco. Se não estiverem, passar à hipótese seguinte.
 4. Calcular a nova situação: tirar essas pessoas da margem de partida, pô-las na margem de chegada e mudar o barco de lado.
 5. Verificar a regra de segurança nas duas margens.
 6. Se a regra falhar, desfazer a travessia e voltar ao passo 2 com outra hipótese.
 7. Se a regra se cumprir, confirmar que a nova situação não é uma que já aconteceu antes. Se for, também se volta ao passo 2, porque regressar a uma situação conhecida é andar para trás.
-8. Se a nova situação for (0, 0, direita), o jogo está resolvido. Se não for, volta-se ao passo 1 para a travessia seguinte.
+8. Se nenhuma das cinco hipóteses servir, a travessia anterior foi uma má escolha. Desfazê-la e voltar ao passo 2 dessa travessia, com outra hipótese.
+9. Se a nova situação for (0, 0, direita), o jogo está resolvido. Se não for, volta-se ao passo 1 para a travessia seguinte.
 
-O passo 7 merece uma explicação. Sem ele, podias passar a tarde a levar um canibal para a direita e a trazê-lo de volta. Estavas sempre dentro das regras, e nunca avançavas. Recusar situações repetidas é o que garante que o processo acaba.
+O passo 7 desta lista merece uma explicação. Sem ele, podias passar a tarde a levar um canibal para a direita e a trazê-lo de volta. Estavas sempre dentro das regras, e nunca avançavas. Recusar situações repetidas é o que garante que o processo acaba.
 
-O passo 8 manda voltar ao início e fazer tudo outra vez para a travessia seguinte. Fazer os mesmos passos várias vezes chama-se **repetição**. Vai ter uma forma própria de se escrever no tema 04, Repetição e padrões. Por agora, basta dizê-lo em português com clareza, como está acima.
+O passo 8 trata o caso em que uma travessia não deixa avançar. Volta-se atrás e experimenta-se outra. O passo 9 manda voltar ao início e fazer tudo outra vez para a travessia seguinte. Fazer os mesmos passos várias vezes chama-se **repetição**. Vai ter uma forma própria de se escrever no tema 04, Repetição e padrões. Por agora, basta dizê-lo em português com clareza, como está acima.
 
 ### Passo 7: reconhecer o padrão da verificação
 
-Os passos 1 a 8 são iguais em todas as travessias. Só mudam os números. É o padrão de que se falou na secção dos quatro princípios. Aprendes a verificar uma travessia e sabes verificar todas.
+Os passos 1 a 9 da lista do passo 6 são iguais em todas as travessias. Só mudam os números. É o padrão de que se falou na secção dos quatro princípios. Aprendes a verificar uma travessia e sabes verificar todas.
 
 Vê o padrão a funcionar logo na primeira travessia, experimentando as cinco hipóteses a partir de (3, 3, esquerda):
 
@@ -532,7 +533,7 @@ Vê o padrão a funcionar logo na primeira travessia, experimentando as cinco hi
 | 2 canibais | 3 missionários e 1 canibal | 2 canibais | Sim |
 | 1 missionário e 1 canibal | 2 missionários e 2 canibais | 1 missionário e 1 canibal | Sim |
 
-Das cinco hipóteses, duas falham logo. As outras três são permitidas. A solução que se segue começa com dois canibais, mas começar com um missionário e um canibal também leva a uma solução.
+Das cinco hipóteses, duas falham logo. As outras três são permitidas. Começar com 1 canibal é permitido, mas só deixa voltar ao início. Na margem direita fica só esse canibal, e é ele que tem de trazer o barco de volta. A solução que se segue começa com dois canibais, mas começar com um missionário e um canibal também leva a uma solução.
 
 ### Passo 8: simular até ao fim
 
@@ -558,12 +559,12 @@ Na tabela, M quer dizer missionários e C quer dizer canibais.
 A travessia 6 é o momento mais difícil do jogo, e é onde muita gente fica presa. Depois da travessia 5, o barco está na margem direita, que tem 2 missionários e 2 canibais. A esquerda tem 1 missionário e 1 canibal. Alguém tem de levar o barco de volta. Antes de leres a explicação, experimenta tu as cinco hipóteses, com os objetos, e tenta perceber porque é que quatro delas não servem. Depois confirma com a lista, uma hipótese de cada vez, com o padrão da verificação:
 
 - Se voltar 1 missionário, a direita fica com 1 missionário e 2 canibais. A regra falha.
-- Se voltarem 2 missionários, a situação passa a ser a mesma que havia depois da travessia 4. É permitido, mas é andar para trás, e o passo 7 da decomposição recusa-o.
+- Se voltarem 2 missionários, a situação passa a ser a mesma que havia depois da travessia 4. É permitido, mas é andar para trás, e o passo 7 da lista do passo 6 recusa-o.
 - Se voltar 1 canibal, a esquerda fica com 1 missionário e 2 canibais. A regra falha.
 - Se voltarem 2 canibais, a esquerda fica com 1 missionário e 3 canibais. A regra falha.
 - Se voltarem 1 missionário e 1 canibal, a esquerda fica com 2 e 2 e a direita com 1 e 1. A regra cumpre-se e a situação é nova.
 
-Só uma hipótese faz avançar, e é a menos intuitiva de todas, porque leva de volta um missionário que tinha acabado de atravessar. É também aqui que o padrão "vão dois, volta um" deixa de funcionar. Na travessia 5 vão dois, e na 6 voltam dois. Quem seguisse o padrão sem verificar não encontrava esta saída.
+Só uma hipótese faz avançar, e é a menos intuitiva de todas, porque leva de volta um missionário que tinha acabado de atravessar. Até aqui, as idas e voltas seguiam o padrão "vão dois, volta um". É aqui que esse padrão deixa de funcionar. Na travessia 5 vão dois, e na 6 voltam dois. Quem seguisse o padrão sem verificar não encontrava esta saída.
 
 Não há nenhuma solução com menos de 11 travessias. Há quatro sequências diferentes com 11 travessias, e só diferem nas duas primeiras e nas duas últimas. Qualquer uma delas é uma solução correta, porque todas cumprem o contrato.
 
@@ -613,11 +614,13 @@ Vê-se ao simular. Os passos repetem-se sem fim, e nunca se chega à saída. Nos
 - Programar: escrever as instruções de um programa.
 - Algoritmo: uma sequência finita de passos, cada um claro e possível de executar, que parte de uns dados e chega a um resultado.
 - Guia de remessa: o papel que acompanha a mercadoria e diz o que foi enviado.
+- Regras de processamento: o que o algoritmo faz com o que recebeu.
+- Saída observável: um resultado que se consegue ver ou verificar.
 - Condição de paragem: o momento em que se sabe que o algoritmo terminou; é uma pergunta sobre o estado.
 - Algoritmia: o trabalho de pensar, escrever e verificar algoritmos.
 - Programação: o trabalho de passar um algoritmo para uma linguagem de programação, que o computador consegue executar.
 - Estado: o conjunto de valores que descrevem uma situação num determinado momento, como uma fotografia.
-- Ação: um passo que muda o estado.
+- Ação: um passo que muda o estado; comparar e verificar não são ações.
 - Instrução ambígua: uma instrução que admite mais do que uma leitura, e por isso não determina uma solução.
 - Ambiguidade: o defeito de uma instrução ambígua.
 - Caso de fronteira: um valor que fica exatamente em cima de um limite.
@@ -656,11 +659,11 @@ Responde sem olhar para o guia. Se não conseguires responder a uma pergunta, vo
 11. Porque é que, na travessia 6, a única escolha que faz avançar é levar de volta um missionário e um canibal?
 12. Uma loja com um só balcão usa este algoritmo para chamar clientes:
 
-    1. Somar 1 ao número da última senha chamada.
-    2. Se esse número for maior do que o número da última senha entregue, não há ninguém à espera e o atendimento fica parado.
+    1. Somar 1 ao número da última senha chamada e registar o resultado como a última senha chamada.
+    2. Se esse número for maior do que o da última senha entregue, não há ninguém à espera e o atendimento fica parado até chegar alguém.
     3. Caso contrário, anunciar esse número em voz alta e atender o cliente.
 
-    Parece bem, e funciona quase sempre. Mas há uma situação em que um cliente com senha nunca chega a ser chamado. Segue o estado passo a passo numa tabela, como a do passo 4 do primeiro exemplo guiado. A situação é esta. Foram entregues 4 senhas, e as 4 já foram chamadas e atendidas. O balcão fica livre, e só depois disso chega um cliente novo, que tira a senha 5. Em que passo está o erro, e como o corrigias? Compara depois com o algoritmo da papelaria, que já está corrigido.
+    Parece bem, e funciona quase sempre. Mas há uma situação em que um cliente com senha nunca chega a ser chamado. Segue o estado passo a passo numa tabela, como a do passo 4 do primeiro exemplo guiado. A situação é esta. Foram entregues 4 senhas, e as 4 já foram chamadas e atendidas. O balcão fica livre, e só depois disso chega um cliente novo, que tira a senha 5. Em que passo está o erro, e como o corrigias? Compara depois com o algoritmo da papelaria.
 
 13. Escreve duas ou três linhas sobre o que te custou mais neste tema, e sobre o que farias de outra maneira se voltasses a começar. Guarda-as, porque te dizem onde tens de insistir.
 

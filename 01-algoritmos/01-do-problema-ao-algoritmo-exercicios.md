@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Do problema ao algoritmo
 
-Ficha do tema Do problema ao algoritmo, do módulo Desenvolver algoritmos. Praticas a análise de um problema antes de o resolver: o contrato, a decomposição e os passos sem ambiguidades. Cerca de 120 minutos, para fazeres sozinho: 90 na parte obrigatória e 30 no desafio opcional.
+Ficha do tema Do problema ao algoritmo, do módulo Desenvolver algoritmos. Praticas a análise de um problema antes de o resolver: o contrato, a decomposição e os passos sem ambiguidades. Cerca de 100 minutos, para fazeres sozinho, e mais 30 se fizeres o desafio opcional.
 
 ## O que precisas de saber
 
@@ -19,7 +19,7 @@ Se alguma destas ideias não estiver clara, volta à secção do guia que a expl
 
 ## Como trabalhar
 
-Resolve os exercícios pela ordem, em papel ou num editor de texto. Não precisas de computador para programar, porque nada nesta ficha se escreve numa linguagem de programação. Escreve os algoritmos em passos numerados, em português, com uma ação por passo, como no exemplo guiado da papelaria. O pseudocódigo e os fluxogramas são o assunto do tema seguinte, e aqui não são precisos.
+Resolve os exercícios pela ordem, em papel ou num editor de texto. Não precisas de computador para programar, porque nada nesta ficha se escreve numa linguagem de programação. Escreve os algoritmos em passos numerados, em português, como no exemplo guiado da papelaria. Cada passo faz uma só coisa, ou uma verificação com o que se faz em cada caso. O pseudocódigo e os fluxogramas são o assunto do tema seguinte, e aqui não são precisos.
 
 Os exercícios vão do mais simples para o mais completo. O primeiro pede só o contrato de um problema. O segundo pede que decomponhas um processo e encontres o que está mal escrito nele. O terceiro pede a análise completa de um problema novo, do contrato até à simulação.
 
@@ -27,16 +27,16 @@ Os exercícios vão do mais simples para o mais completo. O primeiro pede só o 
 | --- | --- | ---: |
 | 1 | Escrever o contrato de um problema, com os exemplos concretos | 30 min |
 | 2 | Decompor um processo e encontrar as instruções ambíguas | 25 min |
-| 3 | Analisar um problema novo, do contrato à simulação | 35 min |
-| Total da parte obrigatória | Exercícios 1 a 3 | 90 min |
-| Desafio opcional | Mudar uma restrição do exercício 3 | 30 min |
-| Para ires mais longe | Opcional: mais dois casos da água e o algoritmo de verificar os tablets no fim da aula | fora dos 120 min |
+| 3 | Analisar um problema novo, do contrato à simulação | 45 min |
+| Total da parte obrigatória | Exercícios 1 a 3 | 100 min |
+| Desafio opcional | Mudar uma restrição do exercício 3 | 30 min, fora do total |
+| Para ires mais longe | Opcional: mais dois casos da água e o algoritmo de verificar os tablets no fim da aula | fora do total |
 
 Entregas a tua ficha de análise, em papel ou num ficheiro de texto. É a folha onde escreves, para cada exercício, as quatro perguntas, os exemplos concretos, a decomposição e os algoritmos. Guarda-a, porque vais precisar dela no tema seguinte.
 
 ## Exercício 1: Escrever o contrato de um problema (30 minutos)
 
-A cantina da escola recebe todos os dias um pedido de reposição de bebidas. Quem faz o pedido conta o que resta em cada tipo de bebida. Sabe quantas unidades cabem na arca, e sabe que o fornecedor só entrega em caixas de 12 unidades. Cada tipo de bebida tem um mínimo que deve estar sempre disponível. No fim, é preciso produzir a lista de quantas caixas encomendar de cada tipo.
+A cantina da escola recebe todos os dias um pedido de reposição de bebidas. Quem faz o pedido conta o que resta em cada tipo de bebida. Sabe quantas unidades de cada tipo cabem na arca, e sabe que o fornecedor só entrega em caixas de 12 unidades. Cada tipo de bebida tem um mínimo que deve estar sempre disponível. A cantina pode mudar o mínimo de cada tipo quando quiser. No fim, é preciso produzir a lista de quantas caixas encomendar de cada tipo.
 
 a) Responde às quatro perguntas sobre este problema, numa tabela:
 
@@ -60,7 +60,7 @@ Escreve os exemplos concretos do contrato para a água. Para cada um dos quatro 
 - restam 20 garrafas;
 - restam 19 garrafas.
 
-Organiza os resultados numa tabela com quatro colunas: garrafas que restam, caixas a encomendar, garrafas depois da entrega e porque é que o caso interessa. Na última coluna, diz se é um caso normal, um caso de fronteira ou um caso extremo. Escreve as contas que fizeste, e não só o resultado.
+Organiza os resultados numa tabela com quatro colunas: garrafas que restam, caixas a encomendar, garrafas depois da entrega e porque é que o caso interessa. Na última coluna, diz se é um caso normal, um caso de fronteira ou um caso extremo. Um caso pode ter duas classificações; diz porquê. Escreve as contas que fizeste, e não só o resultado.
 
 Um destes quatro casos obriga-te a tomar uma decisão que a regra da cantina não toma. Descobre qual, explica numa ou duas frases onde está o problema e escreve a decisão que tomarias. Não há uma só decisão certa, mas a tua tem de ficar escrita e justificada.
 
@@ -81,13 +81,13 @@ a) Decompõe o processo de empréstimo em subproblemas, com o critério que apre
 
 b) Várias destas instruções são ambíguas, porque não dizem o suficiente para serem executadas sem perguntar nada a ninguém. Identifica pelo menos quatro e escreve, para cada uma, a pergunta com que ficaste sem resposta. Lembra-te de que a ambiguidade não é só a palavra vaga. Também há informação que falta, frases com duas leituras e limites por definir.
 
-c) Reescreve duas dessas instruções de forma a não deixarem dúvidas. Inventa os números e os limites que forem precisos, desde que fiquem escritos.
+c) Reescreve a instrução 2 e mais uma à tua escolha, de forma a não deixarem dúvidas. Inventa os números e os limites que forem precisos, desde que fiquem escritos.
 
 Testa também o caso em que o aluno chega ao balcão já com o número máximo de livros levantados. As instruções dizem o que fazer? Se não dizem, a tua reescrita da instrução 2 tem de o dizer.
 
 Concluíste quando as instruções reescritas puderem ser executadas por alguém que nunca esteve naquela biblioteca.
 
-## Exercício 3: Analisar um problema com autonomia (35 minutos)
+## Exercício 3: Analisar um problema com autonomia (45 minutos)
 
 A escola vai emprestar tablets aos alunos durante as aulas. Há 15 tablets numerados. Um aluno pede um tablet no início da aula e devolve-o no fim. Cada tablet tem de ser devolvido pelo mesmo aluno que o levou, e nenhum aluno pode ter mais do que um tablet ao mesmo tempo. No fim da aula, o responsável tem de saber se falta algum tablet e qual.
 
@@ -116,12 +116,12 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e só passa
   3. com quantas garrafas a arca fica depois.
 
   Depois, compara esse último número com o espaço da arca.
-- Exercício 2: para encontrares as ambiguidades, faz a cada instrução três perguntas. Quantos? Onde? E se não der? A instrução que não responder a nenhuma das três é quase de certeza ambígua. Faz ainda uma quarta pergunta: tenho tudo o que preciso para fazer isto?
+- Exercício 2: para encontrares as ambiguidades, faz a cada instrução três perguntas. Quantos? Onde? E se não der? Se alguma das três ficar sem resposta, a instrução é quase de certeza ambígua. Faz ainda uma quarta pergunta: tenho tudo o que preciso para fazer isto?
 - Exercício 3: começa pelo estado. Antes de pensares nos passos, escreve que informação é preciso ter guardada em cada momento para se saber quem tem cada tablet. Quando souberes o que é preciso guardar, os passos aparecem quase sozinhos.
 
 ## Desafio opcional
 
-Cerca de 30 minutos. Volta ao exercício 3 e muda uma só restrição. Passa a haver 8 tablets para uma turma de 20 alunos. Por isso, pode acontecer um aluno pedir um tablet quando já não há nenhum livre.
+Cerca de 30 minutos. Volta ao exercício 3 e muda uma só restrição. Passa a haver 8 tablets para uma turma de 20 alunos.
 
 Escreve o que muda na tua análise. Diz que condição nova aparece, que passos do algoritmo têm de ser alterados e que passos se mantêm exatamente iguais. Não reescrevas tudo. Identifica a diferença.
 
@@ -129,7 +129,7 @@ No fim, responde à pergunta que interessa. Uma solução bem decomposta tem de 
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 120 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os tempos são indicativos.
+Esta secção é opcional e fica fora do tempo da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os tempos são indicativos.
 
 ### Mais longe 1: Mais dois casos para a água (10 minutos)
 

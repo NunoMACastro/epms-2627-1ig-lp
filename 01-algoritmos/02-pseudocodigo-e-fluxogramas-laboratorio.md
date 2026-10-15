@@ -31,6 +31,7 @@ Ficas a saber abrir o diagrams.net e guardar um desenho no teu computador. Ficas
 - `ler valor`: a instrução que recebe um valor escrito por quem usa o algoritmo.
 - `Escreve:`: a instrução que mostra texto e valores no ecrã.
 - `div` e `resto`: a divisão inteira, que diz quantas vezes um número cabe noutro, e o que sobra dela. Com 30 cadernos e caixas de 12, `30 div 12` dá 2 e `30 resto 12` dá 6.
+- Função predefinida: uma instrução já feita, com um nome, que recebe um valor entre parênteses e devolve um resultado, como a `abs` do desafio 1.
 - Fluxograma: o desenho de um algoritmo, com figuras ligadas por setas. Cada figura é uma instrução, e as setas dizem a ordem. Para saber mais, vê a secção "Os símbolos do fluxograma" do [guia](02-pseudocodigo-e-fluxogramas.md).
 - Figura: cada forma do fluxograma. A forma diz que tipo de instrução está lá dentro.
 - Terminal: a figura de pontas redondas onde o algoritmo começa, `Início`, e acaba, `Fim`. Também se chama oval. Na aplicação chama-se Terminator.
