@@ -1,28 +1,33 @@
 ![Cabeçalho](imagens/cabecalho.png)
 
-# Materiais de Linguagens de Programação: 10.º IG
+# Linguagens de Programação · 10.º IG
 
-Materiais de apoio da disciplina de Linguagens de Programação do Curso Profissional de Técnico/a de Informática de Gestão, 10.º ano, 2026/2027.
+Materiais de Linguagens de Programação do 10.º ano do Curso Profissional de Técnico/a de Informática de Gestão, em 2026/2027. Cada material é publicado quando fica pronto, e podes lê-lo antes de ser dado na aula.
 
-Os materiais são publicados quando ficam prontos, e não só depois de a matéria ser dada. Podes ler à frente: um guia lido antes da aula ajuda-te a acompanhá-la. Os enunciados de avaliação só aparecem na altura própria. Cada pasta aparece aqui quando tiver o primeiro material pronto.
+## Por onde começar
 
-## Organização
+Começa pelo guia [Do problema ao algoritmo](01-algoritmos/01-do-problema-ao-algoritmo.md), o primeiro da área de algoritmos. Cada tema tem três tipos de documento:
 
-| Pasta | Matéria | Unidade de competência |
-| --- | --- | --- |
-| `01-algoritmos/` | Resolver problemas, pseudocódigo e fluxogramas | UC00245 |
-| `02-python/` | Programação estruturada em Python | UC00606 |
-| `03-git-github/` | Controlo de versões com Git e GitHub | UC00617 |
-| `04-inteligencia-artificial/` | Programar com sistemas de inteligência artificial | UC00623 |
-| `avaliacoes/` | Enunciados e critérios das avaliações | sem valor |
-| `extras/` | Leitura opcional, não avaliada | sem valor |
+- o guia, para ler e estudar;
+- o laboratório, para seguir passo a passo no computador, sem precisares de abrir o guia;
+- a ficha de exercícios, para praticares sozinho.
 
-Dentro de cada pasta, os ficheiros estão numerados pela ordem em que a matéria é dada: `01-...`, `02-...`. O guia de cada assunto e a respetiva ficha de exercícios ficam lado a lado, e o código dos exemplos está em `exemplos/`.
+No fim da área de algoritmos há também dois projetos guiados, que fazes com ajuda, passo a passo.
 
-## Como acompanhar
+## As áreas
 
-Podes ler tudo aqui no GitHub, sem instalar nada. Quando começarmos a trabalhar com Git, vais passar a ter uma cópia deste repositório no teu computador e a atualizá-la quando houver material novo.
+| Área | Módulo |
+| --- | --- |
+| [Algoritmos](01-algoritmos/README.md) | UC00245, Desenvolver algoritmos |
 
-Se encontrares um erro num material, avisa. A partir do momento em que soubermos usar Git e GitHub, a correção pode ser feita por ti.
+## Como estudar
+
+Lê o guia antes de fazeres os exercícios: primeiro a explicação, depois o exemplo guiado. Antes de seguires um algoritmo, tenta prever o resultado. É aí que percebes se a ideia ficou entendida. As resoluções dos exercícios não estão aqui, porque se trabalham na aula.
+
+Podes ler tudo aqui no GitHub, sem instalar nada. Se encontrares um erro num material, avisa o professor.
+
+## Outras pastas
+
+- [Exemplos](exemplos/): algoritmos para ler e seguir à mão.
 
 ![Rodapé](imagens/rodape.png)

@@ -2,34 +2,23 @@
 
 # Algoritmos
 
-Primeira área da disciplina de Linguagens de Programação. Aprender a analisar um problema, a escrever os passos que o resolvem e a testar se esses passos funcionam, tudo antes de escrever a primeira linha de código.
+Nesta área aprendes a analisar um problema, a escrever os passos que o resolvem e a testar se esses passos funcionam. Tudo isto vem antes da primeira linha de código. Corresponde ao módulo UC00245, Desenvolver algoritmos.
 
-São **25 horas**, repartidas por cinco partes de 5 horas cada.
-
-| # | Assunto | Guia | Laboratório | Ficha |
+| Tema | Guia | Laboratório | Ficha | Exemplos |
 | --- | --- | --- | --- | --- |
-| 01 | Do problema ao algoritmo | [guia](01-do-problema-ao-algoritmo.md) | não tem | [ficha](01-do-problema-ao-algoritmo-exercicios.md) |
-| 02 | Pseudocódigo e fluxogramas | [guia](02-pseudocodigo-e-fluxogramas.md) | [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md), opcional | [ficha](02-pseudocodigo-e-fluxogramas-exercicios.md) |
-| 03 | Decisões e validação | [guia](03-decisoes-e-validacao.md) | [laboratório](03-decisoes-e-validacao-laboratorio.md), opcional | [ficha](03-decisoes-e-validacao-exercicios.md) |
-| 04 | Repetição e padrões | [guia](04-repeticao-e-padroes.md) | [laboratório](04-repeticao-e-padroes-laboratorio.md), opcional | [ficha](04-repeticao-e-padroes-exercicios.md) |
-| 05 | Testar, depurar e melhorar | [guia](05-testar-depurar-e-melhorar.md) | não tem | [ficha](05-testar-depurar-e-melhorar-exercicios.md) |
+| 01 Do problema ao algoritmo | [guia](01-do-problema-ao-algoritmo.md) | não tem | [ficha](01-do-problema-ao-algoritmo-exercicios.md) | não tem |
+| 02 Pseudocódigo e fluxogramas | [guia](02-pseudocodigo-e-fluxogramas.md) | [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md), opcional | [ficha](02-pseudocodigo-e-fluxogramas-exercicios.md) | não tem |
+| 03 Decisões e validação | [guia](03-decisoes-e-validacao.md) | [laboratório](03-decisoes-e-validacao-laboratorio.md), opcional | [ficha](03-decisoes-e-validacao-exercicios.md) | [intervalos e validação](../exemplos/algoritmos/intervalos-e-validacao/README.md) |
+| 04 Repetição e padrões | [guia](04-repeticao-e-padroes.md) | [laboratório](04-repeticao-e-padroes-laboratorio.md), opcional | [ficha](04-repeticao-e-padroes-exercicios.md) | [intervalos e validação](../exemplos/algoritmos/intervalos-e-validacao/README.md) |
+| 05 Testar, depurar e melhorar | [guia](05-testar-depurar-e-melhorar.md) | não tem | [ficha](05-testar-depurar-e-melhorar-exercicios.md) | não tem |
 
-A parte 05 fecha a área com três projetos, todos jogos, de dificuldade crescente. Os dois primeiros fazes com o professor, e ficam no teu portefólio; o terceiro é a avaliação prática individual, com um problema novo.
+A área fecha com três projetos, todos jogos, cada um mais difícil do que o anterior. Os dois primeiros são projetos guiados, que fazes com o professor e que ficam no teu portefólio. O terceiro é a avaliação prática individual, com um problema novo, e o professor entrega-o no dia.
 
-| Projeto | Como se faz | Enunciado |
+| Projeto | Tema | Como se faz |
 | --- | --- | --- |
-| 1, duelo de dados | Com o professor ao quadro | [projeto 1](05-projeto-1-duelo-de-dados.md) |
-| 2, adivinha o número | Em pares, com o professor a confirmar cada passo | [projeto 2](05-projeto-2-adivinha-o-numero.md) |
-| 3, avaliação prática | Individual | entregue pelo professor no dia |
+| [Projeto 1: Duelo de dados](05-projeto-1-duelo-de-dados.md) | 05 Testar, depurar e melhorar | Com o professor ao quadro |
+| [Projeto 2: Adivinha o número](05-projeto-2-adivinha-o-numero.md) | 05 Testar, depurar e melhorar | Em pares, com o professor a confirmar cada passo |
 
-Cada parte tem um guia, para ler e trabalhar em aula, e uma ficha de exercícios, para fazeres sozinho. Os guias trazem exemplos explicados até ao fim; as fichas trazem só os enunciados, porque a ideia é tentares antes de veres como se faz. As resoluções são trabalhadas em aula com o professor.
-
-Os fluxogramas são para saberes o que são e como se leem, e isso está explicado nos guias. Desenhá-los é uma parte opcional, que só fazes quando o professor o indicar: os laboratórios das partes 02, 03 e 04, com os passos a seguir no computador para desenhares fluxogramas na aplicação, e as partes das fichas assinaladas como de fluxogramas. Nenhum exercício obrigatório precisa delas.
-
-Para os guias e as fichas bastam papel e caneta. Para a parte opcional dos fluxogramas vais precisar do diagrams.net, uma aplicação gratuita de desenho de diagramas que funciona no browser, em app.diagrams.net, sem criar conta. O laboratório da parte 02 ensina a usá-la desde o início.
-
-Os algoritmos preparados para as aulas ficam nos exemplos. Já lá estão os preparados para a aula dos [intervalos e da validação](../exemplos/algoritmos/intervalos-e-validacao/README.md), das partes 03 e 04.
-
-[Voltar ao índice](../README.md)
+Os fluxogramas são para saberes o que são e como se leem, e isso está explicado nos guias. Desenhá-los é opcional, e só o fazes quando o professor o indicar. Os fluxogramas desenham-se nos laboratórios dos temas 02, 03 e 04 e nas partes das fichas assinaladas. Nenhum exercício obrigatório pede um fluxograma desenhado. Para os guias, as fichas e os projetos bastam papel e caneta.
 
 ![Rodapé](../imagens/rodape.png)
