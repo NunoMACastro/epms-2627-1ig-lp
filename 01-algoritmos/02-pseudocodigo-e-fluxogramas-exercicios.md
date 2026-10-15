@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Pseudocódigo e fluxogramas
 
-Ficha do tema Pseudocódigo e fluxogramas, do módulo Desenvolver algoritmos. Praticas as peças do tema uma de cada vez, até escreveres e testares um algoritmo teu. Cerca de 120 minutos, para fazeres sozinho: 90 na parte obrigatória e 30 no desafio opcional.
+Ficha do tema Pseudocódigo e fluxogramas, do módulo Desenvolver algoritmos. Praticas as peças do tema uma de cada vez, até escreveres e testares um algoritmo teu. Cerca de 127 minutos, para fazeres sozinho: 94 na parte obrigatória e 33 no desafio opcional.
 
 ## O que precisas de saber
 
@@ -24,10 +24,10 @@ Todos os algoritmos desta ficha são sequenciais: as instruções executam-se se
 | 4 | Calcular expressões pela ordem das operações | 10 min |
 | 5 | Escolher e usar a função predefinida certa | 12 min |
 | 6 | Seguir um algoritmo completo com uma tabela de trace | 12 min |
-| 7 | Escrever um algoritmo, em pseudocódigo ou em frases claras, e testá-lo | 21 min |
-| Total da parte obrigatória | Exercícios 1 a 7 | 90 min |
-| Desafio opcional | Trocar os valores de duas variáveis e mudar uma regra; a parte B, o fluxograma do exercício 7 na aplicação, só quando o professor o indicar | 30 min, ou 15 sem a parte B |
-| Para ires mais longe | Opcional: casos que enganam nos tipos, nas atribuições e nas expressões, e um problema novo | fora dos 120 min |
+| 7 | Escrever um algoritmo, em pseudocódigo ou em frases claras, e testá-lo | 25 min |
+| Total da parte obrigatória | Exercícios 1 a 7 | 94 min |
+| Desafio opcional | Trocar os valores de duas variáveis e mudar uma regra; a parte B, o fluxograma do exercício 7 na aplicação, só quando o professor o indicar | 33 min, ou 18 sem a parte B |
+| Para ires mais longe | Opcional: casos que enganam nos tipos, nas atribuições e nas expressões, e um problema novo | fora destes tempos |
 
 Precisas de papel quadriculado e lápis. O diagrams.net, em `https://app.diagrams.net/?lang=pt`, só é preciso para a parte B do desafio. Essa parte é de fluxogramas, e só se faz quando o professor o indicar. Nesse caso, guarda o ficheiro na pasta `algoritmos` do laboratório, com um nome em minúsculas, com hífenes e sem acentos.
 
@@ -41,7 +41,7 @@ O que entregas:
 
 A matéria está na secção "Tipos de dados" do guia.
 
-Diz que tipo de dados usarias para guardar cada um destes valores, `int`, `float`, `string` ou `bool`. Justifica cada escolha numa frase que fale do que vais fazer com o valor. Por exemplo, para a temperatura de uma sala, como 21,5 graus: `float`, porque vou fazer contas com ela, como a média do dia, e a parte decimal conta.
+Diz que tipo de dados usarias para guardar cada um destes valores, `int`, `float`, `string` ou `bool`. Justifica cada escolha numa frase que fale do que vais fazer com o valor. Um exemplo, para a temperatura de uma sala, como 21,5 graus: "`float`, porque vou fazer contas com ela, como a média do dia, e a parte decimal conta".
 
 **a)** O número de alunos inscritos numa visita de estudo.
 
@@ -99,12 +99,12 @@ int preco = 150
 bool pago = true
 ```
 
-Imagina que cada uma das linhas seguintes vem logo a seguir a estas cinco. Cada linha vê-se sozinha, sem as outras: antes de cada uma, `total` vale 1000 e `preco` vale 150. Para cada linha, escreve "certa" ou "errada". Se estiver certa, escreve o valor com que a variável da esquerda fica. Se estiver errada, explica numa frase porquê. Por exemplo, para a linha `preco = 350`: certa, `preco` fica com 350.
+Imagina que cada uma das linhas seguintes vem logo a seguir a estas cinco. Cada linha vê-se sozinha, sem as outras: antes de cada uma, `total` vale 1000, `preco` vale 150 e `pago` vale `true`. Para cada linha, escreve "certa" ou "errada". Se estiver certa, escreve o valor com que a variável da esquerda fica. Se estiver errada, explica numa frase porquê. Por exemplo, para a linha `preco = 350`: certa, `preco` fica com 350.
 
 | Linha | Instrução |
 | ---: | --- |
 | 1 | `caixas = 5` |
-| 2 | `5 = caixas` |
+| 2 | `pago = 0` |
 | 3 | `total = total + preco` |
 | 4 | `LIMITE_DE_SENHAS = 50` |
 | 5 | `pago = false` |
@@ -139,9 +139,9 @@ Exemplo do formato, com uma conta sem função: `int totalAPagar = quantidade * 
 
 **b)** A variável `mediaDeVendas`, do tipo `float`, vale `14.6`. É a média de cadernos vendidos por dia numa semana. Guarda em `mediaArredondada` o número inteiro de cadernos mais próximo dessa média.
 
-**c)** Numa loja com senhas, está a ser atendida a senha guardada em `senhaAtual`, e um cliente tem a senha guardada em `senhaCliente`. Guarda em `distancia` quantas senhas os separam, sem sinal, seja qual for a maior. Usa `senhaAtual` a valer 42 e `senhaCliente` a valer 57.
+**c)** Numa loja com senhas, está a ser atendida a senha guardada em `senhaAtual`, e um cliente tem a senha guardada em `senhaCliente`. Guarda em `distancia` a diferença entre os números das duas senhas, sem sinal, seja qual for a maior. Usa `senhaAtual` a valer 42 e `senhaCliente` a valer 57.
 
-**d)** A variável `area` vale `225`. É a área, em metros quadrados, de um armazém com a forma de um quadrado. Guarda em `lado` o comprimento do lado do armazém, em metros.
+**d)** A variável `area` vale `196`. É a área, em metros quadrados, de um armazém com a forma de um quadrado. Guarda em `lado` o comprimento do lado do armazém, em metros.
 
 Concluíste quando cada alínea tiver a linha, com o tipo e a função, e o valor, e cada função tiver sido usada uma vez.
 
@@ -153,9 +153,9 @@ Lê com atenção este algoritmo, que calcula o peso de uma encomenda para envio
 
 ```text
 const PESO_DA_CAIXA_VAZIA = 200
-Escreve: "Quantos artigos leva a encomenda?"
+Escreve: "Quantos artigos leva a encomenda? "
 int artigos = ler valor
-Escreve: "Quanto pesa cada artigo, em gramas?"
+Escreve: "Quanto pesa cada artigo, em gramas? "
 int pesoPorArtigo = ler valor
 int pesoTotal = artigos * pesoPorArtigo + PESO_DA_CAIXA_VAZIA
 Escreve: "Peso total em gramas: ", pesoTotal
@@ -175,7 +175,7 @@ Calcula o resultado da versão dele para os mesmos 3 artigos de 150 gramas.
 
 Concluíste quando o teu trace mostrar o valor de todas as variáveis em cada linha e tiveres escolhido a versão certa com uma razão.
 
-## Exercício 7: Escrever um algoritmo teu (21 minutos)
+## Exercício 7: Escrever um algoritmo teu (25 minutos)
 
 A matéria está na secção "A forma do pseudocódigo nas aulas" do guia. O exemplo guiado das caixas de cadernos tem a mesma forma que este problema.
 
@@ -207,25 +207,25 @@ Concluíste quando o teu algoritmo não deixar dúvidas, usar as três constante
 
 Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não tiver chegado.
 
-**Exercício 1.** Para cada valor, faz a pergunta do guia: vou fazer contas com este valor? Se não, é quase sempre texto. Se sim, a parte decimal interessa? E se o valor for só a resposta a uma pergunta de sim ou não, o tipo é outro.
+**Exercício 1.** Para cada valor, faz a pergunta do guia: vou fazer contas com este valor? Se não, é quase sempre texto. Se sim, a parte decimal interessa? E se o valor for só a resposta a uma pergunta de sim ou não, o tipo é outro. Num valor em dinheiro, relê no guia a nota sobre o dinheiro.
 
 **Exercício 2.** Faz o trace por linhas, e não por variáveis. Numa atribuição, calcula primeiro o lado direito com os valores da linha de cima, e só depois guarda o resultado na variável da esquerda. Para a alínea c), relê no guia a primeira consequência da atribuição.
 
-**Exercício 3.** Lê cada linha em voz alta, com a palavra "recebe" no lugar do `=`. O que está à esquerda do `=` pode receber um valor? Olha também para as cinco primeiras linhas, e para a forma como cada nome nasceu.
+**Exercício 3.** Lê cada linha em voz alta, com a palavra "recebe" no lugar do `=`. O que está à esquerda do `=` pode receber um valor? Depois volta às cinco primeiras linhas e vê como nasceu o nome que está à esquerda.
 
 **Exercício 4.** Faz primeiro os parênteses, depois as multiplicações e as divisões, incluindo `div` e `resto`, e só no fim as somas. Para o `div` e o `resto`, pensa em 23 lápis arrumados em caixas de 4: quantas caixas se enchem, e quantos lápis sobram? E lembra-te de que `/` dá sempre um `float`.
 
 **Exercício 5.** Para cada alínea, pergunta-te primeiro o que queres fazer ao número, por palavras tuas. Só depois procura, na tabela das funções do guia, a função que faz isso. Cada função serve numa só alínea. Se uma te parecer servir em duas, relê o que cada uma faz às casas decimais. Para o tipo da variável, vê na mesma tabela o tipo que a função devolve.
 
-**Exercício 6.** Tem o passo 5 do exemplo guiado aberto ao lado, porque o trace faz-se da mesma maneira. Na alínea b), faz primeiro a conta que está dentro dos parênteses. Na alínea c), experimenta as duas versões com uma encomenda de um só artigo. Depois compara com o que pesa uma caixa com um artigo lá dentro.
+**Exercício 6.** Tem o passo 5 do exemplo guiado aberto ao lado, porque o trace faz-se da mesma maneira. Na alínea b), faz primeiro a conta que está dentro dos parênteses. Na alínea c), faz as contas das duas versões para uma encomenda de 2 artigos, e pensa em quantas caixas leva esse envio.
 
 **Exercício 7.** Começa pelo pseudocódigo das caixas de cadernos do guia, porque aqui também há uma quantidade, uma divisão inteira e um resto. Se uma linha não te sair em pseudocódigo, escreve-a em frases claras e continua. A diferença é que no fim há um preço a calcular. Escreve primeiro só as grades e os soltos, e acrescenta o total depois de isso funcionar. Na alínea c), relê os três casos de teste do passo 1 do exemplo guiado. O que é que 100 e 24 já testam, e o que falta testar?
 
-**Desafio, parte A.** Relê a troca que falha, na secção da atribuição do guia. Depois pensa em dois copos cheios, um de sumo e outro de água. Para trocar os líquidos de copo, precisas de um terceiro copo.
+**Desafio, parte A.** Relê a troca que falha, na secção da atribuição do guia, e a pergunta que vem logo a seguir a ela.
 
 ## Desafio opcional
 
-O desafio tem três partes independentes, e podes fazê-las pela ordem que quiseres. As partes B e C partem do teu algoritmo do exercício 7. A parte B é de fluxogramas, e só a fazes quando o professor o indicar. Sem ela, o desafio leva cerca de 15 minutos.
+O desafio tem três partes independentes, e podes fazê-las pela ordem que quiseres. As partes B e C partem do teu algoritmo do exercício 7. A parte B é de fluxogramas, e só a fazes quando o professor o indicar. Sem ela, o desafio leva cerca de 18 minutos.
 
 ### Parte A: trocar os valores de duas variáveis (10 minutos)
 
@@ -246,7 +246,7 @@ Esta parte é opcional mesmo dentro do desafio, e só a fazes quando o professor
 
 Desenha no diagrams.net o fluxograma do teu algoritmo do exercício 7. Guarda-o como `fluxograma-compra-de-leite.drawio` e verifica-o com a lista da fase 4 do laboratório, adaptada a este algoritmo. Depois exporta a imagem, com o nome `fluxograma-compra-de-leite.png`.
 
-### Parte C: o fornecedor muda as grades (5 minutos)
+### Parte C: o fornecedor muda as grades (8 minutos)
 
 O fornecedor passa a vender grades de 12 pacotes em vez de 24, e a grade passa a custar 780 cêntimos. O pacote solto continua a custar 70 cêntimos.
 
@@ -260,7 +260,7 @@ O fornecedor passa a vender grades de 12 pacotes em vez de 24, e a grade passa a
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 120 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os primeiros itens tratam casos que costumam enganar, um ou dois de cada vez, e é por isso que não entraram na parte obrigatória. O último é um problema novo. Os tempos são indicativos.
+Esta secção é opcional e fica fora dos tempos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os primeiros itens tratam casos que costumam enganar, um ou dois de cada vez, e é por isso que não entraram na parte obrigatória. O último é um problema novo. Os tempos são indicativos.
 
 ### Mais longe 1: Três valores com o tipo menos óbvio (10 minutos)
 

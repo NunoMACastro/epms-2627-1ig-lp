@@ -24,7 +24,7 @@ Os três seguem o mesmo processo, sempre pela mesma ordem:
 
 No projeto 2 e na avaliação junta-se mais um passo: melhorar o algoritmo e contar os passos antes e depois. Este projeto ainda não o tem. É este processo que a avaliação observa, e por isso vais fazê-lo duas vezes com ajuda antes de o fazeres sozinho.
 
-Há uma razão para esta ordem. A tabela de casos vem antes do algoritmo por uma razão que o passo 2 te recorda. O guia 05 explica-a na secção "O resultado esperado decide-se antes de executar". Os testes vêm depois do algoritmo, porque só se pode executar o que já está escrito. E a depuração vem no fim, porque só se procura um erro depois de um teste o mostrar.
+A tabela de casos vem antes do algoritmo, e o passo 2 recorda-te porquê. O guia 05 explica-o na secção "O resultado esperado decide-se antes de executar". Os testes vêm depois do algoritmo, porque só se pode executar o que já está escrito. E a depuração vem no fim, porque só se procura um erro depois de um teste o mostrar.
 
 Este é o primeiro projeto, e é o teu primeiro contacto com um projeto completo e com a forma que a avaliação vai pedir.
 
@@ -34,7 +34,7 @@ Os projetos 1 e 2 ficam no teu portefólio e não contam para a avaliação prá
 
 Este projeto não traz matéria nova. Usa o que está nos guias 01 a 04 e nas partes do guia 05 sobre testar e depurar. Cada passo deste documento diz onde está explicada a ferramenta de que precisa.
 
-- O contrato de um problema, com as quatro perguntas: guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md), secção "O contrato do problema: entradas, saídas, restrições e condições".
+- O contrato de um problema e as suas quatro perguntas: guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md). Está na secção "O contrato do problema: entradas, saídas, restrições e condições".
 - As ambiguidades de um enunciado: guia 01, secção "Instruções ambíguas". Quando o enunciado não diz o que acontece numa situação, não se inventa em silêncio. Decide-se, e escreve-se a decisão.
 - A decomposição de um problema em partes mais pequenas: guia 01, secção "Decompor um problema em subproblemas".
 - As variáveis, com o tipo à frente na linha onde nascem, e as constantes, escritas com `const`: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
@@ -44,10 +44,9 @@ Este projeto não traz matéria nova. Usa o que está nos guias 01 a 04 e nas pa
 - A regra da cadeia, em que a primeira condição verdadeira ganha e o `Senão` apanha tudo o que sobra, do guia 03.
 - As fronteiras e a tabela de casos esperados, do guia 03.
 - O `Para`, na forma `Para i de 1 até n`, com a sua condição escondida e as suas quatro regras: guia [04 Repetição e padrões](04-repeticao-e-padroes.md).
-- O caso de zero voltas, em que o ciclo não dá nenhuma volta, a que o guia 05 chama caso zero, do guia 04.
 - A pergunta que decide entre `Enquanto` e `Para`: guia 04, secção "Escolher entre Enquanto e Para".
 - O padrão contador: guia 04, secção "Padrão contador".
-- A tabela de iterações, em que cada linha é a fotografia do estado no momento em que o ciclo testa a condição, do guia 04.
+- A tabela de iterações, do guia 04. Cada linha é a fotografia do estado no momento em que o ciclo testa a condição.
 - Testar e depurar: guia [05 Testar, depurar e melhorar](05-testar-depurar-e-melhorar.md). Está da secção "Testar é comparar o obtido com o esperado" à secção "Corrigir a causa e não o sintoma".
 - O exemplo guiado do guia 05, o do inventário da papelaria. Os passos 1 a 7 seguem o mesmo processo deste projeto, e o passo 11 mostra um registo de depuração completo.
 
@@ -63,7 +62,7 @@ Não tens de resolver este projeto sozinho. O professor resolve-o contigo, no qu
 
 Muitas vezes o professor vai parar e perguntar o que se faz a seguir. É nesse momento que se aprende, porque és tu que decides antes de veres a decisão escrita. Uma resposta errada dita em voz alta, numa aula destas, não custa nada e ajuda a turma inteira. Muitas vezes é o erro que outros também iam cometer.
 
-Precisas só do caderno e de um lápis. Não precisas de dados na aula, e há uma boa razão para isso.
+Precisas só do caderno e de um lápis. Não precisas de dados na aula.
 
 O algoritmo deste projeto não lança dados. São os jogadores que lançam dados verdadeiros, e cada um escreve o valor que saiu. O algoritmo só faz o que é preciso fazer com esses valores: comparar, contar e decidir. Se fosse o algoritmo a inventar os valores, cada execução dava um duelo diferente, e um caso de teste nunca se podia repetir. Quando um resultado parecesse errado, não havia maneira de voltar a ver o mesmo duelo para procurar o erro. Assim, cada caso de teste é uma lista de valores escrita por ti. Executa-se as vezes que quiseres, sempre com o mesmo resultado.
 
@@ -83,7 +82,7 @@ Antes do passo 1, inventa um duelo com o colega do lado. São cinco rondas, com 
 
 O contrato vem primeiro porque diz exatamente o que o algoritmo tem de fazer, antes de se pensar em como o vai fazer. O enunciado está escrito para pessoas, e as pessoas preenchem as falhas sem dar por isso. O contrato transforma-o em respostas precisas, e é dele que vão sair os resultados esperados do passo 2. Como o guia 05 explica, o enunciado e o contrato são a única autoridade sobre o que o algoritmo deve fazer. Sem contrato, os resultados esperados seriam palpites, e um teste que compara o obtido com um palpite não prova nada.
 
-O professor escreve o contrato no quadro, parte a parte, e tu copias. O contrato tem as cinco partes da tabela seguinte. A coluna da direita não é a resposta. Diz o que cada parte tem de responder.
+O professor escreve o contrato no quadro, parte a parte, e tu copias. O contrato tem cinco partes: as respostas às quatro perguntas do guia 01 e as decisões. A tabela seguinte mostra-as. A coluna da direita não é a resposta. Diz o que cada parte tem de responder.
 
 | Parte do contrato | O que tem de responder |
 | --- | --- |
@@ -103,13 +102,13 @@ Pensa nestas perguntas antes de o professor avançar, e escreve as tuas resposta
 
 ### O que o enunciado não diz
 
-A pergunta 5 leva-te a uma situação de que o enunciado não fala. Imagina este duelo: o jogador 1 ganha duas rondas, o jogador 2 ganha outras duas e a quinta fica empatada. Ou este: as cinco rondas ficam empatadas. Relê a última frase do enunciado e tenta dizer o que o algoritmo escreve no fim de cada um destes duelos.
+A pergunta 5 leva-te a uma situação de que o enunciado não fala. Pensa em todos os finais possíveis, contando as rondas ganhas de cada um. Há algum para o qual a última frase do enunciado não diga o que escrever?
 
 É uma ambiguidade do tipo a que o guia 01 chama informação que falta. Não há nenhuma palavra vaga para sublinhar, mas há uma pergunta sem resposta. E é das mais perigosas, porque um algoritmo escrito sem pensar nela não se queixa. Escreve qualquer coisa no fim, e essa coisa depende da forma como calhou ficar escrita a última decisão do algoritmo. Não depende de alguém ter pensado no que era justo.
 
 O guia 01 diz o que fazer. Não se inventa em silêncio. Pergunta-se a quem escreveu o enunciado. Se não for possível, toma-se uma decisão e escreve-se no contrato. Assim, quem ler a solução sabe em que pressuposto ela assenta. Na aula, quem escreveu o enunciado está ali, e a decisão toma-se em conjunto, no quadro.
 
-6. O que diz o enunciado sobre um duelo em que os dois jogadores ganharam o mesmo número de rondas?
+6. Que final é esse, e o que diz o enunciado sobre ele?
 7. Que decisões possíveis vês? Para cada uma, pensa em duas coisas: é justa para os dois jogadores? Obriga a mudar alguma coisa que o enunciado fixou, como o número de rondas?
 8. Porque é que esta decisão tem de ficar escrita já, no passo 1, e não depois de o algoritmo estar feito?
 
@@ -119,7 +118,7 @@ No guia 01, na secção "Porque se chama contrato", viste que o contrato é um a
 
 Validar uma entrada é verificar se o valor é aceitável e decidir o que fazer quando não é. É matéria que vais trabalhar antes do projeto 2, e o projeto 2 vai precisar dela. Este projeto pode dispensá-la, desde que o contrato diga porquê, numa frase escrita. A resposta à pergunta 2 é o sítio onde essa frase nasce. Repara na forma como o enunciado descreve o dado e de onde vem cada valor que o jogador escreve.
 
-Uma frase destas, no contrato, chama-se uma **suposição**: uma coisa que o contrato dá como certa e que o algoritmo não verifica. Uma suposição escrita é honesta, porque quem lê o contrato fica a saber em que condições o algoritmo funciona. Uma suposição que ninguém escreveu é um erro escondido. Só se descobre no dia em que a coisa dada como certa falha. No exemplo guiado do guia 05, o do inventário, o contrato tem uma suposição destas sobre o stock do início do dia. Procura-a no passo 1 desse exemplo.
+Uma frase destas, no contrato, chama-se uma **suposição**: uma coisa que o contrato dá como certa e que o algoritmo não verifica. Escreve-a nas entradas, ao pé dos valores a que diz respeito. Uma suposição escrita é honesta, porque quem lê o contrato fica a saber em que condições o algoritmo funciona. Uma suposição que ninguém escreveu é um erro escondido. Só se descobre no dia em que a coisa dada como certa falha. No exemplo guiado do guia 05, o do inventário, o contrato tem uma suposição destas sobre o stock do início do dia. Procura-a no passo 1 desse exemplo.
 
 Repara que a suposição e a decisão são coisas diferentes. A decisão escolhe o que o algoritmo faz numa situação que pode mesmo acontecer. A suposição diz que uma situação não vai acontecer, e porquê.
 
@@ -154,7 +153,7 @@ Antes de o professor avançar, pensa nestas perguntas:
 
 1. Numa ronda, onde é que a resposta muda de "Ronda para o jogador 1" para "Ronda para o jogador 2"? Que par de valores fica exatamente em cima dessa fronteira, e que pares ficam imediatamente de um lado e do outro?
 2. No fim do duelo, onde é que a resposta muda de um vencedor para o outro? Que duelo fica exatamente em cima dessa fronteira? E qual é a menor diferença de rondas ganhas com que um jogador ainda ganha o duelo?
-3. Um `Para` de 1 até 5 tem sempre cinco iterações. Por isso, este jogo não tem o caso zero. Há algum duelo em que nenhum jogador chega a ganhar uma ronda? O que esperas que o algoritmo escreva nesse duelo?
+3. O duelo tem sempre cinco rondas, por isso este jogo não tem um duelo sem rondas. Há algum duelo em que nenhum jogador chega a ganhar uma ronda? O que esperas que o algoritmo escreva nesse duelo?
 4. Consegues escrever o resultado esperado de um duelo em que os dois ganharam o mesmo número de rondas sem a decisão do passo 1? Porquê?
 5. A ordem pela qual as rondas são ganhas pode mudar o vencedor do duelo? Que duelo escolherias para mostrar que um algoritmo não se deixa enganar pelo que aconteceu na última ronda?
 6. Para ganhar o duelo, um jogador precisa de ganhar três rondas? Pode alguém ganhar com menos?
@@ -284,11 +283,11 @@ O portefólio de algoritmos é a pasta que o guia 05 descreve na secção "O teu
 - se seguiste o primeiro caminho do passo 6, o registo de depuração, com a versão com erro e a versão corrigida;
 - se seguiste o segundo caminho, a explicação do caso que dá mais confiança.
 
-Usa nomes de ficheiro como os do guia 05, em minúsculas, com hífenes e sem acentos nem espaços: `duelo-de-dados-contrato`, `duelo-de-dados-pseudocodigo`, `duelo-de-dados-testes` e `duelo-de-dados-depuracao`. Cada versão do algoritmo fica no seu ficheiro. As páginas do caderno também contam. Fotografa-as ou passa-as a limpo, e junta-as às peças a que pertencem.
+Usa nomes de ficheiro como os do guia 05, em minúsculas, com hífenes e sem acentos nem espaços: `duelo-de-dados-contrato.txt`, `duelo-de-dados-pseudocodigo.txt`, `duelo-de-dados-testes.txt` e `duelo-de-dados-depuracao.txt`. Cada versão do algoritmo fica no seu ficheiro, e a versão com erro chama-se `duelo-de-dados-pseudocodigo-com-erro.txt`. As páginas do caderno também contam. Fotografa-as ou passa-as a limpo, e junta-as às peças a que pertencem.
 
 Antes de fechares o caderno, confirma:
 
-- [ ] O contrato tem as quatro respostas, a suposição sobre os valores dos dados e a decisão sobre o que o enunciado não dizia. Cada uma está numa frase.
+- [ ] O contrato tem as cinco partes: as quatro respostas e as decisões. A suposição sobre os valores dos dados está nas entradas. A decisão sobre o que o enunciado não dizia está numa frase que começa por "Decisão:".
 - [ ] A tabela de casos foi escrita antes do algoritmo, e cada caso tem a razão da escolha.
 - [ ] Cada mensagem do enunciado, e a da decisão, aparece no resultado esperado de pelo menos um caso.
 - [ ] A tabela de iterações tem a linha do último teste, o que dá falso e faz sair do ciclo.

@@ -2,7 +2,7 @@
 
 # Projeto 2: Adivinha o número
 
-Um jogador escreve um número secreto de 1 a 100, e o outro tenta adivinhá-lo, com pistas, em 10 tentativas no máximo. O projeto faz-se em pares, em cerca de 120 minutos: 70 para a Parte 1 e 50 para a Parte 2.
+Um jogador escreve um número secreto de 1 a 100, e o outro tenta adivinhá-lo, com pistas, em 10 tentativas no máximo. O projeto faz-se em pares, em cerca de duas horas de aula: 70 minutos para a Parte 1 e 56 para a Parte 2.
 
 ## Para que serve este projeto
 
@@ -17,9 +17,11 @@ Os três seguem o mesmo processo, que é o do exemplo guiado do guia 05, o do in
 5. se algum teste falhar, a depuração, com o seu registo;
 6. por fim, a melhoria, com os passos contados antes e depois.
 
+O passo 6, a melhoria, entra a partir deste projeto.
+
 No projeto 1, o duelo de dados, viste o professor fazer este processo ao quadro, a pensar em voz alta. Neste projeto és tu que o fazes, com um colega, um passo de cada vez, e o professor confirma cada passo antes de avançarem. No projeto 3, a avaliação prática, vais fazê-lo sozinho, num problema novo.
 
-Por isso este projeto é um ensaio. O que interessa não é acabar depressa. É perceber porque se faz cada passo e porque se faz por aquela ordem, para que, no dia da avaliação, a ordem já seja tua.
+Por isso este projeto é um ensaio. O que interessa é perceber porque se faz cada passo e porque vem por aquela ordem, mesmo que leve tempo. Assim, no dia da avaliação, a ordem já é tua.
 
 O jogo deste projeto traz uma coisa que os exercícios ainda não tinham: um ciclo que pode acabar de duas maneiras diferentes. O jogo acaba quando o jogador acerta, mas também acaba quando se esgotam as tentativas. No fim, o algoritmo tem de saber qual das duas coisas aconteceu, para escrever a mensagem certa. É uma estrutura que aparece em muitos problemas, e que vais voltar a encontrar.
 
@@ -44,7 +46,8 @@ Este projeto não traz nenhuma instrução nova de pseudocódigo. Usa o que apre
 - O contrato com as decisões sobre as ambiguidades: guia [05 Testar, depurar e melhorar](05-testar-depurar-e-melhorar.md).
 - A tabela de casos esperados, com casos normais, de fronteira e inválidos, do guia 05.
 - O método de depuração em cinco passos, o registo de depuração e o teste de regressão, do guia 05.
-- Os erros da secção "Quatro erros que vais encontrar muitas vezes" e a diferença entre corrigir a causa e corrigir o sintoma, do guia 05.
+- Os erros da secção "Quatro erros que vais encontrar muitas vezes", do guia 05.
+- A diferença entre corrigir a causa e corrigir o sintoma, do guia 05.
 - Melhorar sem mudar o que o algoritmo faz, as estratégias para fazer menos passos e a regra para contar passos, do guia 05.
 
 Este projeto faz-se depois da aula em que a validação e a validação repetida são dadas. Se ainda tiveres dúvidas, relê a secção "Padrão validação repetida" do guia 04 antes de começares.
@@ -55,7 +58,7 @@ Testar e depurar não tiveram uma aula só para eles. Fizeste-o em todos os exer
 
 Trabalham os dois juntos, um passo de cada vez. Em cada passo, um escreve e o outro confere, com o enunciado e com o guia abertos. No passo seguinte, trocam. Os dois têm de conseguir explicar tudo o que está escrito, porque o professor pode fazer a pergunta a qualquer um. No fim, cada um guarda uma cópia do projeto no seu portefólio.
 
-Cada passo acaba com a frase "Mostra ao professor antes de avançar". Quando chegares a essa frase, chamas o professor e mostras o que fizeram. Só passas ao passo seguinte depois de ele o confirmar. Há uma razão para isto. Cada passo usa o anterior. Uma decisão esquecida no contrato dá um resultado esperado errado na tabela. E um resultado esperado errado faz-te procurar um erro onde ele não está. Se o professor encontrar alguma coisa a corrigir, não te vai dar a resposta. Vai fazer-te uma pergunta, ou apontar para um caso da tua tabela, e tu corriges e voltas a mostrar. Enquanto esperas, relê a secção do guia de que vais precisar no passo seguinte.
+Cada passo acaba com a frase "Mostra ao professor antes de avançar". Quando chegares a essa frase, chamas o professor e mostras o que fizeram. Só passas ao passo seguinte depois de ele o confirmar. Cada passo usa o anterior. Uma decisão esquecida no contrato dá um resultado esperado errado na tabela. E um resultado esperado errado faz-te procurar um erro onde ele não está. Se o professor encontrar alguma coisa a corrigir, não te vai dar a resposta. Vai fazer-te uma pergunta, ou apontar para um caso da tua tabela, e tu corriges e voltas a mostrar. Enquanto esperas, relê a secção do guia de que vais precisar no passo seguinte.
 
 Precisas de papel e lápis, e dos guias 03, 04 e 05 à mão.
 
@@ -83,7 +86,7 @@ A ferramenta está no guia 05, no passo 1 do exemplo guiado, e na secção "O re
 
 O contrato é o que diz, sem margem para dúvidas, o que o algoritmo tem de fazer. É dele que vão sair os resultados esperados da tabela do passo 2, e por isso tem de estar completo antes de a tabela começar. Um contrato tem as respostas às quatro perguntas do guia 01. São as entradas que o algoritmo recebe, as saídas que produz, as restrições que tem de cumprir e as condições. As condições são as situações diferentes que podem acontecer.
 
-Há uma razão para o fazer por escrito, mesmo num jogo que parece simples. Quando lês um enunciado, a tua cabeça preenche sozinha o que ele não diz. E preenche-o de uma maneira que pode não ser a do teu colega. Escrever o contrato obriga-te a ver essas lacunas. Quando uma pergunta não tem resposta no enunciado, isso é uma **ambiguidade**, como as que aprendeste a encontrar no guia 01. O contrato decide-a, por escrito, numa linha que começa por "Decisão:" e diz a razão. Uma ambiguidade que fica por decidir volta a aparecer mais à frente, quando tiveres de escrever um resultado esperado e não souberes qual é.
+O contrato faz-se por escrito, mesmo num jogo que parece simples. Quando lês um enunciado, a tua cabeça preenche sozinha o que ele não diz. E preenche-o de uma maneira que pode não ser a do teu colega. Escrever o contrato obriga-te a ver essas lacunas. Quando uma pergunta não tem resposta no enunciado, isso é uma **ambiguidade**, como as que aprendeste a encontrar no guia 01. O contrato decide-a, por escrito, numa linha que começa por "Decisão:" e diz a razão. Uma ambiguidade que fica por decidir volta a aparecer mais à frente, quando tiveres de escrever um resultado esperado e não souberes qual é.
 
 **a)** Escreve as entradas. Para cada uma, diz o tipo, os limites e se o algoritmo a valida ou não, e porquê. Repara que o enunciado trata os dois jogadores de maneira diferente.
 
@@ -93,7 +96,7 @@ Há uma razão para o fazer por escrito, mesmo num jogo que parece simples. Quan
 
 **d)** Escreve as condições: as situações diferentes que podem acontecer numa tentativa e no fim do jogo.
 
-**e)** Há uma situação que o enunciado não decide. Para a encontrares, imagina um jogador 2 distraído: o que pode ele escrever que o enunciado não diga como se conta? Quando a encontrares, escreve a decisão e a razão. Para decidires, pensa no que o algoritmo teria de guardar, ao longo do jogo, para tratar essa situação de outra maneira. Pensa também se já sabes fazer isso com o que aprendeste.
+**e)** Há pelo menos uma situação que o enunciado não decide. Para a encontrares, imagina um jogador 2 distraído: o que pode ele escrever que o enunciado não diga como se conta? Quando a encontrares, escreve a decisão e a razão. Para decidires, pensa no que o algoritmo teria de guardar, ao longo do jogo, para tratar essa situação de outra maneira. Pensa também no trabalho que isso dava.
 
 Mostra ao professor antes de avançar: o contrato, com a decisão e a sua razão.
 
@@ -105,19 +108,19 @@ Ainda não há algoritmo, e é de propósito. Os resultados esperados escrevem-s
 
 Neste jogo, cada caso de teste é um jogo inteiro. Tem o número secreto que o jogador 1 escreve e todos os números que o jogador 2 escreve, pela ordem, incluindo os que não valem. Escreve só os números até o jogo acabar. Se o jogo acaba à terceira tentativa, o caso não tem mais nenhum número depois dessa, porque o algoritmo já não o leria.
 
-Na coluna do resultado esperado, escreve todas as mensagens do jogo, pela ordem em que aparecem, sem as perguntas.
+Na coluna do resultado esperado, escreve todas as mensagens do jogo, pela ordem em que aparecem, sem as perguntas. Para caber na tabela, podes abreviar a mensagem do número que não vale como "Esse número não vale". Uma pista repetida três ou mais vezes seguidas escreve-se uma vez, com o número de vezes, como "Mais alto (4 vezes)".
 
-Pensa também nas fronteiras do ciclo, que são fáceis de esquecer. O guia 05 lembra que um ciclo tem as suas fronteiras. São o caso zero, em que o ciclo não chega a ter nenhuma iteração, o caso de uma só iteração e o de várias. Neste jogo, o ciclo das tentativas não pode ter zero iterações, porque o jogador 2 escreve sempre pelo menos um número. Mas tem um jogo mais curto possível e um jogo mais comprido possível, e o mais comprido pode acabar de mais do que uma maneira.
+Pensa também nas fronteiras do ciclo, que são fáceis de esquecer. O guia 05 lembra que um ciclo tem as suas fronteiras. São o caso zero, em que o ciclo não chega a ter nenhuma iteração, o caso de uma só iteração e o de várias. Neste jogo, o ciclo das tentativas não pode ter zero iterações, porque o jogador 2 escreve sempre pelo menos um número. Mas tem um jogo com o menor número de tentativas e um com o maior. E o jogo com o maior número de tentativas pode acabar de mais do que uma maneira.
 
-**a)** Faz a tabela com as colunas que se preenchem antes de executar, as cinco do guia 05, com as entradas divididas em duas: N.º, Tipo, Número secreto, Números escritos pelo jogador 2, Resultado esperado e Porque foi escolhido. Deixa espaço à direita para as duas colunas que se preenchem depois, Resultado obtido e Passou?.
+**a)** Faz a tabela com as colunas que se preenchem antes de executar, as cinco do guia 05. As entradas ficam divididas em duas, e as colunas são estas: N.º, Tipo, Número secreto, Números escritos pelo jogador 2, Resultado esperado e Porque foi escolhido. Deixa espaço à direita para as duas colunas que se preenchem depois, Resultado obtido e Passou?.
 
 **b)** A tabela tem de ter, pelo menos, casos para estas situações:
 
 - um jogo normal, curto, com pistas dos dois tipos;
-- o jogo mais curto possível;
-- o jogo mais comprido possível, de cada uma das maneiras como pode acabar;
+- o jogo com o menor número de tentativas;
+- o jogo com o maior número de tentativas, de cada uma das maneiras como pode acabar;
 - os dois lados da fronteira do "Muito bem!";
-- números que não valem, dos dois lados de cada limite do intervalo de 1 a 100, cada um ao lado do válido mais perto;
+- o número que não vale logo fora de cada limite (0 e 101), cada um seguido do válido mais perto (1 e 100);
 - dois números que não valem, escritos seguidos;
 - a situação que decidiste no passo 1.
 
@@ -138,6 +141,31 @@ Este algoritmo tem duas coisas que ainda não tinhas juntado.
 A primeira é um ciclo com duas maneiras de acabar. Até agora, os teus ciclos acabavam por uma razão só: aparecia a sentinela, o valor ficava válido, ou o `Para` chegava ao fim. Neste jogo há duas razões, e qualquer uma delas chega para o jogo acabar. Lembra-te da regra do guia 04. A condição do `Enquanto` diz quando continuar, e não quando parar. Por isso, tens de pensar primeiro em quando o jogo para e, a partir daí, escrever a situação em que continua. E há um cuidado a ter depois do ciclo. Quando o ciclo acaba, sabes que a sua condição deu falso. Num ciclo com uma só razão para acabar, isso diz-te tudo. Num ciclo com duas, diz-te só que pelo menos uma das razões aconteceu, e não diz qual. O algoritmo precisa de saber qual foi, para escrever a mensagem certa.
 
 A segunda é um ciclo dentro de outro ciclo. A validação repetida do guia 04 era um ciclo que pedia um valor até ele ser válido. Quando um ciclo está dentro do corpo de outro, o de dentro faz todas as suas iterações durante uma só iteração do de fora. O de fora só continua para a linha seguinte quando o de dentro tiver acabado. No pseudocódigo, o corpo do ciclo de dentro fica oito espaços para dentro, porque está dentro de dois blocos. Na tabela de iterações do ciclo de fora, o que o ciclo de dentro faz escreve-se na coluna "Durante a iteração".
+
+Um exemplo, noutro contexto. A papelaria do guia 04 recebe dois pedidos, e cada um tem de ter de 1 a 50 unidades. A validação repetida do algoritmo `PedirQuantidadeValida`, do guia 04, fica dentro de um `Para` de dois pedidos:
+
+```text
+const QUANTIDADE_MINIMA = 1
+const CAPACIDADE_MAXIMA = 50
+const NUMERO_DE_PEDIDOS = 2
+Para pedido de 1 até NUMERO_DE_PEDIDOS
+    Escreve: "Quantidade do pedido ", pedido, " (1 a 50)?"
+    int quantidade = ler valor
+    Enquanto quantidade < QUANTIDADE_MINIMA ou quantidade > CAPACIDADE_MAXIMA
+        Escreve: "Quantidade inválida. Escreve um número de 1 a 50."
+        quantidade = ler valor
+    Escreve: "Pedido aceite: ", quantidade, " unidades"
+```
+
+A pessoa escreve 0, 75, 12 e 30. Antes de leres a tabela, tenta prever: quantas vezes aparece "Quantidade inválida", e que pedidos são aceites?
+
+| Teste | pedido | quantidade | Condição | Durante a iteração |
+| --- | ---: | ---: | --- | --- |
+| 1.º | 1 | sem valor | `1 <= 2` dá `true` | lê 0; a validação testa `0 < 1 ou 0 > 50`, que dá `true`: escreve "Quantidade inválida. Escreve um número de 1 a 50." e lê 75; testa `75 < 1 ou 75 > 50`, que dá `true`: escreve a mesma mensagem e lê 12; testa `12 < 1 ou 12 > 50`, que dá `false`, e a validação termina; escreve "Pedido aceite: 12 unidades" |
+| 2.º | 2 | 12 | `2 <= 2` dá `true` | lê 30; a validação testa `30 < 1 ou 30 > 50`, que dá `false`, e não faz nenhuma iteração; escreve "Pedido aceite: 30 unidades" |
+| 3.º | 3 | 30 | `3 <= 2` dá `false` | o ciclo termina |
+
+"Quantidade inválida" aparece duas vezes, as duas na primeira iteração do `Para`, e os dois pedidos são aceites, com 12 e 30 unidades. A validação do primeiro pedido, com as suas duas iterações e três testes, cabe toda numa só linha da tabela do `Para`. O segundo pedido é válido à primeira: a validação testa a condição uma vez e não faz nenhuma iteração. Na linha de cada teste do `Para`, a coluna `quantidade` tem o último valor lido, o que a validação deixou passar.
 
 Responde por escrito, em poucas palavras:
 
@@ -161,7 +189,7 @@ Agora escreve o algoritmo completo, com as peças que decidiste no passo 3. Se u
 
 - uma constante, com `const`, para cada número fixo do enunciado;
 - o tipo à frente de cada variável na linha onde ela recebe o primeiro valor, e só aí;
-- uma leitura dentro de um ciclo, se for aí que a variável aparece pela primeira vez, escreve-se com o tipo, como `int quantidade = ler valor`;
+- uma leitura dentro de um ciclo onde a variável aparece pela primeira vez leva o tipo, como `int stock = ler valor` (guia 04, "Padrão contador");
 - a indentação a mostrar o que está dentro de cada ciclo e de cada `Se`.
 
 Se preferires frases claras, numera-as, e diz em cada repetição que passos se repetem, como no exemplo em frases do guia 04.
@@ -226,11 +254,11 @@ Se nenhum caso falhou, escreve-o por baixo da tabela. O professor pode dar-te um
 
 Mostra ao professor antes de avançar: o registo de depuração e a versão corrigida, ou a tabela com todos os casos a passar.
 
-## Parte 2: depurar e melhorar o algoritmo de um colega (50 min)
+## Parte 2: depurar e melhorar o algoritmo de um colega (56 min)
 
 Quando o professor confirmar o teu passo 7, entrega-te duas coisas em papel. A primeira é o algoritmo que um colega de outra turma escreveu para este mesmo jogo. A segunda é o relato de um erro que esse colega observou quando o experimentou com um jogo de teste. O relato diz qual era o número secreto, que números o jogador 2 escreveu, o que apareceu no ecrã e o que devia ter aparecido.
 
-Esse algoritmo não está neste documento, e há uma razão para isso. Resolve o mesmo jogo, e lê-lo antes de escreveres o teu tirava-te o mais importante da Parte 1. O mais importante é decidires tu como o ciclo acaba e como o algoritmo sabe porque acabou. Por isso só o recebes depois de teres o teu algoritmo escrito, testado e confirmado.
+Esse algoritmo não está neste documento. Resolve o mesmo jogo, e lê-lo antes de escreveres o teu tirava-te o mais importante da Parte 1. O mais importante é decidires tu como o ciclo acaba e como o algoritmo sabe porque acabou. Por isso só o recebes depois de teres o teu algoritmo escrito, testado e confirmado.
 
 O colega fez algumas escolhas diferentes das tuas, e isso não quer dizer que estejam erradas. Dois algoritmos diferentes podem estar ambos certos. Para encontrares o erro, não procures as diferenças em relação ao teu algoritmo. Segue o método do guia 05, a partir do erro observado. Guarda a folha que o professor te dá, porque faz parte do teu portefólio.
 
@@ -246,7 +274,7 @@ Depois, reproduz o erro. **Reproduzir** um erro é fazê-lo acontecer outra vez,
 
 **b)** Procura o caso mínimo, que o guia 05 define como o caso mais pequeno que ainda mostra o mesmo erro. Experimenta, na versão do colega, jogos parecidos com o relatado, mas mais curtos. Não precisas de fazer outra tabela de iterações completa. Em cada jogo, segue só o que precisares para saber se o erro aparece ou não.
 
-**c)** Qual é o caso mais pequeno que ainda mostra o erro? Porque é que não pode ser mais pequeno? Responde numa ou duas frases, e diz o que se pode simplificar nesse caso, mesmo que não se possa encurtar.
+**c)** Qual é o caso mais pequeno que ainda mostra o erro? Podia ser mais curto? Porquê? Diz também o que se pode simplificar nesse caso.
 
 Mostra ao professor antes de avançar: a tabela de iterações e as respostas às alíneas b) e c).
 
@@ -266,7 +294,7 @@ Uma hipótese diz onde procurar e o que verificar. "O algoritmo do colega tem um
 
 Mostra ao professor antes de avançar: a hipótese, o trace, o nome do erro e a correção.
 
-### Passo 10: teste de regressão e registo de depuração (14 min)
+### Passo 10: teste de regressão e registo de depuração (20 min)
 
 A ferramenta está no guia 05, no passo 5 de "Depurar com método", e no passo 11 do exemplo guiado.
 
@@ -304,6 +332,7 @@ A regra de contagem do guia, para a teres à mão, é esta:
 
 - conta um passo cada `Escreve:` e cada atribuição executados, incluindo as leituras com `ler valor`;
 - conta um passo cada avaliação da condição de um `Se`, de um `Senão se` ou de um `Enquanto`;
+- uma condição com `e` ou com `ou` conta um passo;
 - conta também a última avaliação de um `Enquanto`, a que dá falso;
 - as linhas `const` e o `Senão` não contam.
 
@@ -334,17 +363,17 @@ O projeto vai para o portefólio de cada um dos dois elementos do par. Guarda-o 
 
 | Peça | Nome do ficheiro |
 | --- | --- |
-| O enunciado e o contrato, com a decisão | `adivinha-o-numero-contrato` |
-| A tabela de casos, com os resultados obtidos, e a tabela de iterações do caso normal | `adivinha-o-numero-testes` |
-| O teu algoritmo e, se o corrigiste, a versão com o erro, a versão corrigida e o registo de depuração | `adivinha-o-numero-algoritmo`, e se for preciso `adivinha-o-numero-algoritmo-com-erro` e `adivinha-o-numero-registo-depuracao` |
-| A folha com a versão do colega e o erro observado, a tabela de iterações do erro, o trace, o registo de depuração e o teste de regressão | `adivinha-o-numero-colega-depuracao` |
-| A versão melhorada, a explicação da equivalência e a contagem de passos | `adivinha-o-numero-colega-melhorado` |
+| O enunciado e o contrato, com a decisão | `adivinha-o-numero-contrato.txt` |
+| A tabela de casos, com os resultados obtidos, e a tabela de iterações do caso normal | `adivinha-o-numero-testes.txt` |
+| O teu algoritmo e, se o corrigiste, a versão com o erro, a versão corrigida e o registo de depuração | `adivinha-o-numero-algoritmo.txt`, e se for preciso `adivinha-o-numero-algoritmo-com-erro.txt` e `adivinha-o-numero-registo-depuracao.txt` |
+| A folha com a versão do colega e o erro observado, a tabela de iterações do erro, o trace, o registo de depuração e o teste de regressão | `adivinha-o-numero-colega-depuracao.txt` |
+| A versão melhorada, a explicação da equivalência e a contagem de passos | `adivinha-o-numero-colega-melhorado.txt` |
 
 Confirma, antes de dares o projeto por acabado:
 
 - [ ] A tabela de casos foi escrita antes do algoritmo. Tem as fronteiras do ciclo, as do "Muito bem!" e as do intervalo de 1 a 100.
 - [ ] O algoritmo passa em todos os casos da tabela, e consigo explicar como ele sabe, depois do ciclo, porque é que o jogo acabou.
-- [ ] O registo de depuração do algoritmo do colega tem as cinco linhas, e outra pessoa consegue perceber o erro e a correção só por ele.
+- [ ] O registo de depuração do algoritmo do colega tem as cinco linhas. Outra pessoa consegue perceber o erro e a correção só por ele.
 - [ ] Contei os passos das duas versões com a mesma regra, e sei explicar onde está a diferença.
 
 ## O que vem a seguir

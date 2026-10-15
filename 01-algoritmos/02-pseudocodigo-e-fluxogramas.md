@@ -52,6 +52,7 @@ No fim deste guia, consegues:
 - A ação e o estado, e seguir o estado numa tabela, com uma coluna para cada valor: guia [01](01-do-problema-ao-algoritmo.md), secção "Ação e estado".
 - As instruções ambíguas, que admitem mais do que uma leitura: guia [01](01-do-problema-ao-algoritmo.md), secção "Instruções ambíguas".
 - As quatro operações, a divisão com resto e a ordem das operações numa conta, da matemática do ensino básico.
+- As percentagens e as médias, da matemática do ensino básico.
 
 ## Uma notação própria para algoritmos
 
@@ -67,7 +68,7 @@ O **fluxograma** é um desenho do mesmo algoritmo, com figuras ligadas por setas
 
 O mesmo algoritmo escreve-se das duas maneiras. Se as duas versões não disserem exatamente a mesma coisa, pelo menos uma delas está errada.
 
-Há uma terceira maneira, que já conheces do guia 01 e que continua a valer: escrever o algoritmo em frases claras, em português. O que é preciso é que as frases não deixem dúvidas. A secção "A forma do pseudocódigo nas aulas", mais à frente, explica o que isso quer dizer e mostra um exemplo. Por agora, guarda esta ideia. Neste momento, o que conta é a lógica do algoritmo. A forma de escrever é uma ajuda para pensares e para te fazeres entender, e não uma lista de regras em que se pode errar.
+Há uma terceira maneira, que já conheces do guia 01 e que continua a valer: escrever o algoritmo em frases claras, em português. O que é preciso é que as frases não deixem dúvidas. A secção "A forma do pseudocódigo nas aulas", mais à frente, explica o que isso quer dizer e mostra um exemplo. Neste momento, o que conta é a lógica do algoritmo. A forma de escrever é uma ajuda para pensares e para te fazeres entender, e não uma lista de regras em que se pode errar.
 
 ## Variáveis e estado
 
@@ -77,7 +78,7 @@ A imagem mais usada é a de uma caixa com uma etiqueta. A etiqueta é o nome, e 
 
 No dia a dia, o visor de uma balança de loja funciona assim. Há sempre um visor, no mesmo sítio e com a mesma função. O número que lá aparece muda cada vez que se pousa outra coisa no prato, e o número anterior desaparece.
 
-No guia 01, o estado de uma fila de atendimento era uma fotografia como esta: "está a ser atendida a senha 14 e há 6 pessoas à espera". Com variáveis, cada parte dessa fotografia passa a ter nome próprio: `senhaAtual` vale 14 e `pessoasAEspera` vale 6. A definição de estado fica assim mais precisa. O **estado** de um algoritmo, num dado momento, é o valor de todas as suas variáveis nesse momento.
+No guia 01, o estado de uma fila de atendimento era uma fotografia. Por exemplo, "está a ser atendida a senha 14 e há 6 pessoas à espera". Com variáveis, cada parte dessa fotografia passa a ter nome próprio. `senhaAtual` vale 14, e `pessoasAEspera` vale 6. A definição de estado fica assim mais precisa. O **estado** de um algoritmo, num dado momento, é o valor de todas as suas variáveis nesse momento.
 
 Cada instrução que muda o valor de uma variável muda o estado. Se quiseres saber o que um algoritmo está a fazer, não precisas de adivinhar. Olhas para o estado antes de uma instrução, olhas para o estado depois, e a diferença é o efeito dessa instrução. É esta a ideia da tabela de trace, que vais aprender neste guia.
 
@@ -87,8 +88,9 @@ O nome de uma variável deve dizer o que ela guarda. `caixasCompletas` é um bom
 
 - começam por uma letra minúscula;
 - não têm espaços. Quando têm várias palavras, juntam-se, e cada palavra a partir da segunda começa por maiúscula, como em `caixasCompletas` ou `precoEmCentimos`. Esta forma de escrever chama-se **camelCase**, porque as maiúsculas no meio lembram as bossas de um camelo;
-- não têm acentos nem cedilhas, porque as linguagens de programação nem sempre os aceitam nos nomes, e é melhor habituares-te desde já. Escreve-se `preco` e não `preço`, e `numeroDeCaixas` e não `númeroDeCaixas`;
-- não são uma das palavras que o pseudocódigo já usa com outro significado, como `Se`, `Enquanto`, `const` ou `div`. Quem lê ficava sem saber se aquilo é um nome ou uma instrução. Nas linguagens de programação, estas palavras chamam-se **palavras reservadas**, e aí não podem mesmo ser usadas como nomes.
+- não têm acentos nem cedilhas, porque as linguagens de programação nem sempre os aceitam nos nomes, e é melhor habituares-te desde já. Escreve-se `preco` e não `preço`, e `numeroDeCaixas` e não `númeroDeCaixas`.
+
+Há ainda uma regra sobre as palavras que o próprio pseudocódigo usa. Está na secção "A forma do pseudocódigo nas aulas", depois de essas palavras aparecerem.
 
 ## Constantes
 
@@ -110,7 +112,7 @@ const UNIDADES_POR_CAIXA = 12
 
 Lê-se "a constante UNIDADES_POR_CAIXA vale 12". A palavra `const` é o princípio da palavra "constante", e avisa quem lê de que aquele valor não vai mudar. A constante recebe o valor nessa linha e nunca mais. Uma instrução que tente dar-lhe outro valor a meio do algoritmo está errada, porque ela deixava de ser constante.
 
-Repara que a constante não leva tipo. Não é preciso, porque o tipo vê-se pelo valor: `12` é um número inteiro, `0.23` é um número com parte decimal e `"Papelaria"` é um texto. Os nomes dos tipos vêm já a seguir.
+Repara que a constante não leva tipo. Não é preciso, porque o tipo vê-se pelo valor. `12` é um número inteiro, e `"Papelaria"` é um texto. `0.23` é um número com parte decimal, escrito com um ponto no lugar da vírgula, como nas linguagens de programação. Os nomes dos tipos vêm já a seguir.
 
 ## Tipos de dados
 
@@ -118,7 +120,7 @@ Cada variável guarda valores de um **tipo**, e o tipo decide que valores são p
 
 | Tipo | Guarda | Exemplos | O que se faz com ele |
 | --- | --- | --- | --- |
-| `int` | números inteiros, sem parte decimal | `12`, `0`, `-3` | contas, incluindo `div` e `resto` |
+| `int` | números inteiros, sem parte decimal | `12`, `0`, `-3` | contas, incluindo a divisão inteira |
 | `float` | números com parte decimal | `1.5`, `0.75`, `-2.25` | contas em que a parte decimal interessa |
 | `string` | texto: sequências de caracteres, entre aspas | `"Ana"`, `"caderno A4"` | mostrar e guardar; não se fazem contas |
 | `bool` | só um de dois valores | `true`, `false` | guardar a resposta a uma pergunta de sim ou não |
@@ -137,9 +139,9 @@ Há valores que parecem números e devem ser texto. Um número de telefone, como
 
 A confusão mais frequente é entre o número `12` e o texto `"12"`. No papel parecem iguais, e não são. Com o número podes fazer contas. O texto é uma sequência de dois caracteres, o 1 e o 2, tal como `"ab"` é uma sequência de duas letras. Juntar o texto `"12"` com o texto `"3"` dá `"123"`, e não 15, porque juntar textos é pô-los um a seguir ao outro. São as aspas que distinguem os dois: com aspas é texto, e sem aspas é um número ou o nome de uma variável.
 
-O tipo `bool` só tem dois valores possíveis, que se escrevem `true` e `false`, as palavras inglesas para verdadeiro e falso, em minúsculas. Serve para guardar respostas a perguntas de sim ou não. Uma variável `pago`, do tipo `bool`, com o valor `false`, guarda que uma encomenda ainda não foi paga. Em Python, estes dois valores escrevem-se com maiúscula, `True` e `False`, e é uma das pequenas diferenças que vais encontrar quando lá chegares. Neste guia vais usar o `bool` pouco. No guia seguinte, quando o algoritmo tiver de tomar decisões, passa a ser indispensável.
+O tipo `bool` só tem dois valores possíveis, que se escrevem `true` e `false`, as palavras inglesas para verdadeiro e falso, em minúsculas. Serve para guardar respostas a perguntas de sim ou não. Uma variável `pago`, do tipo `bool`, com o valor `false`, guarda que uma encomenda ainda não foi paga. Em Python, estes dois valores escrevem-se com maiúscula, `True` e `False`, e é uma das pequenas diferenças que vais encontrar quando lá chegares. Neste guia vais usar o `bool` pouco. No guia seguinte, quando o algoritmo tiver de tomar decisões, passa a aparecer em quase todos os algoritmos.
 
-Quando uma conta mistura um `int` e um `float`, o resultado é um `float`: `2 + 0.5` dá `2.5`. E há uma operação que dá sempre um `float`, mesmo quando os dois números são inteiros: a divisão com `/`. Vais ver porquê na secção das expressões.
+Quando uma conta mistura um `int` e um `float`, o resultado é um `float`: `2 + 0.5` dá `2.5`. E há uma operação que dá sempre um `float`, mesmo quando os dois números são inteiros. É a divisão com `/`, porque uma divisão pode dar parte decimal, como 7 a dividir por 2, que dá 3,5.
 
 ## Onde nasce uma variável, e com que tipo
 
@@ -170,7 +172,7 @@ A segunda é que o tipo fica à vista de quem lê. Quem lê `int caixasCompletas
 
 A terceira é que ajuda a apanhar erros de escrita. Se `cadernos` nasceu numa linha e mais abaixo aparece `caderno`, sem o s, esse nome não nasceu em lado nenhum. Quem revir o algoritmo dá logo pelo engano, porque está a ser usada uma variável que não existe.
 
-Porque é que a variável nasce onde aparece pela primeira vez, e não numa lista no topo do algoritmo? Porque assim cada coisa aparece quando faz falta. Lês o algoritmo de cima para baixo e, em cada linha, tens à frente tudo o que precisas para a perceber. Não tens de voltar ao princípio para consultar uma lista. Há livros e professores que escrevem todas as variáveis numa lista antes da primeira instrução. Não está errado, é outra forma de fazer o mesmo. Nas aulas usamos esta, que é também a das linguagens de programação que vais aprender.
+Porque é que a variável nasce onde aparece pela primeira vez, e não numa lista no topo do algoritmo? Porque assim cada coisa aparece quando faz falta. Lês o algoritmo de cima para baixo e, em cada linha, tens à frente tudo o que precisas para a perceber. Não tens de voltar ao princípio para consultar uma lista. Há livros e professores que escrevem todas as variáveis numa lista antes da primeira instrução. Essa forma também está certa. Nas aulas usamos esta, que é também a das linguagens de programação que vais aprender.
 
 Algumas linguagens de programação obrigam a escrever o tipo de cada variável quando ela nasce. Outras não obrigam, como o Python, onde se escreve só `total = 0` e o tipo fica decidido pelo valor. Nas aulas escrevemos o tipo, porque escolhê-lo faz parte do raciocínio, e não só da escrita.
 
@@ -237,7 +239,7 @@ b = a
 | 3 | `a = b` | 9 | 9 | nada |
 | 4 | `b = a` | 9 | 9 | nada |
 
-As duas ficam com 9. No passo 3, `a` recebe o valor de `b` e passa a valer 9. O 4 perdeu-se. No passo 4, `b` recebe o valor atual de `a`, que já é 9. Quem esperava que os valores trocassem de lugar esqueceu-se de que, depois do passo 3, o 4 já não existe em lado nenhum. Uma troca que funcione tem de guardar o valor antigo noutra variável antes de o substituir. Como se escreve essa troca é uma pergunta da ficha. Pensa no que farias com dois copos cheios, um de sumo e outro de água, se quisesses trocar os líquidos de copo.
+As duas ficam com 9. No passo 3, `a` recebe o valor de `b` e passa a valer 9. O 4 perdeu-se. No passo 4, `b` recebe o valor atual de `a`, que já é 9. Quem esperava que os valores trocassem de lugar esqueceu-se de que, depois do passo 3, o 4 já não existe em lado nenhum. Como se escreve uma troca que funcione é uma pergunta da ficha. Pensa no que farias com dois copos cheios, um de sumo e outro de água, se quisesses trocar os líquidos de copo.
 
 Do lado esquerdo do `=` está sempre uma única variável, porque é lá que o valor vai ser guardado. `10 = total` não faz sentido, porque não se pode guardar um valor dentro do número 10. `total + 5 = total` também não, porque não se pode guardar um valor dentro de uma conta. O valor viaja sempre da direita para a esquerda, e vai parar à caixa cujo nome está sozinho à esquerda do `=`. Em alguns livros vais ver a atribuição desenhada com uma seta a apontar para a esquerda, do valor para a variável. A seta mostra esse caminho. É a mesma ideia com outro desenho. Nas aulas usamos o `=`, que é o que vais escrever em Python. Se tiveres dúvidas numa linha, olha para o lado esquerdo do `=`, onde tem de estar uma única variável.
 
@@ -260,7 +262,7 @@ A tabela resume a diferença:
 | Resultado | a variável fica com o valor novo | `true` ou `false` |
 | Do lado esquerdo | sempre uma única variável | qualquer valor ou conta |
 
-Porque é que se usa um sinal para dar um valor e dois para perguntar? Porque é assim nas linguagens de programação. No Python, que vais aprender a seguir, `total = 0` dá o valor 0 a `total`, e `total == 0` pergunta se `total` vale 0, exatamente como aqui. Aprender já esta forma poupa-te a desaprender outra mais tarde. O preço é teres de estar atento a um sinal. `total = total + 1` soma 1 a `total`. `total == total + 1` não soma nada. É uma pergunta, e a resposta é sempre `false`. Um sinal a mais transforma uma ordem numa pergunta, e o algoritmo fica com ar de certo sem fazer o que devia. Quando tiveres dúvidas, lê a linha em voz alta. Se disseres "recebe", é um sinal; se disseres "é igual a?", são dois.
+Porque é que se usa um sinal para dar um valor e dois para perguntar? Porque é assim nas linguagens de programação. No Python, que vais aprender a seguir, `total = 0` dá o valor 0 a `total`, e `total == 0` pergunta se `total` vale 0, como aqui. Aprender já esta forma poupa-te a desaprender outra mais tarde. O preço é teres de estar atento a um sinal. `total = total + 1` soma 1 a `total`. `total == total + 1` não soma nada. É uma pergunta, e a resposta é sempre `false`. Um sinal a mais transforma uma ordem numa pergunta, e o algoritmo fica com ar de certo sem fazer o que devia. Quando tiveres dúvidas, lê a linha em voz alta. Se disseres "recebe", é um sinal; se disseres "é igual a?", são dois.
 
 ## Ler e escrever
 
@@ -376,13 +378,13 @@ O caso que engana é o sítio dos parênteses. Antes de leres a explicação, te
 
 `arredondar` devolve o inteiro mais próximo do número que recebe. `arredondar(2.4)` dá `2`, porque 2,4 está mais perto de 2 do que de 3. `arredondar(2.6)` dá `3`. Um número que já é inteiro fica igual: `arredondar(7)` dá `7`. O resultado é sempre um `int`.
 
-As meias precisam de uma regra, porque 2,5 está exatamente a meio caminho entre 2 e 3. Nesta disciplina, as meias arredondam para cima: `arredondar(2.5)` dá `3`. É a regra que aprendeste na escola. Também se pode arredondar o resultado de uma conta: `arredondar(10 / 4)` dá `3`, porque 10 a dividir por 4 dá 2,5. Algumas linguagens de programação usam outra regra para as meias, e o Python é uma delas, mas nos nossos algoritmos vale esta.
+As meias precisam de uma regra, porque 2,5 está exatamente a meio caminho entre 2 e 3. Nesta disciplina, as meias arredondam para cima: `arredondar(2.5)` dá `3`. Também se pode arredondar o resultado de uma conta: `arredondar(10 / 4)` dá `3`, porque 10 a dividir por 4 dá 2,5. Algumas linguagens de programação usam outra regra para as meias, e o Python é uma delas, mas nos nossos algoritmos vale esta.
 
 Há três casos que enganam. Antes de os leres, tenta prever: quanto dão `arredondar(2.49)`, `arredondar(2.2)` e `arredondar(-2.5)`?
 
 O primeiro é arredondar em dois passos. `arredondar(2.49)` dá `2`, e não 3. Há quem pense "2,49 arredonda para 2,5, e 2,5 arredonda para 3", mas isso são dois arredondamentos seguidos. `arredondar` só faz um. Olha para o número tal como é, e 2,49 está mais perto de 2 do que de 3.
 
-O segundo é pensar que `arredondar` arredonda para cima. `arredondar(2.2)` dá `2`. Se precisares de arredondar sempre para cima, por exemplo para garantir que não fica a faltar uma caixa, nenhuma das quatro funções o faz diretamente. Vais ter de pensar noutra forma. A última pergunta de "Verificar o que aprendeste", no fim deste guia, põe-te exatamente esse problema.
+O segundo é pensar que `arredondar` arredonda sempre para cima. `arredondar(2.2)` dá `2`. Se precisares de arredondar sempre para cima, por exemplo para garantir que não fica a faltar uma caixa, nenhuma das quatro funções o faz diretamente. Vais ter de pensar noutra forma. A última pergunta de "Verificar o que aprendeste", no fim deste guia, põe-te esse problema.
 
 O terceiro é o dos números negativos, porque "para cima" quer dizer para o lado dos números maiores. `arredondar(-2.4)` dá `-2` e `arredondar(-2.6)` dá `-3`, como esperavas, porque são os inteiros mais próximos. Mas `arredondar(-2.5)` dá `-2`. Está a meio caminho entre -3 e -2, e a meia vai para cima, para -2, que é o maior dos dois. Não vais precisar disto muitas vezes, mas é a regra aplicada à letra.
 
@@ -390,7 +392,7 @@ Onde é que isto serve? Por exemplo, num desconto. Um desconto de 15% num artigo
 
 ### `truncar`, a parte inteira
 
-`truncar` corta as casas decimais e fica só com a parte inteira. Não arredonda, corta. `truncar(3.9)` dá `3`, mesmo estando 3,9 muito perto de 4, e `truncar(3.1)` também dá `3`. `truncar(0.99)` dá `0`. Um número que já é inteiro fica igual: `truncar(7)` dá `7`. O resultado é sempre um `int`.
+`truncar` corta as casas decimais e fica só com a parte inteira. `truncar(3.9)` dá `3`, mesmo estando 3,9 muito perto de 4, e `truncar(3.1)` também dá `3`. `truncar(0.99)` dá `0`. Um número que já é inteiro fica igual: `truncar(7)` dá `7`. O resultado é sempre um `int`.
 
 Serve quando só interessam as unidades completas. Um trabalho que demorou 2,75 horas demorou 2 horas completas e mais três quartos de hora: `truncar(2.75)` dá `2`.
 
@@ -400,7 +402,7 @@ O caso que engana é o dos números negativos. Antes de leres, tenta prever: qua
 
 ### `raiz`, a raiz quadrada
 
-`raiz` devolve a raiz quadrada do número que recebe, isto é, o número que, multiplicado por si próprio, dá o argumento. `raiz(25)` dá `5.0`, porque 5 vezes 5 dá 25. `raiz(0)` dá `0.0`. O resultado é sempre um `float`, mesmo quando a raiz é exata, e por isso aparece com o ponto zero. Quando a raiz não é exata, o resultado tem infinitas casas decimais, e o algoritmo guarda uma aproximação: `raiz(2)` dá `1.4142...`, com mais casas decimais do que as que aqui se mostram.
+`raiz` devolve a raiz quadrada do número que recebe, isto é, o número que, multiplicado por si próprio, dá o argumento. `raiz(25)` dá `5.0`, porque 5 vezes 5 dá 25. `raiz(0)` dá `0.0`. O resultado é sempre um `float`, mesmo quando a raiz é exata, e por isso aparece com o ponto zero. Quando a raiz não é exata, o resultado tem infinitas casas decimais, e o algoritmo guarda uma aproximação. Por exemplo, `raiz(2)` dá `1.4142...`, com mais casas decimais do que as que aqui se mostram.
 
 Onde é que isto serve? Uma sala quadrada com 49 metros quadrados de área tem 7 metros de lado, porque 7 vezes 7 dá 49: `raiz(49)` dá `7.0`. Sempre que conheces a área de um quadrado e queres o lado, é uma raiz quadrada.
 
@@ -408,7 +410,7 @@ O primeiro caso que engana é que a raiz de uma soma não é a soma das raízes.
 
 O segundo caso que engana é o dos números negativos. Não existe raiz quadrada de um número negativo, porque nenhum número multiplicado por si próprio dá um resultado negativo. `raiz(-4)` não tem resultado, e um algoritmo que chegue a essa conta falha. O contrato de `raiz` diz que a entrada tem de ser igual ou maior do que zero. Cabe a quem usa a função garantir que é.
 
-Estas quatro funções chegam para os problemas desta unidade. As linguagens de programação têm muitas mais, cada uma com o seu contrato, e vais conhecer algumas em Python. Nos algoritmos desta unidade, usa só estas quatro. Se um problema parecer precisar de outra, há uma forma de o resolver com as operações que já conheces, e encontrá-la faz parte do problema.
+Estas quatro funções chegam para os problemas deste módulo. As linguagens de programação têm muitas mais, cada uma com o seu contrato, e vais conhecer algumas em Python. Nos algoritmos deste módulo, usa só estas quatro. Se um problema parecer precisar de outra, há uma forma de o resolver com as operações que já conheces, e encontrá-la faz parte do problema.
 
 ## Sequência
 
@@ -473,7 +475,7 @@ Leitura guiada, linha a linha:
 4. `int lugares = mesas * LUGARES_POR_MESA` faz nascer `lugares`, também do tipo `int`, com o resultado da conta.
 5. `Escreve: "Lugares sentados: ", lugares` mostra o resultado.
 
-A **indentação** é o recuo de uma linha em relação à margem esquerda, e na forma das aulas faz-se com quatro espaços. Nos algoritmos deste guia não há indentação, porque são sequenciais, e todas as linhas começam encostadas à esquerda. A partir do guia 03 passa a ser indispensável, porque é a única marca de onde começa e onde acaba um bloco de instruções. Um **bloco** é um conjunto de linhas que pertencem à mesma instrução e que se executam juntas. Vê o exemplo que o professor usa nas aulas. Ainda não precisas de perceber o `Se`, que é matéria do guia 03. Repara só na margem:
+A **indentação** é o recuo de uma linha em relação à margem esquerda, e na forma das aulas faz-se com quatro espaços. Nos algoritmos deste guia não há indentação, porque são sequenciais, e todas as linhas começam encostadas à esquerda. A partir do guia 03, a indentação passa a contar, porque é a única marca de onde começa e onde acaba um bloco de instruções. Um **bloco** é um conjunto de linhas que pertencem à mesma instrução e que se executam juntas. Vê o exemplo que o professor usa nas aulas. Ainda não precisas de perceber o `Se`, que é matéria do guia 03. Repara só na margem:
 
 ```text
 const LIMITE = 50
@@ -485,7 +487,7 @@ Senão
     Escreve: "Recusado"
 ```
 
-A linha `Escreve: "Aceite"` tem quatro espaços à esquerda, e é isso que diz que ela pertence ao `Se`. Só se executa quando a quantidade não passa do limite. A linha `Escreve: "Recusado"` tem o mesmo recuo por baixo do `Senão`, e pertence ao `Senão`. Não há nenhuma palavra a fechar os blocos. Um bloco acaba quando aparece uma linha com menos recuo, ou quando o algoritmo acaba. É exatamente assim que o Python funciona. Em Python, a indentação faz parte das regras da linguagem, porque é ela que diz o que está dentro de quê.
+A linha `Escreve: "Aceite"` tem quatro espaços à esquerda, e é isso que diz que ela pertence ao `Se`. Só se executa quando a quantidade não passa do limite. A linha `Escreve: "Recusado"` tem o mesmo recuo por baixo do `Senão`, e pertence ao `Senão`. Não há nenhuma palavra a fechar os blocos. Um bloco acaba quando aparece uma linha com menos recuo, ou quando o algoritmo acaba. O Python funciona assim. Em Python, a indentação faz parte das regras da linguagem, porque é ela que diz o que está dentro de quê.
 
 A tabela seguinte reúne a forma toda, incluindo o que vais aprender nos guias seguintes. Essas linhas estão marcadas na última coluna, e ainda não as usas. Estão aqui para teres um único sítio de consulta durante todo o percurso de algoritmos.
 
@@ -511,13 +513,15 @@ A tabela seguinte reúne a forma toda, incluindo o que vais aprender nos guias s
 | Percorrer um array | pelo índice, com `Para i de 0 até` o último índice, ou pelo valor, com `Para cada` | `Para cada nota em notas` | vais usar no guia 04 |
 | Função criada por ti | `Função`, o nome e os parâmetros entre parênteses; o corpo vai indentado, sem palavra de fim | `Função mostraStock(artigo, quantidade)` | vais usar no guia 05 |
 
+Os nomes das variáveis e das constantes não podem ser palavras que o pseudocódigo já usa com outro significado. São exemplos `Escreve`, `Se`, `Enquanto`, `const` e `div`. Quem lê ficava sem saber se aquilo é um nome ou uma instrução. Nas linguagens de programação, estas palavras chamam-se **palavras reservadas**, e aí não podem mesmo ser usadas como nomes.
+
 Há também alguns hábitos de escrita que ajudam a ler depressa. As palavras que abrem uma instrução começam por maiúscula: `Escreve:`, `Se`, `Senão`, `Senão se`, `Enquanto`, `Para` e `Função`. Os tipos, os operadores como `div`, `resto`, `e`, `ou` e `não`, as funções predefinidas e `ler valor` escrevem-se em minúsculas. Os nomes das variáveis escrevem-se em camelCase sem acentos, como `totalUnidades`, e os das constantes em maiúsculas com traço baixo, como `UNIDADES_POR_CAIXA`. Se escreveres `escreve:` com minúscula, ninguém deixa de te perceber. Mas quando todos escrevem da mesma maneira, lê-se mais depressa, e é mais fácil comparar o teu algoritmo com o de um colega.
 
 ## Os símbolos do fluxograma
 
 Um fluxograma representa um algoritmo com figuras ligadas por setas. Cada figura tem uma forma que diz que tipo de instrução é, e as setas dizem a ordem.
 
-Neste percurso, os fluxogramas são para saberes o que são e como se leem. Isto é, o que quer dizer cada figura, como se segue o caminho com o dedo e como se compara um fluxograma com o pseudocódigo. Desenhar fluxogramas, no papel ou numa aplicação, é opcional, e só o fazes quando o professor o indicar. O laboratório deste tema ensina a desenhá-los no diagrams.net, uma aplicação que se usa no browser, sem criar conta.
+Neste percurso, os fluxogramas são para saberes o que são e como se leem. Isto é, o que quer dizer cada figura, como se segue o caminho com o dedo e como se compara um fluxograma com o pseudocódigo. Desenhar fluxogramas, no papel ou numa aplicação, é opcional, e só o fazes quando o professor o indicar. O laboratório deste tema ensina a desenhá-los no diagrams.net, uma aplicação que se usa no browser, sem criar conta. O browser é o programa que abre as páginas da internet.
 
 | Figura | Para que serve | O que leva escrito |
 | --- | --- | --- |
@@ -546,7 +550,7 @@ Um fluxograma bem feito cumpre sempre estas regras:
 
 Neste tema só aparecem o oval, o paralelogramo e o retângulo, ligados em linha reta, porque os algoritmos sequenciais nunca escolhem entre dois caminhos. O losango fica apresentado porque faz parte da simbologia, e aparece a partir do guia 03.
 
-Neste guia, os fluxogramas aparecem desenhados pelo próprio GitHub, a partir de um texto que ele transforma em figuras. Se estiveres a ler o ficheiro noutro sítio e em vez do desenho vires texto com setas e parênteses, não faz mal. Cada fluxograma tem, logo a seguir, a descrição do percurso em palavras. Se o professor te pedir que desenhes um fluxograma, no papel ou na aplicação, usa as figuras verdadeiras.
+Neste guia, os fluxogramas aparecem desenhados pelo GitHub, o site onde estão guardados os materiais da disciplina. O GitHub desenha-os a partir de um texto que transforma em figuras. Se estiveres a ler o ficheiro noutro sítio e em vez do desenho vires texto com setas e parênteses, não faz mal. Cada fluxograma tem, logo a seguir, a descrição do percurso em palavras. Se o professor te pedir que desenhes um fluxograma, no papel ou na aplicação, usa as figuras verdadeiras.
 
 ## A tabela de trace
 
@@ -585,7 +589,7 @@ Começa-se como no guia 01, porque a análise não desaparece só porque agora h
 
 Repara no intervalo das unidades soltas, de 0 a 11. Nunca podem ser 12 ou mais, porque 12 unidades soltas já enchem mais uma caixa. Escrever isto no contrato dá-te uma forma de apanhar erros: se o algoritmo alguma vez mostrar 12 ou mais unidades soltas, está errado.
 
-Antes de haver algoritmo, escolhem-se os casos de teste e calcula-se à mão o resultado de cada um. Um **caso de teste** é um dos exemplos concretos do contrato, com a entrada e o resultado que se espera. É a tua previsão, feita antes de executar, e depois serve para testar o algoritmo. Estes três foram escolhidos de propósito, e cada um testa uma coisa diferente:
+Antes de haver algoritmo, escolhem-se os casos de teste e calcula-se à mão o resultado de cada um. Um **caso de teste** é o nome novo de um exemplo concreto do guia 01. É uma entrada escolhida para testar o algoritmo, com o resultado que se espera. É a tua previsão, feita antes de executar, e depois serve para testar o algoritmo. Estes três foram escolhidos de propósito, e cada um testa uma coisa diferente:
 
 | cadernos | caixasCompletas | unidadesSoltas | Porque é que este caso foi escolhido |
 | ---: | ---: | ---: | --- |
@@ -599,9 +603,9 @@ Testar só o caso normal esconde metade dos erros. Um algoritmo mal feito pode a
 
 A decomposição é curta: pedir e ler o número de cadernos, calcular as caixas completas, calcular as unidades soltas e mostrar os dois resultados.
 
-As contas merecem mais atenção. Pensa no caso de 30 cadernos. Quantas caixas completas se enchem com 30 cadernos? É perguntar quantas vezes 12 cabe em 30, sem partir nenhuma caixa. Cabe 2 vezes, que levam 24 cadernos. É exatamente a divisão inteira: `30 div 12` dá `2`.
+As contas merecem mais atenção. Pensa no caso de 30 cadernos. Quantas caixas completas se enchem com 30 cadernos? É perguntar quantas vezes 12 cabe em 30, sem partir nenhuma caixa. Cabe 2 vezes, que levam 24 cadernos. É a divisão inteira: `30 div 12` dá `2`.
 
-E quantos cadernos ficam de fora dessas 2 caixas? O que sobra, 30 menos 24, que dá 6. É exatamente o resto: `30 resto 12` dá `6`.
+E quantos cadernos ficam de fora dessas 2 caixas? O que sobra, 30 menos 24, que dá 6. É o resto: `30 resto 12` dá `6`.
 
 Confirma com a verificação da secção das expressões: 12 vezes 2, mais 6, dá 30. As duas contas estão certas, e 6 está entre 0 e 11, como o contrato exige.
 
@@ -613,7 +617,7 @@ Neste texto vamos chamar-lhe o algoritmo das caixas de cadernos. O nome fica aqu
 
 ```text
 const UNIDADES_POR_CAIXA = 12
-Escreve: "Quantos cadernos foram encomendados?"
+Escreve: "Quantos cadernos foram encomendados? "
 int cadernos = ler valor
 int caixasCompletas = cadernos div UNIDADES_POR_CAIXA
 int unidadesSoltas = cadernos resto UNIDADES_POR_CAIXA
@@ -640,7 +644,7 @@ O mesmo algoritmo, desenhado:
 
 ```mermaid
 flowchart TD
-    A([Início]) --> B[/"Escreve: #quot;Quantos cadernos foram encomendados?#quot;"/]
+    A([Início]) --> B[/"Escreve: #quot;Quantos cadernos foram encomendados? #quot;"/]
     B --> C[/"int cadernos = ler valor"/]
     C --> D["int caixasCompletas = cadernos div UNIDADES_POR_CAIXA"]
     D --> E["int unidadesSoltas = cadernos resto UNIDADES_POR_CAIXA"]
@@ -664,7 +668,7 @@ Primeiro caso: a pessoa escreve 30.
 | Passo | Instrução executada | cadernos | caixasCompletas | unidadesSoltas | Ecrã |
 | ---: | --- | ---: | ---: | ---: | --- |
 | 0 | antes de começar | sem valor | sem valor | sem valor | nada |
-| 1 | `Escreve: "Quantos cadernos foram encomendados?"` | sem valor | sem valor | sem valor | Quantos cadernos foram encomendados? |
+| 1 | `Escreve: "Quantos cadernos foram encomendados? "` | sem valor | sem valor | sem valor | Quantos cadernos foram encomendados? |
 | 2 | `int cadernos = ler valor` | 30 | sem valor | sem valor | a pessoa escreve 30 |
 | 3 | `int caixasCompletas = cadernos div UNIDADES_POR_CAIXA` | 30 | 2 | sem valor | nada |
 | 4 | `int unidadesSoltas = cadernos resto UNIDADES_POR_CAIXA` | 30 | 2 | 6 | nada |
@@ -688,7 +692,7 @@ Segundo caso: a pessoa escreve 24.
 | Passo | Instrução executada | cadernos | caixasCompletas | unidadesSoltas | Ecrã |
 | ---: | --- | ---: | ---: | ---: | --- |
 | 0 | antes de começar | sem valor | sem valor | sem valor | nada |
-| 1 | `Escreve: "Quantos cadernos foram encomendados?"` | sem valor | sem valor | sem valor | Quantos cadernos foram encomendados? |
+| 1 | `Escreve: "Quantos cadernos foram encomendados? "` | sem valor | sem valor | sem valor | Quantos cadernos foram encomendados? |
 | 2 | `int cadernos = ler valor` | 24 | sem valor | sem valor | a pessoa escreve 24 |
 | 3 | `int caixasCompletas = cadernos div UNIDADES_POR_CAIXA` | 24 | 2 | sem valor | nada |
 | 4 | `int unidadesSoltas = cadernos resto UNIDADES_POR_CAIXA` | 24 | 2 | 0 | nada |
@@ -702,7 +706,7 @@ Terceiro caso: a pessoa escreve 5.
 | Passo | Instrução executada | cadernos | caixasCompletas | unidadesSoltas | Ecrã |
 | ---: | --- | ---: | ---: | ---: | --- |
 | 0 | antes de começar | sem valor | sem valor | sem valor | nada |
-| 1 | `Escreve: "Quantos cadernos foram encomendados?"` | sem valor | sem valor | sem valor | Quantos cadernos foram encomendados? |
+| 1 | `Escreve: "Quantos cadernos foram encomendados? "` | sem valor | sem valor | sem valor | Quantos cadernos foram encomendados? |
 | 2 | `int cadernos = ler valor` | 5 | sem valor | sem valor | a pessoa escreve 5 |
 | 3 | `int caixasCompletas = cadernos div UNIDADES_POR_CAIXA` | 5 | 0 | sem valor | nada |
 | 4 | `int unidadesSoltas = cadernos resto UNIDADES_POR_CAIXA` | 5 | 0 | 5 | nada |
@@ -737,14 +741,14 @@ Há duas entradas. A primeira é o preço do artigo em cêntimos, um inteiro mai
 
 ### As contas e o pseudocódigo
 
-Antes de olhares para o algoritmo, faz as contas à mão para um artigo de 1990 cêntimos com 15% de desconto. Uma percentagem é uma parte em cada cem. 15% de 1990 cêntimos calcula-se multiplicando 1990 por 15 e dividindo por 100: 1990 vezes 15 dá 29850, e 29850 a dividir por 100 dá 298,5. Como meio cêntimo não se paga, arredonda-se, e pela regra das meias fica 299. O preço final é 1990 menos 299, que dá 1691 cêntimos.
+Antes de olhares para o algoritmo, faz as contas à mão para um artigo de 1990 cêntimos com 15% de desconto. Uma percentagem é uma parte em cada cem. 15% de 1990 cêntimos calcula-se multiplicando 1990 por 15 e dividindo por 100. 1990 vezes 15 dá 29850, e 29850 a dividir por 100 dá 298,5. Como meio cêntimo não se paga, arredonda-se, e pela regra das meias fica 299. O preço final é 1990 menos 299, que dá 1691 cêntimos.
 
 Chamemos-lhe o algoritmo do desconto ao cêntimo:
 
 ```text
-Escreve: "Preço do artigo, em cêntimos?"
+Escreve: "Preço do artigo, em cêntimos? "
 int precoEmCentimos = ler valor
-Escreve: "Percentagem de desconto?"
+Escreve: "Percentagem de desconto? "
 int percentagem = ler valor
 float descontoExato = precoEmCentimos * percentagem / 100
 int desconto = arredondar(descontoExato)
@@ -768,9 +772,9 @@ O trace completo com 1990 cêntimos e 15%:
 | Passo | Instrução executada | precoEmCentimos | percentagem | descontoExato | desconto | precoFinal | Ecrã |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |
 | 0 | antes de começar | sem valor | sem valor | sem valor | sem valor | sem valor | nada |
-| 1 | `Escreve: "Preço do artigo, em cêntimos?"` | sem valor | sem valor | sem valor | sem valor | sem valor | Preço do artigo, em cêntimos? |
+| 1 | `Escreve: "Preço do artigo, em cêntimos? "` | sem valor | sem valor | sem valor | sem valor | sem valor | Preço do artigo, em cêntimos? |
 | 2 | `int precoEmCentimos = ler valor` | 1990 | sem valor | sem valor | sem valor | sem valor | a pessoa escreve 1990 |
-| 3 | `Escreve: "Percentagem de desconto?"` | 1990 | sem valor | sem valor | sem valor | sem valor | Percentagem de desconto? |
+| 3 | `Escreve: "Percentagem de desconto? "` | 1990 | sem valor | sem valor | sem valor | sem valor | Percentagem de desconto? |
 | 4 | `int percentagem = ler valor` | 1990 | 15 | sem valor | sem valor | sem valor | a pessoa escreve 15 |
 | 5 | `float descontoExato = precoEmCentimos * percentagem / 100` | 1990 | 15 | 298.5 | sem valor | sem valor | nada |
 | 6 | `int desconto = arredondar(descontoExato)` | 1990 | 15 | 298.5 | 299 | sem valor | nada |
@@ -881,7 +885,7 @@ O que se vê: uma figura a mais ou a menos, duas figuras pela ordem trocada, ou 
 - Retângulo: a figura do fluxograma para as atribuições e as contas.
 - Losango: a figura do fluxograma para uma decisão, que só se usa a partir do guia 03.
 - Tabela de trace: uma tabela onde se executa um algoritmo à mão, com o valor de todas as variáveis depois de cada instrução.
-- Caso de teste: um exemplo concreto do contrato, com a entrada e o resultado que se espera, calculado antes de executar o algoritmo.
+- Caso de teste: o nome novo de um exemplo concreto do guia 01. Tem a entrada e o resultado que se espera, calculado antes de executar o algoritmo.
 
 ## Verificar o que aprendeste
 
@@ -900,7 +904,7 @@ O que se vê: uma figura a mais ou a menos, duas figuras pela ordem trocada, ou 
     ```text
     const PRECO_POR_CADERNO = 150
     int total = cadernos * PRECO_POR_CADERNO
-    Escreve: "Quantos cadernos?"
+    Escreve: "Quantos cadernos? "
     int cadernos = ler valor
     Escreve: "Total em cêntimos: ", total
     ```
@@ -911,7 +915,7 @@ O que se vê: uma figura a mais ou a menos, duas figuras pela ordem trocada, ou 
 
     ```text
     const UNIDADES_POR_CAIXA = 12
-    Escreve: "Quantos alunos tem a turma?"
+    Escreve: "Quantos alunos tem a turma? "
     .......... alunos = ler valor
     int caixasCompletas = alunos div UNIDADES_POR_CAIXA
     int sobra = alunos .......... UNIDADES_POR_CAIXA
@@ -921,7 +925,7 @@ O que se vê: uma figura a mais ou a menos, duas figuras pela ordem trocada, ou 
 
     a) A primeira lacuna é o tipo de `alunos`, e a segunda é a operação que dá o que sobra. Completa-as.
 
-    b) A linha de `caixasAEncomendar` é a que interessa. Se sobrar algum aluno sem caderno, chega encomendar as caixas completas? Escreve por palavras tuas o que tem de acontecer, antes de tentares escrevê-lo em pseudocódigo. Lembra-te de que `arredondar` não arredonda para cima. Se não conseguires escrever a regra sem usar a palavra "se", deixa-a em frases claras.
+    b) A linha de `caixasAEncomendar` é a que interessa. Se sobrar algum aluno sem caderno, chega encomendar as caixas completas? Escreve por palavras tuas o que tem de acontecer, antes de tentares escrevê-lo em pseudocódigo. Lembra-te de que `arredondar` não arredonda sempre para cima. Se não conseguires escrever a regra sem usar a palavra "se", deixa-a em frases claras.
 
     c) Antes de calcular, escreve quantas caixas achas que são precisas para uma turma de 25 alunos. Depois faz o trace completo, com uma coluna por variável. Se o resultado não for o que previste, procura onde é que o teu raciocínio se desviou.
 

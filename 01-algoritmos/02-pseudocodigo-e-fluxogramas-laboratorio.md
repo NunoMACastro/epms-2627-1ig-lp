@@ -2,7 +2,7 @@
 
 # Laboratório: Pseudocódigo e fluxogramas
 
-Laboratório do tema Pseudocódigo e fluxogramas, do módulo Desenvolver algoritmos. Cerca de 40 minutos. Vais desenhar no diagrams.net o fluxograma de um algoritmo pequeno, o das caixas de cadernos, e guardá-lo no teu computador. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](02-pseudocodigo-e-fluxogramas.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Pseudocódigo e fluxogramas, do módulo Desenvolver algoritmos. Cerca de 60 minutos. Vais desenhar no diagrams.net o fluxograma de um algoritmo pequeno, o das caixas de cadernos, e guardá-lo no teu computador. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](02-pseudocodigo-e-fluxogramas.md) tem a teoria completa, para quem quiser saber mais.
 
 Este laboratório é todo de fluxogramas, e é opcional. Só o fazes quando o professor o indicar, e nenhum exercício obrigatório da ficha depende dele. A matéria do tema é saber ler um fluxograma. Desenhá-lo é a parte opcional que este laboratório treina.
 
@@ -22,24 +22,26 @@ Ficas a saber abrir o diagrams.net e guardar um desenho no teu computador. Ficas
 
 ## Palavras que vais usar
 
-- Algoritmo: uma sequência de passos que resolve um problema, sem dúvidas sobre o que fazer em cada passo.
+- Algoritmo: uma sequência finita de passos, cada um claro e possível de executar, que parte de uns dados e chega a um resultado.
 - Pseudocódigo: a forma de escrever algoritmos que usamos nas aulas, com uma instrução por linha, como `int cadernos = ler valor`. Para saber mais, vê a secção "A forma do pseudocódigo nas aulas" do [guia](02-pseudocodigo-e-fluxogramas.md).
 - Instrução: cada linha do pseudocódigo, que manda fazer uma coisa.
-- Variável: um nome onde se guarda um valor, como `cadernos`. Nasce na linha onde aparece pela primeira vez, com o tipo à frente. O tipo `int` quer dizer que guarda números inteiros.
+- Variável: um espaço com um nome, onde se guarda um valor que pode mudar enquanto o algoritmo é executado, como `cadernos`. Nasce na linha onde aparece pela primeira vez, com o tipo à frente. O tipo `int` quer dizer que guarda números inteiros.
 - Constante: um valor fixo do problema, com o nome em maiúsculas, escrito com `const`, como `const UNIDADES_POR_CAIXA = 12`.
 - Atribuição: uma instrução que dá um valor a uma variável, com um só sinal de igual, `=`, que se lê "recebe".
 - `ler valor`: a instrução que recebe um valor escrito por quem usa o algoritmo.
 - `Escreve:`: a instrução que mostra texto e valores no ecrã.
 - `div` e `resto`: a divisão inteira, que diz quantas vezes um número cabe noutro, e o que sobra dela. Com 30 cadernos e caixas de 12, `30 div 12` dá 2 e `30 resto 12` dá 6.
-- Função predefinida: uma instrução já feita, com um nome, que recebe um valor entre parênteses e devolve um resultado, como a `abs` do desafio 1.
+- Função predefinida: um pedaço de algoritmo já feito, com um nome, que recebe um valor entre parênteses e devolve um resultado. A `abs`, do desafio 1, é uma delas.
 - Fluxograma: o desenho de um algoritmo, com figuras ligadas por setas. Cada figura é uma instrução, e as setas dizem a ordem. Para saber mais, vê a secção "Os símbolos do fluxograma" do [guia](02-pseudocodigo-e-fluxogramas.md).
 - Figura: cada forma do fluxograma. A forma diz que tipo de instrução está lá dentro.
-- Terminal: a figura de pontas redondas onde o algoritmo começa, `Início`, e acaba, `Fim`. Também se chama oval. Na aplicação chama-se Terminator.
+- Oval: a figura de pontas redondas onde o algoritmo começa, `Início`, e acaba, `Fim`. Na aplicação chama-se Terminator.
 - Paralelogramo: a figura das entradas e das saídas, com `ler valor` ou `Escreve:`. Na aplicação chama-se Data.
 - Retângulo: a figura das atribuições e das contas. Na aplicação chama-se Process.
 - Losango: a figura de uma decisão, que só se usa a partir do tema 03. Na aplicação chama-se Decision.
 - Seta: a ligação de uma figura à seguinte, que diz a ordem do percurso.
 - Trace: seguir um algoritmo à mão, instrução a instrução, a anotar o valor das variáveis e o que aparece no ecrã. Para saber mais, vê a secção "A tabela de trace" do [guia](02-pseudocodigo-e-fluxogramas.md).
+- Browser: o programa que abre as páginas da internet, como o Chrome, o Edge, o Firefox ou o Safari.
+- Trackpad: a superfície do portátil que faz de rato.
 - Separador: cada página aberta no browser, com o seu título no topo da janela.
 - Ficheiro `.drawio`: o desenho que a aplicação volta a abrir para continuares a editar.
 - Imagem PNG: uma fotografia do desenho, que qualquer computador abre, mas que não se edita.
@@ -61,7 +63,7 @@ Ficas a saber abrir o diagrams.net e guardar um desenho no teu computador. Ficas
 
 ## Preparar o projeto
 
-Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. A aplicação muda de aspeto de vez em quando. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
+Esta preparação leva cerca de 8 minutos. Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. A aplicação muda de aspeto de vez em quando. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
 
 1. Abre a aplicação em português. Maximiza a janela do browser, para ocupar o ecrã todo, e escreve na barra de endereços `https://app.diagrams.net/?lang=pt`. A parte final, `?lang=pt`, pede a aplicação em português. Sem ela, a aplicação usa a língua do browser, que pode ser o inglês.
 
@@ -80,7 +82,7 @@ Os nomes dos menus e dos botões deste laboratório foram confirmados em setembr
 
 3. Confirma que a janela está maximizada, porque a aplicação muda de aspeto conforme a largura da janela. Se a janela estiver estreita, por exemplo a ocupar só metade do ecrã, a barra de menus desaparece. No lugar dela aparece um botão redondo com reticências (três pontos), no canto superior direito. Esse botão abre um menu com "Ficheiro" e "Exportar como" lado a lado. A forma mais simples de seguir este laboratório é maximizar a janela. Se não puderes, usa esse botão sempre que os passos falarem da barra de menus. Nesse caso, procura "Exportar como" diretamente no menu, e não dentro de "Ficheiro".
 
-## Fase 1: o fluxograma guardado no teu computador (5 minutos)
+## Fase 1: o fluxograma guardado no teu computador (8 minutos)
 
 Neste momento, o diagrama só existe dentro do separador do browser. Se fechares o separador, perdes tudo. Por isso, a primeira coisa a fazer é guardar, antes de desenhar. Guardar logo no início dá um nome e um sítio ao ficheiro. A partir daí, cada vez que guardares, o trabalho vai para o mesmo ficheiro, na tua pasta `algoritmos`.
 
@@ -108,15 +110,15 @@ O ficheiro `fluxograma-caixas-de-cadernos.drawio` está na tua pasta `algoritmos
 
 Pensa antes de continuares: porque é que se guarda antes de desenhar, se ainda não há nada para guardar? A resposta: até guardares, o desenho só existe no separador do browser, e fechá-lo apaga tudo. Guardar logo no início dá-lhe um nome e um sítio. A partir daí, cada Ctrl+S vai para esse ficheiro, e o que desenhares fica a salvo.
 
-## Fase 2: uma figura para cada instrução (12 minutos)
+## Fase 2: uma figura para cada instrução (20 minutos)
 
-Um fluxograma é o desenho de um algoritmo. Cada instrução do pseudocódigo passa a ser uma figura, e a forma da figura diz que tipo de instrução é. As leituras e as saídas, que comunicam com quem usa o algoritmo, vão em paralelogramos. As atribuições e as contas vão em retângulos. O algoritmo começa e acaba num terminal, a figura de pontas redondas, com as palavras `Início` e `Fim`. Para saber mais, lê a secção "Os símbolos do fluxograma" do [guia](02-pseudocodigo-e-fluxogramas.md).
+Um fluxograma é o desenho de um algoritmo. Cada instrução do pseudocódigo passa a ser uma figura, e a forma da figura diz que tipo de instrução é. As leituras e as saídas, que comunicam com quem usa o algoritmo, vão em paralelogramos. As atribuições e as contas vão em retângulos. O algoritmo começa e acaba num oval, a figura de pontas redondas, com as palavras `Início` e `Fim`. Para saber mais, lê a secção "Os símbolos do fluxograma" do [guia](02-pseudocodigo-e-fluxogramas.md).
 
 O algoritmo que vais desenhar é o das caixas de cadernos. Uma papelaria vende cadernos que o fornecedor só entrega em caixas de 12. Dado o número de cadernos encomendados, o algoritmo diz quantas caixas completas isso dá e quantos cadernos sobram fora delas:
 
 ```text
 const UNIDADES_POR_CAIXA = 12
-Escreve: "Quantos cadernos foram encomendados?"
+Escreve: "Quantos cadernos foram encomendados? "
 int cadernos = ler valor
 int caixasCompletas = cadernos div UNIDADES_POR_CAIXA
 int unidadesSoltas = cadernos resto UNIDADES_POR_CAIXA
@@ -136,7 +138,7 @@ O fluxograma tem 8 figuras: uma para cada uma das seis instruções, mais o iní
 
    | Figura | Nome que aparece | O que quer dizer | Para que a usas |
    | --- | --- | --- | --- |
-   | Retângulo de pontas redondas | Terminator | terminal, o sítio onde o algoritmo começa ou acaba | `Início` e `Fim` |
+   | Retângulo de pontas redondas | Terminator | terminal, o sítio onde o algoritmo começa ou acaba | `Início` e `Fim`; é o oval |
    | Paralelogramo | Data | dados, que entram ou saem do algoritmo | as leituras, com `ler valor`, e as saídas, com `Escreve:` |
    | Retângulo | Process | processo, ou seja, processamento | atribuições e contas |
    | Losango | Decision | decisão | só a partir do tema 03 |
@@ -156,7 +158,7 @@ O fluxograma tem 8 figuras: uma para cada uma das seis instruções, mais o iní
    | Ordem | Figura | Nome que aparece | Texto a escrever |
    | --- | --- | --- | --- |
    | 1 | Retângulo de pontas redondas | Terminator | `Início` |
-   | 2 | Paralelogramo | Data | `Escreve: "Quantos cadernos foram encomendados?"` |
+   | 2 | Paralelogramo | Data | `Escreve: "Quantos cadernos foram encomendados? "` |
    | 3 | Paralelogramo | Data | `int cadernos = ler valor` |
    | 4 | Retângulo | Process | `int caixasCompletas = cadernos div UNIDADES_POR_CAIXA` |
    | 5 | Retângulo | Process | `int unidadesSoltas = cadernos resto UNIDADES_POR_CAIXA` |
@@ -178,11 +180,11 @@ O fluxograma tem 8 figuras: uma para cada uma das seis instruções, mais o iní
 
 ### Paragem 2
 
-Tens oito figuras numa coluna, cada uma com o texto de uma instrução: dois terminais, quatro paralelogramos e dois retângulos, pela ordem da tabela.
+Tens oito figuras numa coluna, cada uma com o texto de uma instrução: dois ovais, quatro paralelogramos e dois retângulos, pela ordem da tabela.
 
 Pensa antes de continuares: o algoritmo tem sete linhas, e o fluxograma tem oito figuras. Porque não são sete? A resposta: a linha `const UNIDADES_POR_CAIXA = 12` não tem figura, porque é uma regra do problema e não uma ação. Ficam seis instruções, e cada uma dá uma figura. O `Início` e o `Fim` dão mais duas, e são oito.
 
-## Fase 3: as setas dão a ordem (6 minutos)
+## Fase 3: as setas dão a ordem (10 minutos)
 
 As figuras sozinhas não dizem por que ordem se executam. É a seta que diz para onde se vai a seguir, de uma figura para a próxima. Num algoritmo sequencial, como este, o percurso é uma linha reta, de cima para baixo. Por isso, oito figuras em coluna precisam de sete setas, uma entre cada par de figuras seguidas. Para saber mais, lê a secção "Os símbolos do fluxograma" do [guia](02-pseudocodigo-e-fluxogramas.md).
 
@@ -196,7 +198,7 @@ As figuras sozinhas não dizem por que ordem se executam. É a seta que diz para
 
    O que deves ver: uma seta pendurada, que não chega a nenhuma figura. Isto quer dizer que, por ali, o percurso não tem para onde ir. Um fluxograma bem feito não tem setas sem destino, e do Fim não sai nenhuma seta, porque é onde o percurso acaba. Apaga essa seta com Ctrl+Z, ou seleciona-a e carrega em Delete.
 
-4. Confirma que as sete setas estão presas às duas figuras. Arrasta uma figura do meio um pouco para o lado.
+4. Confirma que as sete setas estão presas nas duas pontas. Arrasta uma figura do meio um pouco para o lado.
 
    O que deves ver: as setas que chegam e que saem dela a acompanhá-la, esticando-se. Isto quer dizer que estão presas. Se uma ponta ficar parada no sítio antigo, essa seta está solta. Apaga-a e desenha-a outra vez, largando só quando a figura de destino ficar com o contorno azul. No fim, carrega em Ctrl+Z, ou Cmd+Z num Mac, para a figura voltar ao sítio.
 
@@ -210,7 +212,7 @@ O fluxograma está completo, e tem de ficar assim, com o mesmo texto em cada fig
 
 ```mermaid
 flowchart TD
-    A([Início]) --> B[/"Escreve: #quot;Quantos cadernos foram encomendados?#quot;"/]
+    A([Início]) --> B[/"Escreve: #quot;Quantos cadernos foram encomendados? #quot;"/]
     B --> C[/"int cadernos = ler valor"/]
     C --> D["int caixasCompletas = cadernos div UNIDADES_POR_CAIXA"]
     D --> E["int unidadesSoltas = cadernos resto UNIDADES_POR_CAIXA"]
@@ -219,18 +221,18 @@ flowchart TD
     G --> Z([Fim])
 ```
 
-Descrição do percurso, para quem não vê o desenho. É uma única coluna de oito figuras ligadas por sete setas, de cima para baixo. Começa num terminal com a palavra Início. Seguem-se dois paralelogramos, o primeiro com a pergunta e o segundo com `int cadernos = ler valor`. Depois vêm dois retângulos, com as contas das caixas completas e das unidades soltas, por esta ordem. Seguem-se mais dois paralelogramos, com os dois `Escreve:` dos resultados. Termina num terminal com a palavra Fim.
+Descrição do percurso, para quem não vê o desenho. É uma única coluna de oito figuras ligadas por sete setas, de cima para baixo. Começa num oval com a palavra Início. Seguem-se dois paralelogramos, o primeiro com a pergunta e o segundo com `int cadernos = ler valor`. Depois vêm dois retângulos, com as contas das caixas completas e das unidades soltas, por esta ordem. Seguem-se mais dois paralelogramos, com os dois `Escreve:` dos resultados. Termina num oval com a palavra Fim.
 
 Pensa antes de continuares: se apagasses a seta entre a figura 4 e a figura 5, o que ficava errado? A resposta: o percurso parava na figura 4. Quem seguisse o fluxograma com o dedo não chegava à conta das unidades soltas nem aos resultados. Cada figura, menos o Fim, tem de ter uma seta a sair para a seguinte.
 
-## Fase 4: o fluxograma diz o mesmo que o pseudocódigo (5 minutos)
+## Fase 4: o fluxograma diz o mesmo que o pseudocódigo (9 minutos)
 
-Um fluxograma e o pseudocódigo do mesmo algoritmo têm de dizer exatamente a mesma coisa. Se não disserem, um dos dois está errado. Antes de dares o desenho por acabado, compara-o com o pseudocódigo, instrução a instrução. Depois segue-o com o dedo, com uma entrada concreta, e anota o que aparece no ecrã. Seguir um algoritmo assim, à mão, chama-se fazer o trace. Para saber mais, lê o passo 4 do exemplo guiado e a secção "A tabela de trace" do [guia](02-pseudocodigo-e-fluxogramas.md).
+Um fluxograma e o pseudocódigo do mesmo algoritmo têm de dizer a mesma coisa. Se não disserem, um dos dois está errado. Antes de dares o desenho por acabado, compara-o com o pseudocódigo, instrução a instrução. Depois segue-o com o dedo, com uma entrada concreta, e anota o que aparece no ecrã. Seguir um algoritmo assim, à mão, chama-se fazer o trace. Para saber mais, lê o passo 4 do exemplo guiado e a secção "A tabela de trace" do [guia](02-pseudocodigo-e-fluxogramas.md).
 
 1. Verifica o desenho, com o pseudocódigo da fase 2 ao lado:
 
    - [ ] Tem 8 figuras e 7 setas.
-   - [ ] Tem um único Início, no topo, e um único Fim, em baixo, os dois em terminais.
+   - [ ] Tem um único Início, no topo, e um único Fim, em baixo, os dois em ovais.
    - [ ] O `Escreve:` e a leitura do princípio e os dois `Escreve:` do fim estão em paralelogramos, e as duas contas estão em retângulos.
    - [ ] O texto de cada figura diz o mesmo que a instrução do pseudocódigo. Tem o tipo à frente das variáveis que nascem, o `=`, o `div` e o `resto`. Dentro das aspas, tem os mesmos espaços, que decidem o que aparece no ecrã.
    - [ ] As figuras estão pela mesma ordem que as instruções.
@@ -252,7 +254,7 @@ O fluxograma passou as seis verificações. Seguido com o dedo, dá o mesmo ecr�
 
 Pensa antes de continuares: se trocasses a ordem das figuras 4 e 6, o que aparecia no ecrã com 30 cadernos? A resposta: a figura 6, `Escreve: "Caixas completas: ", caixasCompletas`, vinha antes da conta das caixas completas. Nesse momento, `caixasCompletas` ainda não tinha valor, e o ecrã não podia mostrar o número de caixas. É por isso que as figuras têm de estar pela ordem das instruções.
 
-## Fase 5: a imagem para mostrar, o ficheiro para editar (5 minutos)
+## Fase 5: a imagem para mostrar, o ficheiro para editar (7 minutos)
 
 O ficheiro `.drawio` é o teu fluxograma editável, o que abres para continuar a trabalhar ou para corrigir. Para mostrar o fluxograma a alguém, ou para o entregar, exporta-se uma imagem, que qualquer computador ou telemóvel abre sem precisar da aplicação. Uma imagem não se edita. Se precisares de mudar alguma coisa, mudas o `.drawio` e exportas a imagem outra vez. Por isso, guardas sempre os dois ficheiros.
 
@@ -339,9 +341,9 @@ Ctrl+Z, ou Cmd+Z num Mac, desfaz a última ação. Repete para desfazer mais.
 1. A diferença de inventário. Uma loja faz, de vez em quando, a contagem do stock. Conta à mão quantas unidades de um artigo estão na prateleira e compara com o número que o registo do computador diz que devia haver. Se os dois números não coincidirem, alguém tem de investigar porquê. Este algoritmo mostra de quantas unidades é a diferença, sem sinal, porque tanto faz faltarem unidades como sobrarem. Nos dois casos há uma diferença a investigar.
 
    ```text
-   Escreve: "Quantas unidades diz o registo?"
+   Escreve: "Quantas unidades diz o registo? "
    int stockRegistado = ler valor
-   Escreve: "Quantas unidades foram contadas na prateleira?"
+   Escreve: "Quantas unidades foram contadas na prateleira? "
    int stockContado = ler valor
    int diferenca = abs(stockRegistado - stockContado)
    Escreve: "Diferença a investigar: ", diferenca, " unidades"
