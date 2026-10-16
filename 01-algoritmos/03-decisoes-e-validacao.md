@@ -2,7 +2,7 @@
 
 # Decisões e validação
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que tomam decisões, isto é, que fazem uma coisa ou outra conforme os dados. Aprendes também a recusar os dados que não fazem sentido, antes de os usar. Lê-se em cerca de 150 minutos, em duas ou três vezes, contando com as previsões que o guia te pede. Para praticar, há a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) e o [laboratório](03-decisoes-e-validacao-laboratorio.md) deste tema, que é de fluxogramas e só se faz quando o professor o indicar.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que tomam decisões, isto é, que fazem uma coisa ou outra conforme os dados. Aprendes também a recusar os dados que não fazem sentido, antes de os usar. Lês o guia ao teu ritmo, em duas ou três vezes, com as previsões que ele te pede. Para praticar, há a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) e o [laboratório](03-decisoes-e-validacao-laboratorio.md) deste tema, que é de fluxogramas e só se faz quando o professor o indicar.
 
 No guia 02, todos os algoritmos faziam sempre as mesmas contas, fosse qual fosse a entrada. Neste guia passam a escolher o caminho. Se já trabalhaste na aula as instruções `Se`, `Senão se` e `Senão`, vais reconhecê-las. O guia retoma-as desde o princípio, na forma das aulas, porque são a base de tudo o resto. Depois acrescenta o que falta: os operadores `e`, `ou` e `não`, os intervalos, as fronteiras e a validação. Este tema ainda não repete instruções. Um algoritmo que recebe um valor errado avisa e termina, e voltar a pedir o valor é o assunto do tema seguinte.
 
@@ -982,7 +982,7 @@ O que se vê: um fluxograma com três ovais de Fim, um no fim de cada ramo. Acon
 
 ## Verificar o que aprendeste
 
-Responde numa folha. Se responderes a todas por escrito, conta com cerca de hora e meia, e a pergunta 14 leva cerca de 20 minutos.
+Responde numa folha, ao teu ritmo.
 
 1. Com `quantidade` a valer 10, quanto dá `quantidade < 10`? E `quantidade <= 10`? Que valor de `quantidade` faz estes dois operadores darem resultados diferentes?
 2. Qual é a diferença entre `stock = 0` e `stock == 0`? Depois de o algoritmo avaliar `Se stock == 0`, quanto vale `stock`? Porquê?

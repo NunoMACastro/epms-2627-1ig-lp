@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Decisões e validação
 
-Ficha do tema Decisões e validação, do módulo Desenvolver algoritmos. Praticas as condições, os intervalos e as fronteiras, até escreveres e testares um algoritmo que aceita ou recusa um pedido. Cerca de 120 minutos, para fazeres sozinho: 90 na parte obrigatória e 30 no desafio opcional.
+Ficha do tema Decisões e validação, do módulo Desenvolver algoritmos. Praticas as condições, os intervalos e as fronteiras, até escreveres e testares um algoritmo que aceita ou recusa um pedido. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -14,16 +14,15 @@ Resolve os exercícios pela ordem. Nos dois primeiros aplicas o que o guia mostr
 
 Nenhum exercício é o exemplo guiado do guia com outros números. O exemplo mostra o caminho, e os exercícios pedem-te que o percorras noutros problemas.
 
-| Exercício | O que treina | Tempo |
-| --- | --- | ---: |
-| 1 | Calcular comparações simples, incluindo o valor que fica no limite | 10 min |
-| 2 | Calcular condições com `e`, `ou` e `não` | 15 min |
-| 3 | Passar regras dadas por palavras para condições e escolher os casos de teste | 20 min |
-| 4 | Planear a decisão de um pedido: reta, árvore de casos e tabela de casos esperados | 15 min |
-| 5 | Escrever o algoritmo desse pedido e segui-lo com quatro casos de teste | 30 min |
-| Total da parte obrigatória | Exercícios 1 a 5 | 90 min |
-| Desafio opcional | Mudar uma regra de cada vez ao algoritmo do exercício 5 | 30 min |
-| Para ires mais longe | Opcional: os casos que costumam enganar, os outros três casos do exercício 5, o fluxograma do exercício 5 e testar o algoritmo de um colega | fora dos 120 min |
+| Exercício | O que treina | Parte |
+| --- | --- | --- |
+| 1 | Calcular comparações simples, incluindo o valor que fica no limite | Obrigatória |
+| 2 | Calcular condições com `e`, `ou` e `não` | Obrigatória |
+| 3 | Passar regras dadas por palavras para condições e escolher os casos de teste | Obrigatória |
+| 4 | Planear a decisão de um pedido: reta, árvore de casos e tabela de casos esperados | Obrigatória |
+| 5 | Escrever o algoritmo desse pedido e segui-lo com quatro casos de teste | Obrigatória |
+| Desafio | Mudar uma regra de cada vez ao algoritmo do exercício 5 | Opcional |
+| Para ires mais longe | Os casos que costumam enganar, os outros três casos do exercício 5, o fluxograma do exercício 5 e testar o algoritmo de um colega | Opcional |
 
 Precisas de papel e lápis. O diagrams.net, em `https://app.diagrams.net/?lang=pt`, só é preciso para o fluxograma do exercício 5, no Mais longe 7. Esse exercício só o fazes quando o professor o indicar. Nesse caso, guarda os ficheiros na pasta `algoritmos`, com nomes em minúsculas, com hífenes e sem acentos.
 
@@ -34,7 +33,7 @@ O que entregas:
 - do exercício 5, o algoritmo e a tabela com a mensagem a que chega cada um dos quatro casos;
 - o desafio e os exercícios de "Para ires mais longe", se os fizeres.
 
-## Exercício 1: Calcular comparações (10 minutos)
+## Exercício 1: Calcular comparações
 
 A matéria está nas secções "Operadores de comparação" e "Dois sinais de igual para perguntar" do guia.
 
@@ -54,7 +53,7 @@ Nas alíneas a) a d), escreve a comparação com os valores substituídos e o re
 
 Concluíste quando tiveres as quatro condições calculadas com os valores à vista e a frase da alínea e).
 
-## Exercício 2: Juntar condições com `e`, `ou` e `não` (15 minutos)
+## Exercício 2: Juntar condições com `e`, `ou` e `não`
 
 A matéria está nas secções "Operador `e`", "Operador `ou`" e "Operador `não`" do guia. Tem as tabelas de verdade à vista.
 
@@ -85,7 +84,7 @@ Copia as tabelas para a folha e preenche-as. Em cada linha, calcula primeiro a c
 
 Concluíste quando as duas tabelas estiverem preenchidas com as contas à vista e tiveres a condição da alínea c) escrita sem `não`.
 
-## Exercício 3: De palavras para condições (20 minutos)
+## Exercício 3: De palavras para condições
 
 A matéria está nas secções "Intervalos", "A reta com as regiões", "O contrário de um intervalo" e "Fronteiras e casos de teste" do guia.
 
@@ -101,7 +100,7 @@ Cada alínea descreve uma regra de uma loja. Os casos de teste de um limite são
 
 Concluíste quando as condições das alíneas a), b) e c) tiverem os seus casos de teste, cada um com o resultado. Na alínea d), basta a pergunta.
 
-## Exercício 4: Planear a decisão de um pedido (15 minutos)
+## Exercício 4: Planear a decisão de um pedido
 
 A matéria está nas secções "Validar os dados antes de os usar" e "A árvore de casos e a tabela de casos esperados" do guia. Os passos 2, 3 e 4 do exemplo guiado são o modelo deste exercício.
 
@@ -117,7 +116,7 @@ Neste exercício ainda não escreves o algoritmo. Preparas o que te vai permitir
 
 Concluíste quando cada ponta da árvore tiver pelo menos um caso na tabela e cada limite tiver os seus três casos.
 
-## Exercício 5: Escrever o algoritmo do pedido e segui-lo com quatro casos (30 minutos)
+## Exercício 5: Escrever o algoritmo do pedido e segui-lo com quatro casos
 
 Continuas o problema do exercício 4, com a tua árvore e a tua tabela ao lado. A matéria está nos passos 6, 9 e 10 do exemplo guiado.
 
@@ -139,7 +138,7 @@ Usa estas pistas pela ordem em que aparecem, e passa à seguinte só se a anteri
 
 ## Desafio opcional
 
-Cerca de 30 minutos. O desafio muda uma regra de cada vez ao problema dos exercícios 4 e 5. Cada alínea parte do teu algoritmo do exercício 5, e não da alínea anterior. Em cada alínea, diz que linhas do teu algoritmo mudam e que casos da tua tabela de casos esperados mudam, saem ou entram.
+O desafio muda uma regra de cada vez ao problema dos exercícios 4 e 5. Cada alínea parte do teu algoritmo do exercício 5, e não da alínea anterior. Em cada alínea, diz que linhas do teu algoritmo mudam e que casos da tua tabela de casos esperados mudam, saem ou entram.
 
 **a)** O armazém deixa de aceitar pedidos pequenos: um pedido passa a ter de ter pelo menos 5 caixas. Um pedido com menos de 5 caixas continua a receber a mensagem "Quantidade inválida". Quantas linhas do teu algoritmo mudam? Que casos novos precisas? O que acontece a um pedido de 5 caixas quando a capacidade livre é 3?
 
@@ -149,9 +148,9 @@ Cerca de 30 minutos. O desafio muda uma regra de cada vez ao problema dos exerc�
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 120 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os cinco primeiros exercícios tratam casos que costumam enganar, e é por isso que não entraram na parte obrigatória. O sexto acaba o exercício 5 com os casos que não couberam no tempo da ficha. O sétimo é de fluxogramas, e só o fazes quando o professor o indicar. O oitavo faz-se com um colega. Os tempos são indicativos.
+Esta secção é opcional. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os cinco primeiros exercícios tratam casos que costumam enganar, e é por isso que não entraram na parte obrigatória. O sexto acaba o exercício 5 com os casos que ficaram fora da parte obrigatória. O sétimo é de fluxogramas, e só o fazes quando o professor o indicar. O oitavo faz-se com um colega.
 
-### Mais longe 1: Parênteses que mudam o resultado (10 minutos)
+### Mais longe 1: Parênteses que mudam o resultado
 
 A matéria está na secção "Misturar `e` e `ou`" do guia.
 
@@ -165,7 +164,7 @@ Num dado momento, `stock` vale 12, `quantidade` vale 15 e `reservado` vale `true
 
 Pista: resolve primeiro o que está entre parênteses e escreve o resultado por baixo. Só depois aplica o operador que ficou de fora dos parênteses.
 
-### Mais longe 2: O contrário de uma condição com `e` ou com `ou` (10 minutos)
+### Mais longe 2: O contrário de uma condição com `e` ou com `ou`
 
 A matéria está no fim da secção "Operador `não`" do guia. Troca-se o `e` por `ou`, ou o `ou` por `e`, e cada comparação pela sua contrária.
 
@@ -177,7 +176,7 @@ A matéria está no fim da secção "Operador `não`" do guia. Troca-se o `e` po
 
 Pista: se na alínea a) escreveste `zona != 1 ou zona != 2`, calcula-a com a zona 2. Dá o contrário da original?
 
-### Mais longe 3: Limites que a frase não diz (10 minutos)
+### Mais longe 3: Limites que a frase não diz
 
 A matéria está nas secções "Intervalos" e "Fronteiras e casos de teste" do guia.
 
@@ -189,7 +188,7 @@ A matéria está nas secções "Intervalos" e "Fronteiras e casos de teste" do g
 
 Pista: na alínea a), qual é o menor número que se escreve com três algarismos? E o maior?
 
-### Mais longe 4: Respostas em texto (15 minutos)
+### Mais longe 4: Respostas em texto
 
 A matéria está no fim da secção "Operadores de comparação" do guia, que explica quando dois textos são iguais.
 
@@ -205,7 +204,7 @@ Um algoritmo pergunta "Tem cartão de cliente? (S/N)" e guarda a resposta na var
 
 Pista: na alínea b), quantas respostas são válidas? Para a inválida, usa a regra do fim da secção "Operador `não`" do guia.
 
-### Mais longe 5: Quatro versões do mesmo algoritmo (50 minutos)
+### Mais longe 5: Quatro versões do mesmo algoritmo
 
 A matéria está nas secções "Fronteiras e casos de teste" e "Erros frequentes" do guia.
 
@@ -271,7 +270,7 @@ Senão
 
 Pista: não tentes adivinhar o erro a olhar para o código. Faz o trace de cada versão com todos os casos da tua tabela e compara o resultado com o esperado, linha a linha. Uma versão sem `Senão` no fim pode não escrever nada para alguns valores. Para a versão D, escreve a condição do `não` sem o `não`, com a tabela dos contrários do guia. Depois compara-a com a que devia estar lá.
 
-### Mais longe 6: Os outros três casos do exercício 5 (6 minutos)
+### Mais longe 6: Os outros três casos do exercício 5
 
 A matéria está nos passos 9 e 10 do exemplo guiado do guia.
 
@@ -283,17 +282,17 @@ Na alínea b) do exercício 5 seguiste o teu algoritmo com quatro dos sete casos
 
 Pista: faz como no exercício 5. Calcula primeiro a condição do `Se`. Só se ela der `false` é que calculas a do `Senão se`, e só se as duas derem `false` é que chegas ao `Senão`.
 
-### Mais longe 7: O fluxograma do exercício 5 (15 minutos)
+### Mais longe 7: O fluxograma do exercício 5
 
 Este exercício é de fluxogramas, e só o fazes quando o professor o indicar. A matéria está no passo 8 do exemplo guiado do guia e no [laboratório](03-decisoes-e-validacao-laboratorio.md).
 
-**a)** Desenha o fluxograma do teu algoritmo do exercício 5 no diagrams.net e guarda-o na pasta `algoritmos` como `fluxograma-aceitar-pedido.drawio`. Se fizeste o laboratório, não precisas de começar do zero. Abre o `fluxograma-classificar-nota.drawio`. Na barra de menus, escolhe "Ficheiro", "Abrir de" e o sítio onde o guardaste. Guarda uma cópia com o nome novo (Ficheiro, Guardar como...). Depois muda os textos e acrescenta as figuras que faltam para a segunda leitura. Exporta a imagem em PNG, com o nome `fluxograma-aceitar-pedido.png`. Cerca de 10 minutos.
+**a)** Desenha o fluxograma do teu algoritmo do exercício 5 no diagrams.net e guarda-o na pasta `algoritmos` como `fluxograma-aceitar-pedido.drawio`. Se fizeste o laboratório, não precisas de começar do zero. Abre o `fluxograma-classificar-nota.drawio`. Na barra de menus, escolhe "Ficheiro", "Abrir de" e o sítio onde o guardaste. Guarda uma cópia com o nome novo (Ficheiro, Guardar como...). Depois muda os textos e acrescenta as figuras que faltam para a segunda leitura. Exporta a imagem em PNG, com o nome `fluxograma-aceitar-pedido.png`.
 
-**b)** Segue com o dedo, no teu fluxograma, o caminho de cada um dos sete casos da tabela do exercício 4. Faz como na fase 3 do laboratório. Para cada caso, escreve a mensagem a que chegaste e confirma que é a mesma da tua tabela de casos esperados. Cerca de 5 minutos.
+**b)** Segue com o dedo, no teu fluxograma, o caminho de cada um dos sete casos da tabela do exercício 4. Faz como na fase 3 do laboratório. Para cada caso, escreve a mensagem a que chegaste e confirma que é a mesma da tua tabela de casos esperados.
 
 Pista: conta as figuras antes de desenhar. Cada linha do pseudocódigo dá uma figura, tirando as linhas `const` e o `Senão`, e o Início e o Fim dão mais duas.
 
-### Mais longe 8: Testar o algoritmo de um colega (15 minutos)
+### Mais longe 8: Testar o algoritmo de um colega
 
 A matéria está nos passos 4, 9 e 10 do exemplo guiado do guia.
 

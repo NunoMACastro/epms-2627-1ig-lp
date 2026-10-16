@@ -2,7 +2,7 @@
 
 # Do problema ao algoritmo
 
-Módulo Desenvolver algoritmos. Este guia mostra como se pensa um problema antes de o resolver. Explica o que é um algoritmo e como se escreve o contrato de um problema. Explica também como se parte um problema em partes mais pequenas e como se encontram as instruções que deixam dúvidas. Lê-se em cerca de 130 minutos, e não precisa de ser de uma vez. Para praticar, há a [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Este guia mostra como se pensa um problema antes de o resolver. Explica o que é um algoritmo e como se escreve o contrato de um problema. Explica também como se parte um problema em partes mais pequenas e como se encontram as instruções que deixam dúvidas. Lês o guia ao teu ritmo, e não precisas de o ler todo de uma vez. Para praticar, há a [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md) deste tema.
 
 Este é o primeiro tema da área de algoritmos, e não precisas de saber nada de programação. Neste tema, nada se escreve numa linguagem de programação, e nada precisa de um computador a executar código. Trabalhas em papel, e os algoritmos escrevem-se em português, em passos numerados. A forma própria de os escrever, o pseudocódigo, é o assunto do tema seguinte. Não tens de decorar tudo de uma vez. Lê com calma, volta à explicação quando um exemplo não fizer sentido, e usa os exemplos para confirmar que percebeste.
 
@@ -226,7 +226,7 @@ A terceira linha está exatamente em cima da fronteira, e é o momento em que a 
 
 A quarta linha é a mais interessante, porque o enunciado não pensou nela. O cliente da senha 9 chegou atrasado, ou distraiu-se, e a vez dele já passou. A conta daria 9 menos 14, que é menos 5, e menos 5 vezes 4, que é menos 20. O ecrã mostraria "menos 20 minutos", o que não é uma resposta que se mostre a ninguém. Sem este exemplo no contrato, o algoritmo faria a conta à mesma e o ecrã mostraria esse disparate. É para isto que servem os casos extremos. Obrigam a decidir antes, em vez de descobrir depois.
 
-Falta dizer o que o contrato não promete. Se um cliente chamado não aparecer, o atendimento dele não demora 4 minutos, e os que estão atrás esperam menos do que o ecrã disse. O ecrã mostra uma previsão, e não uma garantia. Escrever isto também faz parte do contrato.
+Falta dizer o que o contrato não promete. Se um cliente chamado não aparecer, o atendimento dele não dura 4 minutos, e os que estão atrás esperam menos do que o ecrã disse. O ecrã mostra uma previsão, e não uma garantia. Escrever isto também faz parte do contrato.
 
 ### Porque se chama contrato
 

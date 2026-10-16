@@ -2,7 +2,7 @@
 
 # Projeto 2: Adivinha o número
 
-Um jogador escreve um número secreto de 1 a 100, e o outro tenta adivinhá-lo, com pistas, em 10 tentativas no máximo. O projeto faz-se em pares, em cerca de duas horas de aula: 70 minutos para a Parte 1 e 56 para a Parte 2.
+Um jogador escreve um número secreto de 1 a 100, e o outro tenta adivinhá-lo, com pistas, em 10 tentativas no máximo. O projeto faz-se em pares, e cada par avança ao seu ritmo. O que não acabarem na aula, acabam em casa ou na aula seguinte.
 
 ## Para que serve este projeto
 
@@ -62,7 +62,7 @@ Cada passo acaba com a frase "Mostra ao professor antes de avançar". Quando che
 
 Precisas de papel e lápis, e dos guias 03, 04 e 05 à mão.
 
-O tempo de cada passo, no título dele, é uma estimativa para um par médio. Há passos que vão demorar mais e outros menos. O que conta é fazer cada um com cuidado.
+Há passos que vão demorar mais do que outros. O que conta é fazer cada um com cuidado.
 
 Podes escrever o algoritmo em pseudocódigo, na forma das aulas, ou em frases claras. As frases valem, desde que não deixem dúvidas: quanto, quando, e o que acontece se não der. Não precisas de funções, mas, se quiseres usar alguma, podes. O número secreto não é sorteado. É escrito por uma pessoa, o jogador 1. Assim, cada jogo de teste pode ser repetido exatamente, com os mesmos números, as vezes que for preciso. É isso que torna possível testar e depurar o algoritmo.
 
@@ -78,9 +78,9 @@ As mensagens entre aspas são estas, palavra por palavra. As perguntas que o alg
 
 Por exemplo, se o número secreto for 63 e o jogador 2 escrever 50, o algoritmo escreve "Mais alto". Se a seguir o jogador 2 escrever 120, o algoritmo escreve "Esse número não vale. Escreve um número de 1 a 100." e pede outro número. O 120 não conta como tentativa.
 
-## Parte 1: do enunciado ao algoritmo testado (70 min)
+## Parte 1: do enunciado ao algoritmo testado
 
-### Passo 1: o contrato (12 min)
+### Passo 1: o contrato
 
 A ferramenta está no guia 05, no passo 1 do exemplo guiado, e na secção "O resultado esperado decide-se antes de executar".
 
@@ -100,7 +100,7 @@ O contrato faz-se por escrito, mesmo num jogo que parece simples. Quando lês um
 
 Mostra ao professor antes de avançar: o contrato, com a decisão e a sua razão.
 
-### Passo 2: a tabela de casos esperados, antes do algoritmo (12 min)
+### Passo 2: a tabela de casos esperados, antes do algoritmo
 
 A ferramenta está no guia 05, nas secções "Casos normais, de fronteira e inválidos", "Duas maneiras de escolher casos" e "A tabela de casos esperados". Está também no passo 2 do exemplo guiado.
 
@@ -130,7 +130,7 @@ Há duas dicas para não perderes tempo. Nos jogos compridos, escolhe números f
 
 Mostra ao professor antes de avançar: a tabela com as colunas de antes de executar preenchidas. Para cada fronteira, diz quais são os casos que ficam de um lado e do outro.
 
-### Passo 3: as peças do algoritmo (8 min)
+### Passo 3: as peças do algoritmo
 
 A ferramenta está no guia 04, nas secções "As três peças de um ciclo", "Padrão validação repetida", "Padrão flag" e "Escolher entre Enquanto e Para". Está também no guia 03, na secção "Operador `não`", que tem a regra para escrever o contrário de uma condição.
 
@@ -181,7 +181,7 @@ Responde por escrito, em poucas palavras:
 
 Mostra ao professor antes de avançar: as cinco respostas.
 
-### Passo 4: o algoritmo (18 min)
+### Passo 4: o algoritmo
 
 A ferramenta está no guia 05, no passo 3 do exemplo guiado, e em todos os exemplos do guia 04.
 
@@ -204,7 +204,7 @@ Antes de mostrares, confere estas cinco coisas, com o dedo por baixo de cada lin
 
 Mostra ao professor antes de avançar: o algoritmo completo.
 
-### Passo 5: a tabela de iterações do caso normal (6 min)
+### Passo 5: a tabela de iterações do caso normal
 
 A ferramenta está no guia 04, na secção "A tabela de iterações", e no guia 05, no passo 7 do exemplo guiado.
 
@@ -224,7 +224,7 @@ Não precisas de escrever as perguntas.
 
 Mostra ao professor antes de avançar: a tabela de iterações e a comparação.
 
-### Passo 6: executar a tabela de casos (10 min)
+### Passo 6: executar a tabela de casos
 
 A ferramenta está no guia 05, nas secções "Testar é comparar o obtido com o esperado" e "Duas maneiras de escolher casos".
 
@@ -236,7 +236,7 @@ Agora executa os outros casos da tua tabela. Não precisas de fazer a tabela de 
 
 Mostra ao professor antes de avançar: a tabela com todas as colunas e a resposta da alínea b).
 
-### Passo 7: depurar o que falhou (4 min, ou mais se for preciso)
+### Passo 7: depurar o que falhou
 
 A ferramenta está no guia 05, nas secções "Depurar com método" e "Corrigir a causa e não o sintoma". Está também no passo 11 do exemplo guiado, que tem o registo de depuração.
 
@@ -254,7 +254,7 @@ Se nenhum caso falhou, escreve-o por baixo da tabela. O professor pode dar-te um
 
 Mostra ao professor antes de avançar: o registo de depuração e a versão corrigida, ou a tabela com todos os casos a passar.
 
-## Parte 2: depurar e melhorar o algoritmo de um colega (56 min)
+## Parte 2: depurar e melhorar o algoritmo de um colega
 
 Quando o professor confirmar o teu passo 7, entrega-te duas coisas em papel. A primeira é o algoritmo que um colega de outra turma escreveu para este mesmo jogo. A segunda é o relato de um erro que esse colega observou quando o experimentou com um jogo de teste. O relato diz qual era o número secreto, que números o jogador 2 escreveu, o que apareceu no ecrã e o que devia ter aparecido.
 
@@ -262,7 +262,7 @@ Esse algoritmo não está neste documento. Resolve o mesmo jogo, e lê-lo antes 
 
 O colega fez algumas escolhas diferentes das tuas, e isso não quer dizer que estejam erradas. Dois algoritmos diferentes podem estar ambos certos. Para encontrares o erro, não procures as diferenças em relação ao teu algoritmo. Segue o método do guia 05, a partir do erro observado. Guarda a folha que o professor te dá, porque faz parte do teu portefólio.
 
-### Passo 8: ler o algoritmo do colega, reproduzir o erro e procurar o caso mínimo (13 min)
+### Passo 8: ler o algoritmo do colega, reproduzir o erro e procurar o caso mínimo
 
 A ferramenta está no guia 05, no primeiro passo de "Depurar com método", e no guia 04, na secção "A tabela de iterações".
 
@@ -278,7 +278,7 @@ Depois, reproduz o erro. **Reproduzir** um erro é fazê-lo acontecer outra vez,
 
 Mostra ao professor antes de avançar: a tabela de iterações e as respostas às alíneas b) e c).
 
-### Passo 9: hipótese, verificação com o trace e correção (8 min)
+### Passo 9: hipótese, verificação com o trace e correção
 
 A ferramenta está no guia 05, nos passos 2, 3 e 4 de "Depurar com método". Está também nas secções "Quatro erros que vais encontrar muitas vezes" e "Corrigir a causa e não o sintoma".
 
@@ -294,7 +294,7 @@ Uma hipótese diz onde procurar e o que verificar. "O algoritmo do colega tem um
 
 Mostra ao professor antes de avançar: a hipótese, o trace, o nome do erro e a correção.
 
-### Passo 10: teste de regressão e registo de depuração (20 min)
+### Passo 10: teste de regressão e registo de depuração
 
 A ferramenta está no guia 05, no passo 5 de "Depurar com método", e no passo 11 do exemplo guiado.
 
@@ -308,7 +308,7 @@ Uma correção pode estragar um caso que antes funcionava. Por isso, depois de c
 
 Mostra ao professor antes de avançar: a tabela executada e o registo de depuração.
 
-### Passo 11: melhorar sem mudar o que o algoritmo faz (8 min)
+### Passo 11: melhorar sem mudar o que o algoritmo faz
 
 A ferramenta está no guia 05, nas secções "Melhorar um algoritmo sem mudar o que ele faz" e "Estratégias simples para fazer menos passos". Está também no guia 03, na secção "Condições que não se sobrepõem e que cobrem todos os casos". Nos erros frequentes desse guia, lê "Dois `Se` separados em vez de uma cadeia".
 
@@ -324,7 +324,7 @@ Lembra-te da regra principal. A versão melhorada tem de escrever exatamente o m
 
 Mostra ao professor antes de avançar: a parte melhorada, a explicação e os três testes.
 
-### Passo 12: contar os passos antes e depois (7 min)
+### Passo 12: contar os passos antes e depois
 
 A ferramenta está no guia 05, na secção "Contar passos", e no passo 10 do exemplo guiado.
 

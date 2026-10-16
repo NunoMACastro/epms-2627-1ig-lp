@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Do problema ao algoritmo
 
-Ficha do tema Do problema ao algoritmo, do módulo Desenvolver algoritmos. Praticas a análise de um problema antes de o resolver: o contrato, a decomposição e os passos sem ambiguidades. Cerca de 100 minutos, para fazeres sozinho, e mais 30 se fizeres o desafio opcional.
+Ficha do tema Do problema ao algoritmo, do módulo Desenvolver algoritmos. Praticas a análise de um problema antes de o resolver: o contrato, a decomposição e os passos sem ambiguidades. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -23,18 +23,17 @@ Resolve os exercícios pela ordem, em papel ou num editor de texto. Não precisa
 
 Os exercícios vão do mais simples para o mais completo. O primeiro pede só o contrato de um problema. O segundo pede que decomponhas um processo e encontres o que está mal escrito nele. O terceiro pede a análise completa de um problema novo, do contrato até à simulação.
 
-| Exercício | O que treina | Tempo |
-| --- | --- | ---: |
-| 1 | Escrever o contrato de um problema, com os exemplos concretos | 30 min |
-| 2 | Decompor um processo e encontrar as instruções ambíguas | 25 min |
-| 3 | Analisar um problema novo, do contrato à simulação | 45 min |
-| Total da parte obrigatória | Exercícios 1 a 3 | 100 min |
-| Desafio opcional | Mudar uma restrição do exercício 3 | 30 min, fora do total |
-| Para ires mais longe | Opcional: mais dois casos da água e o algoritmo de verificar os tablets no fim da aula | fora do total |
+| Exercício | O que treina | Parte |
+| --- | --- | --- |
+| 1 | Escrever o contrato de um problema, com os exemplos concretos | Obrigatória |
+| 2 | Decompor um processo e encontrar as instruções ambíguas | Obrigatória |
+| 3 | Analisar um problema novo, do contrato à simulação | Obrigatória |
+| Desafio | Mudar uma restrição do exercício 3 | Opcional |
+| Para ires mais longe | Mais dois casos da água e o algoritmo de verificar os tablets no fim da aula | Opcional |
 
 Entregas a tua ficha de análise, em papel ou num ficheiro de texto. É a folha onde escreves, para cada exercício, as quatro perguntas, os exemplos concretos, a decomposição e os algoritmos. Guarda-a, porque vais precisar dela no tema seguinte.
 
-## Exercício 1: Escrever o contrato de um problema (30 minutos)
+## Exercício 1: Escrever o contrato de um problema
 
 A cantina da escola recebe todos os dias um pedido de reposição de bebidas. Quem faz o pedido conta o que resta em cada tipo de bebida. Sabe quantas unidades de cada tipo cabem na arca, e sabe que o fornecedor só entrega em caixas de 12 unidades. Cada tipo de bebida tem um mínimo que deve estar sempre disponível. A cantina pode mudar o mínimo de cada tipo quando quiser. No fim, é preciso produzir a lista de quantas caixas encomendar de cada tipo.
 
@@ -66,7 +65,7 @@ Um destes quatro casos obriga-te a tomar uma decisão que a regra da cantina nã
 
 Concluíste a alínea b) quando tiveres os quatro casos calculados, cada um classificado, e a decisão escrita para o caso que a regra não resolve.
 
-## Exercício 2: Decompor e encontrar ambiguidades (25 minutos)
+## Exercício 2: Decompor e encontrar ambiguidades
 
 A biblioteca da escola empresta livros. Alguém escreveu estas instruções para um aluno novo que vai ficar ao balcão:
 
@@ -87,7 +86,7 @@ Testa também o caso em que o aluno chega ao balcão já com o número máximo d
 
 Concluíste quando as instruções reescritas puderem ser executadas por alguém que nunca esteve naquela biblioteca.
 
-## Exercício 3: Analisar um problema com autonomia (45 minutos)
+## Exercício 3: Analisar um problema com autonomia
 
 A escola vai emprestar tablets aos alunos durante as aulas. Há 15 tablets numerados. Um aluno pede um tablet no início da aula e devolve-o no fim. Cada tablet tem de ser devolvido pelo mesmo aluno que o levou, e nenhum aluno pode ter mais do que um tablet ao mesmo tempo. No fim da aula, o responsável tem de saber se falta algum tablet e qual.
 
@@ -121,7 +120,7 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e só passa
 
 ## Desafio opcional
 
-Cerca de 30 minutos. Volta ao exercício 3 e muda uma só restrição. Passa a haver 8 tablets para uma turma de 20 alunos.
+Volta ao exercício 3 e muda uma só restrição. Passa a haver 8 tablets para uma turma de 20 alunos.
 
 Escreve o que muda na tua análise. Diz que condição nova aparece, que passos do algoritmo têm de ser alterados e que passos se mantêm exatamente iguais. Não reescrevas tudo. Identifica a diferença.
 
@@ -129,13 +128,13 @@ No fim, responde à pergunta que interessa. Uma solução bem decomposta tem de 
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora do tempo da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os tempos são indicativos.
+Esta secção é opcional. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa.
 
-### Mais longe 1: Mais dois casos para a água (10 minutos)
+### Mais longe 1: Mais dois casos para a água
 
 Volta à água do exercício 1 b) e calcula mais dois casos: restam 5 garrafas e restam 25 garrafas. No caso de 5, confirma que as caixas que encomendas fazem mesmo a água chegar ao mínimo. No caso de 25, decide se é um caso normal ou extremo, e justifica.
 
-### Mais longe 2: Verificar no fim da aula (15 minutos)
+### Mais longe 2: Verificar no fim da aula
 
 Volta aos tablets do exercício 3. Escreve o algoritmo, em passos numerados, do subproblema que verifica, no fim da aula, se falta algum tablet e qual. Vais precisar de dizer que a mesma verificação se repete para cada tablet. Escreve-o em português simples, como "verificar cada um dos 15 tablets, um a um". A forma organizada de escrever repetições aprende-se no tema 04, Repetição e padrões. Aqui, basta dizê-lo com clareza.
 

@@ -2,17 +2,17 @@
 
 # Projeto 1: Duelo de dados
 
-Dois jogadores lançam dados durante cinco rondas, e o algoritmo diz quem ganhou cada ronda e quem ganhou o duelo. O projeto faz-se numa aula de cerca de 60 minutos, com o professor ao quadro.
+Dois jogadores lançam dados durante cinco rondas, e o algoritmo diz quem ganhou cada ronda e quem ganhou o duelo. O projeto faz-se na aula, com o professor ao quadro. Escreves no caderno ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## Para que servem os três projetos
 
 Até aqui, cada exercício treinou uma coisa de cada vez: um ciclo, uma cadeia de decisões, um contador, uma tabela de casos. Um projeto junta tudo isso num problema só e leva-o do enunciado até um algoritmo testado. É um salto grande. Por isso, a unidade de algoritmos acaba com três projetos, em vez de um só. Cada um é um pouco mais difícil do que o anterior.
 
-| Projeto | Como se faz | Tempo |
-| --- | --- | --- |
-| 1, duelo de dados | O professor resolve-o ao quadro, a pensar em voz alta; tu acompanhas, respondes e escreves no caderno | Cerca de 60 minutos |
-| 2, adivinha o número | Em pares, um passo de cada vez, com o professor a confirmar cada passo antes do seguinte | Cerca de 120 minutos |
-| 3, avaliação prática | Individual, com um problema novo | 120 minutos |
+| Projeto | Como se faz |
+| --- | --- |
+| 1, duelo de dados | O professor resolve-o ao quadro, a pensar em voz alta; tu acompanhas, respondes e escreves no caderno |
+| 2, adivinha o número | Em pares, um passo de cada vez, com o professor a confirmar cada passo antes do seguinte |
+| 3, avaliação prática | Individual, com um problema novo, numa prova de 120 minutos |
 
 Os três seguem o mesmo processo, sempre pela mesma ordem:
 
@@ -78,7 +78,7 @@ Lê o enunciado duas vezes. Na primeira leitura, percebe o jogo. Na segunda, de 
 
 Antes do passo 1, inventa um duelo com o colega do lado. São cinco rondas, com valores à vossa escolha, escritos em duas colunas, uma por jogador. Decidam, só com o enunciado, o que o algoritmo devia escrever em cada ronda e no fim. Guardem esse duelo. Pode vir a ser um dos vossos casos de teste, e pode também levar-vos à pergunta que o passo 1 vai fazer.
 
-## Passo 1: o contrato (7 min)
+## Passo 1: o contrato
 
 O contrato vem primeiro porque diz exatamente o que o algoritmo tem de fazer, antes de se pensar em como o vai fazer. O enunciado está escrito para pessoas, e as pessoas preenchem as falhas sem dar por isso. O contrato transforma-o em respostas precisas, e é dele que vão sair os resultados esperados do passo 2. Como o guia 05 explica, o enunciado e o contrato são a única autoridade sobre o que o algoritmo deve fazer. Sem contrato, os resultados esperados seriam palpites, e um teste que compara o obtido com um palpite não prova nada.
 
@@ -122,7 +122,7 @@ Uma frase destas, no contrato, chama-se uma **suposição**: uma coisa que o con
 
 Repara que a suposição e a decisão são coisas diferentes. A decisão escolhe o que o algoritmo faz numa situação que pode mesmo acontecer. A suposição diz que uma situação não vai acontecer, e porquê.
 
-## Passo 2: a tabela de casos esperados, antes do algoritmo (10 min)
+## Passo 2: a tabela de casos esperados, antes do algoritmo
 
 Este passo faz-se sem algoritmo nenhum, e é de propósito. O guia 05 explica porquê, na secção "O resultado esperado decide-se antes de executar". Se calculares o resultado esperado depois de ver o que o algoritmo escreve, o teu cérebro aceita o resultado porque o viu escrito. Estás a perguntar ao algoritmo se ele concorda consigo próprio. Escrito antes, a partir do enunciado e do contrato, o resultado esperado fica à espera do obtido, e qualquer diferença salta à vista. Os casos escritos antes de haver algoritmo são os testes de caixa preta do guia 05. Como ainda não há algoritmo para olhar, não herdas os pontos cegos de quem o vai escrever. São os casos em que essa pessoa não pensou.
 
@@ -159,7 +159,7 @@ Antes de o professor avançar, pensa nestas perguntas:
 6. Para ganhar o duelo, um jogador precisa de ganhar três rondas? Pode alguém ganhar com menos?
 7. Olha para a tua tabela. Cada mensagem do enunciado aparece no resultado esperado de pelo menos um caso? E a mensagem que a decisão do passo 1 vier a criar?
 
-## Passo 3: o algoritmo (15 min)
+## Passo 3: o algoritmo
 
 Agora, e só agora, escreve-se o algoritmo. A tabela de casos do passo 2 é o alvo. O algoritmo tem de escrever, para cada caso, exatamente o resultado esperado que lá está.
 
@@ -194,7 +194,7 @@ Pensa nestas perguntas antes de o professor avançar:
 
 Com o algoritmo escrito, faz a pergunta da caixa branca, do guia 05, na secção "Duas maneiras de escolher casos". Há algum ramo de um `Se` por onde nenhum caso da tabela passa? Se houver, acrescenta um caso que passe por ele, com o resultado esperado calculado pelo enunciado, como os outros.
 
-## Passo 4: a tabela de iterações (8 min)
+## Passo 4: a tabela de iterações
 
 Um pseudocódigo não corre num computador. Executá-lo é fazer o teste de mesa do guia 05, à mão. Para um ciclo, a forma mais curta é a tabela de iterações do guia 04. Tem uma linha por cada teste da condição do ciclo. Cada linha tem a fotografia do estado nesse momento, a condição com os valores substituídos e o que acontece durante a iteração seguinte. No `Para`, a condição é a que está escondida na primeira linha: "a variável de controlo ainda não passou do limite". Na tabela, escreve-se por extenso, com os valores.
 
@@ -217,7 +217,7 @@ Pensa nestas perguntas antes de o professor avançar:
 5. Quanto vale a variável do `Para` na última linha? Pode usar-se esse valor depois do ciclo? (Guia 04, regra 4 do `Para`.)
 6. Depois da última linha, que instruções são executadas, e que mensagem aparece no fim? Bate certo com o resultado esperado que escreveste no passo 2?
 
-## Passo 5: executar os outros casos e completar a tabela (7 min)
+## Passo 5: executar os outros casos e completar a tabela
 
 A tabela de iterações prova que o algoritmo funciona para um caso, e não diz nada sobre os outros. É por isso que se executam todos os casos da tabela do passo 2, e não só aquele de que se fez o trace.
 
@@ -229,7 +229,7 @@ Pensa nestas perguntas antes de o professor avançar:
 2. Se descobrires que um resultado esperado estava mal calculado, podes corrigi-lo? De onde tem de vir o valor novo: do enunciado ou do resultado obtido?
 3. Depois de executares todos os casos, todos os ramos do algoritmo foram percorridos por pelo menos um deles?
 
-## Passo 6: depurar, ou escolher o caso que dá mais confiança (7 min)
+## Passo 6: depurar, ou escolher o caso que dá mais confiança
 
 Este passo tem dois caminhos, e o que se segue depende do passo 5.
 
@@ -296,7 +296,7 @@ Antes de fechares o caderno, confirma:
 
 ## O que vem a seguir
 
-O [projeto 2](05-projeto-2-adivinha-o-numero.md) é o jogo de adivinhar um número. Faz-se em pares, um passo de cada vez, com o professor a confirmar cada passo antes de passares ao seguinte. Leva cerca de 120 minutos. Vem depois das aulas da validação de dados e da validação repetida, porque vai precisar das duas. Segue o mesmo processo deste projeto e junta-lhe o passo que aqui ficou de fora. Esse passo é melhorar o algoritmo e contar os passos antes e depois, com a regra da secção "Contar passos" do guia 05.
+O [projeto 2](05-projeto-2-adivinha-o-numero.md) é o jogo de adivinhar um número. Faz-se em pares, um passo de cada vez, com o professor a confirmar cada passo antes de passares ao seguinte. Vem depois das aulas da validação de dados e da validação repetida, porque vai precisar das duas. Segue o mesmo processo deste projeto e junta-lhe o passo que aqui ficou de fora. Esse passo é melhorar o algoritmo e contar os passos antes e depois, com a regra da secção "Contar passos" do guia 05.
 
 Depois vem a avaliação prática: individual, com 120 minutos e um problema novo, que o professor entrega no dia. O processo é o mesmo dos dois projetos, e podes consultar os dois no teu portefólio. Antes da avaliação, o professor mostra-te a grelha com os critérios.
 

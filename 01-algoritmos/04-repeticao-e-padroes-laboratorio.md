@@ -2,7 +2,7 @@
 
 # Laboratório: Repetição e padrões
 
-Laboratório do tema Repetição e padrões, do módulo Desenvolver algoritmos. Cerca de 50 minutos, e mais 20 se fizeres o primeiro desafio. Vais desenhar no diagrams.net o fluxograma de um algoritmo com um ciclo, com a seta que volta atrás até ao losango da condição. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](04-repeticao-e-padroes.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Repetição e padrões, do módulo Desenvolver algoritmos. Vais desenhar no diagrams.net o fluxograma de um algoritmo com um ciclo, com a seta que volta atrás até ao losango da condição. Cada passo diz o que fazer, porquê e o que deves ver. Avanças ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte. Tudo o que precisas está aqui; o [guia do tema](04-repeticao-e-padroes.md) tem a teoria completa, para quem quiser saber mais.
 
 Este laboratório é todo de fluxogramas, e é opcional. Só o fazes quando o professor o indicar. Nenhum exercício obrigatório da ficha depende dele. A matéria do tema é saber reconhecer um ciclo num fluxograma, pela seta que volta ao losango. Desenhá-lo é a parte opcional que este laboratório treina.
 
@@ -131,7 +131,7 @@ Os passos dessas fases descrevem cada uma pelo que faz. A aplicação muda de as
 
    O grupo tem muitas outras figuras, que pertencem a convenções mais pormenorizadas do que a nossa. Usa sempre estas quatro, do grupo "Fluxograma".
 
-## Fase 1: planear a disposição antes de desenhar (5 minutos)
+## Fase 1: planear a disposição antes de desenhar
 
 Num fluxograma, cada figura liga-se à seguinte por uma seta, e as setas descem. Num ciclo, há uma seta que sobe. Depois da última linha do corpo, o algoritmo não continua para baixo. Volta à linha do `Enquanto` e testa a condição outra vez. No desenho, essa volta é a seta de volta, que sobe da última figura do corpo até ao losango do ciclo.
 
@@ -179,7 +179,7 @@ Tens no papel o esquema das três faixas, com o caminho livre à esquerda para a
 
 Pensa antes de continuares: como distingues, à primeira vista, o losango do ciclo do losango do `Se`? A resposta: ao losango do ciclo chega uma seta pela esquerda, a seta de volta. Ao losango do `Se`, não chega nenhuma seta pela esquerda.
 
-## Fase 2: as figuras e as setas que descem (15 minutos)
+## Fase 2: as figuras e as setas que descem
 
 Cada linha do pseudocódigo que faz alguma coisa é uma figura do fluxograma. As três linhas `const` não têm figura. Dão nome a valores fixos, e esses nomes aparecem dentro das figuras onde são usados. A palavra `Senão` também não tem figura própria. O ramo dela começa no retângulo dos pedidos recusados. E o texto de um `Escreve:` encurta-se, para caber na figura. No pseudocódigo está completo.
 
@@ -249,7 +249,7 @@ Conta as figuras e as setas do teu desenho. Deve ter dezoito figuras e catorze s
 
 Pensa antes de continuares: porque é que a figura 12, a leitura do fim do corpo, ainda não tem nenhuma seta a sair? A resposta: a seta que sai dela é a seta de volta, a técnica nova deste laboratório. Desenha-se na fase 3, com um cuidado especial.
 
-## Fase 3: a seta que volta ao losango (15 minutos)
+## Fase 3: a seta que volta ao losango
 
 A seta de volta vai sempre ao losango do ciclo, porque é lá que o ciclo decide se continua. Se fosse à primeira inicialização, os contadores e o total voltavam a zero em cada iteração. Se fosse para uma figura depois do losango, a condição nunca mais era testada, e o ciclo nunca acabava. Esta fase faz-se devagar. Confirma cada passo antes de passares ao seguinte.
 
@@ -283,7 +283,7 @@ Olha para o losango do ciclo. Chegam-lhe duas setas, uma por cima e outra pela e
 
 Pensa antes de continuares: porque é que a seta de volta não leva o `Sim`, se é por ela que o ciclo continua? A resposta: o `Sim` já está na saída de baixo do losango, por onde se entra no corpo. A seta de volta não sai do losango, chega a ele. É o caminho de regresso ao teste, depois de o corpo acabar.
 
-## Fase 4: verificar o desenho com um caso de teste (5 minutos)
+## Fase 4: verificar o desenho com um caso de teste
 
 Um fluxograma verifica-se percorrendo-o com um caso de teste, como se fosses tu o computador. Em cada losango, a saída escolhe-se pela condição, com os valores que as variáveis têm nesse momento.
 
@@ -317,7 +317,7 @@ O teu desenho passou no caso de teste: três passagens pelo losango do ciclo, e 
 
 Pensa antes de continuares: se a seta de volta chegasse à primeira inicialização, `int pedidosValidos = 0`, o que acontecia com este caso? A resposta: no fim da primeira iteração, os contadores e o total voltavam a zero, e a leitura antecipada lia logo o valor seguinte. O 60 era substituído pelo 0 sem nunca chegar ao losango. O desenho chegava ao Fim com 0 válidos, 0 unidades e 0 recusados.
 
-## Fase 5: uma imagem do fluxograma (5 minutos)
+## Fase 5: uma imagem do fluxograma
 
 O ficheiro `.drawio` é o teu fluxograma editável. É esse que abres para continuar a trabalhar ou para corrigir. Para mostrar o fluxograma a alguém, ou para o entregar, exporta-se uma imagem, que qualquer computador ou telemóvel abre sem precisar da aplicação. Uma imagem não se edita. Se precisares de mudar alguma coisa, mudas o `.drawio` e exportas a imagem outra vez. Por isso, guardas sempre os dois ficheiros.
 
@@ -381,7 +381,7 @@ A janela do browser está estreita. Maximiza-a, ou usa o botão redondo com reti
 
 Para quem acabou e quer consolidar, na aula ou em casa. Se o tempo da aula não chegar para o primeiro desafio, termina-o no início da aula seguinte. Cada desafio é um ficheiro novo na pasta `algoritmos`. Para o criar, na barra de menus, escolhe "Ficheiro" e "Novo...". Se a aplicação perguntar que tipo de diagrama queres, escolhe o diagrama em branco. Guarda-o logo, como na preparação, com o nome que o desafio indica.
 
-1. Um `Para` no fluxograma, em cerca de 20 minutos. Este algoritmo soma as caixas guardadas nos 3 corredores de um armazém:
+1. Um `Para` no fluxograma. Este algoritmo soma as caixas guardadas nos 3 corredores de um armazém:
 
    ```text
    const NUMERO_DE_CORREDORES = 3

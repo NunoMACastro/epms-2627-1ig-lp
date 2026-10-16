@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Pseudocódigo e fluxogramas
 
-Ficha do tema Pseudocódigo e fluxogramas, do módulo Desenvolver algoritmos. Praticas as peças do tema uma de cada vez, até escreveres e testares um algoritmo teu. Cerca de 127 minutos, para fazeres sozinho: 94 na parte obrigatória e 33 no desafio opcional.
+Ficha do tema Pseudocódigo e fluxogramas, do módulo Desenvolver algoritmos. Praticas as peças do tema uma de cada vez, até escreveres e testares um algoritmo teu. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -16,18 +16,17 @@ Nenhum exercício é o exemplo guiado do guia com outros números. O exemplo mos
 
 Todos os algoritmos desta ficha são sequenciais: as instruções executam-se sempre todas, pela mesma ordem, sem o algoritmo ter de escolher entre caminhos. Quando um exercício te pedir para escrever instruções ou um algoritmo, podes escrevê-los em pseudocódigo, na forma das aulas, ou em frases claras. O que conta é a lógica, e que as frases não deixem dúvidas: quanto, quando e o que acontece se não der. A secção "Frases claras também valem" do guia mostra a diferença entre frases que deixam dúvidas e frases que não deixam.
 
-| Exercício | O que treina | Tempo |
-| --- | --- | ---: |
-| 1 | Escolher o tipo de dados de um valor e justificar a escolha | 10 min |
-| 2 | Fazer o trace de uma sequência de atribuições | 15 min |
-| 3 | Reconhecer atribuições certas e erradas | 10 min |
-| 4 | Calcular expressões pela ordem das operações | 10 min |
-| 5 | Escolher e usar a função predefinida certa | 12 min |
-| 6 | Seguir um algoritmo completo com uma tabela de trace | 12 min |
-| 7 | Escrever um algoritmo, em pseudocódigo ou em frases claras, e testá-lo | 25 min |
-| Total da parte obrigatória | Exercícios 1 a 7 | 94 min |
-| Desafio opcional | Trocar os valores de duas variáveis e mudar uma regra; a parte B, o fluxograma do exercício 7 na aplicação, só quando o professor o indicar | 33 min, ou 18 sem a parte B |
-| Para ires mais longe | Opcional: casos que enganam nos tipos, nas atribuições e nas expressões, e um problema novo | fora destes tempos |
+| Exercício | O que treina | Parte |
+| --- | --- | --- |
+| 1 | Escolher o tipo de dados de um valor e justificar a escolha | Obrigatória |
+| 2 | Fazer o trace de uma sequência de atribuições | Obrigatória |
+| 3 | Reconhecer atribuições certas e erradas | Obrigatória |
+| 4 | Calcular expressões pela ordem das operações | Obrigatória |
+| 5 | Escolher e usar a função predefinida certa | Obrigatória |
+| 6 | Seguir um algoritmo completo com uma tabela de trace | Obrigatória |
+| 7 | Escrever um algoritmo, em pseudocódigo ou em frases claras, e testá-lo | Obrigatória |
+| Desafio | Trocar os valores de duas variáveis e mudar uma regra; a parte B, o fluxograma do exercício 7 na aplicação, só quando o professor o indicar | Opcional |
+| Para ires mais longe | Casos que enganam nos tipos, nas atribuições e nas expressões, e um problema novo | Opcional |
 
 Precisas de papel quadriculado e lápis. O diagrams.net, em `https://app.diagrams.net/?lang=pt`, só é preciso para a parte B do desafio. Essa parte é de fluxogramas, e só se faz quando o professor o indicar. Nesse caso, guarda o ficheiro na pasta `algoritmos` do laboratório, com um nome em minúsculas, com hífenes e sem acentos.
 
@@ -37,7 +36,7 @@ O que entregas:
 - o algoritmo do exercício 7, com a tabela das três entradas;
 - se o professor indicar a parte B do desafio e a fizeres, os ficheiros `.drawio` e `.png` do fluxograma.
 
-## Exercício 1: Escolher o tipo de dados (10 minutos)
+## Exercício 1: Escolher o tipo de dados
 
 A matéria está na secção "Tipos de dados" do guia.
 
@@ -53,7 +52,7 @@ Diz que tipo de dados usarias para guardar cada um destes valores, `int`, `float
 
 Concluíste quando cada valor tiver um tipo e uma frase que diga porquê.
 
-## Exercício 2: Fazer o trace de atribuições (15 minutos)
+## Exercício 2: Fazer o trace de atribuições
 
 A matéria está nas secções "Atribuição: dar um valor não é perguntar se é igual" e "A tabela de trace" do guia.
 
@@ -85,7 +84,7 @@ Os passos 0, 1 e 2 do trace são iguais aos da alínea b), e podes copiá-los. F
 
 Concluíste quando os dois traces estiverem completos, com todas as variáveis em cada linha, e os tiveres comparado com a previsão da alínea a).
 
-## Exercício 3: Atribuições certas e erradas (10 minutos)
+## Exercício 3: Atribuições certas e erradas
 
 A matéria está no fim da secção "Atribuição: dar um valor não é perguntar se é igual" do guia. Está também nas secções "Constantes" e "Onde nasce uma variável, e com que tipo".
 
@@ -111,7 +110,7 @@ Imagina que cada uma das linhas seguintes vem logo a seguir a estas cinco. Cada 
 
 Concluíste quando cada linha certa tiver o seu valor e cada linha errada tiver uma frase que diga o que está mal.
 
-## Exercício 4: Calcular expressões (10 minutos)
+## Exercício 4: Calcular expressões
 
 A matéria está na secção "Expressões aritméticas" do guia.
 
@@ -127,7 +126,7 @@ Calcula o valor de cada expressão e escreve o tipo do resultado, `int` ou `floa
 
 Concluíste quando as cinco expressões tiverem valor e tipo, e tiveres confirmado as linhas 3 e 4 com a verificação do guia. O divisor vezes o resultado do `div`, mais o `resto`, tem de dar 23.
 
-## Exercício 5: Usar as funções predefinidas (12 minutos)
+## Exercício 5: Usar as funções predefinidas
 
 A matéria está na secção "Funções predefinidas" do guia.
 
@@ -145,7 +144,7 @@ Exemplo do formato, com uma conta sem função: `int totalAPagar = quantidade * 
 
 Concluíste quando cada alínea tiver a linha, com o tipo e a função, e o valor, e cada função tiver sido usada uma vez.
 
-## Exercício 6: Seguir um algoritmo completo (12 minutos)
+## Exercício 6: Seguir um algoritmo completo
 
 A matéria está nas secções "Ler e escrever" e "A tabela de trace" do guia. O passo 5 do exemplo guiado é o modelo do trace.
 
@@ -175,7 +174,7 @@ Calcula o resultado da versão dele para os mesmos 3 artigos de 150 gramas.
 
 Concluíste quando o teu trace mostrar o valor de todas as variáveis em cada linha e tiveres escolhido a versão certa com uma razão.
 
-## Exercício 7: Escrever um algoritmo teu (25 minutos)
+## Exercício 7: Escrever um algoritmo teu
 
 A matéria está na secção "A forma do pseudocódigo nas aulas" do guia. O exemplo guiado das caixas de cadernos tem a mesma forma que este problema.
 
@@ -225,9 +224,9 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 ## Desafio opcional
 
-O desafio tem três partes independentes, e podes fazê-las pela ordem que quiseres. As partes B e C partem do teu algoritmo do exercício 7. A parte B é de fluxogramas, e só a fazes quando o professor o indicar. Sem ela, o desafio leva cerca de 18 minutos.
+O desafio tem três partes independentes, e podes fazê-las pela ordem que quiseres. As partes B e C partem do teu algoritmo do exercício 7. A parte B é de fluxogramas, e só a fazes quando o professor o indicar.
 
-### Parte A: trocar os valores de duas variáveis (10 minutos)
+### Parte A: trocar os valores de duas variáveis
 
 A matéria está na secção "Atribuição: dar um valor não é perguntar se é igual" do guia, onde há uma troca que falha.
 
@@ -240,13 +239,13 @@ int caixaB = 30
 
 Escreve as instruções que trocam os valores das duas, de forma que no fim `caixaA` valha 30 e `caixaB` valha 12. Podes usar uma variável a mais, se precisares, com o tipo escrito na linha onde aparece pela primeira vez. Faz o trace da tua solução, desde as duas linhas acima, para mostrar que funciona.
 
-### Parte B: o fluxograma do exercício 7 na aplicação (15 minutos, só quando o professor o indicar)
+### Parte B: o fluxograma do exercício 7 na aplicação (só quando o professor o indicar)
 
 Esta parte é opcional mesmo dentro do desafio, e só a fazes quando o professor o indicar. A matéria está na secção "Os símbolos do fluxograma" do guia e no laboratório.
 
 Desenha no diagrams.net o fluxograma do teu algoritmo do exercício 7. Guarda-o como `fluxograma-compra-de-leite.drawio` e verifica-o com a lista da fase 4 do laboratório, adaptada a este algoritmo. Depois exporta a imagem, com o nome `fluxograma-compra-de-leite.png`.
 
-### Parte C: o fornecedor muda as grades (8 minutos)
+### Parte C: o fornecedor muda as grades
 
 O fornecedor passa a vender grades de 12 pacotes em vez de 24, e a grade passa a custar 780 cêntimos. O pacote solto continua a custar 70 cêntimos.
 
@@ -260,9 +259,9 @@ O fornecedor passa a vender grades de 12 pacotes em vez de 24, e a grade passa a
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos tempos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os primeiros itens tratam casos que costumam enganar, um ou dois de cada vez, e é por isso que não entraram na parte obrigatória. O último é um problema novo. Os tempos são indicativos.
+Esta secção é opcional. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os primeiros itens tratam casos que costumam enganar, um ou dois de cada vez, e é por isso que não entraram na parte obrigatória. O último é um problema novo.
 
-### Mais longe 1: Três valores com o tipo menos óbvio (10 minutos)
+### Mais longe 1: Três valores com o tipo menos óbvio
 
 Continua o exercício 1. A matéria está na secção "Tipos de dados" do guia, sobretudo no parágrafo sobre o número de telefone.
 
@@ -274,7 +273,7 @@ Diz o tipo de cada valor e justifica a escolha numa frase:
 
 **c)** O código de barras de um artigo, com 13 algarismos.
 
-### Mais longe 2: Um número entre aspas (5 minutos)
+### Mais longe 2: Um número entre aspas
 
 Continua o exercício 3. A matéria está no parágrafo do guia sobre o número `12` e o texto `"12"`.
 
@@ -285,7 +284,7 @@ quantidade = 12
 quantidade = "12"
 ```
 
-### Mais longe 3: Expressões que enganam (15 minutos)
+### Mais longe 3: Expressões que enganam
 
 Continua os exercícios 4 e 5. A matéria está nas secções "Expressões aritméticas" e "Funções predefinidas" do guia, nos parágrafos sobre os casos que enganam.
 
@@ -304,7 +303,7 @@ As expressões vêm aos pares, e cada par esconde um engano diferente. Calcula o
 | 5 | `raiz(36 + 64)` | | |
 | 5 | `raiz(36) + raiz(64)` | | |
 
-### Mais longe 4: A encomenda sem artigos (10 minutos)
+### Mais longe 4: A encomenda sem artigos
 
 Continua o exercício 6.
 
@@ -312,13 +311,13 @@ Continua o exercício 6.
 
 **b)** `pesoTotal` é um peso, e mesmo assim nasce como `int`. Porque é que, neste algoritmo, isso não é um problema?
 
-### Mais longe 5: Quando os soltos saem mais caros (10 minutos)
+### Mais longe 5: Quando os soltos saem mais caros
 
 Continua o exercício 7 e a parte C do desafio.
 
 Com as grades de 24 pacotes a 1440 cêntimos, há casos em que os pacotes soltos saem mais caros do que uma grade inteira. E a grade ainda traz mais pacotes. Encontra um desses casos e mostra as contas. Com as grades de 12 pacotes a 780 cêntimos, isso ainda pode acontecer? Justifica com contas.
 
-### Mais longe 6: Os autocarros da visita de estudo (30 minutos)
+### Mais longe 6: Os autocarros da visita de estudo
 
 Um problema novo, para escreveres de raiz. A matéria é a mesma do exercício 7.
 

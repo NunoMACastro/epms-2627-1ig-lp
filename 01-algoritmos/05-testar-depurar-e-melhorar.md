@@ -2,7 +2,7 @@
 
 # Testar, depurar e melhorar
 
-Módulo Desenvolver algoritmos. É o último tema do módulo. Este guia explica como confirmas que um algoritmo está certo e como encontras e corriges um erro quando ele não está. Explica também como tornas um algoritmo mais simples sem o estragar, e como escreves uma função, para dar um nome a uma parte do algoritmo. Lê-se em cerca de 200 minutos. Para praticar, há a [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) deste tema e os dois projetos guiados, o [duelo de dados](05-projeto-1-duelo-de-dados.md) e o [adivinha o número](05-projeto-2-adivinha-o-numero.md).
+Módulo Desenvolver algoritmos. É o último tema do módulo. Este guia explica como confirmas que um algoritmo está certo e como encontras e corriges um erro quando ele não está. Explica também como tornas um algoritmo mais simples sem o estragar, e como escreves uma função, para dar um nome a uma parte do algoritmo. Lês o guia ao teu ritmo, e não precisas de o ler todo de uma vez. Para praticar, há a [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) deste tema e os dois projetos guiados, o [duelo de dados](05-projeto-1-duelo-de-dados.md) e o [adivinha o número](05-projeto-2-adivinha-o-numero.md).
 
 Este é o último guia da unidade, e usa tudo o que aprendeste nos quatro anteriores. Traz uma só instrução nova, `Função`, numa parte própria, depois da teoria de testar, depurar e melhorar. O resto não é matéria nova de pseudocódigo. É uma forma de trabalhar com o que já sabes. Lê-o com papel e lápis ao lado, porque vais fazer muitos traces à mão.
 

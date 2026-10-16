@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Testar, depurar e melhorar
 
-Ficha do tema Testar, depurar e melhorar, da unidade de algoritmos. Praticas a escolher casos de teste, a depurar com método e a melhorar um algoritmo, contando os passos. Constróis também um algoritmo a partir dos casos escritos antes dele, e escreves e usas funções. A parte obrigatória leva cerca de 99 minutos, para fazeres sozinho.
+Ficha do tema Testar, depurar e melhorar, da unidade de algoritmos. Praticas a escolher casos de teste, a depurar com método e a melhorar um algoritmo, contando os passos. Constróis também um algoritmo a partir dos casos escritos antes dele, e escreves e usas funções. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -14,7 +14,7 @@ Cada exercício diz em que secção do guia 05 está a matéria. Se encravares, 
 
 ## Como trabalhar
 
-A parte obrigatória são os exercícios 1 a 7, e leva cerca de 99 minutos. São 60 minutos nos exercícios 1 a 4 e 39 nos exercícios 5 a 7. Os exercícios 5 a 7 são das funções. O 5 e o 6 fazem-se na aula das funções, e o 7 também, se houver tempo. Se não houver, fica para casa. Os exercícios 1 a 4 são prática para casa, ou para quando acabares um projeto mais cedo. O tempo de aula deste tema vai para os dois projetos guiados. O exercício 8, o fecho do portefólio, o desafio e a secção "Para ires mais longe" são opcionais e ficam fora destes 99 minutos.
+A parte obrigatória são os exercícios 1 a 7. Os exercícios 5 a 7 são das funções. O 5 e o 6 fazem-se na aula das funções, e o 7 também, se houver tempo. Se não houver, fica para casa. Os exercícios 1 a 4 são prática para casa, ou para quando acabares um projeto mais cedo. O tempo de aula deste tema vai para os dois projetos guiados. O exercício 8, o fecho do portefólio, o desafio e a secção "Para ires mais longe" são opcionais.
 
 Resolve os exercícios 1 a 4 pela ordem. Nos dois primeiros aplicas o que o guia mostrou. No exercício 1 escolhes casos de teste e usas-os para testar um algoritmo curto. No exercício 2 segues os quatro primeiros passos do método de depuração, um passo por alínea. O quinto passo, voltar a testar tudo, está no Mais longe 5, que é opcional. No exercício 3 já és tu a decidir. Contas os passos de um algoritmo que já está certo e escreves uma versão que faz menos trabalho. No exercício 4 constróis um algoritmo pequeno do princípio ao fim, a partir da tabela de casos que escreves antes dele. Testá-lo com essa tabela é a alínea c) do exercício 8. Cada exercício treina uma coisa, e cada um usa o que os anteriores treinaram.
 
@@ -22,19 +22,18 @@ Os exercícios 5 a 7 são das funções e não dependem dos quatro primeiros. No
 
 Nenhum exercício é o exemplo do inventário, ou o exemplo do stock da parte das funções, com outros números. Os exemplos mostram o caminho, e os exercícios pedem-te que o percorras noutros problemas.
 
-| Exercício | O que treina | Tempo |
-| --- | --- | ---: |
-| 1 | Escolher casos de teste antes de ver o algoritmo, e testá-lo com eles | 10 min |
-| 2 | Depurar com os quatro primeiros passos do método: observar, formular uma hipótese, verificar com o trace e corrigir a causa | 13 min |
-| 3 | Contar passos e melhorar um algoritmo sem mudar o que ele faz | 12 min |
-| 4 | Construir um algoritmo pequeno a partir da tabela de casos escrita antes dele | 25 min |
-| 5 | Ler uma função e prever o que as suas chamadas escrevem | 10 min |
-| 6 | Escrever uma função a partir do seu contrato e chamá-la | 14 min |
-| 7 | Trocar uma parte repetida por uma função, sem mudar o que o algoritmo escreve | 15 min |
-| Total da parte obrigatória | Exercícios 1 a 7 | 99 min |
-| 8, opcional | O fecho do portefólio: o contrato e o teste do algoritmo do exercício 4, e o fluxograma só quando o professor o indicar | 13 min, ou 25 com o fluxograma |
-| Desafio opcional | Mudar uma restrição de cada vez no algoritmo do exercício 4 | depois do exercício 8 |
-| Para ires mais longe | Opcional: mais uma fronteira no exercício 1, o caso mínimo e a correção do sintoma no exercício 2, a poupança de cada escalão no exercício 3, a validação no exercício 4, o teste de regressão do exercício 2 e dois erros em funções | fora dos 99 min |
+| Exercício | O que treina | Parte |
+| --- | --- | --- |
+| 1 | Escolher casos de teste antes de ver o algoritmo, e testá-lo com eles | Obrigatória |
+| 2 | Depurar com os quatro primeiros passos do método: observar, formular uma hipótese, verificar com o trace e corrigir a causa | Obrigatória |
+| 3 | Contar passos e melhorar um algoritmo sem mudar o que ele faz | Obrigatória |
+| 4 | Construir um algoritmo pequeno a partir da tabela de casos escrita antes dele | Obrigatória |
+| 5 | Ler uma função e prever o que as suas chamadas escrevem | Obrigatória |
+| 6 | Escrever uma função a partir do seu contrato e chamá-la | Obrigatória |
+| 7 | Trocar uma parte repetida por uma função, sem mudar o que o algoritmo escreve | Obrigatória |
+| 8 | O fecho do portefólio: o contrato e o teste do algoritmo do exercício 4, e o fluxograma só quando o professor o indicar | Opcional |
+| Desafio | Mudar uma restrição de cada vez no algoritmo do exercício 4 | Opcional, depois do exercício 8 |
+| Para ires mais longe | Mais uma fronteira no exercício 1, o caso mínimo e a correção do sintoma no exercício 2, a poupança de cada escalão no exercício 3, a validação no exercício 4, o teste de regressão do exercício 2 e dois erros em funções | Opcional |
 
 Os algoritmos que a ficha te dá estão na forma de pseudocódigo das aulas. A indentação mostra o que está dentro de cada `Se`, de cada `Enquanto` e de cada `Para`. Quando fores tu a escrever um algoritmo, ou uma parte dele, podes usar essa forma ou frases claras. Basta que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que conta é a lógica.
 
@@ -49,7 +48,7 @@ O portefólio deste tema são os dois projetos guiados. Os exercícios desta fic
 
 A secção "O teu portefólio" do guia diz como organizar a pasta.
 
-## Exercício 1: Escolher os casos antes de ver o algoritmo (10 min)
+## Exercício 1: Escolher os casos antes de ver o algoritmo
 
 A matéria está nas secções "Casos normais, de fronteira e inválidos" e "A tabela de casos esperados" do guia.
 
@@ -73,7 +72,7 @@ Senão
 
 **c)** Que caso da tua tabela revelou o erro? Se a tabela só tivesse casos normais, como 2 e 12, o erro teria aparecido? Explica porquê numa ou duas frases.
 
-## Exercício 2: Depurar com método (13 min)
+## Exercício 2: Depurar com método
 
 A matéria está na secção "Depurar com método" do guia e no padrão totalizador do guia 04. O registo de depuração está no passo 11 do exemplo guiado.
 
@@ -107,7 +106,7 @@ As quatro alíneas são os quatro primeiros passos do método, pela ordem do gui
 
 **d)** Corrigir a causa. Corrige o algoritmo com uma única alteração, e diz qual foi. Podes escrever o algoritmo corrigido ou descrever a alteração numa frase, desde que se perceba exatamente que linha muda e para onde.
 
-## Exercício 3: Contar passos e melhorar sem mudar o resultado (12 min)
+## Exercício 3: Contar passos e melhorar sem mudar o resultado
 
 A matéria está nas secções "Contar passos" e "Estratégias simples para fazer menos passos" do guia, e nos passos 9 e 10 do exemplo guiado.
 
@@ -154,7 +153,7 @@ Tens aqui a regra de contagem do guia, para a teres à mão:
 
 **d)** Explica, numa ou duas frases, por que razão a tua versão escreve sempre o mesmo que a original, para qualquer peso positivo.
 
-## Exercício 4: Construir um algoritmo pequeno a partir dos casos de teste (25 min)
+## Exercício 4: Construir um algoritmo pequeno a partir dos casos de teste
 
 A matéria está nas secções "A tabela de casos esperados" e "A síntese: sequência, seleção e repetição" do guia. Está também nos padrões totalizador e sentinela do guia 04. Junto com o teste que lhe fazes no exercício 8, é o exercício que mais se parece com a primeira parte da avaliação prática.
 
@@ -166,7 +165,7 @@ O cartão de cliente da papelaria dá pontos. Por cada compra, o cliente ganha 1
 
 Testar o algoritmo com a tabela que escreveste é a alínea c) do exercício 8, que é opcional.
 
-## Exercício 5: Ler uma função e as suas chamadas (10 min)
+## Exercício 5: Ler uma função e as suas chamadas
 
 A matéria está na parte das funções do guia. Está nas secções "Chamar uma função", "Parâmetros e argumentos", "O que acontece numa chamada" e "O trace de uma chamada".
 
@@ -193,7 +192,7 @@ mostraPortes(3, 3000)
 
 **b)** Faz a tabela da chamada `mostraPortes(2, 2999)`, como a tabela da chamada 2 do guia. Tem uma linha para os argumentos que passam para os parâmetros e uma linha por cada instrução executada. As colunas são `numero`, `valorEncomenda`, a condição e o seu resultado, e o ecrã.
 
-## Exercício 6: Escrever uma função a partir do contrato (14 min)
+## Exercício 6: Escrever uma função a partir do contrato
 
 A matéria está na parte das funções do guia, nas secções "Escrever uma função", "Parâmetros e argumentos" e "Testar uma função sozinha". O intervalo com `e` está no guia 03.
 
@@ -209,7 +208,7 @@ A escola organiza uma visita de estudo para várias turmas. O autocarro tem 50 l
 
 **c)** Escreve o ecrã que o teu algoritmo produz, com as linhas das três chamadas.
 
-## Exercício 7: Trocar a repetição por uma função (15 min)
+## Exercício 7: Trocar a repetição por uma função
 
 A matéria está na parte das funções do guia, nas secções "Uma parte que se repete" e "Trocar uma repetição por uma função". Está também na secção "Melhorar um algoritmo sem mudar o que ele faz".
 
@@ -242,7 +241,7 @@ Se fruta < MINIMO_FRUTA
 
 **c)** Mostra que a tua versão escreve o mesmo que a original. Imagina um dia em que ficaram 5 sandes, 11 sumos e 7 peças de fruta. Escreve as linhas que a versão original escreve depois das três perguntas, e as que a tua versão escreve, e confirma que são iguais.
 
-## Exercício 8: Fecho do portefólio, opcional (13 min, ou 25 com o fluxograma)
+## Exercício 8: Fecho do portefólio, opcional
 
 Os problemas completos do teu portefólio são os dois projetos deste tema. Este fecho é opcional. Junta ao exercício 4 as duas peças que lhe faltam para ser mais um problema completo: o contrato e os testes. É um bom treino antes da avaliação. Podes fazê-lo em casa ou quando acabares um projeto mais cedo. A alínea b) é de fluxogramas, e só a fazes quando o professor o indicar. A secção "O teu portefólio" do guia diz como organizar a pasta.
 
@@ -290,9 +289,9 @@ No fim, compara as três mudanças: qual delas obrigou a acrescentar um ramo nov
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 99 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudar em casa antes da avaliação. Cada exercício continua um dos exercícios obrigatórios com um passo a mais. Os tempos são indicativos.
+Esta secção é opcional. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudar em casa antes da avaliação. Cada exercício continua um dos exercícios obrigatórios com um passo a mais.
 
-### Mais longe 1: Corrigir e acrescentar uma fronteira (10 min)
+### Mais longe 1: Corrigir e acrescentar uma fronteira
 
 Continua o exercício 1.
 
@@ -302,7 +301,7 @@ Continua o exercício 1.
 
 Pista: na alínea b), apareceu uma fronteira nova. Quais são os dois valores que ficam um de cada lado dela?
 
-### Mais longe 2: O caso mínimo e a correção do sintoma (10 min)
+### Mais longe 2: O caso mínimo e a correção do sintoma
 
 Continua o exercício 2. A matéria está nas secções "Depurar com método" e "Corrigir a causa e não o sintoma" do guia.
 
@@ -312,7 +311,7 @@ Continua o exercício 2. A matéria está nas secções "Depurar com método" e 
 
 Pista: na alínea b), experimenta um dia em que todas as entregas têm o mesmo número de caixas, e depois um em que não têm.
 
-### Mais longe 3: Quanto se poupa em cada escalão (15 min)
+### Mais longe 3: Quanto se poupa em cada escalão
 
 Continua o exercício 3.
 
@@ -324,7 +323,7 @@ Continua o exercício 3.
 
 Pista: na alínea b), conta quantas condições a tua cadeia avalia até chegar à atualização de cada escalão.
 
-### Mais longe 4: Validar os valores do cartão (15 min)
+### Mais longe 4: Validar os valores do cartão
 
 Continua o exercício 4. A funcionária pode enganar-se a escrever. Um valor negativo é um engano, e o algoritmo escreve "Valor inválido" e ignora-o, sem lhe dar pontos.
 
@@ -336,7 +335,7 @@ Continua o exercício 4. A funcionária pode enganar-se a escrever. Um valor neg
 
 Pista: a validação vem antes de tudo o resto dentro do ciclo. Os pontos e o bónus só se calculam para compras válidas. Por isso, podem ficar indentados por baixo do `Senão` da validação. O `Se` do bónus fica lá dentro, e a sua atualização um nível mais à direita.
 
-### Mais longe 5: Voltar a testar tudo nas entregas (4 min)
+### Mais longe 5: Voltar a testar tudo nas entregas
 
 Continua o exercício 2, com a tua versão corrigida. É o quinto passo do método, "Voltar a testar tudo", da secção "Depurar com método" do guia.
 
@@ -354,7 +353,7 @@ O responsável do armazém já tinha escrito estes casos de teste, com o resulta
 
 Pista: no caso 2, o corpo do `Para` não chega a ser executado. Os dois `Escreve:` do fim mostram então os valores que as variáveis tinham antes do ciclo.
 
-### Mais longe 6: Dois erros em funções (10 min)
+### Mais longe 6: Dois erros em funções
 
 Continua o exercício 5. Cada um destes algoritmos tem um erro, e nenhum dos dois é um dos erros com funções que o guia mostra. Para cada um:
 

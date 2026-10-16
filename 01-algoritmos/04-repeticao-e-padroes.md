@@ -2,7 +2,7 @@
 
 # Repetição e padrões
 
-Módulo Desenvolver algoritmos. Este guia explica como se escreve um algoritmo que repete instruções, e como se controla quantas vezes as repete. Explica também cinco padrões que vais usar em quase todos os algoritmos daqui para a frente. E explica os arrays, que guardam muitos valores numa só variável. Lê-se em cerca de 200 minutos, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há o [laboratório](04-repeticao-e-padroes-laboratorio.md) e a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Este guia explica como se escreve um algoritmo que repete instruções, e como se controla quantas vezes as repete. Explica também cinco padrões que vais usar em quase todos os algoritmos daqui para a frente. E explica os arrays, que guardam muitos valores numa só variável. Lês o guia ao teu ritmo, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há o [laboratório](04-repeticao-e-padroes-laboratorio.md) e a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) deste tema.
 
 Até agora, cada instrução dos teus algoritmos executava-se uma vez, ou nenhuma. Neste tema, a mesma instrução passa a poder executar-se muitas vezes seguidas. Há muitas ideias novas, e por isso a teoria é longa. O professor dá-a por partes, nas aulas, com traces no quadro, e o guia fica contigo para a releres com calma. Cada secção explica a mesma ideia por mais do que um caminho.
 
@@ -1455,7 +1455,7 @@ Guarda no teu caderno a tabela de iterações e o conjunto de testes do exemplo 
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md). Tem dez exercícios obrigatórios, que levam cerca de 132 minutos, e um desafio opcional. O [laboratório](04-repeticao-e-padroes-laboratorio.md) é de fluxogramas e é opcional, e só o fazes quando o professor o indicar. Nele desenhas no diagrams.net o fluxograma do exemplo guiado, com a seta que volta ao losango sem cruzar as outras setas. Depois verificas o desenho com um caso de teste. O laboratório explica no sítio tudo o que precisas da aplicação.
+Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md). Tem dez exercícios obrigatórios e um desafio opcional. O [laboratório](04-repeticao-e-padroes-laboratorio.md) é de fluxogramas e é opcional, e só o fazes quando o professor o indicar. Nele desenhas no diagrams.net o fluxograma do exemplo guiado, com a seta que volta ao losango sem cruzar as outras setas. Depois verificas o desenho com um caso de teste. O laboratório explica no sítio tudo o que precisas da aplicação.
 
 O tema seguinte é [Testar, depurar e melhorar](05-testar-depurar-e-melhorar.md), o último desta área. Vais juntar a sequência, a seleção e a repetição num problema maior e testá-lo de forma organizada. Vais corrigir os erros encontrados no trace e comparar duas soluções pelo número de passos. Vais também escrever as tuas primeiras funções, e a área acaba com projetos, todos jogos.
 

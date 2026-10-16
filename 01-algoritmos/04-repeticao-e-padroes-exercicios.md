@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Repetição e padrões
 
-Ficha do tema Repetição e padrões, do módulo Desenvolver algoritmos. Praticas sem ajuda o que o guia explicou sobre os ciclos. Segues ciclos numa tabela de iterações e reconheces as suas três peças. Escreves ciclos com o contador, o totalizador, a sentinela, a validação repetida e a flag, e percorres arrays. Cerca de 132 minutos, para fazeres sozinho, e mais 30 se fizeres o desafio opcional.
+Ficha do tema Repetição e padrões, do módulo Desenvolver algoritmos. Praticas sem ajuda o que o guia explicou sobre os ciclos. Segues ciclos numa tabela de iterações e reconheces as suas três peças. Escreves ciclos com o contador, o totalizador, a sentinela, a validação repetida e a flag, e percorres arrays. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -14,7 +14,7 @@ O [laboratório](04-repeticao-e-padroes-laboratorio.md) do tema é de fluxograma
 
 ## Como trabalhar
 
-Os exercícios 1 a 10 são obrigatórios. Os exercícios 1 a 7 levam cerca de 95 minutos, e os exercícios 8 a 10 levam mais 37. No fim da ficha há um desafio e uma secção "Para ires mais longe", os dois opcionais, para quem terminar.
+Os exercícios 1 a 10 são obrigatórios. No fim da ficha há um desafio e uma secção "Para ires mais longe", os dois opcionais, para quem terminar.
 
 A ficha vai por passos, e cada exercício usa o que os anteriores treinaram. Primeiro aplicas o que o guia mostrou. Nos exercícios 1 e 2 segues e completas ciclos que já estão quase escritos. Nos exercícios 3 e 4 escreves ciclos pequenos a partir de um algoritmo do guia, um com um contador e outro com um totalizador. Depois decides: no exercício 5 descobres porque é que um ciclo conta mal e corriges a linha errada. No fim, constróis os ciclos que dependem do que a pessoa escreve. No exercício 6 é um ciclo com sentinela, e no exercício 7 uma validação repetida. Os exercícios 8 a 10 treinam a última parte da teoria do guia. Somas um array com o para cada, mudas elementos de um array com o índice e respondes a "há algum?" com uma flag.
 
@@ -26,7 +26,7 @@ Uma regra para todos os exercícios: quando te pedirem uma tabela de iterações
 
 Precisas de papel quadriculado e lápis. Entregas, no papel ou como o professor indicar, o pseudocódigo e as tabelas de iterações dos exercícios 1 a 10. Entregas também o que fizeres do desafio e de "Para ires mais longe".
 
-## Exercício 1: seguir um ciclo já escrito (10 minutos)
+## Exercício 1: seguir um ciclo já escrito
 
 Um armazém tem 20 caixas de papel. Em cada um dos próximos 3 dias chega uma entrega de 15 caixas, e não sai nenhuma. Este algoritmo mostra o stock no fim de cada dia:
 
@@ -57,7 +57,7 @@ A tabela de iterações já tem a primeira linha, para veres o formato. Nessa li
 
 **d)** Explica numa frase porque é que `dia` não acaba com o número do último dia.
 
-## Exercício 2: completar a peça que falta (11 minutos)
+## Exercício 2: completar a peça que falta
 
 Cada um destes três ciclos tem uma linha em branco, marcada com pontos. Para cada um, escreve a linha que falta. Diz também qual das três peças ela é: a inicialização, a condição ou a atualização (guia, [As três peças de um ciclo](04-repeticao-e-padroes.md#as-três-peças-de-um-ciclo)).
 
@@ -90,7 +90,7 @@ Enquanto talao <= ULTIMO_TALAO
 
 **d)** Imagina que a linha da alínea c) ficava mesmo em branco. Faz as três primeiras linhas da tabela de iterações dessa versão. Depois explica numa frase porque é que o ciclo nunca acabaria (guia, [O ciclo que nunca acaba](04-repeticao-e-padroes.md#o-ciclo-que-nunca-acaba)).
 
-## Exercício 3: escrever um ciclo com um contador (17 minutos)
+## Exercício 3: escrever um ciclo com um contador
 
 Uma papelaria recebeu hoje 3 encomendas pela internet. Para cada encomenda, o funcionário escreve o número de artigos. Uma encomenda com mais de 5 artigos vai numa caixa grande. O algoritmo conta quantas caixas grandes são precisas. Já tens o princípio do algoritmo:
 
@@ -106,7 +106,7 @@ const LIMITE_CAIXA_PEQUENA = 5
 
 **c)** Explica numa frase porque é que a linha que aumenta `caixasGrandes` fica dentro do `Se`. Tem mais indentação do que as outras linhas do corpo.
 
-## Exercício 4: escrever um ciclo com um totalizador (15 minutos)
+## Exercício 4: escrever um ciclo com um totalizador
 
 Numa gráfica houve, durante a manhã, 3 trabalhos de impressão. Para cada trabalho, o funcionário escreve o número de páginas impressas. O funcionário quer ir vendo quantas páginas já se imprimiram. Depois de cada trabalho, o algoritmo mostra as páginas impressas até esse momento. No fim, mostra o total de páginas da manhã. Já tens o princípio do algoritmo:
 
@@ -121,7 +121,7 @@ const NUMERO_DE_TRABALHOS = 3
 
 **c)** Imagina que a linha que põe `totalPaginas` a 0 passava para dentro do `Para`, logo a seguir à primeira linha, com quatro espaços. Explica numa frase o que acontecia ao resultado.
 
-## Exercício 5: descobrir porque é que um contador conta mal (10 minutos)
+## Exercício 5: descobrir porque é que um contador conta mal
 
 Uma loja tem 4 encomendas por expedir. Uma encomenda é urgente se o prazo de entrega for de 2 dias ou menos. Um colega escreveu este algoritmo para contar as encomendas urgentes, mas o resultado não bate certo:
 
@@ -145,7 +145,7 @@ Escreve: "Encomendas urgentes: ", urgentes
 
 **d)** Escreve a linha corrigida e diz o que o ecrã passa a mostrar com os mesmos prazos.
 
-## Exercício 6: escrever um ciclo com sentinela (17 minutos)
+## Exercício 6: escrever um ciclo com sentinela
 
 À tarde, na mesma gráfica do exercício 4, ninguém sabe quantos trabalhos vão chegar. O funcionário escreve o número de páginas de cada trabalho à medida que o trabalho fica pronto, e escreve 0 quando a gráfica fecha. Nenhum trabalho tem 0 páginas, e por isso o 0 serve de sentinela. O algoritmo mostra o total de páginas do dia inteiro. São as da tarde e as 60 da manhã, que já se conhecem e estão numa constante. Já tens o princípio do algoritmo:
 
@@ -161,7 +161,7 @@ const PAGINAS_DA_MANHA = 60
 
 **c)** Escreve o total do dia que esperas e faz a tabela de iterações em dois casos. No primeiro, o funcionário escreve 40, 8 e 0. No segundo, escreve logo 0, porque à tarde não houve trabalhos.
 
-## Exercício 7: escrever uma validação repetida (15 minutos)
+## Exercício 7: escrever uma validação repetida
 
 Uma loja de informática organiza workshops gratuitos, numa sala com 20 lugares, todos livres antes desta inscrição. Cada inscrição pode reservar de 1 a 6 lugares. O algoritmo pede o número de lugares e, enquanto o valor não for válido, escreve uma mensagem com o intervalo aceite e pede outra vez. No fim, escreve quantos lugares ficaram reservados e quantos lugares ficam livres na sala. Já tens o princípio do algoritmo:
 
@@ -182,7 +182,7 @@ const LUGARES_DA_SALA = 20
 
 Os três exercícios seguintes são da última parte da teoria do guia, a partir da secção [Arrays: muitos valores numa só variável](04-repeticao-e-padroes.md#arrays-muitos-valores-numa-só-variável). O para cada não tem uma condição escrita. Por isso, nos exercícios 8 e 10, a tabela de iterações tem uma linha por elemento do array. Cada linha mostra os valores no fim da iteração, como a tabela do [Padrão flag](04-repeticao-e-padroes.md#padrão-flag).
 
-### Exercício 8: somar com o para cada (14 minutos)
+### Exercício 8: somar com o para cada
 
 A papelaria guardou num array as unidades de cadernos vendidas em cada um dos quatro dias em que esteve aberta esta semana:
 
@@ -196,7 +196,7 @@ vendas = [4, 0, 7, 0]
 
 **c)** O teu algoritmo não precisa de uma constante com o número de dias. Explica numa frase porquê.
 
-### Exercício 9: mudar só alguns elementos (11 minutos)
+### Exercício 9: mudar só alguns elementos
 
 Na mesma papelaria, os preços de quatro artigos estão num array, em cêntimos:
 
@@ -220,7 +220,7 @@ Escreve: precos[0], " ", precos[1], " ", precos[2], " ", precos[3]
 
 **c)** Que índice usa a última iteração do teu `Para`? Se o `Para` fosse até `N_PRECOS`, e não até `N_PRECOS - 1`, o que acontecia na iteração a mais?
 
-### Exercício 10: saber se há alguma encomenda pesada (12 minutos)
+### Exercício 10: saber se há alguma encomenda pesada
 
 As encomendas com mais de 10 kg só se levam com o carrinho. Os pesos das encomendas de hoje, em quilos, estão num array:
 
@@ -254,7 +254,7 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 ## Desafio opcional
 
-Cerca de 30 minutos. Volta ao exercício 7 e muda uma só restrição: a pessoa passa a ter no máximo 3 tentativas, contando com a primeira. Se o valor continuar inválido ao fim da terceira tentativa, o algoritmo não pede mais nenhum valor. Escreve "Reserva cancelada: foram usadas as 3 tentativas." e termina. Se o valor for válido numa das três tentativas, o algoritmo escreve a reserva feita, com o número de lugares. Nesse caso, escreve também os lugares livres na sala. Se fizeste o Mais longe 4, já tens metade do caminho.
+Volta ao exercício 7 e muda uma só restrição: a pessoa passa a ter no máximo 3 tentativas, contando com a primeira. Se o valor continuar inválido ao fim da terceira tentativa, o algoritmo não pede mais nenhum valor. Escreve "Reserva cancelada: foram usadas as 3 tentativas." e termina. Se o valor for válido numa das três tentativas, o algoritmo escreve a reserva feita, com o número de lugares. Nesse caso, escreve também os lugares livres na sala. Se fizeste o Mais longe 4, já tens metade do caminho.
 
 **a)** O ciclo pode agora terminar por duas razões diferentes. Diz quais são e escreve a condição do ciclo. Como a condição mistura `e` com `ou`, usa parênteses para mostrar o que se avalia primeiro, como no guia 03.
 
@@ -262,13 +262,13 @@ Cerca de 30 minutos. Volta ao exercício 7 e muda uma só restrição: a pessoa 
 
 **c)** Monta a tabela de casos esperados, com pelo menos quatro casos. Tem de ter um valor válido à primeira, um valor válido à terceira tentativa, três valores inválidos e um extremo do intervalo. No caso dos três valores inválidos, confirma com a tabela de iterações que a leitura é executada exatamente 3 vezes, nem mais uma.
 
-**d)** Só quando o professor o indicar, porque é de fluxogramas: desenha o fluxograma, no papel ou no diagrams.net. Sem esta alínea, o desafio leva cerca de 20 minutos.
+**d)** Só quando o professor o indicar, porque é de fluxogramas: desenha o fluxograma, no papel ou no diagrams.net.
 
 ## Para ires mais longe
 
-Estes exercícios são opcionais e não contam para os 132 minutos da ficha. Cada um junta uma dificuldade que os exercícios obrigatórios deixaram de fora de propósito. Faz primeiro os exercícios 1 a 10, e escolhe depois os que quiseres, pela ordem que quiseres.
+Estes exercícios são opcionais, e não precisas deles para concluíres a ficha. Cada um junta uma dificuldade que os exercícios obrigatórios deixaram de fora de propósito. Faz primeiro os exercícios 1 a 10, e escolhe depois os que quiseres, pela ordem que quiseres.
 
-### Mais longe 1: um ciclo que salta por cima da saída (15 minutos)
+### Mais longe 1: um ciclo que salta por cima da saída
 
 Num armazém, as prateleiras estão numeradas de 1 a 8, e as de número ímpar ficam no corredor da esquerda. Este algoritmo devia escrever, por ordem, os números das prateleiras do corredor da esquerda:
 
@@ -288,7 +288,7 @@ Enquanto prateleira != ULTIMA_PRATELEIRA
 
 **d)** O armazém passa a ter 9 prateleiras, e muda-se a constante para 9. A tua correção escreve todas as prateleiras do corredor da esquerda, incluindo a 9? Se não escrever, encontra outra correção que funcione com 8 e com 9.
 
-### Mais longe 2: os dados que escondem o erro (7 minutos)
+### Mais longe 2: os dados que escondem o erro
 
 Volta ao algoritmo do colega, no exercício 5, sem a correção.
 
@@ -298,7 +298,7 @@ Volta ao algoritmo do colega, no exercício 5, sem a correção.
 
 **c)** Que prazos escolherias para teres a certeza de que o teste apanha o erro? Responde numa frase.
 
-### Mais longe 3: quando o 0 é um dado verdadeiro (25 minutos)
+### Mais longe 3: quando o 0 é um dado verdadeiro
 
 Uma loja regista quantos artigos lhe foram devolvidos em cada dia. O funcionário escreve o número de devoluções de cada dia, um dia de cada vez, e não se sabe à partida quantos dias vai registar. Um dia sem devoluções é um dia verdadeiro e tem de entrar nas contas. No fim, o algoritmo mostra quantos dias foram registados, o total de devoluções e a média de devoluções por dia. O princípio do algoritmo, com o valor da sentinela por escolher:
 
@@ -317,7 +317,7 @@ As variáveis chamam-se `devolucoes`, `diasRegistados` e `totalDevolucoes`, que 
 
 **d)** Faz a tabela de iterações quando o funcionário escreve 3, 0, 5, 2 e a sentinela. Escreve antes o resultado que esperas.
 
-### Mais longe 4: contar as tentativas inválidas (10 minutos)
+### Mais longe 4: contar as tentativas inválidas
 
 Volta ao teu algoritmo do exercício 7.
 

@@ -2,7 +2,7 @@
 
 # Pseudocódigo e fluxogramas
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos em pseudocódigo, com variáveis, tipos de dados, contas e funções predefinidas. Aprendes também a reconhecer o mesmo algoritmo num fluxograma e a segui-lo à mão, numa tabela de trace. Lê-se em cerca de 150 minutos, de preferência em mais do que uma vez. Para praticar, há a [ficha de exercícios](02-pseudocodigo-e-fluxogramas-exercicios.md) e o [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md) deste tema, que é de fluxogramas e só se faz quando o professor o indicar.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos em pseudocódigo, com variáveis, tipos de dados, contas e funções predefinidas. Aprendes também a reconhecer o mesmo algoritmo num fluxograma e a segui-lo à mão, numa tabela de trace. Lês o guia ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há a [ficha de exercícios](02-pseudocodigo-e-fluxogramas-exercicios.md) e o [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md) deste tema, que é de fluxogramas e só se faz quando o professor o indicar.
 
 No guia 01 escreveste algoritmos em português, em passos numerados. Neste guia, o estado ganha nomes, as variáveis, e os passos ganham uma escrita própria. É a forma que o professor usa no quadro, e vais encontrá-la igual em todos os guias de algoritmos. Se já escreveste na aula as primeiras instruções em pseudocódigo, vais reconhecê-la, e aqui fica o porquê de cada peça. Todos os algoritmos deste guia são sequenciais: fazem sempre os mesmos passos, pela mesma ordem, seja qual for a entrada. Escolher entre caminhos é o assunto do guia 03, e repetir passos é o do guia 04.
 

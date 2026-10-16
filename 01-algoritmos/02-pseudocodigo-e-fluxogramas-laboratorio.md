@@ -2,7 +2,7 @@
 
 # Laboratório: Pseudocódigo e fluxogramas
 
-Laboratório do tema Pseudocódigo e fluxogramas, do módulo Desenvolver algoritmos. Cerca de 60 minutos. Vais desenhar no diagrams.net o fluxograma de um algoritmo pequeno, o das caixas de cadernos, e guardá-lo no teu computador. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](02-pseudocodigo-e-fluxogramas.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Pseudocódigo e fluxogramas, do módulo Desenvolver algoritmos. Vais desenhar no diagrams.net o fluxograma de um algoritmo pequeno, o das caixas de cadernos, e guardá-lo no teu computador. Cada passo diz o que fazer, porquê e o que deves ver. Avanças ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte. Tudo o que precisas está aqui; o [guia do tema](02-pseudocodigo-e-fluxogramas.md) tem a teoria completa, para quem quiser saber mais.
 
 Este laboratório é todo de fluxogramas, e é opcional. Só o fazes quando o professor o indicar, e nenhum exercício obrigatório da ficha depende dele. A matéria do tema é saber ler um fluxograma. Desenhá-lo é a parte opcional que este laboratório treina.
 
@@ -63,7 +63,7 @@ Ficas a saber abrir o diagrams.net e guardar um desenho no teu computador. Ficas
 
 ## Preparar o projeto
 
-Esta preparação leva cerca de 8 minutos. Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. A aplicação muda de aspeto de vez em quando. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
+Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. A aplicação muda de aspeto de vez em quando. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
 
 1. Abre a aplicação em português. Maximiza a janela do browser, para ocupar o ecrã todo, e escreve na barra de endereços `https://app.diagrams.net/?lang=pt`. A parte final, `?lang=pt`, pede a aplicação em português. Sem ela, a aplicação usa a língua do browser, que pode ser o inglês.
 
@@ -82,7 +82,7 @@ Esta preparação leva cerca de 8 minutos. Os nomes dos menus e dos botões dest
 
 3. Confirma que a janela está maximizada, porque a aplicação muda de aspeto conforme a largura da janela. Se a janela estiver estreita, por exemplo a ocupar só metade do ecrã, a barra de menus desaparece. No lugar dela aparece um botão redondo com reticências (três pontos), no canto superior direito. Esse botão abre um menu com "Ficheiro" e "Exportar como" lado a lado. A forma mais simples de seguir este laboratório é maximizar a janela. Se não puderes, usa esse botão sempre que os passos falarem da barra de menus. Nesse caso, procura "Exportar como" diretamente no menu, e não dentro de "Ficheiro".
 
-## Fase 1: o fluxograma guardado no teu computador (8 minutos)
+## Fase 1: o fluxograma guardado no teu computador
 
 Neste momento, o diagrama só existe dentro do separador do browser. Se fechares o separador, perdes tudo. Por isso, a primeira coisa a fazer é guardar, antes de desenhar. Guardar logo no início dá um nome e um sítio ao ficheiro. A partir daí, cada vez que guardares, o trabalho vai para o mesmo ficheiro, na tua pasta `algoritmos`.
 
@@ -110,7 +110,7 @@ O ficheiro `fluxograma-caixas-de-cadernos.drawio` está na tua pasta `algoritmos
 
 Pensa antes de continuares: porque é que se guarda antes de desenhar, se ainda não há nada para guardar? A resposta: até guardares, o desenho só existe no separador do browser, e fechá-lo apaga tudo. Guardar logo no início dá-lhe um nome e um sítio. A partir daí, cada Ctrl+S vai para esse ficheiro, e o que desenhares fica a salvo.
 
-## Fase 2: uma figura para cada instrução (20 minutos)
+## Fase 2: uma figura para cada instrução
 
 Um fluxograma é o desenho de um algoritmo. Cada instrução do pseudocódigo passa a ser uma figura, e a forma da figura diz que tipo de instrução é. As leituras e as saídas, que comunicam com quem usa o algoritmo, vão em paralelogramos. As atribuições e as contas vão em retângulos. O algoritmo começa e acaba num oval, a figura de pontas redondas, com as palavras `Início` e `Fim`. Para saber mais, lê a secção "Os símbolos do fluxograma" do [guia](02-pseudocodigo-e-fluxogramas.md).
 
@@ -184,7 +184,7 @@ Tens oito figuras numa coluna, cada uma com o texto de uma instrução: dois ova
 
 Pensa antes de continuares: o algoritmo tem sete linhas, e o fluxograma tem oito figuras. Porque não são sete? A resposta: a linha `const UNIDADES_POR_CAIXA = 12` não tem figura, porque é uma regra do problema e não uma ação. Ficam seis instruções, e cada uma dá uma figura. O `Início` e o `Fim` dão mais duas, e são oito.
 
-## Fase 3: as setas dão a ordem (10 minutos)
+## Fase 3: as setas dão a ordem
 
 As figuras sozinhas não dizem por que ordem se executam. É a seta que diz para onde se vai a seguir, de uma figura para a próxima. Num algoritmo sequencial, como este, o percurso é uma linha reta, de cima para baixo. Por isso, oito figuras em coluna precisam de sete setas, uma entre cada par de figuras seguidas. Para saber mais, lê a secção "Os símbolos do fluxograma" do [guia](02-pseudocodigo-e-fluxogramas.md).
 
@@ -225,7 +225,7 @@ Descrição do percurso, para quem não vê o desenho. É uma única coluna de o
 
 Pensa antes de continuares: se apagasses a seta entre a figura 4 e a figura 5, o que ficava errado? A resposta: o percurso parava na figura 4. Quem seguisse o fluxograma com o dedo não chegava à conta das unidades soltas nem aos resultados. Cada figura, menos o Fim, tem de ter uma seta a sair para a seguinte.
 
-## Fase 4: o fluxograma diz o mesmo que o pseudocódigo (9 minutos)
+## Fase 4: o fluxograma diz o mesmo que o pseudocódigo
 
 Um fluxograma e o pseudocódigo do mesmo algoritmo têm de dizer a mesma coisa. Se não disserem, um dos dois está errado. Antes de dares o desenho por acabado, compara-o com o pseudocódigo, instrução a instrução. Depois segue-o com o dedo, com uma entrada concreta, e anota o que aparece no ecrã. Seguir um algoritmo assim, à mão, chama-se fazer o trace. Para saber mais, lê o passo 4 do exemplo guiado e a secção "A tabela de trace" do [guia](02-pseudocodigo-e-fluxogramas.md).
 
@@ -254,7 +254,7 @@ O fluxograma passou as seis verificações. Seguido com o dedo, dá o mesmo ecr�
 
 Pensa antes de continuares: se trocasses a ordem das figuras 4 e 6, o que aparecia no ecrã com 30 cadernos? A resposta: a figura 6, `Escreve: "Caixas completas: ", caixasCompletas`, vinha antes da conta das caixas completas. Nesse momento, `caixasCompletas` ainda não tinha valor, e o ecrã não podia mostrar o número de caixas. É por isso que as figuras têm de estar pela ordem das instruções.
 
-## Fase 5: a imagem para mostrar, o ficheiro para editar (7 minutos)
+## Fase 5: a imagem para mostrar, o ficheiro para editar
 
 O ficheiro `.drawio` é o teu fluxograma editável, o que abres para continuar a trabalhar ou para corrigir. Para mostrar o fluxograma a alguém, ou para o entregar, exporta-se uma imagem, que qualquer computador ou telemóvel abre sem precisar da aplicação. Uma imagem não se edita. Se precisares de mudar alguma coisa, mudas o `.drawio` e exportas a imagem outra vez. Por isso, guardas sempre os dois ficheiros.
 
