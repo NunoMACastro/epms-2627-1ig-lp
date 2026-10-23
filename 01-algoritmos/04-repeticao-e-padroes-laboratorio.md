@@ -86,14 +86,7 @@ Se fizeste os laboratórios dos temas 02 e 03, já conheces a aplicação, e pod
 
 ## Preparar o projeto
 
-Os nomes dos menus e dos botões deste laboratório foram confirmados a 24 de setembro de 2026, com a aplicação em português. Ficaram por confirmar quatro coisas:
-
-- as marcas de ligação que aparecem no contorno do losango, na fase 3;
-- a opção "Pontos de passagem", com "Ortogonal", na fase 3;
-- a opção "Limpar pontos de passagem", na fase 3;
-- o que a aplicação pergunta depois de "Exportar", na fase 5.
-
-Os passos dessas fases descrevem cada uma pelo que faz. A aplicação muda de aspeto de vez em quando. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
+A aplicação muda de aspeto de vez em quando. Os passos descrevem cada opção pelo que faz. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
 
 1. Abre a aplicação em português. Maximiza a janela do browser, para ocupar o ecrã todo, e escreve na barra de endereços `https://app.diagrams.net/?lang=pt`. A parte final, `?lang=pt`, pede a aplicação em português.
 
@@ -287,7 +280,7 @@ Pensa antes de continuares: porque é que a seta de volta não leva o `Sim`, se 
 
 Um fluxograma verifica-se percorrendo-o com um caso de teste, como se fosses tu o computador. Em cada losango, a saída escolhe-se pela condição, com os valores que as variáveis têm nesse momento.
 
-1. Segue o caminho com o ponteiro do rato, desde o Início, para este caso: o funcionário escreve 12, depois 60, e depois 0. Diz em voz baixa o valor de cada variável sempre que ele muda. Conta quantas vezes passas pelo losango do ciclo e quantas passas pelo losango do `Se`.
+1. Segue o caminho com o ponteiro do rato, desde o Início, para este caso: o funcionário escreve 12, depois 60, e depois 0. Acompanha o valor de cada variável sempre que ele muda. Conta quantas vezes passas pelo losango do ciclo e quantas passas pelo losango do `Se`.
 
 2. Confere o teu percurso com este, passagem a passagem:
 

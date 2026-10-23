@@ -210,7 +210,7 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 **Exercício 2.** Faz o trace por linhas, e não por variáveis. Numa atribuição, calcula primeiro o lado direito com os valores da linha de cima, e só depois guarda o resultado na variável da esquerda. Para a alínea c), relê no guia a primeira consequência da atribuição.
 
-**Exercício 3.** Lê cada linha em voz alta, com a palavra "recebe" no lugar do `=`. O que está à esquerda do `=` pode receber um valor? Depois volta às cinco primeiras linhas e vê como nasceu o nome que está à esquerda.
+**Exercício 3.** Interpreta cada linha, com a palavra "recebe" no lugar do `=`. O que está à esquerda do `=` pode receber um valor? Depois volta às cinco primeiras linhas e vê como nasceu o nome que está à esquerda.
 
 **Exercício 4.** Faz primeiro os parênteses, depois as multiplicações e as divisões, incluindo `div` e `resto`, e só no fim as somas. Para o `div` e o `resto`, pensa em 23 lápis arrumados em caixas de 4: quantas caixas se enchem, e quantos lápis sobram? E lembra-te de que `/` dá sempre um `float`.
 

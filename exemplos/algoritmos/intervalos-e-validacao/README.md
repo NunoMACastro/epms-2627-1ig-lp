@@ -29,8 +29,6 @@ Os algoritmos 3, 4 e 8 estão errados de propósito, e o erro só se vê com alg
 
 Para o algoritmo 7, faz a tabela de iterações, como no guia da repetição. A pessoa escreve primeiro um valor acima de 30, depois um abaixo de 16 e por fim um válido.
 
-## Versões com que foi testado
-
-O pseudocódigo não depende de nenhum programa, por isso não há versões. Os resultados de cada algoritmo foram conferidos a 8 de outubro de 2026, com os valores junto de cada limite.
+O pseudocódigo não depende de nenhum programa.
 
 ![Rodapé](../../../imagens/rodape.png)

@@ -129,7 +129,7 @@ Se total == 100
 
 Esta é uma pergunta, que se lê "`total` vale 100?". A resposta é `true` ou `false`, e perguntar não muda nada. Depois de avaliar `total == 100`, a variável `total` continua a valer exatamente o que valia antes. Só dar um valor, com um só `=`, muda o valor de uma variável.
 
-Uma forma de nunca te enganares é a que o guia 02 já te deu: ler cada sinal em voz alta, sempre da mesma maneira. O `=` lê-se "recebe", e o `==` lê-se "é igual a?", com o ponto de interrogação. Se a frase que disseste for uma pergunta, precisas de dois sinais. Se for uma ordem, precisas de um.
+Uma forma de distinguires os sinais é a que o guia 02 já te deu: interpretar cada sinal por palavras, sempre da mesma maneira. O `=` significa "recebe", e o `==` pergunta "é igual a?", com o ponto de interrogação. Se a frase for uma pergunta, precisas de dois sinais. Se for uma ordem, precisas de um.
 
 As duas coisas podem até aparecer na mesma linha. Imagina uma variável `semStock`, do tipo `bool`:
 
@@ -934,7 +934,7 @@ O que se vê: um `Senão` que parece pertencer a um `Se`, mas está dois espaço
 
 ### Um só sinal de igual numa condição
 
-O que se vê: `Se stock = 0`. Lida em voz alta, a linha diz "se stock recebe 0", o que não é uma pergunta. Acontece porque na Matemática a igualdade se escreve com um só sinal. Para o corrigires, lê a condição em voz alta. Se for uma pergunta, "é igual a?", precisa de dois sinais: `Se stock == 0`.
+O que se vê: `Se stock = 0`. Interpretada por palavras, a linha diz "se stock recebe 0", o que não é uma pergunta. Acontece porque na Matemática a igualdade se escreve com um só sinal. Para o corrigires, verifica se estás a comparar ou a atribuir um valor. A pergunta "é igual a?" precisa de dois sinais: `Se stock == 0`.
 
 ### Dois sinais de igual onde se queria dar um valor
 

@@ -240,7 +240,7 @@ Um fluxograma e o pseudocódigo do mesmo algoritmo têm de dizer a mesma coisa. 
 
    Se uma das verificações falhar, corrige o desenho antes de continuares.
 
-2. Segue o fluxograma com o dedo, no ecrã, como se a pessoa tivesse escrito 30 cadernos. Em cada paralelogramo com `Escreve:`, diz em voz baixa o que aparece no ecrã. Em cada retângulo, faz a conta.
+2. Segue o fluxograma com o dedo, no ecrã, como se a pessoa tivesse escrito 30 cadernos. Em cada paralelogramo com `Escreve:`, determina o que aparece no ecrã. Em cada retângulo, faz a conta.
 
    O que deves ver, por esta ordem: a pergunta "Quantos cadernos foram encomendados?", depois "Caixas completas: 2" e por fim "Unidades soltas: 6". No primeiro retângulo, `30 div 12` dá 2, porque o 12 cabe duas vezes em 30. No segundo, `30 resto 12` dá 6, porque duas caixas levam 24 cadernos e sobram 6. Se não chegares a este ecrã, há uma figura fora do sítio ou com o texto errado.
 
