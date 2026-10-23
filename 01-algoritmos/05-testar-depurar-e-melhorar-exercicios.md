@@ -6,9 +6,9 @@ Ficha do tema Testar, depurar e melhorar, da unidade de algoritmos. Praticas a e
 
 ## O que precisas de saber
 
-O [guia do tema](05-testar-depurar-e-melhorar.md), com as secções de testar, depurar e melhorar e o exemplo guiado. Lê também os passos 9 e 10 do exemplo, que mostram como se melhora um algoritmo e como se contam os passos. Para os exercícios 5 a 7, precisas da parte das funções do guia. Este tema não tem laboratório.
+O [guia do tema](05-testar-depurar-e-melhorar.md), com as secções de testar, depurar e melhorar e o exemplo guiado. Lê também os passos 8 e 9 do exemplo, que mostram como se melhora um algoritmo e como se contam os passos. Para os exercícios 5 a 7, precisas da parte das funções do guia.
 
-Precisas ainda de saber fazer uma tabela de iterações e escrever uma cadeia de `Se` e `Senão se`. E de saber ler um `Para` e um ciclo com sentinela, e usar contadores e totalizadores. Está tudo nos guias [02](02-pseudocodigo-e-fluxogramas.md), [03](03-decisoes-e-validacao.md) e [04](04-repeticao-e-padroes.md). O exercício 6 usa um intervalo com `e`, do guia 03.
+Precisas ainda de saber fazer uma tabela de iterações e escrever uma cadeia de `Se` e `Senão se`. E de saber ler um `Para` e um ciclo com sentinela, e usar contadores e totalizadores. Está tudo nos guias [02](02-pseudocodigo.md), [03](03-decisoes-e-validacao.md) e [04](04-repeticao-e-padroes.md). O exercício 6 usa um intervalo com `e`, do guia 03.
 
 Cada exercício diz em que secção do guia 05 está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
 
@@ -16,7 +16,7 @@ Cada exercício diz em que secção do guia 05 está a matéria. Se encravares, 
 
 A parte obrigatória são os exercícios 1 a 7. Os exercícios 5 a 7 são das funções. O 5 e o 6 fazem-se na aula das funções, e o 7 também, se houver tempo. Se não houver, fica para casa. Os exercícios 1 a 4 são prática para casa, ou para quando acabares um projeto mais cedo. O tempo de aula deste tema vai para os dois projetos guiados. O exercício 8, o fecho do portefólio, o desafio e a secção "Para ires mais longe" são opcionais.
 
-Resolve os exercícios 1 a 4 pela ordem. Nos dois primeiros aplicas o que o guia mostrou. No exercício 1 escolhes casos de teste e usas-os para testar um algoritmo curto. No exercício 2 segues os quatro primeiros passos do método de depuração, um passo por alínea. O quinto passo, voltar a testar tudo, está no Mais longe 5, que é opcional. No exercício 3 já és tu a decidir. Contas os passos de um algoritmo que já está certo e escreves uma versão que faz menos trabalho. No exercício 4 constróis um algoritmo pequeno do princípio ao fim, a partir da tabela de casos que escreves antes dele. Testá-lo com essa tabela é a alínea c) do exercício 8. Cada exercício treina uma coisa, e cada um usa o que os anteriores treinaram.
+Resolve os exercícios 1 a 4 pela ordem. Nos dois primeiros aplicas o que o guia mostrou. No exercício 1 escolhes casos de teste e usas-os para testar um algoritmo curto. No exercício 2 segues os quatro primeiros passos do método de depuração, um passo por alínea. O quinto passo, voltar a testar tudo, está no Mais longe 5, que é opcional. No exercício 3 já és tu a decidir. Contas os passos de um algoritmo que já está certo e escreves uma versão que faz menos trabalho. No exercício 4 constróis um algoritmo pequeno do princípio ao fim, a partir da tabela de casos que escreves antes dele. Testá-lo com essa tabela é a alínea b) do exercício 8. Cada exercício treina uma coisa, e cada um usa o que os anteriores treinaram.
 
 Os exercícios 5 a 7 são das funções e não dependem dos quatro primeiros. No exercício 5 lês uma função e as suas chamadas. No 6 escreves uma função a partir do contrato, e no 7 trocas uma parte repetida por uma função. Se o professor o indicar, podes fazê-los antes dos outros, logo depois de leres a parte das funções do guia.
 
@@ -31,20 +31,20 @@ Nenhum exercício é o exemplo do inventário, ou o exemplo do stock da parte da
 | 5 | Ler uma função e prever o que as suas chamadas escrevem | Obrigatória |
 | 6 | Escrever uma função a partir do seu contrato e chamá-la | Obrigatória |
 | 7 | Trocar uma parte repetida por uma função, sem mudar o que o algoritmo escreve | Obrigatória |
-| 8 | O fecho do portefólio: o contrato e o teste do algoritmo do exercício 4, e o fluxograma só quando o professor o indicar | Opcional |
+| 8 | O fecho do portefólio: o contrato e o teste do algoritmo do exercício 4 | Opcional |
 | Desafio | Mudar uma restrição de cada vez no algoritmo do exercício 4 | Opcional, depois do exercício 8 |
 | Para ires mais longe | Mais uma fronteira no exercício 1, o caso mínimo e a correção do sintoma no exercício 2, a poupança de cada escalão no exercício 3, a validação no exercício 4, o teste de regressão do exercício 2 e dois erros em funções | Opcional |
 
 Os algoritmos que a ficha te dá estão na forma de pseudocódigo das aulas. A indentação mostra o que está dentro de cada `Se`, de cada `Enquanto` e de cada `Para`. Quando fores tu a escrever um algoritmo, ou uma parte dele, podes usar essa forma ou frases claras. Basta que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que conta é a lógica.
 
-Precisas de papel e lápis. O diagrams.net, em `https://app.diagrams.net`, só é preciso na alínea b) do exercício 8. Essa alínea é de fluxogramas, e só se faz quando o professor o indicar.
+Precisas de papel e lápis.
 
 O portefólio deste tema são os dois projetos guiados. Os exercícios desta ficha também podem lá ficar:
 
 - a tabela de casos do exercício 1;
 - o registo de depuração do exercício 2;
 - a contagem de passos do exercício 3;
-- o exercício 4, completado no exercício 8 com o contrato, a tabela de casos executada e, se o professor o indicar, o fluxograma.
+- o exercício 4, completado no exercício 8 com o contrato e a tabela de casos executada.
 
 A secção "O teu portefólio" do guia diz como organizar a pasta.
 
@@ -74,7 +74,7 @@ Senão
 
 ## Exercício 2: Depurar com método
 
-A matéria está na secção "Depurar com método" do guia e no padrão totalizador do guia 04. O registo de depuração está no passo 11 do exemplo guiado.
+A matéria está na secção "Depurar com método" do guia e no padrão totalizador do guia 04. O registo de depuração está no passo 10 do exemplo guiado.
 
 No armazém da loja, o funcionário regista as entregas do dia. Escreve primeiro quantas entregas houve e depois, para cada entrega, o número de caixas que ela trouxe. O algoritmo deve mostrar o total de caixas recebidas no dia e quantas entregas foram grandes, isto é, de 10 ou mais caixas.
 
@@ -96,7 +96,7 @@ Escreve: "Entregas grandes: ", grandes
 
 O erro foi observado assim: na segunda-feira houve 2 entregas, a primeira de 12 caixas e a segunda de 4. O algoritmo escreveu "Total de caixas: 4" e "Entregas grandes: 1". O responsável do armazém contou 16 caixas.
 
-As quatro alíneas são os quatro primeiros passos do método, pela ordem do guia. A resposta a cada uma dá uma linha do registo de depuração, como o do passo 11 do exemplo guiado. Na linha da alínea c), basta escreveres o que a tabela de iterações mostrou. O quinto passo, voltar a testar tudo, está no Mais longe 5, que é opcional. Se o fizeres, junta ao registo a linha do novo teste. É esse registo que guardas no portefólio.
+As quatro alíneas são os quatro primeiros passos do método, pela ordem do guia. A resposta a cada uma dá uma linha do registo de depuração, como o do passo 10 do exemplo guiado. Na linha da alínea c), basta escreveres o que a tabela de iterações mostrou. O quinto passo, voltar a testar tudo, está no Mais longe 5, que é opcional. Se o fizeres, junta ao registo a linha do novo teste. É esse registo que guardas no portefólio.
 
 **a)** Observar o erro. Para cada uma das duas saídas, escreve o resultado esperado e o obtido, e diz qual está errada.
 
@@ -108,7 +108,7 @@ As quatro alíneas são os quatro primeiros passos do método, pela ordem do gui
 
 ## Exercício 3: Contar passos e melhorar sem mudar o resultado
 
-A matéria está nas secções "Contar passos" e "Estratégias simples para fazer menos passos" do guia, e nos passos 9 e 10 do exemplo guiado.
+A matéria está nas secções "Contar passos" e "Estratégias simples para fazer menos passos" do guia, e nos passos 8 e 9 do exemplo guiado.
 
 A loja separa as encomendas por peso, para escolher a caixa de envio. Até 999 gramas, a encomenda é leve. De 1000 a 4999 gramas, é média. De 5000 gramas para cima, é pesada. O funcionário escreve o peso de cada encomenda, em gramas, e escreve 0 quando acabar. Os pesos escritos são sempre positivos, e por isso não há validação.
 
@@ -145,7 +145,7 @@ Tens aqui a regra de contagem do guia, para a teres à mão:
 - conta um passo cada avaliação da condição de um `Se`, de um `Senão se` ou de um `Enquanto`. Conta também a última avaliação do `Enquanto`, a que dá falso;
 - as linhas `const` e o `Senão` não contam.
 
-**a)** Conta os passos do algoritmo para os pesos 500 e 7000, seguidos de 0. Conta por partes, numa tabela como a do passo 10 do exemplo guiado. A tabela tem uma linha para cada parte: antes do ciclo, cada iteração, a última avaliação da condição do ciclo e depois do ciclo. No fim, soma.
+**a)** Conta os passos do algoritmo para os pesos 500 e 7000, seguidos de 0. Conta por partes, numa tabela como a do passo 9 do exemplo guiado. A tabela tem uma linha para cada parte: antes do ciclo, cada iteração, a última avaliação da condição do ciclo e depois do ciclo. No fim, soma.
 
 **b)** Em cada iteração, o algoritmo avalia sempre as três condições, mas para um mesmo peso só uma delas pode ser verdadeira. Escreve uma versão melhorada em que as três perguntas formam uma só cadeia, com `Senão se` e `Senão`. Assim, o algoritmo não volta a perguntar o que já sabe. Basta escreveres a cadeia que substitui os três `Se`, que é a única parte que muda, em pseudocódigo ou em frases claras.
 
@@ -163,7 +163,7 @@ O cartão de cliente da papelaria dá pontos. Por cada compra, o cliente ganha 1
 
 **b)** Escreve o algoritmo, em pseudocódigo ou em frases claras que não deixem dúvidas. Se usares pseudocódigo, usa a constante `SENTINELA` e uma constante para cada valor fixo do enunciado. Os valores fixos são os 100 cêntimos, os 2000 cêntimos e os 10 pontos de bónus.
 
-Testar o algoritmo com a tabela que escreveste é a alínea c) do exercício 8, que é opcional.
+Testar o algoritmo com a tabela que escreveste é a alínea b) do exercício 8, que é opcional.
 
 ## Exercício 5: Ler uma função e as suas chamadas
 
@@ -243,13 +243,11 @@ Se fruta < MINIMO_FRUTA
 
 ## Exercício 8: Fecho do portefólio, opcional
 
-Os problemas completos do teu portefólio são os dois projetos deste tema. Este fecho é opcional. Junta ao exercício 4 as duas peças que lhe faltam para ser mais um problema completo: o contrato e os testes. É um bom treino antes da avaliação. Podes fazê-lo em casa ou quando acabares um projeto mais cedo. A alínea b) é de fluxogramas, e só a fazes quando o professor o indicar. A secção "O teu portefólio" do guia diz como organizar a pasta.
+Os problemas completos do teu portefólio são os dois projetos deste tema. Este fecho é opcional. Junta ao exercício 4 as duas peças que lhe faltam para ser mais um problema completo: o contrato e os testes. É um bom treino antes da avaliação. Podes fazê-lo em casa ou quando acabares um projeto mais cedo. A secção "O teu portefólio" do guia diz como organizar a pasta.
 
 **a)** No exercício 4, o enunciado fez de contrato. Escreve agora o contrato do problema, com as respostas às quatro perguntas do guia 01: entradas, saídas, restrições e condições. Escrevê-lo mostra se ficou alguma ambiguidade por decidir. Se ficar, escreve a decisão que tomaste e acerta a tabela antes de testar.
 
-**b)** Só quando o professor o indicar: desenha no diagrams.net o fluxograma do teu algoritmo do exercício 4, como no laboratório do tema 04. Guarda o ficheiro `.drawio` e exporta uma imagem PNG. Confirma, figura a figura, que o fluxograma diz exatamente o mesmo que o algoritmo que escreveste.
-
-**c)** Testa o algoritmo do exercício 4. Faz a tabela de iterações do teu caso normal e executa os outros casos da tua tabela. Acrescenta à tabela as colunas do resultado obtido e de se o teste passou. Se algum caso falhar, corrige o algoritmo com o método do guia. Guarda a versão com erro e a versão corrigida, e volta a executar a tabela inteira.
+**b)** Testa o algoritmo do exercício 4. Faz a tabela de iterações do teu caso normal e executa os outros casos da tua tabela. Acrescenta à tabela as colunas do resultado obtido e de se o teste passou. Se algum caso falhar, corrige o algoritmo com o método do guia. Guarda a versão com erro e a versão corrigida, e volta a executar a tabela inteira.
 
 ## Apoio
 
@@ -281,9 +279,7 @@ Só depois:
 
 **c)** Altera o algoritmo e diz quantas linhas mudaram.
 
-**d)** Só se fizeste o fluxograma do exercício 8: diz que figuras do fluxograma mudam, e se é preciso acrescentar alguma.
-
-**e)** Executa a tabela inteira na versão alterada.
+**d)** Executa a tabela inteira na versão alterada.
 
 No fim, compara as três mudanças: qual delas obrigou a acrescentar um ramo novo, e qual mudou mais resultados esperados sem mudar nenhuma estrutura? Escreve a tua conclusão em duas ou três frases.
 
@@ -409,7 +405,6 @@ Pista: faz o trace, linha a linha, até à primeira linha que usa uma variável 
 - [ ] Exercício 7: a minha versão tem uma função e três chamadas, e escreve, no dia da alínea c), exatamente as mesmas linhas que a original.
 - [ ] Nos exercícios 5 a 7, as minhas chamadas têm os argumentos pela ordem dos parâmetros.
 - [ ] Se fiz o exercício 8, o portefólio tem o enunciado do exercício 4 com o contrato, o algoritmo e a tabela de casos executada. Todos os casos passam. Tem também, ao lado, o registo de depuração do exercício 2.
-- [ ] Se o professor indicou a alínea b) do exercício 8, o fluxograma diz exatamente o mesmo que o algoritmo que escrevi, figura a figura.
 - [ ] Se guardei exercícios no portefólio, guardei as versões com erro e as versões corrigidas, cada uma no seu ficheiro.
 
 ## Autoavaliação

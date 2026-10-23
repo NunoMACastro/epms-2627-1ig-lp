@@ -32,7 +32,7 @@ Este projeto fica no teu portefólio e não conta para a avaliação prática, p
 Este projeto não traz nenhuma instrução nova de pseudocódigo. Usa o que aprendeste nos guias anteriores, sobretudo nos guias 03, 04 e 05, juntando-o num problema maior.
 
 - O contrato de um problema, com as quatro perguntas, e as ambiguidades, que se decidem e se escrevem: guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md).
-- A forma de pseudocódigo das aulas e o trace linha a linha: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
+- A forma de pseudocódigo das aulas e o trace linha a linha: guia [02 Pseudocódigo](02-pseudocodigo.md).
 - A cadeia `Se`, `Senão se`, `Senão`, em que a primeira condição verdadeira ganha: guia [03 Decisões e validação](03-decisoes-e-validacao.md).
 - Os operadores `e`, `ou` e `não`, incluindo o `não` à frente de uma variável `bool`, como em `não pago`, do guia 03.
 - Os intervalos e o contrário de um intervalo, escrito com `ou`, do guia 03.
@@ -238,7 +238,7 @@ Mostra ao professor antes de avançar: a tabela com todas as colunas e a respost
 
 ### Passo 7: depurar o que falhou
 
-A ferramenta está no guia 05, nas secções "Depurar com método" e "Corrigir a causa e não o sintoma". Está também no passo 11 do exemplo guiado, que tem o registo de depuração.
+A ferramenta está no guia 05, nas secções "Depurar com método" e "Corrigir a causa e não o sintoma". Está também no passo 10 do exemplo guiado, que tem o registo de depuração.
 
 Se algum caso falhou, não mudes linhas ao acaso. Segue os cinco passos do método:
 
@@ -296,7 +296,7 @@ Mostra ao professor antes de avançar: a hipótese, o trace, o nome do erro e a 
 
 ### Passo 10: teste de regressão e registo de depuração
 
-A ferramenta está no guia 05, no passo 5 de "Depurar com método", e no passo 11 do exemplo guiado.
+A ferramenta está no guia 05, no passo 5 de "Depurar com método", e no passo 10 do exemplo guiado.
 
 Uma correção pode estragar um caso que antes funcionava. Por isso, depois de corrigir, volta-se a testar tudo, e a isso chama-se **teste de regressão**. A tua tabela de casos da Parte 1 foi escrita a partir do contrato, e não a partir do teu algoritmo. Como o jogo é o mesmo, o contrato é o mesmo, e a tabela serve tal e qual para testar o algoritmo do colega. É uma das vantagens de escrever os casos antes. Uma tabela feita a partir do contrato testa qualquer algoritmo que resolva aquele problema.
 
@@ -326,7 +326,7 @@ Mostra ao professor antes de avançar: a parte melhorada, a explicação e os tr
 
 ### Passo 12: contar os passos antes e depois
 
-A ferramenta está no guia 05, na secção "Contar passos", e no passo 10 do exemplo guiado.
+A ferramenta está no guia 05, na secção "Contar passos", e no passo 9 do exemplo guiado.
 
 A regra de contagem do guia, para a teres à mão, é esta:
 

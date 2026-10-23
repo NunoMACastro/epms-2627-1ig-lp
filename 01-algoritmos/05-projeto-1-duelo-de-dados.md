@@ -37,7 +37,7 @@ Este projeto não traz matéria nova. Usa o que está nos guias 01 a 04 e nas pa
 - O contrato de um problema e as suas quatro perguntas: guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md). Está na secção "O contrato do problema: entradas, saídas, restrições e condições".
 - As ambiguidades de um enunciado: guia 01, secção "Instruções ambíguas". Quando o enunciado não diz o que acontece numa situação, não se inventa em silêncio. Decide-se, e escreve-se a decisão.
 - A decomposição de um problema em partes mais pequenas: guia 01, secção "Decompor um problema em subproblemas".
-- As variáveis, com o tipo à frente na linha onde nascem, e as constantes, escritas com `const`: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
+- As variáveis, com o tipo à frente na linha onde nascem, e as constantes, escritas com `const`: guia [02 Pseudocódigo](02-pseudocodigo.md).
 - A leitura com `ler valor` e a escrita no ecrã com `Escreve:`, do guia 02.
 - O trace, em que se executa um algoritmo à mão, instrução a instrução, do guia 02.
 - As comparações e a cadeia `Se`, `Senão se`, `Senão`: guia [03 Decisões e validação](03-decisoes-e-validacao.md).
@@ -49,7 +49,7 @@ Este projeto não traz matéria nova. Usa o que está nos guias 01 a 04 e nas pa
 - O padrão contador: guia 04, secção "Padrão contador".
 - A tabela de iterações, do guia 04. Cada linha é a fotografia do estado no momento em que o ciclo testa a condição.
 - Testar e depurar: guia [05 Testar, depurar e melhorar](05-testar-depurar-e-melhorar.md). Está da secção "Testar é comparar o obtido com o esperado" à secção "Corrigir a causa e não o sintoma".
-- O exemplo guiado do guia 05, o do inventário da papelaria. Os passos 1 a 7 seguem o mesmo processo deste projeto, e o passo 11 mostra um registo de depuração completo.
+- O exemplo guiado do guia 05, o do inventário da papelaria. Os passos 1 a 7 seguem o mesmo processo deste projeto, e o passo 10 mostra um registo de depuração completo.
 
 As partes do guia 05 sobre melhorar e contar passos, e a parte das funções, não são precisas aqui.
 
@@ -244,7 +244,7 @@ Um teste que falha é útil, como diz o guia 05. O erro apareceu no caderno, e n
 4. corrigir a causa;
 5. voltar a testar tudo.
 
-Cada passo do método dá uma linha do registo de depuração, como no passo 11 do exemplo guiado do guia 05. A coluna da direita diz o que se escreve em cada linha:
+Cada passo do método dá uma linha do registo de depuração, como no passo 10 do exemplo guiado do guia 05. A coluna da direita diz o que se escreve em cada linha:
 
 | Passo do método | O que se escreve |
 | --- | --- |

@@ -6,7 +6,7 @@ Ficha do tema Decisões e validação, do módulo Desenvolver algoritmos. Pratic
 
 ## O que precisas de saber
 
-O [guia do tema](03-decisoes-e-validacao.md) e o [laboratório](03-decisoes-e-validacao-laboratorio.md). Antes de começares, deves ter lido as secções da matéria e o exemplo guiado do guia. Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio. O laboratório é de fluxogramas e é opcional, e nenhum exercício obrigatório desta ficha precisa dele.
+O [guia do tema](03-decisoes-e-validacao.md). Antes de começares, deves ter lido as secções da matéria e o exemplo guiado do guia. Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
 
 ## Como trabalhar
 
@@ -22,9 +22,9 @@ Nenhum exercício é o exemplo guiado do guia com outros números. O exemplo mos
 | 4 | Planear a decisão de um pedido: reta, árvore de casos e tabela de casos esperados | Obrigatória |
 | 5 | Escrever o algoritmo desse pedido e segui-lo com quatro casos de teste | Obrigatória |
 | Desafio | Mudar uma regra de cada vez ao algoritmo do exercício 5 | Opcional |
-| Para ires mais longe | Os casos que costumam enganar, os outros três casos do exercício 5, o fluxograma do exercício 5 e testar o algoritmo de um colega | Opcional |
+| Para ires mais longe | Os casos que costumam enganar, os outros três casos do exercício 5 e testar o algoritmo de um colega | Opcional |
 
-Precisas de papel e lápis. O diagrams.net, em `https://app.diagrams.net/?lang=pt`, só é preciso para o fluxograma do exercício 5, no Mais longe 7. Esse exercício só o fazes quando o professor o indicar. Nesse caso, guarda os ficheiros na pasta `algoritmos`, com nomes em minúsculas, com hífenes e sem acentos.
+Precisas de papel e lápis.
 
 O que entregas:
 
@@ -118,11 +118,11 @@ Concluíste quando cada ponta da árvore tiver pelo menos um caso na tabela e ca
 
 ## Exercício 5: Escrever o algoritmo do pedido e segui-lo com quatro casos
 
-Continuas o problema do exercício 4, com a tua árvore e a tua tabela ao lado. A matéria está nos passos 6, 9 e 10 do exemplo guiado.
+Continuas o problema do exercício 4, com a tua árvore e a tua tabela ao lado. A matéria está nos passos 6, 8 e 9 do exemplo guiado.
 
 **a)** Escreve o algoritmo, em pseudocódigo ou em frases claras. O algoritmo lê primeiro a capacidade livre e depois a quantidade de caixas do pedido. Em pseudocódigo, usa uma constante para o número mínimo de caixas de um pedido. Faz a cadeia de `Se`, `Senão se` e `Senão` seguir a tua árvore, pergunta a pergunta. Em frases, segue a árvore pela mesma ordem. Confirma que cada frase diz os limites e o que acontece em cada caso, sem deixar dúvidas.
 
-**b)** Segue o teu algoritmo com quatro dos sete casos da tabela do exercício 4. Com a capacidade livre de 40, são os pedidos de 0, de 40 e de 41 caixas. O quarto é o caso da carrinha cheia, com capacidade livre 0 e um pedido de 1 caixa. Cada um destes quatro casos está junto de uma fronteira, e o da carrinha cheia é o único com outra capacidade livre. Usa uma tabela de resumo como a do passo 9 do exemplo guiado. Para cada caso, escreve o valor de cada condição avaliada, `true` ou `false`, o ramo executado e a mensagem que aparece no ecrã. Quando uma condição não chega a ser avaliada, escreve "não é avaliada". No fim, compara cada mensagem com a que a tua tabela espera, como no passo 10. Se algum caso não coincidir, diz qual é a condição responsável e corrige-a. Os outros três casos da tabela ficam para o Mais longe 6, que é opcional.
+**b)** Segue o teu algoritmo com quatro dos sete casos da tabela do exercício 4. Com a capacidade livre de 40, são os pedidos de 0, de 40 e de 41 caixas. O quarto é o caso da carrinha cheia, com capacidade livre 0 e um pedido de 1 caixa. Cada um destes quatro casos está junto de uma fronteira, e o da carrinha cheia é o único com outra capacidade livre. Usa uma tabela de resumo como a do passo 8 do exemplo guiado. Para cada caso, escreve o valor de cada condição avaliada, `true` ou `false`, o ramo executado e a mensagem que aparece no ecrã. Quando uma condição não chega a ser avaliada, escreve "não é avaliada". No fim, compara cada mensagem com a que a tua tabela espera, como no passo 9. Se algum caso não coincidir, diz qual é a condição responsável e corrige-a. Os outros três casos da tabela ficam para o Mais longe 6, que é opcional.
 
 Concluíste quando os quatro casos chegarem, cada um por um só ramo, à mensagem que a tua tabela espera.
 
@@ -134,7 +134,7 @@ Usa estas pistas pela ordem em que aparecem, e passa à seguinte só se a anteri
 - Exercício 2: calcula primeiro a comparação e escreve o resultado na terceira coluna. Depois procura, na tabela de verdade do guia, a linha que tem os mesmos dois valores. O `e` só dá verdadeiro quando as duas partes são verdadeiras, e o `ou` só dá falso quando as duas são falsas. Na alínea c), calcula primeiro o que está dentro dos parênteses e só depois aplica o `não`.
 - Exercício 3: desenha uma reta pequena para cada regra e marca os valores que a regra aceita. Em cada extremo, lê a regra com o próprio número: por exemplo, um cliente com exatamente 18 anos tem "mais de 18 anos"? Para a condição de recusa, marca na reta os valores que ficam de fora e pergunta-te que comparações os descrevem. Na alínea d), volta ao fim da secção "Intervalos" do guia.
 - Exercício 4: começa pela reta, e marca os sítios onde a resposta muda. Um desses sítios depende de um valor que o funcionário escreve. Experimenta desenhar a reta também para uma capacidade livre de 25, e vê o que muda. Para a árvore, sublinha no enunciado as mensagens que o algoritmo pode escrever. Depois compara com o passo 3 do exemplo guiado. Porque é que lá as duas regiões inválidas foram parar à mesma ponta?
-- Exercício 5: o pseudocódigo segue a tua árvore. Cada pergunta da árvore é uma condição da cadeia, pela mesma ordem, e cada ponta é um ramo, com a sua mensagem indentada por baixo. O `Senão se` e o `Senão` ficam encostados à margem, na coluna do `Se`. Escreve primeiro as leituras, pela ordem que o enunciado pede. Na alínea b), faz como no passo 9 do exemplo guiado. Para cada caso, calcula primeiro a condição do `Se`. Só se ela der `false` é que calculas a do `Senão se`, e só se as duas derem `false` é que chegas ao `Senão`.
+- Exercício 5: o pseudocódigo segue a tua árvore. Cada pergunta da árvore é uma condição da cadeia, pela mesma ordem, e cada ponta é um ramo, com a sua mensagem indentada por baixo. O `Senão se` e o `Senão` ficam encostados à margem, na coluna do `Se`. Escreve primeiro as leituras, pela ordem que o enunciado pede. Na alínea b), faz como no passo 8 do exemplo guiado. Para cada caso, calcula primeiro a condição do `Se`. Só se ela der `false` é que calculas a do `Senão se`, e só se as duas derem `false` é que chegas ao `Senão`.
 
 ## Desafio opcional
 
@@ -148,7 +148,7 @@ O desafio muda uma regra de cada vez ao problema dos exercícios 4 e 5. Cada al�
 
 ## Para ires mais longe
 
-Esta secção é opcional. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os cinco primeiros exercícios tratam casos que costumam enganar, e é por isso que não entraram na parte obrigatória. O sexto acaba o exercício 5 com os casos que ficaram fora da parte obrigatória. O sétimo é de fluxogramas, e só o fazes quando o professor o indicar. O oitavo faz-se com um colega.
+Esta secção é opcional. Não precisas de fazer nada daqui para concluíres a ficha. Serve para quem terminou a parte obrigatória e o desafio e quer mais prática, ou para estudar em casa. Os cinco primeiros exercícios tratam casos que costumam enganar, e é por isso que não entraram na parte obrigatória. O sexto acaba o exercício 5 com os casos que ficaram fora da parte obrigatória. O sétimo faz-se com um colega.
 
 ### Mais longe 1: Parênteses que mudam o resultado
 
@@ -272,7 +272,7 @@ Pista: não tentes adivinhar o erro a olhar para o código. Faz o trace de cada 
 
 ### Mais longe 6: Os outros três casos do exercício 5
 
-A matéria está nos passos 9 e 10 do exemplo guiado do guia.
+A matéria está nos passos 8 e 9 do exemplo guiado do guia.
 
 Na alínea b) do exercício 5 seguiste o teu algoritmo com quatro dos sete casos da tabela do exercício 4. Ficaram de fora três, todos com a capacidade livre de 40: os pedidos de 1, de 2 e de 39 caixas.
 
@@ -282,23 +282,13 @@ Na alínea b) do exercício 5 seguiste o teu algoritmo com quatro dos sete casos
 
 Pista: faz como no exercício 5. Calcula primeiro a condição do `Se`. Só se ela der `false` é que calculas a do `Senão se`, e só se as duas derem `false` é que chegas ao `Senão`.
 
-### Mais longe 7: O fluxograma do exercício 5
+### Mais longe 7: Testar o algoritmo de um colega
 
-Este exercício é de fluxogramas, e só o fazes quando o professor o indicar. A matéria está no passo 8 do exemplo guiado do guia e no [laboratório](03-decisoes-e-validacao-laboratorio.md).
-
-**a)** Desenha o fluxograma do teu algoritmo do exercício 5 no diagrams.net e guarda-o na pasta `algoritmos` como `fluxograma-aceitar-pedido.drawio`. Se fizeste o laboratório, não precisas de começar do zero. Abre o `fluxograma-classificar-nota.drawio`. Na barra de menus, escolhe "Ficheiro", "Abrir de" e o sítio onde o guardaste. Guarda uma cópia com o nome novo (Ficheiro, Guardar como...). Depois muda os textos e acrescenta as figuras que faltam para a segunda leitura. Exporta a imagem em PNG, com o nome `fluxograma-aceitar-pedido.png`.
-
-**b)** Segue com o dedo, no teu fluxograma, o caminho de cada um dos sete casos da tabela do exercício 4. Faz como na fase 3 do laboratório. Para cada caso, escreve a mensagem a que chegaste e confirma que é a mesma da tua tabela de casos esperados.
-
-Pista: conta as figuras antes de desenhar. Cada linha do pseudocódigo dá uma figura, tirando as linhas `const` e o `Senão`, e o Início e o Fim dão mais duas.
-
-### Mais longe 8: Testar o algoritmo de um colega
-
-A matéria está nos passos 4, 9 e 10 do exemplo guiado do guia.
+A matéria está nos passos 4, 8 e 9 do exemplo guiado do guia.
 
 Pede a um colega o algoritmo que ele escreveu no exercício 5, em pseudocódigo ou em frases. Usa a tabela de casos esperados que tu construíste no exercício 4, com os sete casos. Foi feita a partir do enunciado, antes de veres o algoritmo dele, e é isso que a torna um bom teste.
 
-**a)** Segue o algoritmo do teu colega com cada um dos teus sete casos. Usa uma tabela de resumo como a do passo 9 do exemplo guiado. Para cada caso, escreve o valor de cada condição avaliada, o ramo executado e o que aparece no ecrã.
+**a)** Segue o algoritmo do teu colega com cada um dos teus sete casos. Usa uma tabela de resumo como a do passo 8 do exemplo guiado. Para cada caso, escreve o valor de cada condição avaliada, o ramo executado e o que aparece no ecrã.
 
 **b)** Devolve-lhe a tabela preenchida, com o resultado esperado e o resultado obtido lado a lado, e não apenas a conclusão. Se algum caso não coincidir, aponta a condição responsável.
 
@@ -312,7 +302,6 @@ Pede a um colega o algoritmo que ele escreveu no exercício 5, em pseudocódigo 
 - [ ] A minha tabela tem casos abaixo, no e acima de cada limite, e pelo menos um caso por cada ponta da árvore.
 - [ ] Pus a validação antes de usar os valores.
 - [ ] Segui o meu algoritmo com os quatro casos do exercício 5, e cada um chegou, por um só ramo, à mensagem esperada.
-- [ ] Se fiz o Mais longe 7, cada losango do meu fluxograma tem `Sim` e `Não`, e os ramos juntam-se antes do fim.
 
 ## Autoavaliação
 

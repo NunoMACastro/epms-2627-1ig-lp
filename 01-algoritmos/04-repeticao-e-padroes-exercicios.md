@@ -10,8 +10,6 @@ O [guia do tema](04-repeticao-e-padroes.md), lido até ao fim. Cada exercício d
 
 No exercício 7 vais usar também o contrário de um intervalo, escrito com `ou`, que aprendeste no guia [03 Decisões e validação](03-decisoes-e-validacao.md).
 
-O [laboratório](04-repeticao-e-padroes-laboratorio.md) do tema é de fluxogramas e é opcional. Nenhum exercício obrigatório desta ficha depende dele.
-
 ## Como trabalhar
 
 Os exercícios 1 a 10 são obrigatórios. No fim da ficha há um desafio e uma secção "Para ires mais longe", os dois opcionais, para quem terminar.
@@ -261,8 +259,6 @@ Volta ao exercício 7 e muda uma só restrição: a pessoa passa a ter no máxim
 **b)** Depois do ciclo, o algoritmo tem de saber por qual das duas razões o ciclo terminou, para escrever a mensagem certa. Como é que sabe? Escreve essa parte do algoritmo. Atenção: há uma forma de decidir que parece certa e falha num dos casos de teste da alínea c).
 
 **c)** Monta a tabela de casos esperados, com pelo menos quatro casos. Tem de ter um valor válido à primeira, um valor válido à terceira tentativa, três valores inválidos e um extremo do intervalo. No caso dos três valores inválidos, confirma com a tabela de iterações que a leitura é executada exatamente 3 vezes, nem mais uma.
-
-**d)** Só quando o professor o indicar, porque é de fluxogramas: desenha o fluxograma, no papel ou no diagrams.net.
 
 ## Para ires mais longe
 

@@ -6,7 +6,7 @@ Ficha do tema Do problema ao algoritmo, do módulo Desenvolver algoritmos. Prati
 
 ## O que precisas de saber
 
-O [guia do tema](01-do-problema-ao-algoritmo.md). Este tema não tem laboratório.
+O [guia do tema](01-do-problema-ao-algoritmo.md).
 
 Antes de começares, deves conseguir explicar:
 
@@ -19,7 +19,7 @@ Se alguma destas ideias não estiver clara, volta à secção do guia que a expl
 
 ## Como trabalhar
 
-Resolve os exercícios pela ordem, em papel ou num editor de texto. Não precisas de computador para programar, porque nada nesta ficha se escreve numa linguagem de programação. Escreve os algoritmos em passos numerados, em português, como no exemplo guiado da papelaria. Cada passo faz uma só coisa, ou uma verificação com o que se faz em cada caso. O pseudocódigo e os fluxogramas são o assunto do tema seguinte, e aqui não são precisos.
+Resolve os exercícios pela ordem, em papel ou num editor de texto. Não precisas de computador para programar, porque nada nesta ficha se escreve numa linguagem de programação. Escreve os algoritmos em passos numerados, em português, como no exemplo guiado da papelaria. Cada passo faz uma só coisa, ou uma verificação com o que se faz em cada caso. O pseudocódigo é o assunto do tema seguinte, e aqui não é preciso.
 
 Os exercícios vão do mais simples para o mais completo. O primeiro pede só o contrato de um problema. O segundo pede que decomponhas um processo e encontres o que está mal escrito nele. O terceiro pede a análise completa de um problema novo, do contrato até à simulação.
 

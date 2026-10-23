@@ -43,7 +43,7 @@ No fim deste guia, consegues:
 - depurar um algoritmo com método: observar o erro, formular uma hipótese, verificá-la com o trace, corrigir a causa e voltar a testar tudo;
 - reconhecer os quatro erros mais frequentes: a fronteira mal posta, a atualização esquecida, a inicialização no sítio errado e o ramo em falta;
 - melhorar um algoritmo sem mudar o que ele faz, e contar os passos antes e depois da melhoria;
-- justificar uma solução completa que junta sequência, seleção e repetição, e reconhecê-la num fluxograma;
+- justificar uma solução completa que junta sequência, seleção e repetição;
 - escrever uma função com parâmetros, chamá-la com argumentos, seguir a chamada no trace e trocar por ela uma parte repetida de um algoritmo.
 
 ## O que já sabes e vais usar
@@ -53,15 +53,14 @@ No fim deste guia, consegues:
 - As ambiguidades de um enunciado, que se decidem e se escrevem no contrato: guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md).
 - O estado, a fotografia dos valores num dado momento: guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md).
 - A decomposição de um problema em partes mais pequenas: guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md).
-- As variáveis e os tipos, com o tipo à frente na linha onde a variável nasce, como em `int total = 0`: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
-- As constantes, escritas com `const`, como em `const SENTINELA = 0`: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
-- A atribuição com `=`, a leitura com `ler valor` e a escrita no ecrã com `Escreve:`: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
-- A divisão inteira, com `div` e `resto`: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
-- As funções predefinidas `abs`, `arredondar`, `truncar` e `raiz`, e o argumento, o valor que se lhes dá entre parênteses: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
-- Os símbolos do fluxograma e a maneira de o ler: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
-- A tabela de trace, onde executas um algoritmo à mão, instrução a instrução, com uma coluna por variável: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md). É a ferramenta principal deste guia.
-- A forma de pseudocódigo das aulas: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
-- Um algoritmo em frases claras também vale, se não deixar dúvidas: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
+- As variáveis e os tipos, com o tipo à frente na linha onde a variável nasce, como em `int total = 0`: guia [02 Pseudocódigo](02-pseudocodigo.md).
+- As constantes, escritas com `const`, como em `const SENTINELA = 0`: guia [02 Pseudocódigo](02-pseudocodigo.md).
+- A atribuição com `=`, a leitura com `ler valor` e a escrita no ecrã com `Escreve:`: guia [02 Pseudocódigo](02-pseudocodigo.md).
+- A divisão inteira, com `div` e `resto`: guia [02 Pseudocódigo](02-pseudocodigo.md).
+- As funções predefinidas `abs`, `arredondar`, `truncar` e `raiz`, e o argumento, o valor que se lhes dá entre parênteses: guia [02 Pseudocódigo](02-pseudocodigo.md).
+- A tabela de trace, onde executas um algoritmo à mão, instrução a instrução, com uma coluna por variável: guia [02 Pseudocódigo](02-pseudocodigo.md). É a ferramenta principal deste guia.
+- A forma de pseudocódigo das aulas: guia [02 Pseudocódigo](02-pseudocodigo.md).
+- Um algoritmo em frases claras também vale, se não deixar dúvidas: guia [02 Pseudocódigo](02-pseudocodigo.md).
 - As comparações (`==`, `!=`, `<`, `<=`, `>`, `>=`) e os operadores `e`, `ou` e `não`: guia [03 Decisões e validação](03-decisoes-e-validacao.md).
 - A seleção com `Se`, `Senão se` e `Senão`, e a regra de que, numa cadeia, a primeira condição verdadeira ganha: guia [03 Decisões e validação](03-decisoes-e-validacao.md).
 - A indentação, que mostra que instruções estão dentro de cada ramo: guia [03 Decisões e validação](03-decisoes-e-validacao.md).
@@ -426,13 +425,13 @@ Um aviso para as três estratégias. Nesta fase, um algoritmo claro vale mais do
 
 Todos os algoritmos que escreveste neste percurso são feitos de três estruturas, combinadas de formas diferentes. Está provado matematicamente, desde um artigo de Corrado Böhm e Giuseppe Jacopini publicado em 1966, que estas três estruturas chegam para escrever qualquer algoritmo. É por isso que são as primeiras que se aprendem, em qualquer linguagem.
 
-| Estrutura | Em pseudocódigo | No fluxograma | O que testar |
-| --- | --- | --- | --- |
-| Sequência | Instruções umas a seguir às outras, à mesma distância da margem, executadas todas, pela ordem escrita | Figuras em linha, ligadas por setas, sem bifurcações | Que cada variável recebe valor antes de ser usada, e que a ordem das instruções é a certa |
-| Seleção | `Se`, `Senão se`, `Senão`, com as instruções de cada ramo indentadas por baixo da sua condição | Losango com uma saída `Sim` e uma saída `Não`; os ramos voltam a juntar-se antes de continuar | Cada ramo pelo menos uma vez; cada fronteira abaixo, em cima e acima; os casos inválidos |
-| Repetição | `Enquanto` ou `Para`, com o corpo indentado por baixo | Losango com uma seta que volta atrás, para a condição | O caso zero, uma iteração e várias iterações; que o ciclo acaba; que a inicialização está antes e a atualização está dentro |
+| Estrutura | Em pseudocódigo | O que testar |
+| --- | --- | --- |
+| Sequência | Instruções umas a seguir às outras, à mesma distância da margem, executadas todas, pela ordem escrita | Que cada variável recebe valor antes de ser usada, e que a ordem das instruções é a certa |
+| Seleção | `Se`, `Senão se`, `Senão`, com as instruções de cada ramo indentadas por baixo da sua condição | Cada ramo pelo menos uma vez; cada fronteira abaixo, em cima e acima; os casos inválidos |
+| Repetição | `Enquanto` ou `Para`, com o corpo indentado por baixo | O caso zero, uma iteração e várias iterações; que o ciclo acaba; que a inicialização está antes e a atualização está dentro |
 
-As estruturas encaixam umas nas outras. Um `Se` pode estar dentro de um `Enquanto`, e então a decisão é tomada outra vez em cada iteração. Um `Se` pode estar dentro do `Senão` de outro `Se`, e então só é avaliado quando a primeira condição foi falsa. No pseudocódigo, é a indentação que mostra o que está dentro de quê. Cada nível de indentação são quatro espaços. Uma instrução indentada por baixo de um `Se` ou de um `Enquanto` está dentro dele. A primeira linha que volta a ficar mais à esquerda já está fora. Como não se escreve nenhuma linha a dizer onde um bloco acaba, a indentação é a única marca desse fim. Por isso vale a pena alinhá-la com cuidado. Viste nos quatro erros frequentes como uma linha que só muda de indentação muda o que o algoritmo faz. É também assim que funciona o Python, que vais usar na unidade seguinte. No fluxograma, a estrutura de dentro fica desenhada num dos caminhos da estrutura de fora. Por exemplo, o losango de um `Se` dentro de um ciclo fica no caminho do `Sim` do losango do ciclo. Fica antes da seta que volta atrás.
+As estruturas encaixam umas nas outras. Um `Se` pode estar dentro de um `Enquanto`, e então a decisão é tomada outra vez em cada iteração. Um `Se` pode estar dentro do `Senão` de outro `Se`, e então só é avaliado quando a primeira condição foi falsa. No pseudocódigo, é a indentação que mostra o que está dentro de quê. Cada nível de indentação são quatro espaços. Uma instrução indentada por baixo de um `Se` ou de um `Enquanto` está dentro dele. A primeira linha que volta a ficar mais à esquerda já está fora. Como não se escreve nenhuma linha a dizer onde um bloco acaba, a indentação é a única marca desse fim. Por isso vale a pena alinhá-la com cuidado. Viste nos quatro erros frequentes como uma linha que só muda de indentação muda o que o algoritmo faz. É também assim que funciona o Python, que vais usar na unidade seguinte.
 
 A última coluna da tabela é uma lista de verificação que podes usar sempre que testares um algoritmo completo. Olha para as estruturas que ele tem e, para cada uma, confirma que a tua tabela de casos tem os testes dessa linha.
 
@@ -445,15 +444,14 @@ O **portefólio** é a pasta onde juntas o trabalho que mostra o que aprendeste 
 - os testes: a tabela de casos esperados, com os resultados obtidos;
 - as correções: as versões com erro, os registos de depuração e as versões corrigidas.
 
-Se o professor indicar a parte de fluxogramas, junta-se uma quinta coisa, o fluxograma desenhado no diagrams.net, que se abre no browser, em `https://app.diagrams.net`. Os problemas completos deste tema são o [projeto 1](05-projeto-1-duelo-de-dados.md) e o [projeto 2](05-projeto-2-adivinha-o-numero.md). O exercício 4 da ficha, completado no exercício 8, o fecho do portefólio, e o registo de depuração do exercício 2 também podem lá ficar.
+Os problemas completos deste tema são o [projeto 1](05-projeto-1-duelo-de-dados.md) e o [projeto 2](05-projeto-2-adivinha-o-numero.md). O exercício 4 da ficha, completado no exercício 8, o fecho do portefólio, e o registo de depuração do exercício 2 também podem lá ficar.
 
 Os dois projetos não contam para a avaliação prática, porque são feitos com ajuda. O trabalho que fazes neles conta, como o das outras aulas, no empenho e na autonomia. O portefólio é consulta permitida na avaliação, e por isso vale a pena tê-lo arrumado.
 
 Algumas regras simples para o organizar:
 
-- Uma pasta chamada `portefolio-algoritmos`, com um ficheiro por peça. Os nomes dos ficheiros escrevem-se em minúsculas, com hífenes e sem acentos nem espaços, por exemplo `pontos-do-cartao-pseudocodigo.txt` e `pontos-do-cartao-testes.txt`. Se houver fluxograma, `pontos-do-cartao-fluxograma.drawio`.
+- Uma pasta chamada `portefolio-algoritmos`, com um ficheiro por peça. Os nomes dos ficheiros escrevem-se em minúsculas, com hífenes e sem acentos nem espaços, por exemplo `pontos-do-cartao-pseudocodigo.txt` e `pontos-do-cartao-testes.txt`.
 - Cada versão de um algoritmo num ficheiro próprio. Não escrevas a versão corrigida por cima da versão com erro, porque o portefólio mostra as duas.
-- Se fizeres o fluxograma no diagrams.net, guarda-o na barra de menus, em Ficheiro > Guardar como. No campo Onde, escolhe Aparelho ou Descarregar, para o ficheiro ficar no teu computador e não numa conta na internet. Para a imagem que podes juntar a um documento, usa Ficheiro > Exportar como > PNG. Com a janela estreita, as mesmas opções estão no botão redondo com reticências.
 - Os traces feitos em papel também contam. Fotografa-os ou passa-os a limpo, e junta-os aos testes do problema a que pertencem.
 
 ## Funções: dar nome a uma parte do algoritmo
@@ -734,7 +732,7 @@ Para saber o que vira parâmetro, compara os blocos repetidos, linha a linha, e 
 
 ## Exemplo guiado: o inventário da papelaria
 
-Este exemplo junta tudo o que viste nas secções de testar, depurar e melhorar. Tem um algoritmo com sequência, seleção e repetição, e a tabela de casos escrita antes dele. Tem um erro encontrado com o método, a correção da causa e o fluxograma. E acaba com uma melhoria, com os passos contados antes e depois. Não usa funções.
+Este exemplo junta tudo o que viste nas secções de testar, depurar e melhorar. Tem um algoritmo com sequência, seleção e repetição, e a tabela de casos escrita antes dele. Tem um erro encontrado com o método e a correção da causa. E acaba com uma melhoria, com os passos contados antes e depois. Não usa funções.
 
 ### O enunciado
 
@@ -941,48 +939,7 @@ Agora o teste de regressão: a tabela inteira outra vez, e não só o caso que f
 
 Depois do ciclo, o algoritmo escreve os quatro valores da última linha e, como `5 < 10` é verdadeiro, escreve também "Encomendar cadernos". Repara na coluna do `stock`. Na primeira iteração desce para 5, e é esse 5 que a condição da venda usa na segunda iteração. É isso que faltava na primeira versão.
 
-### Passo 8: o fluxograma da versão corrigida
-
-Como nos guias anteriores, este fluxograma é para leres e compreenderes. Mostra a versão 2 do algoritmo, desenhada. Desenhar fluxogramas é uma parte opcional, que só fazes quando o professor o indicar.
-
-```mermaid
-flowchart TD
-    A([Início]) --> B[/"Escreve: pergunta do stock"/]
-    B --> C[/"int stock = ler valor"/]
-    C --> D["int vendidas = 0"]
-    D --> E["int recusadas = 0"]
-    E --> F["int valorVendido = 0"]
-    F --> G[/"Escreve: pergunta da quantidade"/]
-    G --> H[/"int quantidade = ler valor"/]
-    H --> I{"quantidade != SENTINELA?"}
-    I -->|Sim| J{"quantidade < 0?"}
-    J -->|Sim| K[/"Escreve: Quantidade inválida"/]
-    J -->|Não| L{"quantidade <= stock?"}
-    L -->|Sim| M["stock = stock - quantidade"]
-    M --> N["vendidas = vendidas + quantidade"]
-    N --> O["valorVendido = valorVendido + quantidade * PRECO_CADERNO"]
-    L -->|Não| P[/"Escreve: Venda recusada e stock"/]
-    P --> Q["recusadas = recusadas + 1"]
-    K --> R[/"Escreve: pergunta da quantidade"/]
-    O --> R
-    Q --> R
-    R --> S[/"quantidade = ler valor"/]
-    S --> I
-    I -->|Não| T[/"Escreve: stock"/]
-    T --> U[/"Escreve: vendidas"/]
-    U --> V[/"Escreve: valorVendido"/]
-    V --> W[/"Escreve: recusadas"/]
-    W --> X{"stock < STOCK_MINIMO?"}
-    X -->|Sim| Y[/"Escreve: Encomendar cadernos"/]
-    X -->|Não| Z([Fim])
-    Y --> Z
-```
-
-Se não conseguires ver o desenho, o percurso é este. Do início, desce-se em linha reta pela pergunta do stock e pela leitura do stock. Seguem-se as três atribuições que põem os totais a zero, a pergunta da quantidade e a leitura da primeira quantidade. Chega-se ao losango do ciclo, `quantidade != SENTINELA?`. Pelo `Sim` entra-se no corpo do ciclo, que começa noutro losango, `quantidade < 0?`. Pelo `Sim` deste escreve-se "Quantidade inválida". Pelo `Não` chega-se a um terceiro losango, `quantidade <= stock?`. Pelo `Sim` deste, executam-se as três atualizações da venda aceite, começando pela do stock. Pelo `Não`, escreve-se a mensagem de recusa e soma-se 1 às recusadas. Os três caminhos juntam-se na pergunta da quantidade seguinte, lê-se a quantidade, e a seta volta atrás, para o losango do ciclo. Pelo `Não` do losango do ciclo, sai-se para os quatro `Escreve:` finais e para o último losango, `stock < STOCK_MINIMO?`. Este escreve o aviso pelo `Sim` e segue diretamente para o fim pelo `Não`.
-
-Compara com o pseudocódigo, figura a figura. O texto de cada figura é o texto da instrução, com o tipo à frente quando é a linha onde a variável nasce. As linhas `const` não têm figura, porque não são instruções executadas. O primeiro losango é o `Enquanto`, e reconhece-se por ser o único para onde volta uma seta. O segundo e o terceiro losangos são o `Se` e o `Senão se` da cadeia. Ficam os dois no caminho do `Sim` do ciclo, porque estão dentro dele. No pseudocódigo, estão indentados por baixo do `Enquanto`. Há um ponto onde os três caminhos da cadeia se juntam, antes da pergunta da quantidade seguinte. No pseudocódigo, corresponde à linha que volta a ter só quatro espaços depois das instruções do `Senão`. O retângulo `stock = stock - quantidade` é a correção do passo 6. No fluxograma da primeira versão, esta figura não existia. O caminho do `Sim` do terceiro losango passava diretamente para as vendidas.
-
-### Passo 9: melhorar sem mudar o que o algoritmo faz
+### Passo 8: melhorar sem mudar o que o algoritmo faz
 
 A versão 2 passa em todos os testes. Agora, e só agora, pergunta-se se ela faz trabalho desnecessário.
 
@@ -1030,7 +987,7 @@ O sítio da nova instrução é importante, e a indentação mostra-o. A linha e
 
 A equivalência mostra-se das duas maneiras. A primeira é pelos testes. Os sete casos da tabela, executados na versão 3, escrevem exatamente o mesmo ecrã que na versão 2. Isso inclui o caso 7, em que o ciclo não tem iterações. Aí, `vendidas` fica em 0, e o valor é 0 × 150, que é 0. A segunda é pela explicação. O valor vendido é sempre as unidades vendidas vezes o preço, pela propriedade distributiva. E depois do ciclo `vendidas` já não muda. Por isso, calcular uma vez no fim dá o mesmo que ir somando venda a venda.
 
-### Passo 10: contar os passos antes e depois
+### Passo 9: contar os passos antes e depois
 
 Conta-se por partes, com a regra da secção "Contar passos":
 
@@ -1062,14 +1019,14 @@ A diferença é sempre igual ao número de vendas aceites. A versão 3 poupa um 
 
 Nos casos da tabela, a diferença parece pequena. Num dia normal da papelaria, com 120 vendas aceites, são 120 passos a menos, e a diferença cresce com o número de vendas. E há o outro ganho de que falou a secção "Melhorar um algoritmo sem mudar o que ele faz". Na versão 3 há uma atualização a menos dentro do ciclo. Uma atualização que não existe é uma atualização que ninguém se pode esquecer de escrever. O erro que encontraste no passo 5 era exatamente desse tipo.
 
-### Passo 11: o que fica no portefólio
+### Passo 10: o que fica no portefólio
 
 Para este problema, o portefólio guarda:
 
 - o enunciado e o contrato;
 - a tabela de casos esperados;
 - a versão 1 e o registo de depuração do passo 5;
-- a versão 2, com o teste de regressão, e o seu fluxograma, se o professor tiver indicado a parte de fluxogramas;
+- a versão 2, com o teste de regressão;
 - a versão 3, com a explicação da equivalência e a contagem de passos.
 
 A versão com o erro não se deita fora. É a prova de que o encontraste e corrigiste. O registo de depuração deste exemplo, escrito como vais escrever os teus, é este:
@@ -1196,13 +1153,13 @@ A função ficou só com o primeiro `Escreve:`. O `Se` passou a ser a primeira i
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md). Este tema não tem laboratório.
+Para praticar este tema, faz a [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md).
 
 Depois vêm os dois projetos guiados, o [projeto 1, duelo de dados](05-projeto-1-duelo-de-dados.md), e o [projeto 2, adivinha o número](05-projeto-2-adivinha-o-numero.md).
 
-A unidade acaba com a avaliação prática, que é individual, dura 120 minutos e tem duas partes. Na primeira, recebes um problema novo e fazes o que fizeste nos projetos. Escreves o contrato, a tabela de casos esperados antes do algoritmo, o algoritmo e os testes. Lês também um fluxograma que te é dado, que segues com valores e comparas com o enunciado. Na segunda, recebes um algoritmo que outra pessoa escreveu para o mesmo problema, com um erro que já foi observado. Tens de o reproduzir, encontrar a causa, corrigi-la, voltar a testar e explicar a correção. Depois melhoras o algoritmo e comparas os passos antes e depois.
+A unidade acaba com a avaliação prática, que é individual, dura 120 minutos e tem duas partes. Na primeira, recebes um problema novo e fazes o que fizeste nos projetos. Escreves o contrato, a tabela de casos esperados antes do algoritmo, o algoritmo e os testes. Na segunda, recebes um algoritmo que outra pessoa escreveu para o mesmo problema, com um erro que já foi observado. Tens de o reproduzir, encontrar a causa, corrigi-la, voltar a testar e explicar a correção. Depois melhoras o algoritmo e comparas os passos antes e depois.
 
-Podes escrever os teus algoritmos em pseudocódigo, na forma que usamos nas aulas, ou em frases claras. Basta que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que se observa é a lógica. Observa-se se o algoritmo resolve o problema e se consegues seguir um fluxograma e dizer o que lhe falta. Observa-se também se os testes foram bem escolhidos e se consegues explicar uma correção. Não se classifica a forma da escrita, a beleza do fluxograma nem a rapidez. As regras sobre o que podes consultar e sobre o uso de ferramentas de inteligência artificial vêm escritas no enunciado. O professor mostra-te antes a grelha com os critérios. A melhor preparação são os dois projetos, que seguem os mesmos passos, e a ficha deste tema, sobretudo os exercícios 2 e 4. Os projetos ficam no teu portefólio, e podes consultá-los durante a avaliação. Depois da avaliação, há uma aula para veres o que correu bem e o que tens de rever.
+Podes escrever os teus algoritmos em pseudocódigo, na forma que usamos nas aulas, ou em frases claras. Basta que não deixem dúvidas sobre quanto, quando e o que acontece se não der. O que se observa é a lógica. Observa-se se o algoritmo resolve o problema, se os testes foram bem escolhidos e se consegues explicar uma correção. Não se classifica a forma da escrita nem a rapidez. As regras sobre o que podes consultar e sobre o uso de ferramentas de inteligência artificial vêm escritas no enunciado. O professor mostra-te antes a grelha com os critérios. A melhor preparação são os dois projetos, que seguem os mesmos passos, e a ficha deste tema, sobretudo os exercícios 2 e 4. Os projetos ficam no teu portefólio, e podes consultá-los durante a avaliação. Depois da avaliação, há uma aula para veres o que correu bem e o que tens de rever.
 
 Com este tema termina a unidade de algoritmos. A seguir começas a programar em Python, na unidade seguinte, e o primeiro tema é Do algoritmo ao programa. Os algoritmos e as tabelas de casos que escreveste aqui vão voltar. Primeiro, para os traduzires para uma linguagem que o computador executa. Depois, para os testares da mesma maneira. O método de depuração que aprendeste neste guia não muda quando o computador passa a executar por ti. Muda só quem faz o trace. As funções também voltam, no tema das funções do Python, onde vais aprender as que entregam um resultado a quem as chama.
 

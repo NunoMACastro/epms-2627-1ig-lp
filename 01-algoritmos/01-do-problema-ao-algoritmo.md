@@ -94,7 +94,7 @@ Há uma forma segura de testar se um conjunto de passos é mesmo um algoritmo. D
 
 ## Algoritmia e programação
 
-A **algoritmia** é o trabalho de pensar, escrever e verificar algoritmos. Não depende de nenhuma linguagem de programação. Um algoritmo pode escrever-se em português, em passos numerados, como o do armazém, ou num desenho com setas. Pode também escrever-se numa notação própria, o pseudocódigo, que vais aprender no tema seguinte.
+A **algoritmia** é o trabalho de pensar, escrever e verificar algoritmos. Não depende de nenhuma linguagem de programação. Um algoritmo pode escrever-se em português, em passos numerados, como o do armazém. Pode também escrever-se numa notação própria, o pseudocódigo, que vais aprender no tema seguinte.
 
 A **programação** é o trabalho de passar um algoritmo para uma linguagem de programação, como o Python, que o computador consegue executar. Nesta disciplina vais aprender as duas coisas, por esta ordem: primeiro algoritmos, nesta área, e depois Python.
 
@@ -361,7 +361,7 @@ Há também uma ordem entre eles. Chamar o próximo depende de já haver senhas 
 
 ### Passo 3: escrever os passos
 
-Agora escrevemos o algoritmo em passos numerados, em português. Cada passo faz uma só coisa, ou uma verificação com o que se faz em cada caso. Ainda não é pseudocódigo nem fluxograma. Essas duas formas de escrever algoritmos são o assunto do tema seguinte. Aqui, o objetivo é a precisão, e não a notação.
+Agora escrevemos o algoritmo em passos numerados, em português. Cada passo faz uma só coisa, ou uma verificação com o que se faz em cada caso. Ainda não é pseudocódigo. Essa forma de escrever algoritmos é o assunto do tema seguinte. Aqui, o objetivo é a precisão, e não a notação.
 
 Entregar senha:
 
@@ -669,9 +669,9 @@ Responde sem olhar para o guia. Se não conseguires responder a uma pergunta, vo
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md). Este tema não tem laboratório, porque tudo se faz em papel. O tema seguinte é [Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
+Para praticar este tema, faz a [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md). O tema seguinte é [Pseudocódigo](02-pseudocodigo.md).
 
-No tema seguinte vais aprender a escrever algoritmos numa notação própria, o pseudocódigo, e a lê-los num desenho com figuras e setas, o fluxograma. O estado, que aqui foram números numa tabela, passa a ter nomes próprios, chamados variáveis. A senha que está a ser atendida na papelaria vai chamar-se `senhaAtual`, e o número de pessoas à espera, `pessoasAEspera`. Os valores fixos do problema, como os 4 minutos de cada atendimento, passam a chamar-se constantes. E as tabelas do estado passam a chamar-se tabelas de trace.
+No tema seguinte vais aprender a escrever algoritmos numa notação própria, o pseudocódigo. O estado, que aqui foram números numa tabela, passa a ter nomes próprios, chamados variáveis. A senha que está a ser atendida na papelaria vai chamar-se `senhaAtual`, e o número de pessoas à espera, `pessoasAEspera`. Os valores fixos do problema, como os 4 minutos de cada atendimento, passam a chamar-se constantes. E as tabelas do estado passam a chamar-se tabelas de trace.
 
 O contrato continua a ser o primeiro passo de todos os problemas. Antes de escrever uma única instrução, vais sempre responder às quatro perguntas e escrever os exemplos. Guarda as análises que fizeres neste tema, na aula e na ficha, porque vais precisar delas no tema seguinte.
 

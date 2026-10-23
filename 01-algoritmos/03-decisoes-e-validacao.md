@@ -2,11 +2,11 @@
 
 # Decisões e validação
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que tomam decisões, isto é, que fazem uma coisa ou outra conforme os dados. Aprendes também a recusar os dados que não fazem sentido, antes de os usar. Lês o guia ao teu ritmo, em duas ou três vezes, com as previsões que ele te pede. Para praticar, há a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) e o [laboratório](03-decisoes-e-validacao-laboratorio.md) deste tema, que é de fluxogramas e só se faz quando o professor o indicar.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que tomam decisões, isto é, que fazem uma coisa ou outra conforme os dados. Aprendes também a recusar os dados que não fazem sentido, antes de os usar. Lês o guia ao teu ritmo, em duas ou três vezes, com as previsões que ele te pede. Para praticar, há a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) deste tema.
 
 No guia 02, todos os algoritmos faziam sempre as mesmas contas, fosse qual fosse a entrada. Neste guia passam a escolher o caminho. Se já trabalhaste na aula as instruções `Se`, `Senão se` e `Senão`, vais reconhecê-las. O guia retoma-as desde o princípio, na forma das aulas, porque são a base de tudo o resto. Depois acrescenta o que falta: os operadores `e`, `ou` e `não`, os intervalos, as fronteiras e a validação. Este tema ainda não repete instruções. Um algoritmo que recebe um valor errado avisa e termina, e voltar a pedir o valor é o assunto do tema seguinte.
 
-Para estudares este guia, tem à mão papel e lápis, porque vais desenhar retas de valores, árvores e tabelas. Os fluxogramas que aqui aparecem são para saberes o que são e como se leem. Desenhá-los, no papel ou numa aplicação, é opcional, e só o fazes quando o professor o indicar. Nenhum exercício obrigatório precisa de um fluxograma desenhado.
+Para estudares este guia, tem à mão papel e lápis, porque vais desenhar retas de valores, árvores e tabelas.
 
 ## Neste guia
 
@@ -44,7 +44,7 @@ No fim deste guia, consegues:
 
 - dizer se uma condição é verdadeira ou falsa para valores concretos, também no próprio limite, e distinguir `=` de `==`;
 - juntar condições com `e`, `ou` e `não`, e prever o resultado com as tabelas de verdade;
-- escrever seleções simples, compostas e encadeadas em pseudocódigo, com a indentação a mostrar o que fica dentro de cada decisão, e reconhecê-las num fluxograma;
+- escrever seleções simples, compostas e encadeadas em pseudocódigo, com a indentação a mostrar o que fica dentro de cada decisão;
 - escrever um intervalo de valores como condição, com cada extremo incluído ou excluído como o enunciado diz, e escrever também o seu contrário;
 - validar uma entrada, recusando o que está fora do domínio antes de o usar;
 - construir a árvore de casos e a tabela de casos esperados de um problema, com casos abaixo, no e acima de cada limite.
@@ -54,19 +54,18 @@ No fim deste guia, consegues:
 - O contrato de um problema: guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md), secção "O contrato do problema: entradas, saídas, restrições e condições".
 - As instruções ambíguas, e o que fazer quando o enunciado não diz uma coisa: guia [01](01-do-problema-ao-algoritmo.md), secção "Instruções ambíguas".
 - Os casos de fronteira, os valores exatamente em cima de um limite: guia [01](01-do-problema-ao-algoritmo.md), na mesma secção.
-- A forma do pseudocódigo das aulas, como `int quantidade = ler valor`: guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md), "A forma do pseudocódigo nas aulas".
-- Um algoritmo em frases claras, que não deixa dúvidas, também vale: guia [02](02-pseudocodigo-e-fluxogramas.md), na mesma secção.
-- A indentação, o recuo de quatro espaços que marca um bloco de instruções: guia [02](02-pseudocodigo-e-fluxogramas.md), na mesma secção.
-- Os tipos `int`, `float`, `string` e `bool`, e os valores `true` e `false`: guia [02](02-pseudocodigo-e-fluxogramas.md), secção "Tipos de dados".
-- Ler um valor com `ler valor` e escrever no ecrã com `Escreve:`: guia [02](02-pseudocodigo-e-fluxogramas.md), secção "Ler e escrever".
-- Dar um valor com um só `=`, que se lê "recebe": guia [02](02-pseudocodigo-e-fluxogramas.md), "Atribuição: dar um valor não é perguntar se é igual".
-- O estado, o valor das variáveis num dado momento: guia [02](02-pseudocodigo-e-fluxogramas.md), secção "Variáveis e estado".
-- As constantes, como `const LIMITE = 50`: guia [02](02-pseudocodigo-e-fluxogramas.md), secção "Constantes".
-- A ordem das operações numa conta, como em `2 + 3 * 4`: guia [02](02-pseudocodigo-e-fluxogramas.md), secção "Expressões aritméticas".
-- A sequência, em que os passos se fazem sempre pela mesma ordem: guia [02](02-pseudocodigo-e-fluxogramas.md), secção "Sequência".
-- Os símbolos do fluxograma, incluindo o losango: guia [02](02-pseudocodigo-e-fluxogramas.md), secção "Os símbolos do fluxograma".
-- A tabela de trace, com uma coluna por variável: guia [02](02-pseudocodigo-e-fluxogramas.md), secção "A tabela de trace".
-- Os casos de teste, as entradas escolhidas para testar um algoritmo, com o resultado calculado à mão: guia [02](02-pseudocodigo-e-fluxogramas.md), no passo 1 do exemplo.
+- A forma do pseudocódigo das aulas, como `int quantidade = ler valor`: guia [02 Pseudocódigo](02-pseudocodigo.md), "A forma do pseudocódigo nas aulas".
+- Um algoritmo em frases claras, que não deixa dúvidas, também vale: guia [02](02-pseudocodigo.md), na mesma secção.
+- A indentação, o recuo de quatro espaços que marca um bloco de instruções: guia [02](02-pseudocodigo.md), na mesma secção.
+- Os tipos `int`, `float`, `string` e `bool`, e os valores `true` e `false`: guia [02](02-pseudocodigo.md), secção "Tipos de dados".
+- Ler um valor com `ler valor` e escrever no ecrã com `Escreve:`: guia [02](02-pseudocodigo.md), secção "Ler e escrever".
+- Dar um valor com um só `=`, que se lê "recebe": guia [02](02-pseudocodigo.md), "Atribuição: dar um valor não é perguntar se é igual".
+- O estado, o valor das variáveis num dado momento: guia [02](02-pseudocodigo.md), secção "Variáveis e estado".
+- As constantes, como `const LIMITE = 50`: guia [02](02-pseudocodigo.md), secção "Constantes".
+- A ordem das operações numa conta, como em `2 + 3 * 4`: guia [02](02-pseudocodigo.md), secção "Expressões aritméticas".
+- A sequência, em que os passos se fazem sempre pela mesma ordem: guia [02](02-pseudocodigo.md), secção "Sequência".
+- A tabela de trace, com uma coluna por variável: guia [02](02-pseudocodigo.md), secção "A tabela de trace".
+- Os casos de teste, as entradas escolhidas para testar um algoritmo, com o resultado calculado à mão: guia [02](02-pseudocodigo.md), no passo 1 do exemplo.
 
 ## Algoritmos que escolhem o caminho
 
@@ -206,18 +205,7 @@ Aqui a segunda mensagem também está indentada, e por isso passou para dentro d
 
 É por isso que, a partir deste tema, cada linha se indenta com cuidado, sempre com quatro espaços por nível. A indentação é a única coisa que mostra o que está dentro de uma decisão e o que está fora. O Python, que vais aprender a seguir, funciona exatamente da mesma maneira. Imagina que suspeitas que uma linha que devia executar-se sempre ficou dentro da seleção. Faz o trace com um valor que siga o outro caminho, como o 12, e vê se ela aparece. Para evitares este engano, indenta só o que depende da condição, e deixa o resto alinhado com o `Se`.
 
-No fluxograma, a condição é o **losango**, a figura que o guia 02 apresentou e que ainda não tinhas usado. O losango tem uma entrada e duas saídas. Uma saída está marcada `Sim`, para quando a condição é verdadeira, e a outra está marcada `Não`, para quando é falsa. É o primeiro exemplo, desenhado:
-
-```mermaid
-flowchart TD
-    A{"stock < 5?"} -->|Sim| B[/"Escreve: #quot;Atenção: stock baixo#quot;"/]
-    A -->|Não| C[/"Escreve: #quot;Verificação concluída#quot;"/]
-    B --> C
-```
-
-Descrição do fluxograma: do losango `stock < 5?` saem duas setas. A seta `Sim` leva a um paralelogramo que escreve "Atenção: stock baixo". Desse paralelogramo sai uma seta para o paralelogramo que escreve "Verificação concluída". A seta `Não` vai diretamente para esse mesmo paralelogramo, sem passar pelo aviso. Os dois caminhos juntam-se no paralelogramo de "Verificação concluída". No pseudocódigo, esse ponto de encontro corresponde à primeira linha que volta a estar alinhada com o `Se`.
-
-A cada um dos caminhos que saem de um losango chama-se **ramo**. Numa seleção simples, o ramo do `Não` não tem nenhuma figura: vai direto ao ponto onde os ramos se juntam. No pseudocódigo, um ramo é o que está indentado por baixo da linha que o abre. No exemplo do stock, o ramo do `Se` é a linha do aviso.
+A cada um dos caminhos que uma decisão pode seguir chama-se **ramo**. No pseudocódigo, um ramo é o que está indentado por baixo da linha que o abre. No exemplo do stock, o ramo do `Se` é a linha do aviso. Numa seleção simples, quando a condição é falsa, não há nada a fazer. O algoritmo salta o ramo e segue para a primeira linha que volta a estar alinhada com o `Se`.
 
 ## Seleção composta
 
@@ -254,16 +242,6 @@ Com exatamente 8 pessoas, `8 > 8` é falso, e aparece "Manter uma só caixa". S�
 Leitura guiada: lê primeiro a condição do `Se`. Depois procura, na mesma coluna, o `Senão` que lhe pertence. Cada um tem a sua mensagem, indentada por baixo. Para cada valor, avalias a condição uma vez. Se der `true`, executas o ramo do `Se` e saltas o do `Senão`. Se der `false`, saltas o do `Se` e executas o do `Senão`.
 
 Numa seleção composta executa-se sempre exatamente um dos dois blocos, nunca os dois e nunca nenhum. Não há nenhum número de pessoas para o qual apareçam as duas mensagens, nem nenhum para o qual não apareça nenhuma.
-
-```mermaid
-flowchart TD
-    A{"pessoasNaFila > 8?"} -->|Sim| B[/"Escreve: #quot;Abrir a segunda caixa#quot;"/]
-    A -->|Não| C[/"Escreve: #quot;Manter uma só caixa#quot;"/]
-    B --> D["instrução a seguir à seleção"]
-    C --> D
-```
-
-Descrição do fluxograma: do losango `pessoasNaFila > 8?` saem duas setas. A seta `Sim` leva ao paralelogramo que escreve "Abrir a segunda caixa". A seta `Não` leva ao paralelogramo que escreve "Manter uma só caixa". Dos dois paralelogramos saem setas para a mesma figura, a instrução que vem a seguir à seleção. No pseudocódigo, essa instrução é a primeira linha que volta a estar alinhada com o `Se` depois do ramo do `Senão`. Aqui os dois ramos têm uma figura cada um, e voltam a juntar-se antes de o algoritmo continuar.
 
 ## Seleção encadeada
 
@@ -336,19 +314,6 @@ Lê as sete linhas uma a uma, olhando para a coluna onde cada uma começa:
 A regra que sai desta tabela é simples. O `Senão se` e o `Senão` escrevem-se sempre na mesma coluna do `Se` a que pertencem. É por estarem nessa coluna que se sabe que continuam a mesma cadeia. O que está dentro de cada ramo fica quatro espaços mais para dentro. A cadeia acaba quando aparece, na coluna do `Se`, uma linha que não começa por `Senão se` nem por `Senão`. Essa linha já está fora da cadeia. Não há nenhuma palavra a fechar a cadeia, e não é precisa, porque a indentação já mostra tudo.
 
 Com o stock a valer 0, 3 ou 9, a linha 7 aparece sempre no ecrã, depois da mensagem do ramo escolhido. Numa cadeia destas executa-se sempre, no máximo, um ramo. Com `Senão` no fim, executa-se sempre exatamente um.
-
-```mermaid
-flowchart TD
-    A{"stock == 0?"} -->|Sim| B[/"Escreve: #quot;Esgotado#quot;"/]
-    A -->|Não| C{"stock < 5?"}
-    C -->|Sim| D[/"Escreve: #quot;Stock baixo#quot;"/]
-    C -->|Não| E[/"Escreve: #quot;Stock normal#quot;"/]
-    B --> F["instrução a seguir à cadeia"]
-    D --> F
-    E --> F
-```
-
-Descrição do fluxograma: há dois losangos. Do primeiro, `stock == 0?`, a seta `Sim` leva ao paralelogramo "Esgotado" e a seta `Não` leva ao segundo losango, `stock < 5?`. Do segundo losango, a seta `Sim` leva ao paralelogramo "Stock baixo" e a seta `Não` leva ao paralelogramo "Stock normal". Os três paralelogramos têm setas para a mesma figura, a instrução a seguir à cadeia. No exemplo com sete linhas, essa instrução seria a de "Verificação concluída". O segundo losango está pendurado na saída `Não` do primeiro. É assim que se desenha um `Senão se`, porque só se chega a ele quando a primeira condição é falsa.
 
 ## Operador `e`
 
@@ -590,7 +555,7 @@ Pergunta 1: stock == 0?
           └── Não → "Stock normal"
 ```
 
-A árvore tem três pontas, e por isso o algoritmo tem três resultados possíveis. Cada ponta corresponde a um ramo do pseudocódigo e a um caminho do fluxograma, do início até ao fim. Se desenhares o fluxograma e contares mais ou menos caminhos do que pontas na árvore, uma das duas representações está errada. Por isso, desenha primeiro a árvore e confirma que cada ponta tem o seu caminho.
+A árvore tem três pontas, e por isso o algoritmo tem três resultados possíveis. Cada ponta corresponde a um ramo do pseudocódigo. Se contares no pseudocódigo mais ou menos ramos do que pontas na árvore, um dos dois está errado. Por isso, desenha primeiro a árvore e confirma que cada ponta tem o seu ramo.
 
 A **tabela de casos esperados** é a lista das entradas com que vais testar o algoritmo. Cada entrada tem o resultado que o algoritmo deve dar e a razão por que foi escolhida. Já a conheces. É a parte "exemplos concretos" do contrato, do guia 01, que já tinha casos em cima das fronteiras. A diferença é que, numa decisão, os casos deixam de se escolher a olho. A tabela constrói-se antes do algoritmo, a partir do enunciado. Constrói-se antes porque, com o algoritmo à frente, é fácil escolher resultados que concordam com ele. Aí a tabela deixa de apanhar os seus erros. Tem duas regras:
 
@@ -759,7 +724,7 @@ Este é o algoritmo na forma que usamos nas aulas. O mesmo algoritmo, escrito em
 
 > Pergunta a nota do teste, um número inteiro de 0 a 20, e lê-a. Se a nota for menor do que 0 ou maior do que 20, escreve "Nota inválida" e não faz mais nada. Se não for, e se a nota for 10 ou mais, escreve "Positiva". Em todos os outros casos, escreve "Negativa".
 
-Repara no que estas frases têm para não deixarem dúvidas. Dizem os limites, com números, o que acontece exatamente no 10 e o que acontece quando a nota não serve. Uma frase como "se a nota for boa, escreve Positiva" não chegava. Não diz a partir de quanto é boa, e cada pessoa que a lesse podia decidir de maneira diferente. Nesta fase, o que conta é a lógica. Se ela estiver toda lá, sem ambiguidades, a maneira de a escrever é secundária. O pseudocódigo tem uma vantagem, que vais sentir nos passos seguintes. É mais curto, e cada linha corresponde a uma figura do fluxograma e a um passo do trace.
+Repara no que estas frases têm para não deixarem dúvidas. Dizem os limites, com números, o que acontece exatamente no 10 e o que acontece quando a nota não serve. Uma frase como "se a nota for boa, escreve Positiva" não chegava. Não diz a partir de quanto é boa, e cada pessoa que a lesse podia decidir de maneira diferente. Nesta fase, o que conta é a lógica. Se ela estiver toda lá, sem ambiguidades, a maneira de a escrever é secundária. O pseudocódigo tem uma vantagem, que vais sentir nos passos seguintes. É mais curto, e cada linha corresponde a um passo do trace.
 
 ### Passo 7: A validação vem primeiro
 
@@ -778,35 +743,7 @@ Com a nota 21, a primeira condição pergunta se 21 é maior ou igual a 10. É v
 
 Repara num pormenor que torna este erro traiçoeiro. Com a nota -1, esta versão errada responde bem. A nota -1 não é maior ou igual a 10, a primeira condição é falsa, e passa-se à validação, que é verdadeira. Aparece "Nota inválida". Quem testasse só -1 como caso inválido ficava convencido de que a validação funcionava. É por isso que a tabela de casos tem um caso inválido de cada lado da escala.
 
-### Passo 8: O fluxograma
-
-```mermaid
-flowchart TD
-    A([Início]) --> B[/"Escreve: pergunta"/]
-    B --> C[/"int nota = ler valor"/]
-    C --> D{"nota < NOTA_MINIMA ou nota > NOTA_MAXIMA?"}
-    D -->|Sim| E[/"Escreve: #quot;Nota inválida#quot;"/]
-    D -->|Não| F{"nota >= LIMIAR_POSITIVA?"}
-    F -->|Sim| G[/"Escreve: #quot;Positiva#quot;"/]
-    F -->|Não| H[/"Escreve: #quot;Negativa#quot;"/]
-    E --> Z([Fim])
-    G --> Z
-    H --> Z
-```
-
-Descrição do fluxograma: do oval de início desce-se para um paralelogramo que escreve a pergunta e para outro que lê a nota, com `int nota = ler valor`. Segue-se o primeiro losango, com a condição `nota < NOTA_MINIMA ou nota > NOTA_MAXIMA?`. A sua seta `Sim` leva ao paralelogramo que escreve "Nota inválida". A sua seta `Não` leva ao segundo losango, com a condição `nota >= LIMIAR_POSITIVA?`. Deste, a seta `Sim` leva ao paralelogramo "Positiva" e a seta `Não` leva ao paralelogramo "Negativa". Dos três paralelogramos de resultado saem setas para o mesmo oval de fim, que é onde os três caminhos se juntam.
-
-As três linhas `const` do pseudocódigo não têm figura no fluxograma, como a constante do guia 02. Não fazem nada com os dados. Dão nome a valores fixos, e esses nomes aparecem dentro dos losangos, onde são usados.
-
-Segue com o dedo o caminho de uma entrada inválida, como 21. Depois de ler a nota, chegas ao primeiro losango. A condição é verdadeira e sais pelo `Sim`. Mostras "Nota inválida" e segues diretamente para o fim, sem passar pelo segundo losango. É o desenho da regra "a primeira condição verdadeira ganha". O segundo losango está no caminho do `Não`, e por isso só é visitado por notas válidas.
-
-Agora segue o caminho de 10. No primeiro losango a condição é falsa e sais pelo `Não`. No segundo losango, 10 é maior ou igual a 10, sais pelo `Sim` e mostras "Positiva". Com 9 farias o mesmo caminho até ao segundo losango e sairias pelo `Não`, para "Negativa".
-
-Compara o desenho com o pseudocódigo e com a árvore. O primeiro losango é o `Se` e a pergunta 1 da árvore. O segundo losango, pendurado no `Não` do primeiro, é o `Senão se` e a pergunta 2. A figura do `Não` do segundo losango é o ramo do `Senão`. O ponto onde os três caminhos se juntam é o sítio onde, no pseudocódigo, a cadeia acaba. Como aqui não há mais nenhuma linha depois dela, esse ponto é o Fim, que é um só. Há três caminhos possíveis do início ao fim, um por cada ponta da árvore, e cada entrada percorre exatamente um deles.
-
-Se o professor indicar o laboratório deste tema, que é opcional, é este o fluxograma que vais desenhar no diagrams.net. Depois segues nele, com o dedo, os nove casos da tabela do passo 4.
-
-### Passo 9: O trace dos casos de fronteira
+### Passo 8: O trace dos casos de fronteira
 
 Primeiro, o trace completo de duas entradas, instrução a instrução. As constantes não têm coluna, porque nunca mudam. As três linhas `const` do início também não têm passo na tabela, porque só dão nome a valores fixos. O trace começa na instrução a seguir a elas. Numa linha com uma condição, a coluna "Condição e resultado" mostra a condição com os valores substituídos e o resultado da avaliação.
 
@@ -861,7 +798,7 @@ O 20 é positiva, e não inválida, porque `20 > 20` é falso: vinte não é mai
 
 Em todas as fronteiras, a decisão é tomada por um único operador. O operador com igual e o operador sem igual só dão resultados diferentes no próprio limite.
 
-### Passo 10: Comparar com o previsto
+### Passo 9: Comparar com o previsto
 
 Compara a coluna "Ecrã" da tabela anterior com a coluna "Resultado esperado" da tabela do passo 4. Coincidem nos nove casos. O algoritmo cumpre o enunciado em todas as fronteiras e em todas as regiões da reta. Se algum caso não coincidisse, o trace mostraria a condição que deu um resultado diferente do que devia. É essa condição que se corrigia.
 
@@ -944,14 +881,6 @@ O que se vê: `total == total + 1`, a querer somar 1. No trace, nessa linha a va
 
 O que se vê: alguém responde `"s"`, com minúscula, e o algoritmo trata a resposta como se não fosse `"S"`. Acontece porque dois textos só são iguais com os mesmos caracteres, incluindo as maiúsculas. Para o encontrares, escreve os dois textos lado a lado, carácter a carácter. Para o evitares, vê no enunciado que texto é aceite e compara exatamente com esse.
 
-### Um losango com uma só saída, ou com saídas sem `Sim` e `Não`
-
-O que se vê: um losango de onde só sai uma seta, ou duas setas sem nome. Quem segue o fluxograma com o dedo não sabe por onde ir. Acontece quando se esquece que uma condição tem sempre duas respostas. Para o encontrares, aponta para cada losango e conta as setas que saem dele. Para o corrigires, garante que todo o losango tem duas setas de saída, uma com `Sim` e outra com `Não`.
-
-### Ramos que acabam cada um no seu fim
-
-O que se vê: um fluxograma com três ovais de Fim, um no fim de cada ramo. Acontece quando cada ramo se desenha até ao fim sem pensar no resto do algoritmo. Um fluxograma tem um só início e um só fim. Os ramos de uma decisão voltam a juntar-se antes de o algoritmo continuar, como no passo 8 do exemplo guiado. Para o encontrares, segue os caminhos com o dedo e vê onde cada um termina.
-
 ## Palavras novas deste guia
 
 - Algoritmo sequencial: um algoritmo que executa sempre as mesmas instruções, pela mesma ordem, fosse qual fosse a entrada.
@@ -961,8 +890,7 @@ O que se vê: um fluxograma com três ovais de Fim, um no fim de cada ramo. Acon
 - Seleção simples: a seleção que executa um bloco quando a condição é verdadeira e não faz nada quando é falsa.
 - Seleção composta: a seleção que escolhe entre dois blocos, um com `Se` e outro com `Senão`.
 - Seleção encadeada: a seleção com `Senão se`, que escolhe entre vários ramos; a primeira condição verdadeira ganha.
-- Losango: a figura do fluxograma que tem a condição, com uma entrada e duas saídas, `Sim` e `Não`.
-- Ramo: cada um dos caminhos que saem de um losango; no pseudocódigo, o que está indentado por baixo da linha que o abre.
+- Ramo: cada um dos caminhos que uma decisão pode seguir; no pseudocódigo, o que está indentado por baixo da linha que o abre.
 - Operadores lógicos: `e`, `ou` e `não`, que juntam ou trocam condições para formar uma condição maior.
 - Tabela de verdade: a tabela que mostra o resultado de um operador lógico para todas as combinações possíveis.
 - Intervalo: o conjunto de valores entre dois limites.
@@ -1016,7 +944,7 @@ Responde numa folha, ao teu ritmo.
 
     a) Escreve os seis casos de teste: o valor abaixo, o próprio limite e o valor acima de cada limite. Ao lado de cada um, escreve a mensagem que o enunciado pede.
 
-    b) Faz o trace do algoritmo com cada caso, numa tabela de resumo como a do passo 9 do exemplo guiado. A tabela mostra o valor de cada condição avaliada e o que aparece no ecrã.
+    b) Faz o trace do algoritmo com cada caso, numa tabela de resumo como a do passo 8 do exemplo guiado. A tabela mostra o valor de cada condição avaliada e o que aparece no ecrã.
 
     c) Escreve que entradas revelam o erro, o que o algoritmo faz com elas, qual é a condição responsável e como a corrigias.
 
@@ -1024,7 +952,7 @@ Responde numa folha, ao teu ritmo.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md). O [laboratório](03-decisoes-e-validacao-laboratorio.md) é de fluxogramas e é opcional: só o fazes quando o professor o indicar, e nesse caso faz-se antes da ficha. Nele desenhas no diagrams.net o fluxograma do exemplo guiado. Tem os losangos, as setas `Sim` e `Não` e o ponto onde os ramos se juntam. Depois segues nele, com o dedo, cada caso da tabela do passo 4.
+Para praticar este tema, faz a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md).
 
 O tema seguinte é Repetição e padrões. No algoritmo deste guia, uma nota inválida termina o algoritmo com uma mensagem, e quem se enganou tem de começar tudo outra vez. Seria mais útil o algoritmo voltar a pedir a nota até receber uma válida. Para isso tem de repetir instruções, e até agora cada instrução executava-se no máximo uma vez. No tema seguinte vais aprender a escrever repetições, a contar e a somar valores ao longo delas, e a garantir que uma repetição acaba.
 

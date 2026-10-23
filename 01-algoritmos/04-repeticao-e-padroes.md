@@ -2,11 +2,9 @@
 
 # Repetição e padrões
 
-Módulo Desenvolver algoritmos. Este guia explica como se escreve um algoritmo que repete instruções, e como se controla quantas vezes as repete. Explica também cinco padrões que vais usar em quase todos os algoritmos daqui para a frente. E explica os arrays, que guardam muitos valores numa só variável. Lês o guia ao teu ritmo, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há o [laboratório](04-repeticao-e-padroes-laboratorio.md) e a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Este guia explica como se escreve um algoritmo que repete instruções, e como se controla quantas vezes as repete. Explica também cinco padrões que vais usar em quase todos os algoritmos daqui para a frente. E explica os arrays, que guardam muitos valores numa só variável. Lês o guia ao teu ritmo, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md) deste tema.
 
 Até agora, cada instrução dos teus algoritmos executava-se uma vez, ou nenhuma. Neste tema, a mesma instrução passa a poder executar-se muitas vezes seguidas. Há muitas ideias novas, e por isso a teoria é longa. O professor dá-a por partes, nas aulas, com traces no quadro, e o guia fica contigo para a releres com calma. Cada secção explica a mesma ideia por mais do que um caminho.
-
-Os fluxogramas aparecem para os leres e os comparares com o pseudocódigo. Desenhá-los é opcional, e só o fazes quando o professor o indicar, no laboratório deste tema.
 
 ## Neste guia
 
@@ -19,27 +17,26 @@ Os fluxogramas aparecem para os leres e os comparares com o pseudocódigo. Desen
 7. As três peças de um ciclo
 8. O trace linha a linha do primeiro ciclo
 9. A tabela de iterações
-10. A seta que volta ao losango
-11. O ciclo que nunca começa
-12. O ciclo que nunca acaba
-13. Para: a forma curta do ciclo contado
-14. Padrão contador
-15. Padrão totalizador
-16. Padrão sentinela
-17. Padrão validação repetida
-18. Escolher entre Enquanto e Para
-19. Arrays: muitos valores numa só variável
-20. Percorrer um array com o índice
-21. Percorrer um array com o para cada
-22. O para cada não muda o array
-23. Padrão flag
-24. Quando já estiveres à vontade: o Para com as três peças à vista
-25. Exemplo guiado: contar pedidos válidos e totalizar unidades
-26. Erros frequentes
-27. Palavras novas deste guia
-28. Verificar o que aprendeste
-29. O que vem a seguir
-30. Para saber mais
+10. O ciclo que nunca começa
+11. O ciclo que nunca acaba
+12. Para: a forma curta do ciclo contado
+13. Padrão contador
+14. Padrão totalizador
+15. Padrão sentinela
+16. Padrão validação repetida
+17. Escolher entre Enquanto e Para
+18. Arrays: muitos valores numa só variável
+19. Percorrer um array com o índice
+20. Percorrer um array com o para cada
+21. O para cada não muda o array
+22. Padrão flag
+23. Quando já estiveres à vontade: o Para com as três peças à vista
+24. Exemplo guiado: contar pedidos válidos e totalizar unidades
+25. Erros frequentes
+26. Palavras novas deste guia
+27. Verificar o que aprendeste
+28. O que vem a seguir
+29. Para saber mais
 
 ## O que vais aprender
 
@@ -55,28 +52,25 @@ No fim deste guia, consegues:
 - usar o contador, o totalizador, a sentinela, a validação repetida e a flag, cinco padrões que vais encontrar em quase todos os algoritmos;
 - escolher entre `Enquanto` e `Para` e justificar a escolha;
 - criar um array e percorrê-lo com o índice e com o para cada;
-- explicar porque é que mudar a variável do para cada não muda o array;
-- reconhecer um ciclo num fluxograma, pela seta que volta atrás até ao losango da condição.
+- explicar porque é que mudar a variável do para cada não muda o array.
 
 ## O que já sabes e vais usar
 
 - O contrato de um problema: as entradas, as saídas, as restrições e as condições, explicado no guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md).
 - Os exemplos concretos do contrato, cada um com o resultado esperado, do mesmo guia.
 - O estado, os valores que descrevem uma situação num momento, como uma fotografia, do mesmo guia. Neste guia, essa fotografia vai ser tirada muitas vezes seguidas.
-- As variáveis, as constantes, como `const ULTIMA_SENHA = 3`, e os tipos `int`, `float`, `string` e `bool`, do guia [02 Pseudocódigo e fluxogramas](02-pseudocodigo-e-fluxogramas.md).
+- As variáveis, as constantes, como `const ULTIMA_SENHA = 3`, e os tipos `int`, `float`, `string` e `bool`, do guia [02 Pseudocódigo](02-pseudocodigo.md).
 - A forma do pseudocódigo das aulas, sem cabeçalho nem marcas de início e de fim, do mesmo guia.
 - O tipo à frente de cada variável na linha onde ela nasce, como em `int total = 0`, e depois só o nome, do mesmo guia.
 - A leitura de um valor com `ler valor` e a escrita no ecrã com `Escreve:`, do mesmo guia.
 - Dar um valor com um só `=`, como em `total = total + 5`, que se lê "total recebe o valor que tem agora, mais 5", do mesmo guia.
 - A tabela de trace, com uma coluna por variável, onde se segue um algoritmo instrução a instrução, do mesmo guia.
-- Os símbolos do fluxograma: o oval, o paralelogramo, o retângulo e a seta, do mesmo guia.
 - Um algoritmo escrito em frases claras também vale, desde que não deixe dúvidas, porque o que conta é a lógica, do mesmo guia.
 - As condições, que só dão `true` ou `false`, e as comparações `==`, `!=`, `<`, `<=`, `>` e `>=`, do guia [03 Decisões e validação](03-decisoes-e-validacao.md).
 - O `==`, que pergunta se dois valores são iguais, e que não se confunde com o `=`, que dá um valor, do mesmo guia.
 - Os operadores `e`, `ou` e `não`, e os parênteses sempre que se mistura `e` com `ou`, do mesmo guia.
 - A seleção com `Se`, `Senão se` e `Senão`, do mesmo guia.
 - A indentação de quatro espaços, que mostra que instruções estão dentro de cada bloco, sem nenhuma palavra a fechá-lo, do mesmo guia.
-- O losango do fluxograma, com as saídas `Sim` e `Não`, do mesmo guia.
 - Os intervalos, como `quantidade >= 1 e quantidade <= 50`, e o contrário de um intervalo, escrito com `ou`, do mesmo guia.
 - Validar uma entrada antes de a usar, do mesmo guia.
 - As fronteiras e a tabela de casos esperados, escrita antes do algoritmo, com casos abaixo, no e acima de cada limite, do mesmo guia.
@@ -298,33 +292,6 @@ Cada linha desta tabela resume um grupo de linhas da tabela anterior. O 1.º tes
 
 A tabela de iterações é a que vais fazer nos exercícios deste tema. Sempre que te pedirem o trace de um ciclo, é esta tabela que se espera. A exceção é quando te pedem, com essas palavras, o trace linha a linha. Nos primeiros ciclos que fizeres, faz primeiro o trace linha a linha e só depois a tabela de iterações. Assim vês que as duas dizem o mesmo.
 
-## A seta que volta ao losango
-
-No fluxograma, um ciclo desenha-se com o losango que já conheces do guia 03. E desenha-se com uma seta nova, que volta atrás, para cima, até ao losango da condição.
-
-```mermaid
-flowchart TD
-    A([Início]) --> B["int senha = 1"]
-    B --> C{"senha <= ULTIMA_SENHA?"}
-    C -->|Sim| D[/"Escreve: senha"/]
-    D --> E["senha = senha + 1"]
-    E --> C
-    C -->|Não| F[/"Escreve: fim da distribuição"/]
-    F --> Z([Fim])
-```
-
-Segue o percurso com o dedo. Do início passas pela inicialização, `int senha = 1`, e chegas ao losango. Se a condição for verdadeira, sais pelo `Sim`, escreves a senha e fazes a atualização. Depois, a seta leva-te de volta ao losango, para perguntares outra vez. Se a condição for falsa, sais pelo `Não`, escreves a mensagem final e terminas. Para fazer a distribuição de três senhas, o dedo passa quatro vezes pelo losango, tantas quantas as linhas da tabela de iterações.
-
-Compara figura a figura com o pseudocódigo. O losango é a linha do `Enquanto`. O caminho do `Sim` é o corpo do ciclo, as linhas indentadas. A seta que volta ao losango corresponde ao fim do corpo. É o que acontece quando o algoritmo acaba a última linha indentada e volta ao teste. O caminho do `Não` é o que vem depois do corpo, a partir da primeira linha de novo alinhada com o `Enquanto`. Nos fluxogramas destes guias, as constantes não têm figura. O seu valor é o que está escrito no pseudocódigo, e o desenho mostra o caminho que o algoritmo faz com ele. O texto entre aspas de um `Escreve:` é abreviado para caber na figura; no pseudocódigo está completo.
-
-Há três coisas a reter sobre esta seta.
-
-A primeira é que a seta de volta vai sempre ao losango da condição. Se voltasse ao retângulo da inicialização, `int senha = 1`, a senha voltaria a valer 1 em cada iteração e o ciclo nunca acabaria. Se voltasse para depois do losango, direto ao `Escreve:`, a condição nunca mais seria avaliada, e o ciclo também nunca acabaria. O losango é o único sítio onde o ciclo decide se continua. Por isso, é lá que a seta tem de chegar em todas as iterações.
-
-A segunda é que a seta que sobe te diz que há um ciclo. Num fluxograma só com sequência e seleção, as setas andam sempre para baixo, e os dois ramos de um `Se` juntam-se mais abaixo. Quando vês uma seta a subir até um losango, estás a ver uma repetição.
-
-A terceira é que o desenho tem de ser inequívoco, isto é, não pode deixar dúvidas. A seta de volta chega ao losango por um lado diferente daquele por onde chega a seta de cima, e não cruza as outras setas. O `Sim` e o `Não` ficam escritos nas saídas do losango, e não na seta de volta. É esta a técnica nova que o laboratório deste tema treina no diagrams.net, se o professor o indicar.
-
 ## O ciclo que nunca começa
 
 Se a condição for falsa logo no primeiro teste, o corpo não se executa nenhuma vez. Diz-se que o ciclo tem zero iterações.
@@ -465,8 +432,6 @@ Antes de leres a tabela, tenta prever: o que escreve este algoritmo, e quantas v
 A condição que aparece na tabela é a condição escondida do `Para`, `senha <= ULTIMA_SENHA`. O ecrã também é o mesmo: "Senha 1", "Senha 2", "Senha 3" e "Fim da distribuição".
 
 A grande vantagem do `Para` é que não te podes esquecer da inicialização nem da atualização, porque não és tu que as escreves. É muito mais difícil escrever um `Para` infinito do que um `Enquanto` infinito. A desvantagem é que só serve quando se sabe quantas vezes o ciclo se vai repetir antes de ele começar.
-
-No fluxograma, o `Para` desenha-se como o `Enquanto` equivalente, com as três peças à vista. Há um retângulo com a inicialização, `int senha = 1`, e o losango com a condição, `senha <= ULTIMA_SENHA?`. Depois vem o corpo, um retângulo com a atualização, `senha = senha + 1`, e a seta de volta ao losango. Alguns livros usam uma figura especial para o `Para`; nos nossos fluxogramas não se usa, para que o desenho mostre as três peças.
 
 Mais à frente, depois dos arrays e do padrão flag, há uma secção com outra forma de escrever o `Para`. Nessa forma, as três peças ficam todas à vista na primeira linha. É para quando já estiveres à vontade com esta. Por agora, e em todos os exercícios deste tema, usa `Para ... de ... até ...`. Começa em 1 quando contas coisas, como as senhas, e em 0 quando percorres um array, como vais ver mais à frente.
 
@@ -615,26 +580,7 @@ Escreve: "Peso total: ", pesoTotal, " kg"
 
 Leitura guiada: começa pelas duas inicializações e pela leitura antecipada, e só depois desce para o `Enquanto`. Repara que as duas leituras não se escrevem da mesma maneira. A primeira, antes do ciclo, é a linha onde o `peso` aparece pela primeira vez, e por isso leva o tipo: `int peso = ler valor`. A do fim do corpo usa uma variável que já existe, e por isso não o leva: `peso = ler valor`. Fazem as duas a mesma coisa, que é pedir um valor e guardá-lo em `peso`. E repara na margem da segunda. Tem quatro espaços, como as outras linhas do corpo, porque tem de se executar em todas as iterações.
 
-Tens aqui um contador (`caixas`) e um totalizador (`pesoTotal`) no mesmo ciclo. No fluxograma, a leitura antecipada fica antes do losango. A leitura do valor seguinte fica no fim do corpo, mesmo antes da seta de volta:
-
-```mermaid
-flowchart TD
-    A([Início]) --> B["int caixas = 0"]
-    B --> C["int pesoTotal = 0"]
-    C --> D[/"Escreve: pergunta"/]
-    D --> E[/"int peso = ler valor"/]
-    E --> F{"peso != SENTINELA?"}
-    F -->|Sim| G["caixas = caixas + 1"]
-    G --> H["pesoTotal = pesoTotal + peso"]
-    H --> I[/"Escreve: pergunta"/]
-    I --> J[/"peso = ler valor"/]
-    J --> F
-    F -->|Não| K[/"Escreve: caixas"/]
-    K --> L[/"Escreve: pesoTotal"/]
-    L --> Z([Fim])
-```
-
-Percorre-o com o dedo: as duas inicializações, a pergunta e a primeira leitura, e depois o losango. Enquanto o peso não for a sentinela, sais pelo `Sim`, contas a caixa, somas o peso e lês o peso seguinte. Depois, a seta leva-te ao losango, onde esse novo peso é testado. Quando o peso lido for 0, sais pelo `Não` e escreves os dois resultados.
+Tens aqui um contador (`caixas`) e um totalizador (`pesoTotal`) no mesmo ciclo.
 
 Antes de leres a tabela, tenta prever o que o algoritmo escreve com os pesos 18, 25, 7 e, no fim, a sentinela 0. Esta é a tabela de iterações, sem as perguntas:
 
@@ -697,22 +643,6 @@ Escreve: "Pedido aceite: ", quantidade, " unidades"
 Leitura guiada: as três peças, uma a uma. A inicialização é a primeira leitura, antes do ciclo, como na sentinela. A condição é a de valor inválido, que no guia 03 aprendeste a escrever como o contrário do intervalo, com `ou`. A quantidade é inválida se estiver abaixo do mínimo ou acima do máximo. A atualização é a leitura dentro do corpo, `quantidade = ler valor`, que substitui o valor inválido por um valor novo.
 
 A mensagem de erro diz o intervalo. Quem se enganou fica a saber o que tem de escrever, e não apenas que errou.
-
-No fluxograma, a validação repetida tem a mesma forma do ciclo com sentinela. Há uma leitura antes do losango e outra no fim do corpo, mesmo antes da seta de volta. O que muda é a condição do losango e o que o corpo faz com o valor.
-
-```mermaid
-flowchart TD
-    A([Início]) --> B[/"Escreve: pergunta"/]
-    B --> C[/"int quantidade = ler valor"/]
-    C --> D{"quantidade < QUANTIDADE_MINIMA ou quantidade > CAPACIDADE_MAXIMA?"}
-    D -->|Sim| E[/"Escreve: quantidade inválida"/]
-    E --> F[/"quantidade = ler valor"/]
-    F --> D
-    D -->|Não| G[/"Escreve: pedido aceite"/]
-    G --> Z([Fim])
-```
-
-Descrição do percurso: depois da pergunta e da primeira leitura, o losango pergunta se a quantidade é inválida. Se for, sai pelo `Sim`, escreve a mensagem de erro, lê outra quantidade e a seta volta ao losango, que testa o valor novo. Quando a quantidade for válida, sai pelo `Não`, escreve que o pedido foi aceite e termina. Repara que aqui o `Sim` é o caminho do erro. O ciclo continua enquanto o valor for inválido.
 
 Antes de leres a tabela, tenta prever quantas vezes aparece a mensagem de erro quando a pessoa escreve 0, depois 75 e depois 12. Esta é a tabela de iterações:
 
@@ -1041,7 +971,7 @@ A tabela seguinte põe as três escritas lado a lado, peça a peça:
 | Atualização | `senha = senha + 1`, a última linha do corpo | não se escreve: o `Para` soma 1 no fim de cada iteração | `senha++`, a terceira parte |
 | Corpo | as linhas indentadas debaixo do `Enquanto` | as linhas indentadas debaixo do `Para` | as linhas indentadas debaixo do `Para` |
 
-Nesta forma, tal como na outra, a variável de controlo não leva tipo, porque é o `Para` que a cria. E no fluxograma nada muda. Desenha-se como o `Enquanto` equivalente. A inicialização fica num retângulo antes do losango, a condição no losango e a atualização num retângulo no fim do corpo. As três partes da primeira linha são as mesmas três figuras do desenho.
+Nesta forma, tal como na outra, a variável de controlo não leva tipo, porque é o `Para` que a cria.
 
 Há uma diferença importante para o `Para i de 1 até n`. Nesta forma, és tu que escreves as três peças, e por isso os erros do `Enquanto` voltam a ser possíveis. Com `Para senha = 1, senha > ULTIMA_SENHA, senha++`, a condição é a de paragem e o ciclo nunca começa. Com `Para senha = 1, senha < ULTIMA_SENHA, senha++`, falta uma iteração. Com `senha--` na terceira parte, que quer dizer `senha = senha - 1`, a atualização anda no sentido errado e o ciclo nunca acaba. As três perguntas das peças servem aqui como no `Enquanto`: com que valor começa, em que situação continua, e o que muda em cada iteração. E a regra 2 do `Para` continua a valer: dentro do corpo não se muda a variável de controlo.
 
@@ -1160,38 +1090,7 @@ Se te for mais fácil pensar primeiro em português, o mesmo algoritmo pode ser 
 
 Repara no que torna estas frases claras. Dizem com que valores se começa, em que situação se repete e que passos se repetem. Como em frases não há indentação, é o passo 3 que diz quais são. Dizem o que acontece quando o pedido não é válido, e o que muda em cada iteração, no passo 6. Uma frase como "vai lendo os pedidos e conta os bons" não chega. Não diz quando se para, o que é um pedido bom, nem o que se faz com os outros. O que conta é a lógica, e as frases têm de a deixar tão clara como o pseudocódigo.
 
-### Passo 6: O fluxograma
-
-```mermaid
-flowchart TD
-    A([Início]) --> B["int pedidosValidos = 0"]
-    B --> C["int pedidosRecusados = 0"]
-    C --> D["int totalUnidades = 0"]
-    D --> E[/"Escreve: pergunta"/]
-    E --> F[/"int quantidade = ler valor"/]
-    F --> G{"quantidade != SENTINELA?"}
-    G -->|Sim| H{"quantidade >= QUANTIDADE_MINIMA e quantidade <= CAPACIDADE_MAXIMA?"}
-    H -->|Sim| I["pedidosValidos = pedidosValidos + 1"]
-    I --> J["totalUnidades = totalUnidades + quantidade"]
-    H -->|Não| K["pedidosRecusados = pedidosRecusados + 1"]
-    K --> L[/"Escreve: pedido recusado"/]
-    J --> M[/"Escreve: pergunta"/]
-    L --> M
-    M --> N[/"quantidade = ler valor"/]
-    N --> G
-    G -->|Não| O[/"Escreve: pedidosValidos"/]
-    O --> P[/"Escreve: totalUnidades"/]
-    P --> Q[/"Escreve: pedidosRecusados"/]
-    Q --> Z([Fim])
-```
-
-Descrição do percurso, para quem não vê o desenho. Do início, o caminho passa pelas três inicializações, pela pergunta e pela primeira leitura, e chega ao primeiro losango, o do ciclo. Se a quantidade não for a sentinela, sai pelo `Sim` e chega ao segundo losango, o do `Se`. Pelo `Sim` do segundo losango, conta o pedido válido e soma as unidades. Pelo `Não`, conta o pedido recusado e escreve a mensagem. Os dois ramos juntam-se na pergunta seguinte, a primeira instrução depois do `Se` e do `Senão`. No pseudocódigo, é a linha que volta aos quatro espaços. Segue-se a leitura da quantidade seguinte, e a seta volta ao primeiro losango. Quando a quantidade lida for a sentinela, o primeiro losango sai pelo `Não` e o caminho passa pelas três escritas finais até ao fim.
-
-Repara na diferença entre os dois losangos. O do `Se` tem dois ramos que descem e se juntam mais abaixo. O do ciclo tem um ramo, o `Sim`, que acaba por subir de volta a ele. O outro ramo, o `Não`, é a saída do ciclo. Tudo o que está entre o `Sim` do primeiro losango e a seta que sobe é o corpo do ciclo. São exatamente as linhas que no pseudocódigo estão indentadas debaixo do `Enquanto`. É este o fluxograma que o laboratório deste tema, que é opcional, manda desenhar.
-
-Se a seta que sobe chegasse a outra figura, o algoritmo deixava de fazer o que deve. Se chegasse à primeira inicialização, os contadores e o total voltavam a zero em cada iteração. E a leitura antecipada repetia-se logo a seguir à leitura do fim do corpo. Com o caso A, o 60, o -4 e o próprio 0 eram lidos e logo substituídos pelo valor seguinte, sem nunca chegarem ao losango. O algoritmo continuava a pedir quantidades depois de o funcionário ter escrito 0. Se a seta chegasse a uma figura depois do losango, a condição nunca mais era avaliada, e o ciclo nunca acabava. Por isso, confirma sempre que a seta que sobe termina no losango do ciclo. Esse losango tem uma saída `Sim` e uma saída `Não`.
-
-### Passo 7: O trace linha a linha de um caso curto
+### Passo 6: O trace linha a linha de um caso curto
 
 Primeiro, o trace completo de um caso curto, para veres o `Se` a funcionar dentro do ciclo. O funcionário escreve 12, depois 60, e depois 0. Antes de leres a tabela, tenta prever o que aparece no ecrã.
 
@@ -1228,7 +1127,7 @@ No passo 12, o algoritmo voltou ao `Enquanto`. `60 != 0` é verdadeiro, e começ
 
 No passo 18, a quantidade lida é o 0, e `0 != 0` é falso. O ciclo termina. O 0 não passou pelo `Se`, não foi contado nem somado. Os passos 19 a 21 escrevem os resultados.
 
-### Passo 8: A tabela de iterações do caso normal
+### Passo 7: A tabela de iterações do caso normal
 
 Agora o caso A, com a tabela de iterações. As perguntas não estão na última coluna.
 
@@ -1251,7 +1150,7 @@ No 6.º teste, a quantidade é o 0, e o ciclo termina. Houve 5 iterações, uma 
 
 Repara no que muda de uma linha para a seguinte: ou mudam os válidos e o total ao mesmo tempo, ou mudam só os recusados. Nunca mudam os válidos sem mudar o total. E nunca mudam os recusados ao mesmo tempo que os válidos, porque cada pedido vai para um só dos ramos do `Se`. Se, ao fazeres uma tabela destas, encontrares uma linha que não obedece a isto, há um erro no algoritmo ou no trace.
 
-### Passo 9: Comparar com o previsto
+### Passo 8: Comparar com o previsto
 
 Os quatro casos do passo 3, com os resultados que o algoritmo dá quando se faz o trace de cada um:
 
@@ -1274,8 +1173,7 @@ Os erros típicos de cada padrão estão na secção dele, e não se repetem aqu
 - os erros de inicialização, em "Padrão contador" e em "Padrão totalizador";
 - a condição de paragem numa validação, em "Padrão validação repetida";
 - mudar a variável do para cada para mudar o array, em "O para cada não muda o array";
-- a flag que volta a `false`, em "Padrão flag";
-- a seta de volta no sítio errado, em "A seta que volta ao losango" e no passo 6 do exemplo guiado.
+- a flag que volta a `false`, em "Padrão flag".
 
 ### O contador fora do Se
 
@@ -1333,7 +1231,6 @@ Vários erros deste guia só se veem bem com casos escolhidos de propósito. O c
 - Condição do ciclo: a pergunta que decide se se faz mais uma iteração. Diz quando continuar, e não quando parar.
 - Atualização: a instrução, dentro do corpo, que muda a variável da condição e aproxima o ciclo do fim.
 - Tabela de iterações: uma tabela com uma linha por teste da condição, com a fotografia do estado no momento do teste.
-- Seta de volta: no fluxograma, a seta que sobe da última figura do corpo até ao losango da condição.
 - Caso de zero voltas: o caso de teste em que o ciclo não chega a dar nenhuma volta.
 - Ciclo infinito: um ciclo cuja condição nunca chega a ser falsa.
 - Ciclo contado: um ciclo em que se sabe, antes de começar, quantas iterações vai ter.
@@ -1379,9 +1276,8 @@ Agora responde a estas perguntas sem olhar para o guia. Se não conseguires resp
 13. Que pergunta fazes para escolher entre `Enquanto` e `Para` num problema novo?
 14. Num array, como encontras o elemento de um índice, e qual é o último índice válido? Como percorres um array com o índice, e com o para cada?
 15. Porque é que mudar a variável de um para cada não muda o array? Como o mostras numa tabela de trace, com a variável e o array lado a lado?
-16. Como reconheces um ciclo num fluxograma? Porque é que a seta de volta tem de chegar ao losango da condição?
-17. Que casos de teste escolhes para um ciclo?
-18. Depois de leres a secção sobre o `Para` com as três peças à vista: onde está cada peça em `Para i = 0, i < 10, i++`?
+16. Que casos de teste escolhes para um ciclo?
+17. Depois de leres a secção sobre o `Para` com as três peças à vista: onde está cada peça em `Para i = 0, i < 10, i++`?
 
 As quatro atividades seguintes são maiores. Faz as respostas por escrito, no teu caderno.
 
@@ -1451,11 +1347,11 @@ Escreve: "Tempo total: ", totalMinutos, " minutos"
 
 Escreve duas ou três linhas sobre o que te custou mais neste tema. Pode ter sido perceber quando o ciclo volta atrás, ou ver pela indentação o que está dentro do ciclo. Pode ter sido fazer a tabela de iterações, escolher entre `Enquanto` e `Para`, ou a leitura antecipada da sentinela.
 
-Guarda no teu caderno a tabela de iterações e o conjunto de testes do exemplo guiado, refeitos por ti sem olhar. Guarda também as respostas a estas atividades e as tuas notas de dificuldade. Se o professor tiver indicado o laboratório, guarda ainda o fluxograma desenhado na aplicação.
+Guarda no teu caderno a tabela de iterações e o conjunto de testes do exemplo guiado, refeitos por ti sem olhar. Guarda também as respostas a estas atividades e as tuas notas de dificuldade.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md). Tem dez exercícios obrigatórios e um desafio opcional. O [laboratório](04-repeticao-e-padroes-laboratorio.md) é de fluxogramas e é opcional, e só o fazes quando o professor o indicar. Nele desenhas no diagrams.net o fluxograma do exemplo guiado, com a seta que volta ao losango sem cruzar as outras setas. Depois verificas o desenho com um caso de teste. O laboratório explica no sítio tudo o que precisas da aplicação.
+Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-padroes-exercicios.md). Tem dez exercícios obrigatórios e um desafio opcional.
 
 O tema seguinte é [Testar, depurar e melhorar](05-testar-depurar-e-melhorar.md), o último desta área. Vais juntar a sequência, a seleção e a repetição num problema maior e testá-lo de forma organizada. Vais corrigir os erros encontrados no trace e comparar duas soluções pelo número de passos. Vais também escrever as tuas primeiras funções, e a área acaba com projetos, todos jogos.
 

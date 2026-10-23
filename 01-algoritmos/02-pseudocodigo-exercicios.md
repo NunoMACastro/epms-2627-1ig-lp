@@ -1,12 +1,12 @@
 ![Cabeçalho](../imagens/cabecalho.png)
 
-# Ficha de exercícios: Pseudocódigo e fluxogramas
+# Ficha de exercícios: Pseudocódigo
 
-Ficha do tema Pseudocódigo e fluxogramas, do módulo Desenvolver algoritmos. Praticas as peças do tema uma de cada vez, até escreveres e testares um algoritmo teu. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
+Ficha do tema Pseudocódigo, do módulo Desenvolver algoritmos. Praticas as peças do tema uma de cada vez, até escreveres e testares um algoritmo teu. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
-O [guia do tema](02-pseudocodigo-e-fluxogramas.md). Antes de começares, deves ter lido as secções da matéria e o exemplo guiado. Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio. O [laboratório](02-pseudocodigo-e-fluxogramas-laboratorio.md) é de fluxogramas e é opcional, e nenhum exercício obrigatório desta ficha precisa dele. Só a parte B do desafio, que também é de fluxogramas, usa o que lá se aprende.
+O [guia do tema](02-pseudocodigo.md). Antes de começares, deves ter lido as secções da matéria e o exemplo guiado. Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
 
 ## Como trabalhar
 
@@ -25,16 +25,15 @@ Todos os algoritmos desta ficha são sequenciais: as instruções executam-se se
 | 5 | Escolher e usar a função predefinida certa | Obrigatória |
 | 6 | Seguir um algoritmo completo com uma tabela de trace | Obrigatória |
 | 7 | Escrever um algoritmo, em pseudocódigo ou em frases claras, e testá-lo | Obrigatória |
-| Desafio | Trocar os valores de duas variáveis e mudar uma regra; a parte B, o fluxograma do exercício 7 na aplicação, só quando o professor o indicar | Opcional |
+| Desafio | Trocar os valores de duas variáveis e mudar uma regra | Opcional |
 | Para ires mais longe | Casos que enganam nos tipos, nas atribuições e nas expressões, e um problema novo | Opcional |
 
-Precisas de papel quadriculado e lápis. O diagrams.net, em `https://app.diagrams.net/?lang=pt`, só é preciso para a parte B do desafio. Essa parte é de fluxogramas, e só se faz quando o professor o indicar. Nesse caso, guarda o ficheiro na pasta `algoritmos` do laboratório, com um nome em minúsculas, com hífenes e sem acentos.
+Precisas de papel quadriculado e lápis.
 
 O que entregas:
 
 - as respostas escritas e as tabelas de trace dos exercícios 1 a 6;
-- o algoritmo do exercício 7, com a tabela das três entradas;
-- se o professor indicar a parte B do desafio e a fizeres, os ficheiros `.drawio` e `.png` do fluxograma.
+- o algoritmo do exercício 7, com a tabela das três entradas.
 
 ## Exercício 1: Escolher o tipo de dados
 
@@ -146,7 +145,7 @@ Concluíste quando cada alínea tiver a linha, com o tipo e a função, e o valo
 
 ## Exercício 6: Seguir um algoritmo completo
 
-A matéria está nas secções "Ler e escrever" e "A tabela de trace" do guia. O passo 5 do exemplo guiado é o modelo do trace.
+A matéria está nas secções "Ler e escrever" e "A tabela de trace" do guia. O passo 4 do exemplo guiado é o modelo do trace.
 
 Lê com atenção este algoritmo, que calcula o peso de uma encomenda para envio:
 
@@ -216,7 +215,7 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 **Exercício 5.** Para cada alínea, pergunta-te primeiro o que queres fazer ao número, por palavras tuas. Só depois procura, na tabela das funções do guia, a função que faz isso. Cada função serve numa só alínea. Se uma te parecer servir em duas, relê o que cada uma faz às casas decimais. Para o tipo da variável, vê na mesma tabela o tipo que a função devolve.
 
-**Exercício 6.** Tem o passo 5 do exemplo guiado aberto ao lado, porque o trace faz-se da mesma maneira. Na alínea b), faz primeiro a conta que está dentro dos parênteses. Na alínea c), faz as contas das duas versões para uma encomenda de 2 artigos, e pensa em quantas caixas leva esse envio.
+**Exercício 6.** Tem o passo 4 do exemplo guiado aberto ao lado, porque o trace faz-se da mesma maneira. Na alínea b), faz primeiro a conta que está dentro dos parênteses. Na alínea c), faz as contas das duas versões para uma encomenda de 2 artigos, e pensa em quantas caixas leva esse envio.
 
 **Exercício 7.** Começa pelo pseudocódigo das caixas de cadernos do guia, porque aqui também há uma quantidade, uma divisão inteira e um resto. Se uma linha não te sair em pseudocódigo, escreve-a em frases claras e continua. A diferença é que no fim há um preço a calcular. Escreve primeiro só as grades e os soltos, e acrescenta o total depois de isso funcionar. Na alínea c), relê os três casos de teste do passo 1 do exemplo guiado. O que é que 100 e 24 já testam, e o que falta testar?
 
@@ -224,7 +223,7 @@ Usa estas pistas pela ordem em que aparecem, e só a seguinte se a anterior não
 
 ## Desafio opcional
 
-O desafio tem três partes independentes, e podes fazê-las pela ordem que quiseres. As partes B e C partem do teu algoritmo do exercício 7. A parte B é de fluxogramas, e só a fazes quando o professor o indicar.
+O desafio tem duas partes independentes, e podes fazê-las pela ordem que quiseres. A parte B parte do teu algoritmo do exercício 7.
 
 ### Parte A: trocar os valores de duas variáveis
 
@@ -239,21 +238,13 @@ int caixaB = 30
 
 Escreve as instruções que trocam os valores das duas, de forma que no fim `caixaA` valha 30 e `caixaB` valha 12. Podes usar uma variável a mais, se precisares, com o tipo escrito na linha onde aparece pela primeira vez. Faz o trace da tua solução, desde as duas linhas acima, para mostrar que funciona.
 
-### Parte B: o fluxograma do exercício 7 na aplicação (só quando o professor o indicar)
-
-Esta parte é opcional mesmo dentro do desafio, e só a fazes quando o professor o indicar. A matéria está na secção "Os símbolos do fluxograma" do guia e no laboratório.
-
-Desenha no diagrams.net o fluxograma do teu algoritmo do exercício 7. Guarda-o como `fluxograma-compra-de-leite.drawio` e verifica-o com a lista da fase 4 do laboratório, adaptada a este algoritmo. Depois exporta a imagem, com o nome `fluxograma-compra-de-leite.png`.
-
-### Parte C: o fornecedor muda as grades
+### Parte B: o fornecedor muda as grades
 
 O fornecedor passa a vender grades de 12 pacotes em vez de 24, e a grade passa a custar 780 cêntimos. O pacote solto continua a custar 70 cêntimos.
 
 **a)** Quantas linhas do teu pseudocódigo precisam de mudar? E se, em vez de constantes, tivesses escrito os números 24 e 1440 diretamente nas contas, quantos sítios terias de procurar e mudar?
 
-**b)** Se fizeste a parte B, o fluxograma precisa de ser redesenhado, ou basta mudar o texto de algumas figuras? Justifica.
-
-**c)** Refaz a tabela de resultados para 100 pacotes com os valores novos.
+**b)** Refaz a tabela de resultados para 100 pacotes com os valores novos.
 
 É esta a razão por que se dá nome aos valores fixos. Uma mudança de fornecedor não devia obrigar a reler o algoritmo todo à procura de números soltos.
 
@@ -313,7 +304,7 @@ Continua o exercício 6.
 
 ### Mais longe 5: Quando os soltos saem mais caros
 
-Continua o exercício 7 e a parte C do desafio.
+Continua o exercício 7 e a parte B do desafio.
 
 Com as grades de 24 pacotes a 1440 cêntimos, há casos em que os pacotes soltos saem mais caros do que uma grade inteira. E a grade ainda traz mais pacotes. Encontra um desses casos e mostra as contas. Com as grades de 12 pacotes a 780 cêntimos, isso ainda pode acontecer? Justifica com contas.
 
@@ -339,12 +330,11 @@ Uma visita de estudo é feita em autocarros, todos com a mesma capacidade. Dado 
 - [ ] No meu algoritmo, cada variável tem um tipo coerente, escrito na linha onde nasce, e os valores fixos têm nome de constante.
 - [ ] O meu algoritmo lê os dados, faz as contas e escreve os resultados, por esta ordem.
 - [ ] Testei o meu algoritmo com três entradas que testam coisas diferentes.
-- [ ] Se fiz a parte B do desafio, o fluxograma e o pseudocódigo dizem a mesma coisa, e guardei o `.drawio` e o `.png`.
 
 ## Autoavaliação
 
 1. O que já consegues fazer sozinho, sem voltar ao guia?
-2. O que te custou mais neste tema? Foram os tipos, as contas, as funções predefinidas, escrever o pseudocódigo, ler o fluxograma ou fazer o trace?
+2. O que te custou mais neste tema? Foram os tipos, as contas, as funções predefinidas, escrever o pseudocódigo ou fazer o trace?
 3. Que dificuldade tiveste, e o que fizeste para a resolver?
 
 ![Rodapé](../imagens/rodape.png)
