@@ -21,6 +21,7 @@ No fim da área de algoritmos há também dois projetos guiados, que fazes com a
 | Área | Módulo |
 | --- | --- |
 | [Algoritmos](01-algoritmos/README.md) | UC00245, Desenvolver algoritmos |
+| [Python](02-python/README.md) | UC00606, Desenvolver programas em linguagem estruturada |
 
 ## Como estudar
 
