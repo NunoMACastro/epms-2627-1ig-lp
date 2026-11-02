@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Do algoritmo ao programa
 
-Ficha do tema Do algoritmo ao programa, do módulo Desenvolver programas em linguagem estruturada. Praticas a passagem de um algoritmo para Python, a previsão do que um programa escreve e o reconhecimento dos três tipos de erro. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
+Ficha do tema Do algoritmo ao programa, do módulo Desenvolver programas em linguagem estruturada. Praticas a passagem de um algoritmo para Python, a previsão do que um programa escreve e o reconhecimento dos três tipos de erro. Praticas também a escolha da ferramenta para cada tarefa. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -10,7 +10,7 @@ O [guia do tema](01-do-algoritmo-ao-programa.md) e o [laboratório](01-do-algori
 
 ## Como trabalhar
 
-Faz os exercícios pela ordem. Os exercícios 1 a 5 são obrigatórios. O desafio opcional e o "Para ires mais longe" são para quem acabar.
+Faz os exercícios pela ordem. Os exercícios 1 a 6 são obrigatórios, e o exercício 6 faz-se só no caderno. O desafio opcional e o "Para ires mais longe" são para quem acabar.
 
 Trabalha na tua pasta `lp-python`, no VS Code, e usa o comando que tens no registo da execução. Escreve no caderno as previsões, os resultados esperados e as respostas. Escreve sempre a previsão antes de correres o programa, e não a mudes depois: é ela que mostra o que já percebeste.
 
@@ -149,6 +149,15 @@ A Rita fez o ecrã de abertura de um jogo de memória, que um colega lhe pediu. 
 1. Escreve as letras pela ordem em que a Rita as fez.
 2. Ao lado de cada letra, escreve a fase do ciclo de vida a que pertence: análise, desenho, implementação, testes ou manutenção.
 
+## Exercício 6: Onde se programa, certo ou errado
+
+Quatro colegas disseram estas frases na sala. Para cada uma, escreve no caderno se está certa ou errada, e justifica numa ou duas frases. Se estiver errada, diz também o que farias tu.
+
+1. A Beatriz: "Abri o meu `ola.py` no Bloco de Notas e as cores desapareceram todas. O ficheiro estragou-se."
+2. A Inês: "Copiei para o VS Code um programa de uma apresentação que encontrei na internet. As letras estão todas iguais, por isso tem de correr."
+3. O Rui: "Escrevi na consola do Python as cinco linhas do ecrã de abertura do meu jogo, e funcionaram todas. Amanhã abro a consola outra vez e mostro-as ao professor."
+4. O Tomás: "O VS Code sublinhou o `Print` antes de eu correr o programa. Por isso, é um erro de sintaxe."
+
 ## Apoio
 
 - Exercício 1: relê, no guia, a regra dos comentários, e aplica-a a cada linha, uma de cada vez.
@@ -156,6 +165,7 @@ A Rita fez o ecrã de abertura de um jogo de memória, que um colega lhe pediu. 
 - Exercício 3: para cada versão, olha primeiro para o que apareceu. Correu alguma linha? Há mensagem? Depois, lê a última linha da mensagem, se a houver.
 - Exercício 4: traduz as palavras da última linha da mensagem: `unexpected` quer dizer inesperado, e `indent` quer dizer indentação. Depois relê as regras da sintaxe, no guia.
 - Exercício 5: começa pela coisa que se faz antes de haver código. Depois procura a que se faz quando o programa já está em uso.
+- Exercício 6: em cada frase, pergunta-te que ferramenta está em causa e o que ela faz, e o que não faz. Depois relê a secção do guia sobre essa ferramenta.
 
 ## Desafio opcional
 
@@ -200,11 +210,13 @@ Escreve no caderno o que experimentaste e o que aconteceu em cada tentativa, tam
 - No exercício 3, cada versão tem o tipo de erro, a linha, a forma como o soubeste e a correção.
 - O exercício 4 tem os cinco passos de depurar com método escritos, e o `horario.py` corrigido dá o resultado esperado.
 - O exercício 5 tem as seis letras por ordem, cada uma com a sua fase.
+- O exercício 6 tem, para cada frase, se está certa ou errada, a justificação e, quando é preciso, o que farias tu.
 
 ## Autoavaliação
 
 1. Que tipo de erro te custou mais a reconhecer, e porquê?
 2. Em que exercício a tua previsão falhou? O que percebeste com isso?
 3. Se tivesses de explicar a um colega a diferença entre o terminal e a consola do Python, o que lhe dirias?
+4. Que ferramenta do VS Code te ajudou mais nesta ficha, e em que exercício?
 
 ![Rodapé](../imagens/rodape.png)

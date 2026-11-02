@@ -2,7 +2,7 @@
 
 # Do algoritmo ao programa
 
-Módulo UC00606, Desenvolver programas em linguagem estruturada. Neste guia passas da algoritmia para a programação. Vais ver o que é um programa e que ferramentas se usam para o escrever e o pôr a correr. Vais ver também como se reconhece cada tipo de erro. Para praticar, há o [laboratório](01-do-algoritmo-ao-programa-laboratorio.md) e a [ficha de exercícios](01-do-algoritmo-ao-programa-exercicios.md) deste tema.
+Módulo UC00606, Desenvolver programas em linguagem estruturada. Neste guia passas da algoritmia para a programação. Vais ver o que é um programa, onde se escreve e que ferramentas se usam para o escrever e o pôr a correr. Vais ver também quando precisas de cada ferramenta e como se reconhece cada tipo de erro. Para praticar, há o [laboratório](01-do-algoritmo-ao-programa-laboratorio.md) e a [ficha de exercícios](01-do-algoritmo-ao-programa-exercicios.md) deste tema.
 
 Na algoritmia, escreveste algoritmos em pseudocódigo e executaste-os tu, à mão, com papel e lápis. Agora é o computador que os executa. Neste tema, os programas fazem uma só coisa: escrevem texto no ecrã, numa sequência de instruções. Não leem nada do teclado, não fazem contas, não decidem nem repetem. Assim, a única novidade é a linguagem e as ferramentas, e não o problema.
 
@@ -15,16 +15,20 @@ Na algoritmia, escreveste algoritmos em pseudocódigo e executaste-os tu, à mã
 5. As ferramentas: o editor, o ficheiro, o terminal e o interpretador
 6. Correr um programa
 7. A consola do Python
-8. Do `Escreve:` ao `print`
-9. A sintaxe e a estrutura de um programa
-10. Os três tipos de erro
-11. Depurar com método, agora no computador
-12. O registo da execução
-13. Exemplo guiado: as regras do pedra, papel, tesoura
-14. Erros frequentes
-15. Palavras novas deste guia
-16. Verificar o que aprendeste
-17. O que vem a seguir
+8. Do editor de texto ao editor de código
+9. O IDE: as ferramentas numa só janela
+10. Quando é preciso um IDE, e quando não
+11. Do `Escreve:` ao `print`
+12. A sintaxe e a estrutura de um programa
+13. Os três tipos de erro
+14. Depurar com método, agora no computador
+15. O registo da execução
+16. Exemplo guiado: as regras do pedra, papel, tesoura
+17. Erros frequentes
+18. Palavras novas deste guia
+19. Verificar o que aprendeste
+20. O que vem a seguir
+21. Para saber mais
 
 ## O que vais aprender
 
@@ -33,7 +37,10 @@ No fim deste guia, consegues:
 - explicar a diferença entre um algoritmo e um programa, e o que faz o interpretador do Python;
 - dizer por que fases passa um programa, desde o problema até às mudanças que se fazem depois de estar em uso;
 - distinguir o editor, o ficheiro, o terminal e o interpretador, e dizer para que serve cada um;
-- escrever um programa curto em Python, guardá-lo e corrê-lo no terminal;
+- explicar a diferença entre um editor de texto, um editor de código e um IDE;
+- dizer para que serve cada ferramenta do VS Code que usas;
+- decidir quando precisas de um IDE e quando te chegam a consola do Python ou um editor de texto simples;
+- escrever um programa curto em Python, guardá-lo e corrê-lo no terminal ou com o botão de correr;
 - passar para Python uma sequência de `Escreve:` do pseudocódigo e confirmar que o resultado é o esperado;
 - ler uma mensagem de erro, dizer de que tipo é o erro e corrigir a causa, depurando com método.
 
@@ -47,6 +54,7 @@ No fim deste guia, consegues:
 - Os casos de teste, o resultado esperado e os cinco passos de depurar com método: guia [05 Testar, depurar e melhorar](../01-algoritmos/05-testar-depurar-e-melhorar.md).
 - O duelo de dados, que resolveste no [projeto 1](../01-algoritmos/05-projeto-1-duelo-de-dados.md).
 - Criar uma pasta, abrir uma aplicação e guardar um ficheiro no computador, do dia a dia.
+- Escrever um texto num processador de texto, como o Word, do dia a dia.
 
 ## Um programa é um algoritmo escrito para o computador
 
@@ -128,7 +136,7 @@ Pensa numa receita de cozinha. Escreves a receita num caderno. A receita fica nu
 
 Os ficheiros de um trabalho ficam todos numa pasta, a **pasta do projeto**. No VS Code, abre-se a pasta inteira, e não só um ficheiro. Assim, o painel Explorer mostra os ficheiros dessa pasta, e o terminal abre-se dentro dela. Os nomes dos ficheiros e das pastas escrevem-se em minúsculas, sem espaços e sem acentos, como `lp-python` e `abertura.py`. Um nome com espaços obriga a usar aspas no terminal, e um nome com acentos pode dar problemas noutro computador.
 
-Um erro típico é pensar que o VS Code e o Python são a mesma coisa. São dois programas diferentes, instalados à parte. O VS Code é só o editor. Um computador com o VS Code e sem o Python deixa-te escrever programas, mas não os consegue executar.
+Um erro típico é pensar que o VS Code e o Python são a mesma coisa. São dois programas diferentes, instalados à parte. O VS Code é onde escreves, e quem executa é o interpretador do Python. Um computador com o VS Code e sem o Python deixa-te escrever programas, mas não os consegue executar.
 
 ## Correr um programa
 
@@ -193,6 +201,94 @@ Leitura guiada: cada linha que começa por `>>>` foi escrita por ti. Cada linha 
 O que escreves na consola não fica guardado em lado nenhum. Quando sais, perde-se. Por isso, a consola serve para experimentar uma linha, e um programa que queres guardar escreve-se num ficheiro. Para sair, escreve-se `exit()` e carrega-se em Enter.
 
 O erro mais comum é escrever um comando do terminal dentro da consola, como `python ola.py` a seguir ao `>>>`. A consola espera linhas de Python, e responde com um erro. A regra que evita a confusão é esta: com `>>>`, escreves Python; sem `>>>`, escreves comandos.
+
+## Do editor de texto ao editor de código
+
+O programa escreve-se num editor e fica guardado num ficheiro `.py`. Mas que programa do computador serve de editor? O Word, que usas nos trabalhos da escola, serve? E o Bloco de Notas, que vem com o Windows?
+
+Para responder, pensa no que um ficheiro `.py` tem lá dentro. Tem **texto simples**: só os caracteres que escreveste, isto é, as letras, os algarismos, os espaços, os sinais e as mudanças de linha. Não tem negrito, nem tipos de letra, nem cores guardadas. O interpretador lê esse texto, carácter a carácter, e mais nada.
+
+Um **editor de texto** é um programa onde escreves e guardas texto simples. O Bloco de Notas é um editor de texto, e serve para escrever um programa em Python. Escreves as linhas, guardas o ficheiro com um nome acabado em `.py`, e o interpretador consegue executá-lo. No macOS, o TextEdit só serve depois de o passares a texto simples, porque, de origem, guarda a formatação, como o Word.
+
+Um processador de texto, como o Word, não serve, mesmo que o programa pareça certo no ecrã. O Word guarda o documento num formato próprio, com a formatação lá dentro, que o interpretador não sabe ler. E, enquanto escreves, troca as aspas retas, `"`, por aspas curvas, `“` e `”`, porque num texto ficam mais bonitas. Para o Python, uma aspa curva não é uma aspa, e a linha deixa de estar bem escrita.
+
+O Bloco de Notas serve, mas ajuda pouco. Mostra o programa todo da mesma cor, não tem os números das linhas na margem e não repara numa aspa que ficou por fechar. Num programa de três linhas, isso não faz falta. Num programa de quarenta, quando o Python te diz que o erro está na linha 37, faz.
+
+Um **editor de código** é um editor de texto feito para escrever programas. Guarda o ficheiro da mesma maneira, em texto simples, mas mostra-o de outra forma e ajuda enquanto escreves:
+
+- pinta cada parte do programa de uma cor: os textos entre aspas de uma cor, as palavras do Python de outra, os comentários de outra. A isto chama-se **realce de sintaxe**;
+- mostra o número de cada linha, na margem da esquerda;
+- fecha sozinho as aspas e os parênteses: quando escreves `(`, aparece logo o `)`.
+
+O realce de sintaxe ajuda a ver um erro antes de correres o programa. Se faltar a aspa que fecha um texto, como em `print("Olá)`, o resto da linha fica todo da cor dos textos. O editor também não sabe onde o texto acaba, e mostra-o.
+
+O VS Code, que usas nas aulas, é um editor de código. É gratuito e há versões para Windows, macOS e Linux.
+
+Um erro típico é pensar que as cores ficam guardadas no ficheiro. Não ficam: são só a forma de o editor de código te mostrar o programa. O mesmo `ola.py`, aberto no Bloco de Notas, aparece todo da mesma cor, e está igual, carácter a carácter.
+
+## O IDE: as ferramentas numa só janela
+
+Para fazer um programa, não basta escrevê-lo. Também o guardas na pasta do projeto e o corres no terminal. Depois lês as mensagens de erro, procuras a linha que as causou e voltas a correr. Com um editor de texto simples, cada uma destas coisas faz-se numa janela diferente: o editor numa, a pasta noutra, o terminal noutra. Passas o tempo a mudar de janela e a procurar a pasta certa.
+
+Volta à receita da secção "As ferramentas: o editor, o ficheiro, o terminal e o interpretador". Tu escreves a receita, e o cozinheiro, o interpretador, faz o bolo. Imagina que escreves a receita no quarto, e que o cozinheiro está na cozinha, do outro lado da casa. A cada mudança, levas-lhe a página. Quando o bolo sai mal, voltas ao quarto, procuras a linha errada, corriges e voltas à cozinha. O bolo faz-se na mesma, mas passas o tempo a andar de um lado para o outro. Numa cozinha equipada, escreves na bancada, ao lado do cozinheiro, com tudo à mão, e vês logo o que saiu.
+
+Na programação, a cozinha equipada é o **ambiente de desenvolvimento integrado**. É um programa que junta numa só janela as ferramentas para escrever, correr e corrigir programas numa linguagem. Em inglês, diz-se *integrated development environment*, e por isso chama-se **IDE**, pelas iniciais. "Integrado" quer dizer que as ferramentas estão no mesmo sítio, trabalham em conjunto e conhecem a linguagem. Por exemplo, há um botão que corre o ficheiro que tens à frente. Há também uma lista dos erros, em que um clique te leva à linha de cada um.
+
+Até aqui, o guia chamou editor ao VS Code. Com a extensão Python, faz mais do que isso. De origem, o VS Code é um editor de código com um explorador de ficheiros e um terminal. Pinta o Python, mas não confirma se o programa está bem escrito, nem o corre com um clique. Ganha isso com **extensões**: programas pequenos que se acrescentam ao VS Code para lhe dar ferramentas novas. Com a extensão Python, da Microsoft, o VS Code passa a funcionar como um IDE para Python. Ganha o botão de correr, as sugestões que conhecem as palavras do Python e o sublinhado dos erros. Nas aulas usa-se o VS Code porque serve para muitas linguagens. Serve também para o Git, a ferramenta que guarda as versões de um trabalho, que vais aprender este ano.
+
+As ferramentas do VS Code que vais usar estão nesta tabela. Não precisas de a decorar. Serve para consultares, e para saberes que cada ferramenta existe quando fizer falta.
+
+| Ferramenta | Onde está | Para que serve |
+| --- | --- | --- |
+| Explorador (Explorer) | No painel da esquerda | Ver os ficheiros da pasta do projeto e criar ficheiros novos |
+| Editor e separadores | Ao centro | Escrever o programa; cada ficheiro aberto tem um separador no topo |
+| Terminal integrado | No painel de baixo | Correr o programa com um comando e ver o que ele escreve |
+| Sugestões | Numa lista que aparece enquanto escreves | Escrever os nomes depressa e sem erros |
+| Sublinhado dos erros e painel dos problemas (Problems) | No editor e no painel de baixo | Ver um erro de sintaxe antes de correres |
+| Botão de correr | No canto de cima, à direita do editor | Correr o ficheiro aberto sem escreveres o comando |
+| Barra de estado | Na faixa do fundo da janela | Ver em que linha e em que coluna está o cursor |
+| Extensões (Extensions) | Nos ícones da esquerda | Ver e acrescentar extensões, como a do Python |
+| Depurador (Run and Debug) | Nos ícones da esquerda | Correr o programa linha a linha e ver o que muda |
+
+O explorador é o painel Explorer da secção "As ferramentas: o editor, o ficheiro, o terminal e o interpretador". Esse explorador, o editor e o terminal já os conheces. As outras ferramentas explicam-se aqui.
+
+As **sugestões** aparecem enquanto escreves. Se escreveres `pri`, aparece uma lista com `print`, e carregas em Tab ou em Enter para aceitar a sugestão. As sugestões propõem o que existe, e não o que está certo para o teu problema. Escolher continua a ser contigo.
+
+O **sublinhado dos erros** é uma linha ondulada por baixo de um erro de sintaxe que o VS Code encontrou, como uma aspa por fechar. Com outra cor, sublinha também os nomes que não conhece, como um `print` mal escrito. O painel dos **problemas**, Problems, fica na parte de baixo da janela. Faz a lista do que está sublinhado, com o número da linha de cada problema, e um clique num problema leva-te à linha. Abre-se no menu View, com a opção Problems.
+
+O **botão de correr** é um triângulo no canto de cima, à direita do editor. Se passares o rato por cima dele, aparece o nome Run Python File, isto é, "correr o ficheiro de Python". O botão corre o ficheiro do separador que tens à frente, e o resultado aparece no terminal, como com o comando.
+
+Antes do resultado, aparece no terminal uma linha comprida, que tu não escreveste. É o comando `python ola.py`, escrito pelo botão com os caminhos completos. O caminho completo de um ficheiro são as pastas por onde se chega a ele, desde o disco. Assim não há dúvidas sobre que Python e que ficheiro usar. O botão também guarda o ficheiro antes de o correr. Com o comando, quem guarda és tu.
+
+As duas formas dão o mesmo resultado, e o botão é mais rápido. O comando não depende do VS Code nem da extensão: funciona em qualquer terminal de um computador com o Python. Por isso, nas aulas, continuas a escrever o comando, e usas o botão quando já sabes o que ele faz por ti.
+
+A **barra de estado** é a faixa estreita no fundo da janela. Entre outras coisas, mostra onde está o cursor, como `Ln 3, Col 12`. Quer dizer linha 3, coluna 12: o cursor está na linha 3, depois do 11.º carácter. Quando o Python te diz que o erro está na linha 3, confirmas lá que estás na linha certa.
+
+O **depurador**, em Run and Debug, corre o programa uma linha de cada vez e mostra o que muda a cada passo. É como uma tabela de trace feita pelo computador. Os programas deste tema só escrevem texto, sem nada que mude, por isso ainda não precisas dele.
+
+Sem a extensão Python, o VS Code continua a servir para escrever, guardar e correr os programas no terminal. Ficas sem o botão de correr e sem o sublinhado dos erros do Python, e as sugestões só propõem palavras que já estão no ficheiro.
+
+Um erro comum é pensar que IDE é o nome de um programa. É um tipo de programa, como "editor de texto" ou "processador de texto". O VS Code com a extensão Python é um IDE, e há outros.
+
+## Quando é preciso um IDE, e quando não
+
+Um IDE ajuda muito, mas não é obrigatório, e nem sempre é a melhor escolha. Antes de abrires uma ferramenta, pergunta-te o que vais fazer.
+
+Pensa em três situações. Na primeira, queres saber se o `print` aceita um texto com acentos. Chega a consola do Python, e não precisas de criar nenhum ficheiro. Na segunda, queres corrigir uma letra num programa, num computador que tem o Python mas não tem o VS Code. Chega um editor de texto simples, como o Bloco de Notas. Para o correr, basta um terminal desse computador, aberto na pasta do ficheiro. Um editor simples também abre mais depressa do que um IDE, e para uma mudança pequena isso conta. Na terceira, queres escrever o ecrã de abertura de um jogo, corrê-lo, encontrar os erros e voltar a corrê-lo, muitas vezes. Aqui, o IDE poupa tempo e enganos, e é por isso que o usas nas aulas.
+
+| Situação | Ferramenta que chega | Porquê |
+| --- | --- | --- |
+| Experimentar uma linha | Consola do Python | Mostra logo o resultado, sem ficheiro |
+| Mudar uma palavra num ficheiro, num computador sem o VS Code | Editor de texto simples | Abre depressa e guarda texto simples |
+| Escrever, correr e corrigir um programa | IDE | Tem tudo à mão, na mesma janela |
+
+Há duas coisas que um IDE não faz.
+
+Não muda o que o programa faz. O mesmo `ola.py`, escrito no Bloco de Notas e corrido no terminal, escreve as mesmas duas linhas. O IDE ajuda quem escreve, mas quem executa é o interpretador, e ele não sabe onde o texto foi escrito.
+
+Não pensa por ti. O sublinhado apanha erros de sintaxe, como uma aspa por fechar, e nomes que o VS Code não conhece. As sugestões propõem nomes que existem. Nenhum dos dois sabe o que o teu programa devia escrever. Um programa sem nada sublinhado pode escrever uma linha errada, ou esquecer uma. Isso só se vê comparando o que apareceu com o resultado esperado, escrito antes de correr.
+
+O erro típico é dar um programa por certo porque o VS Code não sublinhou nada. Sem nada sublinhado, sabes só que o VS Code não encontrou erros de sintaxe nem nomes desconhecidos. Não sabes se o programa faz o que devia.
 
 ## Do `Escreve:` ao `print`
 
@@ -305,6 +401,8 @@ NameError: name 'Print' is not defined. Did you mean: 'print'?
 ```
 
 Desta vez, as duas primeiras linhas apareceram. É um **erro de execução**: um erro que para o programa a meio, numa linha que o Python não consegue executar. O programa estava bem escrito, por isso o Python começou a executá-lo. Executou as linhas 2 e 3 e parou na 4, porque não conhece nenhuma instrução chamada `Print`. As linhas de antes do erro já correram, e as de depois nunca correm.
+
+No VS Code com a extensão Python, o `Print` pode aparecer sublinhado antes de correres, como um nome que o VS Code não conhece. Mesmo assim, é um erro de execução. O tipo decide-se pelo que acontece quando corres, e as linhas de antes correram.
 
 **Terceiro caso.** O programa está bem escrito, mas o texto da linha 4 diz "dois pontos", em vez de "um ponto". Antes de leres o resultado, prevê: aparece alguma mensagem de erro?
 
@@ -517,6 +615,10 @@ Copiaste uma linha do pseudocódigo, como `Escreve: "Olá"`, e o programa corre 
 
 Escreveste `python ola.py` e o Windows diz que não conhece o comando, ou abre a Microsoft Store. O comando `python` não está disponível com esse nome nesse computador. Fecha a loja e usa `py ola.py`. Se nenhum dos dois funcionar, o Python pode não estar instalado.
 
+### `SyntaxError: invalid character '“' (U+201C)`
+
+Copiaste o programa de um documento ou de uma apresentação, e o programa não corre. A mensagem quer dizer "erro de sintaxe: carácter inválido", e o sinal `^` aponta para uma aspa curva. O processador de texto trocou as aspas retas por aspas curvas, e o Python não as reconhece como aspas. O `U+201C` é o número que identifica esse carácter, e podes ignorá-lo. Apaga as aspas curvas e escreve-as outra vez no VS Code, com a tecla das aspas.
+
 ## Palavras novas deste guia
 
 - Linguagem de programação: uma linguagem com um vocabulário pequeno e regras rigorosas, em que cada instrução quer dizer uma só coisa.
@@ -537,7 +639,20 @@ Escreveste `python ola.py` e o Windows diz que não conhece o comando, ou abre a
 - Terminal: a janela onde se escrevem comandos, um por linha.
 - Comando: uma ordem escrita no terminal, como `python ola.py`.
 - Pasta do projeto: a pasta com os ficheiros de um trabalho, que se abre inteira no VS Code.
+- Texto simples: texto só com os caracteres que se escreveram, sem formatação nem cores guardadas no ficheiro.
+- Editor de texto: um programa onde escreves e guardas texto simples, como o Bloco de Notas.
+- Editor de código: um editor de texto feito para escrever programas, com realce de sintaxe, números de linha e ajudas à escrita.
+- Realce de sintaxe: as cores com que o editor de código mostra cada parte do programa; não ficam guardadas no ficheiro.
+- IDE, ambiente de desenvolvimento integrado: um programa que junta numa só janela as ferramentas para escrever, correr e corrigir programas. As ferramentas conhecem a linguagem.
+- Extensão: um programa pequeno que se acrescenta ao VS Code para lhe dar ferramentas novas, como a extensão Python.
+- Sugestões: a lista de nomes que o VS Code propõe enquanto escreves.
+- Sublinhado dos erros: a linha ondulada por baixo de um erro de sintaxe ou de um nome que o VS Code não conhece.
+- Painel dos problemas (Problems): a lista do que o VS Code sublinhou, com o número da linha de cada problema.
+- Barra de estado: a faixa no fundo da janela do VS Code, que mostra, entre outras coisas, a linha e a coluna do cursor.
+- Caminho completo: as pastas por onde se chega a um ficheiro, desde o disco.
+- Depurador: a ferramenta que corre um programa linha a linha e mostra o que muda a cada passo.
 - Correr: pôr o interpretador a executar um programa.
+- Botão de correr: o triângulo no canto de cima do editor, que corre o ficheiro aberto sem escreveres o comando.
 - Consola do Python: o modo em que o Python executa uma linha de cada vez e mostra logo o resultado, a seguir ao `>>>`.
 - `print`: a instrução do Python que escreve no ecrã; o `Escreve:` do pseudocódigo.
 - Comentário: uma nota para quem lê o código, a seguir a um `#` fora das aspas, que o Python não executa.
@@ -552,9 +667,12 @@ Escreveste `python ola.py` e o Windows diz que não conhece o comando, ou abre a
 1. Qual é a diferença entre um algoritmo e um programa? Porque é que o computador não executa o pseudocódigo das aulas?
 2. O que faz o interpretador quando escreves `python quiz.py`? Diz os passos por ordem.
 3. Diz para que serve o editor, o ficheiro, o terminal e o interpretador, e onde vês cada um no VS Code.
-4. Escreve as cinco fases do ciclo de vida, por ordem. Em qual delas escreveste o pseudocódigo do duelo de dados?
-5. Qual é a diferença entre desenvolver em cascata e de forma incremental? Porque é que, na forma incremental, os erros se encontram mais depressa?
-6. O que aparece no ecrã com este programa?
+4. Porque é que o Bloco de Notas serve para escrever um programa em Python, e o Word não? O que faz um editor de código que o Bloco de Notas não faz?
+5. O que é um IDE? Que ferramenta do VS Code usas para ver um erro de sintaxe antes de correres, e qual te diz em que linha está o cursor?
+6. Dá um exemplo de uma tarefa em que te chega a consola do Python. Dá outro em que te chega um editor de texto simples. Para que usas um IDE nas aulas?
+7. Escreve as cinco fases do ciclo de vida, por ordem. Em qual delas escreveste o pseudocódigo do duelo de dados?
+8. Qual é a diferença entre desenvolver em cascata e de forma incremental? Porque é que, na forma incremental, os erros se encontram mais depressa?
+9. O que aparece no ecrã com este programa?
 
    ```python
    # torneio.py: o anúncio de um torneio de xadrez da escola.
@@ -562,10 +680,10 @@ Escreveste `python ola.py` e o Windows diz que não conhece o comando, ou abre a
    print("Inscrições na biblioteca.")
    ```
 
-7. Um programa tem seis linhas `print` e um erro na quarta. Que linhas aparecem no ecrã, se o erro for de sintaxe? E se for de execução?
-8. Porque é que um erro de lógica não dá mensagem? Como o encontras?
-9. Na consola, o que quer dizer o `>>>`? O que acontece se lá escreveres `python ola.py`, e porquê?
-10. Que informação leva o registo da execução? Porque é que a versão do Python faz parte dele?
+10. Um programa tem seis linhas `print` e um erro na quarta. Que linhas aparecem no ecrã, se o erro for de sintaxe? E se for de execução?
+11. Porque é que um erro de lógica não dá mensagem? Como o encontras?
+12. Na consola, o que quer dizer o `>>>`? O que acontece se lá escreveres `python ola.py`, e porquê?
+13. Que informação leva o registo da execução? Porque é que a versão do Python faz parte dele?
 
 ## O que vem a seguir
 
@@ -575,5 +693,6 @@ Para praticar este tema, faz o [laboratório](01-do-algoritmo-ao-programa-labora
 
 - [Transferir o Python](https://www.python.org/downloads/): a página oficial, em inglês, para instalares o Python no teu computador de casa. Se tiveres dúvidas na instalação, fala com o professor.
 - [Transferir o VS Code](https://code.visualstudio.com/download): a página oficial do editor das aulas, em inglês, com as versões para Windows, macOS e Linux.
+- [A extensão Python do VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python): a página oficial da extensão, em inglês. No VS Code de casa, instala-se no ícone Extensions, procurando Python, da Microsoft.
 
 ![Rodapé](../imagens/rodape.png)

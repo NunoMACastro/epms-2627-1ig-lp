@@ -2,20 +2,21 @@
 
 # Laboratório: Do algoritmo ao programa
 
-Laboratório do tema Do algoritmo ao programa, do módulo Desenvolver programas em linguagem estruturada. Vais escrever os teus primeiros programas em Python e pô-los a correr no computador. Um deles é o ecrã de abertura do duelo de dados, que já conheces do projeto 1. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](01-do-algoritmo-ao-programa.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Do algoritmo ao programa, do módulo Desenvolver programas em linguagem estruturada. Vais escrever os teus primeiros programas em Python, pô-los a correr no computador e conhecer as ferramentas do VS Code. Um deles é o ecrã de abertura do duelo de dados, que já conheces do projeto 1. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](01-do-algoritmo-ao-programa.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
 No fim, tens dois programas em Python numa pasta tua. O primeiro, `ola.py`, escreve duas linhas no ecrã e serve para confirmar que o Python corre no teu computador. O segundo, `abertura.py`, mostra o nome e as regras do duelo de dados. É a passagem para Python de um algoritmo escrito em pseudocódigo, e vais confirmar que o computador escreve exatamente o que previste.
 
-Pelo caminho, ficas a saber abrir uma pasta no VS Code, criar um ficheiro, guardá-lo e corrê-lo no terminal. Ficas também a saber experimentar uma linha na consola do Python. E aprendes a reconhecer os três tipos de erro que um programa pode ter. No caderno, fazes o **registo da execução**: o comando que funciona no teu computador e a versão do Python.
+Pelo caminho, ficas a saber abrir uma pasta no VS Code, criar um ficheiro, guardá-lo e corrê-lo no terminal. Ficas também a saber experimentar uma linha na consola do Python, e conheces as ferramentas que o VS Code junta na mesma janela. E aprendes a reconhecer os três tipos de erro que um programa pode ter. No caderno, fazes o **registo da execução**, com o comando que funciona no teu computador e a versão do Python. Fazes também o **mapa da janela** do VS Code, com o sítio de cada ferramenta.
 
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
 | 1 | `ola.py` | O primeiro programa corre no terminal, e o comando que funciona está no caderno |
 | 2 | Nada no disco; experimentas no terminal e na consola do Python | Sabes a versão do teu Python e tens o registo da execução no caderno |
-| 3 | `abertura.py` | O ecrã de abertura do duelo de dados aparece no terminal, igual ao que previste |
-| 4 | `abertura.py`, com erros provocados e corrigidos | Sabes dizer de que tipo é cada erro e como o encontraste |
+| 3 | Nada de novo no disco; percorres as ferramentas do VS Code com o `ola.py` | Tens o mapa da janela no caderno e corres o `ola.py` também com o botão |
+| 4 | `abertura.py` | O ecrã de abertura do duelo de dados aparece no terminal, igual ao que previste |
+| 5 | `abertura.py`, com erros provocados e corrigidos | Sabes dizer de que tipo é cada erro e como o encontraste |
 
 No fim, a tua pasta fica assim:
 
@@ -30,7 +31,16 @@ lp-python/
 - Programa: um algoritmo escrito numa linguagem que o computador consegue executar. Para saber mais, vê a secção "Um programa é um algoritmo escrito para o computador" do [guia](01-do-algoritmo-ao-programa.md).
 - Python: a linguagem de programação que vais usar neste módulo.
 - Interpretador: o programa que lê o teu programa, confirma que está bem escrito e executa as instruções por ordem, de cima para baixo. É o que se instala quando se instala o Python.
-- Editor: o programa onde escreves o código. Nas aulas, é o VS Code.
+- Editor de código: um editor de texto feito para escrever programas, com cores, números de linha e ajudas à escrita. Nas aulas, é o VS Code.
+- IDE, ambiente de desenvolvimento integrado: um programa que junta numa só janela as ferramentas para escrever, correr e corrigir programas. As ferramentas conhecem a linguagem. Para saber mais, vê a secção "O IDE: as ferramentas numa só janela" do [guia](01-do-algoritmo-ao-programa.md).
+- Extensão: um programa pequeno que se acrescenta ao VS Code para lhe dar ferramentas novas. Com a extensão Python, o VS Code funciona como um IDE para Python.
+- Separador: a aba no topo do editor, com o nome do ficheiro aberto.
+- Realce de sintaxe: as cores com que o editor mostra cada parte do programa. Não ficam guardadas no ficheiro.
+- Sugestões: a lista de nomes que o VS Code propõe enquanto escreves.
+- Sublinhado dos erros: a linha ondulada por baixo de um erro de sintaxe ou de um nome que o VS Code não conhece.
+- Painel dos problemas (Problems): a lista do que o VS Code sublinhou, com o número da linha de cada problema.
+- Barra de estado: a faixa no fundo da janela do VS Code, que mostra, entre outras coisas, a linha e a coluna do cursor.
+- Botão de correr: o triângulo no canto de cima do editor, que corre o ficheiro aberto sem escreveres o comando.
 - Ficheiro `.py`: o ficheiro de texto onde fica guardado um programa em Python. O nome acaba sempre em `.py`.
 - Terminal: uma janela onde se escrevem comandos, um por linha, e se carrega em Enter. O VS Code tem um terminal na parte de baixo.
 - Comando: uma ordem escrita no terminal, como `python ola.py`.
@@ -47,11 +57,12 @@ lp-python/
 
 - O Python 3, o interpretador. Não precisas de fazer nada agora: na fase 2, confirmas que o tens, com o comando `python --version`. Deve aparecer uma linha como `Python 3.13.2`, com os números da versão que está instalada. O primeiro número tem de ser 3.
 - O VS Code, o editor de código das aulas, onde escreves os programas e abres o terminal. Abre-se como qualquer outra aplicação do computador.
-- O caderno, para o registo da execução e para as tabelas que vais fazendo nas paragens.
+- A extensão Python do VS Code, da Microsoft, que acrescenta ao VS Code ferramentas que conhecem o Python, como um botão para correr o programa. Na fase 3, confirmas se está instalada. Sem ela, o laboratório faz-se na mesma, e a fase 3 diz o que muda.
+- O caderno, para o registo da execução, para o mapa da janela e para as tabelas que vais fazendo nas paragens.
 
 Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. Num Python mais antigo, uma mensagem pode ter outras palavras, ou apontar outra linha. O nome do erro, a palavra antes dos dois pontos na última linha, é o mesmo.
 
-Os nomes dos menus do VS Code foram confirmados a 27 de outubro de 2026, com o VS Code em inglês. Se o teu estiver em português, os menus estão no mesmo sítio, com o nome traduzido.
+Os nomes dos menus e dos botões são os do VS Code em inglês. Foram confirmados a 27 de outubro e a 2 de novembro de 2026. Se o teu estiver em português, os menus estão no mesmo sítio, com o nome traduzido.
 
 ## Se alguma coisa falhar
 
@@ -82,7 +93,7 @@ Na algoritmia, quem executava os algoritmos eras tu, com papel e lápis. Agora v
 
    Leitura guiada: a primeira linha começa com `#`, e por isso é um comentário. Diz o nome do ficheiro e para que serve, e o Python não a executa. As duas linhas seguintes são instruções `print`. Cada uma escreve no ecrã o texto que está entre aspas, pela ordem em que estão. As aspas marcam onde o texto começa e acaba, e não aparecem no ecrã.
 
-   Se aparecer, no canto de baixo do VS Code, um aviso a recomendar uma extensão de Python, podes fechá-lo. Este laboratório não precisa dela.
+   Se aparecer, no canto de baixo do VS Code, um aviso a recomendar uma extensão de Python, fecha-o por agora. Na fase 3, vês para que serve a extensão e confirmas se já está instalada.
 
 2. Guarda o ficheiro, com Ctrl+S, ou Cmd+S no macOS. O Python lê o ficheiro guardado no disco. Um ficheiro por guardar ainda não tem estas linhas, para o Python.
 
@@ -188,7 +199,59 @@ Tens no caderno o registo da execução, com o comando e a versão do teu Python
 
 Pensa antes de continuares: quando é que usas a consola, e quando é que usas um ficheiro `.py`? A resposta: a consola serve para experimentar uma linha e ver logo o resultado. Um programa que queres guardar, corrigir e voltar a correr escreve-se num ficheiro `.py`.
 
-## Fase 3: Do pseudocódigo ao programa
+## Fase 3: As ferramentas do VS Code
+
+Até aqui, usaste o VS Code para escrever o `ola.py` e para abrir o terminal. O editor, o explorador e o terminal estão todos na mesma janela. Com a extensão Python, o VS Code junta-lhes ferramentas que conhecem o Python, como um botão que corre o programa e um sublinhado nos erros. Passa então a funcionar como um ambiente de desenvolvimento integrado, ou IDE. Nesta fase vais encontrar essas ferramentas uma a uma, com o `ola.py`. Vais também desenhar no caderno o mapa da janela, com o sítio de cada uma. Não precisas de as decorar. Precisas de saber que existem, para as ires buscar quando fizerem falta.
+
+Um IDE ajuda, mas nem sempre é preciso. Para experimentar uma linha, chega a consola, como na fase 2. Para mudar uma palavra num ficheiro, num computador sem o VS Code, chega um editor de texto simples, como o Bloco de Notas. Um editor destes guarda só o texto, sem formatação. Para saber mais, lê no [guia](01-do-algoritmo-ao-programa.md) estas três secções:
+
+- "Do editor de texto ao editor de código";
+- "O IDE: as ferramentas numa só janela";
+- "Quando é preciso um IDE, e quando não".
+
+1. Desenha o mapa da janela. Olha para a janela do VS Code e desenha no caderno um retângulo grande, dividido nestas cinco zonas:
+
+   - a coluna estreita dos ícones, à esquerda;
+   - o painel do explorador, ao lado dela;
+   - o editor, ao centro;
+   - o painel de baixo, onde está o terminal;
+   - a barra de estado, a faixa fina no fundo da janela.
+
+   Deixa espaço em cada zona, porque vais escrever lá o nome das ferramentas que encontrares.
+
+2. Confirma se a extensão Python está instalada. Os passos seguintes dependem dela. Na coluna dos ícones, carrega no ícone das extensões, Extensions, o dos quatro quadrados. Na caixa de procura que aparece no topo, escreve `Python`. O que deves ver: uma lista de extensões, com uma chamada Python, da Microsoft, no topo. Se ela tiver um botão Install, isto é, "instalar", não está instalada: avisa o professor antes de a instalares. Se não tiver esse botão, já está instalada. Escreve no caderno se a tens ou não. No mapa, escreve "extensões" na coluna dos ícones. Depois volta ao explorador, com um clique no primeiro ícone da coluna.
+
+3. No explorador, o painel Explorer, carrega no `ola.py`. O que deves ver: o ficheiro abre-se no editor, ao centro, com um separador no topo com o nome `ola.py`. No mapa, escreve "explorador" no painel da esquerda, "editor e separadores" ao centro e "terminal integrado" no painel de baixo. Estas três já as usaste na fase 1.
+
+4. Olha para a margem da esquerda do editor. Tem os números das linhas: 1, 2 e 3. Repara também nas cores. O comentário tem uma cor, a palavra `print` outra, e os textos entre aspas outra. A estas cores chama-se realce de sintaxe. Ajudam a ver o que é cada parte do programa, e não ficam guardadas no ficheiro: o ficheiro tem só o texto.
+
+5. Vê um erro antes de correres. Na linha 3, apaga a aspa que fecha o texto, como fizeste na fase 1, mas desta vez não guardes. O que deves ver: o `)` do fim da linha passa a ter a cor dos textos. O editor também já não sabe onde o texto acaba. No separador, no lugar do X, aparece a bola cheia das alterações por guardar. Com a extensão Python, aparece ainda uma linha ondulada perto do erro: é o sublinhado dos erros. Na primeira vez, pode levar uns segundos a aparecer. Sem a extensão, não aparece nenhuma linha ondulada, mas a cor muda na mesma.
+
+6. Abre o painel dos problemas. No menu View, escolhe Problems. O que deves ver, com a extensão Python: no painel de baixo, uma lista com pelo menos um problema e o número da linha, 3. Carrega no problema, e o cursor salta para a linha 3. Sem a extensão, a lista fica vazia, porque o VS Code sozinho só pinta o texto e não confirma se o programa está bem escrito. Depois, carrega no texto da linha 3, no editor, e desfaz a alteração com Ctrl+Z, ou Cmd+Z no macOS. A aspa volta, a linha volta às cores de antes e a bola volta a ser um X. No mapa, escreve "sublinhado dos erros" no editor e "painel dos problemas" no painel de baixo.
+
+7. Experimenta as sugestões e o fecho automático. Põe o cursor no fim da linha 3, carrega em Enter, para abrires uma linha nova, e escreve só `pri`. O que deves ver: uma lista pequena por baixo do cursor, com `print`. Se a lista não aparecer, carrega em Ctrl+Espaço. Carrega em Tab, ou em Enter, e o VS Code completa a palavra. Escreve agora `(`. O que deves ver: o VS Code escreve sozinho o `)`, e o cursor fica entre os dois parênteses. Pode abrir-se também uma caixa com uma explicação do `print`, em inglês: fecha-a com a tecla Esc. No mapa, escreve "sugestões" no editor. Depois, apaga a linha 4 inteira, até o cursor voltar ao fim da linha 3, e guarda. O `ola.py` volta a ter só as três linhas.
+
+8. Olha para a barra de estado. Põe o cursor no fim da linha 2, a seguir ao último parêntese. O que deves ver, na barra de estado, entre outras coisas: `Ln 2, Col 22`. Quer dizer linha 2, coluna 22: o cursor está na linha 2, depois do 21.º carácter, o último. Quando uma mensagem de erro disser `line 2`, é assim que confirmas que o cursor está na linha certa. No mapa, escreve "barra de estado" na faixa do fundo.
+
+9. Corre o `ola.py` com o botão. Com o `ola.py` à frente no editor, procura um triângulo no canto de cima, à direita. Passa o rato por cima dele: aparece o nome Run Python File, isto é, "correr o ficheiro de Python". Antes de carregares, prevê o que aparece no terminal. Depois carrega no triângulo. O que deves ver: no terminal, uma linha comprida, que não escreveste, e por baixo as duas linhas do `ola.py`. O botão pode abrir um terminal novo para isso, no painel de baixo.
+
+   A linha comprida é o comando que o botão escreveu por ti. Tem o caminho completo do interpretador do Python, um espaço e o caminho completo do `ola.py`. O caminho completo de um ficheiro são as pastas por onde se chega a ele, desde o disco. É o mesmo que `python ola.py`, com os caminhos inteiros. No Windows, a linha começa por `&`, um sinal que o terminal do Windows pede antes de um caminho, e que podes ignorar. O botão também guarda o ficheiro antes de o correr. No registo da execução, fica o comando que escreves tu, porque é ele que funciona em qualquer terminal. Sem a extensão, não há triângulo: lê este passo sem o fazer. No mapa, escreve "botão de correr" no canto de cima do editor.
+
+### Paragem 3
+
+O teu mapa da janela tem nove ferramentas, cada uma na sua zona:
+
+- no painel da esquerda, o explorador;
+- ao centro, o editor e os separadores, o sublinhado dos erros, as sugestões e, no canto de cima, o botão de correr;
+- no painel de baixo, o terminal integrado e o painel dos problemas;
+- na faixa do fundo, a barra de estado;
+- na coluna dos ícones, as extensões.
+
+O `ola.py` tem outra vez as três linhas e corre com o comando e com o botão.
+
+Pensa antes de continuares: no passo 5, o VS Code mostrou a aspa por fechar antes de correres. Quer isto dizer que o VS Code executou o programa? A resposta: não. O editor só lê o texto e pinta-o pelas regras de escrita do Python. Quem executa o programa é o interpretador, e só quando o corres, com o comando ou com o botão.
+
+## Fase 4: Do pseudocódigo ao programa
 
 No projeto 1, escreveste o algoritmo do duelo de dados. Um jogo destes começa quase sempre por um ecrã de abertura, com o nome e as regras. Em pseudocódigo, esse ecrã é uma sequência de instruções `Escreve:`, executadas uma depois da outra:
 
@@ -243,17 +306,17 @@ Passar este algoritmo para Python é trocar cada `Escreve:` por um `print`, com 
    | `Escreve: "Olá"` | `print("Olá")` | `print` em minúsculas, e o texto entre parênteses |
    | não havia | `# comentário` | uma nota para quem lê, que o Python não executa |
 
-### Paragem 3
+### Paragem 4
 
 O `abertura.py` mostra o ecrã de abertura do duelo de dados, igual ao resultado esperado que escreveste antes de correr.
 
 Pensa antes de continuares: se trocares a ordem de duas linhas `print`, o que muda no ecrã? A resposta: as duas linhas aparecem trocadas. O Python executa as instruções exatamente pela ordem em que estão no ficheiro, de cima para baixo, como numa sequência do pseudocódigo.
 
-## Fase 4: Os três tipos de erro
+## Fase 5: Os três tipos de erro
 
-Na fase 1 viste um erro de sintaxe: o Python recusou o programa inteiro, e nenhuma linha correu. Há mais dois tipos de erro, e cada um se reconhece de outra maneira. Num erro de execução, o programa começa a correr e para a meio, com uma mensagem. Num erro de lógica, não há mensagem nenhuma: o programa corre até ao fim, mas o resultado não é o esperado. Saber que tipo de erro é diz-te onde procurar. Para saber mais, lê a secção "Os três tipos de erro" do [guia](01-do-algoritmo-ao-programa.md).
+Na fase 1 viste um erro de sintaxe: o Python recusou o programa inteiro, e nenhuma linha correu. Na fase 3 viste o mesmo erro no editor, antes de correres. Há mais dois tipos de erro, e cada um se reconhece de outra maneira. Num erro de execução, o programa começa a correr e para a meio, com uma mensagem. Num erro de lógica, não há mensagem nenhuma: o programa corre até ao fim, mas o resultado não é o esperado. Saber que tipo de erro é diz-te onde procurar. Para saber mais, lê a secção "Os três tipos de erro" do [guia](01-do-algoritmo-ao-programa.md).
 
-1. Provoca um erro de execução. No `abertura.py`, na linha 6, muda o `print` para `Print`, com P maiúsculo. A linha fica `Print("Quem escolher o número maior ganha a ronda.")`. Antes de correres, prevê: aparece alguma linha do ecrã de abertura? Guarda e corre. O que deves ver:
+1. Provoca um erro de execução. No `abertura.py`, na linha 6, muda o `print` para `Print`, com P maiúsculo. A linha fica `Print("Quem escolher o número maior ganha a ronda.")`. Antes de guardares, olha para o editor. Com a extensão Python, o `Print` pode aparecer sublinhado, com uma cor diferente da do erro da aspa. É um aviso de que o VS Code não conhece esse nome. Antes de correres, prevê: aparece alguma linha do ecrã de abertura? Guarda e corre. O que deves ver:
 
    ```text
    DUELO DE DADOS
@@ -270,9 +333,11 @@ Na fase 1 viste um erro de sintaxe: o Python recusou o programa inteiro, e nenhu
 
    A mensagem chama-se traceback, e lê-se de baixo para cima. A última linha diz o nome do erro, `NameError`, um erro de nome. Diz também "o nome 'Print' não está definido. Querias dizer 'print'?". Por cima dela estão a instrução que falhou e, numa linha à parte, os sinais `^`, por baixo da parte suspeita. Mais acima, a linha com `File` diz em que linha está, `line 6`, e o `in <module>` quer dizer que foi na parte principal do programa. A primeira linha, `Traceback (most recent call last)`, só anuncia que vem aí a mensagem de um erro de execução.
 
+   O VS Code pode ter avisado antes, mas o tipo de erro não se decide pelo sublinhado. Decide-se pelo que aconteceu quando correste: as linhas de antes apareceram, e o programa parou na linha 6. Por isso, é um erro de execução.
+
 2. Corrige: volta a pôr o `print` em minúsculas, guarda e corre. O que deves ver: as cinco linhas, outra vez.
 
-3. Provoca um erro de lógica. Põe o cursor na linha do `print("DUELO DE DADOS")` e corta a linha inteira, com Ctrl+X, ou Cmd+X no macOS. Depois põe o cursor no fim da última linha, carrega em Enter para abrires uma linha nova e cola, com Ctrl+V, ou Cmd+V. Antes de correres, prevê: aparece alguma mensagem de erro? Guarda e corre. O que deves ver:
+3. Provoca um erro de lógica. Põe o cursor na linha do `print("DUELO DE DADOS")` e corta a linha inteira, com Ctrl+X, ou Cmd+X no macOS. Depois põe o cursor no fim da última linha, carrega em Enter para abrires uma linha nova e cola, com Ctrl+V, ou Cmd+V. Antes de correres, prevê: o VS Code sublinha alguma coisa? E aparece alguma mensagem de erro? Guarda e corre. O que deves ver:
 
    ```text
    Dois jogadores, no máximo cinco rondas.
@@ -282,7 +347,7 @@ Na fase 1 viste um erro de sintaxe: o Python recusou o programa inteiro, e nenhu
    DUELO DE DADOS
    ```
 
-   Não há mensagem nenhuma. O programa está bem escrito e todas as instruções existem, por isso o Python executou-as todas. Mas o nome do jogo aparece no fim, e não no início. Só dás pelo erro porque comparas o que apareceu com o resultado esperado que escreveste no caderno, na fase 3. É por isso que o resultado esperado se escreve antes de correr.
+   Não há mensagem nenhuma, nem nada sublinhado no editor. O programa está bem escrito e todas as instruções existem, por isso o Python executou-as todas. Mas o nome do jogo aparece no fim, e não no início. Só dás pelo erro porque comparas o que apareceu com o resultado esperado que escreveste no caderno, na fase 4. É por isso que o resultado esperado se escreve antes de correr.
 
 4. Corrige: corta outra vez a linha do título, da mesma maneira. Põe o cursor no início da linha 3, logo a seguir aos comentários, e cola. Confirma que o `print("DUELO DE DADOS")` ficou numa linha só para ele. Guarda, corre e compara outra vez com o resultado esperado.
 
@@ -296,11 +361,11 @@ Na fase 1 viste um erro de sintaxe: o Python recusou o programa inteiro, e nenhu
    | O `Print` com maiúscula | De execução | As linhas de antes, e depois o traceback com `NameError` | As que estão antes da linha 6 |
    | O título no fim | De lógica | Nenhuma mensagem; o ecrã diferente do esperado | Todas |
 
-### Paragem 4
+### Paragem 5
 
 O `abertura.py` está outra vez certo, e dá as cinco linhas pela ordem do pseudocódigo. Na tabela do caderno tens um erro de cada tipo, com o que se viu em cada um.
 
-Pensa antes de terminares: qual dos três erros é o mais difícil de encontrar, e porquê? A resposta: o erro de lógica, porque o Python não dá nenhuma mensagem. Só se encontra comparando o resultado obtido com o resultado esperado, escrito antes de correr o programa.
+Pensa antes de terminares: qual dos três erros é o mais difícil de encontrar, e porquê? A resposta: o erro de lógica, porque o Python não dá nenhuma mensagem, e o VS Code não sublinha nada. Só se encontra comparando o resultado obtido com o resultado esperado, escrito antes de correr o programa.
 
 O ficheiro `abertura.py` completo, como deve estar agora:
 
@@ -332,9 +397,13 @@ Estás dentro da consola do Python, e a linha começa por `>>>`. A consola esper
 
 O ficheiro não foi guardado, e o Python correu a versão antiga. Guarda com Ctrl+S, ou Cmd+S no macOS, e corre outra vez.
 
+### Não há triângulo no canto de cima do editor
+
+O botão de correr vem com a extensão Python. Confirma, como no passo 2 da fase 3, se a extensão está instalada. Confirma também que o ficheiro que tens à frente acaba em `.py`, porque o botão só aparece nos ficheiros de Python. Enquanto não houver botão, corre os programas com o comando, no terminal.
+
 ### `NameError` e `is not defined`
 
-O Python não conhece uma palavra que escreveste, e a mensagem mostra-a entre aspas simples. Na fase 4, é o `Print`, com maiúscula. O Python distingue as maiúsculas das minúsculas, e a instrução é `print`, toda em minúsculas.
+O Python não conhece uma palavra que escreveste, e a mensagem mostra-a entre aspas simples. Na fase 5, é o `Print`, com maiúscula. O Python distingue as maiúsculas das minúsculas, e a instrução é `print`, toda em minúsculas.
 
 ### O programa corre e não escreve nada
 
@@ -346,16 +415,21 @@ Confirma que cada linha tem `print`, e não `Escreve:`. Uma linha copiada do pse
 
 2. O ecrã de abertura de outro jogo. Escolhe um jogo de cartas ou de tabuleiro que conheças bem, como o jogo do galo. Escreve, primeiro em pseudocódigo, um ecrã de abertura com o nome do jogo e três regras. Depois passa-o para Python, num ficheiro novo com um nome que diga o que é, sem espaços nem acentos. Testa-o com o resultado esperado escrito antes de correr.
 
-3. O erro que ninguém vê. Num dos teus programas, provoca um erro de lógica diferente do da fase 4, que não troque a ordem das linhas. Dá o programa a um colega, com o resultado esperado, e vê se ele encontra o erro. Pista: pensa no que pode estar errado num programa que corre até ao fim sem mensagem.
+3. O erro que ninguém vê. Num dos teus programas, provoca um erro de lógica diferente do da fase 5, que não troque a ordem das linhas. Dá o programa a um colega, com o resultado esperado, e vê se ele encontra o erro. Pista: pensa no que pode estar errado num programa que corre até ao fim sem mensagem.
+
+4. Sem o VS Code. Este desafio faz-se num computador com Windows; se só tens macOS, salta-o. Abre o `ola.py` no Bloco de Notas. No Explorador de Ficheiros do Windows, carrega no ficheiro com o botão direito do rato. O ficheiro pode aparecer só como `ola`, porque o Windows esconde o fim do nome. Escolhe Abrir com e depois Bloco de Notas. Muda o texto da linha 2, guarda e fecha o Bloco de Notas. Antes de correres, prevê: o programa corre? Depois corre-o no terminal, com o teu comando. No caderno, escreve o que encontraste no Bloco de Notas, comparado com o VS Code, e o que o Bloco de Notas não tem. Pista: compara com as ferramentas do teu mapa da janela.
 
 ## Antes de terminares
 
 - [ ] O `ola.py` corre e escreve as duas linhas.
 - [ ] O `abertura.py` corre e escreve as cinco linhas do ecrã de abertura, pela ordem do pseudocódigo.
 - [ ] O registo da execução, no caderno, tem o comando que funciona no teu computador e a versão do Python.
+- [ ] O mapa da janela, no caderno, tem as ferramentas da fase 3, cada uma na sua zona.
 - [ ] A tabela dos três erros, no caderno, tem um erro de cada tipo.
 - [ ] Sabes sair da consola do Python e voltar ao terminal.
+- [ ] Sabes correr um programa com o comando e com o botão de correr.
 - [ ] Sabes distinguir um erro de sintaxe, um erro de execução e um erro de lógica pelo que aparece no ecrã.
+- [ ] Consegues explicar, por palavras tuas, o que é um IDE e quando te chega a consola ou um editor de texto simples.
 - [ ] Consegues explicar, por palavras tuas, o que faz o interpretador quando escreves `python abertura.py`.
 
 ![Rodapé](../imagens/rodape.png)
