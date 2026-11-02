@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Decisões e validação
 
@@ -6,7 +6,7 @@ Ficha do tema Decisões e validação, do módulo Desenvolver algoritmos. Pratic
 
 ## O que precisas de saber
 
-O [guia do tema](03-decisoes-e-validacao.md). Antes de começares, deves ter lido as secções da matéria e o exemplo guiado do guia. Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
+O [guia do tema](../03-decisoes-e-validacao.md). Antes de começares, deves ter lido as secções da matéria e o exemplo guiado do guia. Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
 
 ## Como trabalhar
 
@@ -309,4 +309,4 @@ Pede a um colega o algoritmo que ele escreveu no exercício 5, em pseudocódigo 
 2. O que te custou mais nesta ficha? Foram as tabelas de verdade, pôr o limite do lado certo, a ordem da cadeia ou a árvore de casos?
 3. Que dificuldade tiveste, e o que fizeste para a resolver?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

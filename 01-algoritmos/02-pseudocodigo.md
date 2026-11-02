@@ -2,7 +2,7 @@
 
 # Pseudocódigo
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos em pseudocódigo, com variáveis, tipos de dados, contas e funções predefinidas. Aprendes também a seguir um algoritmo à mão, numa tabela de trace. Lês o guia ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há a [ficha de exercícios](02-pseudocodigo-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos em pseudocódigo, com variáveis, tipos de dados, contas e funções predefinidas. Aprendes também a seguir um algoritmo à mão, numa tabela de trace. Lês o guia ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há a [ficha de exercícios](exercicios/02-pseudocodigo-exercicios.md) deste tema.
 
 No guia 01 escreveste algoritmos em português, em passos numerados. Neste guia, o estado ganha nomes, as variáveis, e os passos ganham uma escrita própria. É a forma que o professor usa no quadro, e vais encontrá-la igual em todos os guias de algoritmos. Se já escreveste na aula as primeiras instruções em pseudocódigo, vais reconhecê-la, e aqui fica o porquê de cada peça. Todos os algoritmos deste guia são sequenciais: fazem sempre os mesmos passos, pela mesma ordem, seja qual for a entrada. Escolher entre caminhos é o assunto do guia 03, e repetir passos é o do guia 04.
 
@@ -861,7 +861,7 @@ Acontece porque, numa sequência, cada instrução só pode usar os valores que 
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](02-pseudocodigo-exercicios.md).
+Para praticar este tema, faz a [ficha de exercícios](exercicios/02-pseudocodigo-exercicios.md).
 
 O tema seguinte é [Decisões e validação](03-decisoes-e-validacao.md). Todos os algoritmos deste guia fazem sempre as mesmas contas, por mais estranha que seja a entrada. Se alguém escrever -30 cadernos, o contrato diz que a entrada não é válida, mas o algoritmo não tem forma de o verificar. Para verificar uma entrada, ou para fazer coisas diferentes consoante os dados, o algoritmo precisa de tomar decisões. É isso que vais aprender no guia 03.
 

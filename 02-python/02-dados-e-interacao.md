@@ -2,7 +2,7 @@
 
 # Dados e interação
 
-Módulo UC00606, Desenvolver programas em linguagem estruturada. Neste guia, os teus programas passam a guardar valores, a fazer contas e a ler o que a pessoa escreve no teclado. Vais aprender a não confundir um texto com um número, que é o erro mais frequente de quem começa. Para praticar, há o [laboratório](02-dados-e-interacao-laboratorio.md) e a [ficha de exercícios](02-dados-e-interacao-exercicios.md) deste tema.
+Módulo UC00606, Desenvolver programas em linguagem estruturada. Neste guia, os teus programas passam a guardar valores, a fazer contas e a ler o que a pessoa escreve no teclado. Vais aprender a não confundir um texto com um número, que é o erro mais frequente de quem começa. Para praticar, há o [laboratório](laboratorios/02-dados-e-interacao-laboratorio.md) e a [ficha de exercícios](exercicios/02-dados-e-interacao-exercicios.md) deste tema.
 
 No tema anterior, os programas só escreviam texto fixo, sempre igual. A partir de agora, um programa guarda valores, calcula com eles e responde ao que a pessoa escreve. Ainda não decide nem repete: as decisões e as repetições são dos temas seguintes. Os exemplos deste guia vêm quase todos do inventário de um jogo de construção, onde o jogador junta troncos, pedra e ferro para construir objetos.
 
@@ -525,7 +525,7 @@ Aparece `NameError: name '...' is not defined`, com o nome de uma variável tua.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](02-dados-e-interacao-laboratorio.md) e depois a [ficha de exercícios](02-dados-e-interacao-exercicios.md). O tema seguinte é Seleção, em que o programa passa a decidir, com o `if`, o que faz a seguir.
+Para praticar este tema, faz o [laboratório](laboratorios/02-dados-e-interacao-laboratorio.md) e depois a [ficha de exercícios](exercicios/02-dados-e-interacao-exercicios.md). O tema seguinte é Seleção, em que o programa passa a decidir, com o `if`, o que faz a seguir.
 
 ## Para saber mais
 

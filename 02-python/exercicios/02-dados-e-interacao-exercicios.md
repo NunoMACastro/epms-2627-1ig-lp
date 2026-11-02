@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Dados e interação
 
@@ -6,7 +6,7 @@ Ficha do tema Dados e interação, do módulo Desenvolver programas em linguagem
 
 ## O que precisas de saber
 
-O [guia do tema](02-dados-e-interacao.md) e o [laboratório](02-dados-e-interacao-laboratorio.md).
+O [guia do tema](../02-dados-e-interacao.md) e o [laboratório](../laboratorios/02-dados-e-interacao-laboratorio.md).
 
 ## Como trabalhar
 
@@ -151,4 +151,4 @@ Depois responde: o dinheiro guarda-se em cêntimos, num `int`. Porque é que nã
 2. Qual das três divisões, `/`, `//` ou `%`, te custa mais a escolher? Dá um exemplo de quando usarias cada uma.
 3. Porque é que vale a pena ter, numa tabela de entradas e saídas, um caso de fronteira, como os 60 minutos do exercício 2?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

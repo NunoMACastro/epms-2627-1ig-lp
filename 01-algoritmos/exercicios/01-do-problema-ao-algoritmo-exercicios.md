@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Do problema ao algoritmo
 
@@ -6,7 +6,7 @@ Ficha do tema Do problema ao algoritmo, do módulo Desenvolver algoritmos. Prati
 
 ## O que precisas de saber
 
-O [guia do tema](01-do-problema-ao-algoritmo.md).
+O [guia do tema](../01-do-problema-ao-algoritmo.md).
 
 Antes de começares, deves conseguir explicar:
 
@@ -154,4 +154,4 @@ Volta aos tablets do exercício 3. Escreve o algoritmo, em passos numerados, do 
 1. O que já consegues fazer sozinho, sem voltar ao guia?
 2. Que dificuldade tiveste, e o que fizeste para a resolver?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

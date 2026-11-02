@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: Dados e interação
 
-Laboratório do tema Dados e interação, do módulo Desenvolver programas em linguagem estruturada. Vais construir a calculadora de material do inventário de um jogo de construção. O programa pergunta quantos troncos tens e diz quantas tábuas dão, quantos baús constróis e quantas tábuas sobram. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](02-dados-e-interacao.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Dados e interação, do módulo Desenvolver programas em linguagem estruturada. Vais construir a calculadora de material do inventário de um jogo de construção. O programa pergunta quantos troncos tens e diz quantas tábuas dão, quantos baús constróis e quantas tábuas sobram. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../02-dados-e-interacao.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
@@ -30,7 +30,7 @@ Pelo caminho, ficas a saber guardar valores em variáveis e constantes, fazer co
 
 ## Palavras que vais usar
 
-- Variável: um nome que guarda um valor, para o programa o usar mais tarde, como `troncos = 7`. Para saber mais, vê a secção "Guardar valores em variáveis" do [guia](02-dados-e-interacao.md).
+- Variável: um nome que guarda um valor, para o programa o usar mais tarde, como `troncos = 7`. Para saber mais, vê a secção "Guardar valores em variáveis" do [guia](../02-dados-e-interacao.md).
 - Atribuição: a instrução com `=`, que guarda o valor da direita na variável da esquerda.
 - Constante: uma variável com o nome em maiúsculas, como `TABUAS_POR_BAU`, que guarda uma regra que não muda.
 - Tipo: a espécie de valor que se guarda. Neste laboratório usas três: `int`, para números inteiros, `float`, para números com parte decimal, e `str`, para textos.
@@ -62,7 +62,7 @@ Neste laboratório, onde o texto diz `python`, usa o teu comando.
 
 ## Fase 1: Guardar valores em variáveis
 
-Um jogo tem de se lembrar de quanto material tens. Para isso, o programa guarda cada quantidade numa variável: um nome com um valor. Em pseudocódigo escrevias `int troncos = 7`. Em Python, o tipo não se escreve: basta `troncos = 7`, e o Python percebe pelo valor que é um inteiro. Os nomes escrevem-se em minúsculas, e, quando têm várias palavras, com um traço baixo entre elas, como `total_tabuas`. Para saber mais, lê as secções "Guardar valores em variáveis" e "Os nomes das variáveis" do [guia](02-dados-e-interacao.md).
+Um jogo tem de se lembrar de quanto material tens. Para isso, o programa guarda cada quantidade numa variável: um nome com um valor. Em pseudocódigo escrevias `int troncos = 7`. Em Python, o tipo não se escreve: basta `troncos = 7`, e o Python percebe pelo valor que é um inteiro. Os nomes escrevem-se em minúsculas, e, quando têm várias palavras, com um traço baixo entre elas, como `total_tabuas`. Para saber mais, lê as secções "Guardar valores em variáveis" e "Os nomes das variáveis" do [guia](../02-dados-e-interacao.md).
 
 1. Cria o ficheiro `inventario.py`. No painel Explorer, passa o rato por cima de `LP-PYTHON` e carrega no ícone New File.... Escreve o nome `inventario.py` e carrega em Enter. Escreve nele este conteúdo, que é o ficheiro completo:
 
@@ -116,7 +116,7 @@ Pensa antes de continuares: porque é que `print("Troncos:", troncos)` escreve `
 
 ## Fase 2: Experimentar tipos e contas na consola
 
-Antes de pôr contas no programa, vale a pena ver como o Python as faz. Cada valor tem um tipo, e o tipo muda o resultado das contas. Na consola do Python, experimentas uma linha de cada vez e vês logo o resultado, sem criar ficheiros. Para saber mais, lê as secções "Os tipos dos valores", "As contas: os operadores" e "A ordem das contas" do [guia](02-dados-e-interacao.md).
+Antes de pôr contas no programa, vale a pena ver como o Python as faz. Cada valor tem um tipo, e o tipo muda o resultado das contas. Na consola do Python, experimentas uma linha de cada vez e vês logo o resultado, sem criar ficheiros. Para saber mais, lê as secções "Os tipos dos valores", "As contas: os operadores" e "A ordem das contas" do [guia](../02-dados-e-interacao.md).
 
 1. Entra na consola: no terminal, escreve só `python`, com o teu comando, e carrega em Enter. O que deves ver: duas linhas em inglês, a primeira com a versão do Python, e por baixo, numa linha à parte, `>>>`.
 
@@ -180,7 +180,7 @@ Pensa antes de continuares: com 30 tábuas e baús de 8, quantos baús fazes e q
 
 ## Fase 3: Constantes e contas no programa
 
-Agora o programa faz as contas da madeira. Cada tronco dá 4 tábuas, e cada baú gasta 8. Estes números são regras do jogo, que não mudam. Se aparecessem soltos no meio das contas, quem lesse não saberia o que querem dizer. Por isso, ficam em constantes: variáveis com o nome todo em maiúsculas, que se combina não mudar. Para saber mais, lê a secção "Constantes" do [guia](02-dados-e-interacao.md).
+Agora o programa faz as contas da madeira. Cada tronco dá 4 tábuas, e cada baú gasta 8. Estes números são regras do jogo, que não mudam. Se aparecessem soltos no meio das contas, quem lesse não saberia o que querem dizer. Por isso, ficam em constantes: variáveis com o nome todo em maiúsculas, que se combina não mudar. Para saber mais, lê a secção "Constantes" do [guia](../02-dados-e-interacao.md).
 
 1. Antes de mexeres no código, prevê no caderno, com 7 troncos: quantas tábuas, quantos baús e quantas tábuas sobram. A resposta: 7 vezes 4 dá 28 tábuas; 28 a dividir por 8 dá 3 baús completos; e sobram 4 tábuas.
 
@@ -235,7 +235,7 @@ Pensa antes de continuares: se o jogo mudar e cada baú passar a gastar 6 tábua
 
 ## Fase 4: Ler do teclado e converter
 
-Até aqui, o programa tinha sempre 7 troncos. Um programa útil pergunta. Em pseudocódigo era o `ler valor`; em Python, é o `input`. O `input` escreve a pergunta, espera que a pessoa escreva e carregue em Enter, e devolve o que ela escreveu. Mas devolve sempre um texto, mesmo que a pessoa escreva um número. Nesta fase vais ver o que acontece quando te esqueces disso, e como se resolve. Para saber mais, lê as secções "Ler do teclado com `input`" e "Converter um texto num número" do [guia](02-dados-e-interacao.md).
+Até aqui, o programa tinha sempre 7 troncos. Um programa útil pergunta. Em pseudocódigo era o `ler valor`; em Python, é o `input`. O `input` escreve a pergunta, espera que a pessoa escreva e carregue em Enter, e devolve o que ela escreveu. Mas devolve sempre um texto, mesmo que a pessoa escreva um número. Nesta fase vais ver o que acontece quando te esqueces disso, e como se resolve. Para saber mais, lê as secções "Ler do teclado com `input`" e "Converter um texto num número" do [guia](../02-dados-e-interacao.md).
 
 1. Em `inventario.py`, substitui a linha `troncos = 7` por esta:
 
@@ -321,7 +321,7 @@ Pensa antes de continuares: porque é que a mensagem do passo 2 apontava a linha
 
 ## Fase 5: Testar com uma tabela de entradas e saídas
 
-Um caso só não chega para confiar num programa. Pode dar certo com 7 troncos e errado com 0 ou com 2. Testar é escolher casos que experimentam situações diferentes e comparar o resultado com o esperado, escrito antes de correr. A forma de o organizar é uma tabela de entradas e saídas. Tem uma linha por caso, com o que se escreve no teclado e o que deve aparecer. Para saber mais, vê o exemplo guiado do [guia](02-dados-e-interacao.md).
+Um caso só não chega para confiar num programa. Pode dar certo com 7 troncos e errado com 0 ou com 2. Testar é escolher casos que experimentam situações diferentes e comparar o resultado com o esperado, escrito antes de correr. A forma de o organizar é uma tabela de entradas e saídas. Tem uma linha por caso, com o que se escreve no teclado e o que deve aparecer. Para saber mais, vê o exemplo guiado do [guia](../02-dados-e-interacao.md).
 
 1. No caderno, faz uma tabela com quatro colunas: "Troncos", "Tábuas", "Baús" e "Sobram". Escreve quatro linhas, com 0, 1, 2 e 7 troncos, e preenche as outras colunas à mão, antes de correres.
 
@@ -398,4 +398,4 @@ Usaste `/` em vez de `//`. Para contar objetos completos, usa a divisão inteira
 - [ ] Sabes dizer o que fazem o `/`, o `//` e o `%`.
 - [ ] Consegues explicar, por palavras tuas, porque é que o `input` precisa do `int` antes de fazeres contas com o que a pessoa escreveu.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

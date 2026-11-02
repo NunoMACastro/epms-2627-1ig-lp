@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Pseudocódigo
 
@@ -6,7 +6,7 @@ Ficha do tema Pseudocódigo, do módulo Desenvolver algoritmos. Praticas as peç
 
 ## O que precisas de saber
 
-O [guia do tema](02-pseudocodigo.md). Antes de começares, deves ter lido as secções da matéria e o exemplo guiado. Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
+O [guia do tema](../02-pseudocodigo.md). Antes de começares, deves ter lido as secções da matéria e o exemplo guiado. Cada exercício diz em que secção do guia está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
 
 ## Como trabalhar
 
@@ -337,4 +337,4 @@ Uma visita de estudo é feita em autocarros, todos com a mesma capacidade. Dado 
 2. O que te custou mais neste tema? Foram os tipos, as contas, as funções predefinidas, escrever o pseudocódigo ou fazer o trace?
 3. Que dificuldade tiveste, e o que fizeste para a resolver?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

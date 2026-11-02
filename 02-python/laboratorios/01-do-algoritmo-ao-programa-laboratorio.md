@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: Do algoritmo ao programa
 
-Laboratório do tema Do algoritmo ao programa, do módulo Desenvolver programas em linguagem estruturada. Vais escrever os teus primeiros programas em Python, pô-los a correr no computador e conhecer as ferramentas do VS Code. Um deles é o ecrã de abertura do duelo de dados, que já conheces do projeto 1. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](01-do-algoritmo-ao-programa.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Do algoritmo ao programa, do módulo Desenvolver programas em linguagem estruturada. Vais escrever os teus primeiros programas em Python, pô-los a correr no computador e conhecer as ferramentas do VS Code. Um deles é o ecrã de abertura do duelo de dados, que já conheces do projeto 1. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../01-do-algoritmo-ao-programa.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
@@ -28,11 +28,11 @@ lp-python/
 
 ## Palavras que vais usar
 
-- Programa: um algoritmo escrito numa linguagem que o computador consegue executar. Para saber mais, vê a secção "Um programa é um algoritmo escrito para o computador" do [guia](01-do-algoritmo-ao-programa.md).
+- Programa: um algoritmo escrito numa linguagem que o computador consegue executar. Para saber mais, vê a secção "Um programa é um algoritmo escrito para o computador" do [guia](../01-do-algoritmo-ao-programa.md).
 - Python: a linguagem de programação que vais usar neste módulo.
 - Interpretador: o programa que lê o teu programa, confirma que está bem escrito e executa as instruções por ordem, de cima para baixo. É o que se instala quando se instala o Python.
 - Editor de código: um editor de texto feito para escrever programas, com cores, números de linha e ajudas à escrita. Nas aulas, é o VS Code.
-- IDE, ambiente de desenvolvimento integrado: um programa que junta numa só janela as ferramentas para escrever, correr e corrigir programas. As ferramentas conhecem a linguagem. Para saber mais, vê a secção "O IDE: as ferramentas numa só janela" do [guia](01-do-algoritmo-ao-programa.md).
+- IDE, ambiente de desenvolvimento integrado: um programa que junta numa só janela as ferramentas para escrever, correr e corrigir programas. As ferramentas conhecem a linguagem. Para saber mais, vê a secção "O IDE: as ferramentas numa só janela" do [guia](../01-do-algoritmo-ao-programa.md).
 - Extensão: um programa pequeno que se acrescenta ao VS Code para lhe dar ferramentas novas. Com a extensão Python, o VS Code funciona como um IDE para Python.
 - Separador: a aba no topo do editor, com o nome do ficheiro aberto.
 - Realce de sintaxe: as cores com que o editor mostra cada parte do programa. Não ficam guardadas no ficheiro.
@@ -81,7 +81,7 @@ Os nomes dos menus e dos botões são os do VS Code em inglês. Foram confirmado
 
 ## Fase 1: Correr o primeiro programa
 
-Na algoritmia, quem executava os algoritmos eras tu, com papel e lápis. Agora vais pôr o computador a fazê-lo. Para isso, escreves as instruções num ficheiro e mandas o interpretador do Python executá-lo. O `Escreve:` do pseudocódigo passa a chamar-se `print`, com o texto entre parênteses. Para saber mais, lê a secção "Correr um programa" do [guia](01-do-algoritmo-ao-programa.md).
+Na algoritmia, quem executava os algoritmos eras tu, com papel e lápis. Agora vais pôr o computador a fazê-lo. Para isso, escreves as instruções num ficheiro e mandas o interpretador do Python executá-lo. O `Escreve:` do pseudocódigo passa a chamar-se `print`, com o texto entre parênteses. Para saber mais, lê a secção "Correr um programa" do [guia](../01-do-algoritmo-ao-programa.md).
 
 1. Cria o primeiro ficheiro. No painel Explorer, passa o rato por cima de `LP-PYTHON` e carrega no primeiro ícone, New File..., isto é, "novo ficheiro". Escreve o nome `ola.py` e carrega em Enter. O `.py` no fim do nome diz ao VS Code e ao Python que é um programa em Python. O ficheiro abre-se à direita, vazio. Escreve nele este conteúdo, que é o ficheiro completo:
 
@@ -141,7 +141,7 @@ Pensa antes de continuares: porque é que, com o erro na linha 3, nem o "Olá, P
 
 ## Fase 2: A versão do Python e a consola
 
-Os computadores não têm todos o mesmo Python. A versão diz qual é, e pode explicar porque é que uma mensagem de erro aparece com outras palavras num computador e não noutro. Por isso, a versão entra no registo da execução. Nesta fase vais também conhecer a consola do Python, onde se experimenta uma linha de cada vez, sem criar um ficheiro. Para saber mais, lê as secções "A consola do Python" e "O registo da execução" do [guia](01-do-algoritmo-ao-programa.md).
+Os computadores não têm todos o mesmo Python. A versão diz qual é, e pode explicar porque é que uma mensagem de erro aparece com outras palavras num computador e não noutro. Por isso, a versão entra no registo da execução. Nesta fase vais também conhecer a consola do Python, onde se experimenta uma linha de cada vez, sem criar um ficheiro. Para saber mais, lê as secções "A consola do Python" e "O registo da execução" do [guia](../01-do-algoritmo-ao-programa.md).
 
 1. No terminal, escreve o comando seguinte e carrega em Enter. Usa o comando que escreveste no caderno: se for `py`, escreve `py --version`; no macOS, `python3 --version`.
 
@@ -203,7 +203,7 @@ Pensa antes de continuares: quando é que usas a consola, e quando é que usas u
 
 Até aqui, usaste o VS Code para escrever o `ola.py` e para abrir o terminal. O editor, o explorador e o terminal estão todos na mesma janela. Com a extensão Python, o VS Code junta-lhes ferramentas que conhecem o Python, como um botão que corre o programa e um sublinhado nos erros. Passa então a funcionar como um ambiente de desenvolvimento integrado, ou IDE. Nesta fase vais encontrar essas ferramentas uma a uma, com o `ola.py`. Vais também desenhar no caderno o mapa da janela, com o sítio de cada uma. Não precisas de as decorar. Precisas de saber que existem, para as ires buscar quando fizerem falta.
 
-Um IDE ajuda, mas nem sempre é preciso. Para experimentar uma linha, chega a consola, como na fase 2. Para mudar uma palavra num ficheiro, num computador sem o VS Code, chega um editor de texto simples, como o Bloco de Notas. Um editor destes guarda só o texto, sem formatação. Para saber mais, lê no [guia](01-do-algoritmo-ao-programa.md) estas três secções:
+Um IDE ajuda, mas nem sempre é preciso. Para experimentar uma linha, chega a consola, como na fase 2. Para mudar uma palavra num ficheiro, num computador sem o VS Code, chega um editor de texto simples, como o Bloco de Notas. Um editor destes guarda só o texto, sem formatação. Para saber mais, lê no [guia](../01-do-algoritmo-ao-programa.md) estas três secções:
 
 - "Do editor de texto ao editor de código";
 - "O IDE: as ferramentas numa só janela";
@@ -263,7 +263,7 @@ Escreve: "Quem escolher o número maior ganha a ronda."
 Escreve: "O duelo acaba quando alguém ganha três rondas."
 ```
 
-Passar este algoritmo para Python é trocar cada `Escreve:` por um `print`, com o mesmo texto entre parênteses, pela mesma ordem. Antes de o computador o executar, vais dizer o que esperas ver. Depois comparas. É assim que se testa um programa: o resultado esperado escreve-se antes de correr. Para saber mais, lê a secção "Do `Escreve:` ao `print`" do [guia](01-do-algoritmo-ao-programa.md).
+Passar este algoritmo para Python é trocar cada `Escreve:` por um `print`, com o mesmo texto entre parênteses, pela mesma ordem. Antes de o computador o executar, vais dizer o que esperas ver. Depois comparas. É assim que se testa um programa: o resultado esperado escreve-se antes de correr. Para saber mais, lê a secção "Do `Escreve:` ao `print`" do [guia](../01-do-algoritmo-ao-programa.md).
 
 1. Escreve no caderno o resultado esperado: o que deve aparecer no ecrã, linha a linha, quando o algoritmo for executado. Lembra-te de que as aspas não aparecem.
 
@@ -314,7 +314,7 @@ Pensa antes de continuares: se trocares a ordem de duas linhas `print`, o que mu
 
 ## Fase 5: Os três tipos de erro
 
-Na fase 1 viste um erro de sintaxe: o Python recusou o programa inteiro, e nenhuma linha correu. Na fase 3 viste o mesmo erro no editor, antes de correres. Há mais dois tipos de erro, e cada um se reconhece de outra maneira. Num erro de execução, o programa começa a correr e para a meio, com uma mensagem. Num erro de lógica, não há mensagem nenhuma: o programa corre até ao fim, mas o resultado não é o esperado. Saber que tipo de erro é diz-te onde procurar. Para saber mais, lê a secção "Os três tipos de erro" do [guia](01-do-algoritmo-ao-programa.md).
+Na fase 1 viste um erro de sintaxe: o Python recusou o programa inteiro, e nenhuma linha correu. Na fase 3 viste o mesmo erro no editor, antes de correres. Há mais dois tipos de erro, e cada um se reconhece de outra maneira. Num erro de execução, o programa começa a correr e para a meio, com uma mensagem. Num erro de lógica, não há mensagem nenhuma: o programa corre até ao fim, mas o resultado não é o esperado. Saber que tipo de erro é diz-te onde procurar. Para saber mais, lê a secção "Os três tipos de erro" do [guia](../01-do-algoritmo-ao-programa.md).
 
 1. Provoca um erro de execução. No `abertura.py`, na linha 6, muda o `print` para `Print`, com P maiúsculo. A linha fica `Print("Quem escolher o número maior ganha a ronda.")`. Antes de guardares, olha para o editor. Com a extensão Python, o `Print` pode aparecer sublinhado, com uma cor diferente da do erro da aspa. É um aviso de que o VS Code não conhece esse nome. Antes de correres, prevê: aparece alguma linha do ecrã de abertura? Guarda e corre. O que deves ver:
 
@@ -432,4 +432,4 @@ Confirma que cada linha tem `print`, e não `Escreve:`. Uma linha copiada do pse
 - [ ] Consegues explicar, por palavras tuas, o que é um IDE e quando te chega a consola ou um editor de texto simples.
 - [ ] Consegues explicar, por palavras tuas, o que faz o interpretador quando escreves `python abertura.py`.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

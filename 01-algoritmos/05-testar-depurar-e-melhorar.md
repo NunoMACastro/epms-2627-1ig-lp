@@ -2,7 +2,7 @@
 
 # Testar, depurar e melhorar
 
-Módulo Desenvolver algoritmos. É o último tema do módulo. Este guia explica como confirmas que um algoritmo está certo e como encontras e corriges um erro quando ele não está. Explica também como tornas um algoritmo mais simples sem o estragar, e como escreves uma função, para dar um nome a uma parte do algoritmo. Lês o guia ao teu ritmo, e não precisas de o ler todo de uma vez. Para praticar, há a [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md) deste tema e os dois projetos guiados, o [duelo de dados](05-projeto-1-duelo-de-dados.md) e o [adivinha o número](05-projeto-2-adivinha-o-numero.md).
+Módulo Desenvolver algoritmos. É o último tema do módulo. Este guia explica como confirmas que um algoritmo está certo e como encontras e corriges um erro quando ele não está. Explica também como tornas um algoritmo mais simples sem o estragar, e como escreves uma função, para dar um nome a uma parte do algoritmo. Lês o guia ao teu ritmo, e não precisas de o ler todo de uma vez. Para praticar, há a [ficha de exercícios](exercicios/05-testar-depurar-e-melhorar-exercicios.md) deste tema e os dois projetos guiados, o [duelo de dados](projetos-guiados/05-projeto-1-duelo-de-dados.md) e o [adivinha o número](projetos-guiados/05-projeto-2-adivinha-o-numero.md).
 
 Este é o último guia da unidade, e usa tudo o que aprendeste nos quatro anteriores. Traz uma só instrução nova, `Função`, numa parte própria, depois da teoria de testar, depurar e melhorar. O resto não é matéria nova de pseudocódigo. É uma forma de trabalhar com o que já sabes. Lê-o com papel e lápis ao lado, porque vais fazer muitos traces à mão.
 
@@ -444,7 +444,7 @@ O **portefólio** é a pasta onde juntas o trabalho que mostra o que aprendeste 
 - os testes: a tabela de casos esperados, com os resultados obtidos;
 - as correções: as versões com erro, os registos de depuração e as versões corrigidas.
 
-Os problemas completos deste tema são o [projeto 1](05-projeto-1-duelo-de-dados.md) e o [projeto 2](05-projeto-2-adivinha-o-numero.md). O exercício 4 da ficha, completado no exercício 8, o fecho do portefólio, e o registo de depuração do exercício 2 também podem lá ficar.
+Os problemas completos deste tema são o [projeto 1](projetos-guiados/05-projeto-1-duelo-de-dados.md) e o [projeto 2](projetos-guiados/05-projeto-2-adivinha-o-numero.md). O exercício 4 da ficha, completado no exercício 8, o fecho do portefólio, e o registo de depuração do exercício 2 também podem lá ficar.
 
 Os dois projetos não contam para a avaliação prática, porque são feitos com ajuda. O trabalho que fazes neles conta, como o das outras aulas, no empenho e na autonomia. O portefólio é consulta permitida na avaliação, e por isso vale a pena tê-lo arrumado.
 
@@ -1153,9 +1153,9 @@ A função ficou só com o primeiro `Escreve:`. O `Se` passou a ser a primeira i
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](05-testar-depurar-e-melhorar-exercicios.md).
+Para praticar este tema, faz a [ficha de exercícios](exercicios/05-testar-depurar-e-melhorar-exercicios.md).
 
-Depois vêm os dois projetos guiados, o [projeto 1, duelo de dados](05-projeto-1-duelo-de-dados.md), e o [projeto 2, adivinha o número](05-projeto-2-adivinha-o-numero.md).
+Depois vêm os dois projetos guiados, o [projeto 1, duelo de dados](projetos-guiados/05-projeto-1-duelo-de-dados.md), e o [projeto 2, adivinha o número](projetos-guiados/05-projeto-2-adivinha-o-numero.md).
 
 A unidade acaba com a avaliação prática, que é individual, dura 120 minutos e tem duas partes. Na primeira, recebes um problema novo e fazes o que fizeste nos projetos. Escreves o contrato, a tabela de casos esperados antes do algoritmo, o algoritmo e os testes. Na segunda, recebes um algoritmo que outra pessoa escreveu para o mesmo problema, com um erro que já foi observado. Tens de o reproduzir, encontrar a causa, corrigi-la, voltar a testar e explicar a correção. Depois melhoras o algoritmo e comparas os passos antes e depois.
 

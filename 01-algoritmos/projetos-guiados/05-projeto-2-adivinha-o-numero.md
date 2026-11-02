@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Projeto 2: Adivinha o número
 
@@ -31,19 +31,19 @@ Este projeto fica no teu portefólio e não conta para a avaliação prática, p
 
 Este projeto não traz nenhuma instrução nova de pseudocódigo. Usa o que aprendeste nos guias anteriores, sobretudo nos guias 03, 04 e 05, juntando-o num problema maior.
 
-- O contrato de um problema, com as quatro perguntas, e as ambiguidades, que se decidem e se escrevem: guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md).
-- A forma de pseudocódigo das aulas e o trace linha a linha: guia [02 Pseudocódigo](02-pseudocodigo.md).
-- A cadeia `Se`, `Senão se`, `Senão`, em que a primeira condição verdadeira ganha: guia [03 Decisões e validação](03-decisoes-e-validacao.md).
+- O contrato de um problema, com as quatro perguntas, e as ambiguidades, que se decidem e se escrevem: guia [01 Do problema ao algoritmo](../01-do-problema-ao-algoritmo.md).
+- A forma de pseudocódigo das aulas e o trace linha a linha: guia [02 Pseudocódigo](../02-pseudocodigo.md).
+- A cadeia `Se`, `Senão se`, `Senão`, em que a primeira condição verdadeira ganha: guia [03 Decisões e validação](../03-decisoes-e-validacao.md).
 - Os operadores `e`, `ou` e `não`, incluindo o `não` à frente de uma variável `bool`, como em `não pago`, do guia 03.
 - Os intervalos e o contrário de um intervalo, escrito com `ou`, do guia 03.
 - A regra para escrever o contrário de uma condição: guia 03, secção "Operador `não`". Troca-se o `e` pelo `ou`, ou o `ou` pelo `e`, e cada parte pela sua contrária.
 - As fronteiras, testadas imediatamente abaixo, em cima e imediatamente acima, do guia 03.
-- O `Enquanto` e as suas três peças, a inicialização, a condição e a atualização: guia [04 Repetição e padrões](04-repeticao-e-padroes.md).
+- O `Enquanto` e as suas três peças, a inicialização, a condição e a atualização: guia [04 Repetição e padrões](../04-repeticao-e-padroes.md).
 - A regra de que a condição de um ciclo diz quando continuar, e não quando parar, do guia 04.
 - A tabela de iterações, o contador e a flag, do guia 04.
 - A validação repetida, que volta a pedir um valor enquanto ele for inválido: guia 04, secção "Padrão validação repetida".
 - A ideia de que, depois de um ciclo, a sua condição é falsa, e isso diz alguma coisa sobre o estado. Está na mesma secção do guia 04.
-- O contrato com as decisões sobre as ambiguidades: guia [05 Testar, depurar e melhorar](05-testar-depurar-e-melhorar.md).
+- O contrato com as decisões sobre as ambiguidades: guia [05 Testar, depurar e melhorar](../05-testar-depurar-e-melhorar.md).
 - A tabela de casos esperados, com casos normais, de fronteira e inválidos, do guia 05.
 - O método de depuração em cinco passos, o registo de depuração e o teste de regressão, do guia 05.
 - Os erros da secção "Quatro erros que vais encontrar muitas vezes", do guia 05.
@@ -386,4 +386,4 @@ A melhor preparação é rever este projeto, sobretudo as respostas do passo 3 e
 
 - [A ficha oficial da unidade Desenvolver algoritmos](https://catalogo.snq.gov.pt/ucDetalhe/355272), no Catálogo Nacional de Qualificações: o que a unidade pede, com as palavras do referencial do curso.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

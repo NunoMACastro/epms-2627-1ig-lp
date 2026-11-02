@@ -2,7 +2,7 @@
 
 # Do problema ao algoritmo
 
-Módulo Desenvolver algoritmos. Este guia mostra como se pensa um problema antes de o resolver. Explica o que é um algoritmo e como se escreve o contrato de um problema. Explica também como se parte um problema em partes mais pequenas e como se encontram as instruções que deixam dúvidas. Lês o guia ao teu ritmo, e não precisas de o ler todo de uma vez. Para praticar, há a [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Este guia mostra como se pensa um problema antes de o resolver. Explica o que é um algoritmo e como se escreve o contrato de um problema. Explica também como se parte um problema em partes mais pequenas e como se encontram as instruções que deixam dúvidas. Lês o guia ao teu ritmo, e não precisas de o ler todo de uma vez. Para praticar, há a [ficha de exercícios](exercicios/01-do-problema-ao-algoritmo-exercicios.md) deste tema.
 
 Este é o primeiro tema da área de algoritmos, e não precisas de saber nada de programação. Neste tema, nada se escreve numa linguagem de programação, e nada precisa de um computador a executar código. Trabalhas em papel, e os algoritmos escrevem-se em português, em passos numerados. A forma própria de os escrever, o pseudocódigo, é o assunto do tema seguinte. Não tens de decorar tudo de uma vez. Lê com calma, volta à explicação quando um exemplo não fizer sentido, e usa os exemplos para confirmar que percebeste.
 
@@ -669,7 +669,7 @@ Responde sem olhar para o guia. Se não conseguires responder a uma pergunta, vo
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](01-do-problema-ao-algoritmo-exercicios.md). O tema seguinte é [Pseudocódigo](02-pseudocodigo.md).
+Para praticar este tema, faz a [ficha de exercícios](exercicios/01-do-problema-ao-algoritmo-exercicios.md). O tema seguinte é [Pseudocódigo](02-pseudocodigo.md).
 
 No tema seguinte vais aprender a escrever algoritmos numa notação própria, o pseudocódigo. O estado, que aqui foram números numa tabela, passa a ter nomes próprios, chamados variáveis. A senha que está a ser atendida na papelaria vai chamar-se `senhaAtual`, e o número de pessoas à espera, `pessoasAEspera`. Os valores fixos do problema, como os 4 minutos de cada atendimento, passam a chamar-se constantes. E as tabelas do estado passam a chamar-se tabelas de trace.
 

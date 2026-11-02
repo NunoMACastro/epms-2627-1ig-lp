@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Do algoritmo ao programa
 
@@ -6,7 +6,7 @@ Ficha do tema Do algoritmo ao programa, do módulo Desenvolver programas em ling
 
 ## O que precisas de saber
 
-O [guia do tema](01-do-algoritmo-ao-programa.md) e o [laboratório](01-do-algoritmo-ao-programa-laboratorio.md).
+O [guia do tema](../01-do-algoritmo-ao-programa.md) e o [laboratório](../laboratorios/01-do-algoritmo-ao-programa-laboratorio.md).
 
 ## Como trabalhar
 
@@ -219,4 +219,4 @@ Escreve no caderno o que experimentaste e o que aconteceu em cada tentativa, tam
 3. Se tivesses de explicar a um colega a diferença entre o terminal e a consola do Python, o que lhe dirias?
 4. Que ferramenta do VS Code te ajudou mais nesta ficha, e em que exercício?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

@@ -2,7 +2,7 @@
 
 # Do algoritmo ao programa
 
-Módulo UC00606, Desenvolver programas em linguagem estruturada. Neste guia passas da algoritmia para a programação. Vais ver o que é um programa, onde se escreve e que ferramentas se usam para o escrever e o pôr a correr. Vais ver também quando precisas de cada ferramenta e como se reconhece cada tipo de erro. Para praticar, há o [laboratório](01-do-algoritmo-ao-programa-laboratorio.md) e a [ficha de exercícios](01-do-algoritmo-ao-programa-exercicios.md) deste tema.
+Módulo UC00606, Desenvolver programas em linguagem estruturada. Neste guia passas da algoritmia para a programação. Vais ver o que é um programa, onde se escreve e que ferramentas se usam para o escrever e o pôr a correr. Vais ver também quando precisas de cada ferramenta e como se reconhece cada tipo de erro. Para praticar, há o [laboratório](laboratorios/01-do-algoritmo-ao-programa-laboratorio.md) e a [ficha de exercícios](exercicios/01-do-algoritmo-ao-programa-exercicios.md) deste tema.
 
 Na algoritmia, escreveste algoritmos em pseudocódigo e executaste-os tu, à mão, com papel e lápis. Agora é o computador que os executa. Neste tema, os programas fazem uma só coisa: escrevem texto no ecrã, numa sequência de instruções. Não leem nada do teclado, não fazem contas, não decidem nem repetem. Assim, a única novidade é a linguagem e as ferramentas, e não o problema.
 
@@ -52,7 +52,7 @@ No fim deste guia, consegues:
 - Seguir um algoritmo à mão e prever o que ele escreve no ecrã: guia [02 Pseudocódigo](../01-algoritmos/02-pseudocodigo.md).
 - A sintaxe e o erro de sintaxe, e porque o pseudocódigo não os tem: guia [02 Pseudocódigo](../01-algoritmos/02-pseudocodigo.md).
 - Os casos de teste, o resultado esperado e os cinco passos de depurar com método: guia [05 Testar, depurar e melhorar](../01-algoritmos/05-testar-depurar-e-melhorar.md).
-- O duelo de dados, que resolveste no [projeto 1](../01-algoritmos/05-projeto-1-duelo-de-dados.md).
+- O duelo de dados, que resolveste no [projeto 1](../01-algoritmos/projetos-guiados/05-projeto-1-duelo-de-dados.md).
 - Criar uma pasta, abrir uma aplicação e guardar um ficheiro no computador, do dia a dia.
 - Escrever um texto num processador de texto, como o Word, do dia a dia.
 
@@ -687,7 +687,7 @@ Copiaste o programa de um documento ou de uma apresentação, e o programa não 
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](01-do-algoritmo-ao-programa-laboratorio.md) e depois a [ficha de exercícios](01-do-algoritmo-ao-programa-exercicios.md). O tema seguinte é Dados e interação.
+Para praticar este tema, faz o [laboratório](laboratorios/01-do-algoritmo-ao-programa-laboratorio.md) e depois a [ficha de exercícios](exercicios/01-do-algoritmo-ao-programa-exercicios.md). O tema seguinte é Dados e interação.
 
 ## Para saber mais
 

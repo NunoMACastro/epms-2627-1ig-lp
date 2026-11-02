@@ -2,7 +2,7 @@
 
 # Decisões e validação
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que tomam decisões, isto é, que fazem uma coisa ou outra conforme os dados. Aprendes também a recusar os dados que não fazem sentido, antes de os usar. Lês o guia ao teu ritmo, em duas ou três vezes, com as previsões que ele te pede. Para praticar, há a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que tomam decisões, isto é, que fazem uma coisa ou outra conforme os dados. Aprendes também a recusar os dados que não fazem sentido, antes de os usar. Lês o guia ao teu ritmo, em duas ou três vezes, com as previsões que ele te pede. Para praticar, há a [ficha de exercícios](exercicios/03-decisoes-e-validacao-exercicios.md) deste tema.
 
 No guia 02, todos os algoritmos faziam sempre as mesmas contas, fosse qual fosse a entrada. Neste guia passam a escolher o caminho. Se já trabalhaste na aula as instruções `Se`, `Senão se` e `Senão`, vais reconhecê-las. O guia retoma-as desde o princípio, na forma das aulas, porque são a base de tudo o resto. Depois acrescenta o que falta: os operadores `e`, `ou` e `não`, os intervalos, as fronteiras e a validação. Este tema ainda não repete instruções. Um algoritmo que recebe um valor errado avisa e termina, e voltar a pedir o valor é o assunto do tema seguinte.
 
@@ -952,7 +952,7 @@ Responde numa folha, ao teu ritmo.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md).
+Para praticar este tema, faz a [ficha de exercícios](exercicios/03-decisoes-e-validacao-exercicios.md).
 
 O tema seguinte é Repetição e padrões. No algoritmo deste guia, uma nota inválida termina o algoritmo com uma mensagem, e quem se enganou tem de começar tudo outra vez. Seria mais útil o algoritmo voltar a pedir a nota até receber uma válida. Para isso tem de repetir instruções, e até agora cada instrução executava-se no máximo uma vez. No tema seguinte vais aprender a escrever repetições, a contar e a somar valores ao longo delas, e a garantir que uma repetição acaba.
 

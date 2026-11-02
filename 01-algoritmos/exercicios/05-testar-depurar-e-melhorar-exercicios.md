@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Testar, depurar e melhorar
 
@@ -6,9 +6,9 @@ Ficha do tema Testar, depurar e melhorar, da unidade de algoritmos. Praticas a e
 
 ## O que precisas de saber
 
-O [guia do tema](05-testar-depurar-e-melhorar.md), com as secções de testar, depurar e melhorar e o exemplo guiado. Lê também os passos 8 e 9 do exemplo, que mostram como se melhora um algoritmo e como se contam os passos. Para os exercícios 5 a 7, precisas da parte das funções do guia.
+O [guia do tema](../05-testar-depurar-e-melhorar.md), com as secções de testar, depurar e melhorar e o exemplo guiado. Lê também os passos 8 e 9 do exemplo, que mostram como se melhora um algoritmo e como se contam os passos. Para os exercícios 5 a 7, precisas da parte das funções do guia.
 
-Precisas ainda de saber fazer uma tabela de iterações e escrever uma cadeia de `Se` e `Senão se`. E de saber ler um `Para` e um ciclo com sentinela, e usar contadores e totalizadores. Está tudo nos guias [02](02-pseudocodigo.md), [03](03-decisoes-e-validacao.md) e [04](04-repeticao-e-padroes.md). O exercício 6 usa um intervalo com `e`, do guia 03.
+Precisas ainda de saber fazer uma tabela de iterações e escrever uma cadeia de `Se` e `Senão se`. E de saber ler um `Para` e um ciclo com sentinela, e usar contadores e totalizadores. Está tudo nos guias [02](../02-pseudocodigo.md), [03](../03-decisoes-e-validacao.md) e [04](../04-repeticao-e-padroes.md). O exercício 6 usa um intervalo com `e`, do guia 03.
 
 Cada exercício diz em que secção do guia 05 está a matéria. Se encravares, volta a essa secção antes de olhares para o apoio.
 
@@ -413,4 +413,4 @@ Pista: faz o trace, linha a linha, até à primeira linha que usa uma variável 
 2. Que dificuldade tiveste, e o que fizeste para a resolver?
 3. Qual dos exercícios te obrigou a pensar mais antes de escrever, e porquê?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

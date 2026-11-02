@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Repetição e padrões
 
@@ -6,9 +6,9 @@ Ficha do tema Repetição e padrões, do módulo Desenvolver algoritmos. Pratica
 
 ## O que precisas de saber
 
-O [guia do tema](04-repeticao-e-padroes.md), lido até ao fim. Cada exercício diz a secção do guia onde está a matéria de que precisas. Se fizeres a ficha à medida que a matéria vai sendo dada, basta teres lido as secções que o exercício indica.
+O [guia do tema](../04-repeticao-e-padroes.md), lido até ao fim. Cada exercício diz a secção do guia onde está a matéria de que precisas. Se fizeres a ficha à medida que a matéria vai sendo dada, basta teres lido as secções que o exercício indica.
 
-No exercício 7 vais usar também o contrário de um intervalo, escrito com `ou`, que aprendeste no guia [03 Decisões e validação](03-decisoes-e-validacao.md).
+No exercício 7 vais usar também o contrário de um intervalo, escrito com `ou`, que aprendeste no guia [03 Decisões e validação](../03-decisoes-e-validacao.md).
 
 ## Como trabalhar
 
@@ -47,7 +47,7 @@ A tabela de iterações já tem a primeira linha, para veres o formato. Nessa li
 | --- | ---: | ---: | --- | --- |
 | 1.º | 1 | 20 | `1 <= 3` dá `true` | escreve "Fim do dia 1: .......... caixas" |
 
-**a)** Copia a tabela e completa-a. Escreve o número que falta na primeira linha e acrescenta uma linha por cada teste da condição, até ao teste que dá falso. Cada linha mostra os valores no momento em que o algoritmo chega ao `Enquanto` (guia, [A tabela de iterações](04-repeticao-e-padroes.md#a-tabela-de-iterações)).
+**a)** Copia a tabela e completa-a. Escreve o número que falta na primeira linha e acrescenta uma linha por cada teste da condição, até ao teste que dá falso. Cada linha mostra os valores no momento em que o algoritmo chega ao `Enquanto` (guia, [A tabela de iterações](../04-repeticao-e-padroes.md#a-tabela-de-iterações)).
 
 **b)** Quantas iterações teve o ciclo? Quantas vezes foi testada a condição?
 
@@ -57,7 +57,7 @@ A tabela de iterações já tem a primeira linha, para veres o formato. Nessa li
 
 ## Exercício 2: completar a peça que falta
 
-Cada um destes três ciclos tem uma linha em branco, marcada com pontos. Para cada um, escreve a linha que falta. Diz também qual das três peças ela é: a inicialização, a condição ou a atualização (guia, [As três peças de um ciclo](04-repeticao-e-padroes.md#as-três-peças-de-um-ciclo)).
+Cada um destes três ciclos tem uma linha em branco, marcada com pontos. Para cada um, escreve a linha que falta. Diz também qual das três peças ela é: a inicialização, a condição ou a atualização (guia, [As três peças de um ciclo](../04-repeticao-e-padroes.md#as-três-peças-de-um-ciclo)).
 
 **a)** Escrever as etiquetas das caixas de uma encomenda, da caixa 1 à caixa 4, com a constante `const NUMERO_DE_CAIXAS = 4`:
 
@@ -86,7 +86,7 @@ Enquanto talao <= ULTIMO_TALAO
     ..........
 ```
 
-**d)** Imagina que a linha da alínea c) ficava mesmo em branco. Faz as três primeiras linhas da tabela de iterações dessa versão. Depois explica numa frase porque é que o ciclo nunca acabaria (guia, [O ciclo que nunca acaba](04-repeticao-e-padroes.md#o-ciclo-que-nunca-acaba)).
+**d)** Imagina que a linha da alínea c) ficava mesmo em branco. Faz as três primeiras linhas da tabela de iterações dessa versão. Depois explica numa frase porque é que o ciclo nunca acabaria (guia, [O ciclo que nunca acaba](../04-repeticao-e-padroes.md#o-ciclo-que-nunca-acaba)).
 
 ## Exercício 3: escrever um ciclo com um contador
 
@@ -98,7 +98,7 @@ const LIMITE_CAIXA_PEQUENA = 5
 (as tuas instruções)
 ```
 
-**a)** Escreve as instruções que faltam, a seguir às constantes, em pseudocódigo ou em frases claras. Usa `artigos` e `caixasGrandes`, as duas `int`, e `encomenda` como variável de controlo do `Para`, que não leva tipo. Usa um `Para`, porque se sabe que são 3 encomendas. Segue o algoritmo `ContarStockBaixo` do guia ([Padrão contador](04-repeticao-e-padroes.md#padrão-contador)).
+**a)** Escreve as instruções que faltam, a seguir às constantes, em pseudocódigo ou em frases claras. Usa `artigos` e `caixasGrandes`, as duas `int`, e `encomenda` como variável de controlo do `Para`, que não leva tipo. Usa um `Para`, porque se sabe que são 3 encomendas. Segue o algoritmo `ContarStockBaixo` do guia ([Padrão contador](../04-repeticao-e-padroes.md#padrão-contador)).
 
 **b)** Escreve quantas caixas grandes esperas para encomendas de 5, 9 e 7 artigos. Depois faz a tabela de iterações, com colunas para `encomenda`, `artigos` e `caixasGrandes`, e confirma o resultado.
 
@@ -113,7 +113,7 @@ const NUMERO_DE_TRABALHOS = 3
 (as tuas instruções)
 ```
 
-**a)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras, com um `Para` e um totalizador. Usa `paginas` e `totalPaginas`, as duas `int`, e `trabalho` como variável de controlo do `Para`, que não leva tipo. Segue o algoritmo `TotalDeVendas` do guia ([Padrão totalizador](04-repeticao-e-padroes.md#padrão-totalizador)), mas repara que aqui o número de trabalhos já está numa constante.
+**a)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras, com um `Para` e um totalizador. Usa `paginas` e `totalPaginas`, as duas `int`, e `trabalho` como variável de controlo do `Para`, que não leva tipo. Segue o algoritmo `TotalDeVendas` do guia ([Padrão totalizador](../04-repeticao-e-padroes.md#padrão-totalizador)), mas repara que aqui o número de trabalhos já está numa constante.
 
 **b)** Escreve o que esperas ver no ecrã para trabalhos de 12, 40 e 8 páginas, depois de cada trabalho e no fim. Depois faz a tabela de iterações, com colunas para `trabalho`, `paginas` e `totalPaginas`, e confirma o resultado.
 
@@ -139,7 +139,7 @@ Escreve: "Encomendas urgentes: ", urgentes
 
 **b)** Conta à mão, olhando só para os quatro prazos, quantas encomendas são urgentes. O resultado do algoritmo coincide?
 
-**c)** Qual é a linha errada? Responde numa frase: essa linha segue o padrão contador ou o padrão totalizador, e qual dos dois devia seguir? A diferença entre os dois está no guia, no [Padrão totalizador](04-repeticao-e-padroes.md#padrão-totalizador).
+**c)** Qual é a linha errada? Responde numa frase: essa linha segue o padrão contador ou o padrão totalizador, e qual dos dois devia seguir? A diferença entre os dois está no guia, no [Padrão totalizador](../04-repeticao-e-padroes.md#padrão-totalizador).
 
 **d)** Escreve a linha corrigida e diz o que o ecrã passa a mostrar com os mesmos prazos.
 
@@ -153,9 +153,9 @@ const PAGINAS_DA_MANHA = 60
 (as tuas instruções)
 ```
 
-**a)** No exercício 4 usaste um `Para`. Explica numa frase porque é que aqui não serve. Usa a pergunta que o guia ensina para escolher entre os dois ciclos (guia, [Escolher entre Enquanto e Para](04-repeticao-e-padroes.md#escolher-entre-enquanto-e-para)).
+**a)** No exercício 4 usaste um `Para`. Explica numa frase porque é que aqui não serve. Usa a pergunta que o guia ensina para escolher entre os dois ciclos (guia, [Escolher entre Enquanto e Para](../04-repeticao-e-padroes.md#escolher-entre-enquanto-e-para)).
 
-**b)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras. Põe a leitura antecipada antes do ciclo e a leitura do valor seguinte no fim do corpo. Usa as variáveis `paginas` e `totalPaginas`, as duas `int`. Segue o algoritmo `SomarCaixas` do guia ([Padrão sentinela](04-repeticao-e-padroes.md#padrão-sentinela)), sem o contador de caixas, porque aqui não se pede o número de trabalhos.
+**b)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras. Põe a leitura antecipada antes do ciclo e a leitura do valor seguinte no fim do corpo. Usa as variáveis `paginas` e `totalPaginas`, as duas `int`. Segue o algoritmo `SomarCaixas` do guia ([Padrão sentinela](../04-repeticao-e-padroes.md#padrão-sentinela)), sem o contador de caixas, porque aqui não se pede o número de trabalhos.
 
 **c)** Escreve o total do dia que esperas e faz a tabela de iterações em dois casos. No primeiro, o funcionário escreve 40, 8 e 0. No segundo, escreve logo 0, porque à tarde não houve trabalhos.
 
@@ -170,7 +170,7 @@ const LUGARES_DA_SALA = 20
 (as tuas instruções)
 ```
 
-**a)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras, com a variável `lugares`, que é `int`. Segue o algoritmo `PedirQuantidadeValida` do guia ([Padrão validação repetida](04-repeticao-e-padroes.md#padrão-validação-repetida)): a condição do ciclo descreve o valor inválido.
+**a)** Escreve as instruções que faltam, em pseudocódigo ou em frases claras, com a variável `lugares`, que é `int`. Segue o algoritmo `PedirQuantidadeValida` do guia ([Padrão validação repetida](../04-repeticao-e-padroes.md#padrão-validação-repetida)): a condição do ciclo descreve o valor inválido.
 
 **b)** Faz a tabela de iterações quando a pessoa escreve 0, depois 7 e depois 3, e escreve o que aparece no ecrã no fim.
 
@@ -178,7 +178,7 @@ const LUGARES_DA_SALA = 20
 
 ## Arrays, para cada e flags
 
-Os três exercícios seguintes são da última parte da teoria do guia, a partir da secção [Arrays: muitos valores numa só variável](04-repeticao-e-padroes.md#arrays-muitos-valores-numa-só-variável). O para cada não tem uma condição escrita. Por isso, nos exercícios 8 e 10, a tabela de iterações tem uma linha por elemento do array. Cada linha mostra os valores no fim da iteração, como a tabela do [Padrão flag](04-repeticao-e-padroes.md#padrão-flag).
+Os três exercícios seguintes são da última parte da teoria do guia, a partir da secção [Arrays: muitos valores numa só variável](../04-repeticao-e-padroes.md#arrays-muitos-valores-numa-só-variável). O para cada não tem uma condição escrita. Por isso, nos exercícios 8 e 10, a tabela de iterações tem uma linha por elemento do array. Cada linha mostra os valores no fim da iteração, como a tabela do [Padrão flag](../04-repeticao-e-padroes.md#padrão-flag).
 
 ### Exercício 8: somar com o para cada
 
@@ -188,7 +188,7 @@ A papelaria guardou num array as unidades de cadernos vendidas em cada um dos qu
 vendas = [4, 0, 7, 0]
 ```
 
-**a)** Escreve um algoritmo que some as quatro vendas com o para cada e escreva o total. No mesmo ciclo, o algoritmo conta os dias em que não se vendeu nenhum caderno, e escreve também esse número. Podes escrevê-lo em pseudocódigo ou em frases claras. Usa a variável `venda` no para cada. Usa a variável `totalVendido`, que é `int`, para o totalizador, e a variável `diasSemVendas`, também `int`, para a contagem. A matéria está no guia, em [Percorrer um array com o para cada](04-repeticao-e-padroes.md#percorrer-um-array-com-o-para-cada), no [Padrão totalizador](04-repeticao-e-padroes.md#padrão-totalizador) e no [Padrão contador](04-repeticao-e-padroes.md#padrão-contador).
+**a)** Escreve um algoritmo que some as quatro vendas com o para cada e escreva o total. No mesmo ciclo, o algoritmo conta os dias em que não se vendeu nenhum caderno, e escreve também esse número. Podes escrevê-lo em pseudocódigo ou em frases claras. Usa a variável `venda` no para cada. Usa a variável `totalVendido`, que é `int`, para o totalizador, e a variável `diasSemVendas`, também `int`, para a contagem. A matéria está no guia, em [Percorrer um array com o para cada](../04-repeticao-e-padroes.md#percorrer-um-array-com-o-para-cada), no [Padrão totalizador](../04-repeticao-e-padroes.md#padrão-totalizador) e no [Padrão contador](../04-repeticao-e-padroes.md#padrão-contador).
 
 **b)** Escreve o total e o número de dias sem vendas que esperas. Depois faz a tabela de iterações, com uma linha por iteração. Cada linha tem o valor de `venda` e os valores de `totalVendido` e de `diasSemVendas` no fim da iteração.
 
@@ -212,7 +212,7 @@ Para cada preco em precos
 Escreve: precos[0], " ", precos[1], " ", precos[2], " ", precos[3]
 ```
 
-**a)** Sem fazeres a tabela, diz o que aparece no ecrã. Explica porquê, numa ou duas frases (guia, [O para cada não muda o array](04-repeticao-e-padroes.md#o-para-cada-não-muda-o-array)).
+**a)** Sem fazeres a tabela, diz o que aparece no ecrã. Explica porquê, numa ou duas frases (guia, [O para cada não muda o array](../04-repeticao-e-padroes.md#o-para-cada-não-muda-o-array)).
 
 **b)** Reescreve o algoritmo com o `Para` e o índice, para os preços mudarem mesmo no array. Usa uma constante `N_PRECOS` para o número de preços, como o guia faz com `N_NOTAS`.
 
@@ -228,7 +228,7 @@ pesos = [3, 10, 12, 8]
 
 O algoritmo diz se hoje é preciso o carrinho, isto é, se há pelo menos uma encomenda com mais de 10 kg.
 
-**a)** Escreve o algoritmo, em pseudocódigo ou em frases claras, com uma flag `bool` chamada `precisaCarrinho`. Segue o algoritmo `HaProdutoSemStock` do guia ([Padrão flag](04-repeticao-e-padroes.md#padrão-flag)). A flag começa `false`, passa a `true` dentro do `Se` e lê-se depois do ciclo. O algoritmo escreve "É preciso o carrinho" ou "Não é preciso o carrinho".
+**a)** Escreve o algoritmo, em pseudocódigo ou em frases claras, com uma flag `bool` chamada `precisaCarrinho`. Segue o algoritmo `HaProdutoSemStock` do guia ([Padrão flag](../04-repeticao-e-padroes.md#padrão-flag)). A flag começa `false`, passa a `true` dentro do `Se` e lê-se depois do ciclo. O algoritmo escreve "É preciso o carrinho" ou "Não é preciso o carrinho".
 
 **b)** Escreve a resposta que esperas e faz a tabela de iterações, como a do guia. Tem o peso, a condição do `Se` e a flag no fim de cada iteração.
 
@@ -278,7 +278,7 @@ Enquanto prateleira != ULTIMA_PRATELEIRA
 
 **a)** Faz a tabela de iterações até ao 6.º teste.
 
-**b)** O ciclo termina? Olha para os valores que `prateleira` vai tomando. Explica porque é que a condição nunca chega a ser falsa (guia, o último caso de [O ciclo que nunca acaba](04-repeticao-e-padroes.md#o-ciclo-que-nunca-acaba)).
+**b)** O ciclo termina? Olha para os valores que `prateleira` vai tomando. Explica porque é que a condição nunca chega a ser falsa (guia, o último caso de [O ciclo que nunca acaba](../04-repeticao-e-padroes.md#o-ciclo-que-nunca-acaba)).
 
 **c)** Corrige o algoritmo mudando uma só linha. Diz quantas iterações tem a versão corrigida e com que valor fica `prateleira` depois do ciclo.
 
@@ -360,4 +360,4 @@ Em todos os exercícios:
 2. Que dificuldade tiveste nesta ficha, e o que fizeste para a resolver?
 3. Em que exercício a tua tabela de iterações não deu o resultado que esperavas, e porquê?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Projeto 1: Duelo de dados
 
@@ -34,21 +34,21 @@ Os projetos 1 e 2 ficam no teu portefólio e não contam para a avaliação prá
 
 Este projeto não traz matéria nova. Usa o que está nos guias 01 a 04 e nas partes do guia 05 sobre testar e depurar. Cada passo deste documento diz onde está explicada a ferramenta de que precisa.
 
-- O contrato de um problema e as suas quatro perguntas: guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md). Está na secção "O contrato do problema: entradas, saídas, restrições e condições".
+- O contrato de um problema e as suas quatro perguntas: guia [01 Do problema ao algoritmo](../01-do-problema-ao-algoritmo.md). Está na secção "O contrato do problema: entradas, saídas, restrições e condições".
 - As ambiguidades de um enunciado: guia 01, secção "Instruções ambíguas". Quando o enunciado não diz o que acontece numa situação, não se inventa em silêncio. Decide-se, e escreve-se a decisão.
 - A decomposição de um problema em partes mais pequenas: guia 01, secção "Decompor um problema em subproblemas".
-- As variáveis, com o tipo à frente na linha onde nascem, e as constantes, escritas com `const`: guia [02 Pseudocódigo](02-pseudocodigo.md).
+- As variáveis, com o tipo à frente na linha onde nascem, e as constantes, escritas com `const`: guia [02 Pseudocódigo](../02-pseudocodigo.md).
 - A leitura com `ler valor` e a escrita no ecrã com `Escreve:`, do guia 02.
 - O trace, em que se executa um algoritmo à mão, instrução a instrução, do guia 02.
-- As comparações e a cadeia `Se`, `Senão se`, `Senão`: guia [03 Decisões e validação](03-decisoes-e-validacao.md).
+- As comparações e a cadeia `Se`, `Senão se`, `Senão`: guia [03 Decisões e validação](../03-decisoes-e-validacao.md).
 - A regra da cadeia, em que a primeira condição verdadeira ganha e o `Senão` apanha tudo o que sobra, do guia 03.
 - As fronteiras e a tabela de casos esperados, do guia 03.
-- O `Enquanto`, com a inicialização antes do ciclo, a condição e a atualização dentro do ciclo: guia [04 Repetição e padrões](04-repeticao-e-padroes.md).
-- As condições com `e`, que só são verdadeiras quando todas as partes são verdadeiras: guia [03 Decisões e validação](03-decisoes-e-validacao.md).
+- O `Enquanto`, com a inicialização antes do ciclo, a condição e a atualização dentro do ciclo: guia [04 Repetição e padrões](../04-repeticao-e-padroes.md).
+- As condições com `e`, que só são verdadeiras quando todas as partes são verdadeiras: guia [03 Decisões e validação](../03-decisoes-e-validacao.md).
 - A pergunta que decide entre `Enquanto` e `Para`: guia 04, secção "Escolher entre Enquanto e Para".
 - O padrão contador: guia 04, secção "Padrão contador".
 - A tabela de iterações, do guia 04. Cada linha é a fotografia do estado no momento em que o ciclo testa a condição.
-- Testar e depurar: guia [05 Testar, depurar e melhorar](05-testar-depurar-e-melhorar.md). Está da secção "Testar é comparar o obtido com o esperado" à secção "Corrigir a causa e não o sintoma".
+- Testar e depurar: guia [05 Testar, depurar e melhorar](../05-testar-depurar-e-melhorar.md). Está da secção "Testar é comparar o obtido com o esperado" à secção "Corrigir a causa e não o sintoma".
 - O exemplo guiado do guia 05, o do inventário da papelaria. Os passos 1 a 7 seguem o mesmo processo deste projeto, e o passo 10 mostra um registo de depuração completo.
 
 As partes do guia 05 sobre melhorar e contar passos, e a parte das funções, não são precisas aqui.
@@ -301,6 +301,6 @@ O [projeto 2](05-projeto-2-adivinha-o-numero.md) é o jogo de adivinhar um núme
 
 Depois vem a avaliação prática: individual, com 120 minutos e um problema novo, que o professor entrega no dia. O processo é o mesmo dos dois projetos, e podes consultar os dois no teu portefólio. Antes da avaliação, o professor mostra-te a grelha com os critérios.
 
-Até lá, os exercícios 1 a 4 da [ficha do tema 05](05-testar-depurar-e-melhorar-exercicios.md) treinam estes passos um de cada vez. Treinam também o da melhoria, que o projeto 2 vai pedir. Neles, escolhes casos antes de ver o algoritmo, depuras com método, contas passos e constróis um algoritmo a partir dos casos.
+Até lá, os exercícios 1 a 4 da [ficha do tema 05](../exercicios/05-testar-depurar-e-melhorar-exercicios.md) treinam estes passos um de cada vez. Treinam também o da melhoria, que o projeto 2 vai pedir. Neles, escolhes casos antes de ver o algoritmo, depuras com método, contas passos e constróis um algoritmo a partir dos casos.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)
