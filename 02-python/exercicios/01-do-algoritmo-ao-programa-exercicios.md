@@ -10,9 +10,9 @@ O [guia do tema](../01-do-algoritmo-ao-programa.md) e o [laboratório](../labora
 
 ## Como trabalhar
 
-Faz os exercícios pela ordem. Os exercícios 1 a 6 são obrigatórios, e o exercício 6 faz-se só no caderno. O desafio opcional e o "Para ires mais longe" são para quem acabar.
+Faz os exercícios pela ordem. Os exercícios 1 a 6 são obrigatórios. O desafio opcional e o "Para ires mais longe" são para quem acabar.
 
-Trabalha na tua pasta `lp-python`, no VS Code, e usa o comando que tens no registo da execução. Escreve no caderno as previsões, os resultados esperados e as respostas. Escreve sempre a previsão antes de correres o programa, e não a mudes depois: é ela que mostra o que já percebeste.
+Trabalha na tua pasta `lp-python`, no VS Code, e usa o comando do teu registo da execução. Uma resposta escrita fica num comentário, com `#`, como cada exercício indica. Antes de correres um programa, pensa no resultado que esperas, tirado do enunciado, e não do que o programa mostra. É a previsão que mostra o que já percebeste.
 
 ## Exercício 1: Prever o ecrã
 
@@ -25,8 +25,7 @@ print("Casa contra visitantes")
 print("Placar: 0 a 0")
 ```
 
-1. Sem correres o programa, escreve no caderno o que aparece no ecrã, linha a linha.
-2. Cria o ficheiro `placar.py` na tua pasta, com este conteúdo, e corre-o. Compara o que apareceu com a tua previsão. Se forem diferentes, explica numa frase em que te enganaste.
+Sem correres o programa, prevê o que aparece no ecrã, linha a linha. Depois cria o ficheiro `placar.py` na tua pasta, com este conteúdo, e confirma. Para cada linha do ecrã em que te enganaste, explica numa frase porque é que o ecrã é assim. Escreve a frase num comentário, no fim da linha do programa a que diz respeito.
 
 ## Exercício 2: Do pseudocódigo ao programa
 
@@ -38,9 +37,7 @@ Escreve as três opções, numeradas de 1 a 3, uma por linha: Jogar, Ver as regr
 Escreve: "Escolhe uma opção."
 ```
 
-1. Escreve no caderno o resultado esperado: o que o programa deve mostrar no ecrã, linha a linha, com o texto exato de cada linha. A forma da numeração decides tu.
-2. Escreve o programa em Python, no ficheiro `menu.py`, com o comentário no início.
-3. Corre-o e compara o que apareceu com o resultado esperado, linha a linha.
+Passa o algoritmo para Python, no ficheiro `menu.py`, com o comentário no início. O programa escreve o ecrã que o algoritmo descreve, com o texto exato de cada linha e as três opções numeradas, uma por linha. A forma da numeração decides tu.
 
 ## Exercício 3: Que tipo de erro?
 
@@ -52,11 +49,13 @@ Matraquilhos
 Equipas de dois jogadores.
 ```
 
-Fez três versões do programa, e nenhuma dá o resultado esperado. Para cada versão, tens o programa e o que apareceu no terminal. Responde no caderno:
+Fez três versões do programa, e nenhuma dá o resultado esperado. Para cada versão, tens o programa e o que apareceu no terminal. Responde a três perguntas sobre cada versão:
 
 - que tipo de erro é: de sintaxe, de execução ou de lógica;
 - em que linha está o erro, e como o soubeste;
 - como se corrige.
+
+Escreve as respostas num ficheiro `erros.py`, só com comentários, com uma parte para cada versão.
 
 Versão A:
 
@@ -127,13 +126,15 @@ Final às 16h00.
 Entrega dos prémios às 17h00.
 ```
 
-Depura com método, como no guia 05 da algoritmia, e escreve no caderno os cinco passos:
+Corrige-o até dar o resultado esperado. Depura com método, como no guia 05 da algoritmia, e escreve os cinco passos num comentário no fim do `horario.py`:
 
 1. Observar e reproduzir: o resultado esperado, o que apareceu e o tipo de erro.
 2. Formular uma hipótese: uma frase com a causa possível.
 3. Verificar a hipótese: o que leste na mensagem e no programa que a confirma.
 4. Corrigir a causa: o que mudaste, e em que linha.
 5. Voltar a testar tudo: o que apareceu depois da correção, comparado com o resultado esperado.
+
+O comentário fica no fim para as linhas do programa não mudarem de número, e a mensagem continuar a apontar a mesma linha.
 
 ## Exercício 5: As fases do ciclo de vida
 
@@ -146,12 +147,14 @@ A Rita fez o ecrã de abertura de um jogo de memória, que um colega lhe pediu. 
 - E. Um mês depois, acrescentou uma regra nova que o colega lhe pediu.
 - F. Viu que faltava uma linha e acrescentou o `print` que faltava.
 
+Responde num ficheiro `fases.py`, só com comentários, uma letra por linha:
+
 1. Escreve as letras pela ordem em que a Rita as fez.
 2. Ao lado de cada letra, escreve a fase do ciclo de vida a que pertence: análise, desenho, implementação, testes ou manutenção.
 
 ## Exercício 6: Onde se programa, certo ou errado
 
-Quatro colegas disseram estas frases na sala. Para cada uma, escreve no caderno se está certa ou errada, e justifica numa ou duas frases. Se estiver errada, diz também o que farias tu.
+Quatro colegas disseram estas frases na sala. Para cada uma, diz se está certa ou errada, e justifica numa ou duas frases. Se estiver errada, diz também o que farias tu. Escreve as respostas num ficheiro `ferramentas.py`, só com comentários, uma parte para cada frase.
 
 1. A Beatriz: "Abri o meu `ola.py` no Bloco de Notas e as cores desapareceram todas. O ficheiro estragou-se."
 2. A Inês: "Copiei para o VS Code um programa de uma apresentação que encontrei na internet. As letras estão todas iguais, por isso tem de correr."
@@ -189,10 +192,7 @@ Regador a partir de 100 moedas.
 Enxada a partir de 50 moedas.
 ```
 
-1. Sem correres, prevê o que aparece no ecrã com o programa assim, e explica porquê.
-2. Corrige só o erro que faz o Python recusar o programa. Sem correres, prevê o que aparece agora.
-3. Copia o programa original para um ficheiro `loja.py`, sem o escreveres à mão, porque o VS Code fecha sozinho as aspas e os parênteses. Confirma as duas previsões no computador. Depois corrige o segundo erro e testa tudo outra vez.
-4. Explica, numa ou duas frases, porque é que o segundo erro só se vê depois de corrigires o primeiro.
+Sem o correres, prevê o que aparece no ecrã com o programa assim. Depois copia-o para um ficheiro `loja.py`, sem o escreveres à mão, porque o VS Code fecha sozinho as aspas e os parênteses. Corrige-o até dar o resultado esperado, um erro de cada vez. Num comentário no fim do `loja.py`, explica, numa ou duas frases, porque é que o segundo erro só se vê depois de corrigires o primeiro.
 
 ## Para ires mais longe
 
@@ -201,16 +201,16 @@ Os textos deste tema estão todos entre aspas duplas. Na consola do Python, desc
 1. se o Python aceita um texto entre aspas simples, como `print('Olá')`;
 2. como se escreve um `print` que mostre esta frase, com as aspas incluídas: `O árbitro gritou "golo"`.
 
-Escreve no caderno o que experimentaste e o que aconteceu em cada tentativa, também nas que deram erro.
+Escreve o que experimentaste e o que aconteceu em cada tentativa, também nas que deram erro, num ficheiro `aspas.py`, só com comentários.
 
 ## Critérios de conclusão
 
-- O exercício 1 tem a previsão escrita antes de correres, e a comparação com o que apareceu.
-- O `menu.py` do exercício 2 corre e dá o resultado esperado que escreveste antes de o correres.
-- No exercício 3, cada versão tem o tipo de erro, a linha, a forma como o soubeste e a correção.
-- O exercício 4 tem os cinco passos de depurar com método escritos, e o `horario.py` corrigido dá o resultado esperado.
-- O exercício 5 tem as seis letras por ordem, cada uma com a sua fase.
-- O exercício 6 tem, para cada frase, se está certa ou errada, a justificação e, quando é preciso, o que farias tu.
+- O `placar.py` tem um comentário com a explicação de cada linha do ecrã em que te enganaste.
+- O `menu.py` do exercício 2 corre e escreve o menu, com as três opções numeradas, uma por linha.
+- O `erros.py` tem, para cada versão do exercício 3, o tipo de erro, a linha, a forma como o soubeste e a correção.
+- O `horario.py` corrigido dá o resultado esperado, e o comentário do fim tem os cinco passos de depurar com método.
+- O `fases.py` tem as seis letras do exercício 5 por ordem, cada uma com a sua fase.
+- O `ferramentas.py` tem, para cada frase do exercício 6, se está certa ou errada, a justificação e, quando é preciso, o que farias tu.
 
 ## Autoavaliação
 

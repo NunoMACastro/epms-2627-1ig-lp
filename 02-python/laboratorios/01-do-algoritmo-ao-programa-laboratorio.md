@@ -8,13 +8,13 @@ Laboratório do tema Do algoritmo ao programa, do módulo Desenvolver programas 
 
 No fim, tens dois programas em Python numa pasta tua. O primeiro, `ola.py`, escreve duas linhas no ecrã e serve para confirmar que o Python corre no teu computador. O segundo, `abertura.py`, mostra o nome e as regras do duelo de dados. É a passagem para Python de um algoritmo escrito em pseudocódigo, e vais confirmar que o computador escreve exatamente o que previste.
 
-Pelo caminho, ficas a saber abrir uma pasta no VS Code, criar um ficheiro, guardá-lo e corrê-lo no terminal. Ficas também a saber experimentar uma linha na consola do Python, e conheces as ferramentas que o VS Code junta na mesma janela. E aprendes a reconhecer os três tipos de erro que um programa pode ter. No caderno, fazes o **registo da execução**, com o comando que funciona no teu computador e a versão do Python. Fazes também o **mapa da janela** do VS Code, com o sítio de cada ferramenta.
+Pelo caminho, ficas a saber abrir uma pasta no VS Code, criar um ficheiro, guardá-lo e corrê-lo no terminal. Ficas também a saber experimentar uma linha na consola do Python, e conheces as ferramentas que o VS Code junta na mesma janela. E aprendes a reconhecer os três tipos de erro que um programa pode ter. Num comentário no fim do `ola.py`, fazes o **registo da execução**, com o comando que funciona no teu computador e a versão do Python. No caderno, desenhas também o **mapa da janela** do VS Code, com o sítio de cada ferramenta.
 
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
-| 1 | `ola.py` | O primeiro programa corre no terminal, e o comando que funciona está no caderno |
-| 2 | Nada no disco; experimentas no terminal e na consola do Python | Sabes a versão do teu Python e tens o registo da execução no caderno |
-| 3 | Nada de novo no disco; percorres as ferramentas do VS Code com o `ola.py` | Tens o mapa da janela no caderno e corres o `ola.py` também com o botão |
+| 1 | `ola.py` | O primeiro programa corre no terminal, e sabes que comando funciona no teu computador |
+| 2 | O registo da execução, no fim do `ola.py`; experimentas no terminal e na consola do Python | Sabes a versão do teu Python, e o registo da execução está no `ola.py` |
+| 3 | Nada de novo no disco; percorres as ferramentas do VS Code com o `ola.py` | O mapa da janela está desenhado, e corres o `ola.py` também com o botão |
 | 4 | `abertura.py` | O ecrã de abertura do duelo de dados aparece no terminal, igual ao que previste |
 | 5 | `abertura.py`, com erros provocados e corrigidos | Sabes dizer de que tipo é cada erro e como o encontraste |
 
@@ -51,14 +51,14 @@ lp-python/
 - Erro de sintaxe: um erro na escrita do programa. O Python recusa o programa inteiro, antes de executar qualquer linha.
 - Erro de execução: um erro que para o programa a meio, numa linha que o Python não consegue executar. As linhas de antes já correram.
 - Erro de lógica: um erro que não dá mensagem nenhuma. O programa corre até ao fim, mas o resultado não é o esperado.
-- Registo da execução: uma nota no caderno com o que precisas para voltar a correr o programa. Leva a data, o computador, o comando, a versão do Python e o que apareceu.
+- Registo da execução: uma nota com o que precisas para voltar a correr o programa. Leva a data, o computador, o comando, a versão do Python e o que apareceu. Neste laboratório, fica num comentário no fim do `ola.py`.
 
 ## O que precisas
 
 - O Python 3, o interpretador. Não precisas de fazer nada agora: na fase 2, confirmas que o tens, com o comando `python --version`. Deve aparecer uma linha como `Python 3.13.2`, com os números da versão que está instalada. O primeiro número tem de ser 3.
 - O VS Code, o editor de código das aulas, onde escreves os programas e abres o terminal. Abre-se como qualquer outra aplicação do computador.
 - A extensão Python do VS Code, da Microsoft, que acrescenta ao VS Code ferramentas que conhecem o Python, como um botão para correr o programa. Na fase 3, confirmas se está instalada. Sem ela, o laboratório faz-se na mesma, e a fase 3 diz o que muda.
-- O caderno, para o registo da execução, para o mapa da janela e para as tabelas que vais fazendo nas paragens.
+- O caderno, para desenhares o mapa da janela, na fase 3.
 
 Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. Num Python mais antigo, uma mensagem pode ter outras palavras, ou apontar outra linha. O nome do erro, a palavra antes dos dois pontos na última linha, é o mesmo.
 
@@ -76,8 +76,6 @@ Os nomes dos menus e dos botões são os do VS Code em inglês. Foram confirmado
 1. Cria uma pasta para os teus programas de Python, com o nome `lp-python`, no sítio onde costumas guardar os trabalhos, por exemplo em Documentos. Uma pasta própria impede que os programas se misturem com outros ficheiros. O nome não tem espaços nem acentos, para se escrever sem problemas no terminal.
 
 2. Abre o VS Code e abre a pasta. No menu File, escolhe Open Folder..., isto é, "abrir pasta", e escolhe `lp-python`. Se o VS Code perguntar se confias nos autores dos ficheiros desta pasta, responde que sim, porque a pasta é tua. O que deves ver: à esquerda, no painel Explorer, o nome `LP-PYTHON`, ainda sem ficheiros.
-
-3. No caderno, abre uma página com o título "Registo da execução". Vais preenchê-la nas fases 1 e 2.
 
 ## Fase 1: Correr o primeiro programa
 
@@ -116,7 +114,7 @@ Na algoritmia, quem executava os algoritmos eras tu, com papel e lápis. Agora v
 
    Isto quer dizer que o interpretador encontrou o ficheiro e executou as duas instruções, de cima para baixo. A linha do comentário não aparece. Se o Windows responder que não conhece o `python`, ou se abrir a Microsoft Store, fecha a loja e experimenta `py ola.py`, que faz o mesmo. Se aparecer outra coisa, vê os [problemas frequentes](#problemas-frequentes).
 
-5. Escreve no caderno, no registo da execução, o comando que funcionou no teu computador: `python`, `py` ou `python3`. É esse que vais usar em todos os programas deste módulo, sempre que este laboratório disser `python`.
+5. Repara no comando que funcionou no teu computador: `python`, `py` ou `python3`. É esse que vais usar em todos os programas deste módulo, sempre que este laboratório disser `python`. Na fase 2, fica guardado no registo da execução.
 
 6. Provoca um erro de propósito: apaga a aspa que fecha o texto da terceira linha, para ficar `print("O meu primeiro programa correu.)`. Guarda e corre outra vez o mesmo comando. O que deves ver:
 
@@ -135,7 +133,7 @@ Na algoritmia, quem executava os algoritmos eras tu, com papel e lápis. Agora v
 
 ### Paragem 1
 
-O `ola.py` corre e escreve as duas linhas. Sabes criar um ficheiro, guardá-lo e corrê-lo no terminal, e tens no caderno o comando que funciona no teu computador.
+O `ola.py` corre e escreve as duas linhas. Sabes criar um ficheiro, guardá-lo e corrê-lo no terminal, e sabes que comando funciona no teu computador.
 
 Pensa antes de continuares: porque é que, com o erro na linha 3, nem o "Olá, Python!" da linha 2 apareceu? A resposta: antes de executar, o interpretador lê o ficheiro todo e confirma que está bem escrito. Ao encontrar um erro de sintaxe, recusa o programa e não executa nenhuma linha, nem as que estão antes do erro.
 
@@ -143,7 +141,7 @@ Pensa antes de continuares: porque é que, com o erro na linha 3, nem o "Olá, P
 
 Os computadores não têm todos o mesmo Python. A versão diz qual é, e pode explicar porque é que uma mensagem de erro aparece com outras palavras num computador e não noutro. Por isso, a versão entra no registo da execução. Nesta fase vais também conhecer a consola do Python, onde se experimenta uma linha de cada vez, sem criar um ficheiro. Para saber mais, lê as secções "A consola do Python" e "O registo da execução" do [guia](../01-do-algoritmo-ao-programa.md).
 
-1. No terminal, escreve o comando seguinte e carrega em Enter. Usa o comando que escreveste no caderno: se for `py`, escreve `py --version`; no macOS, `python3 --version`.
+1. No terminal, escreve o comando seguinte e carrega em Enter. Usa o comando que funcionou na fase 1: se for `py`, escreve `py --version`; no macOS, `python3 --version`.
 
    ```bash
    python --version
@@ -151,7 +149,7 @@ Os computadores não têm todos o mesmo Python. A versão diz qual é, e pode ex
 
    O que deves ver: uma só linha, como `Python 3.13.2`. Os números podem ser outros, porque dizem a versão instalada no teu computador. O primeiro tem de ser 3, que quer dizer que é o Python 3. Se for 2, avisa o professor, porque o Python 2 é uma versão antiga, que já não se usa.
 
-2. Completa o registo da execução, no caderno. Por exemplo:
+2. Escreve o registo da execução num comentário no fim do `ola.py`, a seguir às três linhas do programa. Começa cada linha por `#`, para o Python não a executar. Com os teus valores, fica parecido com este:
 
    ```text
    Registo da execução
@@ -164,7 +162,9 @@ Os computadores não têm todos o mesmo Python. A versão diz qual é, e pode ex
    Erro provocado: a aspa por fechar, SyntaxError na linha 3
    ```
 
-   Os teus valores são os do teu computador. Se trabalhares também em casa, faz um segundo registo para esse computador, porque o comando e a versão podem ser outros.
+   Os teus valores são os do teu computador. O registo fica no fim do ficheiro para as linhas do programa não mudarem de número, porque a fase 3 fala delas pelo número. Guarda e corre outra vez o `ola.py`. O que deves ver: as mesmas duas linhas, porque os comentários não se executam. Se aparecer uma mensagem de erro, falta o `#` numa das linhas do registo.
+
+   Se trabalhares também em casa, faz um segundo registo no `ola.py` desse computador, porque o comando e a versão podem ser outros.
 
 3. Entra na consola do Python. No terminal, escreve só `python`, sem nome de ficheiro, e carrega em Enter. Usa o teu comando: `py`, ou `python3` no macOS. O que deves ver: duas linhas em inglês, a primeira com a versão do Python, e por baixo, numa linha à parte, `>>>`. No Python 3.14, a consola pode mostrar o texto a cores. Isto quer dizer que estás na consola, à espera de uma linha de Python.
 
@@ -195,7 +195,7 @@ Os computadores não têm todos o mesmo Python. A versão diz qual é, e pode ex
 
 ### Paragem 2
 
-Tens no caderno o registo da execução, com o comando e a versão do teu Python. Sabes entrar e sair da consola. Na pasta não apareceu nenhum ficheiro novo, porque o que se escreve na consola não fica guardado.
+O registo da execução está no fim do `ola.py`, com o comando e a versão do teu Python. Sabes entrar e sair da consola. Na pasta não apareceu nenhum ficheiro novo, porque o que se escreve na consola não fica guardado.
 
 Pensa antes de continuares: quando é que usas a consola, e quando é que usas um ficheiro `.py`? A resposta: a consola serve para experimentar uma linha e ver logo o resultado. Um programa que queres guardar, corrigir e voltar a correr escreve-se num ficheiro `.py`.
 
@@ -219,17 +219,17 @@ Um IDE ajuda, mas nem sempre é preciso. Para experimentar uma linha, chega a co
 
    Deixa espaço em cada zona, porque vais escrever lá o nome das ferramentas que encontrares.
 
-2. Confirma se a extensão Python está instalada. Os passos seguintes dependem dela. Na coluna dos ícones, carrega no ícone das extensões, Extensions, o dos quatro quadrados. Na caixa de procura que aparece no topo, escreve `Python`. O que deves ver: uma lista de extensões, com uma chamada Python, da Microsoft, no topo. Se ela tiver um botão Install, isto é, "instalar", não está instalada: avisa o professor antes de a instalares. Se não tiver esse botão, já está instalada. Escreve no caderno se a tens ou não. No mapa, escreve "extensões" na coluna dos ícones. Depois volta ao explorador, com um clique no primeiro ícone da coluna.
+2. Confirma se a extensão Python está instalada. Os passos seguintes dependem dela. Na coluna dos ícones, carrega no ícone das extensões, Extensions, o dos quatro quadrados. Na caixa de procura que aparece no topo, escreve `Python`. O que deves ver: uma lista de extensões, com uma chamada Python, da Microsoft, no topo. Se ela tiver um botão Install, isto é, "instalar", não está instalada: avisa o professor antes de a instalares. Se não tiver esse botão, já está instalada. No mapa, escreve "extensões" na coluna dos ícones. Depois volta ao explorador, com um clique no primeiro ícone da coluna.
 
 3. No explorador, o painel Explorer, carrega no `ola.py`. O que deves ver: o ficheiro abre-se no editor, ao centro, com um separador no topo com o nome `ola.py`. No mapa, escreve "explorador" no painel da esquerda, "editor e separadores" ao centro e "terminal integrado" no painel de baixo. Estas três já as usaste na fase 1.
 
-4. Olha para a margem da esquerda do editor. Tem os números das linhas: 1, 2 e 3. Repara também nas cores. O comentário tem uma cor, a palavra `print` outra, e os textos entre aspas outra. A estas cores chama-se realce de sintaxe. Ajudam a ver o que é cada parte do programa, e não ficam guardadas no ficheiro: o ficheiro tem só o texto.
+4. Olha para a margem da esquerda do editor. Tem os números das linhas, e as três do programa são a 1, a 2 e a 3. Repara também nas cores. O comentário tem uma cor, a palavra `print` outra, e os textos entre aspas outra. A estas cores chama-se realce de sintaxe. Ajudam a ver o que é cada parte do programa, e não ficam guardadas no ficheiro: o ficheiro tem só o texto.
 
 5. Vê um erro antes de correres. Na linha 3, apaga a aspa que fecha o texto, como fizeste na fase 1, mas desta vez não guardes. O que deves ver: o `)` do fim da linha passa a ter a cor dos textos. O editor também já não sabe onde o texto acaba. No separador, no lugar do X, aparece a bola cheia das alterações por guardar. Com a extensão Python, aparece ainda uma linha ondulada perto do erro: é o sublinhado dos erros. Na primeira vez, pode levar uns segundos a aparecer. Sem a extensão, não aparece nenhuma linha ondulada, mas a cor muda na mesma.
 
 6. Abre o painel dos problemas. No menu View, escolhe Problems. O que deves ver, com a extensão Python: no painel de baixo, uma lista com pelo menos um problema e o número da linha, 3. Carrega no problema, e o cursor salta para a linha 3. Sem a extensão, a lista fica vazia, porque o VS Code sozinho só pinta o texto e não confirma se o programa está bem escrito. Depois, carrega no texto da linha 3, no editor, e desfaz a alteração com Ctrl+Z, ou Cmd+Z no macOS. A aspa volta, a linha volta às cores de antes e a bola volta a ser um X. No mapa, escreve "sublinhado dos erros" no editor e "painel dos problemas" no painel de baixo.
 
-7. Experimenta as sugestões e o fecho automático. Põe o cursor no fim da linha 3, carrega em Enter, para abrires uma linha nova, e escreve só `pri`. O que deves ver: uma lista pequena por baixo do cursor, com `print`. Se a lista não aparecer, carrega em Ctrl+Espaço. Carrega em Tab, ou em Enter, e o VS Code completa a palavra. Escreve agora `(`. O que deves ver: o VS Code escreve sozinho o `)`, e o cursor fica entre os dois parênteses. Pode abrir-se também uma caixa com uma explicação do `print`, em inglês: fecha-a com a tecla Esc. No mapa, escreve "sugestões" no editor. Depois, apaga a linha 4 inteira, até o cursor voltar ao fim da linha 3, e guarda. O `ola.py` volta a ter só as três linhas.
+7. Experimenta as sugestões e o fecho automático. Põe o cursor no fim da linha 3, carrega em Enter, para abrires uma linha nova, e escreve só `pri`. O que deves ver: uma lista pequena por baixo do cursor, com `print`. Se a lista não aparecer, carrega em Ctrl+Espaço. Carrega em Tab, ou em Enter, e o VS Code completa a palavra. Escreve agora `(`. O que deves ver: o VS Code escreve sozinho o `)`, e o cursor fica entre os dois parênteses. Pode abrir-se também uma caixa com uma explicação do `print`, em inglês: fecha-a com a tecla Esc. No mapa, escreve "sugestões" no editor. Depois, apaga a linha 4 inteira, até o cursor voltar ao fim da linha 3, e guarda. O `ola.py` volta a ficar como estava.
 
 8. Olha para a barra de estado. Põe o cursor no fim da linha 2, a seguir ao último parêntese. O que deves ver, na barra de estado, entre outras coisas: `Ln 2, Col 22`. Quer dizer linha 2, coluna 22: o cursor está na linha 2, depois do 21.º carácter, o último. Quando uma mensagem de erro disser `line 2`, é assim que confirmas que o cursor está na linha certa. No mapa, escreve "barra de estado" na faixa do fundo.
 
@@ -247,7 +247,7 @@ O teu mapa da janela tem nove ferramentas, cada uma na sua zona:
 - na faixa do fundo, a barra de estado;
 - na coluna dos ícones, as extensões.
 
-O `ola.py` tem outra vez as três linhas e corre com o comando e com o botão.
+O `ola.py` está outra vez como estava, e corre com o comando e com o botão.
 
 Pensa antes de continuares: no passo 5, o VS Code mostrou a aspa por fechar antes de correres. Quer isto dizer que o VS Code executou o programa? A resposta: não. O editor só lê o texto e pinta-o pelas regras de escrita do Python. Quem executa o programa é o interpretador, e só quando o corres, com o comando ou com o botão.
 
@@ -263,9 +263,9 @@ Escreve: "Quem escolher o número maior ganha a ronda."
 Escreve: "O duelo acaba quando alguém ganha três rondas."
 ```
 
-Passar este algoritmo para Python é trocar cada `Escreve:` por um `print`, com o mesmo texto entre parênteses, pela mesma ordem. Antes de o computador o executar, vais dizer o que esperas ver. Depois comparas. É assim que se testa um programa: o resultado esperado escreve-se antes de correr. Para saber mais, lê a secção "Do `Escreve:` ao `print`" do [guia](../01-do-algoritmo-ao-programa.md).
+Passar este algoritmo para Python é trocar cada `Escreve:` por um `print`, com o mesmo texto entre parênteses, pela mesma ordem. Antes de o computador o executar, vais prever o que deve aparecer. Depois comparas. É assim que se testa um programa: o resultado esperado decide-se antes de correr. Para saber mais, lê a secção "Do `Escreve:` ao `print`" do [guia](../01-do-algoritmo-ao-programa.md).
 
-1. Escreve no caderno o resultado esperado: o que deve aparecer no ecrã, linha a linha, quando o algoritmo for executado. Lembra-te de que as aspas não aparecem.
+1. Antes de escreveres o programa, prevê o resultado esperado: o que deve aparecer no ecrã, linha a linha, quando o algoritmo for executado. Lembra-te de que as aspas não aparecem.
 
    A resposta: as cinco linhas, pela ordem do algoritmo, sem aspas.
 
@@ -297,9 +297,9 @@ Passar este algoritmo para Python é trocar cada `Escreve:` por um `print`, com 
    python abertura.py
    ```
 
-   O que deves ver: as cinco linhas do resultado esperado, pela mesma ordem. Compara-as com o que escreveste no caderno, linha a linha. Se forem iguais, o programa passou o teste. Se houver uma diferença, procura-a no código, na mesma linha, e confirma que o texto é o mesmo do pseudocódigo.
+   O que deves ver: as cinco linhas do resultado esperado, pela mesma ordem. Compara-as, linha a linha, com o resultado esperado do passo 1. Se forem iguais, o programa passou o teste. Se houver uma diferença, procura-a no código, na mesma linha, e confirma que o texto é o mesmo do pseudocódigo.
 
-4. No caderno, faz uma tabela com três colunas: "Pseudocódigo", "Python" e "O que muda". É o teu quadro de tradução, e serve para consultares quando passares outros algoritmos para Python. Escreve-lhe estas duas linhas:
+4. Repara no que mudou do pseudocódigo para o Python. O quadro de tradução junta essas mudanças, e serve para consultares quando passares outros algoritmos para Python. Por agora, tem estas duas linhas:
 
    | Pseudocódigo | Python | O que muda |
    | --- | --- | --- |
@@ -308,7 +308,7 @@ Passar este algoritmo para Python é trocar cada `Escreve:` por um `print`, com 
 
 ### Paragem 4
 
-O `abertura.py` mostra o ecrã de abertura do duelo de dados, igual ao resultado esperado que escreveste antes de correr.
+O `abertura.py` mostra o ecrã de abertura do duelo de dados, igual ao resultado esperado que previste antes de correr.
 
 Pensa antes de continuares: se trocares a ordem de duas linhas `print`, o que muda no ecrã? A resposta: as duas linhas aparecem trocadas. O Python executa as instruções exatamente pela ordem em que estão no ficheiro, de cima para baixo, como numa sequência do pseudocódigo.
 
@@ -347,11 +347,11 @@ Na fase 1 viste um erro de sintaxe: o Python recusou o programa inteiro, e nenhu
    DUELO DE DADOS
    ```
 
-   Não há mensagem nenhuma, nem nada sublinhado no editor. O programa está bem escrito e todas as instruções existem, por isso o Python executou-as todas. Mas o nome do jogo aparece no fim, e não no início. Só dás pelo erro porque comparas o que apareceu com o resultado esperado que escreveste no caderno, na fase 4. É por isso que o resultado esperado se escreve antes de correr.
+   Não há mensagem nenhuma, nem nada sublinhado no editor. O programa está bem escrito e todas as instruções existem, por isso o Python executou-as todas. Mas o nome do jogo aparece no fim, e não no início. Só dás pelo erro porque comparas o que apareceu com o resultado esperado da fase 4. É por isso que o resultado esperado se decide antes de correr.
 
 4. Corrige: corta outra vez a linha do título, da mesma maneira. Põe o cursor no início da linha 3, logo a seguir aos comentários, e cola. Confirma que o `print("DUELO DE DADOS")` ficou numa linha só para ele. Guarda, corre e compara outra vez com o resultado esperado.
 
-5. No caderno, faz uma tabela dos três erros que provocaste neste laboratório. Tem quatro colunas: "O erro", "O tipo", "O que se viu" e "Correu alguma linha?".
+5. Revê os três erros que provocaste neste laboratório. Antes de leres a tabela, pensa em cada um: de que tipo era, o que se viu e se correu alguma linha.
 
    A resposta:
 
@@ -363,9 +363,9 @@ Na fase 1 viste um erro de sintaxe: o Python recusou o programa inteiro, e nenhu
 
 ### Paragem 5
 
-O `abertura.py` está outra vez certo, e dá as cinco linhas pela ordem do pseudocódigo. Na tabela do caderno tens um erro de cada tipo, com o que se viu em cada um.
+O `abertura.py` está outra vez certo, e dá as cinco linhas pela ordem do pseudocódigo. Provocaste um erro de cada tipo, e sabes o que se viu em cada um.
 
-Pensa antes de terminares: qual dos três erros é o mais difícil de encontrar, e porquê? A resposta: o erro de lógica, porque o Python não dá nenhuma mensagem, e o VS Code não sublinha nada. Só se encontra comparando o resultado obtido com o resultado esperado, escrito antes de correr o programa.
+Pensa antes de terminares: qual dos três erros é o mais difícil de encontrar, e porquê? A resposta: o erro de lógica, porque o Python não dá nenhuma mensagem, e o VS Code não sublinha nada. Só se encontra comparando o resultado obtido com o resultado esperado, decidido antes de correr o programa.
 
 O ficheiro `abertura.py` completo, como deve estar agora:
 
@@ -411,21 +411,20 @@ Confirma que cada linha tem `print`, e não `Escreve:`. Uma linha copiada do pse
 
 ## Desafios
 
-1. Uma linha em branco. Muda o `abertura.py` para aparecer uma linha em branco entre o nome do jogo e as regras. Escreve primeiro, no caderno, o resultado esperado, e compara-o com o que aparecer. Pista: experimenta na consola um `print` sem nada entre os parênteses.
+1. Uma linha em branco. Muda o `abertura.py` para aparecer uma linha em branco entre o nome do jogo e as regras. Antes de correres, prevê o resultado esperado, e compara-o com o que aparecer. Pista: experimenta na consola um `print` sem nada entre os parênteses.
 
-2. O ecrã de abertura de outro jogo. Escolhe um jogo de cartas ou de tabuleiro que conheças bem, como o jogo do galo. Escreve, primeiro em pseudocódigo, um ecrã de abertura com o nome do jogo e três regras. Depois passa-o para Python, num ficheiro novo com um nome que diga o que é, sem espaços nem acentos. Testa-o com o resultado esperado escrito antes de correr.
+2. O ecrã de abertura de outro jogo. Escolhe um jogo de cartas ou de tabuleiro que conheças bem, como o jogo do galo. Escreve, primeiro em pseudocódigo, um ecrã de abertura com o nome do jogo e três regras. Depois passa-o para Python, num ficheiro novo com um nome que diga o que é, sem espaços nem acentos. Testa-o com o resultado esperado, decidido antes de correr.
 
 3. O erro que ninguém vê. Num dos teus programas, provoca um erro de lógica diferente do da fase 5, que não troque a ordem das linhas. Dá o programa a um colega, com o resultado esperado, e vê se ele encontra o erro. Pista: pensa no que pode estar errado num programa que corre até ao fim sem mensagem.
 
-4. Sem o VS Code. Este desafio faz-se num computador com Windows; se só tens macOS, salta-o. Abre o `ola.py` no Bloco de Notas. No Explorador de Ficheiros do Windows, carrega no ficheiro com o botão direito do rato. O ficheiro pode aparecer só como `ola`, porque o Windows esconde o fim do nome. Escolhe Abrir com e depois Bloco de Notas. Muda o texto da linha 2, guarda e fecha o Bloco de Notas. Antes de correres, prevê: o programa corre? Depois corre-o no terminal, com o teu comando. No caderno, escreve o que encontraste no Bloco de Notas, comparado com o VS Code, e o que o Bloco de Notas não tem. Pista: compara com as ferramentas do teu mapa da janela.
+4. Sem o VS Code. Este desafio faz-se num computador com Windows; se só tens macOS, salta-o. Abre o `ola.py` no Bloco de Notas. No Explorador de Ficheiros do Windows, carrega no ficheiro com o botão direito do rato. O ficheiro pode aparecer só como `ola`, porque o Windows esconde o fim do nome. Escolhe Abrir com e depois Bloco de Notas. Muda o texto da linha 2, guarda e fecha o Bloco de Notas. Antes de correres, prevê: o programa corre? Depois corre-o no terminal, com o teu comando. Compara o Bloco de Notas com o VS Code: o que encontraste, e o que lhe falta? Escreve a resposta num comentário no fim do `ola.py`. Pista: compara com as ferramentas do teu mapa da janela.
 
 ## Antes de terminares
 
 - [ ] O `ola.py` corre e escreve as duas linhas.
 - [ ] O `abertura.py` corre e escreve as cinco linhas do ecrã de abertura, pela ordem do pseudocódigo.
-- [ ] O registo da execução, no caderno, tem o comando que funciona no teu computador e a versão do Python.
-- [ ] O mapa da janela, no caderno, tem as ferramentas da fase 3, cada uma na sua zona.
-- [ ] A tabela dos três erros, no caderno, tem um erro de cada tipo.
+- [ ] O `ola.py` tem, num comentário no fim, o registo da execução, com o comando que funciona no teu computador e a versão do Python.
+- [ ] Desenhaste o mapa da janela, com as ferramentas da fase 3, cada uma na sua zona.
 - [ ] Sabes sair da consola do Python e voltar ao terminal.
 - [ ] Sabes correr um programa com o comando e com o botão de correr.
 - [ ] Sabes distinguir um erro de sintaxe, um erro de execução e um erro de lógica pelo que aparece no ecrã.

@@ -18,7 +18,7 @@ Baús que podes construir: 3
 Tábuas que sobram: 4
 ```
 
-Pelo caminho, ficas a saber guardar valores em variáveis e constantes, fazer contas e ler um valor do teclado. Ficas também a saber converter esse valor num número, para as contas darem certo. No fim, testas o programa com uma **tabela de entradas e saídas**, escrita no caderno antes de correr. É a tabela de casos esperados da algoritmia, agora para um programa que se corre.
+Pelo caminho, ficas a saber guardar valores em variáveis e constantes, fazer contas e ler um valor do teclado. Ficas também a saber converter esse valor num número, para as contas darem certo. No fim, testas o programa com uma **tabela de entradas e saídas**, com o resultado esperado de cada caso calculado antes de correr. É a tabela de casos esperados da algoritmia, agora para um programa que se corre.
 
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
@@ -26,7 +26,7 @@ Pelo caminho, ficas a saber guardar valores em variáveis e constantes, fazer co
 | 2 | Nada no disco; experimentas na consola do Python | Sabes de que tipo é um valor e como o Python faz as contas |
 | 3 | `inventario.py`, com constantes e contas | O programa calcula as tábuas, os baús e as tábuas que sobram |
 | 4 | `inventario.py`, com `input` e a conversão | O programa pergunta quantos troncos tens e faz as contas com a resposta |
-| 5 | Nada no código; o caderno | A tabela de entradas e saídas, com quatro casos, confirma o programa |
+| 5 | Nada no código; corres o programa com quatro casos de teste | A tabela de entradas e saídas, com quatro casos, confirma o programa |
 
 ## Palavras que vais usar
 
@@ -44,9 +44,8 @@ Pelo caminho, ficas a saber guardar valores em variáveis e constantes, fazer co
 
 ## O que precisas
 
-- A pasta `lp-python`, aberta no VS Code. Precisas também do comando que funciona no teu computador, `python`, `py` ou `python3`, que tens no registo da execução do caderno. Se não tiveres a pasta, cria-a, por exemplo em Documentos, e abre-a no VS Code, no menu File, com a opção Open Folder....
+- A pasta `lp-python`, aberta no VS Code. Precisas também do comando que funcionou no teu computador no tema anterior: `python`, `py` ou `python3`. Se não tiveres a pasta, cria-a, por exemplo em Documentos, e abre-a no VS Code, no menu File, com a opção Open Folder....
 - O terminal do VS Code, no menu Terminal, com a opção New Terminal. O texto antes do cursor deve acabar em `lp-python`.
-- O caderno, para as previsões e para a tabela de entradas e saídas.
 
 Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. Num Python mais antigo, uma mensagem pode ter outras palavras, ou não ter os sinais por baixo da linha. O nome do erro, a palavra antes dos dois pontos na última linha, é o mesmo.
 
@@ -182,7 +181,7 @@ Pensa antes de continuares: com 30 tábuas e baús de 8, quantos baús fazes e q
 
 Agora o programa faz as contas da madeira. Cada tronco dá 4 tábuas, e cada baú gasta 8. Estes números são regras do jogo, que não mudam. Se aparecessem soltos no meio das contas, quem lesse não saberia o que querem dizer. Por isso, ficam em constantes: variáveis com o nome todo em maiúsculas, que se combina não mudar. Para saber mais, lê a secção "Constantes" do [guia](../02-dados-e-interacao.md).
 
-1. Antes de mexeres no código, prevê no caderno, com 7 troncos: quantas tábuas, quantos baús e quantas tábuas sobram. A resposta: 7 vezes 4 dá 28 tábuas; 28 a dividir por 8 dá 3 baús completos; e sobram 4 tábuas.
+1. Antes de mexeres no código, prevê, com 7 troncos: quantas tábuas, quantos baús e quantas tábuas sobram. A resposta: 7 vezes 4 dá 28 tábuas; 28 a dividir por 8 dá 3 baús completos; e sobram 4 tábuas.
 
 2. Substitui todo o conteúdo de `inventario.py` por este, que é o ficheiro completo:
 
@@ -321,11 +320,11 @@ Pensa antes de continuares: porque é que a mensagem do passo 2 apontava a linha
 
 ## Fase 5: Testar com uma tabela de entradas e saídas
 
-Um caso só não chega para confiar num programa. Pode dar certo com 7 troncos e errado com 0 ou com 2. Testar é escolher casos que experimentam situações diferentes e comparar o resultado com o esperado, escrito antes de correr. A forma de o organizar é uma tabela de entradas e saídas. Tem uma linha por caso, com o que se escreve no teclado e o que deve aparecer. Para saber mais, vê o exemplo guiado do [guia](../02-dados-e-interacao.md).
+Um caso só não chega para confiar num programa. Pode dar certo com 7 troncos e errado com 0 ou com 2. Testar é escolher casos que experimentam situações diferentes e comparar o resultado com o esperado, calculado antes de correr. A forma de o organizar é uma tabela de entradas e saídas. Tem uma linha por caso, com o que se escreve no teclado e o que deve aparecer. Para saber mais, vê o exemplo guiado do [guia](../02-dados-e-interacao.md).
 
-1. No caderno, faz uma tabela com quatro colunas: "Troncos", "Tábuas", "Baús" e "Sobram". Escreve quatro linhas, com 0, 1, 2 e 7 troncos, e preenche as outras colunas à mão, antes de correres.
+1. Os casos de teste são quatro: 0, 1, 2 e 7 troncos. Antes de correres, calcula o que o programa deve mostrar em cada caso: as tábuas, os baús e as tábuas que sobram.
 
-   A resposta:
+   A resposta, na tabela de entradas e saídas:
 
    | Troncos | Tábuas | Baús | Sobram |
    | ---: | ---: | ---: | ---: |
@@ -336,7 +335,7 @@ Um caso só não chega para confiar num programa. Pode dar certo com 7 troncos e
 
    Cada caso tem uma razão. O 0 é o mínimo. O 1 dá menos tábuas do que um baú gasta. O 2 dá exatamente um baú, sem sobras: é a fronteira, onde é fácil enganar-se no resto. O 7 é um caso normal, com baús e sobras.
 
-2. Corre o programa quatro vezes, uma por linha da tabela. Em cada uma, compara as três últimas linhas do ecrã com a tua tabela. Com 2 troncos, por exemplo, deves ver:
+2. Corre o programa quatro vezes, uma por linha da tabela. Em cada uma, compara as três últimas linhas do ecrã com o que calculaste. Com 2 troncos, por exemplo, deves ver:
 
    ```text
    Quantos troncos tens? 2
@@ -348,11 +347,11 @@ Um caso só não chega para confiar num programa. Pode dar certo com 7 troncos e
    Tábuas que sobram: 0
    ```
 
-3. Acrescenta à tabela uma quinta coluna, "Passou?", e marca cada caso. Se algum não passar, depura com método. Escreve o esperado e o obtido, faz uma hipótese, confirma-a no código e corrige só a causa. Depois corre outra vez os quatro casos, e não só o que falhou.
+3. Um caso passa quando o ecrã mostra o que calculaste. Se algum não passar, depura com método. Num comentário no fim do `inventario.py`, escreve o caso, o esperado, o obtido e a tua hipótese. Confirma a hipótese no código e corrige só a causa. Depois corre outra vez os quatro casos, e não só o que falhou.
 
 ### Paragem 5
 
-A tabela de entradas e saídas tem os quatro casos, todos marcados como passados. O `inventario.py` está comentado e funciona com qualquer número inteiro de troncos, igual ou maior do que zero.
+Os quatro casos da tabela de entradas e saídas passaram. O `inventario.py` está comentado e funciona com qualquer número inteiro de troncos, igual ou maior do que zero.
 
 Pensa antes de terminares: porque é que o caso de 2 troncos é importante, se o de 7 já tinha baús e sobras? A resposta: com 2 troncos, as tábuas chegam exatamente para um baú, e o resto é 0. É a fronteira, o ponto onde o resultado muda. Um erro de uma unidade a mais ou a menos pode passar nos outros casos, e mostra-se aqui.
 
@@ -384,16 +383,16 @@ Usaste `/` em vez de `//`. Para contar objetos completos, usa a divisão inteira
 
 ## Desafios
 
-1. A pedra. Num jogo de construção, cada fornalha gasta 7 pedras. Acrescenta ao programa as contas da pedra: quantas fornalhas podes construir com a pedra que tens, e quantas pedras sobram. Escreve primeiro o resultado esperado, com 30 pedras. Pista: precisas de uma constante nova.
+1. A pedra. Num jogo de construção, cada fornalha gasta 7 pedras. Acrescenta ao programa as contas da pedra: quantas fornalhas podes construir com a pedra que tens, e quantas pedras sobram. Antes de correres, prevê o resultado com as 30 pedras do inventário. Pista: precisas de uma constante nova.
 
-2. Tudo perguntado. Muda o programa para perguntar também quanta pedra e quanto ferro tens, em vez de os ter fixos. Testa com uma tabela de entradas e saídas com três casos.
+2. Tudo perguntado. Muda o programa para perguntar também quanta pedra e quanto ferro tens, em vez de os ter fixos. Testa-o com três casos à tua escolha, com o resultado esperado de cada um calculado antes de correres.
 
-3. O que falta para o próximo baú. Faz o programa dizer também quantas tábuas faltam para construir mais um baú. Com 7 troncos, sobram 4 tábuas, e faltam 4. Testa com os quatro casos da tabela. Pista: pensa no caso de 2 troncos, em que não sobra nenhuma tábua. Quantas faltam aí?
+3. O que falta para o próximo baú. Faz o programa dizer também quantas tábuas faltam para construir mais um baú. Com 7 troncos, sobram 4 tábuas, e faltam 4. Testa-o com os quatro casos da fase 5. Pista: pensa no caso de 2 troncos, em que não sobra nenhuma tábua. Quantas faltam aí?
 
 ## Antes de terminares
 
 - [ ] O `inventario.py` pergunta quantos troncos tens e mostra o inventário, as tábuas, os baús e as tábuas que sobram.
-- [ ] A tabela de entradas e saídas, no caderno, tem os quatro casos, preenchidos antes de correr e marcados depois.
+- [ ] Correste os quatro casos da tabela de entradas e saídas da fase 5, e cada um deu o que calculaste antes de correr.
 - [ ] Sabes dizer de que tipo é `7`, `2.5` e `"7"`.
 - [ ] Sabes dizer o que fazem o `/`, o `//` e o `%`.
 - [ ] Consegues explicar, por palavras tuas, porque é que o `input` precisa do `int` antes de fazeres contas com o que a pessoa escreveu.
