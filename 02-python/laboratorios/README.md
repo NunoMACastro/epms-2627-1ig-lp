@@ -10,5 +10,6 @@ Um laboratório não é uma ficha de exercícios. No laboratório, aprendes a fa
 | --- | --- |
 | 01 Do algoritmo ao programa | [laboratório](01-do-algoritmo-ao-programa-laboratorio.md) |
 | 02 Dados e interação | [laboratório](02-dados-e-interacao-laboratorio.md) |
+| 03 Seleção | [laboratório](03-selecao-laboratorio.md) |
 
 ![Rodapé](../../imagens/rodape.png)

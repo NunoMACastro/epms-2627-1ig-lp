@@ -10,5 +10,6 @@ Uma ficha não é um laboratório. O [laboratório](../laboratorios/README.md) g
 | --- | --- |
 | 01 Do algoritmo ao programa | [ficha](01-do-algoritmo-ao-programa-exercicios.md) |
 | 02 Dados e interação | [ficha](02-dados-e-interacao-exercicios.md) |
+| 03 Seleção | [ficha](03-selecao-exercicios.md) |
 
 ![Rodapé](../../imagens/rodape.png)
