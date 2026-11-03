@@ -21,12 +21,13 @@ No tema anterior, os programas só escreviam texto fixo, sempre igual. A partir 
 11. Ler do teclado com `input`
 12. Converter um texto num número
 13. Juntar textos
-14. O dinheiro guarda-se em cêntimos
-15. Exemplo guiado: os bilhetes do torneio
-16. Erros frequentes
-17. Palavras novas deste guia
-18. Verificar o que aprendeste
-19. O que vem a seguir
+14. Partes de um texto: índices e cortes
+15. O dinheiro guarda-se em cêntimos
+16. Exemplo guiado: os bilhetes do torneio
+17. Erros frequentes
+18. Palavras novas deste guia
+19. Verificar o que aprendeste
+20. O que vem a seguir
 
 ## O que vais aprender
 
@@ -37,6 +38,7 @@ No fim deste guia, consegues:
 - escrever contas com os operadores do Python e prever o resultado, incluindo a divisão inteira e o resto;
 - usar as funções predefinidas `abs`, `round` e `int`, e calcular uma raiz quadrada;
 - ler um valor do teclado e convertê-lo no tipo certo antes de fazer contas com ele;
+- tirar uma parte de um texto, com os índices e os cortes;
 - guardar dinheiro em cêntimos e mostrá-lo em euros e cêntimos;
 - testar um programa com uma tabela de entradas e saídas.
 
@@ -379,6 +381,89 @@ TypeError: can only concatenate str (not "int") to str
 
 O nome do erro é `TypeError`, um erro de tipo. A mensagem quer dizer "só se pode juntar um texto a um texto, e não um `int`". Os sinais `~` e `^` marcam as duas partes da conta e o operador. Para juntar, converte-se o número em texto, com `str`: `"Tábuas: " + str(28)` dá `'Tábuas: 28'`.
 
+## Partes de um texto: índices e cortes
+
+No jogo, cada objeto do inventário tem um código, como `PED-015`. As três primeiras letras dizem o material, e os algarismos depois do hífen dizem o número do objeto. Para mostrar só o material, o programa precisa de uma parte do texto, e não do texto todo.
+
+Um texto é uma sequência de caracteres, uns a seguir aos outros. Um **carácter** é uma letra, um algarismo, um espaço ou um sinal. Cada carácter tem uma posição, e o número dessa posição chama-se **índice**. Em Python, os índices contam-se a partir do 0, e não do 1. No texto `"pedra"`, o `p` tem o índice 0, e o `a`, o último, tem o índice 4.
+
+Também se pode contar a partir do fim, com índices negativos. O último carácter tem o índice -1, o penúltimo tem o -2, e assim por diante. É útil quando queres o fim de um texto e não sabes quantos caracteres ele tem.
+
+| Carácter | `p` | `e` | `d` | `r` | `a` |
+| --- | --- | --- | --- | --- | --- |
+| Índice | 0 | 1 | 2 | 3 | 4 |
+| Índice negativo | -5 | -4 | -3 | -2 | -1 |
+
+Para tirar um carácter, escreve-se o índice entre parênteses retos, a seguir ao texto ou à variável. Antes de veres as respostas, prevê o resultado de cada linha, com a tabela à frente:
+
+```text
+>>> material = "pedra"
+>>> material[0]
+'p'
+>>> material[4]
+'a'
+>>> material[-1]
+'a'
+>>> material[-2]
+'r'
+```
+
+O resultado é sempre um texto, com um só carácter. `material[4]` e `material[-1]` dão o mesmo, porque são duas formas de dizer a última posição.
+
+Um índice que não existe faz parar o programa. O `"pedra"` tem cinco caracteres, com os índices de 0 a 4. Por isso, `material[5]` dá `IndexError: string index out of range`, isto é, "índice do texto fora do intervalo". É um erro de execução.
+
+Para tirar vários caracteres seguidos, faz-se um **corte**, a que em inglês se chama slicing. Escreve-se `texto[início:fim]`, com os dois índices separados por dois pontos. O corte começa no índice do início e vai até ao índice do fim menos um: o carácter do fim já não entra. Antes de veres as respostas, prevê:
+
+```text
+>>> material[0:3]
+'ped'
+>>> material[1:4]
+'edr'
+>>> material[:3]
+'ped'
+>>> material[2:]
+'dra'
+>>> material[-3:]
+'dra'
+```
+
+Em `material[0:3]`, entram os índices 0, 1 e 2, e o 3 fica de fora. Uma forma de confirmar é a conta do fim menos o início: 3 menos 0 dá 3 caracteres. Quando falta o início, o corte começa no princípio do texto. Quando falta o fim, vai até ao fim do texto. Por isso `material[2:]` dá tudo a partir do índice 2, e `material[-3:]` dá os três últimos caracteres.
+
+Ao contrário de um índice sozinho, um corte com um fim para lá do texto não dá erro. `material[2:10]` dá `'dra'`: o corte para no fim do texto.
+
+Um corte pode ter um terceiro número, o **passo**, que diz de quantos em quantos caracteres se avança: `texto[início:fim:passo]`. Sem ele, o passo é 1, e entram todos os caracteres do corte. Antes de veres as respostas, prevê o que dão estas duas linhas:
+
+```text
+>>> material[::2]
+'pda'
+>>> material[::-1]
+'ardep'
+```
+
+Na primeira, o corte vai do princípio ao fim, de dois em dois: os índices 0, 2 e 4. Na segunda, o passo é -1, e o corte anda para trás, do fim para o princípio: o texto aparece ao contrário. Com o passo negativo, os lugares vazios trocam de papel. Sem o início, o corte começa no fim do texto; sem o fim, vai até ao princípio.
+
+Com os cortes, o código dos objetos separa-se nas suas partes. Antes de veres o resultado, prevê o que este programa escreve quando a pessoa escreve `PED-015`:
+
+```python
+# codigo.py: separa as partes do código de um objeto do inventário.
+codigo = input("Código do objeto? ")
+# As três primeiras letras são o material; os algarismos começam depois do hífen.
+print("Material:", codigo[0:3])
+print("Número:", int(codigo[4:]))
+```
+
+O resultado, com `PED-015`:
+
+```text
+Código do objeto? PED-015
+Material: PED
+Número: 15
+```
+
+Leitura guiada: o código fica numa variável, como qualquer texto lido com o `input`. O primeiro `print` mostra o corte dos índices 0 a 2, as três letras. O hífen está no índice 3, e por isso o número começa no índice 4 e vai até ao fim. O corte `codigo[4:]` dá o texto `'015'`, e não um número. O `int` converte-o, e os zeros da esquerda desaparecem, como num número.
+
+O erro típico é esperar que o carácter do fim entre no corte. Quem quer as três primeiras letras e escreve `codigo[0:2]` fica só com duas, `'PE'`. Confirma sempre com a conta do fim menos o início.
+
 ## O dinheiro guarda-se em cêntimos
 
 Um bilhete custa 2,50 €. Parece natural guardá-lo como `2.5`. Antes de leres, prevê o que dá `0.1 + 0.2` na consola.
@@ -498,6 +583,10 @@ Aparece `NameError: name '...' is not defined`, com o nome de uma variável tua.
 - Função predefinida: um pedaço de programa que já vem com a linguagem, com um nome, pronto a usar.
 - Argumento: o valor que se dá a uma função, entre parênteses.
 - Converter: transformar um valor de um tipo noutro, como o texto `"7"` no número 7.
+- Carácter: uma letra, um algarismo, um espaço ou um sinal de um texto.
+- Índice: o número da posição de um carácter num texto, a contar do 0. Os índices negativos contam a partir do fim, e o último é o -1.
+- Corte: uma parte de um texto, escrita `texto[início:fim]`, que vai do índice do início até ao do fim menos um.
+- Passo: o terceiro número de um corte, que diz de quantos em quantos caracteres se avança; com -1, o corte anda para trás.
 - Cêntimos: a unidade em que se guarda o dinheiro num programa, num `int`, para as contas serem exatas.
 - Tabela de entradas e saídas: uma tabela com uma linha por caso de teste. Cada linha diz o que se escreve no teclado e o que deve aparecer.
 
@@ -520,8 +609,9 @@ Aparece `NameError: name '...' is not defined`, com o nome de uma variável tua.
 6. Quanto dão `3 + 6 / 3` e `(3 + 6) / 3`? Porque é que os dois resultados são `float`?
 7. Quanto dão `round(4.5)`, `round(5.5)` e `int(4.9)`?
 8. Um programa tem `vidas = input("Quantas vidas? ")` e, depois, `print(vidas * 2)`. A pessoa escreve 3. O que aparece, e porquê? Como se corrige?
-9. Porque é que o dinheiro se guarda em cêntimos, num `int`? Como se mostram 1205 cêntimos em euros e cêntimos?
-10. Para que serve a tabela de entradas e saídas, e porque é que se escreve antes de correr o programa?
+9. Com `mundo = "Aldeia"`, quanto dão `mundo[0]`, `mundo[-1]`, `mundo[1:4]` e `mundo[::-1]`? E o que acontece com `mundo[6]`?
+10. Porque é que o dinheiro se guarda em cêntimos, num `int`? Como se mostram 1205 cêntimos em euros e cêntimos?
+11. Para que serve a tabela de entradas e saídas, e porque é que se escreve antes de correr o programa?
 
 ## O que vem a seguir
 
