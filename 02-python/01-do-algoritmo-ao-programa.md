@@ -175,7 +175,7 @@ Quando carregas em Enter, acontece isto, por esta ordem:
 4. Executa as instruções uma a uma, de cima para baixo: salta o comentário, escreve a primeira linha e escreve a segunda.
 5. Quando acaba a última instrução, o programa termina, e o terminal fica outra vez à espera de um comando.
 
-O nome do comando muda de computador para computador. No Windows, é quase sempre `python`. Se o Windows disser que não o conhece, ou se abrir a Microsoft Store, usa-se `py`, que faz o mesmo. No macOS e no Linux, é `python3`. Quando descobrires qual funciona no teu computador, escreve-o no caderno. Neste guia, escreve-se sempre `python`, e tu usas o teu.
+O nome do comando muda de computador para computador. No Windows, é quase sempre `python`. Se o Windows disser que não o conhece, ou se abrir a Microsoft Store, usa-se `py`, que faz o mesmo. No macOS e no Linux, é `python3`. Quando descobrires qual funciona no teu computador, é esse que usas sempre. Fica guardado no registo da execução, que vais ver na secção "O registo da execução". Neste guia, escreve-se sempre `python`, e tu usas o teu.
 
 Antes de correr, guarda sempre o ficheiro, com Ctrl+S, ou Cmd+S no macOS. O interpretador lê o ficheiro que está guardado no disco, e não o que vês no editor. No VS Code, uma bola cheia no separador do ficheiro, no lugar do X, quer dizer que há alterações por guardar.
 
@@ -471,6 +471,8 @@ No guia 05 da algoritmia, aprendeste a depurar com método, em cinco passos, qua
 | 4. Corrigir a causa | Mudas só o que causou o erro, uma coisa de cada vez, e guardas |
 | 5. Voltar a testar tudo | Corres outra vez e comparas todas as linhas com o resultado esperado, e não só a que estava errada |
 
+O que escreves nos passos 1 e 2 fica num comentário no fim do ficheiro do programa, com um `#` no início de cada linha. Fica no fim para as linhas do programa não mudarem de número, e para a mensagem de erro continuar a apontar a mesma linha.
+
 O passo 1 tem agora uma pergunta a mais: que tipo de erro é? A resposta diz-te onde procurar. Um erro de sintaxe ou de execução tem uma mensagem a apontar uma linha. Um erro de lógica só se vê comparando com o resultado esperado.
 
 O que o método evita é mudar linhas ao acaso até o programa parecer certo. Uma mudança feita à sorte pode esconder o erro sem o corrigir, ou criar outro.
@@ -487,6 +489,8 @@ Por isso, quando corres um programa num computador pela primeira vez, fazes um *
 - o programa que correste;
 - o que apareceu, comparado com o resultado esperado;
 - os erros que encontraste, com o tipo de cada um e como os corrigiste.
+
+O registo escreve-se num comentário no fim do programa que correste, com um `#` no início de cada linha, para o Python não o executar. Como na depuração, fica no fim para as linhas do programa não mudarem de número.
 
 Por exemplo:
 
@@ -585,11 +589,11 @@ O que aparece agora é igual, linha a linha, ao resultado esperado do passo 1. O
 
 ### Passo 6: O registo da execução
 
-No caderno, fica o registo da execução. Tem a data, o computador, o comando, a versão do Python e o programa `regras.py`. Tem também o resultado, igual ao esperado, e o erro encontrado. Esse erro foi uma linha em falta, um erro de lógica, encontrado ao comparar com o resultado esperado.
+O registo da execução fica num comentário no fim do `regras.py`. Tem a data, o computador, o comando, a versão do Python e o programa `regras.py`. Tem também o resultado, igual ao esperado, e o erro encontrado. Esse erro foi uma linha em falta, um erro de lógica, encontrado ao comparar com o resultado esperado.
 
 ### Passo 7: Manutenção
 
-Uma semana depois, o colega muda o jogo: agora, ganha quem vencer duas de três jogadas. O programa já está em uso, e mudá-lo é manutenção. Volta-se à análise e acrescenta-se ao resultado esperado uma linha, no fim: "Ganha quem vencer duas de três jogadas.". No programa, acrescenta-se um `print` no fim. Depois, testa-se tudo outra vez, as seis linhas, e atualiza-se o registo.
+Uma semana depois, o colega muda o jogo: agora, ganha quem vencer duas de três jogadas. O programa já está em uso, e mudá-lo é manutenção. Volta-se à análise e acrescenta-se ao resultado esperado uma linha, no fim: "Ganha quem vencer duas de três jogadas.". No programa, acrescenta-se um `print` a seguir ao último, antes do comentário do registo. Depois, testa-se tudo outra vez, as seis linhas, e atualiza-se o registo.
 
 Repara no caminho completo: análise, desenho, implementação, testes, com a correção do erro encontrado, e manutenção. O erro só se encontrou porque o resultado esperado estava escrito antes de correr o programa.
 
