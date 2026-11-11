@@ -2,34 +2,33 @@
 
 # Ficha de exercícios: Do algoritmo ao programa
 
-Ficha do tema Do algoritmo ao programa, do módulo Desenvolver programas em linguagem estruturada. Praticas a passagem de um algoritmo para Python, a previsão do que um programa escreve e o reconhecimento dos três tipos de erro. Praticas também a escolha da ferramenta para cada tarefa. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
-
-## O que precisas de saber
-
-O [guia do tema](../01-do-algoritmo-ao-programa.md) e o [laboratório](../laboratorios/01-do-algoritmo-ao-programa-laboratorio.md).
-
-## Como trabalhar
-
-Faz os exercícios pela ordem. Os exercícios 1 a 6 são obrigatórios. O desafio opcional e o "Para ires mais longe" são para quem acabar.
-
-Trabalha na tua pasta `lp-python`, no VS Code, e usa o comando do teu registo da execução. Uma resposta escrita fica num comentário, com `#`, como cada exercício indica. Antes de correres um programa, pensa no resultado que esperas, tirado do enunciado, e não do que o programa mostra. É a previsão que mostra o que já percebeste.
+Praticas a passagem de um algoritmo para Python, os três tipos de erro e a depuração com método. Praticas também as fases do ciclo de vida e a escolha da ferramenta. Os exercícios 1 a 6 são obrigatórios. Trabalha na tua pasta `lp-python`, com o comando do teu registo da execução, e escreve as respostas em comentários, com `#`. Para rever: o [guia do tema](../01-do-algoritmo-ao-programa.md) e o [laboratório](../laboratorios/01-do-algoritmo-ao-programa-laboratorio.md).
 
 ## Exercício 1: Prever o ecrã
 
-Este programa mostra o placar de um jogo de basquetebol da escola:
+Este programa mostra o marcador de um jogo de basquetebol da escola:
 
 ```python
-# placar.py: o placar de um jogo de basquetebol da escola.
+# marcador.py: o marcador de um jogo de basquetebol da escola.
 print("JOGO #3")
 print("Casa contra visitantes")
-print("Placar: 0 a 0")
+print("Marcador: 0 a 0")
 ```
 
-Sem correres o programa, prevê o que aparece no ecrã, linha a linha. Depois cria o ficheiro `placar.py` na tua pasta, com este conteúdo, e confirma. Para cada linha do ecrã em que te enganaste, explica numa frase porque é que o ecrã é assim. Escreve a frase num comentário, no fim da linha do programa a que diz respeito.
+Sem correres o programa, prevê o que aparece no ecrã, linha a linha. Depois cria o `marcador.py` com este conteúdo e confirma. Para cada linha do ecrã em que te enganaste, explica porquê num comentário, no fim da linha do programa a que diz respeito. Se acertaste em todas, diz isso num comentário.
+
+Rever: [Do `Escreve:` ao `print`](../01-do-algoritmo-ao-programa.md#do-escreve-ao-print).
+
+<details>
+<summary>Pista</summary>
+
+Lê cada linha como o interpretador a leria, de cima para baixo.
+
+</details>
 
 ## Exercício 2: Do pseudocódigo ao programa
 
-Um colega escreveu o algoritmo do menu de um jogo. Na segunda linha, em vez de três `Escreve:`, escreveu uma frase clara, como se aceitava na algoritmia:
+Um colega escreveu o algoritmo do menu de um jogo. Na segunda linha, escreveu uma frase clara, como se aceitava na algoritmia:
 
 ```text
 Escreve: "MENU PRINCIPAL"
@@ -37,7 +36,16 @@ Escreve as três opções, numeradas de 1 a 3, uma por linha: Jogar, Ver as regr
 Escreve: "Escolhe uma opção."
 ```
 
-Passa o algoritmo para Python, no ficheiro `menu.py`, com o comentário no início. O programa escreve o ecrã que o algoritmo descreve, com o texto exato de cada linha e as três opções numeradas, uma por linha. A forma da numeração decides tu.
+Passa o algoritmo para Python, no ficheiro `menu.py`, com o comentário no início. O programa escreve o ecrã que o algoritmo descreve, com as três opções numeradas, uma por linha. A forma da numeração decides tu.
+
+Rever: [Do `Escreve:` ao `print`](../01-do-algoritmo-ao-programa.md#do-escreve-ao-print).
+
+<details>
+<summary>Pista</summary>
+
+Decide primeiro o resultado esperado, linha a linha.
+
+</details>
 
 ## Exercício 3: Que tipo de erro?
 
@@ -49,13 +57,7 @@ Matraquilhos
 Equipas de dois jogadores.
 ```
 
-Fez três versões do programa, e nenhuma dá o resultado esperado. Para cada versão, tens o programa e o que apareceu no terminal. Responde a três perguntas sobre cada versão:
-
-- que tipo de erro é: de sintaxe, de execução ou de lógica;
-- em que linha está o erro, e como o soubeste;
-- como se corrige.
-
-Escreve as respostas num ficheiro `erros.py`, só com comentários, com uma parte para cada versão.
+Fez três versões, e nenhuma dá o resultado esperado. Para cada uma, diz que tipo de erro é, em que linha está e como o soubeste, e como se corrige. Escreve as respostas num ficheiro `erros.py`, só com comentários, com uma parte para cada versão.
 
 Versão A:
 
@@ -105,9 +107,18 @@ CAMPEONATO DA ESCOLA
 Equipas de dois jogadores.
 ```
 
+Rever: [Os três tipos de erro](../01-do-algoritmo-ao-programa.md#os-três-tipos-de-erro).
+
+<details>
+<summary>Pista</summary>
+
+Para cada versão, olha primeiro para o que apareceu. Correu alguma linha? Há mensagem? Depois lê a última linha da mensagem, se a houver: `never closed` quer dizer "nunca foi fechado".
+
+</details>
+
 ## Exercício 4: Encontrar e corrigir o erro com método
 
-Este programa devia mostrar o horário das finais de um torneio de jogos de computador. Cria o ficheiro `horario.py`, copia para ele este conteúdo, exatamente como está, e corre-o:
+Este programa devia mostrar o horário das finais de um torneio de jogos de computador. Cria o `horario.py`, copia para ele este conteúdo, exatamente como está, e corre-o:
 
 ```python fragment erro de propósito: o exercício pede que o aluno o encontre
 # horario.py: o horário das finais de um torneio de jogos de computador.
@@ -126,15 +137,16 @@ Final às 16h00.
 Entrega dos prémios às 17h00.
 ```
 
-Corrige-o até dar o resultado esperado. Depura com método, como no guia 05 da algoritmia, e escreve os cinco passos num comentário no fim do `horario.py`:
+Corrige-o até dar o resultado esperado, depurando com método. Escreve os cinco passos num comentário no fim do `horario.py`. São o esperado, o obtido e o tipo de erro; a hipótese; o que a confirmou; o que mudaste; e o que apareceu depois.
 
-1. Observar e reproduzir: o resultado esperado, o que apareceu e o tipo de erro.
-2. Formular uma hipótese: uma frase com a causa possível.
-3. Verificar a hipótese: o que leste na mensagem e no programa que a confirma.
-4. Corrigir a causa: o que mudaste, e em que linha.
-5. Voltar a testar tudo: o que apareceu depois da correção, comparado com o resultado esperado.
+Rever: [Depurar com método, agora no computador](../01-do-algoritmo-ao-programa.md#depurar-com-método-agora-no-computador), [As regras de escrita do Python](../01-do-algoritmo-ao-programa.md#as-regras-de-escrita-do-python) e [Os três tipos de erro](../01-do-algoritmo-ao-programa.md#os-três-tipos-de-erro).
 
-O comentário fica no fim para as linhas do programa não mudarem de número, e a mensagem continuar a apontar a mesma linha.
+<details>
+<summary>Pista</summary>
+
+Traduz as palavras da última linha da mensagem: `unexpected` quer dizer inesperado, e `indent` quer dizer indentação.
+
+</details>
 
 ## Exercício 5: As fases do ciclo de vida
 
@@ -147,30 +159,38 @@ A Rita fez o ecrã de abertura de um jogo de memória, que um colega lhe pediu. 
 - E. Um mês depois, acrescentou uma regra nova que o colega lhe pediu.
 - F. Viu que faltava uma linha e acrescentou o `print` que faltava.
 
-Responde num ficheiro `fases.py`, só com comentários, uma letra por linha:
+Num ficheiro `fases.py`, só com comentários, escreve as letras pela ordem em que a Rita as fez, uma por linha. Ao lado de cada letra, escreve a fase do ciclo de vida a que pertence.
 
-1. Escreve as letras pela ordem em que a Rita as fez.
-2. Ao lado de cada letra, escreve a fase do ciclo de vida a que pertence: análise, desenho, implementação, testes ou manutenção.
+Rever: [O ciclo de vida de um programa](../01-do-algoritmo-ao-programa.md#o-ciclo-de-vida-de-um-programa).
+
+<details>
+<summary>Pista</summary>
+
+Começa pela coisa que se faz antes de haver código. Depois procura a que se faz quando o programa já está em uso.
+
+</details>
 
 ## Exercício 6: Onde se programa, certo ou errado
 
-Quatro colegas disseram estas frases na sala. Para cada uma, diz se está certa ou errada, e justifica numa ou duas frases. Se estiver errada, diz também o que farias tu. Escreve as respostas num ficheiro `ferramentas.py`, só com comentários, uma parte para cada frase.
+Quatro colegas disseram estas frases na sala. Para cada uma, diz se está certa ou errada, e porquê, numa ou duas frases. Se estiver errada, diz o que farias tu. Escreve as respostas num ficheiro `ferramentas.py`, só com comentários.
 
 1. A Beatriz: "Abri o meu `ola.py` no Bloco de Notas e as cores desapareceram todas. O ficheiro estragou-se."
-2. A Inês: "Copiei para o VS Code um programa de uma apresentação que encontrei na internet. As letras estão todas iguais, por isso tem de correr."
+2. A Inês: "Copiei para o VS Code um programa de uma apresentação que encontrei na internet. O texto ficou igual ao da apresentação, letra a letra, por isso tem de correr."
 3. O Rui: "Escrevi na consola do Python as cinco linhas do ecrã de abertura do meu jogo, e funcionaram todas. Amanhã abro a consola outra vez e mostro-as ao professor."
-4. O Tomás: "O VS Code sublinhou o `Print` antes de eu correr o programa. Por isso, é um erro de sintaxe."
+4. O Tomás: "O VS Code sublinhou o `Print` da linha 3 do meu programa. Por isso, quando o correr, não vai aparecer nenhuma linha."
 
-## Apoio
+Rever: [Do editor de texto ao editor de código](../01-do-algoritmo-ao-programa.md#do-editor-de-texto-ao-editor-de-código), [A consola do Python](../01-do-algoritmo-ao-programa.md#a-consola-do-python) e [Os três tipos de erro](../01-do-algoritmo-ao-programa.md#os-três-tipos-de-erro).
 
-- Exercício 1: relê, no guia, a regra dos comentários, e aplica-a a cada linha, uma de cada vez.
-- Exercício 2: o programa tem tantos `print` quantas linhas o ecrã tem. Decide primeiro o resultado esperado, e só depois escreve o código.
-- Exercício 3: para cada versão, olha primeiro para o que apareceu. Correu alguma linha? Há mensagem? Depois, lê a última linha da mensagem, se a houver.
-- Exercício 4: traduz as palavras da última linha da mensagem: `unexpected` quer dizer inesperado, e `indent` quer dizer indentação. Depois relê as regras da sintaxe, no guia.
-- Exercício 5: começa pela coisa que se faz antes de haver código. Depois procura a que se faz quando o programa já está em uso.
-- Exercício 6: em cada frase, pergunta-te que ferramenta está em causa e o que ela faz, e o que não faz. Depois relê a secção do guia sobre essa ferramenta.
+<details>
+<summary>Pista</summary>
 
-## Desafio opcional
+Em cada frase, pergunta-te que ferramenta está em causa, o que ela faz e o que não faz.
+
+</details>
+
+## Desafios
+
+### Desafio 1: Dois erros de tipos diferentes
 
 Este programa tem dois erros, de tipos diferentes:
 
@@ -192,31 +212,19 @@ Regador a partir de 100 moedas.
 Enxada a partir de 50 moedas.
 ```
 
-Sem o correres, prevê o que aparece no ecrã com o programa assim. Depois copia-o para um ficheiro `loja.py`, sem o escreveres à mão, porque o VS Code fecha sozinho as aspas e os parênteses. Corrige-o até dar o resultado esperado, um erro de cada vez. Num comentário no fim do `loja.py`, explica, numa ou duas frases, porque é que o segundo erro só se vê depois de corrigires o primeiro.
+Sem o correres, prevê o que aparece no ecrã. Depois copia-o para um ficheiro `loja.py`, sem o escreveres à mão, porque o VS Code fecha sozinho as aspas e os parênteses. Corrige-o, um erro de cada vez. Num comentário no fim, explica porque é que o segundo erro só se vê depois de corrigires o primeiro.
 
-## Para ires mais longe
+### Desafio 2: Aspas simples e aspas dentro do texto
 
-Os textos deste tema estão todos entre aspas duplas. Na consola do Python, descobre:
-
-1. se o Python aceita um texto entre aspas simples, como `print('Olá')`;
-2. como se escreve um `print` que mostre esta frase, com as aspas incluídas: `O árbitro gritou "golo"`.
-
-Escreve o que experimentaste e o que aconteceu em cada tentativa, também nas que deram erro, num ficheiro `aspas.py`, só com comentários.
+Na consola do Python, descobre se o Python aceita um texto entre aspas simples, como `print('Olá')`. Descobre também como se escreve um `print` que mostre esta frase, com as aspas incluídas: `O árbitro gritou "golo"`. Escreve o que experimentaste e o que aconteceu, também nas tentativas que deram erro, num ficheiro `aspas.py`, só com comentários.
 
 ## Critérios de conclusão
 
-- O `placar.py` tem um comentário com a explicação de cada linha do ecrã em que te enganaste.
-- O `menu.py` do exercício 2 corre e escreve o menu, com as três opções numeradas, uma por linha.
-- O `erros.py` tem, para cada versão do exercício 3, o tipo de erro, a linha, a forma como o soubeste e a correção.
-- O `horario.py` corrigido dá o resultado esperado, e o comentário do fim tem os cinco passos de depurar com método.
-- O `fases.py` tem as seis letras do exercício 5 por ordem, cada uma com a sua fase.
-- O `ferramentas.py` tem, para cada frase do exercício 6, se está certa ou errada, a justificação e, quando é preciso, o que farias tu.
-
-## Autoavaliação
-
-1. Que tipo de erro te custou mais a reconhecer, e porquê?
-2. Em que exercício a tua previsão falhou? O que percebeste com isso?
-3. Se tivesses de explicar a um colega a diferença entre o terminal e a consola do Python, o que lhe dirias?
-4. Que ferramenta do VS Code te ajudou mais nesta ficha, e em que exercício?
+- O `marcador.py` tem, no fim de cada linha em que te enganaste, um comentário com a explicação, ou diz que acertaste em todas.
+- O `menu.py` corre e escreve o menu, com as três opções numeradas, uma por linha.
+- O `erros.py` tem, para cada versão do exercício 3, o tipo de erro, a linha, como o soubeste e a correção.
+- O `horario.py` corrigido dá o resultado esperado, com os cinco passos da depuração num comentário no fim.
+- O `fases.py` tem as seis letras por ordem, cada uma com a sua fase.
+- O `ferramentas.py` tem, para cada frase, se está certa ou errada e porquê.
 
 ![Rodapé](../../imagens/rodape.png)

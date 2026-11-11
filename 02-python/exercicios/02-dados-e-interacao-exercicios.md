@@ -2,35 +2,34 @@
 
 # Ficha de exercícios: Dados e interação
 
-Ficha do tema Dados e interação, do módulo Desenvolver programas em linguagem estruturada. Praticas as variáveis, as contas, a leitura do teclado com a conversão e o dinheiro em cêntimos. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
-
-## O que precisas de saber
-
-O [guia do tema](../02-dados-e-interacao.md) e o [laboratório](../laboratorios/02-dados-e-interacao-laboratorio.md).
-
-## Como trabalhar
-
-Faz os exercícios pela ordem. Os exercícios 1 a 5 são obrigatórios. O desafio opcional e o "Para ires mais longe" são para quem acabar.
-
-Trabalha na tua pasta `lp-python`, no VS Code, com o teu comando. Cada programa começa por um comentário que diz o que ele faz, e as regras fixas ficam em constantes, com o nome em maiúsculas. Uma resposta escrita fica num comentário, com `#`, como cada exercício indica. Antes de correres um programa, pensa no resultado que esperas, tirado do enunciado, e não do que o programa mostra.
+Praticas as variáveis, as contas, a leitura do teclado com a conversão e o dinheiro em cêntimos. Os exercícios 1 a 4 são obrigatórios. Guarda os ficheiros na tua pasta `lp-python`. Cada programa começa por um comentário que diz o que faz, e as regras fixas, como os 60 minutos de uma hora, ficam em constantes. Antes de correres, calcula à mão o resultado de cada caso. Uma resposta escrita fica num comentário, com `#`. Para rever: o [guia do tema](../02-dados-e-interacao.md) e o [laboratório](../laboratorios/02-dados-e-interacao-laboratorio.md).
 
 ## Exercício 1: Prever na consola
 
-Prevê o resultado de cada linha, como a consola do Python o mostraria, e só depois confirma-o na consola. Para cada linha em que te enganaste, explica numa frase o que o Python fez. Escreve as frases num ficheiro `prever_na_consola.py`, só com comentários, um por linha.
+Prevê o resultado de cada linha, como a consola do Python o mostraria, e confirma-o na consola. Para cada linha em que te enganaste, explica numa frase o que o Python fez. Escreve as frases num ficheiro `prever_na_consola.py`, só com comentários, um por linha. Se acertaste em todas, escreve-o num comentário.
 
 ```text
 >>> 20 // 6
 >>> 20 % 6
 >>> 20 / 4
 >>> 9 % 3
->>> 3 + 4 * 2
+>>> 7 // 2 * 2
 >>> abs(3 - 10)
 >>> type(20 / 4)
 ```
 
+Rever: [Os tipos dos valores e as contas](../02-dados-e-interacao.md#os-tipos-dos-valores-e-as-contas) e [Funções predefinidas](../02-dados-e-interacao.md#funções-predefinidas).
+
+<details>
+<summary>Pista</summary>
+
+Em cada linha, pergunta-te primeiro se a conta dá um `int` ou um `float`.
+
+</details>
+
 ## Exercício 2: O tempo de jogo
 
-O jogo regista em minutos o tempo de cada sessão. O jogador quer saber quanto jogou em duas sessões seguidas, em horas e minutos. Escreve o programa `tempo.py`. O programa pergunta os minutos de cada sessão e escreve o tempo das duas juntas em horas e minutos. Com 70 e 65 minutos, por exemplo, escreve:
+O jogo regista em minutos o tempo de cada sessão. Escreve o programa `tempo.py`, que pergunta os minutos de duas sessões seguidas e escreve o tempo das duas juntas em horas e minutos. Com 70 e 65 minutos, escreve:
 
 ```text
 Minutos da primeira sessão? 70
@@ -38,19 +37,20 @@ Minutos da segunda sessão? 65
 Jogaste 2 horas e 15 minutos
 ```
 
-Por agora, o programa escreve sempre "horas", mesmo quando é só uma, e `1 horas` aceita-se.
+O programa escreve sempre "horas", mesmo quando é só uma. Experimenta-o também com 30 e 29, com 30 e 30, e com 0 e 0 minutos.
 
-Experimenta-o também com 30 e 29, com 30 e 30, e com 0 e 0 minutos.
+Rever: [A divisão inteira e o resto](../02-dados-e-interacao.md#a-divisão-inteira-e-o-resto).
+
+<details>
+<summary>Pista</summary>
+
+Começa pelas contas que farias à mão no caso de 70 e 65 minutos. Repara que contas fizeste, e por que ordem.
+
+</details>
 
 ## Exercício 3: Que erro é este?
 
-Três colegas escreveram programas que leem um valor do teclado. Nenhum dá o resultado esperado. Para cada um, tens o programa, o que a pessoa escreveu e o que apareceu. Responde a três perguntas sobre cada programa:
-
-- que tipo de erro é: de sintaxe, de execução ou de lógica;
-- qual é a causa;
-- como se corrige, no programa ou no que se escreve no teclado.
-
-Escreve as respostas num ficheiro `que_erro.py`, só com comentários, com uma parte para cada programa.
+Três colegas escreveram programas que leem um valor do teclado, e nenhum dá o resultado esperado. Para cada um, diz que tipo de erro é: de sintaxe, de execução ou de lógica. Diz também qual é a causa e como se corrige, no programa ou no que se escreve no teclado. Escreve as respostas num ficheiro `que_erro.py`, só com comentários, com uma parte para cada programa.
 
 Programa A. Devia dizer a altura do salto do jogador em centímetros. A pessoa escreveu `2.5`.
 
@@ -101,9 +101,18 @@ Quantos jogadores? 18
 Equipas: 2
 ```
 
+Rever: [Quando o texto não é um número](../02-dados-e-interacao.md#quando-o-texto-não-é-um-número), [A divisão inteira e o resto](../02-dados-e-interacao.md#a-divisão-inteira-e-o-resto) e [Os três tipos de erro](../01-do-algoritmo-ao-programa.md#os-três-tipos-de-erro).
+
+<details>
+<summary>Pista</summary>
+
+Lê a última linha de cada mensagem e traduz as palavras. No programa C, que não tem mensagem, compara o resultado com o esperado e procura a conta que o produziu.
+
+</details>
+
 ## Exercício 4: A conta do jogo
 
-Alguns amigos querem comprar juntos um jogo que custa 20 € e dividir a conta em partes iguais. Escreve o programa `conta.py`. O programa pergunta quantos amigos pagam e escreve quanto paga cada um, em euros e cêntimos. Escreve também quantos cêntimos ficam por dividir. Com 3 amigos, por exemplo, escreve:
+Alguns amigos querem comprar juntos um jogo que custa 20 € e dividir a conta em partes iguais. Escreve o programa `conta.py`, que pergunta quantos amigos pagam, escreve quanto paga cada um, em euros e cêntimos, e diz quantos cêntimos ficam por dividir. Com 3 amigos, escreve:
 
 ```text
 Quantos amigos pagam? 3
@@ -111,48 +120,57 @@ Cada um paga 6 euros e 66 cêntimos
 Ficam por dividir 2 cêntimos
 ```
 
-O dinheiro guarda-se em cêntimos, num `int`. Experimenta-o também com 1 e com 4 amigos.
+O dinheiro guarda-se em cêntimos, num `int`. Experimenta-o também com 1 e com 7 amigos.
 
-## Exercício 5: A média das estrelas
+Rever: [O dinheiro guarda-se em cêntimos](../02-dados-e-interacao.md#o-dinheiro-guarda-se-em-cêntimos).
 
-No fim de cada nível, o jogo dá de 1 a 5 estrelas. Mostra também a média de dois níveis, arredondada ao inteiro mais próximo como na escola, com as meias para cima.
+<details>
+<summary>Pista</summary>
 
-Escreve o programa `estrelas.py`, que pergunta as estrelas dos dois níveis e escreve a média arredondada com `round`. Experimenta-o com 4 e 5, com 3 e 4, com 3 e 5, e com 1 e 2.
+Quantas divisões há neste problema, e por que ordem se fazem?
 
-Se algum caso não der o arredondamento da escola, explica porquê num comentário, junto da linha onde está a causa. Depois muda o programa para dar o resultado certo nos quatro casos.
+</details>
 
-## Apoio
+## Desafios
 
-- Exercício 1: em cada linha, pergunta-te primeiro se a conta dá um `int` ou um `float`.
-- Exercício 2: começa pelas contas que farias à mão no caso de 70 e 65 minutos. Repara que contas fizeste, e por que ordem.
-- Exercício 3: lê a última linha de cada mensagem e traduz as palavras. No programa C, que não tem mensagem, compara o resultado com o esperado e procura a conta que o produziu.
-- Exercício 4: quantas divisões há neste problema, e por que ordem se fazem?
-- Exercício 5: compara a média do caso que falhou com a dos casos que passaram. O que tem ela de diferente?
+### Desafio 1: A média das estrelas
 
-## Desafio opcional
+No fim de cada nível, o jogo dá de 1 a 5 estrelas. O jogo mostra também a média de dois níveis, arredondada ao inteiro mais próximo como na escola, com as meias para cima.
 
-Um jogo mostra quanto falta para o fim de um evento em horas, minutos e segundos, mas guarda esse tempo só em segundos. Escreve o programa `cronometro.py`, que pergunta o tempo em segundos e o escreve nas três unidades. Com 3725 segundos, escreve `1 horas, 2 minutos e 5 segundos`. Testa-o com pelo menos quatro casos escolhidos por ti. Num comentário no início do script, escreve a tabela de entradas e saídas desses casos, com a razão de cada um.
+Escreve o programa `estrelas.py`, que pergunta as estrelas dos dois níveis e escreve a média arredondada com `round`. Com 3 e 4, escreve:
 
-## Para ires mais longe
+```text
+Estrelas do primeiro nível? 3
+Estrelas do segundo nível? 4
+Média: 4 estrelas
+```
 
-O `round` aceita um segundo argumento, separado do primeiro por uma vírgula. Na consola, experimenta `round(3.14159, 2)`, `round(3.14159, 1)` e `round(2.71828, 3)`. Descobre o que faz o segundo argumento e explica-o por palavras tuas, com um exemplo.
+Experimenta-o também com 4 e 5, com 3 e 5, e com 1 e 2.
 
-Depois responde: o dinheiro guarda-se em cêntimos, num `int`. Porque é que não se usa o `round` com duas casas para as contas do dinheiro?
+Se algum caso não der o arredondamento da escola, explica porquê num comentário no fim do ficheiro. Depois muda o programa para dar o resultado certo nos quatro casos.
 
-Escreve as duas respostas num ficheiro `round_com_casas.py`, só com comentários.
+Rever: [O `round` dá o inteiro mais próximo](../02-dados-e-interacao.md#o-round-dá-o-inteiro-mais-próximo) e [A ordem das contas é a da matemática](../02-dados-e-interacao.md#a-ordem-das-contas-é-a-da-matemática).
+
+<details>
+<summary>Pista</summary>
+
+Compara a média do caso que falhou com a dos casos que passaram. O que tem ela de diferente?
+
+</details>
+
+### Desafio 2: O tempo do evento
+
+Um jogo mostra quanto falta para o fim de um evento em horas, minutos e segundos, mas guarda esse tempo só em segundos. Escreve o programa `cronometro.py`, que pergunta o tempo em segundos e o escreve nas três unidades. Com 3725 segundos, escreve `1 horas, 2 minutos e 5 segundos`. Testa-o com pelo menos quatro casos escolhidos por ti. Num comentário no fim do ficheiro, escreve a tabela de entradas e saídas desses casos, com a razão de cada um.
+
+### Desafio 3: O `round` com casas decimais
+
+O `round` aceita um segundo argumento, separado do primeiro por uma vírgula. Na consola, experimenta `round(3.14159, 2)`, `round(3.14159, 1)` e `round(2.71828, 3)`. Descobre o que faz o segundo argumento e explica-o, com um exemplo. Depois responde: o dinheiro guarda-se em cêntimos, num `int`; porque é que não se usa o `round` com duas casas para as contas do dinheiro? Escreve as duas respostas num ficheiro `round_com_casas.py`, só com comentários.
 
 ## Critérios de conclusão
 
 - O `prever_na_consola.py` tem uma frase para cada linha do exercício 1 em que te enganaste.
 - O `tempo.py` dá o resultado certo nos quatro casos do enunciado.
 - O `que_erro.py` tem, para cada programa do exercício 3, o tipo de erro, a causa e a correção.
-- O `conta.py` usa só cêntimos nas contas e dá o resultado esperado nos três casos.
-- O `estrelas.py` corrigido arredonda as meias para cima e dá o resultado certo nos quatro casos. Um comentário, junto da linha da causa, explica o caso que falhava.
-
-## Autoavaliação
-
-1. Em que exercício te esqueceste da conversão, ou estiveste perto de te esquecer?
-2. Qual das três divisões, `/`, `//` ou `%`, te custa mais a escolher? Dá um exemplo de quando usarias cada uma.
-3. Porque é que vale a pena ter, numa tabela de entradas e saídas, um caso de fronteira, como os 60 minutos do exercício 2?
+- O `conta.py` usa só cêntimos nas contas e dá o resultado certo nos três casos.
 
 ![Rodapé](../../imagens/rodape.png)

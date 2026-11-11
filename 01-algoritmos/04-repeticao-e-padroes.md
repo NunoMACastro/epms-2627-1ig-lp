@@ -2,86 +2,40 @@
 
 # Repetição e padrões
 
-Módulo Desenvolver algoritmos. Este guia explica como se escreve um algoritmo que repete instruções, e como se controla quantas vezes as repete. Explica também cinco padrões que vais usar em quase todos os algoritmos daqui para a frente. E explica os arrays, que guardam muitos valores numa só variável. Lês o guia ao teu ritmo, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há a [ficha de exercícios](exercicios/04-repeticao-e-padroes-exercicios.md) deste tema.
+Neste guia, os algoritmos passam a repetir instruções. Escreves ciclos com o `Enquanto` e com o `Para`, e segues cada um numa tabela de iterações. Aprendes também cinco padrões que vais usar em quase todos os algoritmos. No fim, guardas vários valores num array e percorres esse array. Trabalhas em papel.
 
-Até agora, cada instrução dos teus algoritmos executava-se uma vez, ou nenhuma. Neste tema, a mesma instrução passa a poder executar-se muitas vezes seguidas. Há muitas ideias novas, e por isso a teoria é longa. O professor dá-a por partes, nas aulas, com traces no quadro, e o guia fica contigo para a releres com calma. Cada secção explica a mesma ideia por mais do que um caminho.
+Usa a atribuição e a tabela de trace do tema 02, e a seleção e os intervalos do tema 03. Rever: [Atribuição](02-pseudocodigo.md#atribuição-dar-um-valor-não-é-perguntar-se-é-igual), [A tabela de trace](02-pseudocodigo.md#a-tabela-de-trace), [Seleção simples](03-decisoes-e-validacao.md#seleção-simples) e [O contrário de um intervalo](03-decisoes-e-validacao.md#o-contrário-de-um-intervalo). Para praticar: [ficha de exercícios](exercicios/04-repeticao-e-padroes-exercicios.md).
 
 ## Neste guia
 
-1. O que vais aprender
-2. O que já sabes e vais usar
-3. A mesma instrução cem vezes
-4. Um ciclo volta atrás e pergunta outra vez
-5. Enquanto: repetir enquanto a condição for verdadeira
-6. A indentação mostra o que está dentro do ciclo
-7. As três peças de um ciclo
-8. O trace linha a linha do primeiro ciclo
-9. A tabela de iterações
-10. O ciclo que nunca começa
-11. O ciclo que nunca acaba
-12. Para: a forma curta do ciclo contado
-13. Padrão contador
-14. Padrão totalizador
-15. Padrão sentinela
-16. Padrão validação repetida
-17. Escolher entre Enquanto e Para
-18. Arrays: muitos valores numa só variável
-19. Percorrer um array com o índice
-20. Percorrer um array com o para cada
-21. O para cada não muda o array
-22. Padrão flag
-23. Quando já estiveres à vontade: o Para com as três peças à vista
-24. Exemplo guiado: contar pedidos válidos e totalizar unidades
-25. Erros frequentes
-26. Palavras novas deste guia
-27. Verificar o que aprendeste
-28. O que vem a seguir
-29. Para saber mais
-
-## O que vais aprender
-
-No fim deste guia, consegues:
-
-- escrever um ciclo `Enquanto` com as suas três peças, a inicialização, a condição e a atualização, e explicar para que serve cada uma;
-- mostrar, pela indentação, que instruções estão dentro do ciclo e quais estão fora;
-- explicar o que muda quando uma instrução passa de dentro para fora do ciclo, ou de fora para dentro;
-- seguir um ciclo numa tabela, primeiro instrução a instrução e depois iteração a iteração;
-- dizer quantas vezes um ciclo se repete e com que valores termina;
-- reconhecer num trace um ciclo que nunca começa e um ciclo que nunca acaba, e dizer qual das três peças o provoca;
-- escrever um ciclo contado com `Para` e reescrevê-lo com `Enquanto`;
-- usar o contador, o totalizador, a sentinela, a validação repetida e a flag, cinco padrões que vais encontrar em quase todos os algoritmos;
-- escolher entre `Enquanto` e `Para` e justificar a escolha;
-- criar um array e percorrê-lo com o índice e com o para cada;
-- explicar porque é que mudar a variável do para cada não muda o array.
-
-## O que já sabes e vais usar
-
-- O contrato de um problema: as entradas, as saídas, as restrições e as condições, explicado no guia [01 Do problema ao algoritmo](01-do-problema-ao-algoritmo.md).
-- Os exemplos concretos do contrato, cada um com o resultado esperado, do mesmo guia.
-- O estado, os valores que descrevem uma situação num momento, como uma fotografia, do mesmo guia. Neste guia, essa fotografia vai ser tirada muitas vezes seguidas.
-- As variáveis, as constantes, como `const ULTIMA_SENHA = 3`, e os tipos `int`, `float`, `string` e `bool`, do guia [02 Pseudocódigo](02-pseudocodigo.md).
-- A forma do pseudocódigo das aulas, sem cabeçalho nem marcas de início e de fim, do mesmo guia.
-- O tipo à frente de cada variável na linha onde ela nasce, como em `int total = 0`, e depois só o nome, do mesmo guia.
-- A leitura de um valor com `ler valor` e a escrita no ecrã com `Escreve:`, do mesmo guia.
-- Dar um valor com um só `=`, como em `total = total + 5`, que se lê "total recebe o valor que tem agora, mais 5", do mesmo guia.
-- A tabela de trace, com uma coluna por variável, onde se segue um algoritmo instrução a instrução, do mesmo guia.
-- Um algoritmo escrito em frases claras também vale, desde que não deixe dúvidas, porque o que conta é a lógica, do mesmo guia.
-- As condições, que só dão `true` ou `false`, e as comparações `==`, `!=`, `<`, `<=`, `>` e `>=`, do guia [03 Decisões e validação](03-decisoes-e-validacao.md).
-- O `==`, que pergunta se dois valores são iguais, e que não se confunde com o `=`, que dá um valor, do mesmo guia.
-- Os operadores `e`, `ou` e `não`, e os parênteses sempre que se mistura `e` com `ou`, do mesmo guia.
-- A seleção com `Se`, `Senão se` e `Senão`, do mesmo guia.
-- A indentação de quatro espaços, que mostra que instruções estão dentro de cada bloco, sem nenhuma palavra a fechá-lo, do mesmo guia.
-- Os intervalos, como `quantidade >= 1 e quantidade <= 50`, e o contrário de um intervalo, escrito com `ou`, do mesmo guia.
-- Validar uma entrada antes de a usar, do mesmo guia.
-- As fronteiras e a tabela de casos esperados, escrita antes do algoritmo, com casos abaixo, no e acima de cada limite, do mesmo guia.
-
-Antes de começares, confirma que consegues fazer o que está nesta lista. Se um ponto não estiver claro, volta ao guia onde foi explicado. Este guia usa estas ideias sem as explicar outra vez desde o princípio.
-
-Destas bases, há uma que neste guia passa a ser ainda mais importante, a indentação. Num `Se`, as instruções que só se executam quando a condição é verdadeira escrevem-se debaixo dele, quatro espaços mais à direita. É essa margem, e nenhuma palavra de fecho, que mostra onde acaba o bloco. Com os ciclos vai ser igual. E vais ver que pôr uma linha quatro espaços mais à esquerda ou mais à direita pode transformar um algoritmo certo num que nunca acaba.
+1. [A mesma instrução cem vezes](#a-mesma-instrução-cem-vezes)
+2. [Enquanto: repetir enquanto a condição for verdadeira](#enquanto-repetir-enquanto-a-condição-for-verdadeira)
+3. [A indentação mostra o que está dentro do ciclo](#a-indentação-mostra-o-que-está-dentro-do-ciclo)
+4. [As três peças de um ciclo](#as-três-peças-de-um-ciclo)
+5. [O trace linha a linha do primeiro ciclo](#o-trace-linha-a-linha-do-primeiro-ciclo)
+6. [A tabela de iterações](#a-tabela-de-iterações)
+7. [O ciclo que nunca começa](#o-ciclo-que-nunca-começa)
+8. [O ciclo que nunca acaba](#o-ciclo-que-nunca-acaba)
+9. [Para: a forma curta do ciclo contado](#para-a-forma-curta-do-ciclo-contado)
+10. [Padrão contador](#padrão-contador)
+11. [Padrão totalizador](#padrão-totalizador)
+12. [Padrão sentinela](#padrão-sentinela)
+13. [Padrão validação repetida](#padrão-validação-repetida)
+14. [Um ciclo dentro de outro](#um-ciclo-dentro-de-outro)
+15. [Escolher entre Enquanto e Para](#escolher-entre-enquanto-e-para)
+16. [Arrays: muitos valores numa só variável](#arrays-muitos-valores-numa-só-variável)
+17. [O índice de cada elemento](#o-índice-de-cada-elemento)
+18. [Percorrer um array com o índice](#percorrer-um-array-com-o-índice)
+19. [Percorrer um array com o para cada](#percorrer-um-array-com-o-para-cada)
+20. [O para cada não muda o array](#o-para-cada-não-muda-o-array)
+21. [Padrão flag](#padrão-flag)
+22. [Um ciclo com duas maneiras de acabar](#um-ciclo-com-duas-maneiras-de-acabar)
+23. [O Para com as três peças à vista](#o-para-com-as-três-peças-à-vista)
+24. [Exemplo guiado: contar pedidos válidos e totalizar unidades](#exemplo-guiado-contar-pedidos-válidos-e-totalizar-unidades)
 
 ## A mesma instrução cem vezes
 
-Lembras-te da papelaria que atende os clientes por senha, dos guias anteriores? Distribuía no máximo 40 senhas por dia. Imagina que o movimento cresceu. Agora, todas as manhãs, antes de a loja abrir, a máquina imprime as senhas do dia, numeradas de 1 a 100. Com o que aprendeste até agora, o algoritmo que imprime as senhas seria assim:
+A papelaria dos guias anteriores atende os clientes por senha. Imagina que a máquina passa a imprimir, todas as manhãs, as senhas de 1 a 100. Com o que já sabes, o algoritmo seria assim:
 
 ```text
 Escreve: "Senha ", 1
@@ -91,57 +45,31 @@ Escreve: "Senha ", 3
 Escreve: "Senha ", 100
 ```
 
-São cem linhas quase iguais, e têm três problemas. O terceiro é o mais grave.
+São cem linhas quase iguais, e um engano na linha 57 passa despercebido. Para 150 senhas, era preciso escrever mais cinquenta. E há problemas em que nenhum número de linhas serve: quem lê os pedidos de um dia não sabe quantos vão chegar.
 
-O primeiro é o tamanho. Cem linhas escrevem-se, mas ninguém as consegue ler com atenção, e um engano na linha 57 passa despercebido.
+As linhas só diferem no número, que aumenta 1 de cada vez. Bastava dizer: escreve uma senha, passa à seguinte, e faz o mesmo até chegares à última. Fazes isto todos os dias: "enquanto houver pratos na banca, lava um prato". Cada prato lavado sai da banca, e um dia a banca fica vazia.
 
-O segundo é a mudança. Se amanhã a loja precisar de 150 senhas, alguém tem de acrescentar cinquenta linhas. Se precisar de 20, alguém tem de apagar oitenta. O algoritmo não se adapta, e tem de ser reescrito.
-
-O terceiro é o que torna esta forma impossível em muitos problemas. Imagina que, em vez de imprimir senhas, o algoritmo tem de ler as quantidades dos pedidos que chegam a uma papelaria ao longo do dia. Quantas linhas com `ler valor` escreves? Não sabes. Há dias com 3 pedidos e dias com 40. Nenhum número fixo de linhas serve para todos os dias.
-
-Olha outra vez para as cem linhas das senhas. São todas iguais, exceto num pormenor: o número, que aumenta 1 de uma linha para a seguinte. Reparar nesta regularidade é o que permite resolver o problema. Imagina que se consegue dizer ao algoritmo isto: "escreve uma senha, aumenta o número, e volta a fazer o mesmo até chegares à última". Com essa instrução, as cem linhas passam a ser quatro. E, se o número de senhas estiver numa constante, passar de 100 para 150 senhas é mudar um único valor.
-
-É isso que este guia ensina: a escrever instruções que se repetem, e a controlar quantas vezes se repetem.
-
-## Um ciclo volta atrás e pergunta outra vez
-
-Fazes repetições destas todos os dias, sem lhes dares esse nome. "Enquanto houver pratos na banca, lava um prato". "Enquanto houver clientes na fila, atende o próximo". "Enquanto a massa não estiver lisa, amassa mais um minuto".
-
-Todas estas frases têm a mesma forma, com três partes. Há uma pergunta cuja resposta é sim ou não: há pratos na banca? Há uma ação que se faz quando a resposta é sim: lavar um prato. E há uma consequência escondida, a mais importante das três: a ação muda a resposta à pergunta. Cada prato lavado sai da banca. Mais cedo ou mais tarde, a banca fica vazia, a resposta passa a ser não, e paras.
-
-Pensa no que aconteceria se lavar um prato não o tirasse da banca. A pergunta teria sempre a mesma resposta, e ficarias a lavar o mesmo prato para sempre. Parece uma brincadeira, mas é exatamente o erro mais frequente de quem começa a escrever repetições, e vais vê-lo com números mais à frente.
-
-Num algoritmo, a uma parte que se executa várias vezes seguidas chama-se **ciclo**, e a cada uma dessas execuções chama-se **iteração**. Na conversa de todos os dias também se diz uma volta do ciclo. Se o algoritmo lava três pratos, o ciclo teve três iterações, ou deu três voltas. Neste guia usamos a palavra iteração. A palavra volta, neste sentido, só aparece no nome de um caso de teste, o caso de zero voltas.
-
-Até agora, cada instrução dos teus algoritmos executava-se no máximo uma vez. Numa sequência, cada instrução executa-se exatamente uma vez. Numa seleção, uma instrução dentro de um `Se` executa-se uma vez ou nenhuma. Com os ciclos, pela primeira vez, a mesma instrução pode executar-se muitas vezes. É por isso que o trace vai ser ainda mais importante do que era.
+Num algoritmo, uma parte que se executa várias vezes seguidas chama-se **ciclo**. Cada execução dessa parte é uma **iteração**, ou, na conversa de todos os dias, uma volta do ciclo.
 
 ## Enquanto: repetir enquanto a condição for verdadeira
 
-Na forma de pseudocódigo que usamos nas aulas, a repetição escreve-se assim:
+Na forma das aulas, a repetição escreve-se assim:
 
 ```text
 Enquanto condição
     instruções que se repetem
 ```
 
-A `condição` é uma condição como as do guia 03: uma pergunta cuja resposta só pode ser verdadeiro ou falso. Chama-se **corpo do ciclo** às instruções escritas debaixo do `Enquanto`, com mais quatro espaços de indentação. Não há nenhuma palavra a fechar o ciclo. Tal como num `Se`, é a indentação que mostra onde o corpo começa e onde acaba. O corpo começa na linha logo a seguir ao `Enquanto` e acaba na última linha que tem esses quatro espaços a mais. A primeira linha que volta a começar na mesma coluna do `Enquanto` já não faz parte do ciclo.
+A condição é como as do guia 03: dá `true` ou `false`. As instruções indentadas debaixo do `Enquanto` são o **corpo do ciclo**. O `Enquanto` funciona assim:
 
-O `Enquanto` funciona com quatro regras, e precisas das quatro:
+1. Quando o algoritmo chega ao `Enquanto`, avalia a condição com os valores desse momento.
+2. Se der `true`, executa o corpo, de cima para baixo.
+3. Depois da última linha do corpo, volta ao `Enquanto` e avalia outra vez a condição, com os valores novos.
+4. Se der `false`, salta o corpo e continua na primeira linha a seguir a ele.
 
-1. Quando o algoritmo chega à linha do `Enquanto`, avalia a condição, com os valores que as variáveis têm nesse momento.
-2. Se a condição for verdadeira, executa o corpo do ciclo, de cima para baixo, até à última linha indentada.
-3. Depois da última linha do corpo, o algoritmo não continua para baixo. Volta à linha do `Enquanto` e avalia outra vez a condição. Agora usa os valores que as variáveis têm depois de o corpo ter sido executado. E recomeça na regra 2.
-4. Se a condição for falsa, o corpo é saltado. O algoritmo continua na primeira linha a seguir ao corpo, a que está outra vez alinhada com o `Enquanto`.
+O `Enquanto` é um `Se` que, no fim do bloco, volta a subir para fazer a mesma pergunta. A condição diz quando continuar, e não quando parar. E só se avalia na linha do `Enquanto`: se ficar falsa a meio do corpo, o corpo acaba na mesma.
 
-Compara com o `Se` do guia 03. O `Se` avalia a condição uma vez e segue em frente. O `Enquanto` avalia a condição, executa o corpo e, no fim, volta atrás para perguntar outra vez. Uma boa forma de o pensar é esta. Um `Enquanto` é um `Se` que, quando acaba o seu bloco, volta a subir para fazer a mesma pergunta.
-
-Destas regras saem duas consequências, que vais usar em todos os ciclos que escreveres.
-
-A primeira consequência é que a condição do `Enquanto` diz quando continuar, e não quando parar. "Enquanto houver pratos na banca" descreve a situação em que se continua a lavar. O ciclo para quando essa condição deixa de ser verdadeira. Quando escreveres um ciclo, pergunta-te "em que situação quero continuar?", e escreve essa situação. Quem escreve a situação em que quer parar obtém um ciclo que faz exatamente o contrário do que queria.
-
-A segunda é que a condição só é avaliada na linha do `Enquanto`. Se, a meio do corpo, as variáveis mudarem de forma a tornar a condição falsa, o corpo não é interrompido. Continua até à última linha do corpo, e só no teste seguinte o ciclo termina.
-
-Este é o algoritmo das senhas, escrito com um ciclo. Vamos chamar-lhe `DistribuirSenhas`, para podermos voltar a ele pelo nome. Para o trace ficar curto, a constante vale 3. Para imprimir as cem senhas, bastaria mudá-la para 100.
+O algoritmo das senhas, com um ciclo:
 
 ```text
 const ULTIMA_SENHA = 3
@@ -152,44 +80,15 @@ Enquanto senha <= ULTIMA_SENHA
 Escreve: "Fim da distribuição"
 ```
 
-Antes de leres a explicação, tenta prever: o que aparece no ecrã, e com que valor fica `senha` depois do ciclo?
+Prevê: o que aparece no ecrã, e com que valor fica `senha` depois do ciclo?
 
-O ecrã mostra "Senha 1", "Senha 2" e "Senha 3", uma por linha, e no fim "Fim da distribuição". Depois do ciclo, `senha` vale 4, e não 3. A secção "O trace linha a linha do primeiro ciclo", mais abaixo, mostra porquê, passo a passo.
-
-Leitura guiada: lê o algoritmo primeiro por palavras. A última senha é a 3, e a senha começa em 1. Enquanto a senha for menor ou igual à última, escreve-se a senha e passa-se à seguinte. Quando se ultrapassar a última, escreve-se que a distribuição acabou. As secções seguintes olham para o mesmo algoritmo de três lados: a indentação, as três peças e o trace.
+O ecrã mostra "Senha 1", "Senha 2" e "Senha 3", e no fim "Fim da distribuição". Depois do ciclo, `senha` vale 4, e não 3. O ciclo só para quando a senha passa da última, porque só aí a condição dá `false`.
 
 ## A indentação mostra o que está dentro do ciclo
 
-Olha outra vez para o algoritmo das senhas, agora só para a margem esquerda de cada linha. Há duas linhas que começam quatro espaços mais à direita, `Escreve: "Senha ", senha` e `senha = senha + 1`, e são essas, e só essas, o corpo do ciclo. As outras três, `const ULTIMA_SENHA = 3`, `int senha = 1` e `Escreve: "Fim da distribuição"`, começam na mesma coluna do `Enquanto` e estão fora do ciclo. As duas primeiras vêm antes dele, e a última vem depois.
+No algoritmo das senhas, só o `Escreve:` da senha e `senha = senha + 1` estão quatro espaços mais à direita do que o `Enquanto`. São o corpo, e repetem-se uma vez por iteração. As linhas alinhadas com o `Enquanto` estão fora do ciclo e executam-se uma vez só.
 
-A tabela seguinte mostra, para cada linha do algoritmo, menos a do `const`, onde está e quantas vezes é executada quando a constante vale 3:
-
-| Linha | Indentação | Onde está | Quantas vezes é executada |
-| --- | --- | --- | ---: |
-| `int senha = 1` | nenhuma | antes do ciclo | 1 |
-| `Enquanto senha <= ULTIMA_SENHA` | nenhuma | é a linha da condição | 4 |
-| `Escreve: "Senha ", senha` | quatro espaços | dentro do ciclo | 3 |
-| `senha = senha + 1` | quatro espaços | dentro do ciclo | 3 |
-| `Escreve: "Fim da distribuição"` | nenhuma | depois do ciclo | 1 |
-
-A linha do `const` não entra na tabela, e também não vai entrar nos traces. Não é um passo que se execute. É o valor fixo da constante, que vale desde o início. A tabela mostra a diferença entre estar dentro e estar fora. O que está dentro do ciclo executa-se uma vez por iteração, e o que está fora executa-se uma vez só. A linha do `Enquanto` executa-se mais uma vez do que o corpo, e vais perceber porquê no trace mais abaixo.
-
-Como não há nenhuma palavra a fechar o ciclo, a indentação não é enfeite. As mesmas linhas, com outra margem, fazem outro algoritmo. Repara nestas duas versões, que só diferem da versão certa na margem de uma linha. Antes de leres o que acontece, tenta prever o que muda no ecrã em cada uma.
-
-Na primeira, a atualização ficou alinhada com o `Enquanto`:
-
-```text
-const ULTIMA_SENHA = 3
-int senha = 1
-Enquanto senha <= ULTIMA_SENHA
-    Escreve: "Senha ", senha
-senha = senha + 1
-Escreve: "Fim da distribuição"
-```
-
-Agora o corpo tem uma só linha, o `Escreve:`. A atualização passou para fora do ciclo, e só seria executada depois de o ciclo acabar. Mas, sem ela no corpo, a senha nunca muda, a condição dá sempre verdadeiro, e o ciclo nunca acaba. O ecrã enche-se de "Senha 1". Vais voltar a este erro na secção sobre o ciclo que nunca acaba, porque é um dos mais frequentes de quem começa.
-
-Na segunda, a última linha ganhou quatro espaços:
+As mesmas linhas, com outra margem, fazem outro algoritmo. Aqui, a última linha ganhou quatro espaços:
 
 ```text
 const ULTIMA_SENHA = 3
@@ -200,43 +99,27 @@ Enquanto senha <= ULTIMA_SENHA
     Escreve: "Fim da distribuição"
 ```
 
-Agora a mensagem final faz parte do corpo. Aparece três vezes, uma depois de cada senha, em vez de aparecer uma vez só, no fim. O ciclo termina, mas o ecrã diz que a distribuição acabou quando ela ainda vai a meio.
-
-Para leres a indentação sem te enganares, faz como com um `Se`. Põe o dedo, ou a ponta do lápis, por baixo da primeira letra do `Enquanto`, e desce a direito. As linhas que começam à direita do teu dedo, até à primeira que começa em cima dele, são o corpo. No papel quadriculado, alinha as linhas pelos quadrados e usa sempre o mesmo afastamento para cada nível. Com um afastamento que ora é de quatro espaços ora é de três, ninguém sabe se uma linha está dentro ou fora do ciclo.
-
-É assim que o Python, a linguagem que vais aprender a seguir, marca os blocos. Não há palavra de fecho, há indentação. Lá, uma linha com a margem errada também muda o que o programa faz, e o hábito que ganhares aqui vale diretamente para lá.
+A mensagem final passou para o corpo e aparece três vezes, uma depois de cada senha. Para leres a margem, põe o dedo debaixo da primeira letra do `Enquanto` e desce. O corpo são as linhas que começam à direita do dedo.
 
 ## As três peças de um ciclo
 
-Todos os ciclos que terminam têm três peças. Se faltar uma delas, ou se uma estiver errada, o ciclo não faz o que devia, e é quase sempre assim que os ciclos falham. Por isso, cada uma tem um nome.
+Os ciclos que terminam têm três peças. Quando um ciclo falha, é quase sempre porque falta uma, ou porque uma está errada.
 
-A **inicialização** é a instrução, ou as instruções, que dão o valor inicial às variáveis que a condição e o corpo vão usar. Fica antes do `Enquanto`, sem indentação. No algoritmo das senhas é `int senha = 1`, que é também a linha onde a variável nasce, e por isso leva o tipo. Sem ela, na primeira vez que a condição fosse avaliada, estaria a comparar uma variável sem valor. O algoritmo não teria forma de saber se deve entrar no ciclo.
+A **inicialização** dá o valor de partida às variáveis que a condição usa. Fica antes do ciclo, sem indentação: nas senhas, é `int senha = 1`. A condição, na linha do `Enquanto`, decide se há mais uma iteração.
 
-A **condição** é a pergunta que decide se se faz mais uma iteração. Fica na linha do `Enquanto`. No algoritmo das senhas é `senha <= ULTIMA_SENHA`. Diz em que situação se continua.
+A **atualização** é a instrução do corpo que muda a variável da condição e aproxima o ciclo do fim. Nas senhas, `senha = senha + 1` faz a senha subir até passar da última. É a atualização que tira o prato da banca.
 
-A **atualização** é a instrução, dentro do corpo, que muda a variável de que a condição depende, e que aproxima o ciclo do fim. No algoritmo das senhas é `senha = senha + 1`, já sem o tipo, porque a variável já existe. Cada iteração aumenta a senha em 1. Por isso, mais cedo ou mais tarde, a senha ultrapassa a última e a condição passa a ser falsa. É a atualização que tira o prato da banca. "Dentro do corpo" quer dizer indentada debaixo do `Enquanto`. Acabaste de ver que, com a margem errada, a mesma linha deixa de ser a atualização do ciclo.
-
-A linha `senha = senha + 1` lê-se "senha recebe o valor que senha tem agora, mais 1". O `=` sozinho dá um valor. Primeiro calcula-se o lado direito, com o valor atual, e depois guarda-se o resultado na mesma variável. Não é uma pergunta, e por isso não faz mal que `senha` apareça dos dois lados. É a forma da linha `total = total + 5` do guia 02, e vais escrevê-la dezenas de vezes neste guia. Se ainda te fizer confusão, volta ao guia 02 antes de continuares.
-
-O resto do corpo é o trabalho que o ciclo faz em cada iteração. Nas senhas é o `Escreve:`.
-
-Para cada ciclo que escreveres, vais responder a três perguntas, uma por peça. São as perguntas que vais ter de saber justificar no fim deste tema:
+Para cada ciclo, faz três perguntas, uma por peça:
 
 1. Com que valor começa, e porquê esse? (a inicialização)
-2. Em que situação continua, e quando é que deixa de continuar? (a condição)
-3. O que muda em cada iteração, e essa mudança aproxima o fim? (a atualização)
+2. Em que situação continua, e quando deixa de continuar? (a condição)
+3. O que muda em cada iteração, e a variável da condição chega a um valor que dá `false`? (a atualização)
 
-No algoritmo das senhas, as respostas são estas. Começa em 1, porque a primeira senha é a 1. Continua enquanto a senha for menor ou igual a 3, e deixa de continuar quando a senha chegar a 4. Em cada iteração, a senha aumenta 1, e por isso aproxima-se de 4.
+Nas senhas, a senha começa em 1, porque é a primeira. O ciclo continua enquanto ela for menor ou igual a 3, e ela sobe 1 por iteração, até chegar a 4.
 
 ## O trace linha a linha do primeiro ciclo
 
-O trace de um ciclo faz-se com as mesmas regras que aprendeste no guia 02. Há uma coluna por variável e uma linha por instrução executada. Em cada linha, copias os valores da linha de cima e mudas só o que essa instrução muda. Há duas novidades.
-
-A primeira é uma coluna para a condição. Na linha em que o algoritmo passa pelo `Enquanto`, escreves a condição com os valores substituídos e o resultado, como "`1 <= 3` dá `true`". Quando a condição tem um `e` ou um `ou`, escreves primeiro o resultado de cada comparação e depois o do conjunto, como no guia 03. As constantes não têm coluna, porque nunca mudam, mas o seu valor aparece nas condições. A linha do `const` também não aparece na tabela nem conta como passo. A constante tem o seu valor desde o início, e nunca o muda. Já uma linha que dá o primeiro valor a uma variável, como `int senha = 1`, conta como passo, porque muda o estado.
-
-A segunda é que a mesma instrução pode aparecer várias vezes na tabela, uma por cada vez que é executada. A tabela segue a ordem em que as instruções são executadas, e não a ordem em que estão escritas. Depois da última instrução do corpo, a linha seguinte da tabela é outra vez a do `Enquanto`. É para lá que o algoritmo volta quando acaba o corpo, pela regra 3.
-
-Este é o trace completo do algoritmo das senhas:
+O trace segue as regras do guia 02, com a coluna "Condição e resultado" do guia 03. A novidade é que, depois da última linha do corpo, vem outra vez a linha do `Enquanto`.
 
 | Passo | Instrução executada | senha | Condição e resultado | Ecrã |
 | ---: | --- | ---: | --- | --- |
@@ -254,32 +137,23 @@ Este é o trace completo do algoritmo das senhas:
 | 11 | `Enquanto senha <= ULTIMA_SENHA` | 4 | `4 <= 3` dá `false` | nada |
 | 12 | `Escreve: "Fim da distribuição"` | 4 | nenhuma | Fim da distribuição |
 
-Lê a tabela devagar, linha a linha, e compara cada linha com a de cima.
-
-No passo 1, a inicialização dá a `senha` o valor 1. No passo 2, o algoritmo chega ao `Enquanto` pela primeira vez, e a condição `1 <= 3` é verdadeira, por isso entra no corpo. No passo 3 escreve "Senha 1", e no passo 4 a atualização faz a senha passar de 1 para 2.
-
-No passo 5 acontece o que é novo. O algoritmo acabou a última linha do corpo e voltou atrás, à linha do `Enquanto`. Avalia a condição outra vez, agora com `senha` a valer 2. `2 <= 3` continua a ser verdadeiro, e o corpo executa-se mais uma vez, nos passos 6 e 7. O mesmo acontece nos passos 8 a 10, com a senha a valer 3.
-
-No passo 11, a senha já vale 4. `4 <= 3` é falso. Pela regra 4, o corpo é saltado. O algoritmo continua na primeira linha a seguir ao corpo, no passo 12, onde escreve que a distribuição acabou.
-
-Conta agora as linhas do `Enquanto`. São quatro, nos passos 2, 5, 8 e 11. Três deram verdadeiro e uma deu falso. O corpo executou-se três vezes, portanto o ciclo teve três iterações. Isto é sempre assim num ciclo que termina. Há sempre mais um teste da condição do que iterações, porque o último teste é o que dá falso e faz o ciclo parar.
-
-Repara também no valor final de `senha`. É 4, e não 3. O ciclo não para quando escreve a última senha. Para quando a senha ultrapassa a última, porque é só nessa altura que a condição fica falsa. É uma surpresa para muita gente e é uma pergunta frequente em testes: depois do ciclo, quanto vale a variável?
-
-Se a constante valesse 100, o algoritmo teria 100 iterações e 101 testes da condição, e esta tabela teria 303 passos. O algoritmo, esse, continuaria a ter as mesmas linhas.
+No passo 5, o algoritmo voltou ao `Enquanto` e testou outra vez, com a senha a 2. No passo 11, `4 <= 3` dá `false`, e o ciclo termina. A linha do `Enquanto` aparece quatro vezes, para três iterações: num ciclo que termina, há sempre um teste a mais do que iterações.
 
 ## A tabela de iterações
 
-Uma tabela com 303 passos não é prática. Depois de perceberes como um ciclo se executa instrução a instrução, podes usar uma tabela mais curta, a que se chama **tabela de iterações**. Tem uma linha por cada teste da condição, e não por cada instrução.
+Com cem senhas, o trace teria 303 passos. A **tabela de iterações** é mais curta: tem uma linha por cada teste da condição, e não por cada instrução. O ciclo das senhas, desenrolado, é uma sequência de testes e de iterações:
 
-Cada linha da tabela de iterações mostra:
+```mermaid
+graph LR
+    T1["1.º teste<br>senha = 1<br>dá true"] --> I1["1.ª iteração<br>escreve Senha 1<br>senha passa a 2"]
+    I1 --> T2["2.º teste<br>senha = 2<br>dá true"]
+    T2 --> I2["2.ª iteração<br>escreve Senha 2<br>senha passa a 3"]
+    I2 --> T3["3.º teste<br>senha = 3<br>dá true"]
+    T3 --> I3["3.ª iteração<br>escreve Senha 3<br>senha passa a 4"]
+    I3 --> T4["4.º teste<br>senha = 4<br>dá false: o ciclo termina"]
+```
 
-- O número do teste: 1.º, 2.º, 3.º, e assim por diante.
-- O valor de cada variável no momento em que o algoritmo chega ao `Enquanto` e vai testar a condição. É como se tirasses uma fotografia do estado nesse instante.
-- A condição, com os valores substituídos, e o resultado.
-- O que acontece durante a iteração que começa a seguir: o que é escrito no ecrã e o que é lido. Na linha em que a condição é falsa, escreve-se que o ciclo termina.
-
-Para o algoritmo das senhas:
+Cada linha da tabela junta um teste e a iteração que vem a seguir. Mostra os valores no momento do teste, como uma fotografia do estado, e o que se escreve e lê na iteração seguinte.
 
 | Teste | senha | Condição | Durante a iteração |
 | --- | ---: | --- | --- |
@@ -288,15 +162,11 @@ Para o algoritmo das senhas:
 | 3.º | 3 | `3 <= 3` dá `true` | escreve "Senha 3" |
 | 4.º | 4 | `4 <= 3` dá `false` | o ciclo termina |
 
-Cada linha desta tabela resume um grupo de linhas da tabela anterior. O 1.º teste corresponde aos passos 2 a 4, e o 2.º aos passos 5 a 7. O 3.º teste corresponde aos passos 8 a 10, e o 4.º ao passo 11. A tabela de iterações não mostra os passos um a um. Mas mostra tudo o que interessa num ciclo: com que valores começa cada iteração, quantas iterações há e com que valores termina. Os valores finais estão sempre na última linha, a do teste que dá falso.
-
-A tabela de iterações é a que vais fazer nos exercícios deste tema. Sempre que te pedirem o trace de um ciclo, é esta tabela que se espera. A exceção é quando te pedem, com essas palavras, o trace linha a linha. Nos primeiros ciclos que fizeres, faz primeiro o trace linha a linha e só depois a tabela de iterações. Assim vês que as duas dizem o mesmo.
+O 1.º teste resume os passos 2 a 4 do trace. A senha passa a 2 durante a 1.ª iteração, e por isso o 2 só aparece na linha do 2.º teste. Nos exercícios, o trace de um ciclo faz-se com esta tabela, a não ser que te peçam o trace linha a linha.
 
 ## O ciclo que nunca começa
 
-Se a condição for falsa logo no primeiro teste, o corpo não se executa nenhuma vez. Diz-se que o ciclo tem zero iterações.
-
-Às vezes isto é um erro. Imagina que alguém escreveu a condição do algoritmo das senhas ao contrário:
+Se a condição der `false` logo no primeiro teste, o corpo não se executa nenhuma vez. Pode ser um erro, como nesta versão das senhas:
 
 ```text
 const ULTIMA_SENHA = 3
@@ -307,25 +177,19 @@ Enquanto senha > ULTIMA_SENHA
 Escreve: "Fim da distribuição"
 ```
 
-Antes de leres a tabela, tenta prever quantas senhas aparecem no ecrã. A tabela de iterações tem uma única linha:
-
 | Teste | senha | Condição | Durante a iteração |
 | --- | ---: | --- | --- |
 | 1.º | 1 | `1 > 3` dá `false` | o ciclo termina |
 
-No primeiro teste, `1 > 3` é falso, e o algoritmo salta diretamente para a primeira linha a seguir ao corpo. No ecrã aparece "Fim da distribuição" e mais nada. Não foi impressa nenhuma senha. Quem escreveu isto pensou em quando o ciclo devia parar, que é quando a senha passa a última. E escreveu essa situação no `Enquanto`, que é o sítio onde se escreve quando continuar. É o erro de que a primeira consequência das regras do `Enquanto` te avisou.
+O ecrã mostra só "Fim da distribuição". Quem escreveu isto pôs no `Enquanto` a situação em que o ciclo devia parar, e esse é o sítio de quando continuar.
 
-Outras vezes, um ciclo com zero iterações é exatamente o que deve acontecer. Imagina um algoritmo que conta os pedidos que chegaram hoje a uma papelaria. Se hoje não chegou nenhum, o ciclo não deve executar-se nenhuma vez, e a resposta certa é "0 pedidos". Vais ver este caso no exemplo guiado.
-
-Daqui sai uma regra de teste que vais usar sempre. Testa o caso em que o ciclo devia ter zero iterações, e confirma que o algoritmo dá uma resposta com sentido, como 0. Não pode dar uma resposta disparatada, nem uma mensagem que não devia aparecer. A este caso chama-se o **caso de zero voltas**, porque o ciclo não chega a dar nenhuma volta.
+Outras vezes, zero iterações é a resposta certa: num dia sem pedidos, um algoritmo que conta pedidos não entra no ciclo e responde 0. Por isso, um ciclo testa-se com quatro casos. O primeiro é o caso de zero voltas, em que o ciclo não dá nenhuma volta. Os outros são um caso com uma iteração, um com várias e as fronteiras das decisões dentro do ciclo.
 
 ## O ciclo que nunca acaba
 
-Um **ciclo infinito** é um ciclo cuja condição nunca chega a ser falsa. O corpo executa-se, volta-se ao teste, a condição continua verdadeira, e assim para sempre.
+Um **ciclo infinito** é um ciclo cuja condição nunca chega a dar `false`. Num computador, o programa só para quando alguém o interrompe. No papel, a tabela de iterações mostra o problema.
 
-O algoritmo não dá nenhum aviso. Num computador, um programa com um ciclo infinito fica parado a trabalhar, ou a escrever a mesma coisa no ecrã. Só acaba quando alguém o interrompe à força. No papel, o trace mostra o problema com toda a clareza. É por isso que o trace é a melhor ferramenta para encontrar ciclos infinitos.
-
-A causa mais frequente é esquecer a atualização. A esta versão das senhas vamos chamar `SenhasSemAtualizacao`:
+Nesta versão das senhas falta uma linha:
 
 ```text
 const ULTIMA_SENHA = 3
@@ -335,7 +199,7 @@ Enquanto senha <= ULTIMA_SENHA
 Escreve: "Fim da distribuição"
 ```
 
-Antes de leres a tabela, tenta prever o que acontece à `senha` de um teste para o seguinte. As primeiras linhas da tabela de iterações:
+Prevê o que acontece à senha de um teste para o seguinte.
 
 | Teste | senha | Condição | Durante a iteração |
 | --- | ---: | --- | --- |
@@ -343,13 +207,12 @@ Antes de leres a tabela, tenta prever o que acontece à `senha` de um teste para
 | 2.º | 1 | `1 <= 3` dá `true` | escreve "Senha 1" |
 | 3.º | 1 | `1 <= 3` dá `true` | escreve "Senha 1" |
 | 4.º | 1 | `1 <= 3` dá `true` | escreve "Senha 1" |
-| 5.º | 1 | `1 <= 3` dá `true` | escreve "Senha 1" |
 
-E assim para sempre. Olha para a coluna `senha`. Vale 1 em todos os testes. A fotografia do estado, tirada cada vez que o algoritmo chega ao `Enquanto`, é sempre igual. Como o corpo não lê nada e parte sempre do mesmo estado, faz sempre as mesmas coisas e volta sempre ao mesmo estado. A condição dá sempre verdadeiro, e o ecrã enche-se de "Senha 1". Num ciclo que não lê nada no corpo, se a fotografia se repetir, o ciclo é infinito.
+Falta a atualização, que é a causa mais frequente, e o ciclo repete-se para sempre. O corpo não lê nada, e por isso, a partir do mesmo estado, faz sempre o mesmo e volta ao mesmo estado.
 
-Há outras três formas de chegar ao mesmo resultado, e todas se reconhecem pela mesma pergunta.
+Num ciclo que lê valores, a atualização é a leitura do valor seguinte. Sem ela, os contadores mudam, mas a coluna da condição fica sempre igual, e é essa que se olha.
 
-A atualização pode estar escrita, mas no sítio errado, fora do corpo. É a primeira das duas versões que viste na secção sobre a indentação:
+A atualização também pode estar no sítio errado, alinhada com o `Enquanto`:
 
 ```text
 int senha = 1
@@ -358,60 +221,15 @@ Enquanto senha <= ULTIMA_SENHA
 senha = senha + 1
 ```
 
-A linha existe, mas está alinhada com o `Enquanto`, e por isso está fora do corpo. Só seria executada depois de o ciclo acabar, o que nunca acontece. Para o ciclo, é como se ela não existisse. As palavras são exatamente as da versão certa, e só a indentação mostra o erro. A atualização tem de estar alinhada com as outras instruções do corpo, quatro espaços mais à direita do que o `Enquanto`. Sempre que escreveres um ciclo, confirma com o dedo por baixo do `Enquanto` que a atualização fica à direita dele.
+A linha ficou depois do ciclo, e como o ciclo nunca acaba, nunca chega a executar-se.
 
-A atualização pode andar no sentido errado. Com `senha = senha - 1` em vez de `senha = senha + 1`:
+Pode ainda andar no sentido errado: com `senha = senha - 1`, a senha passa a 0, a -1, a -2, e afasta-se de 4. E pode saltar por cima da saída. Com `Enquanto x != 10`, um `x` que começa em 1 e sobe 2 de cada vez passa pelo 9 e pelo 11, e nunca pelo 10.
 
-| Teste | senha | Condição | Durante a iteração |
-| --- | ---: | --- | --- |
-| 1.º | 1 | `1 <= 3` dá `true` | escreve "Senha 1" |
-| 2.º | 0 | `0 <= 3` dá `true` | escreve "Senha 0" |
-| 3.º | -1 | `-1 <= 3` dá `true` | escreve "Senha -1" |
-| 4.º | -2 | `-2 <= 3` dá `true` | escreve "Senha -2" |
-| 5.º | -3 | `-3 <= 3` dá `true` | escreve "Senha -3" |
-
-Aqui a fotografia não se repete, porque a senha muda em todas as iterações. Mas muda no sentido errado. Afasta-se de 4, que é o valor que tornaria a condição falsa, e cada número negativo continua a ser menor ou igual a 3. Não basta que a variável mude. Tem de mudar na direção da saída.
-
-E a atualização pode saltar por cima do valor de saída. Pensa numa condição escrita com `!=`, do tipo "enquanto a variável for diferente de 10". Só fica falsa se a variável valer exatamente 10 num dos testes. Se a variável começar em 1 e aumentar 2 em cada iteração, passa por 9 e por 11, mas nunca por 10. E o ciclo nunca acaba.
-
-A pergunta que apanha os quatro casos é sempre a mesma. É a terceira pergunta das peças: em cada iteração, a variável da condição muda e aproxima-se de um valor que torna a condição falsa? Se a resposta for não, o ciclo é infinito.
+A terceira pergunta das peças apanha as quatro causas. Em cada iteração, a variável da condição muda e chega a um valor que dá `false`? Se não chega, o ciclo é infinito.
 
 ## Para: a forma curta do ciclo contado
 
-O ciclo das senhas tem uma forma muito comum. Uma variável começa em 1, a condição pergunta se ela ainda não passou de um certo número, e a atualização aumenta-a 1 em cada iteração. A um ciclo em que se sabe, antes de começar, quantas iterações vai ter, chama-se **ciclo contado**.
-
-Os ciclos contados são tão frequentes que têm uma forma curta de escrever, o `Para`. A forma geral é `Para i de 1 até n`. A variável `i` vai de 1 até `n`, de 1 em 1, e o corpo, indentado debaixo do `Para`, executa-se uma vez para cada valor. Nas senhas fica assim:
-
-```text
-Para senha de 1 até ULTIMA_SENHA
-    Escreve: "Senha ", senha
-```
-
-Lê-se "para a senha de 1 até à última senha, escreve a senha". Compara com o `Enquanto` que faz exatamente o mesmo:
-
-```text
-int senha = 1
-Enquanto senha <= ULTIMA_SENHA
-    Escreve: "Senha ", senha
-    senha = senha + 1
-```
-
-As três peças estão lá todas, mas no `Para` duas delas estão escondidas na primeira linha, e a terceira nem sequer se escreve. A inicialização é o `de 1`, porque a senha começa em 1, como com o `int senha = 1`. A condição é o `até ULTIMA_SENHA`, que quer dizer "continua enquanto `senha <= ULTIMA_SENHA`". A atualização é feita pelo próprio `Para`, sem linha nenhuma. Depois da última linha do corpo, a senha aumenta 1 e o algoritmo volta ao teste. A variável que o `Para` controla chama-se **variável de controlo**.
-
-Repara que a variável de controlo não leva tipo. É o próprio `Para` que a cria, e ela é sempre um número inteiro que avança de 1 em 1. Por isso, não há nada a acrescentar. No `Enquanto` equivalente, a inicialização é uma linha escrita por ti, e leva o tipo, como qualquer variável na linha onde aparece pela primeira vez.
-
-O corpo do `Para` marca-se como o do `Enquanto`, pela indentação. O que está quatro espaços mais à direita, debaixo do `Para`, repete-se. A primeira linha de novo alinhada com o `Para` já é depois do ciclo.
-
-O `Para` segue quatro regras:
-
-1. A variável de controlo avança sempre de 1 em 1.
-2. Dentro do corpo, não se muda a variável de controlo nem o limite. O `Para` trata disso sozinho. Se precisares de mudar a variável a meio, o ciclo não é contado, e deves usar `Enquanto`.
-3. Se o limite for menor do que o valor inicial, o corpo executa-se zero vezes. Por exemplo, em `Para dia de 1 até 0`, `1 <= 0` é falso logo no primeiro teste. É o caso de zero voltas do `Para`.
-4. Depois do ciclo, não se usa o valor da variável de controlo. No `Enquanto` equivalente, ela ficaria com o limite mais 1. Mas há linguagens em que fica com outro valor, e o Python, que vais aprender a seguir, é uma delas. Por isso, nos nossos algoritmos, a variável de controlo só se usa dentro do ciclo.
-
-Na forma geral, a variável de controlo chama-se `i`, e vais ver muitas vezes o `Para` escrito assim, `Para i de 1 até n`. É um costume antigo e aceita-se. Mas um nome que diga o que se está a contar, como `senha`, `dia` ou `produto`, torna o algoritmo mais fácil de ler. É o que fazem os exemplos deste guia. Nos arrays, a variável é o índice e chama-se `i`.
-
-O algoritmo completo, com `Para`:
+No ciclo das senhas, sabe-se antes de começar quantas iterações vai haver. Um ciclo assim chama-se **ciclo contado**, e escreve-se mais curto com o `Para`:
 
 ```text
 const ULTIMA_SENHA = 3
@@ -420,36 +238,26 @@ Para senha de 1 até ULTIMA_SENHA
 Escreve: "Fim da distribuição"
 ```
 
-Antes de leres a tabela, tenta prever: o que escreve este algoritmo, e quantas vezes testa a condição? A tabela de iterações é igual à do `Enquanto`, e é essa a prova de que os dois algoritmos são equivalentes:
+O corpo executa-se com a senha a 1, a 2 e a 3, e o ecrã é o do `Enquanto`. A inicialização é o `de 1`, e a condição, `senha <= ULTIMA_SENHA`, está escondida no `até`. A atualização é o próprio `Para` que a faz: no fim de cada iteração, soma 1 e volta ao teste.
 
-| Teste | senha | Condição | Durante a iteração |
-| --- | ---: | --- | --- |
-| 1.º | 1 | `1 <= 3` dá `true` | escreve "Senha 1" |
-| 2.º | 2 | `2 <= 3` dá `true` | escreve "Senha 2" |
-| 3.º | 3 | `3 <= 3` dá `true` | escreve "Senha 3" |
-| 4.º | 4 | `4 <= 3` dá `false` | o ciclo termina |
+A variável que o `Para` faz avançar chama-se **variável de controlo**. Não leva tipo, porque é o `Para` que a cria. O `Para` segue quatro regras:
 
-A condição que aparece na tabela é a condição escondida do `Para`, `senha <= ULTIMA_SENHA`. O ecrã também é o mesmo: "Senha 1", "Senha 2", "Senha 3" e "Fim da distribuição".
+1. A variável de controlo avança de 1 em 1.
+2. Dentro do corpo, não se muda a variável de controlo nem o limite. Se for preciso mudá-los, usa-se o `Enquanto`.
+3. Se o limite for menor do que o valor inicial, o corpo executa-se zero vezes: em `Para dia de 1 até 0`, `1 <= 0` dá `false` logo no início.
+4. Depois do ciclo, não se usa a variável de controlo.
 
-A grande vantagem do `Para` é que não te podes esquecer da inicialização nem da atualização, porque não és tu que as escreves. É muito mais difícil escrever um `Para` infinito do que um `Enquanto` infinito. A desvantagem é que só serve quando se sabe quantas vezes o ciclo se vai repetir antes de ele começar.
-
-Mais à frente, depois dos arrays e do padrão flag, há uma secção com outra forma de escrever o `Para`. Nessa forma, as três peças ficam todas à vista na primeira linha. É para quando já estiveres à vontade com esta. Por agora, e em todos os exercícios deste tema, usa `Para ... de ... até ...`. Começa em 1 quando contas coisas, como as senhas, e em 0 quando percorres um array, como vais ver mais à frente.
+A variável pode chamar-se `i`, mas um nome como `senha` ou `dia` diz o que se conta. Com o `Para`, não te esqueces da inicialização nem da atualização, porque não és tu que as escreves.
 
 ## Padrão contador
 
-Um **padrão** é uma forma de resolver um pequeno problema que aparece vezes sem conta, em algoritmos diferentes. Aprende-se uma vez, e depois reconhece-se e reutiliza-se. Os padrões desta secção e das seguintes vão aparecer em quase todos os algoritmos que escreveres até ao fim do ano, também em Python.
+Uma loja tem 5 produtos e quer saber quantos estão abaixo do stock mínimo, de 10 unidades. No guia 01, [reconhecer padrões](01-do-problema-ao-algoritmo.md#reconhecimento-de-padrões) era reparar no que se repete. Num algoritmo, um **padrão** é uma forma de resolver um pequeno problema que aparece em muitos algoritmos diferentes. O primeiro é o **contador**, uma variável que conta quantas vezes uma coisa aconteceu:
 
-O primeiro é o contador. Um **contador** é uma variável que conta quantas vezes uma coisa aconteceu. Segue três regras:
-
-1. Começa em 0, antes do ciclo: `int contador = 0`. Antes de se contar o que quer que seja, já se contaram zero coisas.
+1. Começa em 0, antes do ciclo: antes de contar, contaram-se zero coisas.
 2. Sempre que a coisa acontece, aumenta 1: `contador = contador + 1`.
-3. Só se lê o resultado depois do ciclo. Durante o ciclo, o contador tem uma contagem parcial.
+3. O resultado lê-se depois do ciclo, quando a contagem está completa.
 
-Porquê 0 e não 1? Pensa num porteiro que conta as pessoas que entram numa sala. Antes de alguém entrar, a contagem é zero. Se começasse em 1, todas as contagens ficariam com uma pessoa a mais, e numa sala onde não entrou ninguém diria que entrou uma. O caso de zero voltas mostra este erro logo, porque, sem ninguém a entrar, a contagem tem de ser 0.
-
-Se a linha `contador = contador + 1` estiver diretamente no corpo do ciclo, com quatro espaços, conta todas as iterações. Se estiver dentro de um `Se`, com oito espaços, conta só as iterações em que a condição do `Se` é verdadeira. É esta segunda forma a mais útil: contar quantos valores cumprem uma regra. Mais uma vez, é a indentação que decide.
-
-Exemplo. Uma loja quer saber quantos dos seus 5 produtos têm o stock abaixo do mínimo de 10 unidades, para os encomendar. O algoritmo lê o stock de cada produto e conta os que estão abaixo do mínimo. Vamos chamar-lhe `ContarStockBaixo`:
+O algoritmo da loja, `ContarStockBaixo`, tem um `Se` dentro do ciclo, que se avalia em todas as iterações:
 
 ```text
 const NUMERO_DE_PRODUTOS = 5
@@ -463,11 +271,9 @@ Para produto de 1 até NUMERO_DE_PRODUTOS
 Escreve: "Produtos abaixo do mínimo: ", produtosAbaixoDoMinimo
 ```
 
-Leitura guiada: começa pelas constantes e pelo contador, e depois desce para o `Para`. Como se sabe, antes de o ciclo começar, que há 5 produtos, o ciclo é contado e escreve-se com `Para`. O contador começa em 0 antes do ciclo. O seu aumento está dentro do `Se`, com oito espaços, porque só se contam os produtos abaixo do mínimo. A última linha, sem indentação, está depois do ciclo. Escreve o resultado uma vez só, quando a contagem está completa.
+A linha `int stock = ler valor` escreve-se uma vez, com o tipo, mas executa-se cinco, e cada leitura substitui o stock anterior.
 
-Repara também na linha `int stock = ler valor`. O stock aparece pela primeira vez dentro do ciclo, e é aí que leva o tipo. A linha escreve-se uma vez, mas executa-se cinco, uma por produto, e em cada iteração o valor lido substitui o do produto anterior. O tipo diz que espécie de valor a variável guarda, e não se repete por a linha se executar muitas vezes.
-
-Antes de leres a tabela, tenta prever quantos produtos estão abaixo do mínimo com os stocks 12, 4, 10, 0 e 9. Esta é a tabela de iterações com esses stocks. Para a tabela caber no ecrã, as perguntas que aparecem antes de cada leitura não estão na última coluna. Lembra-te de que as colunas mostram o estado no momento do teste. O stock lido numa iteração só aparece na coluna `stock` na linha seguinte.
+Prevê quantos produtos estão abaixo do mínimo com os stocks 12, 4, 10, 0 e 9. As perguntas não aparecem na última coluna, e cada stock lido só aparece na linha seguinte.
 
 | Teste | produto | stock | produtosAbaixoDoMinimo | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | --- | --- |
@@ -478,19 +284,23 @@ Antes de leres a tabela, tenta prever quantos produtos estão abaixo do mínimo 
 | 5.º | 5 | 0 | 2 | `5 <= 5` dá `true` | lê 9 |
 | 6.º | 6 | 9 | 3 | `6 <= 5` dá `false` | o ciclo termina |
 
-O contador aumentou três vezes: com 4, com 0 e com 9. O ecrã acaba com "Produtos abaixo do mínimo: 3". Não aumentou com 12, que está acima do mínimo, nem com 10, que é o próprio mínimo. `10 < 10` é falso: dez não é menor do que dez. O enunciado diz "abaixo do mínimo", e um produto com exatamente o mínimo não está abaixo dele. É a regra das fronteiras do guia 03, agora dentro de um ciclo. O 9, o 10 e o 12 foram escolhidos de propósito: um abaixo do mínimo, o próprio mínimo e um acima dele.
+O ecrã acaba com "Produtos abaixo do mínimo: 3": o 4, o 0 e o 9. O 10 não conta, porque `10 < 10` dá `false`, e um produto com exatamente o mínimo não está abaixo dele.
+
+É a margem que decide quantas vezes cada linha se executa:
+
+| Margem | Linhas | Quantas vezes se executam, com estes stocks |
+| --- | --- | --- |
+| Nenhuma | `int produtosAbaixoDoMinimo = 0` e o `Escreve:` do fim | 1 vez |
+| Quatro espaços | a pergunta, a leitura do stock e o `Se` | 5 vezes, uma por produto |
+| Oito espaços | `produtosAbaixoDoMinimo = produtosAbaixoDoMinimo + 1` | 3 vezes, só quando o `Se` dá `true` |
+
+A linha do `Para`, que é o teste, executa-se 6 vezes.
 
 ## Padrão totalizador
 
-Um **totalizador** é uma variável que vai somando valores ao longo das iterações. Segue três regras, parecidas com as do contador:
+Agora a pergunta é "quanto?": uma loja quer o total das vendas de vários dias. Um **totalizador** é uma variável que vai somando valores ao longo das iterações. Segue as regras do contador, com uma diferença: em cada iteração, soma o próprio valor, `total = total + valor`, e não 1. Com pedidos de 12, 30 e 50 unidades, um contador de pedidos fica com 3, e um totalizador de unidades fica com 92.
 
-1. Começa em 0, antes do ciclo: `int total = 0`. A soma de nada é zero.
-2. Em cada iteração, soma-se o valor: `total = total + valor`.
-3. O total final só se lê depois do ciclo. Durante o ciclo, o totalizador guarda o total até esse momento, que se pode mostrar quando o enunciado o pede.
-
-A diferença para o contador está na regra 2. O contador soma 1, seja qual for o valor. O totalizador soma o próprio valor. O contador responde à pergunta "quantos?", e o totalizador responde à pergunta "quanto?". Imagina que se leem as quantidades de três pedidos, 12, 30 e 50. O contador de pedidos fica com 3, e o totalizador de unidades fica com 92.
-
-Exemplo. Uma loja quer saber o total das vendas de vários dias. No início, o funcionário diz quantos dias quer somar, e depois escreve as vendas de cada dia, em cêntimos. Os valores em dinheiro estão em cêntimos pela razão que viste no guia 02. São números inteiros, e as contas com inteiros são exatas. Vamos chamar a este algoritmo `TotalDeVendas`:
+No algoritmo `TotalDeVendas`, o funcionário diz quantos dias quer somar e depois as vendas de cada dia, em cêntimos:
 
 ```text
 Escreve: "Quantos dias queres somar?"
@@ -503,9 +313,7 @@ Para dia de 1 até dias
 Escreve: "Total vendido: ", totalVendas, " cêntimos"
 ```
 
-Leitura guiada: o algoritmo pede primeiro o número de dias, põe o total a 0 e só depois entra no `Para`. Repara que o número de dias só se conhece durante a execução, quando o funcionário o escreve. Mesmo assim, o ciclo é contado. Quando o algoritmo chega ao `Para`, o valor de `dias` já foi lido, e por isso já se sabe quantas iterações vai haver. É isso que conta para escolher o `Para`.
-
-Antes de leres a tabela, tenta prever o total com 3 dias e as vendas 1250, 800 e 2100. Esta é a tabela de iterações, sem as perguntas:
+Quando o algoritmo chega ao `Para`, o número de dias já foi lido, e por isso o ciclo é contado. Com 3 dias e as vendas 1250, 800 e 2100:
 
 | Teste | dia | vendasDoDia | totalVendas | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | --- | --- |
@@ -514,13 +322,9 @@ Antes de leres a tabela, tenta prever o total com 3 dias e as vendas 1250, 800 e
 | 3.º | 3 | 800 | 2050 | `3 <= 3` dá `true` | lê 2100 |
 | 4.º | 4 | 2100 | 4150 | `4 <= 3` dá `false` | o ciclo termina |
 
-O total começou em 0, passou a 1250, depois a 2050 e depois a 4150, e o algoritmo escreve "Total vendido: 4150 cêntimos". Em cada linha, o novo total é o total da linha de cima mais o valor lido nessa iteração. Se o funcionário escrever 0 dias, o `Para` faz zero iterações, e o algoritmo escreve "Total vendido: 0 cêntimos", que é a resposta certa.
+O algoritmo escreve "Total vendido: 4150 cêntimos". Com 0 dias, o total é 0, que está certo.
 
-Há dois erros clássicos com totalizadores, e os dois são erros de inicialização.
-
-O primeiro é esquecer a inicialização, apagando a linha `int totalVendas = 0`. Na primeira iteração, o algoritmo tenta calcular `totalVendas + vendasDoDia` com um `totalVendas` que nunca recebeu valor. É o erro do guia 02, uma variável usada antes de receber valor, agora dentro de um ciclo. O trace para nessa linha. Não se consegue somar 1250 a uma caixa vazia. Com 0 dias não há iterações, e o erro aparece no `Escreve:` do fim, que mostra um `totalVendas` sem valor.
-
-O segundo é pôr a inicialização dentro do ciclo, com quatro espaços:
+Os erros do totalizador estão quase sempre na inicialização. Sem `int totalVendas = 0`, a primeira soma usa uma variável sem valor, como no erro do guia 02. O outro erro é pôr a inicialização dentro do ciclo:
 
 ```text
 Para dia de 1 até dias
@@ -530,7 +334,7 @@ Para dia de 1 até dias
     totalVendas = totalVendas + vendasDoDia
 ```
 
-Antes de leres a tabela, tenta prever o total que esta versão escreve, com os mesmos dados:
+Prevê o total que esta versão escreve, com os mesmos dados.
 
 | Teste | dia | vendasDoDia | totalVendas | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | --- | --- |
@@ -539,29 +343,15 @@ Antes de leres a tabela, tenta prever o total que esta versão escreve, com os m
 | 3.º | 3 | 800 | 800 | `3 <= 3` dá `true` | lê 2100 |
 | 4.º | 4 | 2100 | 2100 | `4 <= 3` dá `false` | o ciclo termina |
 
-Repara na primeira linha. Como a inicialização saiu de antes do ciclo, o total ainda não tem valor no primeiro teste. Depois, em cada iteração, o total volta a zero antes de se somar o valor do dia. Por isso, nunca guarda mais do que um dia. O algoritmo escreve "Total vendido: 2100 cêntimos", que são só as vendas do último dia. A regra a fixar é que o que se inicializa dentro do ciclo recomeça em cada iteração. Os contadores e os totalizadores inicializam-se sempre antes do ciclo, sem indentação.
-
-Os três erros de inicialização que viste, o do contador e os dois do totalizador, apanham-se com casos de teste diferentes. Um contador que começa em 1 diz que houve um pedido num dia sem pedidos. Um totalizador sem inicialização usa uma variável sem valor, na primeira soma ou, sem nenhuma iteração, no `Escreve:` do fim. O caso de zero voltas apanha estes dois. Com um só valor, a inicialização dentro do ciclo até dá o total certo. Vê-se com dois ou mais valores, e também com zero, porque aí o total chega ao `Escreve:` do fim sem valor.
-
-Com um totalizador e um contador no mesmo ciclo consegues calcular médias: a soma a dividir pelo número de valores. Vais precisar de cuidado com o caso em que o contador fica em zero, porque não se pode dividir por zero.
+O total volta a 0 em cada iteração, e o algoritmo escreve "Total vendido: 2100 cêntimos", só o último dia. O que se inicializa dentro do ciclo recomeça em cada iteração.
 
 ## Padrão sentinela
 
-Volta ao problema dos pedidos de uma papelaria. O funcionário vai escrevendo as quantidades dos pedidos à medida que chegam, e ninguém sabe, antes de o ciclo começar, quantos vão ser. Não há um número de dias para ler no início. O `Para` não serve.
+Num armazém, um funcionário regista o peso, em quilogramas, de cada caixa descarregada de um camião, e ninguém sabe quantas caixas vêm. Não há um número para pôr no `até`, e o `Para` não serve.
 
-A solução é combinar um valor especial que quer dizer "acabou". Quem escreve os dados escreve esse valor no fim, e o algoritmo, quando o lê, sabe que não há mais dados. A este valor chama-se **sentinela**. É como a última pessoa de uma fila levar uma placa a dizer "sou a última". Quem atende não precisa de contar a fila, só precisa de parar quando vir a placa.
+Combina-se um valor que quer dizer "acabou", escrito no fim dos dados. Esse valor chama-se **sentinela**, e nunca pode ser um dado verdadeiro: aqui é o 0, porque nenhuma caixa pesa 0 kg. A pergunta diz qual é, e o algoritmo guarda-o numa constante, `SENTINELA`.
 
-A sentinela tem de cumprir duas regras. Não pode ser um valor que os dados verdadeiros possam ter. Se fosse, o algoritmo pararia no meio dos dados. E quem escreve os dados tem de saber qual é, e por isso a pergunta do `Escreve:` diz-lho. Nos algoritmos destes guias, a sentinela é uma constante com nome, `SENTINELA`, para o algoritmo dizer o que ela é.
-
-Um ciclo com sentinela tem sempre esta forma, e cada peça tem uma razão:
-
-- A inicialização inclui ler o primeiro valor antes do ciclo. Chama-se **leitura antecipada** a esta leitura antes do ciclo.
-- A condição é "o valor lido não é a sentinela".
-- O corpo trata o valor e, como última instrução, ainda indentada, lê o valor seguinte. Essa leitura no fim do corpo é a atualização, porque é ela que muda a variável da condição.
-
-Porquê ler antes do ciclo e no fim do corpo, e não no princípio do corpo? Porque cada valor tem de passar pela condição antes de ser tratado. Com esta forma, o valor lido vai sempre direto para o teste. Se for um dado, entra no corpo e é tratado. Se for a sentinela, a condição dá falso e o ciclo termina, sem a sentinela ter sido tratada como um dado.
-
-Exemplo. Num armazém, um funcionário regista o peso, em quilogramas, de cada caixa descarregada de um camião, e escreve 0 quando o camião fica vazio. Nenhuma caixa pesa 0 kg, e por isso o 0 serve de sentinela. No fim, o algoritmo diz quantas caixas foram descarregadas e quanto pesam ao todo. Vamos chamar-lhe `SomarCaixas`:
+O primeiro valor lê-se antes do ciclo, na **leitura antecipada**, e o corpo acaba a ler o valor seguinte. Assim, cada valor vai direto ao teste, e a sentinela termina o ciclo sem ser tratada como dado. O algoritmo `SomarCaixas` conta as caixas e soma o peso:
 
 ```text
 const SENTINELA = 0
@@ -578,11 +368,7 @@ Escreve: "Caixas descarregadas: ", caixas
 Escreve: "Peso total: ", pesoTotal, " kg"
 ```
 
-Leitura guiada: começa pelas duas inicializações e pela leitura antecipada, e só depois desce para o `Enquanto`. Repara que as duas leituras não se escrevem da mesma maneira. A primeira, antes do ciclo, é a linha onde o `peso` aparece pela primeira vez, e por isso leva o tipo: `int peso = ler valor`. A do fim do corpo usa uma variável que já existe, e por isso não o leva: `peso = ler valor`. Fazem as duas a mesma coisa, que é pedir um valor e guardá-lo em `peso`. E repara na margem da segunda. Tem quatro espaços, como as outras linhas do corpo, porque tem de se executar em todas as iterações.
-
-Tens aqui um contador (`caixas`) e um totalizador (`pesoTotal`) no mesmo ciclo.
-
-Antes de leres a tabela, tenta prever o que o algoritmo escreve com os pesos 18, 25, 7 e, no fim, a sentinela 0. Esta é a tabela de iterações, sem as perguntas:
+A leitura antecipada leva o tipo, porque `peso` nasce aí; a do fim do corpo já não o leva. Com os pesos 18, 25 e 7, e no fim o 0:
 
 | Teste | peso | caixas | pesoTotal | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | --- | --- |
@@ -591,9 +377,9 @@ Antes de leres a tabela, tenta prever o que o algoritmo escreve com os pesos 18,
 | 3.º | 7 | 2 | 43 | `7 != 0` dá `true` | lê 0 |
 | 4.º | 0 | 3 | 50 | `0 != 0` dá `false` | o ciclo termina |
 
-Três iterações e quatro testes, e o ecrã acaba com "Caixas descarregadas: 3" e "Peso total: 50 kg". A sentinela aparece no último teste, faz a condição dar falso, e nada é feito com ela. Não é contada nem somada. Se o primeiro valor escrito for logo 0, porque o camião vinha vazio, o ciclo tem zero iterações. O algoritmo escreve 0 caixas e 0 kg. É o caso de zero voltas, e a resposta está certa.
+O ecrã mostra "Caixas descarregadas: 3" e "Peso total: 50 kg". Se o camião vier vazio, o algoritmo escreve 0 caixas e 0 kg.
 
-Agora o erro que este padrão existe para evitar. Quem ainda não conhece a leitura antecipada costuma pôr a leitura no princípio do corpo. Como a condição precisa de um valor no primeiro teste, inventa um valor qualquer para o peso, só para entrar no ciclo:
+Quem não conhece a leitura antecipada põe a leitura no princípio do corpo e inventa um peso para entrar no ciclo:
 
 ```text
 const SENTINELA = 0
@@ -609,7 +395,7 @@ Escreve: "Caixas descarregadas: ", caixas
 Escreve: "Peso total: ", pesoTotal, " kg"
 ```
 
-Antes de leres a tabela, tenta prever quantas caixas esta versão conta, com os mesmos dados:
+Prevê quantas caixas esta versão conta, com os mesmos pesos.
 
 | Teste | peso | caixas | pesoTotal | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | --- | --- |
@@ -619,32 +405,28 @@ Antes de leres a tabela, tenta prever quantas caixas esta versão conta, com os 
 | 4.º | 7 | 3 | 50 | `7 != 0` dá `true` | lê 0 |
 | 5.º | 0 | 4 | 50 | `0 != 0` dá `false` | o ciclo termina |
 
-O algoritmo escreve "Caixas descarregadas: 4", quando foram três. Na quarta iteração, o 0 foi lido e, antes de a condição o poder testar, foi contado como caixa e somado ao peso. O peso total dá 50, que está certo, mas só por coincidência: somar 0 não muda nada. Se a sentinela fosse -1, a mesma versão errada somava também o -1, e o peso total dava 49. Um algoritmo que acerta por coincidência está errado na mesma. O próprio `int peso = 1` já era um sinal de alarme. É um valor inventado, que não vem de lado nenhum, só para convencer a condição a deixar entrar.
+O algoritmo escreve "Caixas descarregadas: 4", quando foram três: o 0 foi contado antes de a condição o testar. O peso total só está certo por coincidência, porque somar 0 não muda nada. O `int peso = 1` já era um sinal de alarme, um valor inventado para entrar no ciclo.
 
 ## Padrão validação repetida
 
-No guia 03 aprendeste a validar uma entrada com um `Se`. Se o valor for inválido, escreve-se uma mensagem. Mas depois dessa mensagem o algoritmo ficava sem um valor válido para trabalhar, e a única coisa que podia fazer era terminar. Quem se enganou tinha de começar tudo de novo.
+No guia 03, uma entrada inválida terminava o algoritmo. Rever: [Validar os dados antes de os usar](03-decisoes-e-validacao.md#validar-os-dados-antes-de-os-usar).
 
-Com um ciclo, dá para fazer melhor: pedir o valor outra vez, e outra, até ser válido. A isto chama-se **validação repetida**. É um ciclo cuja condição é "o valor é inválido", e cujo corpo escreve uma mensagem de erro e lê o valor outra vez.
-
-Exemplo. A papelaria só aceita pedidos de 1 a 50 unidades. O algoritmo, a que vamos chamar `PedirQuantidadeValida`, pede a quantidade até ela estar nesse intervalo:
+Com um ciclo, pede-se o valor outra vez, até ser válido. É a **validação repetida**: a condição do ciclo diz que o valor é inválido, e o corpo volta a pedi-lo. A papelaria só aceita pedidos de 1 a 50 unidades:
 
 ```text
 const QUANTIDADE_MINIMA = 1
-const CAPACIDADE_MAXIMA = 50
+const QUANTIDADE_MAXIMA = 50
 Escreve: "Quantidade do pedido (1 a 50)?"
 int quantidade = ler valor
-Enquanto quantidade < QUANTIDADE_MINIMA ou quantidade > CAPACIDADE_MAXIMA
+Enquanto quantidade < QUANTIDADE_MINIMA ou quantidade > QUANTIDADE_MAXIMA
     Escreve: "Quantidade inválida. Escreve um número de 1 a 50."
     quantidade = ler valor
 Escreve: "Pedido aceite: ", quantidade, " unidades"
 ```
 
-Leitura guiada: as três peças, uma a uma. A inicialização é a primeira leitura, antes do ciclo, como na sentinela. A condição é a de valor inválido, que no guia 03 aprendeste a escrever como o contrário do intervalo, com `ou`. A quantidade é inválida se estiver abaixo do mínimo ou acima do máximo. A atualização é a leitura dentro do corpo, `quantidade = ler valor`, que substitui o valor inválido por um valor novo.
+É o algoritmo `PedirQuantidadeValida`. A condição é o contrário do intervalo, com `ou`, e a mensagem diz o que se pode escrever.
 
-A mensagem de erro diz o intervalo. Quem se enganou fica a saber o que tem de escrever, e não apenas que errou.
-
-Antes de leres a tabela, tenta prever quantas vezes aparece a mensagem de erro quando a pessoa escreve 0, depois 75 e depois 12. Esta é a tabela de iterações:
+Prevê quantas vezes aparece a mensagem de erro quando a pessoa escreve 0, depois 75 e depois 12.
 
 | Teste | quantidade | Condição | Durante a iteração |
 | --- | ---: | --- | --- |
@@ -652,70 +434,104 @@ Antes de leres a tabela, tenta prever quantas vezes aparece a mensagem de erro q
 | 2.º | 75 | `75 < 1 ou 75 > 50` dá `true` | escreve "Quantidade inválida. Escreve um número de 1 a 50."; lê 12 |
 | 3.º | 12 | `12 < 1 ou 12 > 50` dá `false` | o ciclo termina |
 
-A mensagem de erro aparece duas vezes, e no fim o ecrã mostra "Pedido aceite: 12 unidades".
+A mensagem aparece duas vezes, e o ecrã acaba com "Pedido aceite: 12 unidades". Se a pessoa escrever logo 12, o ciclo tem zero iterações e não aparece nenhuma mensagem.
 
-E quando a pessoa escreve logo um valor válido, 12:
+Na linha a seguir ao ciclo, a condição acabou de dar `false`. Por isso, a quantidade está de certeza entre 1 e 50, e o resto do algoritmo usa-a sem voltar a verificar. Vale para todos os ciclos: depois de um ciclo, a sua condição é falsa.
 
-| Teste | quantidade | Condição | Durante a iteração |
-| --- | ---: | --- | --- |
-| 1.º | 12 | `12 < 1 ou 12 > 50` dá `false` | o ciclo termina |
-
-Neste segundo caso, o ciclo nunca começa, e está certo. Não há nada a corrigir, e não aparece nenhuma mensagem de erro.
-
-Este ciclo é diferente dos anteriores num ponto. O número de iterações não depende do algoritmo, depende da pessoa. Se ela escrever valores inválidos durante uma hora, o ciclo repete-se durante uma hora. Isso não é um ciclo infinito. O ciclo termina assim que aparecer um valor válido, e a atualização, a leitura, existe em todas as iterações.
-
-O mais útil deste padrão está no que acontece depois do ciclo, a partir da primeira linha sem indentação. Quando o algoritmo lá chega, a condição do ciclo acabou de dar falso. Por isso, tens a certeza de que a quantidade está entre 1 e 50. O resto do algoritmo pode usá-la sem voltar a verificar. É uma ideia que vale para todos os ciclos. Depois de um ciclo, a sua condição é falsa, e isso diz-te alguma coisa sobre o estado.
-
-O erro típico deste padrão é escrever no `Enquanto` a condição de valor válido, em vez da de valor inválido:
+O erro típico é escrever no `Enquanto` a condição de valor válido:
 
 ```text
-Enquanto quantidade >= QUANTIDADE_MINIMA e quantidade <= CAPACIDADE_MAXIMA
+Enquanto quantidade >= QUANTIDADE_MINIMA e quantidade <= QUANTIDADE_MAXIMA
 ```
 
-O algoritmo faz o contrário do que devia. Quando a pessoa escreve 12, que é válido, aparece "Quantidade inválida" e o algoritmo pede outro valor. Se a pessoa escrever depois 30, pede outra vez. Se escrever 0, o ciclo termina e aparece "Pedido aceite: 0 unidades". O ciclo recusa os valores bons e aceita o primeiro valor mau. É o erro do ciclo que nunca começa, a condição de paragem no lugar da condição de continuação, agora numa validação. Corrige-se com a regra do `Enquanto`: a condição diz quando continuar, e numa validação continua-se enquanto o valor for inválido.
+Com 12, aparece "Quantidade inválida"; com 0, o ciclo termina e aceita-o. Numa validação, continua-se enquanto o valor for inválido.
 
-Os exemplos 7 e 8 de [intervalos e validação](../exemplos/algoritmos/intervalos-e-validacao/README.md) mostram este padrão com a temperatura de um ar condicionado. O 8 tem um engano de propósito, para descobrires.
+Os exemplos 7 e 8 de [intervalos e validação](../exemplos/algoritmos/intervalos-e-validacao/README.md) mostram este padrão com a temperatura de um ar condicionado. O 8 tem um engano de propósito.
+
+## Um ciclo dentro de outro
+
+O corpo de um ciclo pode ter outro ciclo lá dentro. O de dentro faz todas as suas iterações durante uma só iteração do de fora. O de fora só passa à linha seguinte quando o de dentro tiver acabado.
+
+A papelaria recebe dois pedidos, e cada um tem de ter de 1 a 50 unidades. A validação repetida de `PedirQuantidadeValida` fica dentro de um `Para` de dois pedidos:
+
+```text
+const QUANTIDADE_MINIMA = 1
+const QUANTIDADE_MAXIMA = 50
+const NUMERO_DE_PEDIDOS = 2
+Para pedido de 1 até NUMERO_DE_PEDIDOS
+    Escreve: "Quantidade do pedido ", pedido, " (1 a 50)?"
+    int quantidade = ler valor
+    Enquanto quantidade < QUANTIDADE_MINIMA ou quantidade > QUANTIDADE_MAXIMA
+        Escreve: "Quantidade inválida. Escreve um número de 1 a 50."
+        quantidade = ler valor
+    Escreve: "Pedido aceite: ", quantidade, " unidades"
+```
+
+O corpo do `Enquanto` tem oito espaços, porque está dentro de dois blocos. A pessoa escreve 0, 75, 12 e 30. Prevê quantas vezes aparece "Quantidade inválida", e que pedidos são aceites.
+
+| Teste | pedido | quantidade | Condição | Durante a iteração |
+| --- | ---: | ---: | --- | --- |
+| 1.º | 1 | sem valor | `1 <= 2` dá `true` | lê 0; a validação testa `0 < 1 ou 0 > 50`, que dá `true`: escreve "Quantidade inválida. Escreve um número de 1 a 50." e lê 75; testa `75 < 1 ou 75 > 50`, que dá `true`: escreve a mesma mensagem e lê 12; testa `12 < 1 ou 12 > 50`, que dá `false`, e a validação termina; escreve "Pedido aceite: 12 unidades" |
+| 2.º | 2 | 12 | `2 <= 2` dá `true` | lê 30; a validação testa `30 < 1 ou 30 > 50`, que dá `false`, e não faz nenhuma iteração; escreve "Pedido aceite: 30 unidades" |
+| 3.º | 3 | 30 | `3 <= 2` dá `false` | o ciclo termina |
+
+"Quantidade inválida" aparece duas vezes, as duas na primeira iteração do `Para`. Os dois pedidos são aceites, com 12 e 30 unidades. A tabela é a do ciclo de fora, e o que o ciclo de dentro faz escreve-se na coluna "Durante a iteração". Por isso, a validação do primeiro pedido, com duas iterações e três testes, cabe toda numa linha.
 
 ## Escolher entre Enquanto e Para
 
-A escolha faz-se com uma pergunta: "antes de o ciclo começar, já se sabe quantas vezes ele se vai repetir?" Se sim, o ciclo é contado, e usa-se `Para`. Se não, porque o fim depende de alguma coisa que só acontece durante o ciclo, como um valor lido, usa-se `Enquanto`.
-
-"Antes de o ciclo começar" é o momento em que o algoritmo chega ao ciclo, e não o momento em que escreves o algoritmo. É por isso que a terceira linha da tabela seguinte usa `Para`. Soma as vendas de um número de dias que o funcionário escreve no início. Quando escreves o algoritmo, não sabes quantos dias vão ser. Mas, quando o algoritmo chega ao ciclo, esse número já foi lido.
+Quando o algoritmo chega ao ciclo, já se sabe quantas vezes ele se vai repetir? Se sim, o ciclo é contado, e o `Para` é mais seguro. Se o fim depende do que acontece durante o ciclo, usa-se o `Enquanto`. No `TotalDeVendas`, o número de dias já foi lido quando o ciclo começa.
 
 | Situação | Ciclo | Porquê |
 | --- | --- | --- |
 | Imprimir as senhas de 1 a 100 | `Para` | Sabe-se que são 100 antes de começar |
-| Ler o stock dos 5 produtos da loja | `Para` | São sempre 5 |
 | Somar as vendas de um número de dias que o funcionário escreve no início | `Para` | O número é lido antes de o ciclo começar |
-| Ler pedidos até aparecer o 0 | `Enquanto` | Só se sabe que acabou quando aparece o 0, o valor combinado para dizer que não há mais pedidos |
+| Ler pesos até aparecer o 0 | `Enquanto` | Só se sabe que acabou quando aparece a sentinela |
 | Pedir a quantidade até ser válida | `Enquanto` | Depende do que a pessoa escrever |
-| Juntar dinheiro até chegar ao preço de um objeto | `Enquanto` | Depende dos valores que forem entrando |
 
-Todo o `Para` se pode escrever como um `Enquanto`, e viste como. O contrário não é verdade. Um ciclo que lê valores até aparecer um valor combinado para dizer que acabou não se escreve com `Para`. Um ciclo que volta a pedir um valor até ele ser válido também não. Não há um número de iterações para pôr no `até`. São os ciclos dos padrões sentinela e validação repetida. Se estiveres em dúvida, o `Enquanto` funciona sempre, mas obriga-te a escrever as três peças à mão, com mais oportunidades de errar. Quando o ciclo é contado, o `Para` é a escolha mais segura.
+Todo o `Para` se pode escrever como um `Enquanto`. O contrário não, porque a sentinela e a validação repetida não têm um número para pôr no `até`. Em todos, as três peças estão lá, em sítios diferentes:
 
-> Para saberes mais, numa leitura opcional que não sai nos exercícios. Há linguagens com um ciclo que testa a condição no fim do corpo, e não no princípio. Por isso, esse ciclo executa-se sempre pelo menos uma vez. Em alguns livros aparece escrito como `REPETIR ... ATÉ`. Neste módulo não se usa. Tudo o que ele faz consegue-se com `Enquanto`, como mostra o padrão validação repetida. E o Python, que vais aprender a seguir, também não o tem.
+| Ciclo | Inicialização | Condição | Atualização |
+| --- | --- | --- | --- |
+| Senhas, com `Enquanto` | `int senha = 1`, antes do ciclo | `senha <= ULTIMA_SENHA` | `senha = senha + 1`, no corpo |
+| Senhas, com `Para` | o `de 1` | escondida no `até` | feita pelo `Para`, no fim de cada iteração |
+| Sentinela | a leitura antecipada | o valor lido não é a sentinela | a leitura do valor seguinte, no fim do corpo |
+| Validação repetida | a primeira leitura | o valor é inválido | a leitura dentro do corpo |
+
+<details>
+<summary>Para ires mais longe: o ciclo que testa no fim</summary>
+
+Há linguagens com um ciclo que testa a condição no fim do corpo, e não no princípio. Por isso, executa-se sempre pelo menos uma vez. Em alguns livros aparece como `REPETIR ... ATÉ`. Nas aulas não se usa, porque o que ele faz consegue-se com o `Enquanto`, como na validação repetida. O Python também não o tem.
+
+</details>
 
 ## Arrays: muitos valores numa só variável
 
-Até aqui, cada variável guardava um valor. Para guardar as notas de 25 alunos, precisarias de 25 variáveis, `nota1`, `nota2`, até `nota25`. E precisarias de 25 linhas para fazer seja o que for com elas. Era o problema das cem linhas iguais do início deste guia, agora com variáveis.
+Para guardar as notas de 25 alunos, precisavas de 25 variáveis, de `nota1` a `nota25`. Somá-las, ou mostrá-las, levava 25 linhas.
 
-Um **array** é uma variável que guarda vários valores, uns a seguir aos outros, numa ordem fixa. A cada valor guardado chama-se **elemento** do array. Pensa numa fila de cacifos numerados. A fila tem um nome, e cada cacifo tem um número e guarda uma coisa. Para ires buscar o que está num cacifo, dizes o nome da fila e o número do cacifo.
-
-No pseudocódigo das aulas, um array escreve-se com os valores entre parênteses retos, separados por vírgulas, como neste exemplo:
+Um **array** é uma variável que guarda vários valores, uns a seguir aos outros, numa ordem fixa. Cada valor guardado é um **elemento** do array. Pensa numa fila de cacifos numerados: a fila tem um nome, e cada cacifo guarda uma coisa. Nas aulas, escreve-se com os valores entre parênteses retos, separados por vírgulas:
 
 ```text
 notas = [12, 8, 15]
 ```
 
-O array não leva tipo à frente, ao contrário das outras variáveis. É a forma que vais usar em Python. O nome vai no plural, porque guarda vários valores.
+O array não leva tipo à frente, e o nome vai no plural, porque guarda vários valores.
 
-Cada elemento tem uma posição, a que se chama **índice**, e os índices começam em 0. Neste array, `notas[0]` é 12, `notas[1]` é 8 e `notas[2]` é 15. Começa-se em 0 porque o índice diz quantas posições andas a partir do início, e o primeiro elemento está a zero posições do início. É assim no Python, e por isso usamos já esta regra. A consequência é que, num array com `n` elementos, o último índice é `n - 1`. Este array tem 3 elementos, e o último índice é o 2.
+## O índice de cada elemento
 
-Um elemento usa-se como qualquer variável: numa conta, numa condição, num `Escreve:`, ou a receber um valor novo, como em `notas[1] = 10`. E `notas[3]`? Não existe. Usar um índice que não existe chama-se **índice fora do array**, e é um dos erros mais frequentes com arrays.
+Para ires buscar o que está num cacifo, dizes o número dele. Num array, a posição de cada elemento chama-se **índice**, e os índices começam em 0:
+
+```text
+notas    [ 12 |  8 | 15 ]
+índice      0    1    2
+```
+
+`notas[0]` é 12, `notas[1]` é 8 e `notas[2]` é 15. O índice diz quantas posições andas desde o início. Por isso, num array com `n` elementos, o último índice é `n - 1`: aqui, é o 2.
+
+Um elemento usa-se como qualquer variável, numa conta, numa condição ou a receber um valor, como em `notas[1] = 10`. E `notas[3]`? Não existe. Usar um índice que não existe chama-se índice fora do array, e é um dos erros mais frequentes com arrays.
 
 ## Percorrer um array com o índice
 
-**Percorrer** um array é passar por todos os elementos, um a um, e fazer alguma coisa com cada um. A forma mais direta usa o `Para`, com a variável de controlo a servir de índice, de 0 até ao último índice:
+Passar por todos os elementos, um a um, e fazer alguma coisa com cada um chama-se **percorrer** o array. A forma mais direta usa o `Para`, com a variável de controlo a servir de índice. O número de elementos fica numa constante:
 
 ```text
 const N_NOTAS = 3
@@ -725,35 +541,44 @@ Para i de 0 até N_NOTAS - 1
     Escreve: "Nota ", i + 1, ": ", notas[i]
 ```
 
-Antes de leres a explicação, tenta prever o que aparece no ecrã.
+A condição escondida do `Para` é `i <= N_NOTAS - 1`, ou seja, `i <= 2`:
 
-Em cada iteração, `i` vale um índice diferente, de 0 a 2, e `notas[i]` é o elemento nessa posição. O ecrã mostra "Nota 1: 12", "Nota 2: 8" e "Nota 3: 15". O `i + 1` do `Escreve:` está lá porque o índice começa em 0, mas para as pessoas a primeira nota é a nota 1.
+| Teste | i | Condição | notas[i] | Durante a iteração |
+| --- | ---: | --- | ---: | --- |
+| 1.º | 0 | `0 <= 2` dá `true` | 12 | escreve "Nota 1: 12" |
+| 2.º | 1 | `1 <= 2` dá `true` | 8 | escreve "Nota 2: 8" |
+| 3.º | 2 | `2 <= 2` dá `true` | 15 | escreve "Nota 3: 15" |
+| 4.º | 3 | `3 <= 2` dá `false` | não se usa | o ciclo termina |
 
-O `Para` vai até `N_NOTAS - 1`, e não até `N_NOTAS`, porque o último índice válido é o 2. Até ao 3, o ciclo dava mais uma iteração, e `notas[3]` é um índice fora do array. O número de elementos está numa constante porque, no pseudocódigo das aulas, ainda não aprendemos a perguntar a um array quantos elementos tem.
+Em cada iteração, `notas[i]` é o elemento da posição `i`. O `i + 1` está no `Escreve:` porque, para as pessoas, a primeira nota é a nota 1. Com o `Para` até `N_NOTAS`, havia uma quarta iteração, com `notas[3]`, fora do array.
 
 ## Percorrer um array com o para cada
 
-Muitas vezes não interessa a posição de cada elemento, só o seu valor. Para esses casos há uma forma mais simples, o **para cada**:
+Muitas vezes, a posição de cada elemento não interessa, só o valor. Para esses casos há o **para cada**. Para somar as notas:
 
 ```text
 notas = [12, 8, 15]
+int soma = 0
 Para cada nota em notas
-    Escreve: "Nota: ", nota
+    soma = soma + nota
+Escreve: "Soma das notas: ", soma
 ```
 
-Antes de leres a explicação, tenta prever o que aparece no ecrã.
+Lê-se "para cada nota no array das notas, soma-a". Em cada iteração, a variável `nota` recebe o elemento seguinte, e o ciclo acaba sozinho quando os elementos se esgotam. Não há índice, nem condição a escrever, nem risco de usar um índice fora do array. A variável não leva tipo, e costuma ter o nome do array no singular.
 
-Lê-se "para cada nota no array das notas, escreve-a". Em cada iteração, a variável `nota` recebe o elemento seguinte: na primeira vale 12, na segunda 8, na terceira 15. O ecrã mostra "Nota: 12", "Nota: 8" e "Nota: 15". O ciclo dá tantas iterações quantos os elementos, e acaba sozinho quando eles se esgotam. Não há índice, não há condição a escrever, e não há como sair do array. A variável não leva tipo, como a do `Para`, e costuma ter o nome do array no singular, para se ler como uma frase.
+Como não há condição escrita, a tabela de iterações do para cada tem uma linha por iteração, com os valores no fim dessa iteração:
 
-Os padrões deste guia funcionam igual com o para cada. Para somar as notas, por exemplo, o totalizador começa em 0 antes do ciclo e, dentro dele, faz `soma = soma + nota`.
+| Iteração | nota | soma no fim da iteração |
+| --- | ---: | ---: |
+| 1.ª | 12 | 12 |
+| 2.ª | 8 | 20 |
+| 3.ª | 15 | 35 |
+
+O ecrã mostra "Soma das notas: 35". O totalizador funciona como num `Para`: começa em 0 antes do ciclo e soma a variável do para cada.
 
 ## O para cada não muda o array
 
-Há uma coisa que o para cada não faz, e que engana quase toda a gente da primeira vez.
-
-Em cada iteração, a variável do para cada recebe uma **cópia** do valor do elemento, e não o próprio elemento. Mudar a variável muda a cópia, e o array fica como estava. A esta forma de percorrer um array, em que cada iteração trabalha com uma cópia do valor, chama-se **percorrer por valor**. Percorrer com o `Para` e o índice, em que cada iteração trabalha diretamente na posição do array, chama-se **percorrer por índice**.
-
-O exemplo seguinte mostra a diferença. O professor decidiu dar mais um valor a todas as notas de um teste. O algoritmo tem de aumentar 1 a cada nota do array.
+O professor decidiu dar mais um valor a todas as notas de um teste. O algoritmo tem de aumentar 1 a cada nota do array.
 
 ### Primeira tentativa, com o para cada
 
@@ -764,7 +589,7 @@ Para cada nota em notas
 Escreve: notas[0], " ", notas[1], " ", notas[2]
 ```
 
-Antes de leres o trace, prevê o que aparece no ecrã. O trace tem uma coluna para a `nota` e outra para o array `notas`, lado a lado:
+Prevê as três notas que o algoritmo escreve. O trace tem a variável `nota` e o array `notas` lado a lado:
 
 | Passo | Instrução executada | nota | notas | Ecrã |
 | ---: | --- | ---: | --- | --- |
@@ -779,9 +604,15 @@ Antes de leres o trace, prevê o que aparece no ecrã. O trace tem uma coluna pa
 | 8 | para cada: não há mais elementos, o ciclo termina | 16 | [12, 8, 15] | nada |
 | 9 | `Escreve:` das três notas | 16 | [12, 8, 15] | 12 8 15 |
 
-A coluna `nota` muda três vezes. A coluna `notas` nunca muda. O algoritmo corre até ao fim, sem nada de errado na escrita, e não fez o que se pedia. As notas continuam 12, 8 e 15.
+A coluna `nota` muda três vezes, e a coluna `notas` nunca muda: as notas continuam 12, 8 e 15. A variável do para cada recebe uma cópia do valor do elemento, e não o próprio elemento. Na 1.ª iteração:
 
-Faz esta pergunta. No passo 3, a `nota` passou a valer 13. Qual das três notas do array passou a 13? Nenhuma. A `nota` é uma cópia, e uma cópia não sabe de que posição veio. Por isso, mesmo que quisesse, não conseguia mudar o elemento certo. Para mudar um elemento do array, o algoritmo precisa de saber a sua posição, e isso é o índice.
+```mermaid
+graph LR
+    A["notas = [12, 8, 15]"] -- "cópia de notas[0]" --> B["nota = 12"]
+    B -- "nota = nota + 1" --> C["nota = 13"]
+```
+
+O 12 vai do array para a variável, e a soma muda só a variável: nada volta ao array. A cópia não sabe de que posição veio, e para mudar um elemento é preciso o índice.
 
 ### A versão certa, com o índice
 
@@ -794,9 +625,7 @@ Para i de 0 até N_NOTAS - 1
 Escreve: notas[0], " ", notas[1], " ", notas[2]
 ```
 
-Antes de leres o trace, prevê outra vez o que aparece no ecrã.
-
-Aqui não há variável `nota`. Em cada iteração, o algoritmo lê o elemento da posição `i`, soma-lhe 1 e escreve o resultado na mesma posição. No trace, a linha do `Para` mostra a condição escondida, `i <= N_NOTAS - 1`, que com a constante a valer 3 é `i <= 2`:
+Em cada iteração, o algoritmo lê o elemento da posição `i`, soma-lhe 1 e guarda o resultado na mesma posição:
 
 | Passo | Instrução executada | i | Condição e resultado | notas | Ecrã |
 | ---: | --- | ---: | --- | --- | --- |
@@ -811,36 +640,23 @@ Aqui não há variável `nota`. Em cada iteração, o algoritmo lê o elemento d
 | 8 | volta ao `Para`: `i` passa a 3 | 3 | `3 <= 2` dá `false`: o ciclo termina | [13, 9, 16] | nada |
 | 9 | `Escreve:` das três notas | 3 | nenhuma | [13, 9, 16] | 13 9 16 |
 
-Agora é a coluna `notas` que muda, um elemento por iteração. Repara no passo 8, o teste que dá falso. É ele que faz o ciclo ter exatamente três iterações, uma por cada índice válido. Quando `i` chega a 3, o ciclo termina sem nunca usar `notas[3]`, que não existe. Há quatro testes e três iterações, um teste a mais do que as iterações, como em todos os ciclos com condição deste guia.
+Agora é a coluna `notas` que muda, um elemento por iteração, e o ecrã mostra "13 9 16".
 
-### Usar o valor como se fosse a posição
-
-Quem percebe que é preciso o array, mas continua com o para cada, escreve às vezes isto:
-
-```text
-Para cada nota em notas
-    notas[nota] = nota + 1
-```
-
-Na primeira iteração, a `nota` vale 12, e o algoritmo tenta escrever em `notas[12]`. Num array com três elementos, os índices válidos são 0, 1 e 2. O 12 é um índice fora do array. O erro está em usar o valor de um elemento como se fosse a sua posição. São duas coisas diferentes: em `notas = [12, 8, 15]`, o elemento de índice 0 vale 12.
-
-### A regra prática
-
-Quando só precisas de ler os elementos, para os somar, contar, comparar ou mostrar, percorre por valor, com o para cada. Quando precisas de mudar os elementos do array, percorre por índice, com o `Para` e o índice.
+Para ler os elementos, para os somar, contar ou mostrar, usa o para cada. Para os mudar, usa o `Para` e o índice.
 
 ## Padrão flag
 
-Os padrões que já viste respondem a perguntas com números: o contador responde a "quantos?" e o totalizador responde a "quanto?". Há uma terceira pergunta, que aparece tantas vezes como estas: "aconteceu alguma vez?". Há algum produto sem stock? Algum aluno faltou ao teste? Alguma encomenda passa do peso máximo? A resposta não é um número, é sim ou não.
+Há algum produto sem stock? Esta pergunta responde-se com sim ou não: aconteceu alguma vez?
 
-Para responder, usa-se uma **flag**, uma palavra inglesa que quer dizer bandeira. Uma flag é uma variável `bool` que guarda se uma coisa já aconteceu. Pensa numa bandeira num mastro. Começa em baixo e, no momento em que alguém vê o que se procura, é içada. Daí para a frente fica no alto, aconteça o que acontecer. Quem chega no fim só tem de olhar para o mastro para saber se a coisa aconteceu. A flag segue três regras, parecidas com as do contador:
+Para responder, usa-se uma **flag**, palavra inglesa que quer dizer bandeira. É uma variável `bool` que guarda se uma coisa já aconteceu. Pensa numa bandeira num mastro: começa em baixo, é içada quando alguém vê o que se procura, e fica no alto. Ao lado do contador e do totalizador:
 
-1. Começa com o valor de "ainda não aconteceu", `false`, antes do ciclo. Antes de se olhar para qualquer valor, ainda não se viu nada.
-2. Quando a coisa acontece, passa a `true`, dentro de um `Se`. Nunca volta a `false` dentro do ciclo.
-3. Só se lê depois do ciclo, quando todos os valores já foram vistos.
+| Padrão | Responde a | Começa, antes do ciclo | Dentro do ciclo | Lê-se |
+| --- | --- | --- | --- | --- |
+| Contador | quantos? | `0` | soma 1 | depois do ciclo |
+| Totalizador | quanto? | `0` | soma o valor | depois do ciclo |
+| Flag | aconteceu alguma vez? | `false` | passa a `true` dentro de um `Se`, e nunca volta a `false` | depois do ciclo |
 
-O nome de uma flag escreve-se como a pergunta a que ela responde com `true`: `haProdutoSemStock`, `alguemFaltou`, `encontrado`. Assim, quando se lê o algoritmo, `Se haProdutoSemStock` diz-se "se há um produto sem stock".
-
-Exemplo. A loja do padrão contador guardou num array o stock de quatro dos seus produtos. Quer saber se há algum esgotado, isto é, com stock 0. O algoritmo, a que vamos chamar `HaProdutoSemStock`, percorre o array com o para cada, porque só precisa de ler os valores:
+O nome da flag é a pergunta, e `true` quer dizer sim. Por isso, entra sozinha numa condição, como o `pago` do guia 03: `Se haProdutoSemStock` lê-se "se há um produto sem stock". O algoritmo `HaProdutoSemStock` percorre o stock de quatro produtos com o para cada, porque só precisa de ler os valores:
 
 ```text
 stocks = [12, 0, 9, 7]
@@ -854,12 +670,6 @@ Senão
     Escreve: "Todos os produtos têm stock"
 ```
 
-Antes de leres a explicação, tenta prever o que aparece no ecrã.
-
-Leitura guiada: a flag nasce antes do ciclo, com o tipo `bool` à frente e o valor `false`. Dentro do ciclo, a linha que a muda está dentro do `Se`, com oito espaços. A bandeira só é içada quando o stock é 0. O `Se` do fim, sem indentação, está depois do ciclo, e é só aí que se sabe a resposta. Como a flag já vale `true` ou `false`, ela própria serve de condição. Escrever `Se haProdutoSemStock` dá o mesmo que `Se haProdutoSemStock == true`, e as duas formas estão certas.
-
-O para cada não tem uma condição escrita. Por isso, a tabela de iterações deste ciclo tem uma linha por iteração. Cada linha mostra o elemento que a variável recebe, a condição do `Se` e o valor da flag no fim da iteração:
-
 | Iteração | stock | `stock == 0` | haProdutoSemStock no fim da iteração |
 | --- | ---: | --- | --- |
 | 1.ª | 12 | `false` | `false` |
@@ -867,15 +677,11 @@ O para cada não tem uma condição escrita. Por isso, a tabela de iterações d
 | 3.ª | 9 | `false` | `true` |
 | 4.ª | 7 | `false` | `true` |
 
-Depois do ciclo, a flag vale `true`, e o ecrã mostra "Há pelo menos um produto sem stock". Repara nas iterações 3 e 4. O stock já não é 0, e a flag continua `true`. É a regra 2: a bandeira, depois de içada, não desce.
-
-A flag não diz qual foi o produto, nem quantos foram. Diz só que aconteceu. Se a pergunta fosse "quantos produtos estão sem stock?", a resposta pedia um contador. Escolhe a flag quando a pergunta se responde com sim ou não, e o contador quando se responde com um número.
-
-A flag também não precisa de um array. Funciona da mesma maneira num `Para` que lê um valor em cada iteração, ou num ciclo com sentinela. Começa `false` antes do ciclo, passa a `true` dentro de um `Se` e lê-se depois.
+O ecrã mostra "Há pelo menos um produto sem stock". Nas iterações 3 e 4, a flag continua `true`: depois de içada, a bandeira não desce. A flag não diz quantos foram; para isso, usa-se um contador.
 
 ### Um `Senão` que baixa a bandeira
 
-O erro mais frequente com flags é este:
+O erro mais frequente com flags é acrescentar um `Senão`:
 
 ```text
 Para cada stock em stocks
@@ -885,113 +691,126 @@ Para cada stock em stocks
         haProdutoSemStock = false
 ```
 
-Antes de leres a explicação, tenta prever o que escreve esta versão com o array `[12, 0, 9, 7]`.
+Prevê o que escreve esta versão com o array `[12, 0, 9, 7]`.
 
-Parece mais completo, com um ramo para cada caso, mas está errado. Agora a bandeira é içada no 0 e desce logo a seguir, no 9. No fim, só diz se o último produto está sem stock. Com o array `[12, 0, 9, 7]`, a flag acaba `false`. O algoritmo escreve "Todos os produtos têm stock", com toda a confiança, quando há um produto esgotado.
-
-O erro só aparece quando o valor procurado não é o último. Com `[12, 9, 7, 0]`, as duas versões dão a mesma resposta, e quem testar só com esse array não dá por nada. Por isso, para testar um algoritmo com uma flag, escolhe pelo menos três casos:
+A bandeira é içada no 0 e desce logo no 9, e o algoritmo escreve "Todos os produtos têm stock". Com `[12, 9, 7, 0]`, as duas versões dão o mesmo, e esse teste não apanha o erro. Para testar uma flag, escolhe três casos:
 
 - um em que nenhum valor cumpre a condição, e a flag tem de acabar `false`;
-- um em que o valor procurado aparece no início ou no meio, seguido de valores que não cumprem, o caso que apanha este erro;
+- um em que o valor procurado aparece no início ou no meio, seguido de valores que não cumprem;
 - um em que só o último valor cumpre.
 
-### A resposta escrita dentro do ciclo
+A resposta a "há algum?" escreve-se depois do ciclo. Com um `Escreve:` num `Senão` dentro do ciclo, aparecia "Todos os produtos têm stock" logo no 12, antes de se ver o 0.
 
-Outro engano é escrever a resposta dentro do ciclo. Com um `Escreve:` dentro do `Se`, a frase aparecia uma vez por cada produto sem stock. Com um `Escreve:` num `Senão`, aparecia "Todos os produtos têm stock" a meio do array, antes de se verem os outros produtos. A resposta a "há algum?" só se sabe depois de ver todos os valores, como o resultado final de um contador. Por isso, escreve-se depois do ciclo.
+<details>
+<summary>Para ires mais longe: Parar e Continuar</summary>
 
-## Quando já estiveres à vontade: o Para com as três peças à vista
+São duas instruções que mudam o caminho de um ciclo a meio de uma iteração. Escrevem-se sozinhas numa linha, quase sempre dentro de um `Se`.
 
-Lê esta secção depois de teres feito os exercícios da ficha com o `Para`, e não antes. Na aula, o professor apresenta-a quando a turma já estiver à vontade com a forma `Para i de 1 até n`. Os exercícios da ficha continuam todos nessa primeira forma, e é essa que deves usar neles. Se é a primeira vez que lês o guia, passa já ao exemplo guiado, que vem a seguir a esta secção.
+`Parar` termina o ciclo imediatamente. Serve, por exemplo, para deixar de procurar quando já se encontrou o que se procurava:
 
-### A mesma repetição, com as três peças escritas
+```text
+stocks = [12, 0, 9, 7]
+bool haProdutoSemStock = false
+Para cada stock em stocks
+    Se stock == 0
+        haProdutoSemStock = true
+        Parar
+```
 
-No `Para i de 1 até n`, duas das três peças estão escondidas na primeira linha, e a terceira nem se escreve. Há outra maneira de escrever o `Para`, muito usada em várias linguagens de programação. Nessa maneira, as três peças ficam todas escritas na primeira linha, separadas por vírgulas:
+Com este array, o ciclo dá duas iterações. No 0, a flag é içada, e o `Parar` sai do ciclo sem olhar para o 9 e para o 7. A resposta é a mesma do padrão flag, com menos iterações.
+
+`Continuar` termina só a iteração atual, e o ciclo passa à seguinte. Este algoritmo soma as vendas de uma semana e põe de lado os valores negativos, que são enganos de escrita:
+
+```text
+vendas = [5, -2, 8, -1, 4]
+int total = 0
+Para cada venda em vendas
+    Se venda < 0
+        Continuar
+    total = total + venda
+Escreve: "Total das vendas: ", total
+```
+
+O total é 5 + 8 + 4, que dá 17. Num `Enquanto`, há um cuidado: se a atualização estiver abaixo do `Continuar`, também é saltada, e o ciclo pode nunca acabar.
+
+</details>
+
+## Um ciclo com duas maneiras de acabar
+
+Até aqui, cada ciclo acabava por uma razão: a contagem chegava ao fim, aparecia a sentinela ou o valor ficava válido. Há ciclos que podem acabar por duas. A papelaria quer saber se algum de 5 produtos está sem stock, e deixa de perguntar logo que encontra um.
+
+Pensa primeiro em quando o ciclo para: quando encontra um produto sem stock, ou quando já perguntou pelos 5. A condição do `Enquanto` diz quando continuar, e por isso é o contrário. O `ou` passa a `e`, e cada parte passa à sua contrária. Rever: [O contrário de um intervalo](03-decisoes-e-validacao.md#o-contrário-de-um-intervalo).
+
+```text
+const NUMERO_DE_PRODUTOS = 5
+int produto = 1
+bool haProdutoSemStock = false
+Enquanto produto <= NUMERO_DE_PRODUTOS e não haProdutoSemStock
+    Escreve: "Stock do produto ", produto, "?"
+    int stock = ler valor
+    Se stock == 0
+        haProdutoSemStock = true
+    produto = produto + 1
+Se haProdutoSemStock
+    Escreve: "Há pelo menos um produto sem stock"
+Senão
+    Escreve: "Todos os produtos têm stock"
+```
+
+Com os stocks 12, 0, 9, 7 e 4, o ciclo para depois do segundo produto. O 9, o 7 e o 4 nem são pedidos. Prevê porque é que o ciclo para com os stocks 12, 9, 7, 4 e 0.
+
+| Teste | produto | stock | haProdutoSemStock | Condição | Durante a iteração |
+| --- | ---: | ---: | --- | --- | --- |
+| 1.º | 1 | sem valor | `false` | `1 <= 5 e não false` dá `true` | lê 12 |
+| 2.º | 2 | 12 | `false` | `2 <= 5 e não false` dá `true` | lê 9 |
+| 3.º | 3 | 9 | `false` | `3 <= 5 e não false` dá `true` | lê 7 |
+| 4.º | 4 | 7 | `false` | `4 <= 5 e não false` dá `true` | lê 4 |
+| 5.º | 5 | 4 | `false` | `5 <= 5 e não false` dá `true` | lê 0; `haProdutoSemStock` passa a `true` |
+| 6.º | 6 | 0 | `true` | `6 <= 5 e não true` dá `false` | o ciclo termina |
+
+No último teste, as duas partes dão `false`: o 0 apareceu no último produto, e as duas razões aconteceram ao mesmo tempo. Depois de um ciclo, a sua condição é falsa, mas isso só diz que pelo menos uma das razões aconteceu. Por isso, a decisão do fim pergunta pela razão que interessa, a flag.
+
+Com `Se produto > NUMERO_DE_PRODUTOS` a escrever "Todos os produtos têm stock", este caso dava a resposta errada. Um ciclo assim testa-se com cada razão sozinha e com as duas ao mesmo tempo.
+
+## O Para com as três peças à vista
+
+O `Para` também se escreve com as três peças na primeira linha, separadas por vírgulas, como em várias linguagens de programação:
 
 ```text
 Para i = 0, i < 10, i++
     Escreve: i
 ```
 
-Antes de continuares, tenta prever que números este ciclo escreve.
+Lê-se "para `i` a começar em 0, enquanto `i` for menor do que 10, aumentando `i` de 1 em 1". Cada parte da primeira linha é uma das peças:
 
-Lê-se "para `i` a começar em 0, enquanto `i` for menor do que 10, aumentando `i` de 1 em 1". Cada parte da primeira linha é uma das peças que aprendeste com o `Enquanto`:
+1. `i = 0` é a inicialização, feita uma vez, antes do primeiro teste.
+2. `i < 10` é a condição, testada antes de cada iteração, como a do `Enquanto`.
+3. `i++` é a atualização, feita no fim de cada iteração. Lê-se "i mais mais" e quer dizer `i = i + 1`.
 
-1. `i = 0` é a inicialização. Executa-se uma só vez, antes do primeiro teste. O `=` dá um valor, como em qualquer outra linha, e aqui `i` começa em 0.
-2. `i < 10` é a condição. É testada antes de cada iteração, exatamente como a do `Enquanto`, e diz quando continuar. Quando der falso, o ciclo termina e o algoritmo continua na primeira linha a seguir ao corpo.
-3. `i++` é a atualização. Executa-se no fim de cada iteração, depois da última linha do corpo e antes do teste seguinte.
+Prevê que números este ciclo escreve.
 
-O `i++` é uma abreviatura. Lê-se "i mais mais" e quer dizer exatamente `i = i + 1`: soma 1 ao valor de `i`. Existe porque somar 1 a uma variável é tão frequente que valeu a pena dar-lhe uma escrita curta.
+Escreve os números de 0 a 9: são dez iterações, com `i` a valer 0, 1, 2, e assim por diante até 9. Quando `i` chega a 10, `10 < 10` dá `false`, e o ciclo termina.
 
-Este `Para` repete o corpo 10 vezes, com `i` a valer 0, 1, 2, e assim por diante até 9. Por isso, escreve os números de 0 a 9. Quando `i` chega a 10, `10 < 10` é falso, e o ciclo termina. Começar em 0 e parar antes de 10 dá as mesmas 10 iterações que começar em 1 e ir até 10. Os valores de `i` é que ficam deslocados de uma unidade. Vais encontrar muitas vezes ciclos escritos assim, a começar em 0.
-
-O `Para i de 1 até n` que usaste até agora escreve-se, nesta forma, assim:
+O `Para` das senhas fica assim, nesta forma:
 
 ```text
-Para i = 1, i <= n, i++
-```
-
-Repara no `<=`. O `até n` inclui o `n`, e por isso a condição tem de o deixar entrar. Com `i < n`, o ciclo faria uma iteração a menos. É o erro descrito em "Uma iteração a mais ou a menos", nos erros frequentes deste guia.
-
-### As três escritas do mesmo ciclo
-
-Nada disto é matéria nova. São as mesmas três peças que aprendeste com o `Enquanto`, arrumadas de outra maneira. Para o veres, aqui está o ciclo das senhas escrito das três maneiras. As três escrevem "Senha 1", "Senha 2" e "Senha 3", e as três têm a tabela de iterações que fizeste no princípio do guia.
-
-Com `Enquanto`, cada peça numa linha diferente:
-
-```text
-const ULTIMA_SENHA = 3
-int senha = 1
-Enquanto senha <= ULTIMA_SENHA
-    Escreve: "Senha ", senha
-    senha = senha + 1
-```
-
-Com `Para ... de 1 até ...`, a inicialização e a condição escondidas na primeira linha, e a atualização feita pelo próprio `Para`:
-
-```text
-const ULTIMA_SENHA = 3
-Para senha de 1 até ULTIMA_SENHA
-    Escreve: "Senha ", senha
-```
-
-Com as três peças à vista, todas na primeira linha:
-
-```text
-const ULTIMA_SENHA = 3
 Para senha = 1, senha <= ULTIMA_SENHA, senha++
     Escreve: "Senha ", senha
 ```
 
-A tabela seguinte põe as três escritas lado a lado, peça a peça:
+O `<=` deixa entrar a última senha, como o `até`. Com `<`, faltava uma iteração.
 
-| Peça | Com `Enquanto` | Com `Para ... de 1 até ...` | Com as três peças à vista |
-| --- | --- | --- | --- |
-| Inicialização | `int senha = 1`, na linha antes do ciclo | `de 1`, na primeira linha | `senha = 1`, a primeira parte da primeira linha |
-| Condição | `senha <= ULTIMA_SENHA`, na linha do `Enquanto` | `até ULTIMA_SENHA`, na primeira linha | `senha <= ULTIMA_SENHA`, a segunda parte |
-| Atualização | `senha = senha + 1`, a última linha do corpo | não se escreve: o `Para` soma 1 no fim de cada iteração | `senha++`, a terceira parte |
-| Corpo | as linhas indentadas debaixo do `Enquanto` | as linhas indentadas debaixo do `Para` | as linhas indentadas debaixo do `Para` |
-
-Nesta forma, tal como na outra, a variável de controlo não leva tipo, porque é o `Para` que a cria.
-
-Há uma diferença importante para o `Para i de 1 até n`. Nesta forma, és tu que escreves as três peças, e por isso os erros do `Enquanto` voltam a ser possíveis. Com `Para senha = 1, senha > ULTIMA_SENHA, senha++`, a condição é a de paragem e o ciclo nunca começa. Com `Para senha = 1, senha < ULTIMA_SENHA, senha++`, falta uma iteração. Com `senha--` na terceira parte, que quer dizer `senha = senha - 1`, a atualização anda no sentido errado e o ciclo nunca acaba. As três perguntas das peças servem aqui como no `Enquanto`: com que valor começa, em que situação continua, e o que muda em cada iteração. E a regra 2 do `Para` continua a valer: dentro do corpo não se muda a variável de controlo.
-
-Experimenta sem olhar para trás. Quantas vezes se repete o corpo de `Para i = 0, i < 5, i++`? Que valores toma `i` dentro do corpo, e com que valor de `i` é feito o último teste? Depois, escreve o mesmo ciclo com `Enquanto`.
-
-Confirma a seguir. O corpo repete-se 5 vezes, com `i` a valer 0, 1, 2, 3 e 4. O último teste é feito com `i` a valer 5, e `5 < 5` é falso. Com `Enquanto`, a inicialização é `int i = 0`, a condição é `Enquanto i < 5`, e a última linha do corpo, indentada, é `i = i + 1`.
-
-Há ainda uma terceira forma do `Para`, o para cada. Já a viste nas secções "Percorrer um array com o para cada" e "O para cada não muda o array". Percorre um a um os elementos de um array, sem índice e sem condição a escrever, e acaba sozinho quando os elementos se esgotam.
+Nesta forma, és tu que escreves as três peças, e os erros do `Enquanto` voltam a ser possíveis. Com `senha > ULTIMA_SENHA` na condição, o ciclo nunca começa. Com `senha--`, que quer dizer `senha = senha - 1`, nunca acaba. As três perguntas das peças servem como no `Enquanto`. A variável de controlo continua sem tipo, e não se muda dentro do corpo.
 
 ## Exemplo guiado: contar pedidos válidos e totalizar unidades
 
-Este exemplo junta tudo o que viste: um ciclo com sentinela, um `Se` com um intervalo dentro do ciclo, dois contadores e um totalizador.
+Este exemplo junta um ciclo com sentinela, um `Se` com um intervalo dentro do ciclo, dois contadores e um totalizador.
 
-### Passo 1: O enunciado
+### O enunciado
 
 > Uma papelaria recebe pedidos de material ao longo do dia. Cada pedido tem uma quantidade de unidades. A papelaria só aceita pedidos de 1 a 50 unidades, porque 50 é o máximo que a carrinha de entregas leva numa viagem. Uma quantidade negativa é um engano de escrita e também é recusada. O funcionário escreve a quantidade de cada pedido, um de cada vez, e escreve 0 quando já não há mais pedidos. Cada pedido recusado é assinalado no momento em que é escrito. No fim, o algoritmo mostra quantos pedidos válidos houve, quantas unidades somam os pedidos válidos e quantos pedidos foram recusados.
 
-### Passo 2: O contrato
-
-O contrato vem antes do pseudocódigo, como em todos os guias anteriores: as respostas às quatro perguntas.
+### O contrato
 
 | Pergunta | Resposta |
 | --- | --- |
@@ -1000,50 +819,42 @@ O contrato vem antes do pseudocódigo, como em todos os guias anteriores: as res
 | Restrições | Um pedido é válido se tiver de 1 a 50 unidades, os dois extremos incluídos; o 0 não é um pedido, é o sinal de fim |
 | Condições | Cada pedido é válido ou recusado; os pedidos repetem-se até aparecer o 0 |
 
-Antes de continuar, há uma pergunta a fazer: o que acontece a um pedido recusado? O enunciado diz que é assinalado e contado, e que os outros pedidos continuam. Um pedido errado não impede o funcionário de escrever o seguinte. Isto decide a forma do algoritmo, como vais ver no passo 4.
+Um pedido recusado é assinalado e contado, e o funcionário segue para o seguinte.
 
-### Passo 3: A tabela de casos esperados
+### Quatro casos, escolhidos pelo enunciado
 
-Como no guia 03, a tabela de casos esperados faz-se agora, a partir do enunciado, antes de haver algoritmo. Assim, quando fizeres o trace, tens com o que comparar.
+Os casos escolhem-se antes de haver algoritmo, como no guia 03. Rever: [A árvore de casos e a tabela de casos esperados](03-decisoes-e-validacao.md#a-árvore-de-casos-e-a-tabela-de-casos-esperados).
 
-| Caso | Quantidades escritas | Válidos | Unidades | Recusados | Porque é que este caso foi escolhido |
+| Caso | Quantidades escritas | Válidos | Unidades | Recusados | Porque se escolheu |
 | --- | --- | ---: | ---: | ---: | --- |
 | A | 12, 60, 30, -4, 50, 0 | 3 | 92 | 2 | O caso normal, com válidos e recusados dos dois lados do intervalo |
 | B | 0 | 0 | 0 | 0 | O caso de zero voltas: nenhum pedido no dia |
-| C | 1, 50, 51, 0 | 2 | 51 | 1 | As fronteiras: o 1 e o 50 são válidos, o 51 não |
+| C | 1, 50, 51, 0 | 2 | 51 | 1 | As fronteiras: o 1 e o 50 são válidos, o 51 não; o 0 não se testa, porque é a sentinela, e o -4 do caso A faz esse papel |
 | D | 75, 0 | 0 | 0 | 1 | Só pedidos recusados |
 
-No caso A, os válidos são o 12, o 30 e o 50, que somam 92 unidades. O 60 e o -4 são recusados. No caso C, o 1 e o 50 são válidos, e somam 51, e o 51 é recusado. O caso B é o que apanha mais erros. Com zero pedidos, a resposta tem de ser zero em tudo, sem mensagens de pedido recusado.
+O caso B é o que apanha mais erros: com zero pedidos, tem de dar zero em tudo, sem mensagens.
 
-### Passo 4: As peças do ciclo, uma a uma
+### As peças do ciclo
 
-Primeira decisão: `Enquanto` ou `Para`? Antes de o ciclo começar, não se sabe quantos pedidos vai haver. Só se sabe que acabou quando aparece o 0. É o padrão sentinela, com `Enquanto`.
+Antes de o ciclo começar, não se sabe quantos pedidos vai haver: é o padrão sentinela, com `Enquanto`, e as peças são as dele. Os três resultados começam em 0, porque antes do primeiro pedido não se contou nem somou nada.
 
-A inicialização tem duas partes. Os três resultados, `pedidosValidos`, `pedidosRecusados` e `totalUnidades`, começam em 0, porque antes do primeiro pedido não se contou nem somou nada. E a primeira quantidade é lida antes do ciclo, a leitura antecipada, porque a condição precisa dela logo no primeiro teste.
+Em cada iteração, um `Se` com o intervalo de 1 a 50 decide se o pedido é válido. Se for, conta-o nos válidos e soma-o ao total; se não for, conta-o nos recusados e assinala-o. A validade é um `Se`, e não uma validação repetida, porque o enunciado manda seguir para o pedido seguinte, e não corrigir o errado.
 
-A condição é `quantidade != SENTINELA`: continua-se enquanto a quantidade lida não for o 0.
+### O pseudocódigo
 
-A atualização é a leitura da quantidade seguinte, no fim do corpo. É ela que muda a variável da condição, e é ela que um dia traz o 0.
-
-O trabalho de cada iteração é decidir se o pedido é válido. É um intervalo do guia 03, com os dois extremos incluídos: `quantidade >= QUANTIDADE_MINIMA e quantidade <= CAPACIDADE_MAXIMA`. Se for válido, conta-se nos válidos e soma-se ao total. Se não for, conta-se nos recusados e assinala-se.
-
-Porque é que a validade é um `Se`, e não uma validação repetida? Porque o enunciado não manda corrigir o pedido errado. Manda assinalá-lo, contá-lo e seguir para o próximo. Uma validação repetida obrigaria o funcionário a corrigir aquele pedido antes de poder escrever o seguinte, e isso seria outro requisito. É o enunciado que decide, e não a vontade de usar o padrão mais recente.
-
-### Passo 5: O pseudocódigo
-
-O algoritmo, a que vamos chamar `ContarPedidosValidos`:
+O algoritmo `ContarPedidosValidos`:
 
 ```text
 const SENTINELA = 0
 const QUANTIDADE_MINIMA = 1
-const CAPACIDADE_MAXIMA = 50
+const QUANTIDADE_MAXIMA = 50
 int pedidosValidos = 0
 int pedidosRecusados = 0
 int totalUnidades = 0
 Escreve: "Quantidade do pedido (0 para terminar)?"
 int quantidade = ler valor
 Enquanto quantidade != SENTINELA
-    Se quantidade >= QUANTIDADE_MINIMA e quantidade <= CAPACIDADE_MAXIMA
+    Se quantidade >= QUANTIDADE_MINIMA e quantidade <= QUANTIDADE_MAXIMA
         pedidosValidos = pedidosValidos + 1
         totalUnidades = totalUnidades + quantidade
     Senão
@@ -1056,80 +867,11 @@ Escreve: "Total de unidades: ", totalUnidades
 Escreve: "Pedidos recusados: ", pedidosRecusados
 ```
 
-As decisões deste pseudocódigo, uma a uma:
+A pergunta e a leitura aparecem antes do ciclo e no fim do corpo, como em todos os ciclos com sentinela. As linhas do `Se` e do `Senão` têm oito espaços. A pergunta e a leitura do fim do corpo voltam aos quatro, e por isso executam-se em todas as iterações. Os resultados escrevem-se depois do ciclo, e durante ele só aparece a mensagem de pedido recusado, que o enunciado pede no momento.
 
-1. A sentinela e os limites do intervalo são constantes. São regras do enunciado, e assim cada condição diz o que está a verificar. Se a carrinha passar a levar 60 unidades, muda-se uma linha.
-2. As quatro variáveis são `int`. Quantidades de unidades e contagens de pedidos não têm parte decimal. O tipo aparece uma só vez, na linha onde cada variável nasce: `int pedidosValidos = 0`, `int pedidosRecusados = 0`, `int totalUnidades = 0` e `int quantidade = ler valor`. Nas outras linhas as variáveis usam-se só pelo nome.
-3. Os dois contadores e o totalizador são inicializados a 0 antes do ciclo, e nunca dentro dele.
-4. A pergunta diz qual é a sentinela. Quem usa o algoritmo tem de saber como se termina.
-5. A mesma pergunta e a mesma leitura aparecem duas vezes. A primeira vez é antes do ciclo, como leitura antecipada, e é aí que a `quantidade` nasce e leva o tipo. A segunda é no fim do corpo, como atualização, já sem o tipo. Não é repetição por descuido. É a forma do padrão sentinela.
-6. O `Se` fica dentro do ciclo, e a indentação mostra os dois níveis. O que está dentro do `Se` e do `Senão` tem oito espaços. O que está dentro do ciclo e fora do `Se` tem quatro. A pergunta e a leitura do fim do corpo voltam aos quatro espaços, e isso diz duas coisas. Já não pertencem ao `Senão`, e por isso executam-se em todas as iterações, seja o pedido válido ou recusado. E continuam dentro do ciclo, e por isso são a atualização. Se ficassem com oito espaços, debaixo do `Senão`, só se liam quando o pedido fosse recusado. O primeiro pedido válido deixava o ciclo sem atualização, a quantidade nunca mais mudava e o ciclo não acabava. Se ficassem sem indentação, alinhadas com o `Enquanto`, ficavam fora do ciclo, e o ciclo também não acabava.
-7. Os resultados só são escritos depois do ciclo, nas três linhas sem indentação do fim, quando as contagens estão completas. A única coisa escrita durante o ciclo é a mensagem de pedido recusado, porque o enunciado pede que seja no momento.
+### A tabela de iterações do caso normal
 
-A decisão 5 é a que evita o erro que o padrão sentinela existe para evitar. Imagina que a pergunta e a leitura passavam para o princípio do corpo, sem leitura antecipada, e que a quantidade começava com um valor inventado:
-
-```text
-int quantidade = 1
-Enquanto quantidade != SENTINELA
-    Escreve: "Quantidade do pedido (0 para terminar)?"
-    quantidade = ler valor
-    Se quantidade >= QUANTIDADE_MINIMA e quantidade <= CAPACIDADE_MAXIMA
-```
-
-O resto do `Se` e do `Senão` ficava igual. Nesse caso, o 0 passava pelo `Se` antes de a condição do ciclo o poder testar. Como 0 não está entre 1 e 50, era contado como pedido recusado. No caso A, o algoritmo escrevia "Pedido recusado: 0 unidades" e dizia que houve 3 pedidos recusados, quando foram 2. Qualquer entrada mostra este erro, porque todas acabam com o 0. É o erro que viste no padrão sentinela, agora no contador dos recusados.
-
-Se te for mais fácil pensar primeiro em português, o mesmo algoritmo pode ser escrito em frases. Também é válido, desde que não deixe nenhuma dúvida:
-
-1. Começa com zero pedidos válidos, zero pedidos recusados e zero unidades.
-2. Pede a quantidade do primeiro pedido.
-3. Enquanto a quantidade não for 0, repete os passos 4, 5 e 6.
-4. Se a quantidade estiver entre 1 e 50, com os dois extremos incluídos, soma 1 aos pedidos válidos e soma a quantidade às unidades.
-5. Se não estiver, soma 1 aos pedidos recusados e escreve que o pedido foi recusado, com a quantidade.
-6. Pede a quantidade do pedido seguinte.
-7. Quando aparecer o 0, escreve os pedidos válidos, o total de unidades e os pedidos recusados.
-
-Repara no que torna estas frases claras. Dizem com que valores se começa, em que situação se repete e que passos se repetem. Como em frases não há indentação, é o passo 3 que diz quais são. Dizem o que acontece quando o pedido não é válido, e o que muda em cada iteração, no passo 6. Uma frase como "vai lendo os pedidos e conta os bons" não chega. Não diz quando se para, o que é um pedido bom, nem o que se faz com os outros. O que conta é a lógica, e as frases têm de a deixar tão clara como o pseudocódigo.
-
-### Passo 6: O trace linha a linha de um caso curto
-
-Primeiro, o trace completo de um caso curto, para veres o `Se` a funcionar dentro do ciclo. O funcionário escreve 12, depois 60, e depois 0. Antes de leres a tabela, tenta prever o que aparece no ecrã.
-
-| Passo | Instrução executada | quantidade | pedidosValidos | pedidosRecusados | totalUnidades | Condição e resultado | Ecrã |
-| ---: | --- | ---: | ---: | ---: | ---: | --- | --- |
-| 0 | antes de começar | sem valor | sem valor | sem valor | sem valor | nenhuma | nada |
-| 1 | `int pedidosValidos = 0` | sem valor | 0 | sem valor | sem valor | nenhuma | nada |
-| 2 | `int pedidosRecusados = 0` | sem valor | 0 | 0 | sem valor | nenhuma | nada |
-| 3 | `int totalUnidades = 0` | sem valor | 0 | 0 | 0 | nenhuma | nada |
-| 4 | `Escreve: "Quantidade do pedido (0 para terminar)?"` | sem valor | 0 | 0 | 0 | nenhuma | Quantidade do pedido (0 para terminar)? |
-| 5 | `int quantidade = ler valor` | 12 | 0 | 0 | 0 | nenhuma | a pessoa escreve 12 |
-| 6 | `Enquanto quantidade != SENTINELA` | 12 | 0 | 0 | 0 | `12 != 0` dá `true` | nada |
-| 7 | `Se quantidade >= QUANTIDADE_MINIMA e quantidade <= CAPACIDADE_MAXIMA` | 12 | 0 | 0 | 0 | `12 >= 1` dá `true`, `12 <= 50` dá `true`; `true` e `true` dá `true` | nada |
-| 8 | `pedidosValidos = pedidosValidos + 1` | 12 | 1 | 0 | 0 | nenhuma | nada |
-| 9 | `totalUnidades = totalUnidades + quantidade` | 12 | 1 | 0 | 12 | nenhuma | nada |
-| 10 | `Escreve: "Quantidade do pedido (0 para terminar)?"` | 12 | 1 | 0 | 12 | nenhuma | Quantidade do pedido (0 para terminar)? |
-| 11 | `quantidade = ler valor` | 60 | 1 | 0 | 12 | nenhuma | a pessoa escreve 60 |
-| 12 | `Enquanto quantidade != SENTINELA` | 60 | 1 | 0 | 12 | `60 != 0` dá `true` | nada |
-| 13 | `Se quantidade >= QUANTIDADE_MINIMA e quantidade <= CAPACIDADE_MAXIMA` | 60 | 1 | 0 | 12 | `60 >= 1` dá `true`, `60 <= 50` dá `false`; `true` e `false` dá `false` | nada |
-| 14 | `pedidosRecusados = pedidosRecusados + 1` | 60 | 1 | 1 | 12 | nenhuma | nada |
-| 15 | `Escreve: "Pedido recusado: ", quantidade, " unidades"` | 60 | 1 | 1 | 12 | nenhuma | Pedido recusado: 60 unidades |
-| 16 | `Escreve: "Quantidade do pedido (0 para terminar)?"` | 60 | 1 | 1 | 12 | nenhuma | Quantidade do pedido (0 para terminar)? |
-| 17 | `quantidade = ler valor` | 0 | 1 | 1 | 12 | nenhuma | a pessoa escreve 0 |
-| 18 | `Enquanto quantidade != SENTINELA` | 0 | 1 | 1 | 12 | `0 != 0` dá `false` | nada |
-| 19 | `Escreve: "Pedidos válidos: ", pedidosValidos` | 0 | 1 | 1 | 12 | nenhuma | Pedidos válidos: 1 |
-| 20 | `Escreve: "Total de unidades: ", totalUnidades` | 0 | 1 | 1 | 12 | nenhuma | Total de unidades: 12 |
-| 21 | `Escreve: "Pedidos recusados: ", pedidosRecusados` | 0 | 1 | 1 | 12 | nenhuma | Pedidos recusados: 1 |
-
-As três constantes não têm coluna nem passo. Os passos 1 a 5 são a inicialização: três variáveis a zero, a pergunta e a leitura antecipada. No passo 6, a condição do ciclo é testada pela primeira vez, com a quantidade 12, e é verdadeira.
-
-A primeira iteração vai do passo 7 ao passo 11. No passo 7, o `Se` avalia o intervalo com 12, e as duas comparações são verdadeiras. Executa-se o ramo do `Se`, as duas linhas com oito espaços debaixo dele. O contador de válidos passa a 1 e o total passa a 12. O ramo do `Senão` não aparece na tabela porque não foi executado. Nos passos 10 e 11 executam-se as duas linhas que voltam aos quatro espaços: a pergunta e a leitura do valor seguinte, 60.
-
-No passo 12, o algoritmo voltou ao `Enquanto`. `60 != 0` é verdadeiro, e começa a segunda iteração. Agora o `Se` dá falso, porque 60 é maior do que 50, e executa-se o ramo do `Senão`. O contador de recusados passa a 1 e aparece a mensagem. O total não muda, porque o ramo que soma não foi executado. A pergunta e a leitura, nos passos 16 e 17, executam-se também nesta iteração, porque estão fora do `Senão`.
-
-No passo 18, a quantidade lida é o 0, e `0 != 0` é falso. O ciclo termina. O 0 não passou pelo `Se`, não foi contado nem somado. Os passos 19 a 21 escrevem os resultados.
-
-### Passo 7: A tabela de iterações do caso normal
-
-Agora o caso A, com a tabela de iterações. As perguntas não estão na última coluna.
+O caso A, sem as perguntas na última coluna:
 
 | Teste | quantidade | pedidosValidos | pedidosRecusados | totalUnidades | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | ---: | --- | --- |
@@ -1140,225 +882,64 @@ Agora o caso A, com a tabela de iterações. As perguntas não estão na última
 | 5.º | 50 | 2 | 2 | 42 | `50 != 0` dá `true` | lê 0 |
 | 6.º | 0 | 3 | 2 | 92 | `0 != 0` dá `false` | o ciclo termina |
 
-Lê a tabela linha a linha e explica cada mudança pela instrução que a provocou. É isto que te vão pedir no fim do tema.
+Na 1.ª iteração, o 12 é válido, e por isso o 2.º teste já tem 1 válido e 12 unidades. O 50 é válido, porque `50 <= 50` dá `true`. O ciclo termina depois de 5 iterações, com 3 válidos, 92 unidades e 2 recusados.
 
-No 1.º teste, o estado é o da inicialização: a quantidade 12, lida antes do ciclo, e tudo o resto a zero. Durante essa iteração, o 12 é válido, e por isso, no 2.º teste, `pedidosValidos` vale 1 e `totalUnidades` vale 12. A quantidade já é 60, lida no fim da primeira iteração.
+Cada pedido vai para um só ramo do `Se`. Por isso, de uma linha para a seguinte, ou mudam os válidos e o total, ou só os recusados.
 
-Durante a 2.ª iteração, o 60 é recusado. No 3.º teste, `pedidosRecusados` vale 1, e os válidos e o total não mudaram. Durante a 3.ª, o 30 é válido, e no 4.º teste há 2 válidos e 42 unidades. Durante a 4.ª, o -4 é recusado, e no 5.º teste há 2 recusados. Durante a 5.ª, o 50 é válido, porque `50 <= 50` é verdadeiro, e no 6.º teste há 3 válidos e 92 unidades.
-
-No 6.º teste, a quantidade é o 0, e o ciclo termina. Houve 5 iterações, uma por pedido, e 6 testes. Os valores finais são os da última linha: 3 válidos, 92 unidades, 2 recusados. No ecrã apareceram, durante o ciclo, as duas mensagens de pedido recusado, e depois do ciclo os três resultados.
-
-Repara no que muda de uma linha para a seguinte: ou mudam os válidos e o total ao mesmo tempo, ou mudam só os recusados. Nunca mudam os válidos sem mudar o total. E nunca mudam os recusados ao mesmo tempo que os válidos, porque cada pedido vai para um só dos ramos do `Se`. Se, ao fazeres uma tabela destas, encontrares uma linha que não obedece a isto, há um erro no algoritmo ou no trace.
-
-### Passo 8: Comparar com o previsto
-
-Os quatro casos do passo 3, com os resultados que o algoritmo dá quando se faz o trace de cada um:
-
-| Caso | Quantidades escritas | Iterações | Válidos | Unidades | Recusados | Mensagens de pedido recusado |
-| --- | --- | ---: | ---: | ---: | ---: | ---: |
-| A | 12, 60, 30, -4, 50, 0 | 5 | 3 | 92 | 2 | 2 |
-| B | 0 | 0 | 0 | 0 | 0 | 0 |
-| C | 1, 50, 51, 0 | 3 | 2 | 51 | 1 | 1 |
-| D | 75, 0 | 1 | 0 | 0 | 1 | 1 |
-
-Coincidem com os resultados esperados nos quatro casos. No caso B, o ciclo tem zero iterações, e o algoritmo escreve três zeros, sem nenhuma mensagem de pedido recusado. No caso C, os dois extremos do intervalo foram aceites e o 51 foi recusado. No caso D, o total ficou em 0 mesmo havendo um pedido, porque o único pedido foi recusado. O conjunto destes quatro casos, com os resultados previstos e os obtidos, é o conjunto de testes do algoritmo. Guarda-o no teu caderno, com a tabela de iterações do caso A.
+As tabelas dos outros três casos dão os resultados previstos. O caso B tem zero iterações e escreve três zeros. O caso C tem 3 iterações, e o D tem uma, com o total em 0, porque o único pedido foi recusado.
 
 ## Erros frequentes
 
-Os erros desta secção são versões erradas do exemplo guiado e do algoritmo das senhas. Para cada um vais ver a entrada que o mostra. Um erro só está bem explicado quando se consegue mostrar a entrada que o revela.
+### O contador fora do `Se`
 
-Os erros típicos de cada padrão estão na secção dele, e não se repetem aqui:
-
-- a sentinela tratada como um dado, em "Padrão sentinela" e no passo 5 do exemplo guiado;
-- os erros de inicialização, em "Padrão contador" e em "Padrão totalizador";
-- a condição de paragem numa validação, em "Padrão validação repetida";
-- mudar a variável do para cada para mudar o array, em "O para cada não muda o array";
-- a flag que volta a `false`, em "Padrão flag".
-
-### O contador fora do Se
-
-No caso A, o algoritmo diz que houve 5 pedidos válidos, quando foram 3. O caso D, com um único pedido, recusado, mostra-o de forma mais clara. Diz que houve 1 pedido válido e, ao mesmo tempo, 1 recusado. A entrada que mostra o erro é qualquer uma com um pedido recusado.
-
-Acontece quando o aumento de `pedidosValidos` fica no corpo do ciclo, com quatro espaços, mas antes do `Se` e fora dele:
+No caso A, o algoritmo diz que houve 5 pedidos válidos, quando foram 3. No caso D, diz que houve 1 válido e, ao mesmo tempo, 1 recusado. O aumento de `pedidosValidos` ficou no corpo do ciclo, com quatro espaços, antes do `Se`:
 
 ```text
 Enquanto quantidade != SENTINELA
     pedidosValidos = pedidosValidos + 1
-    Se quantidade >= QUANTIDADE_MINIMA e quantidade <= CAPACIDADE_MAXIMA
+    Se quantidade >= QUANTIDADE_MINIMA e quantidade <= QUANTIDADE_MAXIMA
         totalUnidades = totalUnidades + quantidade
     Senão
+        pedidosRecusados = pedidosRecusados + 1
+        Escreve: "Pedido recusado: ", quantidade, " unidades"
+    Escreve: "Quantidade do pedido (0 para terminar)?"
+    quantidade = ler valor
 ```
 
-Assim, o contador conta todos os pedidos, e não só os válidos. Corrige-se pondo o aumento dentro do `Se`, com oito espaços. Uma instrução de contar só conta o que queres se estiver dentro do `Se` que o escolhe, com a indentação dele.
-
-### A leitura esquecida no fim do corpo
-
-Com o caso A, o algoritmo nunca acaba. Os válidos e o total vão aumentando sem parar:
-
-| Teste | quantidade | pedidosValidos | pedidosRecusados | totalUnidades | Condição | Durante a iteração |
-| --- | ---: | ---: | ---: | ---: | --- | --- |
-| 1.º | 12 | 0 | 0 | 0 | `12 != 0` dá `true` | nada |
-| 2.º | 12 | 1 | 0 | 12 | `12 != 0` dá `true` | nada |
-| 3.º | 12 | 2 | 0 | 24 | `12 != 0` dá `true` | nada |
-| 4.º | 12 | 3 | 0 | 36 | `12 != 0` dá `true` | nada |
-
-E assim para sempre. Acontece quando falta a leitura da quantidade seguinte no fim do corpo. Assim, a quantidade nunca muda. Este ciclo infinito é mais traiçoeiro do que o das senhas, porque o estado não se repete. Os válidos e o total aumentam em cada iteração, e quem olhar só para essas colunas vê o algoritmo "a trabalhar". Mas a coluna que decide o ciclo é a da quantidade, que é a variável da condição, e essa está sempre em 12. A pergunta das três peças apanha o erro: em cada iteração, a variável da condição muda? Não. Então o ciclo é infinito.
-
-Corrige-se com a pergunta e a leitura da quantidade seguinte como últimas linhas do corpo, com quatro espaços. O mesmo erro acontece se a leitura estiver escrita, mas com a margem errada. Sem indentação, fica fora do ciclo. Com oito espaços, debaixo do `Senão`, só acontece quando o pedido é recusado, e o primeiro pedido válido prende o ciclo para sempre. Viste as duas situações na decisão 6 do passo 5 do exemplo guiado.
+Assim, conta todos os pedidos. Corrige-se pondo o aumento dentro do `Se`, com oito espaços.
 
 ### Uma iteração a mais ou a menos
 
-No algoritmo das senhas, com `Enquanto senha < ULTIMA_SENHA` em vez de `<=`, o ciclo faz uma iteração a menos. Escreve a senha 1 e a senha 2 e para, porque `3 < 3` é falso. Com `int senha = 0` na inicialização, faz uma iteração a mais, e a primeira senha impressa é a senha 0, que não existe. Estes erros não tornam o ciclo infinito, e por isso passam despercebidos a quem só verifica se o ciclo acaba.
+Com `Enquanto senha < ULTIMA_SENHA`, o ciclo das senhas escreve a senha 1 e a senha 2 e para, porque `3 < 3` dá `false`. Com `int senha = 0`, a primeira senha impressa é a 0, que não existe. O ciclo acaba nos dois casos, e por isso o erro passa a quem só confirma que ele acaba.
 
-A forma de os apanhar é contar. Antes de fazeres o trace, diz quantas iterações o ciclo devia ter e quais são o primeiro e o último valor da variável. Depois confirma na tabela de iterações. A primeira e a última iteração são as fronteiras de um ciclo, e é lá que estes erros se escondem. Os erros de decisão também se escondem nas fronteiras de um intervalo. Corrige-se a peça que a contagem acusa: a condição, quando falta ou sobra a última iteração, e a inicialização, quando a primeira está errada.
-
-### Testar só o caso normal
-
-Vários erros deste guia só se veem bem com casos escolhidos de propósito. O contador inicializado a 1 vê-se logo com o caso B, porque um dia sem pedidos não pode ter um pedido. A iteração a menos só aparece quando se contam as iterações. A sentinela contada como dado aparece em qualquer caso, mas só se olhares para os recusados. Quem testa só com o caso normal deixa estes erros passar. Por isso, os casos de teste de um ciclo escolhem-se assim:
-
-- o caso de zero voltas;
-- um caso com uma só iteração;
-- um caso com várias iterações;
-- os valores de fronteira das decisões que estão dentro do ciclo.
+Antes da tabela, diz quantas iterações o ciclo devia ter, e com que valores começa e acaba. Se falta ou sobra a última, corrige-se a condição; se a primeira está errada, a inicialização.
 
 ## Palavras novas deste guia
 
 - Ciclo: uma parte de um algoritmo que se executa várias vezes seguidas.
-- Iteração: cada execução do corpo de um ciclo. Também se diz uma volta do ciclo.
-- Corpo do ciclo: as instruções escritas debaixo do `Enquanto` ou do `Para`, com mais quatro espaços de indentação.
-- `Enquanto`: o ciclo que testa a condição antes de cada iteração e repete o corpo enquanto ela for verdadeira.
-- Inicialização: a instrução, antes do ciclo, que dá o valor inicial às variáveis que a condição e o corpo vão usar.
-- Condição do ciclo: a pergunta que decide se se faz mais uma iteração. Diz quando continuar, e não quando parar.
-- Atualização: a instrução, dentro do corpo, que muda a variável da condição e aproxima o ciclo do fim.
-- Tabela de iterações: uma tabela com uma linha por teste da condição, com a fotografia do estado no momento do teste.
-- Caso de zero voltas: o caso de teste em que o ciclo não chega a dar nenhuma volta.
-- Ciclo infinito: um ciclo cuja condição nunca chega a ser falsa.
+- Iteração: cada execução do corpo de um ciclo; também se diz uma volta do ciclo.
+- Corpo do ciclo: as instruções indentadas debaixo do `Enquanto` ou do `Para`, que se repetem.
+- Inicialização: a instrução, antes do ciclo, que dá o valor de partida às variáveis que a condição usa.
+- Atualização: a instrução do corpo que muda a variável da condição e aproxima o ciclo do fim.
+- Tabela de iterações: uma tabela com uma linha por cada teste da condição, com a fotografia do estado no momento do teste.
+- Ciclo infinito: um ciclo cuja condição nunca chega a dar `false`.
 - Ciclo contado: um ciclo em que se sabe, antes de começar, quantas iterações vai ter.
-- `Para`: a forma curta de escrever um ciclo contado, como `Para i de 1 até n`.
 - Variável de controlo: a variável que o `Para` cria e faz avançar de 1 em 1.
-- Padrão: uma forma de resolver um pequeno problema que aparece vezes sem conta, em algoritmos diferentes.
-- Contador: uma variável que conta quantas vezes uma coisa aconteceu. Começa em 0 e soma 1.
-- Totalizador: uma variável que vai somando valores ao longo das iterações. Começa em 0 e soma o valor.
+- Padrão: uma forma de resolver um pequeno problema que aparece em muitos algoritmos diferentes.
+- Contador: uma variável que conta quantas vezes uma coisa aconteceu; começa em 0 e soma 1.
+- Totalizador: uma variável que vai somando valores ao longo das iterações; começa em 0 e soma o valor.
 - Sentinela: um valor combinado que quer dizer "acabou" e que os dados verdadeiros nunca têm.
 - Leitura antecipada: a leitura do primeiro valor, feita antes do ciclo.
 - Validação repetida: um ciclo que volta a pedir um valor enquanto ele for inválido.
 - Array: uma variável que guarda vários valores, uns a seguir aos outros, numa ordem fixa.
 - Elemento: cada valor guardado num array.
 - Índice: a posição de um elemento num array, a contar de 0.
-- Índice fora do array: um índice que não existe, como `notas[3]` num array com três elementos.
 - Percorrer um array: passar por todos os elementos, um a um, e fazer alguma coisa com cada um.
 - Para cada: o ciclo que percorre um array elemento a elemento, como `Para cada nota em notas`.
-- Percorrer por valor: percorrer com o para cada, em que cada iteração trabalha com uma cópia do valor.
-- Percorrer por índice: percorrer com o `Para` e o índice, em que cada iteração trabalha diretamente na posição do array.
-- Flag: uma variável `bool` que guarda se uma coisa já aconteceu. Começa `false` e passa a `true`.
-- `i++`: a abreviatura de `i = i + 1`, que se lê "i mais mais".
-
-## Verificar o que aprendeste
-
-Começa por ler este resumo, e confirma que percebes cada frase. Se uma não for clara, volta à secção onde a ideia foi explicada.
-
-Um ciclo repete o seu corpo enquanto a condição for verdadeira, e tem três peças. A inicialização, antes do ciclo, dá os valores de partida. A condição diz quando continuar. A atualização, dentro do corpo, muda a variável da condição na direção da saída. O corpo é o que está indentado debaixo do `Enquanto` ou do `Para`. É a indentação que decide se uma instrução se repete ou se executa uma vez só. Se a condição for falsa logo no início, o ciclo tem zero iterações. Se a atualização faltar, ficar fora do corpo ou andar no sentido errado, o ciclo nunca acaba. O `Para` é a forma curta do ciclo contado. A inicialização e a condição ficam na primeira linha, e a atualização é feita por ele no fim de cada iteração. O contador soma 1, e o totalizador soma o valor. A sentinela marca o fim de uma sequência de dados e nunca é tratada como dado. A validação repetida pede um valor até ele ser válido. Um array guarda vários valores, e percorre-se com o `Para` e o índice ou com o para cada, que não muda o array. A flag responde a "aconteceu alguma vez?" e, depois de passar a `true`, não volta a `false`. A tabela de iterações, com uma linha por teste da condição, mostra como o estado muda de iteração em iteração.
-
-Agora responde a estas perguntas sem olhar para o guia. Se não conseguires responder a uma, volta à secção dela.
-
-1. O que acontece quando o algoritmo acaba a última linha do corpo de um ciclo?
-2. Como sabes, só pela indentação, que linhas de um algoritmo estão dentro do ciclo? Quantas vezes se executa cada uma?
-3. Num ciclo que não escreveste, onde estão a inicialização, a condição e a atualização? Quais são as três perguntas das peças?
-4. Como fazes o trace linha a linha de um ciclo curto, e depois a tabela de iterações do mesmo ciclo? Como mostras que as duas dizem o mesmo?
-5. Antes de fazeres o trace, como sabes quantas iterações um ciclo vai ter, e com que valor fica a variável da condição no fim?
-6. Como mostras, com uma tabela de iterações, que um ciclo nunca acaba? Como descobres qual das peças está errada?
-7. Dá um exemplo de um ciclo com zero iterações que está errado, e outro de um ciclo com zero iterações que está certo.
-8. Como reescreves um `Para` com `Enquanto`? Onde ficam as três peças?
-9. Qual é a diferença entre um contador e um totalizador? Porque é que os dois começam em 0, e fora do ciclo?
-10. Num ciclo com sentinela, para que serve a leitura antecipada? Porque é que a sentinela nunca é tratada como um dado?
-11. Numa validação repetida, o que se sabe sobre o valor depois do ciclo?
-12. Como usas uma flag para responder a "há algum?"? Porque é que ela nunca volta a `false` dentro do ciclo?
-13. Que pergunta fazes para escolher entre `Enquanto` e `Para` num problema novo?
-14. Num array, como encontras o elemento de um índice, e qual é o último índice válido? Como percorres um array com o índice, e com o para cada?
-15. Porque é que mudar a variável de um para cada não muda o array? Como o mostras numa tabela de trace, com a variável e o array lado a lado?
-16. Que casos de teste escolhes para um ciclo?
-17. Depois de leres a secção sobre o `Para` com as três peças à vista: onde está cada peça em `Para i = 0, i < 10, i++`?
-
-As quatro atividades seguintes são maiores. Faz as respostas por escrito, no teu caderno.
-
-### 1. Justifica as três peças
-
-Sem olhares para o passo 4 do exemplo guiado, responde por escrito às três perguntas das peças para o algoritmo `ContarPedidosValidos`.
-
-**a)** Com que valores começa o ciclo, e porquê?
-
-**b)** Em que situação continua, e quando é que deixa de continuar?
-
-**c)** O que muda em cada iteração, e porque é que isso aproxima o fim?
-
-**d)** Explica a um colega, por palavras tuas, porque é que a quantidade é lida em dois sítios diferentes do algoritmo.
-
-Se conseguires justificar as três peças sem hesitar, já sabes o que o fim deste tema te vai pedir.
-
-### 2. Ordena as fotografias do estado
-
-O funcionário da papelaria usou o algoritmo `ContarPedidosValidos` e escreveu quatro quantidades e, no fim, a sentinela. As fotografias seguintes mostram o estado no momento de cada teste da condição do ciclo, mas foram baralhadas, e uma delas não pode ter acontecido.
-
-| Fotografia | quantidade | pedidosValidos | pedidosRecusados | totalUnidades |
-| --- | ---: | ---: | ---: | ---: |
-| A | 40 | 1 | 1 | 8 |
-| B | 40 | 0 | 1 | 8 |
-| C | 8 | 0 | 0 | 0 |
-| D | 0 | 2 | 2 | 48 |
-| E | 55 | 1 | 0 | 8 |
-| F | -3 | 2 | 1 | 48 |
-
-**a)** Ordena as fotografias verdadeiras, do 1.º ao último teste.
-
-**b)** Para cada passagem de uma fotografia para a seguinte, diz qual foi a quantidade tratada nessa iteração. Diz também que ramo foi executado, o do `Se` ou o do `Senão`.
-
-**c)** Descobre a fotografia impossível e explica, com as regras do algoritmo, porque é que ela nunca pode aparecer, seja qual for a quantidade escrita.
-
-**d)** Escreve as quantidades que o funcionário escreveu, pela ordem, incluindo a sentinela.
-
-### 3. Encontra o erro
-
-Um colega escreveu este algoritmo para um balcão de atendimento. O funcionário escreve a duração de cada atendimento, em minutos, e escreve 0 quando fecha o balcão. O algoritmo devia dizer quantos clientes foram atendidos e quantos minutos durou o atendimento ao todo.
-
-```text
-const SENTINELA = 0
-int clientes = 1
-int totalMinutos = 0
-Escreve: "Minutos do atendimento (0 para fechar o balcão)?"
-int minutos = ler valor
-Enquanto minutos != SENTINELA
-    clientes = clientes + 1
-    totalMinutos = totalMinutos + minutos
-    Escreve: "Minutos do atendimento (0 para fechar o balcão)?"
-    minutos = ler valor
-Escreve: "Clientes atendidos: ", clientes
-Escreve: "Tempo total: ", totalMinutos, " minutos"
-```
-
-**a)** Faz a tabela de iterações com as durações 5 e 8, seguidas do 0. O que aparece no ecrã no fim, e o que devia aparecer?
-
-**b)** Faz a tabela de iterações com o 0 sozinho. O que aparece no ecrã no fim, e o que devia aparecer?
-
-**c)** Diz qual das três peças está errada e corrige a linha. Confirma que, com a correção, os dois casos dão o que devia aparecer.
-
-**d)** Qual dos dois casos de teste mostra o erro de forma mais clara? Responde numa frase, e diz porquê.
-
-### 4. Regista as tuas dificuldades
-
-Escreve duas ou três linhas sobre o que te custou mais neste tema. Pode ter sido perceber quando o ciclo volta atrás, ou ver pela indentação o que está dentro do ciclo. Pode ter sido fazer a tabela de iterações, escolher entre `Enquanto` e `Para`, ou a leitura antecipada da sentinela.
-
-Guarda no teu caderno a tabela de iterações e o conjunto de testes do exemplo guiado, refeitos por ti sem olhar. Guarda também as respostas a estas atividades e as tuas notas de dificuldade.
+- Flag: uma variável `bool` que guarda se uma coisa já aconteceu; começa `false` e passa a `true`.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](exercicios/04-repeticao-e-padroes-exercicios.md). Tem dez exercícios obrigatórios e um desafio opcional.
-
-O tema seguinte é [Testar, depurar e melhorar](05-testar-depurar-e-melhorar.md), o último desta área. Vais juntar a sequência, a seleção e a repetição num problema maior e testá-lo de forma organizada. Vais corrigir os erros encontrados no trace e comparar duas soluções pelo número de passos. Vais também escrever as tuas primeiras funções, e a área acaba com projetos, todos jogos.
-
-Mais tarde, em Python, os ciclos `Enquanto` passam a chamar-se `while`. As tabelas de iterações que aprendeste a fazer aqui vão servir para prever o que o programa vai fazer antes de o executares.
-
-## Para saber mais
-
-- [Desenvolver algoritmos, no Catálogo Nacional de Qualificações](https://catalogo.snq.gov.pt/ucDetalhe/355272): a ficha oficial deste módulo do teu curso, com as competências que ela pede.
+No tema seguinte, [Testar, depurar e melhorar](05-testar-depurar-e-melhorar.md), testas os teus algoritmos de forma organizada e escreves as primeiras funções.
 
 ![Rodapé](../imagens/rodape.png)

@@ -2,11 +2,9 @@
 
 # Laboratório: Dados e interação
 
-Laboratório do tema Dados e interação, do módulo Desenvolver programas em linguagem estruturada. Vais construir a calculadora de material do inventário de um jogo de construção. O programa pergunta quantos troncos tens e diz quantas tábuas dão, quantos baús constróis e quantas tábuas sobram. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../02-dados-e-interacao.md) tem a teoria completa, para quem quiser saber mais.
-
 ## O que vais construir
 
-No fim, tens o programa `inventario.py`, na tua pasta `lp-python`. Quando o corres, ele pergunta quantos troncos tens. Depois mostra o inventário e faz as contas da madeira. Num jogo de construção, cada tronco dá 4 tábuas, e cada baú gasta 8 tábuas. Com 7 troncos, por exemplo, o ecrã fica assim:
+Vais construir o `inventario.py`, a calculadora de material de um jogo de construção, em que cada tronco dá 4 tábuas e cada baú gasta 8. O programa pergunta quantos troncos tens e diz quantas tábuas dão, quantos baús constróis e quantas tábuas sobram. Com 7 troncos, o ecrã fica assim:
 
 ```text
 Quantos troncos tens? 7
@@ -18,72 +16,53 @@ Baús que podes construir: 3
 Tábuas que sobram: 4
 ```
 
-Pelo caminho, ficas a saber guardar valores em variáveis e constantes, fazer contas e ler um valor do teclado. Ficas também a saber converter esse valor num número, para as contas darem certo. No fim, testas o programa com uma **tabela de entradas e saídas**, com o resultado esperado de cada caso calculado antes de correr. É a tabela de casos esperados da algoritmia, agora para um programa que se corre.
-
-| Fase | O que muda | O que funciona no fim |
-| --- | --- | --- |
-| 1 | `inventario.py`, com variáveis | O programa mostra o inventário, com os valores guardados em variáveis |
-| 2 | Nada no disco; experimentas na consola do Python | Sabes de que tipo é um valor e como o Python faz as contas |
-| 3 | `inventario.py`, com constantes e contas | O programa calcula as tábuas, os baús e as tábuas que sobram |
-| 4 | `inventario.py`, com `input` e a conversão | O programa pergunta quantos troncos tens e faz as contas com a resposta |
-| 5 | Nada no código; corres o programa com quatro casos de teste | A tabela de entradas e saídas, com quatro casos, confirma o programa |
-
-## Palavras que vais usar
-
-- Variável: um nome que guarda um valor, para o programa o usar mais tarde, como `troncos = 7`. Para saber mais, vê a secção "Guardar valores em variáveis" do [guia](../02-dados-e-interacao.md).
-- Atribuição: a instrução com `=`, que guarda o valor da direita na variável da esquerda.
-- Constante: uma variável com o nome em maiúsculas, como `TABUAS_POR_BAU`, que guarda uma regra que não muda.
-- Tipo: a espécie de valor que se guarda. Neste laboratório usas três: `int`, para números inteiros, `float`, para números com parte decimal, e `str`, para textos.
-- Operador: o sinal que diz que conta se faz, como o `+`, o `*` ou o `//`.
-- Divisão inteira: a conta com `//`, que diz quantas vezes um número cabe noutro, sem partes decimais.
-- Resto: a conta com `%`, que diz o que sobra da divisão inteira.
-- `input`: a função que escreve uma pergunta, espera que a pessoa escreva e carregue em Enter, e devolve o que ela escreveu, sempre como texto.
-- Função: um pedaço de programa que já vem com o Python, com um nome, que recebe valores entre parênteses. Umas devolvem um resultado, como o `int`; outras fazem uma coisa, como o `print`, que escreve no ecrã.
-- Converter: transformar um valor de um tipo noutro, como o texto `"7"` no número 7, com a função `int`.
-- Tabela de entradas e saídas: uma tabela com uma linha por caso de teste. Cada linha diz o que se escreve no teclado e o que deve aparecer.
+1. [Fase 1: Guardar valores em variáveis](#fase-1-guardar-valores-em-variáveis)
+2. [Fase 2: Os tipos dos valores e as contas](#fase-2-os-tipos-dos-valores-e-as-contas)
+3. [Fase 3: Constantes](#fase-3-constantes)
+4. [Fase 4: Ler do teclado e converter](#fase-4-ler-do-teclado-e-converter)
+5. [Fase 5: Testar com uma tabela de entradas e saídas](#fase-5-testar-com-uma-tabela-de-entradas-e-saídas)
 
 ## O que precisas
 
-- A pasta `lp-python`, aberta no VS Code. Precisas também do comando que funcionou no teu computador no tema anterior: `python`, `py` ou `python3`. Se não tiveres a pasta, cria-a, por exemplo em Documentos, e abre-a no VS Code, no menu File, com a opção Open Folder....
-- O terminal do VS Code, no menu Terminal, com a opção New Terminal. O texto antes do cursor deve acabar em `lp-python`.
-
-Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. Num Python mais antigo, uma mensagem pode ter outras palavras, ou não ter os sinais por baixo da linha. O nome do erro, a palavra antes dos dois pontos na última linha, é o mesmo.
-
-Neste laboratório, onde o texto diz `python`, usa o teu comando.
-
-## Se alguma coisa falhar
-
-1. Guardaste o ficheiro? O Python corre o que está guardado no disco. Guarda com Ctrl+S, ou Cmd+S no macOS, antes de cada vez que corres.
-2. Estás na pasta certa? O texto antes do cursor, no terminal, tem de acabar em `lp-python`. Se não acabar, abre um terminal novo, no menu Terminal, com a opção New Terminal.
-3. Estás na consola do Python sem quereres? Se a linha começa por `>>>`, escreve `exit()` e carrega em Enter.
-4. O programa parou e não volta ao terminal? Está à espera que escrevas um valor, depois da pergunta. Escreve-o e carrega em Enter.
-5. Copiaste o código à mão? Confirma os parênteses, as aspas e os nomes das variáveis, letra a letra: `troncos` e `Troncos` são nomes diferentes.
+- A pasta `lp-python`, aberta no VS Code. Se não a tiveres, cria-a em Documentos e abre-a com a opção `Open Folder...` do menu File.
+- O terminal do VS Code, no menu Terminal, com a opção New Terminal. O caminho antes do `>` ou do `%` deve acabar em `lp-python`.
+- O comando que funcionou no teu computador no tema anterior, `python`, `py` ou `python3`. Neste laboratório, onde o texto diz `python`, usa o teu.
 
 ## Fase 1: Guardar valores em variáveis
 
-Um jogo tem de se lembrar de quanto material tens. Para isso, o programa guarda cada quantidade numa variável: um nome com um valor. Em pseudocódigo escrevias `int troncos = 7`. Em Python, o tipo não se escreve: basta `troncos = 7`, e o Python percebe pelo valor que é um inteiro. Os nomes escrevem-se em minúsculas, e, quando têm várias palavras, com um traço baixo entre elas, como `total_tabuas`. Para saber mais, lê as secções "Guardar valores em variáveis" e "Os nomes das variáveis" do [guia](../02-dados-e-interacao.md).
+O programa guarda o material em variáveis e escreve-o no ecrã. Cada quantidade fica numa variável, com um nome e um valor. Rever: [Guardar valores em variáveis](../02-dados-e-interacao.md#guardar-valores-em-variáveis).
 
-1. Cria o ficheiro `inventario.py`. No painel Explorer, passa o rato por cima de `LP-PYTHON` e carrega no ícone New File.... Escreve o nome `inventario.py` e carrega em Enter. Escreve nele este conteúdo, que é o ficheiro completo:
+1. Cria o ficheiro onde o programa vai ficar. No painel Explorer, passa o rato por cima de `LP-PYTHON` e carrega no ícone `New File...`. Escreve o nome `inventario.py` e carrega em Enter. Escreve nele esta primeira versão:
 
    ```python
    # inventario.py: a calculadora de material do inventário de um jogo de construção.
    troncos = 7
-   pedra = 30
-   ferro = 5
    print("Troncos:", troncos)
-   print("Pedra:", pedra)
-   print("Ferro:", ferro)
    ```
 
-   Leitura guiada: depois do comentário, as três linhas seguintes criam três variáveis, cada uma com a quantidade de um material. O `=` guarda o valor da direita no nome da esquerda. Os três `print` escrevem cada um um texto e o valor de uma variável, separados por uma vírgula. O nome da variável está sem aspas, e por isso o `print` escreve o valor dela, e não o nome.
-
-2. Antes de correres, prevê o que aparece. Depois guarda e corre:
+2. Guarda com Ctrl+S, ou Cmd+S no macOS, e corre o programa no terminal:
 
    ```bash
    python inventario.py
    ```
 
-   O que deves ver:
+   O que deves ver: `Troncos: 7`. Isto quer dizer que a variável guardou o valor e que o `print` o escreveu. Se aparecer outra coisa, vê [Se alguma coisa falhar](#se-alguma-coisa-falhar).
+
+3. Acrescenta os outros dois materiais. Em `inventario.py`, a seguir a `troncos = 7`, acrescenta:
+
+   ```python
+   pedra = 30
+   ferro = 5
+   ```
+
+   No fim do ficheiro, acrescenta:
+
+   ```python
+   print("Pedra:", pedra)
+   print("Ferro:", ferro)
+   ```
+
+   Guarda e corre. O que deves ver:
 
    ```text
    Troncos: 7
@@ -91,11 +70,9 @@ Um jogo tem de se lembrar de quanto material tens. Para isso, o programa guarda 
    Ferro: 5
    ```
 
-   Isto quer dizer que as três variáveis guardaram os valores e que o `print` os escreveu. Repara que há um espaço entre os dois pontos e o número, e que não o escreveste. O `print` põe sozinho um espaço entre os valores separados por vírgulas.
+4. Experimenta o espaço do `print`. Na linha do `print` dos troncos, põe um espaço dentro das aspas, depois dos dois pontos: `print("Troncos: ", troncos)`. Guarda e corre. O que deves ver na primeira linha: `Troncos:  7`, com dois espaços, porque o espaço das aspas e o do `print` se somam. Tira o espaço que puseste, guarda e corre outra vez.
 
-3. Experimenta o espaço. Na linha do `print` dos troncos, põe um espaço dentro das aspas, depois dos dois pontos: `print("Troncos: ", troncos)`. Antes de correres, prevê o que muda. Guarda e corre. O que deves ver na primeira linha: `Troncos:  7`, com dois espaços. O espaço das aspas e o do `print` somam-se. É ao contrário do pseudocódigo, em que os espaços iam dentro das aspas. Tira o espaço que puseste, guarda e corre outra vez.
-
-4. Provoca um erro de propósito. Na linha do `print` dos troncos, escreve o nome com maiúscula: `print("Troncos:", Troncos)`. Antes de correres, prevê que tipo de erro vai ser. Guarda e corre. O que deves ver:
+5. Provoca um erro de propósito, para o reconheceres quando te acontecer. Na linha do `print` dos troncos, escreve o nome com maiúscula: `print("Troncos:", Troncos)`. Guarda e corre. O que deves ver:
 
    ```text
    Traceback (most recent call last):
@@ -105,21 +82,21 @@ Um jogo tem de se lembrar de quanto material tens. Para isso, o programa guarda 
    NameError: name 'Troncos' is not defined. Did you mean: 'troncos'?
    ```
 
-   É um erro de execução, um `NameError`. O programa não conhece nenhuma variável `Troncos`, com maiúscula, só `troncos`. O Python até sugere o nome certo, em "Did you mean", isto é, "querias dizer". O caminho do ficheiro, na linha com `File`, muda de computador para computador. Corrige, voltando a pôr o nome em minúsculas, guarda e corre.
+   É um erro de execução. O programa só conhece `troncos`, em minúsculas, e até sugere esse nome, em "Did you mean", isto é, "querias dizer". Volta a pôr o nome em minúsculas, guarda e corre.
 
 ### Paragem 1
 
 O `inventario.py` mostra os três materiais, com os valores guardados em variáveis.
 
-Pensa antes de continuares: porque é que `print("Troncos:", troncos)` escreve `Troncos: 7`, e não `Troncos: troncos`? A resposta: o primeiro valor está entre aspas, e é um texto, que aparece tal e qual. O segundo está sem aspas, e é o nome de uma variável: o `print` escreve o valor que ela guarda.
+Pensa antes de continuares: porque é que `print("Troncos:", troncos)` escreve `Troncos: 7`, e não `Troncos: troncos`? A resposta: o primeiro valor está entre aspas, e é um texto, que aparece tal e qual. O segundo está sem aspas, e é o nome de uma variável, por isso o `print` escreve o valor dela.
 
-## Fase 2: Experimentar tipos e contas na consola
+## Fase 2: Os tipos dos valores e as contas
 
-Antes de pôr contas no programa, vale a pena ver como o Python as faz. Cada valor tem um tipo, e o tipo muda o resultado das contas. Na consola do Python, experimentas uma linha de cada vez e vês logo o resultado, sem criar ficheiros. Para saber mais, lê as secções "Os tipos dos valores", "As contas: os operadores" e "A ordem das contas" do [guia](../02-dados-e-interacao.md).
+Experimentas na consola do Python, sem criar ficheiros. Cada valor tem um tipo, e o tipo muda o resultado das contas. Rever: [Os tipos dos valores e as contas](../02-dados-e-interacao.md#os-tipos-dos-valores-e-as-contas).
 
-1. Entra na consola: no terminal, escreve só `python`, com o teu comando, e carrega em Enter. O que deves ver: duas linhas em inglês, a primeira com a versão do Python, e por baixo, numa linha à parte, `>>>`.
+1. Entra na consola, onde experimentas uma linha de cada vez. No terminal, escreve só o teu comando, sem nome de ficheiro, e carrega em Enter. O que deves ver: a versão do Python e, numa linha à parte, `>>>`.
 
-2. Prevê o tipo de cada valor, escreve as linhas e confirma:
+2. Confirma o tipo de três valores. Escreve cada linha a seguir ao `>>>`, sem o `>>>`, que é o Python que o põe. O que deves ver:
 
    ```text
    >>> type(7)
@@ -130,9 +107,9 @@ Antes de pôr contas no programa, vale a pena ver como o Python as faz. Cada val
    <class 'str'>
    ```
 
-   O nome entre aspas simples, a seguir a `class`, é o tipo. `7` é um inteiro, um `int`. `2.5` tem parte decimal, e é um `float`; a parte decimal escreve-se com ponto, e não com vírgula. `"7"`, entre aspas, é um texto, um `str`. O número 7 e o texto `"7"` são valores diferentes.
+   O nome entre aspas simples é o tipo.
 
-3. Prevê o resultado de cada divisão, escreve e confirma:
+3. Compara estas contas, uma linha de cada vez. O que deves ver:
 
    ```text
    >>> 28 / 8
@@ -145,9 +122,9 @@ Antes de pôr contas no programa, vale a pena ver como o Python as faz. Cada val
    4.0
    ```
 
-   O `/` é a divisão com parte decimal: 28 a dividir por 8 dá 3,5. O `//` é a divisão inteira: com 28 tábuas, fazes 3 baús completos de 8. O `%` é o resto da divisão inteira: sobram 4 tábuas. A última linha mostra que o `/` dá sempre um `float`, mesmo numa conta exata: `4.0`, e não `4`.
+   Com 28 tábuas, fazes 3 baús completos de 8, e sobram 4. A última linha mostra que o `/` dá sempre um `float`, mesmo numa conta exata.
 
-4. Prevê o resultado, escreve e confirma:
+4. Confirma a ordem das contas. O que deves ver:
 
    ```text
    >>> 2 + 3 * 4
@@ -156,9 +133,16 @@ Antes de pôr contas no programa, vale a pena ver como o Python as faz. Cada val
    20
    ```
 
-   O Python segue a ordem das operações da matemática: a multiplicação faz-se antes da soma. Os parênteses passam à frente de tudo.
+   A multiplicação faz-se antes da soma, e os parênteses passam à frente de tudo.
 
-5. Agora a experiência mais importante. Prevê o resultado de cada linha antes de carregares em Enter:
+5. Compara um número com um texto. Prevê o resultado de cada linha antes de carregares em Enter:
+
+   ```python
+   7 * 4
+   "7" * 4
+   ```
+
+   O que deves ver:
 
    ```text
    >>> 7 * 4
@@ -167,51 +151,57 @@ Antes de pôr contas no programa, vale a pena ver como o Python as faz. Cada val
    '7777'
    ```
 
-   Com o número 7, o `*` multiplica. Com o texto `"7"`, o `*` repete o texto quatro vezes, e não aparece nenhuma mensagem de erro. Guarda esta experiência, porque vais voltar a ela na fase 4.
+   Com o número, o `*` multiplica. Com o texto, repete-o quatro vezes, e não aparece nenhuma mensagem de erro.
 
-6. Sai da consola: escreve `exit()` e carrega em Enter.
+6. Sai da consola: escreve `exit()` e carrega em Enter. O que deves ver: a linha do terminal outra vez, com `lp-python`.
 
 ### Paragem 2
 
-Sabes dizer de que tipo é um valor e como o Python faz as divisões. Não ficou nenhum ficheiro novo na pasta.
+Voltaste ao terminal, e não ficou nenhum ficheiro novo na pasta.
 
-Pensa antes de continuares: com 30 tábuas e baús de 8, quantos baús fazes e quantas tábuas sobram, e que contas do Python o dizem? A resposta: 3 baús, com `30 // 8`, e sobram 6 tábuas, com `30 % 8`. Confirma: 8 vezes 3, mais 6, dá 30.
+Pensa antes de continuares: com 30 tábuas e baús de 8, quantos baús fazes e quantas tábuas sobram, e que contas do Python o dizem? A resposta: 3 baús, com `30 // 8`, e sobram 6 tábuas, com `30 % 8`. Para confirmar, 8 vezes 3, mais 6, dá 30.
 
-## Fase 3: Constantes e contas no programa
+## Fase 3: Constantes
 
-Agora o programa faz as contas da madeira. Cada tronco dá 4 tábuas, e cada baú gasta 8. Estes números são regras do jogo, que não mudam. Se aparecessem soltos no meio das contas, quem lesse não saberia o que querem dizer. Por isso, ficam em constantes: variáveis com o nome todo em maiúsculas, que se combina não mudar. Para saber mais, lê a secção "Constantes" do [guia](../02-dados-e-interacao.md).
+O programa passa a fazer as contas da madeira. O 4 e o 8 são regras do jogo, e por isso ficam em constantes, com o nome em maiúsculas. Rever: [Constantes](../02-dados-e-interacao.md#constantes).
 
-1. Antes de mexeres no código, prevê, com 7 troncos: quantas tábuas, quantos baús e quantas tábuas sobram. A resposta: 7 vezes 4 dá 28 tábuas; 28 a dividir por 8 dá 3 baús completos; e sobram 4 tábuas.
+1. Antes de mexeres no código, calcula de cabeça, com 7 troncos, quantas tábuas, quantos baús e quantas tábuas sobram. A resposta: 7 vezes 4 dá 28 tábuas, 28 a dividir por 8 dá 3 baús completos, e sobram 4 tábuas.
 
-2. Substitui todo o conteúdo de `inventario.py` por este, que é o ficheiro completo:
+2. Acrescenta as regras do jogo e a primeira conta. Em `inventario.py`, a seguir à primeira linha, acrescenta:
 
    ```python
-   # inventario.py: a calculadora de material do inventário de um jogo de construção.
    # Diz quantas tábuas dão os troncos, e quantos baús se constroem com elas.
 
    # As regras do jogo, que não mudam enquanto o programa corre.
    TABUAS_POR_TRONCO = 4
    TABUAS_POR_BAU = 8
+   ```
 
-   troncos = 7
-   pedra = 30
-   ferro = 5
-   print("Troncos:", troncos)
-   print("Pedra:", pedra)
-   print("Ferro:", ferro)
+   Deixa uma linha em branco a seguir às constantes. No fim do ficheiro, acrescenta uma linha em branco e estas duas:
 
+   ```python
    tabuas = troncos * TABUAS_POR_TRONCO
+   print("Tábuas:", tabuas)
+   ```
+
+   Guarda e corre. O que deves ver, depois das três linhas do inventário: `Tábuas: 28`.
+
+3. Acrescenta as contas dos baús. A seguir à linha `tabuas = troncos * TABUAS_POR_TRONCO`, acrescenta:
+
+   ```python
    # O // dá os baús completos, e o % dá as tábuas que não chegam para mais um.
    baus = tabuas // TABUAS_POR_BAU
    sobram = tabuas % TABUAS_POR_BAU
-   print("Tábuas:", tabuas)
+   ```
+
+   No fim do ficheiro, acrescenta:
+
+   ```python
    print("Baús que podes construir:", baus)
    print("Tábuas que sobram:", sobram)
    ```
 
-   Leitura guiada: começa pelas duas constantes, logo a seguir aos comentários. São as regras do jogo, e ficam no início para se encontrarem depressa. A parte do inventário é a da fase 1. Depois vêm as contas, de cima para baixo. A variável `tabuas` nasce com o resultado da multiplicação. As duas linhas seguintes usam esse resultado: `baus` guarda a divisão inteira, e `sobram` guarda o resto. Os três `print` do fim mostram os resultados. As linhas em branco não fazem nada: separam as partes, para se lerem melhor.
-
-3. Guarda e corre. O que deves ver:
+   Guarda e corre. O que deves ver:
 
    ```text
    Troncos: 7
@@ -222,74 +212,13 @@ Agora o programa faz as contas da madeira. Cada tronco dá 4 tábuas, e cada ba�
    Tábuas que sobram: 4
    ```
 
-   Compara com a tua previsão do passo 1. Se for igual, as contas estão certas.
+   Os números são os que calculaste no passo 1.
 
-4. Provoca um erro de lógica. Na linha dos baús, troca o `//` por `/`: `baus = tabuas / TABUAS_POR_BAU`. Antes de correres, prevê o que muda. Guarda e corre. O que deves ver na linha dos baús: `Baús que podes construir: 3.5`. Não há mensagem nenhuma, mas meio baú não existe. O `/` dá a divisão com parte decimal, e aqui o que interessa são os baús completos. Volta a pôr `//`, guarda e corre outra vez.
+4. Provoca um erro de lógica. Na linha dos baús, troca o `//` por `/`: `baus = tabuas / TABUAS_POR_BAU`. Guarda e corre. O que deves ver na linha dos baús: `Baús que podes construir: 3.5`. Não há mensagem nenhuma, mas meio baú não existe. Volta a pôr `//`, guarda e corre outra vez.
 
 ### Paragem 3
 
-O programa calcula as tábuas, os baús e as tábuas que sobram, e dá o resultado da tua previsão.
-
-Pensa antes de continuares: se o jogo mudar e cada baú passar a gastar 6 tábuas, o que mudas no programa? A resposta: só a linha da constante, `TABUAS_POR_BAU = 6`. As contas usam o nome, e ficam certas sem mais nenhuma mudança. Com 7 troncos, passam a dar 4 baús e 4 tábuas a sobrar.
-
-## Fase 4: Ler do teclado e converter
-
-Até aqui, o programa tinha sempre 7 troncos. Um programa útil pergunta. Em pseudocódigo era o `ler valor`; em Python, é o `input`. O `input` escreve a pergunta, espera que a pessoa escreva e carregue em Enter, e devolve o que ela escreveu. Mas devolve sempre um texto, mesmo que a pessoa escreva um número. Nesta fase vais ver o que acontece quando te esqueces disso, e como se resolve. Para saber mais, lê as secções "Ler do teclado com `input`" e "Converter um texto num número" do [guia](../02-dados-e-interacao.md).
-
-1. Em `inventario.py`, substitui a linha `troncos = 7` por esta:
-
-   ```python
-   troncos = input("Quantos troncos tens? ")
-   ```
-
-   Leitura guiada: o `input` escreve a pergunta que está entre parênteses e espera. O que a pessoa escrever fica em `troncos`. A pergunta acaba num espaço, dentro das aspas, para a resposta não ficar colada ao ponto de interrogação.
-
-2. Antes de correres, lembra-te da fase 2 e prevê o que aparece se escreveres 7. Guarda e corre. Quando aparecer a pergunta, escreve `7` e carrega em Enter. O que deves ver:
-
-   ```text
-   Quantos troncos tens? 7
-   Troncos: 7
-   Pedra: 30
-   Ferro: 5
-   Traceback (most recent call last):
-     File "C:\Users\aluno\Documents\lp-python\inventario.py", line 17, in <module>
-       baus = tabuas // TABUAS_POR_BAU
-              ~~~~~~~^^~~~~~~~~~~~~~~~
-   TypeError: unsupported operand type(s) for //: 'str' and 'int'
-   ```
-
-   O inventário apareceu, e o programa parou na linha 17, a dos baús. O nome do erro é `TypeError`, um erro de tipo. A mensagem quer dizer "tipos que não servem para o `//`: um texto e um inteiro". Os sinais `~` e `^` marcam as duas partes da conta e o operador.
-
-   O que aconteceu foi isto. O `input` devolveu o texto `"7"`, e não o número 7. Na linha das tábuas, `"7" * 4` não deu erro: repetiu o texto, como na fase 2, e `tabuas` ficou com o texto `"7777"`. O erro só apareceu na linha dos baús, porque não se faz a divisão inteira de um texto.
-
-   Repara onde a mensagem aponta: para a linha dos baús, mas a causa está na linha da leitura, nove linhas acima. A linha apontada é onde o Python deu pelo problema, e não onde ele nasceu.
-
-3. Corrige a causa. Substitui a linha da leitura por estas duas, o comentário e a leitura com a conversão:
-
-   ```python
-   # O input devolve sempre um texto; o int converte-o num número, para as contas.
-   troncos = int(input("Quantos troncos tens? "))
-   ```
-
-   Leitura guiada: a segunda linha lê-se de dentro para fora. Primeiro o `input` escreve a pergunta e devolve o texto. Depois o `int` converte esse texto num número inteiro. Só então o número é guardado em `troncos`. O comentário diz porque é que o `int` está lá, para quem ler o programa mais tarde.
-
-4. Guarda, corre e escreve `7`. O que deves ver: o ecrã de "O que vais construir", com 28 tábuas, 3 baús e 4 tábuas a sobrar.
-
-5. Provoca outro erro de propósito. Corre outra vez e, na pergunta, escreve `sete`. O que deves ver:
-
-   ```text
-   Quantos troncos tens? sete
-   Traceback (most recent call last):
-     File "C:\Users\aluno\Documents\lp-python\inventario.py", line 9, in <module>
-       troncos = int(input("Quantos troncos tens? "))
-   ValueError: invalid literal for int() with base 10: 'sete'
-   ```
-
-   É um erro de execução, um `ValueError`, um erro de valor. A mensagem quer dizer "valor inválido para o `int()` na base 10: 'sete'". A base 10 é a forma normal de escrever números, com os algarismos de 0 a 9. O `int` só converte textos que são números inteiros escritos com algarismos. Aqui, o programa não está errado: pede um número de troncos, e quem o usou não escreveu um número. Por agora, os programas partem do princípio de que a pessoa escreve o que lhe pedem.
-
-### Paragem 4
-
-O programa pergunta quantos troncos tens, converte a resposta num número e faz as contas com ela. O ficheiro `inventario.py` completo, como deve estar agora:
+O programa calcula as tábuas, os baús e as tábuas que sobram. O ficheiro `inventario.py` completo, como deve estar agora:
 
 ```python
 # inventario.py: a calculadora de material do inventário de um jogo de construção.
@@ -299,8 +228,7 @@ O programa pergunta quantos troncos tens, converte a resposta num número e faz 
 TABUAS_POR_TRONCO = 4
 TABUAS_POR_BAU = 8
 
-# O input devolve sempre um texto; o int converte-o num número, para as contas.
-troncos = int(input("Quantos troncos tens? "))
+troncos = 7
 pedra = 30
 ferro = 5
 print("Troncos:", troncos)
@@ -316,15 +244,68 @@ print("Baús que podes construir:", baus)
 print("Tábuas que sobram:", sobram)
 ```
 
-Pensa antes de continuares: porque é que a mensagem do passo 2 apontava a linha dos baús, se o erro estava na leitura? A resposta: na linha das tábuas, `"7" * 4` não dá erro, porque repete o texto. O Python só deu pelo problema quando tentou fazer o `//` com um texto. O valor errado nasceu antes, na leitura sem `int`.
+As constantes ficam no início, o inventário a seguir, e as contas e os resultados no fim. As contas dos baús usam o resultado da conta das tábuas.
+
+Pensa antes de continuares: se cada baú passar a gastar 6 tábuas, o que mudas no programa? A resposta: só a linha `TABUAS_POR_BAU = 6`. Com 7 troncos, passam a dar 4 baús e 4 tábuas a sobrar.
+
+## Fase 4: Ler do teclado e converter
+
+O programa passa a perguntar quantos troncos tens. Vais ver o que acontece quando não convertes a resposta num número. Rever: [Ler do teclado e converter](../02-dados-e-interacao.md#ler-do-teclado-e-converter).
+
+1. Em `inventario.py`, substitui a linha `troncos = 7` por esta:
+
+   ```python
+   troncos = input("Quantos troncos tens? ")
+   ```
+
+2. Lembra-te da fase 2 e prevê o que acontece se escreveres 7. Guarda e corre. Quando aparecer a pergunta, escreve `7` e carrega em Enter. O que deves ver:
+
+   ```text
+   Quantos troncos tens? 7
+   Troncos: 7
+   Pedra: 30
+   Ferro: 5
+   Traceback (most recent call last):
+     File "C:\Users\aluno\Documents\lp-python\inventario.py", line 17, in <module>
+       baus = tabuas // TABUAS_POR_BAU
+              ~~~~~~~^^~~~~~~~~~~~~~~~
+   TypeError: unsupported operand type(s) for //: 'str' and 'int'
+   ```
+
+   É um erro de execução, um erro de tipo. A mensagem quer dizer "tipos que não servem para o `//`: um texto e um inteiro". O `input` devolveu o texto `"7"`. Na linha das tábuas, `"7" * 4` não deu erro: repetiu o texto, e `tabuas` ficou com `"7777"`. O erro só apareceu na linha dos baús, mas a causa está na linha da leitura. A linha apontada é onde o Python deu pelo problema, e não onde ele nasceu.
+
+3. Corrige a causa. Substitui a linha da leitura por estas duas:
+
+   ```python
+   # O input devolve sempre um texto; o int converte-o num número, para as contas.
+   troncos = int(input("Quantos troncos tens? "))
+   ```
+
+4. Guarda, corre e escreve `7`. O que deves ver: as sete linhas de [O que vais construir](#o-que-vais-construir), com 28 tábuas, 3 baús e 4 tábuas a sobrar.
+
+5. Provoca outro erro de propósito. Corre outra vez e, na pergunta, escreve `sete`. O que deves ver:
+
+   ```text
+   Quantos troncos tens? sete
+   Traceback (most recent call last):
+     File "C:\Users\aluno\Documents\lp-python\inventario.py", line 9, in <module>
+       troncos = int(input("Quantos troncos tens? "))
+   ValueError: invalid literal for int() with base 10: 'sete'
+   ```
+
+   É um erro de execução, um erro de valor: o `int` só converte textos que são números inteiros, escritos com algarismos. Aqui, o programa não está errado: pede um número de troncos, e quem o usou não escreveu um número.
+
+### Paragem 4
+
+O programa pergunta quantos troncos tens, converte a resposta num número e faz as contas com ela. Em relação à paragem 3, só mudou a leitura.
+
+Pensa antes de continuares: sem o `int`, com 3 troncos, que valor ficava em `tabuas`? A resposta: o texto `"3333"`, porque o `*` repete o texto `"3"` quatro vezes.
 
 ## Fase 5: Testar com uma tabela de entradas e saídas
 
-Um caso só não chega para confiar num programa. Pode dar certo com 7 troncos e errado com 0 ou com 2. Testar é escolher casos que experimentam situações diferentes e comparar o resultado com o esperado, calculado antes de correr. A forma de o organizar é uma tabela de entradas e saídas. Tem uma linha por caso, com o que se escreve no teclado e o que deve aparecer. Para saber mais, vê o exemplo guiado do [guia](../02-dados-e-interacao.md).
+Corres o programa com quatro casos e comparas o resultado com o que calculaste antes. Um caso só não chega para confiar num programa. Rever: [Testar com uma tabela de entradas e saídas](../02-dados-e-interacao.md#testar-com-uma-tabela-de-entradas-e-saídas).
 
-1. Os casos de teste são quatro: 0, 1, 2 e 7 troncos. Antes de correres, calcula o que o programa deve mostrar em cada caso: as tábuas, os baús e as tábuas que sobram.
-
-   A resposta, na tabela de entradas e saídas:
+1. Os casos de teste são 0, 1, 2 e 7 troncos. Antes de correres, calcula o que o programa deve mostrar em cada caso. A resposta:
 
    | Troncos | Tábuas | Baús | Sobram |
    | ---: | ---: | ---: | ---: |
@@ -333,9 +314,9 @@ Um caso só não chega para confiar num programa. Pode dar certo com 7 troncos e
    | 2 | 8 | 1 | 0 |
    | 7 | 28 | 3 | 4 |
 
-   Cada caso tem uma razão. O 0 é o mínimo. O 1 dá menos tábuas do que um baú gasta. O 2 dá exatamente um baú, sem sobras: é a fronteira, onde é fácil enganar-se no resto. O 7 é um caso normal, com baús e sobras.
+   Cada caso tem uma razão. O 0 é o mínimo. O 1 dá menos tábuas do que um baú gasta. O 7 é um caso normal, com baús e sobras.
 
-2. Corre o programa quatro vezes, uma por linha da tabela. Em cada uma, compara as três últimas linhas do ecrã com o que calculaste. Com 2 troncos, por exemplo, deves ver:
+2. Corre o programa quatro vezes, uma por linha da tabela, e compara as três últimas linhas do ecrã com o que calculaste. Com 2 troncos, deves ver:
 
    ```text
    Quantos troncos tens? 2
@@ -347,43 +328,37 @@ Um caso só não chega para confiar num programa. Pode dar certo com 7 troncos e
    Tábuas que sobram: 0
    ```
 
-3. Um caso passa quando o ecrã mostra o que calculaste. Se algum não passar, depura com método. Num comentário no fim do `inventario.py`, escreve o caso, o esperado, o obtido e a tua hipótese. Confirma a hipótese no código e corrige só a causa. Depois corre outra vez os quatro casos, e não só o que falhou.
+3. Se algum caso não der o que calculaste, depura com método. Num comentário no fim do `inventario.py`, escreve o caso, o esperado, o obtido e a tua hipótese. Corrige só a causa e corre outra vez os quatro casos, e não só o que falhou.
 
 ### Paragem 5
 
-Os quatro casos da tabela de entradas e saídas passaram. O `inventario.py` está comentado e funciona com qualquer número inteiro de troncos, igual ou maior do que zero.
+Os quatro casos da tabela passaram.
 
-Pensa antes de terminares: porque é que o caso de 2 troncos é importante, se o de 7 já tinha baús e sobras? A resposta: com 2 troncos, as tábuas chegam exatamente para um baú, e o resto é 0. É a fronteira, o ponto onde o resultado muda. Um erro de uma unidade a mais ou a menos pode passar nos outros casos, e mostra-se aqui.
+Pensa antes de terminares: porque é que o caso de 2 troncos é importante, se o de 7 já tinha baús e sobras? A resposta: com 2 troncos, as tábuas chegam exatamente para um baú, e o resto é 0. É um caso de fronteira, em cima do limite de um baú.
 
-## Problemas frequentes
+## Se alguma coisa falhar
+
+1. Guardaste o ficheiro? O Python corre o que está guardado no disco.
+2. Estás na pasta certa? O texto antes do cursor tem de acabar em `lp-python`. Se não acabar, abre um terminal novo.
+3. Estás na consola do Python sem quereres? Se a linha começa por `>>>`, escreve `exit()` e carrega em Enter.
+4. O programa parou e não volta ao terminal? Está à espera que escrevas um valor, depois da pergunta.
+5. A mensagem é diferente da deste laboratório? As mensagens aqui são as do Python 3.14. Noutra versão, as palavras podem mudar, mas o nome do erro antes dos dois pontos é o mesmo. O caminho do ficheiro, na linha com `File`, é outro em cada computador.
 
 ### `TypeError` numa linha de contas, depois de um `input`
 
-Falta o `int` à volta do `input`. O `input` devolve sempre um texto, e um texto não serve para contas. Põe a leitura na forma `troncos = int(input("Quantos troncos tens? "))`.
-
-### Aparece `7777` em vez de `28`
-
-Acontece quando o `print` das tábuas vem logo a seguir à multiplicação, antes de outra conta. É o mesmo problema, mais escondido: falta o `int`, e o `*` repetiu o texto em vez de multiplicar. Corrige a linha da leitura.
-
-### `ValueError: invalid literal for int() with base 10`
-
-Escreveste no teclado uma coisa que o `int` não converte, como `sete`. O `int` só converte números inteiros escritos com algarismos. Corre outra vez e escreve um número inteiro.
+Falta o `int` à volta do `input`, e um texto não serve para contas. Põe a leitura na forma `troncos = int(input("Quantos troncos tens? "))`.
 
 ### `NameError: name '...' is not defined`
 
-O Python não conhece um nome que escreveste. Confirma que o nome está escrito igual em todas as linhas, com as mesmas minúsculas e o mesmo traço baixo. Confirma também que a linha que dá valor à variável vem antes da linha que a usa.
+O Python não conhece um nome que escreveste. Confirma que está escrito igual em todas as linhas, e que a linha que dá valor à variável vem antes da que a usa.
 
-### Dois espaços seguidos no ecrã
+### Dois espaços seguidos, ou um baú com parte decimal
 
-Puseste um espaço dentro das aspas, junto a uma vírgula do `print`. O `print` já põe um espaço entre os valores. Tira o espaço das aspas.
-
-### O baú aparece com parte decimal, como `3.5`
-
-Usaste `/` em vez de `//`. Para contar objetos completos, usa a divisão inteira, `//`.
+Ficou por corrigir um dos erros que provocaste. Ou há um espaço dentro das aspas, junto a uma vírgula, ou há um `/` no lugar do `//`.
 
 ## Desafios
 
-1. A pedra. Num jogo de construção, cada fornalha gasta 7 pedras. Acrescenta ao programa as contas da pedra: quantas fornalhas podes construir com a pedra que tens, e quantas pedras sobram. Antes de correres, prevê o resultado com as 30 pedras do inventário. Pista: precisas de uma constante nova.
+1. A pedra. Cada fornalha gasta 7 pedras. Acrescenta ao programa as contas da pedra: quantas fornalhas podes construir e quantas pedras sobram. Pista: precisas de uma constante nova.
 
 2. Tudo perguntado. Muda o programa para perguntar também quanta pedra e quanto ferro tens, em vez de os ter fixos. Testa-o com três casos à tua escolha, com o resultado esperado de cada um calculado antes de correres.
 
@@ -392,9 +367,7 @@ Usaste `/` em vez de `//`. Para contar objetos completos, usa a divisão inteira
 ## Antes de terminares
 
 - [ ] O `inventario.py` pergunta quantos troncos tens e mostra o inventário, as tábuas, os baús e as tábuas que sobram.
-- [ ] Correste os quatro casos da tabela de entradas e saídas da fase 5, e cada um deu o que calculaste antes de correr.
-- [ ] Sabes dizer de que tipo é `7`, `2.5` e `"7"`.
-- [ ] Sabes dizer o que fazem o `/`, o `//` e o `%`.
-- [ ] Consegues explicar, por palavras tuas, porque é que o `input` precisa do `int` antes de fazeres contas com o que a pessoa escreveu.
+- [ ] O `inventario.py` tem o `int` à volta do `input`, e as regras do jogo em constantes.
+- [ ] Correste os quatro casos da fase 5, e cada um deu o que calculaste antes de correr.
 
 ![Rodapé](../../imagens/rodape.png)

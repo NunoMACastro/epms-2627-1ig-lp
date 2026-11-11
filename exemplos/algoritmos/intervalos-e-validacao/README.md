@@ -15,7 +15,7 @@ Todos usam a mesma situação: um ar condicionado que aceita temperaturas de 16 
 - `5-sem-validacao.txt`: o que faz um algoritmo que não valida a temperatura antes de a usar (guia das decisões, "Validar os dados antes de os usar").
 - `6-validar-primeiro.txt`: a validação como primeira condição, antes de qualquer decisão que use o valor (guia das decisões, "Validar os dados antes de os usar").
 - `7-validacao-repetida.txt`: um ciclo que volta a pedir a temperatura até ela ser válida (guia da repetição, "Padrão validação repetida").
-- `8-leitura-esquecida.txt`: um terceiro engano de propósito, dentro do ciclo (guia da repetição, nos erros frequentes).
+- `8-leitura-esquecida.txt`: um terceiro engano de propósito, dentro do ciclo (guia da repetição, "O ciclo que nunca acaba").
 
 ## Como correr
 
