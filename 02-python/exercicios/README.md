@@ -11,5 +11,7 @@ Uma ficha não é um laboratório. O [laboratório](../laboratorios/README.md) g
 | 01 Do algoritmo ao programa | [ficha](01-do-algoritmo-ao-programa-exercicios.md) |
 | 02 Dados e interação | [ficha](02-dados-e-interacao-exercicios.md) |
 | 03 Seleção | [ficha](03-selecao-exercicios.md) |
+| 04 Ciclo while | [ficha](04-ciclo-while-exercicios.md) |
+| 05 Ciclo for e listas simples | [ficha](05-ciclo-for-e-listas-simples-exercicios.md) |
 
 ![Rodapé](../../imagens/rodape.png)
