@@ -17,7 +17,8 @@ Usa as decisões da algoritmia e o `input` do tema 02. Rever: [Seleção encadea
 7. [Validar um valor: dentro e fora de um intervalo](#validar-um-valor-dentro-e-fora-de-um-intervalo)
 8. [Uma decisão dentro de outra](#uma-decisão-dentro-de-outra)
 9. [Os casos de teste de cada ramo](#os-casos-de-teste-de-cada-ramo)
-10. [Exemplo guiado: a nota do teste, do pseudocódigo ao Python](#exemplo-guiado-a-nota-do-teste-do-pseudocódigo-ao-python)
+10. [Escolher entre valores certos com `match`](#escolher-entre-valores-certos-com-match)
+11. [Exemplo guiado: a nota do teste, do pseudocódigo ao Python](#exemplo-guiado-a-nota-do-teste-do-pseudocódigo-ao-python)
 
 ## As comparações dão `True` ou `False`
 
@@ -360,6 +361,52 @@ Os resultados esperados escrevem-se antes de correr, a partir do enunciado. A ta
 
 Com `dificuldade >= DIFICULDADE_MAXIMA`, só o caso do 3 falhava. Testar com 2 e com 10 nunca o mostrava.
 
+## Escolher entre valores certos com `match`
+
+O menu da bancada tem três opções: 1 para um baú, 2 para uma porta e 3 para sair. Com uma cadeia de `if`, cada condição repete `opcao ==`. Para comparar um só valor com vários valores fixos, o Python tem o **`match`**, que não repete o nome.
+
+```python fragment precisa do Python 3.10 ou mais recente, por causa do match
+# menu_bancada.py: o menu da bancada de construção, com uma resposta para cada opção.
+opcao = int(input("1 Baú, 2 Porta, 3 Sair. Escolhe: "))
+match opcao:
+    case 1:
+        print("Um baú gasta 8 tábuas.")
+    case 2:
+        print("Uma porta gasta 6 tábuas.")
+    case 3:
+        print("Até à próxima.")
+    case _:
+        print("Essa opção não existe.")
+```
+
+O Python compara a `opcao` com cada `case`, de cima para baixo, e corre o bloco do primeiro que for igual. O `case _`, com o traço baixo, apanha qualquer outro valor, como o `else` no fim de uma cadeia, e fica sempre em último lugar.
+
+| `opcao` | O `case` que a apanha | O que aparece |
+| ---: | --- | --- |
+| 1 | `case 1` | `Um baú gasta 8 tábuas.` |
+| 3 | `case 3` | `Até à próxima.` |
+| 7 | `case _` | `Essa opção não existe.` |
+
+Os valores de um `case` também podem ser textos, entre aspas:
+
+```python fragment precisa do Python 3.10 ou mais recente, por causa do match
+# material.py: diz para que serve cada material do inventário.
+material = input("Que material queres usar? ")
+match material:
+    case "tábuas":
+        print("Com tábuas constróis baús e portas.")
+    case "pedra":
+        print("Com pedra constróis paredes.")
+    case _:
+        print("Esse material não está no inventário.")
+```
+
+Com `pedra`, aparece `Com pedra constróis paredes.`. Com `Pedra`, o programa cai no `case _`, porque o `P` maiúsculo é outro carácter. Sem as aspas, `case tábuas:` deixa de ser um texto, e o Python recusa o programa.
+
+Nas aulas, o `match` usa-se só para comparar um valor com valores fixos. Para uma condição como `tabuas < 5`, ou para juntar condições, usa-se o `if`, e a cadeia de `if` serve sempre.
+
+O `match` precisa do Python 3.10 ou mais recente. Numa versão mais antiga, a linha do `match` dá `SyntaxError: invalid syntax`. Vês a versão com `python --version`, trocando o `python` pelo teu comando.
+
 ## Exemplo guiado: a nota do teste, do pseudocódigo ao Python
 
 Este problema está resolvido em pseudocódigo no [guia 03 da algoritmia](../01-algoritmos/03-decisoes-e-validacao.md#exemplo-guiado-classificar-a-nota-de-um-teste). Aqui passa-se para Python, com os mesmos casos de teste.
@@ -518,6 +565,7 @@ TypeError: '>=' not supported between instances of 'str' and 'int'
 
 - `IndentationError`: o erro de indentação, quando falta um bloco ou uma linha fica num recuo que não corresponde a nenhum nível.
 - Ramo inacessível: um ramo que nenhum valor consegue fazer correr.
+- `match` e `case`: a forma de comparar um valor com vários valores fixos, com um `case` para cada um e o `case _` no fim.
 
 ## O que vem a seguir
 

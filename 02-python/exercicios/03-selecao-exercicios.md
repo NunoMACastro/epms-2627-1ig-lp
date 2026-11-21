@@ -77,7 +77,7 @@ Procura no enunciado as palavras "até" e "mais de". Que operador corresponde a 
 
 ## Exercício 4: O erro de cada programa
 
-Três colegas escreveram programas com decisões, e nenhum dá o resultado esperado. Para cada um, diz que tipo de erro é, de sintaxe, de execução ou de lógica, qual é a causa e como se corrige. Escreve as respostas num ficheiro `que_erro.py`, só com comentários, com uma parte para cada programa.
+Três colegas escreveram programas com decisões, e nenhum dá o resultado esperado. Para cada um, diz que tipo de erro é, de sintaxe, de execução ou de lógica, qual é a causa e como se corrige. Escreve as respostas num ficheiro `que_erro_selecao.py`, só com comentários, com uma parte para cada programa.
 
 Programa A. Devia começar o jogo quando a pessoa escreve 1. A pessoa escreveu `1`.
 
@@ -194,7 +194,7 @@ Escreve o programa `codigo_objeto.py`, que pergunta o código e escreve o materi
 - O `prever_comparacoes.py` tem uma frase para cada linha do exercício 1 em que falhaste, ou diz que acertaste em todas.
 - O `vidas.py` escreve a frase certa nos quatro casos do enunciado.
 - O `estrelas_tempo.py` dá o resultado certo nos sete casos do enunciado.
-- O `que_erro.py` tem, para cada programa do exercício 4, o tipo de erro, a causa e a correção.
+- O `que_erro_selecao.py` tem, para cada programa do exercício 4, o tipo de erro, a causa e a correção.
 - O `nivel.py` dá a frase certa nos cinco casos do enunciado.
 
 ![Rodapé](../../imagens/rodape.png)
