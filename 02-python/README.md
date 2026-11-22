@@ -11,6 +11,7 @@ Nesta área passas os teus algoritmos para Python e pões o computador a execut�
 | 03 Seleção | [guia](03-selecao.md) | [laboratório](laboratorios/03-selecao-laboratorio.md) | [ficha](exercicios/03-selecao-exercicios.md) | não tem |
 | 04 Ciclo while | [guia](04-ciclo-while.md) | [laboratório](laboratorios/04-ciclo-while-laboratorio.md) | [ficha](exercicios/04-ciclo-while-exercicios.md) | não tem |
 | 05 Ciclo for e listas simples | [guia](05-ciclo-for-e-listas-simples.md) | [laboratório](laboratorios/05-ciclo-for-e-listas-simples-laboratorio.md) | [ficha](exercicios/05-ciclo-for-e-listas-simples-exercicios.md) | não tem |
+| 06 Funções e procedimentos | [guia](06-funcoes-e-procedimentos.md) | [laboratório](laboratorios/06-funcoes-e-procedimentos-laboratorio.md) | [ficha](exercicios/06-funcoes-e-procedimentos-exercicios.md) | não tem |
 
 Os guias, com a matéria de cada tema, estão nesta pasta. Os laboratórios estão em [laboratorios](laboratorios/README.md), e as fichas de exercícios, em [exercicios](exercicios/README.md).
 

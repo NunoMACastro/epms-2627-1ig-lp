@@ -13,5 +13,6 @@ Uma ficha não é um laboratório. O [laboratório](../laboratorios/README.md) g
 | 03 Seleção | [ficha](03-selecao-exercicios.md) |
 | 04 Ciclo while | [ficha](04-ciclo-while-exercicios.md) |
 | 05 Ciclo for e listas simples | [ficha](05-ciclo-for-e-listas-simples-exercicios.md) |
+| 06 Funções e procedimentos | [ficha](06-funcoes-e-procedimentos-exercicios.md) |
 
 ![Rodapé](../../imagens/rodape.png)

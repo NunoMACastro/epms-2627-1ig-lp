@@ -13,5 +13,6 @@ Um laboratório não é uma ficha de exercícios. No laboratório, aprendes a fa
 | 03 Seleção | [laboratório](03-selecao-laboratorio.md) |
 | 04 Ciclo while | [laboratório](04-ciclo-while-laboratorio.md) |
 | 05 Ciclo for e listas simples | [laboratório](05-ciclo-for-e-listas-simples-laboratorio.md) |
+| 06 Funções e procedimentos | [laboratório](06-funcoes-e-procedimentos-laboratorio.md) |
 
 ![Rodapé](../../imagens/rodape.png)
